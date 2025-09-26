@@ -11,9 +11,10 @@ import { RepertoireModule } from './repertoire/repertoire.module';
 import { StockModule } from './stock/stock.module';
 import { EmployeModule } from './employe/employe.module';
 import { DroitModule } from './droit/droit.module';
+import { DatabaseModule } from './database/database.module';
 
 @Module({
-  imports: [PaysModule, VilleModule, EtablissementModule, ParamPrimeModule, ParamComissModule, ParamPrimeProduitModule, RepertoireModule, StockModule, EmployeModule, DroitModule],
+  imports: [PaysModule, VilleModule, EtablissementModule, ParamPrimeModule, ParamComissModule, ParamPrimeProduitModule, RepertoireModule, StockModule, EmployeModule, DroitModule, DatabaseModule],
   controllers: [AppController],
   providers: [AppService],
 })

@@ -1,26 +1,46 @@
 import { Injectable } from '@nestjs/common';
-import { CreateVilleDto } from './dto/create-ville.dto';
-import { UpdateVilleDto } from './dto/update-ville.dto';
+import { Prisma } from 'generated/prisma';
+import { DatabaseService } from 'src/database/database.service';
 
 @Injectable()
 export class VilleService {
-  create(createVilleDto: CreateVilleDto) {
-    return 'This action adds a new ville';
+
+  constructor(private readonly databaseService: DatabaseService) {}
+
+  create(createVilleDto: Prisma.VilleCreateInput) {
+    return this.databaseService.ville.create({
+      data: createVilleDto
+    });
   }
 
   findAll() {
-    return `This action returns all ville`;
+    return this.databaseService.ville.findMany();
+  }
+
+  findByName(nomVille: string) {
+    return this.databaseService.ville.findMany({
+      where: { nomVille: {
+        contains: nomVille
+      } }
+    });
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} ville`;
+    return this.databaseService.ville.findUnique({
+      where: { id }
+    });
   }
 
-  update(id: number, updateVilleDto: UpdateVilleDto) {
-    return `This action updates a #${id} ville`;
+  update(id: number, updateVilleDto: Prisma.VilleUpdateInput) {
+    return this.databaseService.ville.update({
+      where: { id },
+      data: updateVilleDto
+    });
   }
 
   remove(id: number) {
-    return `This action removes a #${id} ville`;
+    return this.databaseService.ville.delete({
+      where: { id }
+    });
   }
 }
