@@ -15,238 +15,220 @@ datasource db {
 }
 
 model Pays {
-  id          Int         @id @default(autoincrement())
-  pays       String  
-  villes  Ville[]
+  id          					Int         			@id @default(autoincrement())
+  pays       					String  
+  villes  						Ville[]
 }
 
 model Ville {
-  id          Int         @id @default(autoincrement())
-  nomVille       String      
-  pays        Pays        @relation(fields: [paysId], references: [id])
-  paysId  Int
-  etablissements  Etablissement[]
+  id          					Int         			@id @default(autoincrement())
+  nomVille       				String      
+  pays        					Pays        			@relation(fields: [paysId], references: [id])
+  paysId  						Int
+  etablissements  				Etablissement[]
+  repertoires   				Repertoire[]
 }
 
 model Etablissement {
-  id              Int    @id @default(autoincrement())
-  nom             String
-  cheminBD        String
-  tel             String
-  fax             String
-  gsm             String
-  email           String
-	siteweb         String
-	cnss            String
-	patente         String
-  adresse         String
-  raisonSocial    String
-	ice             String
-	ife             String
-  port            Int
-  hostMail        String
-  paswordMail     String
-  paswordMailFake String
-  fromMail        String
-  userMail        String
-  capitale        String
-  pourcentageLiv  String
-  lienDbDump      String
-  lienBackupDB    String
-  lundi           Boolean
-  mardi           Boolean
-  mercredi        Boolean
-  jeudi           Boolean
-  vendredi        Boolean
-  samedi          Boolean
-  dimanche        Boolean
-  dateTime        DateTime
-  typeExec        Int
-  numJour         Int
-  ville           Ville     @relation(fields: [villeId], references: [id])
-  villeId  Int
+  id              				Int    			 		  @id @default(autoincrement())
+  nom             				String
+  cheminBD        				String
+  tel             				String
+  fax             				String
+  gsm             				String
+  email           				String
+  siteweb         				String
+  cnss            				String
+  patente         				String
+  adresse         				String
+  raisonSocial    				String
+  ice             				String
+  ife             				String
+  port            				Int
+  hostMail        				String
+  paswordMail     				String
+  paswordMailFake 				String
+  fromMail        				String
+  userMail        				String
+  capitale        				String
+  pourcentageLiv  				String
+  lienDbDump      				String
+  lienBackupDB   			 	String
+  lundi           				Boolean @default(false)
+  mardi           				Boolean @default(false)
+  mercredi        				Boolean @default(false)
+  jeudi           				Boolean @default(false)
+  vendredi        				Boolean @default(false)
+  samedi          				Boolean @default(false)
+  dimanche        				Boolean @default(false)
+  dateTime        				DateTime
+  typeExec        				Int
+  numJour         				Int
+  ville           				Ville     				@relation(fields: [villeId], references: [id])
+  villeId  						Int
 }
 
 model ParamPrime {
-  id              Int    @id @default(autoincrement())
-  montant         Decimal
-  prime           Decimal
+  id              				Int    					@id @default(autoincrement())
+  montant         				Decimal
+  prime           				Decimal
 }
 
 model ParamCommiss {
-  id              Int    @id @default(autoincrement())
-  mntDepart         Decimal
-  mntFin           Decimal
-  pourc           Decimal
+  id              				Int    					@id @default(autoincrement())
+  mntDepart         			Decimal
+  mntFin           				Decimal
+  pourc           				Decimal
 }
 
 model ParamPrimeProduit {
-  id              Int    @id @default(autoincrement())
-  montant         Decimal
-  prime           Decimal
-  stock         Stock     @relation(fields: [stockId], references: [id])
-  stockId       Int
+  id              				Int    					@id @default(autoincrement())
+  montant         				Decimal
+  prime           				Decimal
+  stock         				Stock     				@relation(fields: [stockId], references: [id])
+  stockId       				Int
 }
 
 model Repertoire {
-   id              Int    @id @default(autoincrement())
-   stocks           Stock[]
+   id              				Int    					@id @default(autoincrement())
+   designation		 			String
+   contact1         			String
+   contact2         			String
+   tel1             			String
+   tel2             			String
+   tel3             			String
+   adresse         				String
+   email           				String
+   typeRepertoire   			Int
+   typeReglment     			Int
+   ife             				String
+   ice             				String
+   archive         				Int
+   sysDate         				DateTime
+   dateEntrer      				DateTime @db.Date
+   dateValidation  				DateTime
+   observation     				String
+   salaireParDefaut 			Decimal
+   nbrOperationClient 			Int
+   bloquer         				Int
+   mntCnss         				Decimal
+   commercialExterne 			Boolean @default(false)
+   contactTel2     				String
+   contactTel3     				String
+   repertoire         			Repertoire?  			@relation("repertoireToRepertoire", fields: [repertoireId], references: [id])
+   repertoireId    				Int?
+   ville           				Ville     				@relation(fields: [villeId], references: [id])
+   villeId         				Int
+   stocks           			Stock[]
+   repertoires       			Repertoire[] 			@relation("repertoireToRepertoire")
+   employes         			Employe[]
 }
 
 model Stock {
-  id              Int    @id @default(autoincrement())
-  designation         String
-  sysDate             DateTime
-  pahtGrossiste           Decimal
-  prixCommercial           Decimal
-  tva           Decimal
-  pattc           Decimal
-  pvttc           Decimal
-  pvaht           Decimal
-  benifice           Decimal
-  qteStock        Int
-  qtePVMin        Int
-  qtePVMin3        Int
-  qtePVMin4        Int
-  qteFacturer        Int
-  prixVentMin1           Decimal
-  prixVentMin2           Decimal
-  prixVentMin3           Decimal
-  prixVentMin4           Decimal
-  remiseMax             Decimal
-  remiseMax2           Decimal
-  remiseMax3           Decimal
-  remiseMax4           Decimal
-  prixImport            Decimal
-  commission            Decimal
-  archiver              Int
-  qteStockImport              Int
-  avecRemise            Boolean
-  prixAchatBiggerPrixVente    Boolean
-  facturer100       Boolean
-  promotion1        String
-  promotion2        String
-  paramPrimeProduit   ParamPrimeProduit[]
-  repertoire        Repertoire          @relation(fields: [repertoireId], references: [id])
-  repertoireId      Int
+  id              				Int    					@id @default(autoincrement())
+  designation         			String
+  sysDate             			DateTime
+  pahtGrossiste           		Decimal
+  prixCommercial           		Decimal
+  tva           				Decimal
+  pattc           				Decimal
+  pvttc           				Decimal
+  pvaht           				Decimal
+  benifice           			Decimal
+  qteStock        				Int
+  qtePVMin        				Int
+  qtePVMin3        				Int
+  qtePVMin4        				Int
+  qteFacturer        			Int
+  prixVentMin1           		Decimal
+  prixVentMin2           		Decimal
+  prixVentMin3           		Decimal
+  prixVentMin4          	 	Decimal
+  remiseMax             		Decimal
+  remiseMax2           			Decimal
+  remiseMax3           			Decimal
+  remiseMax4           			Decimal
+  prixImport            		Decimal
+  commission            		Decimal
+  archiver              		Int
+  qteStockImport              	Int
+  avecRemise            		Boolean @default(false)
+  prixAchatBiggerPrixVente    	Boolean @default(false)
+  facturer100       			Boolean @default(false)
+  promotion1        			String
+  promotion2        			String
+  paramPrimeProduits   			ParamPrimeProduit[]
+  repertoire        			Repertoire          	@relation(fields: [repertoireId], references: [id])
+  repertoireId      			Int
 }
 
-/*
-private Long id;
-	private String designation;
-	//private DetailAgenceTransport detailAgenceTransport;
-	private String contact1;
-	private String contact2;
-	private String tel1;
-	private String tel2;
-	private String tel3;
-	private String adresse;
-	private String email;
-	private int typeRepertoire;
-	//private Typerepertoire typerepertoire;
-//	private String typePaiement;
-	private int typeReglment;
+model Employe {
+  id              				Int    					@id @default(autoincrement())
+  numEmp           				Int
+  livrerNonLivrerDroit 			Int
+  codeEmp         				String
+  nom             				String
+  prenom          				String
+  login           				String
+  motpass         				String
+  email           				String
+  typeUser        				Int 
+  etatCompte      				Boolean @default(false)
+  validationMnt   				Decimal
+  motPassFake     				String
+  commercial      				Boolean @default(false)
+  pvLibre         				Boolean @default(false)
+  gerant          				Boolean @default(false)
+  magasinier      				Boolean @default(false)
+  bulltinPaie     				Boolean @default(false)
+  imprimStockSimple 			Boolean @default(false)
+  livraisonLimite 				Boolean @default(false)
+  repertoire      				Repertoire  			@relation(fields: [repertoireId], references: [id])
+  repertoireId    				Int
+}
 
-	private String ife;
-	private String ice;
-	private Ville ville;
-	private int archive;
-	private Date sysDate;
-	private Date dateEntrer;
-	private Date dateValidation;
-	private String observation;
-	private String observationTemp;//Transient
-	private double salaireParDefaut;
-	private int nbrOperationClient;
-	private int bloquer;//0:non bloquer 1:bloquer
-	private double mntCnss;
-	private Repertoire repertoire;
-	private PlanComptable planComptable;
-	
-	private String contactTel2;
-	private String contactTel3;
-	
-	private boolean commercialExterne;
-
-
-  public class Employe implements Cloneable, java.io.Serializable {
-	private static final long serialVersionUID = 1L;
-	
-	
-	private Long id;
-	private Repertoire repertoire;
-	private Droit droit;
-	private int numEmp;
-	private int livrerNonLivrerDroit;
-	private String codeEmp;
-	private String nom;
-	private String prenom;
-	private String login;
-	private String motpass;
-	private String email;
-	private int typeUser; 
-	private boolean etatCompte;
-	private double validationMnt;
-	private String motPassFake;
-	private boolean commercial;
-	private boolean pvLibre;
-	private boolean gerant;
-	private boolean magasinier;
-	private boolean bulltinPaie;
-	private boolean imprimStockSimple;
-	private boolean livraisonLimite;
-
-
-
-  Droit
-
-  private Long id;
-	
-	private boolean listRepertoire;
-	private boolean listStock;
-	private boolean listLivraison;
-	private boolean listFacture;
-	private boolean listAchatLivraison;
-	private boolean listAchatFacture;
-	private boolean listAchatLivraisonEtranger;
-	
-	private boolean ajouterRepertoire;
-	private boolean ajouterStock;
-	private boolean ajouterLivraison;
-	private boolean ajouterFacture;
-	private boolean ajouterAchatLivraison;
-	private boolean ajouterAchatFacture;
-	private boolean ajouterAchatLivraisonEtranger;
-	
-	private boolean modifRepertoire;
-	private boolean modifStock;
-	private boolean modifLivraison;
-	private boolean modifFacture;
-	private boolean modifAchatLivraison;
-	private boolean modifAchatFacture;
-	private boolean modifAchatLivraisonEtranger;
-	
-	private boolean suppRepertoire;
-	private boolean suppStock;
-	private boolean suppLivraison;
-	private boolean suppFacture;
-	private boolean suppAchatLivraison;
-	private boolean suppAchatFacture;
-	private boolean suppAchatLivraisonEtranger;
-	
-	private boolean etatRepertoire;
-	private boolean etatStock;
-	private boolean etatLivraison;
-	private boolean etatFacture;
-	private boolean etatAchatLivraison;
-	private boolean etatAchatFacture;
-	private boolean etatAchatLivraisonEtranger;
-	
-	private boolean imprimeRepertoire;
-	private boolean imprimeStock;
-	private boolean imprimeLivraison;
-	private boolean imprimeFacture;
-	private boolean imprimerAchatLivraison;
-	private boolean imprimerAchatFacture;
-	private boolean imprimerAchatLivraisonEtranger;
-*/
+model Droit {
+  id              				Int    					@id @default(autoincrement())
+  listRepertoire  				Boolean @default(false)
+  listStock       				Boolean @default(false)
+  listLivraison   				Boolean @default(false)
+  listFacture     				Boolean @default(false)
+  listAchatLivraison 			Boolean @default(false)
+  listAchatFacture 				Boolean @default(false)
+  listAchatLivraisonEtranger   	Boolean @default(false)
+  ajouterRepertoire 			Boolean @default(false)
+  ajouterStock     				Boolean @default(false)
+  ajouterLivraison  			Boolean @default(false)
+  ajouterFacture    			Boolean @default(false)
+  ajouterAchatLivraison 		Boolean @default(false)
+  ajouterAchatFacture 			Boolean @default(false)
+  ajouterAchatLivraisonEtranger Boolean @default(false)
+  modifRepertoire   			Boolean @default(false)
+  modifStock       				Boolean @default(false)
+  modifLivraison   				Boolean @default(false)
+  modifFacture     				Boolean @default(false)
+  modifAchatLivraison 			Boolean @default(false)
+  modifAchatFacture 			Boolean @default(false)
+  modifAchatLivraisonEtranger   Boolean @default(false)
+  suppRepertoire   				Boolean @default(false)
+  suppStock       				Boolean @default(false)
+  suppLivraison   				Boolean @default(false)
+  suppFacture     				Boolean @default(false)
+  suppAchatLivraison 			Boolean @default(false)
+  suppAchatFacture 				Boolean @default(false)
+  suppAchatLivraisonEtranger   	Boolean @default(false)
+  etatRepertoire   				Boolean @default(false)
+  etatStock       				Boolean @default(false)
+  etatLivraison   				Boolean @default(false)
+  etatFacture     				Boolean @default(false)
+  etatAchatLivraison 			Boolean @default(false)
+  etatAchatFacture 				Boolean @default(false)
+  etatAchatLivraisonEtranger   	Boolean @default(false)
+  imprimeRepertoire 			Boolean @default(false)
+  imprimeStock     				Boolean @default(false)
+  imprimeLivraison  			Boolean @default(false)
+  imprimeFacture    			Boolean @default(false)
+  imprimerAchatLivraison 		Boolean @default(false)
+  imprimerAchatFacture 			Boolean @default(false)
+  imprimerAchatLivraisonEtranger  Boolean @default(false)
+}
