@@ -1,26 +1,38 @@
 import { Injectable } from '@nestjs/common';
-import { CreateDroitDto } from './dto/create-droit.dto';
-import { UpdateDroitDto } from './dto/update-droit.dto';
+import { DatabaseService } from 'src/database/database.service';
+import { Prisma } from 'generated/prisma';
 
 @Injectable()
 export class DroitService {
-  create(createDroitDto: CreateDroitDto) {
-    return 'This action adds a new droit';
+
+  constructor(private readonly databaseService: DatabaseService) {}
+
+  create(createDroitDto: Prisma.DroitCreateInput) {
+    return this.databaseService.droit.create({
+      data: createDroitDto
+    });
   }
 
   findAll() {
-    return `This action returns all droit`;
+    return this.databaseService.droit.findMany();
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} droit`;
+    return this.databaseService.droit.findUnique({
+      where: { id }
+    });
   }
 
-  update(id: number, updateDroitDto: UpdateDroitDto) {
-    return `This action updates a #${id} droit`;
+  update(id: number, updateDroitDto: Prisma.DroitUpdateInput) {
+    return this.databaseService.droit.update({
+      where: { id },
+      data: updateDroitDto
+    });
   }
 
   remove(id: number) {
-    return `This action removes a #${id} droit`;
+    return this.databaseService.droit.delete({
+      where: { id }
+    });
   }
 }

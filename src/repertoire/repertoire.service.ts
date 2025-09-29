@@ -1,26 +1,38 @@
 import { Injectable } from '@nestjs/common';
-import { CreateRepertoireDto } from './dto/create-repertoire.dto';
-import { UpdateRepertoireDto } from './dto/update-repertoire.dto';
+import { Prisma } from 'generated/prisma';
+import { DatabaseService } from 'src/database/database.service';
 
 @Injectable()
 export class RepertoireService {
-  create(createRepertoireDto: CreateRepertoireDto) {
-    return 'This action adds a new repertoire';
+
+  constructor(private readonly databaseService: DatabaseService) {}
+
+  create(createRepertoireDto: Prisma.RepertoireCreateInput) {
+    return this.databaseService.repertoire.create({
+      data: createRepertoireDto
+    });
   }
 
   findAll() {
-    return `This action returns all repertoire`;
+    return this.databaseService.repertoire.findMany();
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} repertoire`;
+    return this.databaseService.repertoire.findUnique({
+      where: { id }
+    });
   }
 
-  update(id: number, updateRepertoireDto: UpdateRepertoireDto) {
-    return `This action updates a #${id} repertoire`;
+  update(id: number, updateRepertoireDto: Prisma.RepertoireUpdateInput) {
+    return this.databaseService.repertoire.update({
+      where: { id },
+      data: updateRepertoireDto
+    });
   }
 
   remove(id: number) {
-    return `This action removes a #${id} repertoire`;
+    return this.databaseService.repertoire.delete({
+      where: { id }
+    });
   }
 }

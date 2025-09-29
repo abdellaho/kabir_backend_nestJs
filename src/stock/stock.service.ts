@@ -1,9 +1,13 @@
 import { Injectable } from '@nestjs/common';
 import { CreateStockDto } from './dto/create-stock.dto';
 import { UpdateStockDto } from './dto/update-stock.dto';
+import { DatabaseService } from 'src/database/database.service';
 
 @Injectable()
 export class StockService {
+
+  constructor(private readonly databaseService: DatabaseService) {}
+  
   create(createStockDto: CreateStockDto) {
     return 'This action adds a new stock';
   }
