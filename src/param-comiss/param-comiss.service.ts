@@ -1,26 +1,38 @@
 import { Injectable } from '@nestjs/common';
-import { CreateParamComissDto } from './dto/create-param-comiss.dto';
-import { UpdateParamComissDto } from './dto/update-param-comiss.dto';
+import { Prisma } from 'generated/prisma';
+import { DatabaseService } from 'src/database/database.service';
 
 @Injectable()
 export class ParamComissService {
-  create(createParamComissDto: CreateParamComissDto) {
-    return 'This action adds a new paramComiss';
+
+  constructor(private readonly databaseService: DatabaseService) {}
+  
+  create(createParamComissDto: Prisma.ParamCommissCreateInput) {
+    return this.databaseService.paramCommiss.create({
+      data: createParamComissDto
+    });
   }
 
   findAll() {
-    return `This action returns all paramComiss`;
+    return this.databaseService.paramCommiss.findMany();
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} paramComiss`;
+    return this.databaseService.paramCommiss.findUnique({
+      where: { id }
+    });
   }
 
-  update(id: number, updateParamComissDto: UpdateParamComissDto) {
-    return `This action updates a #${id} paramComiss`;
+  update(id: number, updateParamComissDto: Prisma.ParamCommissUpdateInput) {
+    return this.databaseService.paramCommiss.update({
+      where: { id },
+      data: updateParamComissDto
+    });
   }
 
   remove(id: number) {
-    return `This action removes a #${id} paramComiss`;
+    return this.databaseService.paramCommiss.delete({
+      where: { id }
+    });
   }
 }

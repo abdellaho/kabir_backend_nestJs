@@ -1,14 +1,13 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { RepertoireService } from './repertoire.service';
-import { CreateRepertoireDto } from './dto/create-repertoire.dto';
-import { UpdateRepertoireDto } from './dto/update-repertoire.dto';
+import { Prisma } from 'generated/prisma';
 
 @Controller('repertoire')
 export class RepertoireController {
   constructor(private readonly repertoireService: RepertoireService) {}
 
   @Post()
-  create(@Body() createRepertoireDto: CreateRepertoireDto) {
+  create(@Body() createRepertoireDto: Prisma.RepertoireCreateInput) {
     return this.repertoireService.create(createRepertoireDto);
   }
 
@@ -23,7 +22,7 @@ export class RepertoireController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateRepertoireDto: UpdateRepertoireDto) {
+  update(@Param('id') id: string, @Body() updateRepertoireDto: Prisma.RepertoireUpdateInput) {
     return this.repertoireService.update(+id, updateRepertoireDto);
   }
 

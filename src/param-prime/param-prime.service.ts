@@ -1,26 +1,38 @@
 import { Injectable } from '@nestjs/common';
-import { CreateParamPrimeDto } from './dto/create-param-prime.dto';
-import { UpdateParamPrimeDto } from './dto/update-param-prime.dto';
+import { Prisma } from 'generated/prisma';
+import { DatabaseService } from 'src/database/database.service';
 
 @Injectable()
 export class ParamPrimeService {
-  create(createParamPrimeDto: CreateParamPrimeDto) {
-    return 'This action adds a new paramPrime';
+
+  constructor(private readonly databaseService: DatabaseService) {}
+
+  create(createParamPrimeDto: Prisma.ParamPrimeCreateInput) {
+    return this.databaseService.paramPrime.create({
+      data: createParamPrimeDto
+    });
   }
 
   findAll() {
-    return `This action returns all paramPrime`;
+    return this.databaseService.paramPrime.findMany();
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} paramPrime`;
+    return this.databaseService.paramPrime.findUnique({
+      where: { id }
+    });
   }
 
-  update(id: number, updateParamPrimeDto: UpdateParamPrimeDto) {
-    return `This action updates a #${id} paramPrime`;
+  update(id: number, updateParamPrimeDto: Prisma.ParamPrimeUpdateInput) {
+    return this.databaseService.paramPrime.update({
+      where: { id },
+      data: updateParamPrimeDto
+    });
   }
 
   remove(id: number) {
-    return `This action removes a #${id} paramPrime`;
+    return this.databaseService.paramPrime.delete({
+      where: { id }
+    });
   }
 }

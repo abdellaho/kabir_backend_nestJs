@@ -1,7 +1,6 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { DroitService } from './droit.service';
-import { UpdateDroitDto } from './dto/update-droit.dto';
-import { Prisma } from '@prisma/client';
+import { Prisma } from 'generated/prisma';
 
 @Controller('droit')
 export class DroitController {
@@ -23,7 +22,7 @@ export class DroitController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateDroitDto: UpdateDroitDto) {
+  update(@Param('id') id: string, @Body() updateDroitDto: Prisma.DroitUpdateInput) {
     return this.droitService.update(+id, updateDroitDto);
   }
 

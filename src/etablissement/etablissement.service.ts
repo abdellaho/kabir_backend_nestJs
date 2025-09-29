@@ -1,26 +1,38 @@
 import { Injectable } from '@nestjs/common';
-import { CreateEtablissementDto } from './dto/create-etablissement.dto';
-import { UpdateEtablissementDto } from './dto/update-etablissement.dto';
+import { Prisma } from 'generated/prisma';
+import { DatabaseService } from 'src/database/database.service';
 
 @Injectable()
 export class EtablissementService {
-  create(createEtablissementDto: CreateEtablissementDto) {
-    return 'This action adds a new etablissement';
+
+  constructor(private readonly databaseService: DatabaseService) {}
+
+  create(createEtablissementDto: Prisma.EtablissementCreateInput) {
+    return this.databaseService.etablissement.create({
+      data: createEtablissementDto
+    });
   }
 
   findAll() {
-    return `This action returns all etablissement`;
+    return this.databaseService.etablissement.findMany();
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} etablissement`;
+    return this.databaseService.etablissement.findUnique({
+      where: { id }
+    });
   }
 
-  update(id: number, updateEtablissementDto: UpdateEtablissementDto) {
-    return `This action updates a #${id} etablissement`;
+  update(id: number, updateEtablissementDto: Prisma.EtablissementUpdateInput) {
+    return this.databaseService.etablissement.update({
+      where: { id },
+      data: updateEtablissementDto
+    });
   }
 
   remove(id: number) {
-    return `This action removes a #${id} etablissement`;
+    return this.databaseService.etablissement.delete({
+      where: { id }
+    });
   }
 }
