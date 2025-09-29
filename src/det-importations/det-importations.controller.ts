@@ -1,14 +1,13 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { DetImportationsService } from './det-importations.service';
-import { CreateDetImportationDto } from './dto/create-det-importation.dto';
-import { UpdateDetImportationDto } from './dto/update-det-importation.dto';
+import { Prisma } from 'generated/prisma';
 
 @Controller('det-importations')
 export class DetImportationsController {
   constructor(private readonly detImportationsService: DetImportationsService) {}
 
   @Post()
-  create(@Body() createDetImportationDto: CreateDetImportationDto) {
+  create(@Body() createDetImportationDto: Prisma.DetImportationsCreateInput) {
     return this.detImportationsService.create(createDetImportationDto);
   }
 
@@ -23,7 +22,7 @@ export class DetImportationsController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateDetImportationDto: UpdateDetImportationDto) {
+  update(@Param('id') id: string, @Body() updateDetImportationDto: Prisma.DetImportationsUpdateInput) {
     return this.detImportationsService.update(+id, updateDetImportationDto);
   }
 

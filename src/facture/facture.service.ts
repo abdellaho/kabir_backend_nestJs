@@ -1,26 +1,38 @@
 import { Injectable } from '@nestjs/common';
-import { CreateFactureDto } from './dto/create-facture.dto';
-import { UpdateFactureDto } from './dto/update-facture.dto';
+import { Prisma } from 'generated/prisma';
+import { DatabaseService } from 'src/database/database.service';
 
 @Injectable()
 export class FactureService {
-  create(createFactureDto: CreateFactureDto) {
-    return 'This action adds a new facture';
+
+  constructor(private readonly databaseService: DatabaseService) {}
+
+  create(createFactureDto: Prisma.FactureCreateInput) {
+    return this.databaseService.facture.create({
+      data: createFactureDto,
+    });
   }
 
   findAll() {
-    return `This action returns all facture`;
+    return this.databaseService.facture.findMany();
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} facture`;
+    return this.databaseService.facture.findUnique({
+      where: { id: BigInt(id) },
+    });
   }
 
-  update(id: number, updateFactureDto: UpdateFactureDto) {
-    return `This action updates a #${id} facture`;
+  update(id: number, updateFactureDto: Prisma.FactureUpdateInput) {
+    return this.databaseService.facture.update({
+      where: { id: BigInt(id) },
+      data: updateFactureDto,
+    });
   }
 
   remove(id: number) {
-    return `This action removes a #${id} facture`;
+    return this.databaseService.facture.delete({
+      where: { id: BigInt(id) },
+    });
   }
 }

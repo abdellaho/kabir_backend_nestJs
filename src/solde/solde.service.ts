@@ -1,26 +1,38 @@
 import { Injectable } from '@nestjs/common';
-import { CreateSoldeDto } from './dto/create-solde.dto';
-import { UpdateSoldeDto } from './dto/update-solde.dto';
+import { Prisma } from 'generated/prisma';
+import { DatabaseService } from 'src/database/database.service';
 
 @Injectable()
 export class SoldeService {
-  create(createSoldeDto: CreateSoldeDto) {
-    return 'This action adds a new solde';
+
+  constructor(private readonly databaseService: DatabaseService) {}
+
+  create(createSoldeDto: Prisma.SoldeCreateInput) {
+    return this.databaseService.solde.create({
+      data: createSoldeDto,
+    });
   }
 
   findAll() {
-    return `This action returns all solde`;
+    return this.databaseService.solde.findMany();
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} solde`;
+    return this.databaseService.solde.findUnique({
+      where: { id: BigInt(id) },
+    });
   }
 
-  update(id: number, updateSoldeDto: UpdateSoldeDto) {
-    return `This action updates a #${id} solde`;
+  update(id: number, updateSoldeDto: Prisma.SoldeUpdateInput) {
+    return this.databaseService.solde.update({
+      where: { id: BigInt(id) },
+      data: updateSoldeDto,
+    });
   }
 
   remove(id: number) {
-    return `This action removes a #${id} solde`;
+    return this.databaseService.solde.delete({
+      where: { id: BigInt(id) },
+    });
   }
 }

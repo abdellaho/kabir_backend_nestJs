@@ -1,14 +1,13 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { FactureService } from './facture.service';
-import { CreateFactureDto } from './dto/create-facture.dto';
-import { UpdateFactureDto } from './dto/update-facture.dto';
+import { Prisma } from 'generated/prisma';
 
 @Controller('facture')
 export class FactureController {
   constructor(private readonly factureService: FactureService) {}
 
   @Post()
-  create(@Body() createFactureDto: CreateFactureDto) {
+  create(@Body() createFactureDto: Prisma.FactureCreateInput) {
     return this.factureService.create(createFactureDto);
   }
 
@@ -23,7 +22,7 @@ export class FactureController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateFactureDto: UpdateFactureDto) {
+  update(@Param('id') id: string, @Body() updateFactureDto: Prisma.FactureUpdateInput) {
     return this.factureService.update(+id, updateFactureDto);
   }
 

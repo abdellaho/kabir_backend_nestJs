@@ -1,14 +1,13 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { SoldeService } from './solde.service';
-import { CreateSoldeDto } from './dto/create-solde.dto';
-import { UpdateSoldeDto } from './dto/update-solde.dto';
+import { Prisma } from 'generated/prisma';
 
 @Controller('solde')
 export class SoldeController {
   constructor(private readonly soldeService: SoldeService) {}
 
   @Post()
-  create(@Body() createSoldeDto: CreateSoldeDto) {
+  create(@Body() createSoldeDto: Prisma.SoldeCreateInput) {
     return this.soldeService.create(createSoldeDto);
   }
 
@@ -23,7 +22,7 @@ export class SoldeController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateSoldeDto: UpdateSoldeDto) {
+  update(@Param('id') id: string, @Body() updateSoldeDto: Prisma.SoldeUpdateInput) {
     return this.soldeService.update(+id, updateSoldeDto);
   }
 

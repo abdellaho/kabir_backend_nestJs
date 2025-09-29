@@ -1,26 +1,38 @@
 import { Injectable } from '@nestjs/common';
-import { CreateDetBulttinPaiDto } from './dto/create-det-bulttin-pai.dto';
-import { UpdateDetBulttinPaiDto } from './dto/update-det-bulttin-pai.dto';
+import { Prisma } from 'generated/prisma';
+import { DatabaseService } from 'src/database/database.service';
 
 @Injectable()
 export class DetBulttinPaiService {
-  create(createDetBulttinPaiDto: CreateDetBulttinPaiDto) {
-    return 'This action adds a new detBulttinPai';
+
+  constructor(private readonly dataBaseService: DatabaseService) {}
+
+  create(createDetBulttinPaiDto: Prisma.DetBulttinPaiCreateInput) {
+    return this.dataBaseService.detBulttinPai.create({
+       data: createDetBulttinPaiDto 
+    });
   }
 
   findAll() {
-    return `This action returns all detBulttinPai`;
+    return this.dataBaseService.detBulttinPai.findMany();
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} detBulttinPai`;
+    return this.dataBaseService.detBulttinPai.findUnique({
+       where: { id: BigInt(id) } 
+    });
   }
 
-  update(id: number, updateDetBulttinPaiDto: UpdateDetBulttinPaiDto) {
-    return `This action updates a #${id} detBulttinPai`;
+  update(id: number, updateDetBulttinPaiDto: Prisma.DetBulttinPaiUpdateInput) {
+    return this.dataBaseService.detBulttinPai.update({
+       where: { id: BigInt(id) },
+       data: updateDetBulttinPaiDto 
+    });
   }
 
   remove(id: number) {
-    return `This action removes a #${id} detBulttinPai`;
+    return this.dataBaseService.detBulttinPai.delete({
+       where: { id: BigInt(id) } 
+    });
   }
 }

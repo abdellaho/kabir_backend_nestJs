@@ -19,20 +19,20 @@ export class RepertoireService {
 
   findOne(id: number) {
     return this.databaseService.repertoire.findUnique({
-      where: { id }
+      where: { id: BigInt(id) }
     });
   }
 
   update(id: number, updateRepertoireDto: Prisma.RepertoireUpdateInput) {
     return this.databaseService.repertoire.update({
-      where: { id },
+      where: { id: BigInt(id) },
       data: updateRepertoireDto
     });
   }
 
   remove(id: number) {
     return this.databaseService.repertoire.delete({
-      where: { id }
+      where: { id: BigInt(id) }
     });
   }
 }

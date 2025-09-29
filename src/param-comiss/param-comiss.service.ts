@@ -19,20 +19,20 @@ export class ParamComissService {
 
   findOne(id: number) {
     return this.databaseService.paramCommiss.findUnique({
-      where: { id }
+      where: { id: BigInt(id) }
     });
   }
 
   update(id: number, updateParamComissDto: Prisma.ParamCommissUpdateInput) {
     return this.databaseService.paramCommiss.update({
-      where: { id },
+      where: { id: BigInt(id) },
       data: updateParamComissDto
     });
   }
 
   remove(id: number) {
     return this.databaseService.paramCommiss.delete({
-      where: { id }
+      where: { id: BigInt(id) }
     });
   }
 }

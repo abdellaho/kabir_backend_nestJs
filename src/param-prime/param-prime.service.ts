@@ -19,20 +19,20 @@ export class ParamPrimeService {
 
   findOne(id: number) {
     return this.databaseService.paramPrime.findUnique({
-      where: { id }
+      where: { id: BigInt(id) }
     });
   }
 
   update(id: number, updateParamPrimeDto: Prisma.ParamPrimeUpdateInput) {
     return this.databaseService.paramPrime.update({
-      where: { id },
+      where: { id: BigInt(id) },
       data: updateParamPrimeDto
     });
   }
 
   remove(id: number) {
     return this.databaseService.paramPrime.delete({
-      where: { id }
+      where: { id: BigInt(id) }
     });
   }
 }

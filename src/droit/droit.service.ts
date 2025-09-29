@@ -19,20 +19,20 @@ export class DroitService {
 
   findOne(id: number) {
     return this.databaseService.droit.findUnique({
-      where: { id }
+      where: { id: BigInt(id) }
     });
   }
 
   update(id: number, updateDroitDto: Prisma.DroitUpdateInput) {
     return this.databaseService.droit.update({
-      where: { id },
+      where: { id: BigInt(id) },
       data: updateDroitDto
     });
   }
 
   remove(id: number) {
     return this.databaseService.droit.delete({
-      where: { id }
+      where: { id: BigInt(id) }
     });
   }
 }

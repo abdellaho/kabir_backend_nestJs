@@ -8,7 +8,9 @@ export class AbsenceService {
   constructor(private readonly databaseService: DatabaseService) {}
 
   create(createAbsenceDto: Prisma.AbsenceCreateInput) {
-    return 'This action adds a new absence';
+    return this.databaseService.absence.create({
+      data: createAbsenceDto,
+    });
   }
 
   findAll() {

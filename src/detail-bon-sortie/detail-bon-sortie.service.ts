@@ -1,26 +1,39 @@
 import { Injectable } from '@nestjs/common';
-import { CreateDetailBonSortieDto } from './dto/create-detail-bon-sortie.dto';
-import { UpdateDetailBonSortieDto } from './dto/update-detail-bon-sortie.dto';
+import { Prisma } from 'generated/prisma';
+import { DatabaseService } from 'src/database/database.service';
 
 @Injectable()
 export class DetailBonSortieService {
-  create(createDetailBonSortieDto: CreateDetailBonSortieDto) {
-    return 'This action adds a new detailBonSortie';
+
+  constructor(private readonly databaseService: DatabaseService) {}
+
+
+  create(createDetailBonSortieDto: Prisma.DetailBonSortieCreateInput) {
+    return this.databaseService.detailBonSortie.create({
+      data: createDetailBonSortieDto
+    });
   }
 
   findAll() {
-    return `This action returns all detailBonSortie`;
+    return this.databaseService.detailBonSortie.findMany();
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} detailBonSortie`;
+    return this.databaseService.detailBonSortie.findUnique({
+      where: { id: BigInt(id) }
+    });
   }
 
-  update(id: number, updateDetailBonSortieDto: UpdateDetailBonSortieDto) {
-    return `This action updates a #${id} detailBonSortie`;
+  update(id: number, updateDetailBonSortieDto: Prisma.DetailBonSortieUpdateInput) {
+    return this.databaseService.detailBonSortie.update({
+      where: { id: BigInt(id) },
+      data: updateDetailBonSortieDto
+    });
   }
 
   remove(id: number) {
-    return `This action removes a #${id} detailBonSortie`;
+    return this.databaseService.detailBonSortie.delete({
+      where: { id: BigInt(id) }
+    });
   }
 }

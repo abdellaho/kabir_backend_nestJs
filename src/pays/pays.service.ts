@@ -25,20 +25,20 @@ export class PaysService {
 
   findOne(id: number) {
     return this.databaseService.pays.findUnique({
-      where: { id }
+      where: { id: BigInt(id) }
     });
   }
 
   update(id: number, updatePayDto: Prisma.PaysUpdateInput) {
     return this.databaseService.pays.update({
-      where: { id },
+      where: { id: BigInt(id) },
       data: updatePayDto
     });
   }
 
   remove(id: number) {
     return this.databaseService.pays.delete({
-      where: { id }
+      where: { id: BigInt(id) }
     });
   }
 }

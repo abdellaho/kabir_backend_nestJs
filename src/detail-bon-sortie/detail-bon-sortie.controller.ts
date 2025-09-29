@@ -1,14 +1,13 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { DetailBonSortieService } from './detail-bon-sortie.service';
-import { CreateDetailBonSortieDto } from './dto/create-detail-bon-sortie.dto';
-import { UpdateDetailBonSortieDto } from './dto/update-detail-bon-sortie.dto';
+import { Prisma } from 'generated/prisma';
 
 @Controller('detail-bon-sortie')
 export class DetailBonSortieController {
   constructor(private readonly detailBonSortieService: DetailBonSortieService) {}
 
   @Post()
-  create(@Body() createDetailBonSortieDto: CreateDetailBonSortieDto) {
+  create(@Body() createDetailBonSortieDto: Prisma.DetailBonSortieCreateInput) {
     return this.detailBonSortieService.create(createDetailBonSortieDto);
   }
 
@@ -23,7 +22,7 @@ export class DetailBonSortieController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateDetailBonSortieDto: UpdateDetailBonSortieDto) {
+  update(@Param('id') id: string, @Body() updateDetailBonSortieDto: Prisma.DetailBonSortieUpdateInput) {
     return this.detailBonSortieService.update(+id, updateDetailBonSortieDto);
   }
 

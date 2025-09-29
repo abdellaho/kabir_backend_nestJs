@@ -1,26 +1,38 @@
 import { Injectable } from '@nestjs/common';
-import { CreatePlanComptableDto } from './dto/create-plan-comptable.dto';
-import { UpdatePlanComptableDto } from './dto/update-plan-comptable.dto';
+import { Prisma } from 'generated/prisma';
+import { DatabaseService } from 'src/database/database.service';
 
 @Injectable()
 export class PlanComptableService {
-  create(createPlanComptableDto: CreatePlanComptableDto) {
-    return 'This action adds a new planComptable';
+
+  constructor(private readonly databaseService: DatabaseService) {}
+
+  create(createPlanComptableDto: Prisma.PlanComptableCreateInput) {
+    return this.databaseService.planComptable.create({
+      data: createPlanComptableDto,
+    });
   }
 
   findAll() {
-    return `This action returns all planComptable`;
+    return this.databaseService.planComptable.findMany();
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} planComptable`;
+    return this.databaseService.planComptable.findUnique({
+      where: { id: BigInt(id) },
+    });
   }
 
-  update(id: number, updatePlanComptableDto: UpdatePlanComptableDto) {
-    return `This action updates a #${id} planComptable`;
+  update(id: number, updatePlanComptableDto: Prisma.PlanComptableUpdateInput) {
+    return this.databaseService.planComptable.update({
+      where: { id: BigInt(id) },
+      data: updatePlanComptableDto,
+    });
   }
 
   remove(id: number) {
-    return `This action removes a #${id} planComptable`;
+    return this.databaseService.planComptable.delete({
+      where: { id: BigInt(id) },
+    });
   }
 }

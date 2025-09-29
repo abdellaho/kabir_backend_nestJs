@@ -1,14 +1,13 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { ImportationsService } from './importations.service';
-import { CreateImportationDto } from './dto/create-importation.dto';
-import { UpdateImportationDto } from './dto/update-importation.dto';
+import { Prisma } from 'generated/prisma';
 
 @Controller('importations')
 export class ImportationsController {
   constructor(private readonly importationsService: ImportationsService) {}
 
   @Post()
-  create(@Body() createImportationDto: CreateImportationDto) {
+  create(@Body() createImportationDto: Prisma.ImportationsCreateInput) {
     return this.importationsService.create(createImportationDto);
   }
 
@@ -23,7 +22,7 @@ export class ImportationsController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateImportationDto: UpdateImportationDto) {
+  update(@Param('id') id: string, @Body() updateImportationDto: Prisma.ImportationsUpdateInput) {
     return this.importationsService.update(+id, updateImportationDto);
   }
 

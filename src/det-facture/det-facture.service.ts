@@ -1,26 +1,38 @@
 import { Injectable } from '@nestjs/common';
-import { CreateDetFactureDto } from './dto/create-det-facture.dto';
-import { UpdateDetFactureDto } from './dto/update-det-facture.dto';
+import { Prisma } from 'generated/prisma';
+import { DatabaseService } from 'src/database/database.service';
 
 @Injectable()
 export class DetFactureService {
-  create(createDetFactureDto: CreateDetFactureDto) {
-    return 'This action adds a new detFacture';
+
+  constructor(private readonly databaseService: DatabaseService) {}
+
+  create(createDetFactureDto: Prisma.DetFactureCreateInput) {
+    return this.databaseService.detFacture.create({
+      data: createDetFactureDto,
+    });
   }
 
   findAll() {
-    return `This action returns all detFacture`;
+    return this.databaseService.detFacture.findMany();
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} detFacture`;
+    return this.databaseService.detFacture.findUnique({
+      where: { id: BigInt(id) },
+    });
   }
 
-  update(id: number, updateDetFactureDto: UpdateDetFactureDto) {
-    return `This action updates a #${id} detFacture`;
+  update(id: number, updateDetFactureDto: Prisma.DetFactureUpdateInput) {
+    return this.databaseService.detFacture.update({
+      where: { id: BigInt(id) },
+      data: updateDetFactureDto,
+    });
   }
 
   remove(id: number) {
-    return `This action removes a #${id} detFacture`;
+    return this.databaseService.detFacture.delete({
+      where: { id: BigInt(id) },
+    });
   }
 }

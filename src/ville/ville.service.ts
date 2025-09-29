@@ -27,20 +27,20 @@ export class VilleService {
 
   findOne(id: number) {
     return this.databaseService.ville.findUnique({
-      where: { id }
+      where: { id: BigInt(id) }
     });
   }
 
   update(id: number, updateVilleDto: Prisma.VilleUpdateInput) {
     return this.databaseService.ville.update({
-      where: { id },
+      where: { id: BigInt(id) },
       data: updateVilleDto
     });
   }
 
   remove(id: number) {
     return this.databaseService.ville.delete({
-      where: { id }
+      where: { id: BigInt(id) }
     });
   }
 }

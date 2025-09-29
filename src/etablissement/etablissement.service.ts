@@ -19,20 +19,20 @@ export class EtablissementService {
 
   findOne(id: number) {
     return this.databaseService.etablissement.findUnique({
-      where: { id }
+      where: { id: BigInt(id) }
     });
   }
 
   update(id: number, updateEtablissementDto: Prisma.EtablissementUpdateInput) {
     return this.databaseService.etablissement.update({
-      where: { id },
+      where: { id: BigInt(id) },
       data: updateEtablissementDto
     });
   }
 
   remove(id: number) {
     return this.databaseService.etablissement.delete({
-      where: { id }
+      where: { id: BigInt(id) }
     });
   }
 }

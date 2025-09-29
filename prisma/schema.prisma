@@ -128,7 +128,7 @@ model Repertoire {
    cheques         				      Cheque[]
    comptas         				      Compta[]
    comptabilites   				      Comptabilite[]
-   improtations					      Improtations[]
+   importations					      Importations[]
    livraisonCommercials 			  Livraison[] @relation("commercialLivraison")
    livraisonCommercialAnciens         Livraison[] @relation("commercialAncienLivraison")
    livraisonClients 				  Livraison[] @relation("clientLivraison")
@@ -207,7 +207,7 @@ model Employe {
   bulttinPais      			      	  BulttinPai[]
   cheques         				      Cheque[]
   comptabilites   				      Comptabilite[]
-  improtations    				      Improtations[]
+  importations    				      Importations[]
   livraisons	  				      Livraison[]
 }
 
@@ -622,8 +622,8 @@ model DetImportations {
   qteAchat      				      	Int
   qteStock      				      	Int
   prixAchat     				      	Decimal
-  improtations  				    	Improtations  			        	@relation(fields: [improtationsId], references: [id])
-  improtationsId  				    	BigInt
+  importations  				    	Importations  			        	@relation(fields: [importationsId], references: [id])
+  importationsId  				    	BigInt
   stock         				      	Stock     				        	@relation(fields: [stockId], references: [id])
   stockId       				      	BigInt
 }
@@ -700,7 +700,7 @@ model Facture {
   detFactures  				    		DetFacture[]
 }
 
-model Improtations {
+model Importations {
   id              				      	BigInt    					           @id @default(autoincrement())
   codeFacture    				    	String
   devisEuroDolar  				    	String
@@ -781,7 +781,7 @@ model PlanComptable {
 }
 
 model Solde {
-  id              				      	Int    					           @id @default(autoincrement())
+  id              				      	BigInt    					           @id @default(autoincrement())
   dateOperation  				    	DateTime @db.Date
   dateReglement  				    	DateTime @db.Date
   debit         				      	Decimal

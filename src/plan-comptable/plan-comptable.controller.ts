@@ -1,14 +1,13 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { PlanComptableService } from './plan-comptable.service';
-import { CreatePlanComptableDto } from './dto/create-plan-comptable.dto';
-import { UpdatePlanComptableDto } from './dto/update-plan-comptable.dto';
+import { Prisma } from 'generated/prisma';
 
 @Controller('plan-comptable')
 export class PlanComptableController {
   constructor(private readonly planComptableService: PlanComptableService) {}
 
   @Post()
-  create(@Body() createPlanComptableDto: CreatePlanComptableDto) {
+  create(@Body() createPlanComptableDto: Prisma.PlanComptableCreateInput) {
     return this.planComptableService.create(createPlanComptableDto);
   }
 
@@ -23,7 +22,7 @@ export class PlanComptableController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updatePlanComptableDto: UpdatePlanComptableDto) {
+  update(@Param('id') id: string, @Body() updatePlanComptableDto: Prisma.PlanComptableUpdateInput) {
     return this.planComptableService.update(+id, updatePlanComptableDto);
   }
 

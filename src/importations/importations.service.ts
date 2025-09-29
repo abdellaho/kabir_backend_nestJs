@@ -1,26 +1,38 @@
 import { Injectable } from '@nestjs/common';
-import { CreateImportationDto } from './dto/create-importation.dto';
-import { UpdateImportationDto } from './dto/update-importation.dto';
+import { Prisma } from 'generated/prisma';
+import { DatabaseService } from 'src/database/database.service';
 
 @Injectable()
 export class ImportationsService {
-  create(createImportationDto: CreateImportationDto) {
-    return 'This action adds a new importation';
+
+  constructor(private readonly databaseService: DatabaseService) {}
+
+  create(createImportationDto: Prisma.ImportationsCreateInput) {
+    return this.databaseService.importations.create({
+      data: createImportationDto,
+    });
   }
 
   findAll() {
-    return `This action returns all importations`;
+    return this.databaseService.importations.findMany();
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} importation`;
+    return this.databaseService.importations.findUnique({
+      where: { id: BigInt(id) },
+    });
   }
 
-  update(id: number, updateImportationDto: UpdateImportationDto) {
-    return `This action updates a #${id} importation`;
+  update(id: number, updateImportationDto: Prisma.ImportationsUpdateInput) {
+    return this.databaseService.importations.update({
+      where: { id: BigInt(id) },
+      data: updateImportationDto,
+    });
   }
 
   remove(id: number) {
-    return `This action removes a #${id} importation`;
+    return this.databaseService.importations.delete({
+      where: { id: BigInt(id) },
+    });
   }
 }
