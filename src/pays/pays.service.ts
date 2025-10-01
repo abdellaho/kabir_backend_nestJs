@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { DatabaseService } from 'src/database/database.service';
 import { Prisma } from 'generated/prisma';
+import * as paysSearch from 'src/common/searchModels/pays-search';
 
 @Injectable()
 export class PaysService {
@@ -17,9 +18,17 @@ export class PaysService {
     return this.databaseService.pays.findMany();
   }
 
-  findByName(pays: string) {
+  findByName(paysSearch: paysSearch.PaysSearch) {
+    let whereClause = paysSearch.id 
+    ? { id: { not: paysSearch.id } } 
+    : {};
+
     return this.databaseService.pays.findMany({
-      where: { pays }
+      where: {
+        pays: { equals: paysSearch.pays },
+        ...(whereClause)
+      }, 
+      take: 1
     });
   }
 

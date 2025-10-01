@@ -1,6 +1,7 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { PaysService } from './pays.service';
 import { Prisma } from 'generated/prisma';
+import * as paysSearch from 'src/common/searchModels/pays-search';
 
 @Controller('api/pays')
 export class PaysController {
@@ -14,6 +15,11 @@ export class PaysController {
   @Get()
   findAll() {
     return this.paysService.findAll();
+  }
+
+  @Post('search')
+  findByName(@Body() pays: paysSearch.PaysSearch) {
+    return this.paysService.findByName(pays);
   }
 
   @Get(':id')
