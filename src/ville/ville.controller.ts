@@ -2,7 +2,7 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { VilleService } from './ville.service';
 import { Prisma } from 'generated/prisma';
 
-@Controller('ville')
+@Controller('api/ville')
 export class VilleController {
   constructor(private readonly villeService: VilleService) {}
 
