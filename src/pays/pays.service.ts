@@ -32,6 +32,22 @@ export class PaysService {
     });
   }
 
+  async existsByName(paysSearch: paysSearch.PaysSearch): Promise<boolean> {
+    let whereClause = paysSearch.id 
+    ? { id: { not: paysSearch.id } } 
+    : {};
+
+    const result = await this.databaseService.pays.findMany({
+      where: {
+        pays: { equals: paysSearch.pays },
+        ...(whereClause)
+      }, 
+      take: 1
+    });
+
+    return result.length > 0;
+  }
+
   findOne(id: number) {
     return this.databaseService.pays.findUnique({
       where: { id: BigInt(id) }

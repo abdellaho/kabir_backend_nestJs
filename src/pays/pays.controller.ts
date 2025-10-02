@@ -22,6 +22,10 @@ export class PaysController {
     return this.paysService.findByName(pays);
   }
 
+  @Post('exist')
+  exist(@Body() pays: paysSearch.PaysSearch) {
+    return this.paysService.existsByName(pays);
+  }
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.paysService.findOne(+id);
