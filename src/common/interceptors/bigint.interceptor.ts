@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 function replacer(key: string, value: any) {
-  return typeof value === 'bigint' ? value.toString() : value;
+  return typeof value === 'bigint' ? Number(value) : value;
 }
 
 @Injectable()

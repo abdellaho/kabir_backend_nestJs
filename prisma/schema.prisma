@@ -51,7 +51,7 @@ model Etablissement {
   fromMail        				      String
   userMail        				      String
   capitale        				      String
-  pourcentageLiv  				      String
+  pourcentageLiv  				      Decimal
   lienDbDump      			    	  String
   lienBackupDB   			 	        String
   lundi           				      Boolean @default(false)
