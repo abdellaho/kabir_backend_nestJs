@@ -33,7 +33,9 @@ model Etablissement {
   id              				      BigInt    			 		              @id @default(autoincrement())
   nom             				      String
   cheminBD        				      String
-  tel             				      String
+  tel1             				      String
+  tel2             				      String
+  tel3             				      String
   fax             				      String
   gsm             				      String
   email           				      String
@@ -65,7 +67,7 @@ model Etablissement {
   typeExec        				      Int
   numJour         				      Int
   ville           				      Ville     				            @relation(fields: [villeId], references: [id])
-  villeId  						      BigInt
+  villeId  						          BigInt
 }
 
 model ParamPrime {
