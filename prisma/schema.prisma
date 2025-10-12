@@ -93,7 +93,10 @@ model ParamPrimeProduit {
 
 model Repertoire {
    id              				      BigInt    					           	@id @default(autoincrement())
-   designation		 			      String
+   designation		 			        String
+   cin                          String
+   login                        String
+   password                     String
    contact1         			      String
    contact2         			      String
    tel1             			      String
@@ -101,7 +104,9 @@ model Repertoire {
    tel3             			      String
    adresse         				      String
    email           				      String
-   typeRepertoire   			      Int
+   typePersonnel                Int
+   etatComptePersonnel          Boolean @default(false)
+   typeRepertoire   			      TypePersonnel
    typeReglment     			      Int
    ife             				      String
    ice             				      String
@@ -110,30 +115,30 @@ model Repertoire {
    dateEntrer      				      DateTime @db.Date
    dateValidation  				      DateTime
    observation     				      String
-   salaireParDefaut 			      Decimal
-   nbrOperationClient 			    	Int
+   salaire 			                Decimal
+   nbrOperationClient 			    Int
    bloquer         				      Int
    mntCnss         				      Decimal
    commercialExterne 			      Boolean @default(false)
    contactTel2     				      String
    contactTel3     				      String
-   repertoire         			      Repertoire?  			          @relation("repertoireToRepertoire", fields: [repertoireId], references: [id])
+   repertoire         			    Repertoire?  			          @relation("repertoireToRepertoire", fields: [repertoireId], references: [id])
    repertoireId    				      BigInt?
    ville           				      Ville     				          @relation(fields: [villeId], references: [id])
    villeId         				      BigInt
    stocks           			      Stock[]
    repertoires       			      Repertoire[] 			          @relation("repertoireToRepertoire")
    employes         			      Employe[]
-   absences         				  Absence[]
+   absences         				    Absence[]
    bonSorties       			      BonSortie[]
    bulttinPais      			      BulttinPai[]
    cheques         				      Cheque[]
    comptas         				      Compta[]
    comptabilites   				      Comptabilite[]
-   importations					      Importations[]
+   importations					        Importations[]
    livraisonCommercials 			  Livraison[] @relation("commercialLivraison")
-   livraisonCommercialAnciens         Livraison[] @relation("commercialAncienLivraison")
-   livraisonClients 				  Livraison[] @relation("clientLivraison")
+   livraisonCommercialAnciens   Livraison[] @relation("commercialAncienLivraison")
+   livraisonClients 				    Livraison[] @relation("clientLivraison")
 }
 
 model Stock {
@@ -792,4 +797,14 @@ model Solde {
   nature        				      	String
   planComptable  				      	PlanComptable  			        @relation(fields: [planComptableId], references: [id])
   planComptableId  			      		BigInt
+}
+
+enum TypePersonnel {
+  NONE                        @map("0")
+  ADMINISTRATEUR              @map("1")
+  GERANT                      @map("2")
+  COMPATBLE                   @map("3")
+  MAGASINIER                  @map("4")
+  COMMERCIAL_INTERNE          @map("5")
+  COMMERCIAL_EXTERNE          @map("6")
 }
