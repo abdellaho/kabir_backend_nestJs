@@ -16,16 +16,16 @@ datasource db {
 
 model Pays {
   id          					        BigInt         			              @id @default(autoincrement())
-  pays       					        String  
-  villes  						        Ville[]
+  pays       					          String  
+  villes  						          Ville[]
 }
 
 model Ville {
   id          					        BigInt         			              @id @default(autoincrement())
   nomVille       				        String      
-  pays        					        Pays        			              @relation(fields: [paysId], references: [id])
-  paysId  						        BigInt
-  etablissements  				      	Etablissement[]
+  pays        					        Pays        			                @relation(fields: [paysId], references: [id])
+  paysId  						          BigInt
+  etablissements  				      Etablissement[]
   repertoires   				        Repertoire[]
 }
 
@@ -87,8 +87,8 @@ model ParamPrimeProduit {
   id              				      BigInt    					       		@id @default(autoincrement())
   montant         				      Decimal
   prime           				      Decimal
-  stock         				      Stock     				          	@relation(fields: [stockId], references: [id])
-  stockId       				      BigInt
+  stock         				        Stock     				          	@relation(fields: [stockId], references: [id])
+  stockId       				        BigInt
 }
 
 model Repertoire {
@@ -143,11 +143,11 @@ model Repertoire {
 
 model Stock {
   id              				      BigInt    					            @id @default(autoincrement())
-  designation         			   	  String
-  sysDate             			    	DateTime
-  pahtGrossiste           		  		Decimal
-  prixCommercial           		 	  Decimal
-  tva           				      Decimal
+  designation         			   	String
+  sysDate             			    DateTime
+  pahtGrossiste           		  Decimal
+  prixCommercial           		 	Decimal
+  tva           				        Decimal
   pattc           				      Decimal
   pvttc           				      Decimal
   pvaht           				      Decimal
@@ -168,28 +168,28 @@ model Stock {
   prixImport            		    Decimal
   commission            		    Decimal
   archiver              		    Int
-  qteStockImport              		Int
+  qteStockImport              	Int
   avecRemise            		    Boolean @default(false)
-  prixAchatBiggerPrixVente    		Boolean @default(false)
-  facturer100       			    Boolean @default(false)
-  promotion1        			    String
-  promotion2        			    String
+  prixAchatBiggerPrixVente    	Boolean @default(false)
+  facturer100       			      Boolean @default(false)
+  promotion1        			      String
+  promotion2        			      String
   paramPrimeProduits   			    ParamPrimeProduit[]
-  repertoire        			    Repertoire          	        @relation(fields: [repertoireId], references: [id])
-  repertoireId      			    BigInt
-  detAchatFactures   			    DetAchatFacture[]
-  detAchatLivraisons 			    DetAchatLivraison[]
-  detFactures        			    DetFacture[]
-  detImportations    			    DetImportations[]
-  detLivraisons      			    DetLivraison[]
-  detailBonSorties   			    DetailBonSortie[]
-  detBulttinPais	  			    DetBulttinPai[]
+  repertoire        			      Repertoire          	        @relation(fields: [repertoireId], references: [id])
+  repertoireId      			      BigInt
+  detAchatFactures   			      DetAchatFacture[]
+  detAchatLivraisons 			      DetAchatLivraison[]
+  detFactures        			      DetFacture[]
+  detImportations    			      DetImportations[]
+  detLivraisons      			      DetLivraison[]
+  detailBonSorties   			      DetailBonSortie[]
+  detBulttinPais	  			      DetBulttinPai[]
 }
 
 model Employe {
   id              				      BigInt    					              @id @default(autoincrement())
   numEmp           				      Int
-  livrerNonLivrerDroit 			      Int
+  livrerNonLivrerDroit 			    Int
   codeEmp         				      String
   nom             				      String
   prenom          				      String
@@ -209,13 +209,13 @@ model Employe {
   livraisonLimite 				      Boolean @default(false)
   repertoire      				      Repertoire  			            @relation(fields: [repertoireId], references: [id])
   repertoireId    				      BigInt
-  absences						      Absence[]
-  bonSorties       			          BonSortie[]
-  bulttinPais      			      	  BulttinPai[]
+  absences						          Absence[]
+  bonSorties       			        BonSortie[]
+  bulttinPais      			      	BulttinPai[]
   cheques         				      Cheque[]
   comptabilites   				      Comptabilite[]
   importations    				      Importations[]
-  livraisons	  				      Livraison[]
+  livraisons	  				        Livraison[]
 }
 
 model Droit {
@@ -226,181 +226,181 @@ model Droit {
   listFacture     				        Boolean @default(false)
   listAchatLivraison 			        Boolean @default(false)
   listAchatFacture 				        Boolean @default(false)
-  listAchatLivraisonEtranger   	  		Boolean @default(false)
+  listAchatLivraisonEtranger   	  Boolean @default(false)
   ajouterRepertoire 			        Boolean @default(false)
   ajouterStock     				        Boolean @default(false)
   ajouterLivraison  			        Boolean @default(false)
   ajouterFacture    			        Boolean @default(false)
-  ajouterAchatLivraison 		      	Boolean @default(false)
-  ajouterAchatFacture 			      	Boolean @default(false)
-  ajouterAchatLivraisonEtranger   		Boolean @default(false)
+  ajouterAchatLivraison 		      Boolean @default(false)
+  ajouterAchatFacture 			      Boolean @default(false)
+  ajouterAchatLivraisonEtranger   Boolean @default(false)
   modifRepertoire   			        Boolean @default(false)
   modifStock       				        Boolean @default(false)
   modifLivraison   				        Boolean @default(false)
   modifFacture     				        Boolean @default(false)
-  modifAchatLivraison 			      	Boolean @default(false)
+  modifAchatLivraison 			      Boolean @default(false)
   modifAchatFacture 			        Boolean @default(false)
-  modifAchatLivraisonEtranger     		Boolean @default(false)
+  modifAchatLivraisonEtranger     Boolean @default(false)
   suppRepertoire   				        Boolean @default(false)
   suppStock       				        Boolean @default(false)
   suppLivraison   				        Boolean @default(false)
   suppFacture     				        Boolean @default(false)
   suppAchatLivraison 			        Boolean @default(false)
   suppAchatFacture 				        Boolean @default(false)
-  suppAchatLivraisonEtranger   	  		Boolean @default(false)
+  suppAchatLivraisonEtranger   	  Boolean @default(false)
   etatRepertoire   				        Boolean @default(false)
   etatStock       				        Boolean @default(false)
   etatLivraison   				        Boolean @default(false)
   etatFacture     				        Boolean @default(false)
   etatAchatLivraison 			        Boolean @default(false)
   etatAchatFacture 				        Boolean @default(false)
-  etatAchatLivraisonEtranger   	  		Boolean @default(false)
+  etatAchatLivraisonEtranger   	  Boolean @default(false)
   imprimeRepertoire 			        Boolean @default(false)
   imprimeStock     				        Boolean @default(false)
   imprimeLivraison  			        Boolean @default(false)
   imprimeFacture    			        Boolean @default(false)
   imprimerAchatLivraison 		     	Boolean @default(false)
-  imprimerAchatFacture 			      	Boolean @default(false)
-  imprimerAchatLivraisonEtranger  		Boolean @default(false)
+  imprimerAchatFacture 			      Boolean @default(false)
+  imprimerAchatLivraisonEtranger  Boolean @default(false)
 }
 
 model Absence {
-  id              				      	BigInt    					           @id @default(autoincrement())
+  id              				      	BigInt    					            @id @default(autoincrement())
   dateAbsence          				    DateTime @db.Date
-  matin          				      	Boolean @default(false)
-  apresMidi      				      	Boolean @default(false)
-  dateOperation  				      	DateTime
-  employeOperation  				    Employe     				      	@relation(fields: [employeOperationId], references: [id])
-  employeOperationId  			      	BigInt
-  penalite       				      	Decimal
-  repertoire     				      	Repertoire  			            @relation(fields: [repertoireId], references: [id])
-  repertoireId   				      	BigInt
+  matin          				      	  Boolean @default(false)
+  apresMidi      				      	  Boolean @default(false)
+  dateOperation  				      	  DateTime
+  employeOperation  				      Employe     				      	    @relation(fields: [employeOperationId], references: [id])
+  employeOperationId  			      BigInt
+  penalite       				      	  Decimal
+  repertoire     				      	  Repertoire  			              @relation(fields: [repertoireId], references: [id])
+  repertoireId   				      	  BigInt
 }
 
 model AchatFacture {
-  id              				      	BigInt    					           @id @default(autoincrement())
-  codeAF         				      	String
-  numAchat       				      	Int
-  dateAF         				      	DateTime @db.Date
-  sysDate       				      	DateTime
-  dateAvances   				      	DateTime @db.Date
-  mantantAvancs  				      	Decimal
-  prixNormalAchatHt  				    Int
-  numeroFacExterne  				    String
-  numeroIF      				      	String
-  mantantAF      				      	Decimal
-  mantantBFBenefice  				    Decimal
-  montantNonTaxable  				    Decimal
-  dateReglement  				      	DateTime @db.Date
-  typeReglment   				      	Int
-  typePaiement   				      	String
-  numCheque      				      	String
-  mantantTotHT   				      	Decimal
+  id              				      	BigInt    					            @id @default(autoincrement())
+  codeAF         				      	  String
+  numAchat       				      	  Int
+  dateAF         				      	  DateTime @db.Date
+  sysDate       				      	  DateTime
+  dateAvances   				      	  DateTime @db.Date
+  mantantAvancs  				      	  Decimal
+  prixNormalAchatHt  				      Int
+  numeroFacExterne  				      String
+  numeroIF      				      	  String
+  mantantAF      				      	  Decimal
+  mantantBFBenefice  				      Decimal
+  montantNonTaxable  				      Decimal
+  dateReglement  				      	  DateTime @db.Date
+  typeReglment   				      	  Int
+  typePaiement   				      	  String
+  numCheque      				      	  String
+  mantantTotHT   				      	  Decimal
   mantantTotHTVA  				      	Decimal
-  mantantTotTTC  				      	Decimal
-  tva20         				      	Decimal
-  tva7          				      	Decimal
-  tvaArbtraire  				      	Decimal
-  manuelAutoMatique  				    Int
-  mntManuelTva7  				      	Decimal
+  mantantTotTTC  				      	  Decimal
+  tva20         				      	  Decimal
+  tva7          				      	  Decimal
+  tvaArbtraire  				      	  Decimal
+  manuelAutoMatique  				      Int
+  mntManuelTva7  				      	  Decimal
   mntManuelTva10  				      	Decimal
   mntManuelTva12  				      	Decimal
   mntManuelTva13  				      	Decimal
   mntManuelTva14  				      	Decimal
   mntManuelTva20  				      	Decimal
-  montantTVA7   				      	Decimal
-  montantTVA10  				      	Decimal
-  montantTVA12  				      	Decimal
-  montantTVA13  				      	Decimal
-  montantTVA14  				      	Decimal
-  montantTVA20  				      	Decimal
-  mntHtTVA7     				      	Decimal
-  mntHtTVA10    				      	Decimal
-  mntHtTVA12    				      	Decimal
-  mntHtTVA13    				      	Decimal
-  mntHtTVA14    				      	Decimal
-  mntHtTVA20    				      	Decimal
-  mntTtcTVA7    				      	Decimal
-  mntTtcTVA10   				      	Decimal
-  mntTtcTVA12   				      	Decimal
-  mntTtcTVA13   				      	Decimal
-  mntTtcTVA14   				      	Decimal
-  mntTtcTVA20   				      	Decimal
-  mntTtc        				      	Decimal
-  montantDroitSupplementaire  		  	Decimal
-  disabledHT    				      	Boolean @default(false)
+  montantTVA7   				      	  Decimal
+  montantTVA10  				      	  Decimal
+  montantTVA12  				      	  Decimal
+  montantTVA13  				      	  Decimal
+  montantTVA14  				      	  Decimal
+  montantTVA20  				      	  Decimal
+  mntHtTVA7     				      	  Decimal
+  mntHtTVA10    				      	  Decimal
+  mntHtTVA12    				      	  Decimal
+  mntHtTVA13    				      	  Decimal
+  mntHtTVA14    				      	  Decimal
+  mntHtTVA20    				      	  Decimal
+  mntTtcTVA7    				      	  Decimal
+  mntTtcTVA10   				      	  Decimal
+  mntTtcTVA12   				      	  Decimal
+  mntTtcTVA13   				      	  Decimal
+  mntTtcTVA14   				      	  Decimal
+  mntTtcTVA20   				      	  Decimal
+  mntTtc        				      	  Decimal
+  montantDroitSupplementaire  		Decimal
+  disabledHT    				      	  Boolean @default(false)
   disabledManuel  				      	Boolean @default(false)
-  detAchatFactures  				    DetAchatFacture[]
+  detAchatFactures  				      DetAchatFacture[]
 }
 
 model AchatLivraison {
   id              				      	BigInt    					           @id @default(autoincrement())
-  codeAL        				      	String
-  numAchat       				      	Int
-  dateAL         				      	DateTime @db.Date
-  sysDate       				      	DateTime
-  prixNormalAchatHt  				    Int
-  numeroBlExterne  				    	String
-  mantantAL      				      	Decimal
-  mantantALTTC   				      	Decimal
+  codeAL        				      	  String
+  numAchat       				      	  Int
+  dateAL         				      	  DateTime @db.Date
+  sysDate       				      	  DateTime
+  prixNormalAchatHt  				      Int
+  numeroBlExterne  				    	  String
+  mantantAL      				      	  Decimal
+  mantantALTTC   				      	  Decimal
   mantantALTVA20  				      	Decimal
   mantantALTVA7   				      	Decimal
-  totalMantantALTVA  				    Decimal
-  mantantBFBenefice  				    Decimal
-  montantTVA7   				      	Decimal
-  montantTVA10  				      	Decimal
-  montantTVA14  				      	Decimal
-  montantTVA20  				      	Decimal
-  detAchatLivraisons                    DetAchatLivraison[]
+  totalMantantALTVA  				      Decimal
+  mantantBFBenefice  				      Decimal
+  montantTVA7   				      	  Decimal
+  montantTVA10  				      	  Decimal
+  montantTVA14  				      	  Decimal
+  montantTVA20  				      	  Decimal
+  detAchatLivraisons              DetAchatLivraison[]
 }
 
 model Balance {
   id              				      	BigInt    					           @id @default(autoincrement())
   dateBalance          				    DateTime @db.Date
-  nature        				      	String
-  debitPrec     				      	Decimal
-  creditPrec    				      	Decimal
-  debit         				      	Decimal
-  credit        				      	Decimal
-  soldeDebiteur  				      	Decimal
+  nature        				      	  String
+  debitPrec     				      	  Decimal
+  creditPrec    				      	  Decimal
+  debit         				      	  Decimal
+  credit        				      	  Decimal
+  soldeDebiteur  				      	  Decimal
   soldeCrediteur  				      	Decimal
-  planComptable  				      	PlanComptable  			        @relation(fields: [planComptableId], references: [id])
+  planComptable  				      	  PlanComptable  			          @relation(fields: [planComptableId], references: [id])
   planComptableId  			      		BigInt
 }
 
 model Bilan {
   id              				      	BigInt    					           @id @default(autoincrement())
-  date1         				      	DateTime @db.Date
-  date2         				      	DateTime @db.Date
-  stock        				      		Decimal
-  banque       				      		Decimal
-  caisse1      				      		Decimal
-  caisse2      				      		Decimal
-  actifDivers  				      		Decimal
-  capital      				      		Decimal
-  dgi          				      		Decimal
-  cnss         				      		Decimal
-  loyer        				      		Decimal
-  salaire      				      		Decimal
-  tva          				      		Decimal
+  date1         				      	  DateTime @db.Date
+  date2         				      	  DateTime @db.Date
+  stock        				      		  Decimal
+  banque       				      		  Decimal
+  caisse1      				      		  Decimal
+  caisse2      				      		  Decimal
+  actifDivers  				      		  Decimal
+  capital      				      		  Decimal
+  dgi          				      		  Decimal
+  cnss         				      		  Decimal
+  loyer        				      		  Decimal
+  salaire      				      		  Decimal
+  tva          				      		  Decimal
   chiffreAffaire  				      	Decimal
-  passifDivers  				      	Decimal
-  compteCourant  				      	Decimal
-  resultatPrecedent  				    Decimal
-  resultat     				      		Decimal
+  passifDivers  				      	  Decimal
+  compteCourant  				      	  Decimal
+  resultatPrecedent  				      Decimal
+  resultat     				      		  Decimal
 }
 
 model BonSortie {
   id              				      	BigInt    					           @id @default(autoincrement())
   numSortie       				      	Int
-  codeSortie     				      	String
-  dateOperation  				      	DateTime @db.Timestamp(0)
-  mnt           				      	Decimal
-  employe       				      	Employe     				      	@relation(fields: [employeId], references: [id])
-  employeId     				      	BigInt
-  repertoire    				      	Repertoire  			            @relation(fields: [repertoireId], references: [id])
-  repertoireId  				      	BigInt
-  detailBonSorties  				    DetailBonSortie[]
+  codeSortie     				      	  String
+  dateOperation  				      	  DateTime @db.Timestamp(0)
+  mnt           				      	  Decimal
+  employe       				      	  Employe     				      	  @relation(fields: [employeId], references: [id])
+  employeId     				      	  BigInt
+  repertoire    				      	  Repertoire  			            @relation(fields: [repertoireId], references: [id])
+  repertoireId  				      	  BigInt
+  detailBonSorties  				      DetailBonSortie[]
 }
 
 model BulttinPai {
