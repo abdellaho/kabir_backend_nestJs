@@ -35,4 +35,45 @@ export class RepertoireService {
       where: { id: BigInt(id) }
     });
   }
+
+   checkIfExists(data: {
+  tel1?: string;
+  tel2?: string;
+  designation?: string;
+  login?: string;
+  id?: number;
+}) {
+  const { tel1, tel2, designation, login, id } = data;
+
+  const conditions: any[] = [];
+
+  // Add conditions only for provided fields
+  if (tel1) {
+    conditions.push({ tel1 });
+  }
+  if (tel2) {
+    conditions.push({ tel2 });
+  }
+  if (designation) {
+    conditions.push({ designation });
+  }
+  if (login) {
+    conditions.push({ login });
+  }
+
+  // If no conditions provided, return false
+  if (conditions.length === 0) {
+    return false;
+  }
+
+  // Build the query
+  const exists = this.databaseService.repertoire.findFirst({
+    where: {
+      OR: conditions,
+      ...(id && { id: { not: id } }) // Exclude the current id if provided
+    }
+  });
+
+  return exists !== null;
+}
 }
