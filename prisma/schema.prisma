@@ -104,9 +104,9 @@ model Repertoire {
    tel3             			      String
    adresse         				      String
    email           				      String
-   typePersonnel                Int
+   typePersonnel                TypePersonnel
    etatComptePersonnel          Boolean @default(false)
-   typeRepertoire   			      TypePersonnel
+   typeRepertoire   			      TypeRepertoire
    typeReglment     			      Int
    ife             				      String
    ice             				      String
@@ -124,8 +124,8 @@ model Repertoire {
    contactTel3     				      String
    repertoire         			    Repertoire?  			          @relation("repertoireToRepertoire", fields: [repertoireId], references: [id])
    repertoireId    				      BigInt?
-   ville           				      Ville     				          @relation(fields: [villeId], references: [id])
-   villeId         				      BigInt
+   ville           				      Ville?     				          @relation(fields: [villeId], references: [id])
+   villeId         				      BigInt?
    stocks           			      Stock[]
    repertoires       			      Repertoire[] 			          @relation("repertoireToRepertoire")
    employes         			      Employe[]
@@ -807,4 +807,12 @@ enum TypePersonnel {
   MAGASINIER                  @map("4")
   COMMERCIAL_INTERNE          @map("5")
   COMMERCIAL_EXTERNE          @map("6")
+}
+
+enum TypeRepertoire {
+  NONE                        @map("0")
+  EMPLOYE                     @map("1")
+  PHARMACIE                   @map("2")
+  FOURNISSEUR                 @map("3")
+  REVENDEUR                   @map("4")
 }

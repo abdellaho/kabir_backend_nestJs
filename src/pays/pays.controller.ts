@@ -3,7 +3,7 @@ import { PaysService } from './pays.service';
 import { Prisma } from 'generated/prisma';
 import * as paysSearch from 'src/common/searchModels/pays-search';
 
-@Controller('api/pays')
+@Controller('pays')
 export class PaysController {
   constructor(private readonly paysService: PaysService) {}
 

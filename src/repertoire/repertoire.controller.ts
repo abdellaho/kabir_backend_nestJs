@@ -1,6 +1,7 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { RepertoireService } from './repertoire.service';
 import { Prisma } from 'generated/prisma';
+import type { RepertoireSearch } from 'src/common/searchModels/repertoire-search';
 
 @Controller('repertoire')
 export class RepertoireController {
@@ -9,6 +10,11 @@ export class RepertoireController {
   @Post()
   create(@Body() createRepertoireDto: Prisma.RepertoireCreateInput) {
     return this.repertoireService.create(createRepertoireDto);
+  }
+
+  @Post('search-personnel')
+  searchPersonnel(@Body() repertoireSearch: RepertoireSearch) {
+    return this.repertoireService.checkIfExists(repertoireSearch);
   }
 
   @Get()
