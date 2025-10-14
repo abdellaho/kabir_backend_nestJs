@@ -104,9 +104,9 @@ model Repertoire {
    tel3             			      String
    adresse         				      String
    email           				      String
-   typePersonnel                TypePersonnel
+   typePersonnel                Int
    etatComptePersonnel          Boolean @default(false)
-   typeRepertoire   			      TypeRepertoire
+   typeRepertoire   			      Int
    typeReglment     			      Int
    ife             				      String
    ice             				      String

@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import * as bcrypt from 'bcrypt';
 import { Prisma } from 'generated/prisma';
 import { RepertoireSearch } from 'src/common/searchModels/repertoire-search';
 import { DatabaseService } from 'src/database/database.service';
@@ -6,9 +7,18 @@ import { DatabaseService } from 'src/database/database.service';
 @Injectable()
 export class RepertoireService {
 
+  private readonly saltRounds = 10;
+
   constructor(private readonly databaseService: DatabaseService) {}
 
-  create(createRepertoireDto: Prisma.RepertoireCreateInput) {
+  async create(createRepertoireDto: Prisma.RepertoireCreateInput) {
+    if (createRepertoireDto.password) {
+      createRepertoireDto.password = await bcrypt.hash(
+        createRepertoireDto.password,
+        this.saltRounds
+      );
+    }
+
     return this.databaseService.repertoire.create({
       data: createRepertoireDto
     });
@@ -24,7 +34,14 @@ export class RepertoireService {
     });
   }
 
-  update(id: number, updateRepertoireDto: Prisma.RepertoireUpdateInput) {
+  async update(id: number, updateRepertoireDto: Prisma.RepertoireUpdateInput) {
+    if (updateRepertoireDto.password) {
+      updateRepertoireDto.password = await bcrypt.hash(
+        updateRepertoireDto.password as string,
+        this.saltRounds
+      );
+    }
+
     return this.databaseService.repertoire.update({
       where: { id: BigInt(id) },
       data: updateRepertoireDto
@@ -35,6 +52,10 @@ export class RepertoireService {
     return this.databaseService.repertoire.delete({
       where: { id: BigInt(id) }
     });
+  }
+
+  async validatePassword(plainPassword: string, hashedPassword: string): Promise<boolean> {
+    return bcrypt.compare(plainPassword, hashedPassword);
   }
 
   async checkIfExists(data: RepertoireSearch) {
