@@ -13,10 +13,7 @@ export class RepertoireService {
 
   async create(createRepertoireDto: Prisma.RepertoireCreateInput) {
     if (createRepertoireDto.password) {
-      createRepertoireDto.password = await bcrypt.hash(
-        createRepertoireDto.password,
-        this.saltRounds
-      );
+      createRepertoireDto.password = await bcrypt.hash(createRepertoireDto.password, this.saltRounds);
     }
 
     return this.databaseService.repertoire.create({
@@ -36,10 +33,7 @@ export class RepertoireService {
 
   async update(id: number, updateRepertoireDto: Prisma.RepertoireUpdateInput) {
     if (updateRepertoireDto.password) {
-      updateRepertoireDto.password = await bcrypt.hash(
-        updateRepertoireDto.password as string,
-        this.saltRounds
-      );
+      updateRepertoireDto.password = await bcrypt.hash(updateRepertoireDto.password as string, this.saltRounds);
     }
 
     return this.databaseService.repertoire.update({

@@ -14,17 +14,9 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Pays {
-  id          					        BigInt         			              @id @default(autoincrement())
-  pays       					          String  
-  villes  						          Ville[]
-}
-
 model Ville {
   id          					        BigInt         			              @id @default(autoincrement())
   nomVille       				        String      
-  pays        					        Pays        			                @relation(fields: [paysId], references: [id])
-  paysId  						          BigInt
   etablissements  				      Etablissement[]
   repertoires   				        Repertoire[]
 }

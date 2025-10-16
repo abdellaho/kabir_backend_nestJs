@@ -1,7 +1,6 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { PaysModule } from './pays/pays.module';
 import { VilleModule } from './ville/ville.module';
 import { EtablissementModule } from './etablissement/etablissement.module';
 import { ParamPrimeModule } from './param-prime/param-prime.module';
@@ -39,7 +38,7 @@ import { PlanComptableModule } from './plan-comptable/plan-comptable.module';
 import { SoldeModule } from './solde/solde.module';
 
 @Module({
-  imports: [PaysModule, VilleModule, EtablissementModule, ParamPrimeModule, ParamComissModule, ParamPrimeProduitModule, RepertoireModule, StockModule, EmployeModule, DroitModule, DatabaseModule, AbsenceModule, AchatFactureModule, AchatLivraisonModule, BalanceModule, BilanModule, BonSortieModule, BulttinPaiModule, CaisseModule, ChequeModule, ComptaModule, ComptabiliteModule, CompteCaisseModule, DetAchatFactureModule, DetAchatLivraisonModule, DetailBonSortieModule, DetBulttinLivraisonModule, DetBulttinPaiModule, DetFactureModule, DetImportationsModule, DetLivraisonModule, FactureModule, ImportationsModule, LivraisonModule, PlanComptableModule, SoldeModule],
+  imports: [VilleModule, EtablissementModule, ParamPrimeModule, ParamComissModule, ParamPrimeProduitModule, RepertoireModule, StockModule, EmployeModule, DroitModule, DatabaseModule, AbsenceModule, AchatFactureModule, AchatLivraisonModule, BalanceModule, BilanModule, BonSortieModule, BulttinPaiModule, CaisseModule, ChequeModule, ComptaModule, ComptabiliteModule, CompteCaisseModule, DetAchatFactureModule, DetAchatLivraisonModule, DetailBonSortieModule, DetBulttinLivraisonModule, DetBulttinPaiModule, DetFactureModule, DetImportationsModule, DetLivraisonModule, FactureModule, ImportationsModule, LivraisonModule, PlanComptableModule, SoldeModule],
   controllers: [AppController],
   providers: [AppService],
 })
