@@ -44,7 +44,7 @@ model Etablissement {
   paswordMailFake 				      String
   fromMail        				      String
   userMail        				      String
-  capitale        				      String
+  capitale        				      Int
   pourcentageLiv  				      Decimal
   lienDbDump      			    	  String
   lienBackupDB   			 	        String
@@ -58,8 +58,8 @@ model Etablissement {
   dateTime        				      DateTime
   typeExec        				      Int
   numJour         				      Int
-  ville           				      Ville     				            @relation(fields: [villeId], references: [id])
-  villeId  						          BigInt
+  ville           				      Ville?     				            @relation(fields: [villeId], references: [id])
+  villeId  						          BigInt?
 }
 
 model ParamPrime {
