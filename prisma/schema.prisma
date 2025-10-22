@@ -19,6 +19,40 @@ model Ville {
   nomVille       				        String      
   etablissements  				      Etablissement[]
   repertoires   				        Repertoire[]
+  fournisseurs   				        Fournisseur[]
+}
+
+model Fournisseur {
+  id              				      BigInt    					              @id @default(autoincrement()) 
+  designation		 			          String
+  type  				                Int
+  tel1             				      String
+  tel2             				      String
+  ice                           String
+  ville           				      Ville?     				                @relation(fields: [villeId], references: [id])
+  villeId         				      BigInt?
+}
+
+model Personnel {
+  id              				      BigInt    					              @id @default(autoincrement())
+  designation             			String
+  cin            				        String
+  login          				        String
+  password       				        String
+  typePersonnel   				      Int
+  etatComptePersonnel 			    Boolean @default(false)
+  tel1             				      String
+  tel2             				      String
+  adresse         				      String
+  email           				      String
+  dateEntrer      				      DateTime @db.Date
+  salaire         				      Decimal @db.Decimal(8, 2)
+}
+
+model Voiture {
+  id              				      BigInt    					              @id @default(autoincrement())
+  numVoiture       				      String
+  kmMax    				              Int
 }
 
 model Etablissement {
