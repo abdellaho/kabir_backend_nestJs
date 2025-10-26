@@ -2,12 +2,12 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { ParamPrimeService } from './param-prime.service';
 import { Prisma } from 'generated/prisma';
 
-@Controller('param-prime')
+@Controller('prime')
 export class ParamPrimeController {
   constructor(private readonly paramPrimeService: ParamPrimeService) {}
 
   @Post()
-  create(@Body() createParamPrimeDto: Prisma.ParamPrimeCreateInput) {
+  create(@Body() createParamPrimeDto: Prisma.PrimeCreateInput) {
     return this.paramPrimeService.create(createParamPrimeDto);
   }
 
@@ -22,7 +22,7 @@ export class ParamPrimeController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateParamPrimeDto: Prisma.ParamPrimeUpdateInput) {
+  update(@Param('id') id: string, @Body() updateParamPrimeDto: Prisma.PrimeUpdateInput) {
     return this.paramPrimeService.update(+id, updateParamPrimeDto);
   }
 

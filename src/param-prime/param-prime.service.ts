@@ -7,31 +7,31 @@ export class ParamPrimeService {
 
   constructor(private readonly databaseService: DatabaseService) {}
 
-  create(createParamPrimeDto: Prisma.ParamPrimeCreateInput) {
-    return this.databaseService.paramPrime.create({
+  create(createParamPrimeDto: Prisma.PrimeCreateInput) {
+    return this.databaseService.prime.create({
       data: createParamPrimeDto
     });
   }
 
   findAll() {
-    return this.databaseService.paramPrime.findMany();
+    return this.databaseService.prime.findMany();
   }
 
   findOne(id: number) {
-    return this.databaseService.paramPrime.findUnique({
+    return this.databaseService.prime.findUnique({
       where: { id: BigInt(id) }
     });
   }
 
-  update(id: number, updateParamPrimeDto: Prisma.ParamPrimeUpdateInput) {
-    return this.databaseService.paramPrime.update({
+  update(id: number, updateParamPrimeDto: Prisma.PrimeUpdateInput) {
+    return this.databaseService.prime.update({
       where: { id: BigInt(id) },
       data: updateParamPrimeDto
     });
   }
 
   remove(id: number) {
-    return this.databaseService.paramPrime.delete({
+    return this.databaseService.prime.delete({
       where: { id: BigInt(id) }
     });
   }
