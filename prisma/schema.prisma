@@ -29,8 +29,11 @@ model Fournisseur {
   tel1             				      String
   tel2             				      String
   ice                           String
+  archiver              		    Boolean @default(false)
+  supprimer              		    Boolean @default(false)
   ville           				      Ville?     				                @relation(fields: [villeId], references: [id])
   villeId         				      BigInt?
+  stocks           			        Stock[]
 }
 
 model Personnel {
@@ -47,6 +50,11 @@ model Personnel {
   email           				      String
   dateEntrer      				      DateTime @db.Date
   salaire         				      Decimal @db.Decimal(8, 2)
+  archiver              		    Boolean @default(false)
+  supprimer              		    Boolean @default(false)
+  absencesOperation         		Absence[] @relation("personnelOperationAbsence")
+  absences         				      Absence[] @relation("personnelAbsence")
+  repertoires      				      Repertoire[]  				          @relation
 }
 
 model Voiture {
@@ -96,7 +104,7 @@ model Etablissement {
   villeId  						          BigInt?
 }
 
-model ParamPrime {
+model Prime {
   id              				      BigInt    					            @id @default(autoincrement())
   montant         				      Decimal
   prime           				      Decimal
@@ -109,53 +117,29 @@ model ParamCommiss {
   pourc           				      Decimal
 }
 
-model ParamPrimeProduit {
-  id              				      BigInt    					       		@id @default(autoincrement())
-  montant         				      Decimal
-  prime           				      Decimal
-  stock         				        Stock     				          	@relation(fields: [stockId], references: [id])
-  stockId       				        BigInt
-}
-
 model Repertoire {
    id              				      BigInt    					           	@id @default(autoincrement())
    designation		 			        String
-   cin                          String
-   login                        String
-   password                     String
-   contact1         			      String
-   contact2         			      String
    tel1             			      String
    tel2             			      String
    tel3             			      String
    adresse         				      String
    email           				      String
-   typePersonnel                Int
-   etatComptePersonnel          Boolean @default(false)
    typeRepertoire   			      Int
    typeReglment     			      Int
    ife             				      String
    ice             				      String
-   archive         				      Int
+   archiver         				    Boolean @default(false)
+   bloquer         				      Boolean @default(false)
    sysDate         				      DateTime
-   dateEntrer      				      DateTime @db.Date
-   dateValidation  				      DateTime
    observation     				      String
-   salaire 			                Decimal
    nbrOperationClient 			    Int
-   bloquer         				      Int
-   mntCnss         				      Decimal
-   commercialExterne 			      Boolean @default(false)
-   contactTel2     				      String
-   contactTel3     				      String
-   repertoire         			    Repertoire?  			          @relation("repertoireToRepertoire", fields: [repertoireId], references: [id])
-   repertoireId    				      BigInt?
+   plafond   			              Decimal
+   personnel         			      Personnel?  			          @relation(fields: [personneld], references: [id])
+   personneld    				        BigInt?
    ville           				      Ville?     				          @relation(fields: [villeId], references: [id])
    villeId         				      BigInt?
-   stocks           			      Stock[]
-   repertoires       			      Repertoire[] 			          @relation("repertoireToRepertoire")
    employes         			      Employe[]
-   absences         				    Absence[]
    bonSorties       			      BonSortie[]
    bulttinPais      			      BulttinPai[]
    cheques         				      Cheque[]
@@ -179,7 +163,8 @@ model Stock {
   pvaht           				      Decimal
   benifice           			      Decimal
   qteStock        				      Int
-  qtePVMin        				      Int
+  qtePVMin1        				      Int
+  qtePVMin2        				      Int
   qtePVMin3        				      Int
   qtePVMin4        				      Int
   qteFacturer        			      Int
@@ -187,22 +172,23 @@ model Stock {
   prixVentMin2           		    Decimal
   prixVentMin3           		    Decimal
   prixVentMin4          	 	    Decimal
-  remiseMax             		    Decimal
+  remiseMax1             		    Decimal
   remiseMax2           			    Decimal
   remiseMax3           			    Decimal
   remiseMax4           			    Decimal
   prixImport            		    Decimal
   commission            		    Decimal
-  archiver              		    Int
+  archiver              		    Boolean @default(false)
+  supprimer              		    Boolean @default(false)
   qteStockImport              	Int
-  avecRemise            		    Boolean @default(false)
-  prixAchatBiggerPrixVente    	Boolean @default(false)
-  facturer100       			      Boolean @default(false)
-  promotion1        			      String
-  promotion2        			      String
-  paramPrimeProduits   			    ParamPrimeProduit[]
-  repertoire        			      Repertoire          	        @relation(fields: [repertoireId], references: [id])
-  repertoireId      			      BigInt
+  montant1       			          Decimal
+  montant2       			          Decimal
+  montant3       			          Decimal
+  prime1       			            Decimal
+  prime2       			            Decimal
+  prime3       			            Decimal
+  fournisseur        			      Fournisseur          	        @relation(fields: [fournisseurId], references: [id])
+  fournisseurId      			      BigInt
   detAchatFactures   			      DetAchatFacture[]
   detAchatLivraisons 			      DetAchatLivraison[]
   detFactures        			      DetFacture[]
@@ -235,7 +221,6 @@ model Employe {
   livraisonLimite 				      Boolean @default(false)
   repertoire      				      Repertoire  			            @relation(fields: [repertoireId], references: [id])
   repertoireId    				      BigInt
-  absences						          Absence[]
   bonSorties       			        BonSortie[]
   bulttinPais      			      	BulttinPai[]
   cheques         				      Cheque[]
@@ -296,11 +281,10 @@ model Absence {
   matin          				      	  Boolean @default(false)
   apresMidi      				      	  Boolean @default(false)
   dateOperation  				      	  DateTime
-  employeOperation  				      Employe     				      	    @relation(fields: [employeOperationId], references: [id])
-  employeOperationId  			      BigInt
-  penalite       				      	  Decimal
-  repertoire     				      	  Repertoire  			              @relation(fields: [repertoireId], references: [id])
-  repertoireId   				      	  BigInt
+  personnelOperation  				    Personnel?     				      	  @relation(name: "personnelOperationAbsence", fields: [personnelOperationId], references: [id])
+  personnelOperationId  			    BigInt?
+  personnel     				      	  Personnel  			                @relation(name: "personnelAbsence", fields: [personnelId], references: [id])
+  personnelId   				      	  BigInt
 }
 
 model AchatFacture {
@@ -634,7 +618,7 @@ model DetBulttinPai {
 model DetFacture {
   id              				      	BigInt    					           @id @default(autoincrement())
   qteFacturer    				      	Int
-  remiseFacture  				    	Decimal
+  remiseFacture  				    	  Decimal
   prixVente     				      	Decimal
   montantProduit  				    	Decimal
   beneficeDH     				      	Decimal
@@ -642,27 +626,27 @@ model DetFacture {
   tva7          				      	Decimal
   tva20         				      	Decimal
   montantProduitHT  				    Decimal
-  directFacture  				    	Int
+  directFacture  				    	  Int
   avecRemise    				      	Boolean
-  facture       				      	Facture   				        	@relation(fields: [factureId], references: [id])
+  facture       				      	Facture   				        	  @relation(fields: [factureId], references: [id])
   factureId     				      	BigInt
-  stock         				      	Stock     				        	@relation(fields: [stockId], references: [id])
+  stock         				      	Stock     				        	  @relation(fields: [stockId], references: [id])
   stockId       				      	BigInt
 }
 
 model DetImportations {
-  id              				      	BigInt    					           @id @default(autoincrement())
+  id              				      BigInt    					          @id @default(autoincrement())
   qteAchat      				      	Int
   qteStock      				      	Int
   prixAchat     				      	Decimal
-  importations  				    	Importations  			        	@relation(fields: [importationsId], references: [id])
+  importations  				    	  Importations  			        	@relation(fields: [importationsId], references: [id])
   importationsId  				    	BigInt
-  stock         				      	Stock     				        	@relation(fields: [stockId], references: [id])
+  stock         				      	Stock     				        	  @relation(fields: [stockId], references: [id])
   stockId       				      	BigInt
 }
 
 model DetLivraison {
-  id              				      	BigInt    					           @id @default(autoincrement())
+  id              				      BigInt    					           @id @default(autoincrement())
   qteLivrer      				      	Int
   champsRouge   				      	Int
   remiseLivraison  				    	Decimal
@@ -679,18 +663,18 @@ model DetLivraison {
 }
 
 model Facture {
-  id              				      	BigInt    					           @id @default(autoincrement())
+  id              				      BigInt    					           @id @default(autoincrement())
   numFacture     				      	Int
   codeBF        				      	String
   dateBF        				      	DateTime @db.Date
-  dateReglement  				    	DateTime @db.Date
+  dateReglement  				    	  DateTime @db.Date
   dateReglement2  				    	DateTime @db.Date
   dateReglement3  				    	DateTime @db.Date
   dateReglement4  				    	DateTime @db.Date
   typeReglment   				      	Int
-  typeReglment2  				    	Int
-  typeReglment3  				    	Int
-  typeReglment4  				    	Int
+  typeReglment2  				    	  Int
+  typeReglment3  				    	  Int
+  typeReglment4  				    	  Int
   typePaiement   				      	String
   mantantBF      				      	Decimal
   mantantBFBenefice  				    Decimal
@@ -711,10 +695,10 @@ model Facture {
   numRemise2    				      	String
   numRemise3    				      	String
   numRemise4    				      	String
-  mntReglement  				    	Decimal
-  mntReglement2  				    	Decimal
-  mntReglement3  				    	Decimal
-  mntReglement4  				    	Decimal
+  mntReglement  				    	  Decimal
+  mntReglement2  				    	  Decimal
+  mntReglement3  				    	  Decimal
+  mntReglement4  				    	  Decimal
   type          				      	Int
   facturer100   				      	Boolean @default(false)
   calculer      				      	Boolean @default(false)
