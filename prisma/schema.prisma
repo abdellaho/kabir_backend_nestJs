@@ -539,7 +539,7 @@ model DetAchatFacture {
   benepourcentage  				    	Decimal
   tva20         				      	Decimal
   tva7          				      	Decimal
-  achatFacture  				    	AchatFacture  			        	@relation(fields: [achatFactureId], references: [id])
+  achatFacture  				    	  AchatFacture  			        	@relation(fields: [achatFactureId], references: [id])
   achatFactureId  				    	BigInt
   stock         				      	Stock     				        	@relation(fields: [stockId], references: [id])
   stockId       				      	BigInt

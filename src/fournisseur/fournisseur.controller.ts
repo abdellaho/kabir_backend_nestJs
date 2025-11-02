@@ -1,6 +1,7 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { FournisseurService } from './fournisseur.service';
 import { Prisma } from 'generated/prisma';
+import { Fournisseur } from './entities/fournisseur.entity';
 
 @Controller('fournisseur')
 export class FournisseurController {
@@ -14,6 +15,16 @@ export class FournisseurController {
   @Get()
   findAll() {
     return this.fournisseurService.findAll();
+  }
+
+  @Post('exist')
+  exist(@Body() fournisseur: Prisma.FournisseurCreateInput) {
+    return this.fournisseurService.checkIfExists(fournisseur);
+  }
+
+  @Post('search')
+  search(@Body() fournisseur: Prisma.FournisseurCreateInput) {
+    return this.fournisseurService.search(fournisseur);
   }
 
   @Get(':id')

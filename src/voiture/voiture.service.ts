@@ -35,4 +35,23 @@ export class VoitureService {
       where: { id: BigInt(id) },
     });
   }
+
+  async checkIfExists(data: Prisma.VoitureCreateInput) {
+    const { id, numVoiture } = data;
+
+
+    // Base condition
+    const where: Prisma.VoitureWhereInput = {
+      numVoiture
+    };
+
+    // If editing an existing record → exclude its own ID
+    if (id) {
+      where.id = { not: id };
+    }
+
+    const exists = await this.databaseService.voiture.findFirst({ where });
+
+    return exists !== null;
+  }
 }

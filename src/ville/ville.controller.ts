@@ -11,6 +11,11 @@ export class VilleController {
     return this.villeService.create(createVilleDto);
   }
 
+  @Post('exist')
+  exist(@Body() ville: Prisma.VilleCreateInput) {
+    return this.villeService.checkIfExists(ville);
+  }
+
   @Get()
   findAll() {
     return this.villeService.findAll();

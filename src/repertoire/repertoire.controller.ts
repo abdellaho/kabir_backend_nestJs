@@ -12,9 +12,14 @@ export class RepertoireController {
     return this.repertoireService.create(createRepertoireDto);
   }
 
-  @Post('search-personnel')
-  searchPersonnel(@Body() repertoireSearch: RepertoireSearch) {
+  @Post('exist')
+  exist(@Body() repertoireSearch: RepertoireSearch) {
     return this.repertoireService.checkIfExists(repertoireSearch);
+  }
+
+  @Post('search')
+  search(@Body() repertoire: Prisma.RepertoireCreateInput) {
+    return this.repertoireService.search(repertoire);
   }
 
   @Get()

@@ -45,4 +45,51 @@ export class PersonnelService {
       where: { id: BigInt(id) },
     });
   }
+
+  async checkIfExists(data: Prisma.PersonnelCreateInput) {
+    const { tel1, tel2, designation, login, id } = data;
+    
+    const orConditions: any[] = [];
+    
+    // Check if tel1 matches any phone field in the database (tel1, tel2, or tel3)
+    if (tel1) {
+      orConditions.push(
+        { tel1: tel1 },
+        { tel2: tel1 }
+      );
+    }
+    
+    // Check if tel2 matches any phone field in the database (tel1, tel2, or tel3)
+    if (tel2) {
+      orConditions.push(
+        { tel1: tel2 },
+        { tel2: tel2 }
+      );
+    }
+    
+    // Check login equality
+    if (login) {
+      orConditions.push({ login });
+    }
+    
+    // Check designation equality
+    if (designation) {
+      orConditions.push({ designation });
+    }
+    
+    // If no conditions provided, return false
+    if (orConditions.length === 0) {
+      return false;
+    }
+    
+    // Build the query with OR conditions and exclude current id if provided
+    const exists = await this.databaseService.repertoire.findFirst({
+      where: {
+        OR: orConditions,
+        ...(id && { id: { not: id } }) //Exclude the current record if updating
+      }
+    });
+    
+    return exists !== null;
+  }
 }

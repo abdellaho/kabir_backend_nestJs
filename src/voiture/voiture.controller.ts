@@ -11,6 +11,11 @@ export class VoitureController {
     return this.voitureService.create(createFactureDto);
   }
 
+  @Post('exist')
+  exist(@Body() voiture: Prisma.VoitureCreateInput) {
+    return this.voitureService.checkIfExists(voiture);
+  }
+
   @Get()
   findAll() {
     return this.voitureService.findAll();

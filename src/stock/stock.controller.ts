@@ -11,6 +11,16 @@ export class StockController {
     return this.stockService.create(createStockDto);
   }
 
+  @Post('exist')
+  exist(@Body() stock: Prisma.StockCreateInput) {
+    return this.stockService.checkIfExists(stock);
+  }
+
+  @Post('search')
+  search(@Body() stock: Prisma.StockCreateInput) {
+    return this.stockService.search(stock);
+  }
+
   @Get()
   findAll() {
     return this.stockService.findAll();

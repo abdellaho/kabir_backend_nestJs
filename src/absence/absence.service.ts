@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { DatabaseService } from 'src/database/database.service';
 import { Prisma } from 'generated/prisma';
+import { AbsenceSearch } from './search/absenceSearch';
 
 @Injectable()
 export class AbsenceService {
@@ -35,4 +36,41 @@ export class AbsenceService {
       where: { id: BigInt(id) },
     });
   }
+
+  async checkIfExists1(data: Prisma.AbsenceCreateInput) {
+    const { dateAbsence, personnel } = data;
+    
+    // Build the query with OR conditions and exclude current id if provided
+    const exists = await this.databaseService.absence.findFirst({
+      where: {
+        dateAbsence: dateAbsence,
+        personnelId: personnel.connect?.id
+      }
+    });
+    
+    return exists !== null;
+  }
+
+  async checkIfExists(data: AbsenceSearch) {
+    const { id, dateAbsence, personnelId } = data;
+
+    // Base condition
+    const where: Prisma.AbsenceWhereInput = {
+      dateAbsence: this.normalizeDate(dateAbsence!),
+      personnelId
+    };
+    
+    if (id) {
+      where.id = { not: id };
+    }
+
+    const exists = await this.databaseService.absence.findFirst({ where });
+
+    return exists !== null;
+  }
+
+  normalizeDate(date: Date | string): Date {
+    return typeof date === 'string' ? new Date(date) : new Date(date.getFullYear(), date.getMonth(), date.getDate());
+  }
+
 }

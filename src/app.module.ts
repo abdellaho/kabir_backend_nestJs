@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { MiddlewareConsumer, Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { VilleModule } from './ville/ville.module';
@@ -38,10 +38,15 @@ import { SoldeModule } from './solde/solde.module';
 import { PersonnelModule } from './personnel/personnel.module';
 import { VoitureModule } from './voiture/voiture.module';
 import { FournisseurModule } from './fournisseur/fournisseur.module';
+import { LoggerMiddleware } from './common/middleware/logger.middleware';
 
 @Module({
   imports: [VilleModule, EtablissementModule, ParamPrimeModule, ParamComissModule, RepertoireModule, StockModule, EmployeModule, DroitModule, DatabaseModule, AbsenceModule, AchatFactureModule, AchatLivraisonModule, BalanceModule, BilanModule, BonSortieModule, BulttinPaiModule, CaisseModule, ChequeModule, ComptaModule, ComptabiliteModule, CompteCaisseModule, DetAchatFactureModule, DetAchatLivraisonModule, DetailBonSortieModule, DetBulttinLivraisonModule, DetBulttinPaiModule, DetFactureModule, DetImportationsModule, DetLivraisonModule, FactureModule, ImportationsModule, LivraisonModule, PlanComptableModule, SoldeModule, PersonnelModule, VoitureModule, FournisseurModule],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule {
+  configure(consumer: MiddlewareConsumer) {
+    consumer.apply(LoggerMiddleware).forRoutes('*'); // all routes
+  }
+}

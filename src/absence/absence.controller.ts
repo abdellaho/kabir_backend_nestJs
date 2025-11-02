@@ -1,6 +1,7 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { AbsenceService } from './absence.service';
 import { Prisma } from 'generated/prisma';
+import type { AbsenceSearch } from './search/absenceSearch';
 
 @Controller('absence')
 export class AbsenceController {
@@ -14,6 +15,11 @@ export class AbsenceController {
   @Get()
   findAll() {
     return this.absenceService.findAll();
+  }
+
+  @Post('exist')
+  exist(@Body() absence: AbsenceSearch) {
+    return this.absenceService.checkIfExists(absence);
   }
 
   @Get(':id')

@@ -44,6 +44,28 @@ export class RepertoireService {
     return bcrypt.compare(plainPassword, hashedPassword);
   }
 
+  search(stock: Prisma.RepertoireCreateInput) {
+    const where: Prisma.RepertoireWhereInput = {};
+
+    if (stock.id) {
+      where.id = BigInt(stock.id);
+    }
+
+    if (stock.designation && stock.designation.trim() !== '') {
+      where.designation = stock.designation;
+    }
+
+    if (stock.bloquer !== undefined) {
+      where.bloquer = stock.bloquer;
+    }
+
+    if (stock.archiver !== undefined) {
+      where.archiver = stock.archiver;
+    }
+
+    return this.databaseService.repertoire.findMany({ where });
+  }
+
   async checkIfExists(data: RepertoireSearch) {
     const { tel1, tel2, designation, login, id } = data;
     

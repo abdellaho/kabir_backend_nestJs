@@ -11,6 +11,11 @@ export class PersonnelController {
     return this.personnelService.create(createFactureDto);
   }
 
+  @Post('exist')
+  exist(@Body() personnel: Prisma.PersonnelCreateInput) {
+    return this.personnelService.checkIfExists(personnel);
+  }
+
   @Get()
   findAll() {
     return this.personnelService.findAll();

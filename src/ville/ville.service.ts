@@ -43,4 +43,22 @@ export class VilleService {
       where: { id: BigInt(id) }
     });
   }
+
+  async checkIfExists(data: Prisma.VilleCreateInput) {
+    const { id, nomVille } = data;
+
+    // Base condition
+    const where: Prisma.VilleWhereInput = {
+      nomVille
+    };
+
+    // If editing an existing record → exclude its own ID
+    if (id) {
+      where.id = { not: id };
+    }
+
+    const exists = await this.databaseService.ville.findFirst({ where });
+
+    return exists !== null;
+  }
 }
