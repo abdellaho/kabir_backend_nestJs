@@ -19,5 +19,6 @@
                 "OPTIONS"
             ]
         }
-    ]
+    ],
+    "installCommand": "npm install && prisma generate"
 }
