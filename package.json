@@ -9,6 +9,7 @@
     "deploy:prepare": "prisma generate && npm run build",
     "build": "prisma generate && prisma migrate deploy &&nest build",
     "postinstall": "prisma generate",
+    "vercel-build": "prisma generate && prisma migrate deploy && nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
