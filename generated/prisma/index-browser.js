@@ -275,6 +275,14 @@ exports.Prisma.StockScalarFieldEnum = {
   fournisseurId: 'fournisseurId'
 };
 
+exports.Prisma.StockDepotScalarFieldEnum = {
+  id: 'id',
+  qteStockDepot: 'qteStockDepot',
+  dateOperation: 'dateOperation',
+  dateSys: 'dateSys',
+  stockId: 'stockId'
+};
+
 exports.Prisma.EmployeScalarFieldEnum = {
   id: 'id',
   numEmp: 'numEmp',
@@ -1009,6 +1017,7 @@ exports.Prisma.ModelName = {
   ParamCommiss: 'ParamCommiss',
   Repertoire: 'Repertoire',
   Stock: 'Stock',
+  StockDepot: 'StockDepot',
   Employe: 'Employe',
   Droit: 'Droit',
   Absence: 'Absence',

@@ -196,6 +196,16 @@ model Stock {
   detLivraisons      			      DetLivraison[]
   detailBonSorties   			      DetailBonSortie[]
   detBulttinPais	  			      DetBulttinPai[]
+  stockDepots      			        StockDepot[]
+}
+
+model StockDepot {
+  id              				      BigInt    					              @id @default(autoincrement())
+  qteStockDepot   				      Int
+  dateOperation   				      DateTime
+  dateSys  				              DateTime
+  stock         				        Stock     				                @relation(fields: [stockId], references: [id])
+  stockId       				        BigInt
 }
 
 model Employe {

@@ -59,6 +59,11 @@ export type Repertoire = $Result.DefaultSelection<Prisma.$RepertoirePayload>
  */
 export type Stock = $Result.DefaultSelection<Prisma.$StockPayload>
 /**
+ * Model StockDepot
+ * 
+ */
+export type StockDepot = $Result.DefaultSelection<Prisma.$StockDepotPayload>
+/**
  * Model Employe
  * 
  */
@@ -438,6 +443,16 @@ export class PrismaClient<
     * ```
     */
   get stock(): Prisma.StockDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.stockDepot`: Exposes CRUD operations for the **StockDepot** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more StockDepots
+    * const stockDepots = await prisma.stockDepot.findMany()
+    * ```
+    */
+  get stockDepot(): Prisma.StockDepotDelegate<ExtArgs, ClientOptions>;
 
   /**
    * `prisma.employe`: Exposes CRUD operations for the **Employe** model.
@@ -1157,6 +1172,7 @@ export namespace Prisma {
     ParamCommiss: 'ParamCommiss',
     Repertoire: 'Repertoire',
     Stock: 'Stock',
+    StockDepot: 'StockDepot',
     Employe: 'Employe',
     Droit: 'Droit',
     Absence: 'Absence',
@@ -1202,7 +1218,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "ville" | "fournisseur" | "personnel" | "voiture" | "etablissement" | "prime" | "paramCommiss" | "repertoire" | "stock" | "employe" | "droit" | "absence" | "achatFacture" | "achatLivraison" | "balance" | "bilan" | "bonSortie" | "bulttinPai" | "caisse" | "cheque" | "compta" | "comptabilite" | "compteCaisse" | "detAchatFacture" | "detAchatLivraison" | "detailBonSortie" | "detBulttinLivraison" | "detBulttinPai" | "detFacture" | "detImportations" | "detLivraison" | "facture" | "importations" | "livraison" | "planComptable" | "solde"
+      modelProps: "ville" | "fournisseur" | "personnel" | "voiture" | "etablissement" | "prime" | "paramCommiss" | "repertoire" | "stock" | "stockDepot" | "employe" | "droit" | "absence" | "achatFacture" | "achatLivraison" | "balance" | "bilan" | "bonSortie" | "bulttinPai" | "caisse" | "cheque" | "compta" | "comptabilite" | "compteCaisse" | "detAchatFacture" | "detAchatLivraison" | "detailBonSortie" | "detBulttinLivraison" | "detBulttinPai" | "detFacture" | "detImportations" | "detLivraison" | "facture" | "importations" | "livraison" | "planComptable" | "solde"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -1797,6 +1813,72 @@ export namespace Prisma {
           count: {
             args: Prisma.StockCountArgs<ExtArgs>
             result: $Utils.Optional<StockCountAggregateOutputType> | number
+          }
+        }
+      }
+      StockDepot: {
+        payload: Prisma.$StockDepotPayload<ExtArgs>
+        fields: Prisma.StockDepotFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.StockDepotFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$StockDepotPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.StockDepotFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$StockDepotPayload>
+          }
+          findFirst: {
+            args: Prisma.StockDepotFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$StockDepotPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.StockDepotFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$StockDepotPayload>
+          }
+          findMany: {
+            args: Prisma.StockDepotFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$StockDepotPayload>[]
+          }
+          create: {
+            args: Prisma.StockDepotCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$StockDepotPayload>
+          }
+          createMany: {
+            args: Prisma.StockDepotCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          delete: {
+            args: Prisma.StockDepotDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$StockDepotPayload>
+          }
+          update: {
+            args: Prisma.StockDepotUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$StockDepotPayload>
+          }
+          deleteMany: {
+            args: Prisma.StockDepotDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.StockDepotUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          upsert: {
+            args: Prisma.StockDepotUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$StockDepotPayload>
+          }
+          aggregate: {
+            args: Prisma.StockDepotAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateStockDepot>
+          }
+          groupBy: {
+            args: Prisma.StockDepotGroupByArgs<ExtArgs>
+            result: $Utils.Optional<StockDepotGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.StockDepotCountArgs<ExtArgs>
+            result: $Utils.Optional<StockDepotCountAggregateOutputType> | number
           }
         }
       }
@@ -3687,6 +3769,7 @@ export namespace Prisma {
     paramCommiss?: ParamCommissOmit
     repertoire?: RepertoireOmit
     stock?: StockOmit
+    stockDepot?: StockDepotOmit
     employe?: EmployeOmit
     droit?: DroitOmit
     absence?: AbsenceOmit
@@ -4042,6 +4125,7 @@ export namespace Prisma {
     detLivraisons: number
     detailBonSorties: number
     detBulttinPais: number
+    stockDepots: number
   }
 
   export type StockCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -4052,6 +4136,7 @@ export namespace Prisma {
     detLivraisons?: boolean | StockCountOutputTypeCountDetLivraisonsArgs
     detailBonSorties?: boolean | StockCountOutputTypeCountDetailBonSortiesArgs
     detBulttinPais?: boolean | StockCountOutputTypeCountDetBulttinPaisArgs
+    stockDepots?: boolean | StockCountOutputTypeCountStockDepotsArgs
   }
 
   // Custom InputTypes
@@ -4112,6 +4197,13 @@ export namespace Prisma {
    */
   export type StockCountOutputTypeCountDetBulttinPaisArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: DetBulttinPaiWhereInput
+  }
+
+  /**
+   * StockCountOutputType without action
+   */
+  export type StockCountOutputTypeCountStockDepotsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: StockDepotWhereInput
   }
 
 
@@ -13827,6 +13919,7 @@ export namespace Prisma {
     detLivraisons?: boolean | Stock$detLivraisonsArgs<ExtArgs>
     detailBonSorties?: boolean | Stock$detailBonSortiesArgs<ExtArgs>
     detBulttinPais?: boolean | Stock$detBulttinPaisArgs<ExtArgs>
+    stockDepots?: boolean | Stock$stockDepotsArgs<ExtArgs>
     _count?: boolean | StockCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["stock"]>
 
@@ -13881,6 +13974,7 @@ export namespace Prisma {
     detLivraisons?: boolean | Stock$detLivraisonsArgs<ExtArgs>
     detailBonSorties?: boolean | Stock$detailBonSortiesArgs<ExtArgs>
     detBulttinPais?: boolean | Stock$detBulttinPaisArgs<ExtArgs>
+    stockDepots?: boolean | Stock$stockDepotsArgs<ExtArgs>
     _count?: boolean | StockCountOutputTypeDefaultArgs<ExtArgs>
   }
 
@@ -13895,6 +13989,7 @@ export namespace Prisma {
       detLivraisons: Prisma.$DetLivraisonPayload<ExtArgs>[]
       detailBonSorties: Prisma.$DetailBonSortiePayload<ExtArgs>[]
       detBulttinPais: Prisma.$DetBulttinPaiPayload<ExtArgs>[]
+      stockDepots: Prisma.$StockDepotPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: bigint
@@ -14281,6 +14376,7 @@ export namespace Prisma {
     detLivraisons<T extends Stock$detLivraisonsArgs<ExtArgs> = {}>(args?: Subset<T, Stock$detLivraisonsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$DetLivraisonPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     detailBonSorties<T extends Stock$detailBonSortiesArgs<ExtArgs> = {}>(args?: Subset<T, Stock$detailBonSortiesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$DetailBonSortiePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     detBulttinPais<T extends Stock$detBulttinPaisArgs<ExtArgs> = {}>(args?: Subset<T, Stock$detBulttinPaisArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$DetBulttinPaiPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    stockDepots<T extends Stock$stockDepotsArgs<ExtArgs> = {}>(args?: Subset<T, Stock$stockDepotsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$StockDepotPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -14857,6 +14953,30 @@ export namespace Prisma {
   }
 
   /**
+   * Stock.stockDepots
+   */
+  export type Stock$stockDepotsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the StockDepot
+     */
+    select?: StockDepotSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the StockDepot
+     */
+    omit?: StockDepotOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: StockDepotInclude<ExtArgs> | null
+    where?: StockDepotWhereInput
+    orderBy?: StockDepotOrderByWithRelationInput | StockDepotOrderByWithRelationInput[]
+    cursor?: StockDepotWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: StockDepotScalarFieldEnum | StockDepotScalarFieldEnum[]
+  }
+
+  /**
    * Stock without action
    */
   export type StockDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -14872,6 +14992,977 @@ export namespace Prisma {
      * Choose, which related nodes to fetch as well
      */
     include?: StockInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model StockDepot
+   */
+
+  export type AggregateStockDepot = {
+    _count: StockDepotCountAggregateOutputType | null
+    _avg: StockDepotAvgAggregateOutputType | null
+    _sum: StockDepotSumAggregateOutputType | null
+    _min: StockDepotMinAggregateOutputType | null
+    _max: StockDepotMaxAggregateOutputType | null
+  }
+
+  export type StockDepotAvgAggregateOutputType = {
+    id: number | null
+    qteStockDepot: number | null
+    stockId: number | null
+  }
+
+  export type StockDepotSumAggregateOutputType = {
+    id: bigint | null
+    qteStockDepot: number | null
+    stockId: bigint | null
+  }
+
+  export type StockDepotMinAggregateOutputType = {
+    id: bigint | null
+    qteStockDepot: number | null
+    dateOperation: Date | null
+    dateSys: Date | null
+    stockId: bigint | null
+  }
+
+  export type StockDepotMaxAggregateOutputType = {
+    id: bigint | null
+    qteStockDepot: number | null
+    dateOperation: Date | null
+    dateSys: Date | null
+    stockId: bigint | null
+  }
+
+  export type StockDepotCountAggregateOutputType = {
+    id: number
+    qteStockDepot: number
+    dateOperation: number
+    dateSys: number
+    stockId: number
+    _all: number
+  }
+
+
+  export type StockDepotAvgAggregateInputType = {
+    id?: true
+    qteStockDepot?: true
+    stockId?: true
+  }
+
+  export type StockDepotSumAggregateInputType = {
+    id?: true
+    qteStockDepot?: true
+    stockId?: true
+  }
+
+  export type StockDepotMinAggregateInputType = {
+    id?: true
+    qteStockDepot?: true
+    dateOperation?: true
+    dateSys?: true
+    stockId?: true
+  }
+
+  export type StockDepotMaxAggregateInputType = {
+    id?: true
+    qteStockDepot?: true
+    dateOperation?: true
+    dateSys?: true
+    stockId?: true
+  }
+
+  export type StockDepotCountAggregateInputType = {
+    id?: true
+    qteStockDepot?: true
+    dateOperation?: true
+    dateSys?: true
+    stockId?: true
+    _all?: true
+  }
+
+  export type StockDepotAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which StockDepot to aggregate.
+     */
+    where?: StockDepotWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of StockDepots to fetch.
+     */
+    orderBy?: StockDepotOrderByWithRelationInput | StockDepotOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: StockDepotWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` StockDepots from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` StockDepots.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned StockDepots
+    **/
+    _count?: true | StockDepotCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: StockDepotAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: StockDepotSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: StockDepotMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: StockDepotMaxAggregateInputType
+  }
+
+  export type GetStockDepotAggregateType<T extends StockDepotAggregateArgs> = {
+        [P in keyof T & keyof AggregateStockDepot]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateStockDepot[P]>
+      : GetScalarType<T[P], AggregateStockDepot[P]>
+  }
+
+
+
+
+  export type StockDepotGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: StockDepotWhereInput
+    orderBy?: StockDepotOrderByWithAggregationInput | StockDepotOrderByWithAggregationInput[]
+    by: StockDepotScalarFieldEnum[] | StockDepotScalarFieldEnum
+    having?: StockDepotScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: StockDepotCountAggregateInputType | true
+    _avg?: StockDepotAvgAggregateInputType
+    _sum?: StockDepotSumAggregateInputType
+    _min?: StockDepotMinAggregateInputType
+    _max?: StockDepotMaxAggregateInputType
+  }
+
+  export type StockDepotGroupByOutputType = {
+    id: bigint
+    qteStockDepot: number
+    dateOperation: Date
+    dateSys: Date
+    stockId: bigint
+    _count: StockDepotCountAggregateOutputType | null
+    _avg: StockDepotAvgAggregateOutputType | null
+    _sum: StockDepotSumAggregateOutputType | null
+    _min: StockDepotMinAggregateOutputType | null
+    _max: StockDepotMaxAggregateOutputType | null
+  }
+
+  type GetStockDepotGroupByPayload<T extends StockDepotGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<StockDepotGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof StockDepotGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], StockDepotGroupByOutputType[P]>
+            : GetScalarType<T[P], StockDepotGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type StockDepotSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    qteStockDepot?: boolean
+    dateOperation?: boolean
+    dateSys?: boolean
+    stockId?: boolean
+    stock?: boolean | StockDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["stockDepot"]>
+
+
+
+  export type StockDepotSelectScalar = {
+    id?: boolean
+    qteStockDepot?: boolean
+    dateOperation?: boolean
+    dateSys?: boolean
+    stockId?: boolean
+  }
+
+  export type StockDepotOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "qteStockDepot" | "dateOperation" | "dateSys" | "stockId", ExtArgs["result"]["stockDepot"]>
+  export type StockDepotInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    stock?: boolean | StockDefaultArgs<ExtArgs>
+  }
+
+  export type $StockDepotPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "StockDepot"
+    objects: {
+      stock: Prisma.$StockPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: bigint
+      qteStockDepot: number
+      dateOperation: Date
+      dateSys: Date
+      stockId: bigint
+    }, ExtArgs["result"]["stockDepot"]>
+    composites: {}
+  }
+
+  type StockDepotGetPayload<S extends boolean | null | undefined | StockDepotDefaultArgs> = $Result.GetResult<Prisma.$StockDepotPayload, S>
+
+  type StockDepotCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<StockDepotFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: StockDepotCountAggregateInputType | true
+    }
+
+  export interface StockDepotDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['StockDepot'], meta: { name: 'StockDepot' } }
+    /**
+     * Find zero or one StockDepot that matches the filter.
+     * @param {StockDepotFindUniqueArgs} args - Arguments to find a StockDepot
+     * @example
+     * // Get one StockDepot
+     * const stockDepot = await prisma.stockDepot.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends StockDepotFindUniqueArgs>(args: SelectSubset<T, StockDepotFindUniqueArgs<ExtArgs>>): Prisma__StockDepotClient<$Result.GetResult<Prisma.$StockDepotPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one StockDepot that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {StockDepotFindUniqueOrThrowArgs} args - Arguments to find a StockDepot
+     * @example
+     * // Get one StockDepot
+     * const stockDepot = await prisma.stockDepot.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends StockDepotFindUniqueOrThrowArgs>(args: SelectSubset<T, StockDepotFindUniqueOrThrowArgs<ExtArgs>>): Prisma__StockDepotClient<$Result.GetResult<Prisma.$StockDepotPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first StockDepot that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {StockDepotFindFirstArgs} args - Arguments to find a StockDepot
+     * @example
+     * // Get one StockDepot
+     * const stockDepot = await prisma.stockDepot.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends StockDepotFindFirstArgs>(args?: SelectSubset<T, StockDepotFindFirstArgs<ExtArgs>>): Prisma__StockDepotClient<$Result.GetResult<Prisma.$StockDepotPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first StockDepot that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {StockDepotFindFirstOrThrowArgs} args - Arguments to find a StockDepot
+     * @example
+     * // Get one StockDepot
+     * const stockDepot = await prisma.stockDepot.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends StockDepotFindFirstOrThrowArgs>(args?: SelectSubset<T, StockDepotFindFirstOrThrowArgs<ExtArgs>>): Prisma__StockDepotClient<$Result.GetResult<Prisma.$StockDepotPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more StockDepots that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {StockDepotFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all StockDepots
+     * const stockDepots = await prisma.stockDepot.findMany()
+     * 
+     * // Get first 10 StockDepots
+     * const stockDepots = await prisma.stockDepot.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const stockDepotWithIdOnly = await prisma.stockDepot.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends StockDepotFindManyArgs>(args?: SelectSubset<T, StockDepotFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$StockDepotPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a StockDepot.
+     * @param {StockDepotCreateArgs} args - Arguments to create a StockDepot.
+     * @example
+     * // Create one StockDepot
+     * const StockDepot = await prisma.stockDepot.create({
+     *   data: {
+     *     // ... data to create a StockDepot
+     *   }
+     * })
+     * 
+     */
+    create<T extends StockDepotCreateArgs>(args: SelectSubset<T, StockDepotCreateArgs<ExtArgs>>): Prisma__StockDepotClient<$Result.GetResult<Prisma.$StockDepotPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many StockDepots.
+     * @param {StockDepotCreateManyArgs} args - Arguments to create many StockDepots.
+     * @example
+     * // Create many StockDepots
+     * const stockDepot = await prisma.stockDepot.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends StockDepotCreateManyArgs>(args?: SelectSubset<T, StockDepotCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Delete a StockDepot.
+     * @param {StockDepotDeleteArgs} args - Arguments to delete one StockDepot.
+     * @example
+     * // Delete one StockDepot
+     * const StockDepot = await prisma.stockDepot.delete({
+     *   where: {
+     *     // ... filter to delete one StockDepot
+     *   }
+     * })
+     * 
+     */
+    delete<T extends StockDepotDeleteArgs>(args: SelectSubset<T, StockDepotDeleteArgs<ExtArgs>>): Prisma__StockDepotClient<$Result.GetResult<Prisma.$StockDepotPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one StockDepot.
+     * @param {StockDepotUpdateArgs} args - Arguments to update one StockDepot.
+     * @example
+     * // Update one StockDepot
+     * const stockDepot = await prisma.stockDepot.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends StockDepotUpdateArgs>(args: SelectSubset<T, StockDepotUpdateArgs<ExtArgs>>): Prisma__StockDepotClient<$Result.GetResult<Prisma.$StockDepotPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more StockDepots.
+     * @param {StockDepotDeleteManyArgs} args - Arguments to filter StockDepots to delete.
+     * @example
+     * // Delete a few StockDepots
+     * const { count } = await prisma.stockDepot.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends StockDepotDeleteManyArgs>(args?: SelectSubset<T, StockDepotDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more StockDepots.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {StockDepotUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many StockDepots
+     * const stockDepot = await prisma.stockDepot.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends StockDepotUpdateManyArgs>(args: SelectSubset<T, StockDepotUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create or update one StockDepot.
+     * @param {StockDepotUpsertArgs} args - Arguments to update or create a StockDepot.
+     * @example
+     * // Update or create a StockDepot
+     * const stockDepot = await prisma.stockDepot.upsert({
+     *   create: {
+     *     // ... data to create a StockDepot
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the StockDepot we want to update
+     *   }
+     * })
+     */
+    upsert<T extends StockDepotUpsertArgs>(args: SelectSubset<T, StockDepotUpsertArgs<ExtArgs>>): Prisma__StockDepotClient<$Result.GetResult<Prisma.$StockDepotPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of StockDepots.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {StockDepotCountArgs} args - Arguments to filter StockDepots to count.
+     * @example
+     * // Count the number of StockDepots
+     * const count = await prisma.stockDepot.count({
+     *   where: {
+     *     // ... the filter for the StockDepots we want to count
+     *   }
+     * })
+    **/
+    count<T extends StockDepotCountArgs>(
+      args?: Subset<T, StockDepotCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], StockDepotCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a StockDepot.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {StockDepotAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends StockDepotAggregateArgs>(args: Subset<T, StockDepotAggregateArgs>): Prisma.PrismaPromise<GetStockDepotAggregateType<T>>
+
+    /**
+     * Group by StockDepot.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {StockDepotGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends StockDepotGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: StockDepotGroupByArgs['orderBy'] }
+        : { orderBy?: StockDepotGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, StockDepotGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetStockDepotGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the StockDepot model
+   */
+  readonly fields: StockDepotFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for StockDepot.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__StockDepotClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    stock<T extends StockDefaultArgs<ExtArgs> = {}>(args?: Subset<T, StockDefaultArgs<ExtArgs>>): Prisma__StockClient<$Result.GetResult<Prisma.$StockPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the StockDepot model
+   */
+  interface StockDepotFieldRefs {
+    readonly id: FieldRef<"StockDepot", 'BigInt'>
+    readonly qteStockDepot: FieldRef<"StockDepot", 'Int'>
+    readonly dateOperation: FieldRef<"StockDepot", 'DateTime'>
+    readonly dateSys: FieldRef<"StockDepot", 'DateTime'>
+    readonly stockId: FieldRef<"StockDepot", 'BigInt'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * StockDepot findUnique
+   */
+  export type StockDepotFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the StockDepot
+     */
+    select?: StockDepotSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the StockDepot
+     */
+    omit?: StockDepotOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: StockDepotInclude<ExtArgs> | null
+    /**
+     * Filter, which StockDepot to fetch.
+     */
+    where: StockDepotWhereUniqueInput
+  }
+
+  /**
+   * StockDepot findUniqueOrThrow
+   */
+  export type StockDepotFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the StockDepot
+     */
+    select?: StockDepotSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the StockDepot
+     */
+    omit?: StockDepotOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: StockDepotInclude<ExtArgs> | null
+    /**
+     * Filter, which StockDepot to fetch.
+     */
+    where: StockDepotWhereUniqueInput
+  }
+
+  /**
+   * StockDepot findFirst
+   */
+  export type StockDepotFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the StockDepot
+     */
+    select?: StockDepotSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the StockDepot
+     */
+    omit?: StockDepotOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: StockDepotInclude<ExtArgs> | null
+    /**
+     * Filter, which StockDepot to fetch.
+     */
+    where?: StockDepotWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of StockDepots to fetch.
+     */
+    orderBy?: StockDepotOrderByWithRelationInput | StockDepotOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for StockDepots.
+     */
+    cursor?: StockDepotWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` StockDepots from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` StockDepots.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of StockDepots.
+     */
+    distinct?: StockDepotScalarFieldEnum | StockDepotScalarFieldEnum[]
+  }
+
+  /**
+   * StockDepot findFirstOrThrow
+   */
+  export type StockDepotFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the StockDepot
+     */
+    select?: StockDepotSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the StockDepot
+     */
+    omit?: StockDepotOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: StockDepotInclude<ExtArgs> | null
+    /**
+     * Filter, which StockDepot to fetch.
+     */
+    where?: StockDepotWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of StockDepots to fetch.
+     */
+    orderBy?: StockDepotOrderByWithRelationInput | StockDepotOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for StockDepots.
+     */
+    cursor?: StockDepotWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` StockDepots from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` StockDepots.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of StockDepots.
+     */
+    distinct?: StockDepotScalarFieldEnum | StockDepotScalarFieldEnum[]
+  }
+
+  /**
+   * StockDepot findMany
+   */
+  export type StockDepotFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the StockDepot
+     */
+    select?: StockDepotSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the StockDepot
+     */
+    omit?: StockDepotOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: StockDepotInclude<ExtArgs> | null
+    /**
+     * Filter, which StockDepots to fetch.
+     */
+    where?: StockDepotWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of StockDepots to fetch.
+     */
+    orderBy?: StockDepotOrderByWithRelationInput | StockDepotOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing StockDepots.
+     */
+    cursor?: StockDepotWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` StockDepots from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` StockDepots.
+     */
+    skip?: number
+    distinct?: StockDepotScalarFieldEnum | StockDepotScalarFieldEnum[]
+  }
+
+  /**
+   * StockDepot create
+   */
+  export type StockDepotCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the StockDepot
+     */
+    select?: StockDepotSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the StockDepot
+     */
+    omit?: StockDepotOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: StockDepotInclude<ExtArgs> | null
+    /**
+     * The data needed to create a StockDepot.
+     */
+    data: XOR<StockDepotCreateInput, StockDepotUncheckedCreateInput>
+  }
+
+  /**
+   * StockDepot createMany
+   */
+  export type StockDepotCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many StockDepots.
+     */
+    data: StockDepotCreateManyInput | StockDepotCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * StockDepot update
+   */
+  export type StockDepotUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the StockDepot
+     */
+    select?: StockDepotSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the StockDepot
+     */
+    omit?: StockDepotOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: StockDepotInclude<ExtArgs> | null
+    /**
+     * The data needed to update a StockDepot.
+     */
+    data: XOR<StockDepotUpdateInput, StockDepotUncheckedUpdateInput>
+    /**
+     * Choose, which StockDepot to update.
+     */
+    where: StockDepotWhereUniqueInput
+  }
+
+  /**
+   * StockDepot updateMany
+   */
+  export type StockDepotUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update StockDepots.
+     */
+    data: XOR<StockDepotUpdateManyMutationInput, StockDepotUncheckedUpdateManyInput>
+    /**
+     * Filter which StockDepots to update
+     */
+    where?: StockDepotWhereInput
+    /**
+     * Limit how many StockDepots to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * StockDepot upsert
+   */
+  export type StockDepotUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the StockDepot
+     */
+    select?: StockDepotSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the StockDepot
+     */
+    omit?: StockDepotOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: StockDepotInclude<ExtArgs> | null
+    /**
+     * The filter to search for the StockDepot to update in case it exists.
+     */
+    where: StockDepotWhereUniqueInput
+    /**
+     * In case the StockDepot found by the `where` argument doesn't exist, create a new StockDepot with this data.
+     */
+    create: XOR<StockDepotCreateInput, StockDepotUncheckedCreateInput>
+    /**
+     * In case the StockDepot was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<StockDepotUpdateInput, StockDepotUncheckedUpdateInput>
+  }
+
+  /**
+   * StockDepot delete
+   */
+  export type StockDepotDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the StockDepot
+     */
+    select?: StockDepotSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the StockDepot
+     */
+    omit?: StockDepotOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: StockDepotInclude<ExtArgs> | null
+    /**
+     * Filter which StockDepot to delete.
+     */
+    where: StockDepotWhereUniqueInput
+  }
+
+  /**
+   * StockDepot deleteMany
+   */
+  export type StockDepotDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which StockDepots to delete
+     */
+    where?: StockDepotWhereInput
+    /**
+     * Limit how many StockDepots to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * StockDepot without action
+   */
+  export type StockDepotDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the StockDepot
+     */
+    select?: StockDepotSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the StockDepot
+     */
+    omit?: StockDepotOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: StockDepotInclude<ExtArgs> | null
   }
 
 
@@ -46406,6 +47497,17 @@ export namespace Prisma {
   export type StockScalarFieldEnum = (typeof StockScalarFieldEnum)[keyof typeof StockScalarFieldEnum]
 
 
+  export const StockDepotScalarFieldEnum: {
+    id: 'id',
+    qteStockDepot: 'qteStockDepot',
+    dateOperation: 'dateOperation',
+    dateSys: 'dateSys',
+    stockId: 'stockId'
+  };
+
+  export type StockDepotScalarFieldEnum = (typeof StockDepotScalarFieldEnum)[keyof typeof StockDepotScalarFieldEnum]
+
+
   export const EmployeScalarFieldEnum: {
     id: 'id',
     numEmp: 'numEmp',
@@ -48145,6 +49247,7 @@ export namespace Prisma {
     detLivraisons?: DetLivraisonListRelationFilter
     detailBonSorties?: DetailBonSortieListRelationFilter
     detBulttinPais?: DetBulttinPaiListRelationFilter
+    stockDepots?: StockDepotListRelationFilter
   }
 
   export type StockOrderByWithRelationInput = {
@@ -48192,6 +49295,7 @@ export namespace Prisma {
     detLivraisons?: DetLivraisonOrderByRelationAggregateInput
     detailBonSorties?: DetailBonSortieOrderByRelationAggregateInput
     detBulttinPais?: DetBulttinPaiOrderByRelationAggregateInput
+    stockDepots?: StockDepotOrderByRelationAggregateInput
     _relevance?: StockOrderByRelevanceInput
   }
 
@@ -48243,6 +49347,7 @@ export namespace Prisma {
     detLivraisons?: DetLivraisonListRelationFilter
     detailBonSorties?: DetailBonSortieListRelationFilter
     detBulttinPais?: DetBulttinPaiListRelationFilter
+    stockDepots?: StockDepotListRelationFilter
   }, "id">
 
   export type StockOrderByWithAggregationInput = {
@@ -48329,6 +49434,63 @@ export namespace Prisma {
     prime2?: DecimalWithAggregatesFilter<"Stock"> | Decimal | DecimalJsLike | number | string
     prime3?: DecimalWithAggregatesFilter<"Stock"> | Decimal | DecimalJsLike | number | string
     fournisseurId?: BigIntWithAggregatesFilter<"Stock"> | bigint | number
+  }
+
+  export type StockDepotWhereInput = {
+    AND?: StockDepotWhereInput | StockDepotWhereInput[]
+    OR?: StockDepotWhereInput[]
+    NOT?: StockDepotWhereInput | StockDepotWhereInput[]
+    id?: BigIntFilter<"StockDepot"> | bigint | number
+    qteStockDepot?: IntFilter<"StockDepot"> | number
+    dateOperation?: DateTimeFilter<"StockDepot"> | Date | string
+    dateSys?: DateTimeFilter<"StockDepot"> | Date | string
+    stockId?: BigIntFilter<"StockDepot"> | bigint | number
+    stock?: XOR<StockScalarRelationFilter, StockWhereInput>
+  }
+
+  export type StockDepotOrderByWithRelationInput = {
+    id?: SortOrder
+    qteStockDepot?: SortOrder
+    dateOperation?: SortOrder
+    dateSys?: SortOrder
+    stockId?: SortOrder
+    stock?: StockOrderByWithRelationInput
+  }
+
+  export type StockDepotWhereUniqueInput = Prisma.AtLeast<{
+    id?: bigint | number
+    AND?: StockDepotWhereInput | StockDepotWhereInput[]
+    OR?: StockDepotWhereInput[]
+    NOT?: StockDepotWhereInput | StockDepotWhereInput[]
+    qteStockDepot?: IntFilter<"StockDepot"> | number
+    dateOperation?: DateTimeFilter<"StockDepot"> | Date | string
+    dateSys?: DateTimeFilter<"StockDepot"> | Date | string
+    stockId?: BigIntFilter<"StockDepot"> | bigint | number
+    stock?: XOR<StockScalarRelationFilter, StockWhereInput>
+  }, "id">
+
+  export type StockDepotOrderByWithAggregationInput = {
+    id?: SortOrder
+    qteStockDepot?: SortOrder
+    dateOperation?: SortOrder
+    dateSys?: SortOrder
+    stockId?: SortOrder
+    _count?: StockDepotCountOrderByAggregateInput
+    _avg?: StockDepotAvgOrderByAggregateInput
+    _max?: StockDepotMaxOrderByAggregateInput
+    _min?: StockDepotMinOrderByAggregateInput
+    _sum?: StockDepotSumOrderByAggregateInput
+  }
+
+  export type StockDepotScalarWhereWithAggregatesInput = {
+    AND?: StockDepotScalarWhereWithAggregatesInput | StockDepotScalarWhereWithAggregatesInput[]
+    OR?: StockDepotScalarWhereWithAggregatesInput[]
+    NOT?: StockDepotScalarWhereWithAggregatesInput | StockDepotScalarWhereWithAggregatesInput[]
+    id?: BigIntWithAggregatesFilter<"StockDepot"> | bigint | number
+    qteStockDepot?: IntWithAggregatesFilter<"StockDepot"> | number
+    dateOperation?: DateTimeWithAggregatesFilter<"StockDepot"> | Date | string
+    dateSys?: DateTimeWithAggregatesFilter<"StockDepot"> | Date | string
+    stockId?: BigIntWithAggregatesFilter<"StockDepot"> | bigint | number
   }
 
   export type EmployeWhereInput = {
@@ -52592,6 +53754,7 @@ export namespace Prisma {
     detLivraisons?: DetLivraisonCreateNestedManyWithoutStockInput
     detailBonSorties?: DetailBonSortieCreateNestedManyWithoutStockInput
     detBulttinPais?: DetBulttinPaiCreateNestedManyWithoutProduitInput
+    stockDepots?: StockDepotCreateNestedManyWithoutStockInput
   }
 
   export type StockUncheckedCreateInput = {
@@ -52638,6 +53801,7 @@ export namespace Prisma {
     detLivraisons?: DetLivraisonUncheckedCreateNestedManyWithoutStockInput
     detailBonSorties?: DetailBonSortieUncheckedCreateNestedManyWithoutStockInput
     detBulttinPais?: DetBulttinPaiUncheckedCreateNestedManyWithoutProduitInput
+    stockDepots?: StockDepotUncheckedCreateNestedManyWithoutStockInput
   }
 
   export type StockUpdateInput = {
@@ -52684,6 +53848,7 @@ export namespace Prisma {
     detLivraisons?: DetLivraisonUpdateManyWithoutStockNestedInput
     detailBonSorties?: DetailBonSortieUpdateManyWithoutStockNestedInput
     detBulttinPais?: DetBulttinPaiUpdateManyWithoutProduitNestedInput
+    stockDepots?: StockDepotUpdateManyWithoutStockNestedInput
   }
 
   export type StockUncheckedUpdateInput = {
@@ -52730,6 +53895,7 @@ export namespace Prisma {
     detLivraisons?: DetLivraisonUncheckedUpdateManyWithoutStockNestedInput
     detailBonSorties?: DetailBonSortieUncheckedUpdateManyWithoutStockNestedInput
     detBulttinPais?: DetBulttinPaiUncheckedUpdateManyWithoutProduitNestedInput
+    stockDepots?: StockDepotUncheckedUpdateManyWithoutStockNestedInput
   }
 
   export type StockCreateManyInput = {
@@ -52846,6 +54012,61 @@ export namespace Prisma {
     prime2?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     prime3?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     fournisseurId?: BigIntFieldUpdateOperationsInput | bigint | number
+  }
+
+  export type StockDepotCreateInput = {
+    id?: bigint | number
+    qteStockDepot: number
+    dateOperation: Date | string
+    dateSys: Date | string
+    stock: StockCreateNestedOneWithoutStockDepotsInput
+  }
+
+  export type StockDepotUncheckedCreateInput = {
+    id?: bigint | number
+    qteStockDepot: number
+    dateOperation: Date | string
+    dateSys: Date | string
+    stockId: bigint | number
+  }
+
+  export type StockDepotUpdateInput = {
+    id?: BigIntFieldUpdateOperationsInput | bigint | number
+    qteStockDepot?: IntFieldUpdateOperationsInput | number
+    dateOperation?: DateTimeFieldUpdateOperationsInput | Date | string
+    dateSys?: DateTimeFieldUpdateOperationsInput | Date | string
+    stock?: StockUpdateOneRequiredWithoutStockDepotsNestedInput
+  }
+
+  export type StockDepotUncheckedUpdateInput = {
+    id?: BigIntFieldUpdateOperationsInput | bigint | number
+    qteStockDepot?: IntFieldUpdateOperationsInput | number
+    dateOperation?: DateTimeFieldUpdateOperationsInput | Date | string
+    dateSys?: DateTimeFieldUpdateOperationsInput | Date | string
+    stockId?: BigIntFieldUpdateOperationsInput | bigint | number
+  }
+
+  export type StockDepotCreateManyInput = {
+    id?: bigint | number
+    qteStockDepot: number
+    dateOperation: Date | string
+    dateSys: Date | string
+    stockId: bigint | number
+  }
+
+  export type StockDepotUpdateManyMutationInput = {
+    id?: BigIntFieldUpdateOperationsInput | bigint | number
+    qteStockDepot?: IntFieldUpdateOperationsInput | number
+    dateOperation?: DateTimeFieldUpdateOperationsInput | Date | string
+    dateSys?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type StockDepotUncheckedUpdateManyInput = {
+    id?: BigIntFieldUpdateOperationsInput | bigint | number
+    qteStockDepot?: IntFieldUpdateOperationsInput | number
+    dateOperation?: DateTimeFieldUpdateOperationsInput | Date | string
+    dateSys?: DateTimeFieldUpdateOperationsInput | Date | string
+    stockId?: BigIntFieldUpdateOperationsInput | bigint | number
   }
 
   export type EmployeCreateInput = {
@@ -57649,6 +58870,12 @@ export namespace Prisma {
     none?: DetBulttinPaiWhereInput
   }
 
+  export type StockDepotListRelationFilter = {
+    every?: StockDepotWhereInput
+    some?: StockDepotWhereInput
+    none?: StockDepotWhereInput
+  }
+
   export type DetAchatFactureOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
@@ -57674,6 +58901,10 @@ export namespace Prisma {
   }
 
   export type DetBulttinPaiOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type StockDepotOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
@@ -57868,6 +59099,47 @@ export namespace Prisma {
     prime2?: SortOrder
     prime3?: SortOrder
     fournisseurId?: SortOrder
+  }
+
+  export type StockScalarRelationFilter = {
+    is?: StockWhereInput
+    isNot?: StockWhereInput
+  }
+
+  export type StockDepotCountOrderByAggregateInput = {
+    id?: SortOrder
+    qteStockDepot?: SortOrder
+    dateOperation?: SortOrder
+    dateSys?: SortOrder
+    stockId?: SortOrder
+  }
+
+  export type StockDepotAvgOrderByAggregateInput = {
+    id?: SortOrder
+    qteStockDepot?: SortOrder
+    stockId?: SortOrder
+  }
+
+  export type StockDepotMaxOrderByAggregateInput = {
+    id?: SortOrder
+    qteStockDepot?: SortOrder
+    dateOperation?: SortOrder
+    dateSys?: SortOrder
+    stockId?: SortOrder
+  }
+
+  export type StockDepotMinOrderByAggregateInput = {
+    id?: SortOrder
+    qteStockDepot?: SortOrder
+    dateOperation?: SortOrder
+    dateSys?: SortOrder
+    stockId?: SortOrder
+  }
+
+  export type StockDepotSumOrderByAggregateInput = {
+    id?: SortOrder
+    qteStockDepot?: SortOrder
+    stockId?: SortOrder
   }
 
   export type RepertoireScalarRelationFilter = {
@@ -59261,11 +60533,6 @@ export namespace Prisma {
   export type AchatFactureScalarRelationFilter = {
     is?: AchatFactureWhereInput
     isNot?: AchatFactureWhereInput
-  }
-
-  export type StockScalarRelationFilter = {
-    is?: StockWhereInput
-    isNot?: StockWhereInput
   }
 
   export type DetAchatFactureCountOrderByAggregateInput = {
@@ -61417,6 +62684,13 @@ export namespace Prisma {
     connect?: DetBulttinPaiWhereUniqueInput | DetBulttinPaiWhereUniqueInput[]
   }
 
+  export type StockDepotCreateNestedManyWithoutStockInput = {
+    create?: XOR<StockDepotCreateWithoutStockInput, StockDepotUncheckedCreateWithoutStockInput> | StockDepotCreateWithoutStockInput[] | StockDepotUncheckedCreateWithoutStockInput[]
+    connectOrCreate?: StockDepotCreateOrConnectWithoutStockInput | StockDepotCreateOrConnectWithoutStockInput[]
+    createMany?: StockDepotCreateManyStockInputEnvelope
+    connect?: StockDepotWhereUniqueInput | StockDepotWhereUniqueInput[]
+  }
+
   export type DetAchatFactureUncheckedCreateNestedManyWithoutStockInput = {
     create?: XOR<DetAchatFactureCreateWithoutStockInput, DetAchatFactureUncheckedCreateWithoutStockInput> | DetAchatFactureCreateWithoutStockInput[] | DetAchatFactureUncheckedCreateWithoutStockInput[]
     connectOrCreate?: DetAchatFactureCreateOrConnectWithoutStockInput | DetAchatFactureCreateOrConnectWithoutStockInput[]
@@ -61464,6 +62738,13 @@ export namespace Prisma {
     connectOrCreate?: DetBulttinPaiCreateOrConnectWithoutProduitInput | DetBulttinPaiCreateOrConnectWithoutProduitInput[]
     createMany?: DetBulttinPaiCreateManyProduitInputEnvelope
     connect?: DetBulttinPaiWhereUniqueInput | DetBulttinPaiWhereUniqueInput[]
+  }
+
+  export type StockDepotUncheckedCreateNestedManyWithoutStockInput = {
+    create?: XOR<StockDepotCreateWithoutStockInput, StockDepotUncheckedCreateWithoutStockInput> | StockDepotCreateWithoutStockInput[] | StockDepotUncheckedCreateWithoutStockInput[]
+    connectOrCreate?: StockDepotCreateOrConnectWithoutStockInput | StockDepotCreateOrConnectWithoutStockInput[]
+    createMany?: StockDepotCreateManyStockInputEnvelope
+    connect?: StockDepotWhereUniqueInput | StockDepotWhereUniqueInput[]
   }
 
   export type FournisseurUpdateOneRequiredWithoutStocksNestedInput = {
@@ -61572,6 +62853,20 @@ export namespace Prisma {
     deleteMany?: DetBulttinPaiScalarWhereInput | DetBulttinPaiScalarWhereInput[]
   }
 
+  export type StockDepotUpdateManyWithoutStockNestedInput = {
+    create?: XOR<StockDepotCreateWithoutStockInput, StockDepotUncheckedCreateWithoutStockInput> | StockDepotCreateWithoutStockInput[] | StockDepotUncheckedCreateWithoutStockInput[]
+    connectOrCreate?: StockDepotCreateOrConnectWithoutStockInput | StockDepotCreateOrConnectWithoutStockInput[]
+    upsert?: StockDepotUpsertWithWhereUniqueWithoutStockInput | StockDepotUpsertWithWhereUniqueWithoutStockInput[]
+    createMany?: StockDepotCreateManyStockInputEnvelope
+    set?: StockDepotWhereUniqueInput | StockDepotWhereUniqueInput[]
+    disconnect?: StockDepotWhereUniqueInput | StockDepotWhereUniqueInput[]
+    delete?: StockDepotWhereUniqueInput | StockDepotWhereUniqueInput[]
+    connect?: StockDepotWhereUniqueInput | StockDepotWhereUniqueInput[]
+    update?: StockDepotUpdateWithWhereUniqueWithoutStockInput | StockDepotUpdateWithWhereUniqueWithoutStockInput[]
+    updateMany?: StockDepotUpdateManyWithWhereWithoutStockInput | StockDepotUpdateManyWithWhereWithoutStockInput[]
+    deleteMany?: StockDepotScalarWhereInput | StockDepotScalarWhereInput[]
+  }
+
   export type DetAchatFactureUncheckedUpdateManyWithoutStockNestedInput = {
     create?: XOR<DetAchatFactureCreateWithoutStockInput, DetAchatFactureUncheckedCreateWithoutStockInput> | DetAchatFactureCreateWithoutStockInput[] | DetAchatFactureUncheckedCreateWithoutStockInput[]
     connectOrCreate?: DetAchatFactureCreateOrConnectWithoutStockInput | DetAchatFactureCreateOrConnectWithoutStockInput[]
@@ -61668,6 +62963,34 @@ export namespace Prisma {
     update?: DetBulttinPaiUpdateWithWhereUniqueWithoutProduitInput | DetBulttinPaiUpdateWithWhereUniqueWithoutProduitInput[]
     updateMany?: DetBulttinPaiUpdateManyWithWhereWithoutProduitInput | DetBulttinPaiUpdateManyWithWhereWithoutProduitInput[]
     deleteMany?: DetBulttinPaiScalarWhereInput | DetBulttinPaiScalarWhereInput[]
+  }
+
+  export type StockDepotUncheckedUpdateManyWithoutStockNestedInput = {
+    create?: XOR<StockDepotCreateWithoutStockInput, StockDepotUncheckedCreateWithoutStockInput> | StockDepotCreateWithoutStockInput[] | StockDepotUncheckedCreateWithoutStockInput[]
+    connectOrCreate?: StockDepotCreateOrConnectWithoutStockInput | StockDepotCreateOrConnectWithoutStockInput[]
+    upsert?: StockDepotUpsertWithWhereUniqueWithoutStockInput | StockDepotUpsertWithWhereUniqueWithoutStockInput[]
+    createMany?: StockDepotCreateManyStockInputEnvelope
+    set?: StockDepotWhereUniqueInput | StockDepotWhereUniqueInput[]
+    disconnect?: StockDepotWhereUniqueInput | StockDepotWhereUniqueInput[]
+    delete?: StockDepotWhereUniqueInput | StockDepotWhereUniqueInput[]
+    connect?: StockDepotWhereUniqueInput | StockDepotWhereUniqueInput[]
+    update?: StockDepotUpdateWithWhereUniqueWithoutStockInput | StockDepotUpdateWithWhereUniqueWithoutStockInput[]
+    updateMany?: StockDepotUpdateManyWithWhereWithoutStockInput | StockDepotUpdateManyWithWhereWithoutStockInput[]
+    deleteMany?: StockDepotScalarWhereInput | StockDepotScalarWhereInput[]
+  }
+
+  export type StockCreateNestedOneWithoutStockDepotsInput = {
+    create?: XOR<StockCreateWithoutStockDepotsInput, StockUncheckedCreateWithoutStockDepotsInput>
+    connectOrCreate?: StockCreateOrConnectWithoutStockDepotsInput
+    connect?: StockWhereUniqueInput
+  }
+
+  export type StockUpdateOneRequiredWithoutStockDepotsNestedInput = {
+    create?: XOR<StockCreateWithoutStockDepotsInput, StockUncheckedCreateWithoutStockDepotsInput>
+    connectOrCreate?: StockCreateOrConnectWithoutStockDepotsInput
+    upsert?: StockUpsertWithoutStockDepotsInput
+    connect?: StockWhereUniqueInput
+    update?: XOR<XOR<StockUpdateToOneWithWhereWithoutStockDepotsInput, StockUpdateWithoutStockDepotsInput>, StockUncheckedUpdateWithoutStockDepotsInput>
   }
 
   export type RepertoireCreateNestedOneWithoutEmployesInput = {
@@ -63508,6 +64831,7 @@ export namespace Prisma {
     detLivraisons?: DetLivraisonCreateNestedManyWithoutStockInput
     detailBonSorties?: DetailBonSortieCreateNestedManyWithoutStockInput
     detBulttinPais?: DetBulttinPaiCreateNestedManyWithoutProduitInput
+    stockDepots?: StockDepotCreateNestedManyWithoutStockInput
   }
 
   export type StockUncheckedCreateWithoutFournisseurInput = {
@@ -63553,6 +64877,7 @@ export namespace Prisma {
     detLivraisons?: DetLivraisonUncheckedCreateNestedManyWithoutStockInput
     detailBonSorties?: DetailBonSortieUncheckedCreateNestedManyWithoutStockInput
     detBulttinPais?: DetBulttinPaiUncheckedCreateNestedManyWithoutProduitInput
+    stockDepots?: StockDepotUncheckedCreateNestedManyWithoutStockInput
   }
 
   export type StockCreateOrConnectWithoutFournisseurInput = {
@@ -65306,6 +66631,30 @@ export namespace Prisma {
     skipDuplicates?: boolean
   }
 
+  export type StockDepotCreateWithoutStockInput = {
+    id?: bigint | number
+    qteStockDepot: number
+    dateOperation: Date | string
+    dateSys: Date | string
+  }
+
+  export type StockDepotUncheckedCreateWithoutStockInput = {
+    id?: bigint | number
+    qteStockDepot: number
+    dateOperation: Date | string
+    dateSys: Date | string
+  }
+
+  export type StockDepotCreateOrConnectWithoutStockInput = {
+    where: StockDepotWhereUniqueInput
+    create: XOR<StockDepotCreateWithoutStockInput, StockDepotUncheckedCreateWithoutStockInput>
+  }
+
+  export type StockDepotCreateManyStockInputEnvelope = {
+    data: StockDepotCreateManyStockInput | StockDepotCreateManyStockInput[]
+    skipDuplicates?: boolean
+  }
+
   export type FournisseurUpsertWithoutStocksInput = {
     update: XOR<FournisseurUpdateWithoutStocksInput, FournisseurUncheckedUpdateWithoutStocksInput>
     create: XOR<FournisseurCreateWithoutStocksInput, FournisseurUncheckedCreateWithoutStocksInput>
@@ -65582,6 +66931,233 @@ export namespace Prisma {
     avecZero?: BoolFilter<"DetBulttinPai"> | boolean
     bulttinPaiId?: BigIntFilter<"DetBulttinPai"> | bigint | number
     produitId?: BigIntFilter<"DetBulttinPai"> | bigint | number
+  }
+
+  export type StockDepotUpsertWithWhereUniqueWithoutStockInput = {
+    where: StockDepotWhereUniqueInput
+    update: XOR<StockDepotUpdateWithoutStockInput, StockDepotUncheckedUpdateWithoutStockInput>
+    create: XOR<StockDepotCreateWithoutStockInput, StockDepotUncheckedCreateWithoutStockInput>
+  }
+
+  export type StockDepotUpdateWithWhereUniqueWithoutStockInput = {
+    where: StockDepotWhereUniqueInput
+    data: XOR<StockDepotUpdateWithoutStockInput, StockDepotUncheckedUpdateWithoutStockInput>
+  }
+
+  export type StockDepotUpdateManyWithWhereWithoutStockInput = {
+    where: StockDepotScalarWhereInput
+    data: XOR<StockDepotUpdateManyMutationInput, StockDepotUncheckedUpdateManyWithoutStockInput>
+  }
+
+  export type StockDepotScalarWhereInput = {
+    AND?: StockDepotScalarWhereInput | StockDepotScalarWhereInput[]
+    OR?: StockDepotScalarWhereInput[]
+    NOT?: StockDepotScalarWhereInput | StockDepotScalarWhereInput[]
+    id?: BigIntFilter<"StockDepot"> | bigint | number
+    qteStockDepot?: IntFilter<"StockDepot"> | number
+    dateOperation?: DateTimeFilter<"StockDepot"> | Date | string
+    dateSys?: DateTimeFilter<"StockDepot"> | Date | string
+    stockId?: BigIntFilter<"StockDepot"> | bigint | number
+  }
+
+  export type StockCreateWithoutStockDepotsInput = {
+    id?: bigint | number
+    designation: string
+    sysDate: Date | string
+    pahtGrossiste: Decimal | DecimalJsLike | number | string
+    prixCommercial: Decimal | DecimalJsLike | number | string
+    tva: Decimal | DecimalJsLike | number | string
+    pattc: Decimal | DecimalJsLike | number | string
+    pvttc: Decimal | DecimalJsLike | number | string
+    pvaht: Decimal | DecimalJsLike | number | string
+    benifice: Decimal | DecimalJsLike | number | string
+    qteStock: number
+    qtePVMin1: number
+    qtePVMin2: number
+    qtePVMin3: number
+    qtePVMin4: number
+    qteFacturer: number
+    prixVentMin1: Decimal | DecimalJsLike | number | string
+    prixVentMin2: Decimal | DecimalJsLike | number | string
+    prixVentMin3: Decimal | DecimalJsLike | number | string
+    prixVentMin4: Decimal | DecimalJsLike | number | string
+    remiseMax1: Decimal | DecimalJsLike | number | string
+    remiseMax2: Decimal | DecimalJsLike | number | string
+    remiseMax3: Decimal | DecimalJsLike | number | string
+    remiseMax4: Decimal | DecimalJsLike | number | string
+    prixImport: Decimal | DecimalJsLike | number | string
+    commission: Decimal | DecimalJsLike | number | string
+    archiver?: boolean
+    supprimer?: boolean
+    qteStockImport: number
+    montant1: Decimal | DecimalJsLike | number | string
+    montant2: Decimal | DecimalJsLike | number | string
+    montant3: Decimal | DecimalJsLike | number | string
+    prime1: Decimal | DecimalJsLike | number | string
+    prime2: Decimal | DecimalJsLike | number | string
+    prime3: Decimal | DecimalJsLike | number | string
+    fournisseur: FournisseurCreateNestedOneWithoutStocksInput
+    detAchatFactures?: DetAchatFactureCreateNestedManyWithoutStockInput
+    detAchatLivraisons?: DetAchatLivraisonCreateNestedManyWithoutStockInput
+    detFactures?: DetFactureCreateNestedManyWithoutStockInput
+    detImportations?: DetImportationsCreateNestedManyWithoutStockInput
+    detLivraisons?: DetLivraisonCreateNestedManyWithoutStockInput
+    detailBonSorties?: DetailBonSortieCreateNestedManyWithoutStockInput
+    detBulttinPais?: DetBulttinPaiCreateNestedManyWithoutProduitInput
+  }
+
+  export type StockUncheckedCreateWithoutStockDepotsInput = {
+    id?: bigint | number
+    designation: string
+    sysDate: Date | string
+    pahtGrossiste: Decimal | DecimalJsLike | number | string
+    prixCommercial: Decimal | DecimalJsLike | number | string
+    tva: Decimal | DecimalJsLike | number | string
+    pattc: Decimal | DecimalJsLike | number | string
+    pvttc: Decimal | DecimalJsLike | number | string
+    pvaht: Decimal | DecimalJsLike | number | string
+    benifice: Decimal | DecimalJsLike | number | string
+    qteStock: number
+    qtePVMin1: number
+    qtePVMin2: number
+    qtePVMin3: number
+    qtePVMin4: number
+    qteFacturer: number
+    prixVentMin1: Decimal | DecimalJsLike | number | string
+    prixVentMin2: Decimal | DecimalJsLike | number | string
+    prixVentMin3: Decimal | DecimalJsLike | number | string
+    prixVentMin4: Decimal | DecimalJsLike | number | string
+    remiseMax1: Decimal | DecimalJsLike | number | string
+    remiseMax2: Decimal | DecimalJsLike | number | string
+    remiseMax3: Decimal | DecimalJsLike | number | string
+    remiseMax4: Decimal | DecimalJsLike | number | string
+    prixImport: Decimal | DecimalJsLike | number | string
+    commission: Decimal | DecimalJsLike | number | string
+    archiver?: boolean
+    supprimer?: boolean
+    qteStockImport: number
+    montant1: Decimal | DecimalJsLike | number | string
+    montant2: Decimal | DecimalJsLike | number | string
+    montant3: Decimal | DecimalJsLike | number | string
+    prime1: Decimal | DecimalJsLike | number | string
+    prime2: Decimal | DecimalJsLike | number | string
+    prime3: Decimal | DecimalJsLike | number | string
+    fournisseurId: bigint | number
+    detAchatFactures?: DetAchatFactureUncheckedCreateNestedManyWithoutStockInput
+    detAchatLivraisons?: DetAchatLivraisonUncheckedCreateNestedManyWithoutStockInput
+    detFactures?: DetFactureUncheckedCreateNestedManyWithoutStockInput
+    detImportations?: DetImportationsUncheckedCreateNestedManyWithoutStockInput
+    detLivraisons?: DetLivraisonUncheckedCreateNestedManyWithoutStockInput
+    detailBonSorties?: DetailBonSortieUncheckedCreateNestedManyWithoutStockInput
+    detBulttinPais?: DetBulttinPaiUncheckedCreateNestedManyWithoutProduitInput
+  }
+
+  export type StockCreateOrConnectWithoutStockDepotsInput = {
+    where: StockWhereUniqueInput
+    create: XOR<StockCreateWithoutStockDepotsInput, StockUncheckedCreateWithoutStockDepotsInput>
+  }
+
+  export type StockUpsertWithoutStockDepotsInput = {
+    update: XOR<StockUpdateWithoutStockDepotsInput, StockUncheckedUpdateWithoutStockDepotsInput>
+    create: XOR<StockCreateWithoutStockDepotsInput, StockUncheckedCreateWithoutStockDepotsInput>
+    where?: StockWhereInput
+  }
+
+  export type StockUpdateToOneWithWhereWithoutStockDepotsInput = {
+    where?: StockWhereInput
+    data: XOR<StockUpdateWithoutStockDepotsInput, StockUncheckedUpdateWithoutStockDepotsInput>
+  }
+
+  export type StockUpdateWithoutStockDepotsInput = {
+    id?: BigIntFieldUpdateOperationsInput | bigint | number
+    designation?: StringFieldUpdateOperationsInput | string
+    sysDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    pahtGrossiste?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    prixCommercial?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    tva?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    pattc?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    pvttc?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    pvaht?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    benifice?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    qteStock?: IntFieldUpdateOperationsInput | number
+    qtePVMin1?: IntFieldUpdateOperationsInput | number
+    qtePVMin2?: IntFieldUpdateOperationsInput | number
+    qtePVMin3?: IntFieldUpdateOperationsInput | number
+    qtePVMin4?: IntFieldUpdateOperationsInput | number
+    qteFacturer?: IntFieldUpdateOperationsInput | number
+    prixVentMin1?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    prixVentMin2?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    prixVentMin3?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    prixVentMin4?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    remiseMax1?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    remiseMax2?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    remiseMax3?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    remiseMax4?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    prixImport?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    commission?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    archiver?: BoolFieldUpdateOperationsInput | boolean
+    supprimer?: BoolFieldUpdateOperationsInput | boolean
+    qteStockImport?: IntFieldUpdateOperationsInput | number
+    montant1?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    montant2?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    montant3?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    prime1?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    prime2?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    prime3?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    fournisseur?: FournisseurUpdateOneRequiredWithoutStocksNestedInput
+    detAchatFactures?: DetAchatFactureUpdateManyWithoutStockNestedInput
+    detAchatLivraisons?: DetAchatLivraisonUpdateManyWithoutStockNestedInput
+    detFactures?: DetFactureUpdateManyWithoutStockNestedInput
+    detImportations?: DetImportationsUpdateManyWithoutStockNestedInput
+    detLivraisons?: DetLivraisonUpdateManyWithoutStockNestedInput
+    detailBonSorties?: DetailBonSortieUpdateManyWithoutStockNestedInput
+    detBulttinPais?: DetBulttinPaiUpdateManyWithoutProduitNestedInput
+  }
+
+  export type StockUncheckedUpdateWithoutStockDepotsInput = {
+    id?: BigIntFieldUpdateOperationsInput | bigint | number
+    designation?: StringFieldUpdateOperationsInput | string
+    sysDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    pahtGrossiste?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    prixCommercial?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    tva?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    pattc?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    pvttc?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    pvaht?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    benifice?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    qteStock?: IntFieldUpdateOperationsInput | number
+    qtePVMin1?: IntFieldUpdateOperationsInput | number
+    qtePVMin2?: IntFieldUpdateOperationsInput | number
+    qtePVMin3?: IntFieldUpdateOperationsInput | number
+    qtePVMin4?: IntFieldUpdateOperationsInput | number
+    qteFacturer?: IntFieldUpdateOperationsInput | number
+    prixVentMin1?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    prixVentMin2?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    prixVentMin3?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    prixVentMin4?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    remiseMax1?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    remiseMax2?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    remiseMax3?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    remiseMax4?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    prixImport?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    commission?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    archiver?: BoolFieldUpdateOperationsInput | boolean
+    supprimer?: BoolFieldUpdateOperationsInput | boolean
+    qteStockImport?: IntFieldUpdateOperationsInput | number
+    montant1?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    montant2?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    montant3?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    prime1?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    prime2?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    prime3?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    fournisseurId?: BigIntFieldUpdateOperationsInput | bigint | number
+    detAchatFactures?: DetAchatFactureUncheckedUpdateManyWithoutStockNestedInput
+    detAchatLivraisons?: DetAchatLivraisonUncheckedUpdateManyWithoutStockNestedInput
+    detFactures?: DetFactureUncheckedUpdateManyWithoutStockNestedInput
+    detImportations?: DetImportationsUncheckedUpdateManyWithoutStockNestedInput
+    detLivraisons?: DetLivraisonUncheckedUpdateManyWithoutStockNestedInput
+    detailBonSorties?: DetailBonSortieUncheckedUpdateManyWithoutStockNestedInput
+    detBulttinPais?: DetBulttinPaiUncheckedUpdateManyWithoutProduitNestedInput
   }
 
   export type RepertoireCreateWithoutEmployesInput = {
@@ -68101,6 +69677,7 @@ export namespace Prisma {
     detLivraisons?: DetLivraisonCreateNestedManyWithoutStockInput
     detailBonSorties?: DetailBonSortieCreateNestedManyWithoutStockInput
     detBulttinPais?: DetBulttinPaiCreateNestedManyWithoutProduitInput
+    stockDepots?: StockDepotCreateNestedManyWithoutStockInput
   }
 
   export type StockUncheckedCreateWithoutDetAchatFacturesInput = {
@@ -68146,6 +69723,7 @@ export namespace Prisma {
     detLivraisons?: DetLivraisonUncheckedCreateNestedManyWithoutStockInput
     detailBonSorties?: DetailBonSortieUncheckedCreateNestedManyWithoutStockInput
     detBulttinPais?: DetBulttinPaiUncheckedCreateNestedManyWithoutProduitInput
+    stockDepots?: StockDepotUncheckedCreateNestedManyWithoutStockInput
   }
 
   export type StockCreateOrConnectWithoutDetAchatFacturesInput = {
@@ -68328,6 +69906,7 @@ export namespace Prisma {
     detLivraisons?: DetLivraisonUpdateManyWithoutStockNestedInput
     detailBonSorties?: DetailBonSortieUpdateManyWithoutStockNestedInput
     detBulttinPais?: DetBulttinPaiUpdateManyWithoutProduitNestedInput
+    stockDepots?: StockDepotUpdateManyWithoutStockNestedInput
   }
 
   export type StockUncheckedUpdateWithoutDetAchatFacturesInput = {
@@ -68373,6 +69952,7 @@ export namespace Prisma {
     detLivraisons?: DetLivraisonUncheckedUpdateManyWithoutStockNestedInput
     detailBonSorties?: DetailBonSortieUncheckedUpdateManyWithoutStockNestedInput
     detBulttinPais?: DetBulttinPaiUncheckedUpdateManyWithoutProduitNestedInput
+    stockDepots?: StockDepotUncheckedUpdateManyWithoutStockNestedInput
   }
 
   export type AchatLivraisonCreateWithoutDetAchatLivraisonsInput = {
@@ -68463,6 +70043,7 @@ export namespace Prisma {
     detLivraisons?: DetLivraisonCreateNestedManyWithoutStockInput
     detailBonSorties?: DetailBonSortieCreateNestedManyWithoutStockInput
     detBulttinPais?: DetBulttinPaiCreateNestedManyWithoutProduitInput
+    stockDepots?: StockDepotCreateNestedManyWithoutStockInput
   }
 
   export type StockUncheckedCreateWithoutDetAchatLivraisonsInput = {
@@ -68508,6 +70089,7 @@ export namespace Prisma {
     detLivraisons?: DetLivraisonUncheckedCreateNestedManyWithoutStockInput
     detailBonSorties?: DetailBonSortieUncheckedCreateNestedManyWithoutStockInput
     detBulttinPais?: DetBulttinPaiUncheckedCreateNestedManyWithoutProduitInput
+    stockDepots?: StockDepotUncheckedCreateNestedManyWithoutStockInput
   }
 
   export type StockCreateOrConnectWithoutDetAchatLivraisonsInput = {
@@ -68620,6 +70202,7 @@ export namespace Prisma {
     detLivraisons?: DetLivraisonUpdateManyWithoutStockNestedInput
     detailBonSorties?: DetailBonSortieUpdateManyWithoutStockNestedInput
     detBulttinPais?: DetBulttinPaiUpdateManyWithoutProduitNestedInput
+    stockDepots?: StockDepotUpdateManyWithoutStockNestedInput
   }
 
   export type StockUncheckedUpdateWithoutDetAchatLivraisonsInput = {
@@ -68665,6 +70248,7 @@ export namespace Prisma {
     detLivraisons?: DetLivraisonUncheckedUpdateManyWithoutStockNestedInput
     detailBonSorties?: DetailBonSortieUncheckedUpdateManyWithoutStockNestedInput
     detBulttinPais?: DetBulttinPaiUncheckedUpdateManyWithoutProduitNestedInput
+    stockDepots?: StockDepotUncheckedUpdateManyWithoutStockNestedInput
   }
 
   export type BonSortieCreateWithoutDetailBonSortiesInput = {
@@ -68735,6 +70319,7 @@ export namespace Prisma {
     detImportations?: DetImportationsCreateNestedManyWithoutStockInput
     detLivraisons?: DetLivraisonCreateNestedManyWithoutStockInput
     detBulttinPais?: DetBulttinPaiCreateNestedManyWithoutProduitInput
+    stockDepots?: StockDepotCreateNestedManyWithoutStockInput
   }
 
   export type StockUncheckedCreateWithoutDetailBonSortiesInput = {
@@ -68780,6 +70365,7 @@ export namespace Prisma {
     detImportations?: DetImportationsUncheckedCreateNestedManyWithoutStockInput
     detLivraisons?: DetLivraisonUncheckedCreateNestedManyWithoutStockInput
     detBulttinPais?: DetBulttinPaiUncheckedCreateNestedManyWithoutProduitInput
+    stockDepots?: StockDepotUncheckedCreateNestedManyWithoutStockInput
   }
 
   export type StockCreateOrConnectWithoutDetailBonSortiesInput = {
@@ -68872,6 +70458,7 @@ export namespace Prisma {
     detImportations?: DetImportationsUpdateManyWithoutStockNestedInput
     detLivraisons?: DetLivraisonUpdateManyWithoutStockNestedInput
     detBulttinPais?: DetBulttinPaiUpdateManyWithoutProduitNestedInput
+    stockDepots?: StockDepotUpdateManyWithoutStockNestedInput
   }
 
   export type StockUncheckedUpdateWithoutDetailBonSortiesInput = {
@@ -68917,6 +70504,7 @@ export namespace Prisma {
     detImportations?: DetImportationsUncheckedUpdateManyWithoutStockNestedInput
     detLivraisons?: DetLivraisonUncheckedUpdateManyWithoutStockNestedInput
     detBulttinPais?: DetBulttinPaiUncheckedUpdateManyWithoutProduitNestedInput
+    stockDepots?: StockDepotUncheckedUpdateManyWithoutStockNestedInput
   }
 
   export type BulttinPaiCreateWithoutDetBulttinLivraisonsInput = {
@@ -69357,6 +70945,7 @@ export namespace Prisma {
     detImportations?: DetImportationsCreateNestedManyWithoutStockInput
     detLivraisons?: DetLivraisonCreateNestedManyWithoutStockInput
     detailBonSorties?: DetailBonSortieCreateNestedManyWithoutStockInput
+    stockDepots?: StockDepotCreateNestedManyWithoutStockInput
   }
 
   export type StockUncheckedCreateWithoutDetBulttinPaisInput = {
@@ -69402,6 +70991,7 @@ export namespace Prisma {
     detImportations?: DetImportationsUncheckedCreateNestedManyWithoutStockInput
     detLivraisons?: DetLivraisonUncheckedCreateNestedManyWithoutStockInput
     detailBonSorties?: DetailBonSortieUncheckedCreateNestedManyWithoutStockInput
+    stockDepots?: StockDepotUncheckedCreateNestedManyWithoutStockInput
   }
 
   export type StockCreateOrConnectWithoutDetBulttinPaisInput = {
@@ -69544,6 +71134,7 @@ export namespace Prisma {
     detImportations?: DetImportationsUpdateManyWithoutStockNestedInput
     detLivraisons?: DetLivraisonUpdateManyWithoutStockNestedInput
     detailBonSorties?: DetailBonSortieUpdateManyWithoutStockNestedInput
+    stockDepots?: StockDepotUpdateManyWithoutStockNestedInput
   }
 
   export type StockUncheckedUpdateWithoutDetBulttinPaisInput = {
@@ -69589,6 +71180,7 @@ export namespace Prisma {
     detImportations?: DetImportationsUncheckedUpdateManyWithoutStockNestedInput
     detLivraisons?: DetLivraisonUncheckedUpdateManyWithoutStockNestedInput
     detailBonSorties?: DetailBonSortieUncheckedUpdateManyWithoutStockNestedInput
+    stockDepots?: StockDepotUncheckedUpdateManyWithoutStockNestedInput
   }
 
   export type FactureCreateWithoutDetFacturesInput = {
@@ -69747,6 +71339,7 @@ export namespace Prisma {
     detLivraisons?: DetLivraisonCreateNestedManyWithoutStockInput
     detailBonSorties?: DetailBonSortieCreateNestedManyWithoutStockInput
     detBulttinPais?: DetBulttinPaiCreateNestedManyWithoutProduitInput
+    stockDepots?: StockDepotCreateNestedManyWithoutStockInput
   }
 
   export type StockUncheckedCreateWithoutDetFacturesInput = {
@@ -69792,6 +71385,7 @@ export namespace Prisma {
     detLivraisons?: DetLivraisonUncheckedCreateNestedManyWithoutStockInput
     detailBonSorties?: DetailBonSortieUncheckedCreateNestedManyWithoutStockInput
     detBulttinPais?: DetBulttinPaiUncheckedCreateNestedManyWithoutProduitInput
+    stockDepots?: StockDepotUncheckedCreateNestedManyWithoutStockInput
   }
 
   export type StockCreateOrConnectWithoutDetFacturesInput = {
@@ -69972,6 +71566,7 @@ export namespace Prisma {
     detLivraisons?: DetLivraisonUpdateManyWithoutStockNestedInput
     detailBonSorties?: DetailBonSortieUpdateManyWithoutStockNestedInput
     detBulttinPais?: DetBulttinPaiUpdateManyWithoutProduitNestedInput
+    stockDepots?: StockDepotUpdateManyWithoutStockNestedInput
   }
 
   export type StockUncheckedUpdateWithoutDetFacturesInput = {
@@ -70017,6 +71612,7 @@ export namespace Prisma {
     detLivraisons?: DetLivraisonUncheckedUpdateManyWithoutStockNestedInput
     detailBonSorties?: DetailBonSortieUncheckedUpdateManyWithoutStockNestedInput
     detBulttinPais?: DetBulttinPaiUncheckedUpdateManyWithoutProduitNestedInput
+    stockDepots?: StockDepotUncheckedUpdateManyWithoutStockNestedInput
   }
 
   export type ImportationsCreateWithoutDetImportationsInput = {
@@ -70115,6 +71711,7 @@ export namespace Prisma {
     detLivraisons?: DetLivraisonCreateNestedManyWithoutStockInput
     detailBonSorties?: DetailBonSortieCreateNestedManyWithoutStockInput
     detBulttinPais?: DetBulttinPaiCreateNestedManyWithoutProduitInput
+    stockDepots?: StockDepotCreateNestedManyWithoutStockInput
   }
 
   export type StockUncheckedCreateWithoutDetImportationsInput = {
@@ -70160,6 +71757,7 @@ export namespace Prisma {
     detLivraisons?: DetLivraisonUncheckedCreateNestedManyWithoutStockInput
     detailBonSorties?: DetailBonSortieUncheckedCreateNestedManyWithoutStockInput
     detBulttinPais?: DetBulttinPaiUncheckedCreateNestedManyWithoutProduitInput
+    stockDepots?: StockDepotUncheckedCreateNestedManyWithoutStockInput
   }
 
   export type StockCreateOrConnectWithoutDetImportationsInput = {
@@ -70280,6 +71878,7 @@ export namespace Prisma {
     detLivraisons?: DetLivraisonUpdateManyWithoutStockNestedInput
     detailBonSorties?: DetailBonSortieUpdateManyWithoutStockNestedInput
     detBulttinPais?: DetBulttinPaiUpdateManyWithoutProduitNestedInput
+    stockDepots?: StockDepotUpdateManyWithoutStockNestedInput
   }
 
   export type StockUncheckedUpdateWithoutDetImportationsInput = {
@@ -70325,6 +71924,7 @@ export namespace Prisma {
     detLivraisons?: DetLivraisonUncheckedUpdateManyWithoutStockNestedInput
     detailBonSorties?: DetailBonSortieUncheckedUpdateManyWithoutStockNestedInput
     detBulttinPais?: DetBulttinPaiUncheckedUpdateManyWithoutProduitNestedInput
+    stockDepots?: StockDepotUncheckedUpdateManyWithoutStockNestedInput
   }
 
   export type LivraisonCreateWithoutDetLivraisonsInput = {
@@ -70449,6 +72049,7 @@ export namespace Prisma {
     detImportations?: DetImportationsCreateNestedManyWithoutStockInput
     detailBonSorties?: DetailBonSortieCreateNestedManyWithoutStockInput
     detBulttinPais?: DetBulttinPaiCreateNestedManyWithoutProduitInput
+    stockDepots?: StockDepotCreateNestedManyWithoutStockInput
   }
 
   export type StockUncheckedCreateWithoutDetLivraisonsInput = {
@@ -70494,6 +72095,7 @@ export namespace Prisma {
     detImportations?: DetImportationsUncheckedCreateNestedManyWithoutStockInput
     detailBonSorties?: DetailBonSortieUncheckedCreateNestedManyWithoutStockInput
     detBulttinPais?: DetBulttinPaiUncheckedCreateNestedManyWithoutProduitInput
+    stockDepots?: StockDepotUncheckedCreateNestedManyWithoutStockInput
   }
 
   export type StockCreateOrConnectWithoutDetLivraisonsInput = {
@@ -70640,6 +72242,7 @@ export namespace Prisma {
     detImportations?: DetImportationsUpdateManyWithoutStockNestedInput
     detailBonSorties?: DetailBonSortieUpdateManyWithoutStockNestedInput
     detBulttinPais?: DetBulttinPaiUpdateManyWithoutProduitNestedInput
+    stockDepots?: StockDepotUpdateManyWithoutStockNestedInput
   }
 
   export type StockUncheckedUpdateWithoutDetLivraisonsInput = {
@@ -70685,6 +72288,7 @@ export namespace Prisma {
     detImportations?: DetImportationsUncheckedUpdateManyWithoutStockNestedInput
     detailBonSorties?: DetailBonSortieUncheckedUpdateManyWithoutStockNestedInput
     detBulttinPais?: DetBulttinPaiUncheckedUpdateManyWithoutProduitNestedInput
+    stockDepots?: StockDepotUncheckedUpdateManyWithoutStockNestedInput
   }
 
   export type DetFactureCreateWithoutFactureInput = {
@@ -72282,6 +73886,7 @@ export namespace Prisma {
     detLivraisons?: DetLivraisonUpdateManyWithoutStockNestedInput
     detailBonSorties?: DetailBonSortieUpdateManyWithoutStockNestedInput
     detBulttinPais?: DetBulttinPaiUpdateManyWithoutProduitNestedInput
+    stockDepots?: StockDepotUpdateManyWithoutStockNestedInput
   }
 
   export type StockUncheckedUpdateWithoutFournisseurInput = {
@@ -72327,6 +73932,7 @@ export namespace Prisma {
     detLivraisons?: DetLivraisonUncheckedUpdateManyWithoutStockNestedInput
     detailBonSorties?: DetailBonSortieUncheckedUpdateManyWithoutStockNestedInput
     detBulttinPais?: DetBulttinPaiUncheckedUpdateManyWithoutProduitNestedInput
+    stockDepots?: StockDepotUncheckedUpdateManyWithoutStockNestedInput
   }
 
   export type StockUncheckedUpdateManyWithoutFournisseurInput = {
@@ -73646,6 +75252,13 @@ export namespace Prisma {
     bulttinPaiId: bigint | number
   }
 
+  export type StockDepotCreateManyStockInput = {
+    id?: bigint | number
+    qteStockDepot: number
+    dateOperation: Date | string
+    dateSys: Date | string
+  }
+
   export type DetAchatFactureUpdateWithoutStockInput = {
     id?: BigIntFieldUpdateOperationsInput | bigint | number
     unitegratuit?: IntFieldUpdateOperationsInput | number
@@ -73953,6 +75566,27 @@ export namespace Prisma {
     primeProduit?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     avecZero?: BoolFieldUpdateOperationsInput | boolean
     bulttinPaiId?: BigIntFieldUpdateOperationsInput | bigint | number
+  }
+
+  export type StockDepotUpdateWithoutStockInput = {
+    id?: BigIntFieldUpdateOperationsInput | bigint | number
+    qteStockDepot?: IntFieldUpdateOperationsInput | number
+    dateOperation?: DateTimeFieldUpdateOperationsInput | Date | string
+    dateSys?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type StockDepotUncheckedUpdateWithoutStockInput = {
+    id?: BigIntFieldUpdateOperationsInput | bigint | number
+    qteStockDepot?: IntFieldUpdateOperationsInput | number
+    dateOperation?: DateTimeFieldUpdateOperationsInput | Date | string
+    dateSys?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type StockDepotUncheckedUpdateManyWithoutStockInput = {
+    id?: BigIntFieldUpdateOperationsInput | bigint | number
+    qteStockDepot?: IntFieldUpdateOperationsInput | number
+    dateOperation?: DateTimeFieldUpdateOperationsInput | Date | string
+    dateSys?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type BonSortieCreateManyEmployeInput = {
