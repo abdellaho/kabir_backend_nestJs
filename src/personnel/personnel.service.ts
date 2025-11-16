@@ -92,4 +92,27 @@ export class PersonnelService {
     
     return exists !== null;
   }
+
+  search(data: Prisma.PersonnelCreateInput) {
+    const where: Prisma.PersonnelWhereInput = {};
+
+    if (data.id) {
+      where.id = BigInt(data.id);
+    }
+
+    if (data.designation && data.designation.trim() !== '') {
+      where.designation = data.designation;
+    }
+
+    if (data.supprimer !== undefined) {
+      where.supprimer = data.supprimer;
+    }
+
+    if (data.archiver !== undefined) {
+      where.archiver = data.archiver;
+    }
+
+    return this.databaseService.personnel.findMany({ where });
+  }
+
 }

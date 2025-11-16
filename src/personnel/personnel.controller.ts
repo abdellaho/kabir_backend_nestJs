@@ -16,6 +16,11 @@ export class PersonnelController {
     return this.personnelService.checkIfExists(personnel);
   }
 
+  @Post('search')
+  search(@Body() personnel: Prisma.PersonnelCreateInput) {
+    return this.personnelService.search(personnel);
+  }
+
   @Get()
   findAll() {
     return this.personnelService.findAll();
