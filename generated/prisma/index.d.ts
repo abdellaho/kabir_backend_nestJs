@@ -781,8 +781,8 @@ export namespace Prisma {
   export import Exact = $Public.Exact
 
   /**
-   * Prisma Client JS version: 6.17.1
-   * Query Engine version: 272a37d34178c2894197e17273bf937f25acdeac
+   * Prisma Client JS version: 6.16.2
+   * Query Engine version: 1c57fdcd7e44b29b9313256c76699e91c3ac3c43
    */
   export type PrismaVersion = {
     client: string
@@ -5605,6 +5605,7 @@ export namespace Prisma {
     tel1: string | null
     tel2: string | null
     ice: string | null
+    adresse: string | null
     archiver: boolean | null
     supprimer: boolean | null
     villeId: bigint | null
@@ -5617,6 +5618,7 @@ export namespace Prisma {
     tel1: string | null
     tel2: string | null
     ice: string | null
+    adresse: string | null
     archiver: boolean | null
     supprimer: boolean | null
     villeId: bigint | null
@@ -5629,6 +5631,7 @@ export namespace Prisma {
     tel1: number
     tel2: number
     ice: number
+    adresse: number
     archiver: number
     supprimer: number
     villeId: number
@@ -5655,6 +5658,7 @@ export namespace Prisma {
     tel1?: true
     tel2?: true
     ice?: true
+    adresse?: true
     archiver?: true
     supprimer?: true
     villeId?: true
@@ -5667,6 +5671,7 @@ export namespace Prisma {
     tel1?: true
     tel2?: true
     ice?: true
+    adresse?: true
     archiver?: true
     supprimer?: true
     villeId?: true
@@ -5679,6 +5684,7 @@ export namespace Prisma {
     tel1?: true
     tel2?: true
     ice?: true
+    adresse?: true
     archiver?: true
     supprimer?: true
     villeId?: true
@@ -5778,6 +5784,7 @@ export namespace Prisma {
     tel1: string
     tel2: string
     ice: string
+    adresse: string
     archiver: boolean
     supprimer: boolean
     villeId: bigint | null
@@ -5809,6 +5816,7 @@ export namespace Prisma {
     tel1?: boolean
     tel2?: boolean
     ice?: boolean
+    adresse?: boolean
     archiver?: boolean
     supprimer?: boolean
     villeId?: boolean
@@ -5826,12 +5834,13 @@ export namespace Prisma {
     tel1?: boolean
     tel2?: boolean
     ice?: boolean
+    adresse?: boolean
     archiver?: boolean
     supprimer?: boolean
     villeId?: boolean
   }
 
-  export type FournisseurOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "designation" | "type" | "tel1" | "tel2" | "ice" | "archiver" | "supprimer" | "villeId", ExtArgs["result"]["fournisseur"]>
+  export type FournisseurOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "designation" | "type" | "tel1" | "tel2" | "ice" | "adresse" | "archiver" | "supprimer" | "villeId", ExtArgs["result"]["fournisseur"]>
   export type FournisseurInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     ville?: boolean | Fournisseur$villeArgs<ExtArgs>
     stocks?: boolean | Fournisseur$stocksArgs<ExtArgs>
@@ -5851,6 +5860,7 @@ export namespace Prisma {
       tel1: string
       tel2: string
       ice: string
+      adresse: string
       archiver: boolean
       supprimer: boolean
       villeId: bigint | null
@@ -6231,6 +6241,7 @@ export namespace Prisma {
     readonly tel1: FieldRef<"Fournisseur", 'String'>
     readonly tel2: FieldRef<"Fournisseur", 'String'>
     readonly ice: FieldRef<"Fournisseur", 'String'>
+    readonly adresse: FieldRef<"Fournisseur", 'String'>
     readonly archiver: FieldRef<"Fournisseur", 'Boolean'>
     readonly supprimer: FieldRef<"Fournisseur", 'Boolean'>
     readonly villeId: FieldRef<"Fournisseur", 'BigInt'>
@@ -11894,7 +11905,7 @@ export namespace Prisma {
     typeReglment: number | null
     nbrOperationClient: number | null
     plafond: Decimal | null
-    personneld: number | null
+    personnelId: number | null
     villeId: number | null
   }
 
@@ -11904,7 +11915,7 @@ export namespace Prisma {
     typeReglment: number | null
     nbrOperationClient: number | null
     plafond: Decimal | null
-    personneld: bigint | null
+    personnelId: bigint | null
     villeId: bigint | null
   }
 
@@ -11926,7 +11937,7 @@ export namespace Prisma {
     observation: string | null
     nbrOperationClient: number | null
     plafond: Decimal | null
-    personneld: bigint | null
+    personnelId: bigint | null
     villeId: bigint | null
   }
 
@@ -11948,7 +11959,7 @@ export namespace Prisma {
     observation: string | null
     nbrOperationClient: number | null
     plafond: Decimal | null
-    personneld: bigint | null
+    personnelId: bigint | null
     villeId: bigint | null
   }
 
@@ -11970,7 +11981,7 @@ export namespace Prisma {
     observation: number
     nbrOperationClient: number
     plafond: number
-    personneld: number
+    personnelId: number
     villeId: number
     _all: number
   }
@@ -11982,7 +11993,7 @@ export namespace Prisma {
     typeReglment?: true
     nbrOperationClient?: true
     plafond?: true
-    personneld?: true
+    personnelId?: true
     villeId?: true
   }
 
@@ -11992,7 +12003,7 @@ export namespace Prisma {
     typeReglment?: true
     nbrOperationClient?: true
     plafond?: true
-    personneld?: true
+    personnelId?: true
     villeId?: true
   }
 
@@ -12014,7 +12025,7 @@ export namespace Prisma {
     observation?: true
     nbrOperationClient?: true
     plafond?: true
-    personneld?: true
+    personnelId?: true
     villeId?: true
   }
 
@@ -12036,7 +12047,7 @@ export namespace Prisma {
     observation?: true
     nbrOperationClient?: true
     plafond?: true
-    personneld?: true
+    personnelId?: true
     villeId?: true
   }
 
@@ -12058,7 +12069,7 @@ export namespace Prisma {
     observation?: true
     nbrOperationClient?: true
     plafond?: true
-    personneld?: true
+    personnelId?: true
     villeId?: true
     _all?: true
   }
@@ -12167,7 +12178,7 @@ export namespace Prisma {
     observation: string
     nbrOperationClient: number
     plafond: Decimal
-    personneld: bigint | null
+    personnelId: bigint | null
     villeId: bigint | null
     _count: RepertoireCountAggregateOutputType | null
     _avg: RepertoireAvgAggregateOutputType | null
@@ -12208,7 +12219,7 @@ export namespace Prisma {
     observation?: boolean
     nbrOperationClient?: boolean
     plafond?: boolean
-    personneld?: boolean
+    personnelId?: boolean
     villeId?: boolean
     personnel?: boolean | Repertoire$personnelArgs<ExtArgs>
     ville?: boolean | Repertoire$villeArgs<ExtArgs>
@@ -12245,11 +12256,11 @@ export namespace Prisma {
     observation?: boolean
     nbrOperationClient?: boolean
     plafond?: boolean
-    personneld?: boolean
+    personnelId?: boolean
     villeId?: boolean
   }
 
-  export type RepertoireOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "designation" | "tel1" | "tel2" | "tel3" | "adresse" | "email" | "typeRepertoire" | "typeReglment" | "ife" | "ice" | "archiver" | "bloquer" | "sysDate" | "observation" | "nbrOperationClient" | "plafond" | "personneld" | "villeId", ExtArgs["result"]["repertoire"]>
+  export type RepertoireOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "designation" | "tel1" | "tel2" | "tel3" | "adresse" | "email" | "typeRepertoire" | "typeReglment" | "ife" | "ice" | "archiver" | "bloquer" | "sysDate" | "observation" | "nbrOperationClient" | "plafond" | "personnelId" | "villeId", ExtArgs["result"]["repertoire"]>
   export type RepertoireInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     personnel?: boolean | Repertoire$personnelArgs<ExtArgs>
     ville?: boolean | Repertoire$villeArgs<ExtArgs>
@@ -12300,7 +12311,7 @@ export namespace Prisma {
       observation: string
       nbrOperationClient: number
       plafond: Prisma.Decimal
-      personneld: bigint | null
+      personnelId: bigint | null
       villeId: bigint | null
     }, ExtArgs["result"]["repertoire"]>
     composites: {}
@@ -12700,7 +12711,7 @@ export namespace Prisma {
     readonly observation: FieldRef<"Repertoire", 'String'>
     readonly nbrOperationClient: FieldRef<"Repertoire", 'Int'>
     readonly plafond: FieldRef<"Repertoire", 'Decimal'>
-    readonly personneld: FieldRef<"Repertoire", 'BigInt'>
+    readonly personnelId: FieldRef<"Repertoire", 'BigInt'>
     readonly villeId: FieldRef<"Repertoire", 'BigInt'>
   }
     
@@ -47330,6 +47341,7 @@ export namespace Prisma {
     tel1: 'tel1',
     tel2: 'tel2',
     ice: 'ice',
+    adresse: 'adresse',
     archiver: 'archiver',
     supprimer: 'supprimer',
     villeId: 'villeId'
@@ -47448,7 +47460,7 @@ export namespace Prisma {
     observation: 'observation',
     nbrOperationClient: 'nbrOperationClient',
     plafond: 'plafond',
-    personneld: 'personneld',
+    personnelId: 'personnelId',
     villeId: 'villeId'
   };
 
@@ -48174,7 +48186,8 @@ export namespace Prisma {
     designation: 'designation',
     tel1: 'tel1',
     tel2: 'tel2',
-    ice: 'ice'
+    ice: 'ice',
+    adresse: 'adresse'
   };
 
   export type FournisseurOrderByRelevanceFieldEnum = (typeof FournisseurOrderByRelevanceFieldEnum)[keyof typeof FournisseurOrderByRelevanceFieldEnum]
@@ -48497,6 +48510,7 @@ export namespace Prisma {
     tel1?: StringFilter<"Fournisseur"> | string
     tel2?: StringFilter<"Fournisseur"> | string
     ice?: StringFilter<"Fournisseur"> | string
+    adresse?: StringFilter<"Fournisseur"> | string
     archiver?: BoolFilter<"Fournisseur"> | boolean
     supprimer?: BoolFilter<"Fournisseur"> | boolean
     villeId?: BigIntNullableFilter<"Fournisseur"> | bigint | number | null
@@ -48511,6 +48525,7 @@ export namespace Prisma {
     tel1?: SortOrder
     tel2?: SortOrder
     ice?: SortOrder
+    adresse?: SortOrder
     archiver?: SortOrder
     supprimer?: SortOrder
     villeId?: SortOrderInput | SortOrder
@@ -48529,6 +48544,7 @@ export namespace Prisma {
     tel1?: StringFilter<"Fournisseur"> | string
     tel2?: StringFilter<"Fournisseur"> | string
     ice?: StringFilter<"Fournisseur"> | string
+    adresse?: StringFilter<"Fournisseur"> | string
     archiver?: BoolFilter<"Fournisseur"> | boolean
     supprimer?: BoolFilter<"Fournisseur"> | boolean
     villeId?: BigIntNullableFilter<"Fournisseur"> | bigint | number | null
@@ -48543,6 +48559,7 @@ export namespace Prisma {
     tel1?: SortOrder
     tel2?: SortOrder
     ice?: SortOrder
+    adresse?: SortOrder
     archiver?: SortOrder
     supprimer?: SortOrder
     villeId?: SortOrderInput | SortOrder
@@ -48563,6 +48580,7 @@ export namespace Prisma {
     tel1?: StringWithAggregatesFilter<"Fournisseur"> | string
     tel2?: StringWithAggregatesFilter<"Fournisseur"> | string
     ice?: StringWithAggregatesFilter<"Fournisseur"> | string
+    adresse?: StringWithAggregatesFilter<"Fournisseur"> | string
     archiver?: BoolWithAggregatesFilter<"Fournisseur"> | boolean
     supprimer?: BoolWithAggregatesFilter<"Fournisseur"> | boolean
     villeId?: BigIntNullableWithAggregatesFilter<"Fournisseur"> | bigint | number | null
@@ -49059,7 +49077,7 @@ export namespace Prisma {
     observation?: StringFilter<"Repertoire"> | string
     nbrOperationClient?: IntFilter<"Repertoire"> | number
     plafond?: DecimalFilter<"Repertoire"> | Decimal | DecimalJsLike | number | string
-    personneld?: BigIntNullableFilter<"Repertoire"> | bigint | number | null
+    personnelId?: BigIntNullableFilter<"Repertoire"> | bigint | number | null
     villeId?: BigIntNullableFilter<"Repertoire"> | bigint | number | null
     personnel?: XOR<PersonnelNullableScalarRelationFilter, PersonnelWhereInput> | null
     ville?: XOR<VilleNullableScalarRelationFilter, VilleWhereInput> | null
@@ -49093,7 +49111,7 @@ export namespace Prisma {
     observation?: SortOrder
     nbrOperationClient?: SortOrder
     plafond?: SortOrder
-    personneld?: SortOrderInput | SortOrder
+    personnelId?: SortOrderInput | SortOrder
     villeId?: SortOrderInput | SortOrder
     personnel?: PersonnelOrderByWithRelationInput
     ville?: VilleOrderByWithRelationInput
@@ -49131,7 +49149,7 @@ export namespace Prisma {
     observation?: StringFilter<"Repertoire"> | string
     nbrOperationClient?: IntFilter<"Repertoire"> | number
     plafond?: DecimalFilter<"Repertoire"> | Decimal | DecimalJsLike | number | string
-    personneld?: BigIntNullableFilter<"Repertoire"> | bigint | number | null
+    personnelId?: BigIntNullableFilter<"Repertoire"> | bigint | number | null
     villeId?: BigIntNullableFilter<"Repertoire"> | bigint | number | null
     personnel?: XOR<PersonnelNullableScalarRelationFilter, PersonnelWhereInput> | null
     ville?: XOR<VilleNullableScalarRelationFilter, VilleWhereInput> | null
@@ -49165,7 +49183,7 @@ export namespace Prisma {
     observation?: SortOrder
     nbrOperationClient?: SortOrder
     plafond?: SortOrder
-    personneld?: SortOrderInput | SortOrder
+    personnelId?: SortOrderInput | SortOrder
     villeId?: SortOrderInput | SortOrder
     _count?: RepertoireCountOrderByAggregateInput
     _avg?: RepertoireAvgOrderByAggregateInput
@@ -49195,7 +49213,7 @@ export namespace Prisma {
     observation?: StringWithAggregatesFilter<"Repertoire"> | string
     nbrOperationClient?: IntWithAggregatesFilter<"Repertoire"> | number
     plafond?: DecimalWithAggregatesFilter<"Repertoire"> | Decimal | DecimalJsLike | number | string
-    personneld?: BigIntNullableWithAggregatesFilter<"Repertoire"> | bigint | number | null
+    personnelId?: BigIntNullableWithAggregatesFilter<"Repertoire"> | bigint | number | null
     villeId?: BigIntNullableWithAggregatesFilter<"Repertoire"> | bigint | number | null
   }
 
@@ -52888,6 +52906,7 @@ export namespace Prisma {
     tel1: string
     tel2: string
     ice: string
+    adresse: string
     archiver?: boolean
     supprimer?: boolean
     ville?: VilleCreateNestedOneWithoutFournisseursInput
@@ -52901,6 +52920,7 @@ export namespace Prisma {
     tel1: string
     tel2: string
     ice: string
+    adresse: string
     archiver?: boolean
     supprimer?: boolean
     villeId?: bigint | number | null
@@ -52914,6 +52934,7 @@ export namespace Prisma {
     tel1?: StringFieldUpdateOperationsInput | string
     tel2?: StringFieldUpdateOperationsInput | string
     ice?: StringFieldUpdateOperationsInput | string
+    adresse?: StringFieldUpdateOperationsInput | string
     archiver?: BoolFieldUpdateOperationsInput | boolean
     supprimer?: BoolFieldUpdateOperationsInput | boolean
     ville?: VilleUpdateOneWithoutFournisseursNestedInput
@@ -52927,6 +52948,7 @@ export namespace Prisma {
     tel1?: StringFieldUpdateOperationsInput | string
     tel2?: StringFieldUpdateOperationsInput | string
     ice?: StringFieldUpdateOperationsInput | string
+    adresse?: StringFieldUpdateOperationsInput | string
     archiver?: BoolFieldUpdateOperationsInput | boolean
     supprimer?: BoolFieldUpdateOperationsInput | boolean
     villeId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
@@ -52940,6 +52962,7 @@ export namespace Prisma {
     tel1: string
     tel2: string
     ice: string
+    adresse: string
     archiver?: boolean
     supprimer?: boolean
     villeId?: bigint | number | null
@@ -52952,6 +52975,7 @@ export namespace Prisma {
     tel1?: StringFieldUpdateOperationsInput | string
     tel2?: StringFieldUpdateOperationsInput | string
     ice?: StringFieldUpdateOperationsInput | string
+    adresse?: StringFieldUpdateOperationsInput | string
     archiver?: BoolFieldUpdateOperationsInput | boolean
     supprimer?: BoolFieldUpdateOperationsInput | boolean
   }
@@ -52963,6 +52987,7 @@ export namespace Prisma {
     tel1?: StringFieldUpdateOperationsInput | string
     tel2?: StringFieldUpdateOperationsInput | string
     ice?: StringFieldUpdateOperationsInput | string
+    adresse?: StringFieldUpdateOperationsInput | string
     archiver?: BoolFieldUpdateOperationsInput | boolean
     supprimer?: BoolFieldUpdateOperationsInput | boolean
     villeId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
@@ -53568,7 +53593,7 @@ export namespace Prisma {
     observation: string
     nbrOperationClient: number
     plafond: Decimal | DecimalJsLike | number | string
-    personneld?: bigint | number | null
+    personnelId?: bigint | number | null
     villeId?: bigint | number | null
     employes?: EmployeUncheckedCreateNestedManyWithoutRepertoireInput
     bonSorties?: BonSortieUncheckedCreateNestedManyWithoutRepertoireInput
@@ -53632,7 +53657,7 @@ export namespace Prisma {
     observation?: StringFieldUpdateOperationsInput | string
     nbrOperationClient?: IntFieldUpdateOperationsInput | number
     plafond?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
-    personneld?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+    personnelId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
     villeId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
     employes?: EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
     bonSorties?: BonSortieUncheckedUpdateManyWithoutRepertoireNestedInput
@@ -53664,7 +53689,7 @@ export namespace Prisma {
     observation: string
     nbrOperationClient: number
     plafond: Decimal | DecimalJsLike | number | string
-    personneld?: bigint | number | null
+    personnelId?: bigint | number | null
     villeId?: bigint | number | null
   }
 
@@ -53706,7 +53731,7 @@ export namespace Prisma {
     observation?: StringFieldUpdateOperationsInput | string
     nbrOperationClient?: IntFieldUpdateOperationsInput | number
     plafond?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
-    personneld?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+    personnelId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
     villeId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   }
 
@@ -58186,6 +58211,7 @@ export namespace Prisma {
     tel1?: SortOrder
     tel2?: SortOrder
     ice?: SortOrder
+    adresse?: SortOrder
     archiver?: SortOrder
     supprimer?: SortOrder
     villeId?: SortOrder
@@ -58204,6 +58230,7 @@ export namespace Prisma {
     tel1?: SortOrder
     tel2?: SortOrder
     ice?: SortOrder
+    adresse?: SortOrder
     archiver?: SortOrder
     supprimer?: SortOrder
     villeId?: SortOrder
@@ -58216,6 +58243,7 @@ export namespace Prisma {
     tel1?: SortOrder
     tel2?: SortOrder
     ice?: SortOrder
+    adresse?: SortOrder
     archiver?: SortOrder
     supprimer?: SortOrder
     villeId?: SortOrder
@@ -58755,7 +58783,7 @@ export namespace Prisma {
     observation?: SortOrder
     nbrOperationClient?: SortOrder
     plafond?: SortOrder
-    personneld?: SortOrder
+    personnelId?: SortOrder
     villeId?: SortOrder
   }
 
@@ -58765,7 +58793,7 @@ export namespace Prisma {
     typeReglment?: SortOrder
     nbrOperationClient?: SortOrder
     plafond?: SortOrder
-    personneld?: SortOrder
+    personnelId?: SortOrder
     villeId?: SortOrder
   }
 
@@ -58787,7 +58815,7 @@ export namespace Prisma {
     observation?: SortOrder
     nbrOperationClient?: SortOrder
     plafond?: SortOrder
-    personneld?: SortOrder
+    personnelId?: SortOrder
     villeId?: SortOrder
   }
 
@@ -58809,7 +58837,7 @@ export namespace Prisma {
     observation?: SortOrder
     nbrOperationClient?: SortOrder
     plafond?: SortOrder
-    personneld?: SortOrder
+    personnelId?: SortOrder
     villeId?: SortOrder
   }
 
@@ -58819,7 +58847,7 @@ export namespace Prisma {
     typeReglment?: SortOrder
     nbrOperationClient?: SortOrder
     plafond?: SortOrder
-    personneld?: SortOrder
+    personnelId?: SortOrder
     villeId?: SortOrder
   }
 
@@ -64581,7 +64609,7 @@ export namespace Prisma {
     observation: string
     nbrOperationClient: number
     plafond: Decimal | DecimalJsLike | number | string
-    personneld?: bigint | number | null
+    personnelId?: bigint | number | null
     employes?: EmployeUncheckedCreateNestedManyWithoutRepertoireInput
     bonSorties?: BonSortieUncheckedCreateNestedManyWithoutRepertoireInput
     bulttinPais?: BulttinPaiUncheckedCreateNestedManyWithoutCommercailInput
@@ -64611,6 +64639,7 @@ export namespace Prisma {
     tel1: string
     tel2: string
     ice: string
+    adresse: string
     archiver?: boolean
     supprimer?: boolean
     stocks?: StockCreateNestedManyWithoutFournisseurInput
@@ -64623,6 +64652,7 @@ export namespace Prisma {
     tel1: string
     tel2: string
     ice: string
+    adresse: string
     archiver?: boolean
     supprimer?: boolean
     stocks?: StockUncheckedCreateNestedManyWithoutFournisseurInput
@@ -64734,7 +64764,7 @@ export namespace Prisma {
     observation?: StringFilter<"Repertoire"> | string
     nbrOperationClient?: IntFilter<"Repertoire"> | number
     plafond?: DecimalFilter<"Repertoire"> | Decimal | DecimalJsLike | number | string
-    personneld?: BigIntNullableFilter<"Repertoire"> | bigint | number | null
+    personnelId?: BigIntNullableFilter<"Repertoire"> | bigint | number | null
     villeId?: BigIntNullableFilter<"Repertoire"> | bigint | number | null
   }
 
@@ -64764,6 +64794,7 @@ export namespace Prisma {
     tel1?: StringFilter<"Fournisseur"> | string
     tel2?: StringFilter<"Fournisseur"> | string
     ice?: StringFilter<"Fournisseur"> | string
+    adresse?: StringFilter<"Fournisseur"> | string
     archiver?: BoolFilter<"Fournisseur"> | boolean
     supprimer?: BoolFilter<"Fournisseur"> | boolean
     villeId?: BigIntNullableFilter<"Fournisseur"> | bigint | number | null
@@ -66333,6 +66364,7 @@ export namespace Prisma {
     tel1: string
     tel2: string
     ice: string
+    adresse: string
     archiver?: boolean
     supprimer?: boolean
     ville?: VilleCreateNestedOneWithoutFournisseursInput
@@ -66345,6 +66377,7 @@ export namespace Prisma {
     tel1: string
     tel2: string
     ice: string
+    adresse: string
     archiver?: boolean
     supprimer?: boolean
     villeId?: bigint | number | null
@@ -66673,6 +66706,7 @@ export namespace Prisma {
     tel1?: StringFieldUpdateOperationsInput | string
     tel2?: StringFieldUpdateOperationsInput | string
     ice?: StringFieldUpdateOperationsInput | string
+    adresse?: StringFieldUpdateOperationsInput | string
     archiver?: BoolFieldUpdateOperationsInput | boolean
     supprimer?: BoolFieldUpdateOperationsInput | boolean
     ville?: VilleUpdateOneWithoutFournisseursNestedInput
@@ -66685,6 +66719,7 @@ export namespace Prisma {
     tel1?: StringFieldUpdateOperationsInput | string
     tel2?: StringFieldUpdateOperationsInput | string
     ice?: StringFieldUpdateOperationsInput | string
+    adresse?: StringFieldUpdateOperationsInput | string
     archiver?: BoolFieldUpdateOperationsInput | boolean
     supprimer?: BoolFieldUpdateOperationsInput | boolean
     villeId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
@@ -67209,7 +67244,7 @@ export namespace Prisma {
     observation: string
     nbrOperationClient: number
     plafond: Decimal | DecimalJsLike | number | string
-    personneld?: bigint | number | null
+    personnelId?: bigint | number | null
     villeId?: bigint | number | null
     bonSorties?: BonSortieUncheckedCreateNestedManyWithoutRepertoireInput
     bulttinPais?: BulttinPaiUncheckedCreateNestedManyWithoutCommercailInput
@@ -67637,7 +67672,7 @@ export namespace Prisma {
     observation?: StringFieldUpdateOperationsInput | string
     nbrOperationClient?: IntFieldUpdateOperationsInput | number
     plafond?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
-    personneld?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+    personnelId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
     villeId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
     bonSorties?: BonSortieUncheckedUpdateManyWithoutRepertoireNestedInput
     bulttinPais?: BulttinPaiUncheckedUpdateManyWithoutCommercailNestedInput
@@ -68234,7 +68269,7 @@ export namespace Prisma {
     observation: string
     nbrOperationClient: number
     plafond: Decimal | DecimalJsLike | number | string
-    personneld?: bigint | number | null
+    personnelId?: bigint | number | null
     villeId?: bigint | number | null
     employes?: EmployeUncheckedCreateNestedManyWithoutRepertoireInput
     bulttinPais?: BulttinPaiUncheckedCreateNestedManyWithoutCommercailInput
@@ -68407,7 +68442,7 @@ export namespace Prisma {
     observation?: StringFieldUpdateOperationsInput | string
     nbrOperationClient?: IntFieldUpdateOperationsInput | number
     plafond?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
-    personneld?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+    personnelId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
     villeId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
     employes?: EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
     bulttinPais?: BulttinPaiUncheckedUpdateManyWithoutCommercailNestedInput
@@ -68485,7 +68520,7 @@ export namespace Prisma {
     observation: string
     nbrOperationClient: number
     plafond: Decimal | DecimalJsLike | number | string
-    personneld?: bigint | number | null
+    personnelId?: bigint | number | null
     villeId?: bigint | number | null
     employes?: EmployeUncheckedCreateNestedManyWithoutRepertoireInput
     bonSorties?: BonSortieUncheckedCreateNestedManyWithoutRepertoireInput
@@ -68706,7 +68741,7 @@ export namespace Prisma {
     observation?: StringFieldUpdateOperationsInput | string
     nbrOperationClient?: IntFieldUpdateOperationsInput | number
     plafond?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
-    personneld?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+    personnelId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
     villeId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
     employes?: EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
     bonSorties?: BonSortieUncheckedUpdateManyWithoutRepertoireNestedInput
@@ -68884,7 +68919,7 @@ export namespace Prisma {
     observation: string
     nbrOperationClient: number
     plafond: Decimal | DecimalJsLike | number | string
-    personneld?: bigint | number | null
+    personnelId?: bigint | number | null
     villeId?: bigint | number | null
     employes?: EmployeUncheckedCreateNestedManyWithoutRepertoireInput
     bonSorties?: BonSortieUncheckedCreateNestedManyWithoutRepertoireInput
@@ -69025,7 +69060,7 @@ export namespace Prisma {
     observation?: StringFieldUpdateOperationsInput | string
     nbrOperationClient?: IntFieldUpdateOperationsInput | number
     plafond?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
-    personneld?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+    personnelId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
     villeId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
     employes?: EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
     bonSorties?: BonSortieUncheckedUpdateManyWithoutRepertoireNestedInput
@@ -69156,7 +69191,7 @@ export namespace Prisma {
     observation: string
     nbrOperationClient: number
     plafond: Decimal | DecimalJsLike | number | string
-    personneld?: bigint | number | null
+    personnelId?: bigint | number | null
     villeId?: bigint | number | null
     employes?: EmployeUncheckedCreateNestedManyWithoutRepertoireInput
     bonSorties?: BonSortieUncheckedCreateNestedManyWithoutRepertoireInput
@@ -69234,7 +69269,7 @@ export namespace Prisma {
     observation?: StringFieldUpdateOperationsInput | string
     nbrOperationClient?: IntFieldUpdateOperationsInput | number
     plafond?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
-    personneld?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+    personnelId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
     villeId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
     employes?: EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
     bonSorties?: BonSortieUncheckedUpdateManyWithoutRepertoireNestedInput
@@ -69296,7 +69331,7 @@ export namespace Prisma {
     observation: string
     nbrOperationClient: number
     plafond: Decimal | DecimalJsLike | number | string
-    personneld?: bigint | number | null
+    personnelId?: bigint | number | null
     villeId?: bigint | number | null
     employes?: EmployeUncheckedCreateNestedManyWithoutRepertoireInput
     bonSorties?: BonSortieUncheckedCreateNestedManyWithoutRepertoireInput
@@ -69437,7 +69472,7 @@ export namespace Prisma {
     observation?: StringFieldUpdateOperationsInput | string
     nbrOperationClient?: IntFieldUpdateOperationsInput | number
     plafond?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
-    personneld?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+    personnelId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
     villeId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
     employes?: EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
     bonSorties?: BonSortieUncheckedUpdateManyWithoutRepertoireNestedInput
@@ -72398,7 +72433,7 @@ export namespace Prisma {
     observation: string
     nbrOperationClient: number
     plafond: Decimal | DecimalJsLike | number | string
-    personneld?: bigint | number | null
+    personnelId?: bigint | number | null
     villeId?: bigint | number | null
     employes?: EmployeUncheckedCreateNestedManyWithoutRepertoireInput
     bonSorties?: BonSortieUncheckedCreateNestedManyWithoutRepertoireInput
@@ -72565,7 +72600,7 @@ export namespace Prisma {
     observation?: StringFieldUpdateOperationsInput | string
     nbrOperationClient?: IntFieldUpdateOperationsInput | number
     plafond?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
-    personneld?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+    personnelId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
     villeId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
     employes?: EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
     bonSorties?: BonSortieUncheckedUpdateManyWithoutRepertoireNestedInput
@@ -72775,7 +72810,7 @@ export namespace Prisma {
     observation: string
     nbrOperationClient: number
     plafond: Decimal | DecimalJsLike | number | string
-    personneld?: bigint | number | null
+    personnelId?: bigint | number | null
     villeId?: bigint | number | null
     employes?: EmployeUncheckedCreateNestedManyWithoutRepertoireInput
     bonSorties?: BonSortieUncheckedCreateNestedManyWithoutRepertoireInput
@@ -72842,7 +72877,7 @@ export namespace Prisma {
     observation: string
     nbrOperationClient: number
     plafond: Decimal | DecimalJsLike | number | string
-    personneld?: bigint | number | null
+    personnelId?: bigint | number | null
     villeId?: bigint | number | null
     employes?: EmployeUncheckedCreateNestedManyWithoutRepertoireInput
     bonSorties?: BonSortieUncheckedCreateNestedManyWithoutRepertoireInput
@@ -72909,7 +72944,7 @@ export namespace Prisma {
     observation: string
     nbrOperationClient: number
     plafond: Decimal | DecimalJsLike | number | string
-    personneld?: bigint | number | null
+    personnelId?: bigint | number | null
     villeId?: bigint | number | null
     employes?: EmployeUncheckedCreateNestedManyWithoutRepertoireInput
     bonSorties?: BonSortieUncheckedCreateNestedManyWithoutRepertoireInput
@@ -73126,7 +73161,7 @@ export namespace Prisma {
     observation?: StringFieldUpdateOperationsInput | string
     nbrOperationClient?: IntFieldUpdateOperationsInput | number
     plafond?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
-    personneld?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+    personnelId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
     villeId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
     employes?: EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
     bonSorties?: BonSortieUncheckedUpdateManyWithoutRepertoireNestedInput
@@ -73199,7 +73234,7 @@ export namespace Prisma {
     observation?: StringFieldUpdateOperationsInput | string
     nbrOperationClient?: IntFieldUpdateOperationsInput | number
     plafond?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
-    personneld?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+    personnelId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
     villeId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
     employes?: EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
     bonSorties?: BonSortieUncheckedUpdateManyWithoutRepertoireNestedInput
@@ -73272,7 +73307,7 @@ export namespace Prisma {
     observation?: StringFieldUpdateOperationsInput | string
     nbrOperationClient?: IntFieldUpdateOperationsInput | number
     plafond?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
-    personneld?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+    personnelId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
     villeId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
     employes?: EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
     bonSorties?: BonSortieUncheckedUpdateManyWithoutRepertoireNestedInput
@@ -73556,7 +73591,7 @@ export namespace Prisma {
     observation: string
     nbrOperationClient: number
     plafond: Decimal | DecimalJsLike | number | string
-    personneld?: bigint | number | null
+    personnelId?: bigint | number | null
   }
 
   export type FournisseurCreateManyVilleInput = {
@@ -73566,6 +73601,7 @@ export namespace Prisma {
     tel1: string
     tel2: string
     ice: string
+    adresse: string
     archiver?: boolean
     supprimer?: boolean
   }
@@ -73736,7 +73772,7 @@ export namespace Prisma {
     observation?: StringFieldUpdateOperationsInput | string
     nbrOperationClient?: IntFieldUpdateOperationsInput | number
     plafond?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
-    personneld?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+    personnelId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
     employes?: EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
     bonSorties?: BonSortieUncheckedUpdateManyWithoutRepertoireNestedInput
     bulttinPais?: BulttinPaiUncheckedUpdateManyWithoutCommercailNestedInput
@@ -73767,7 +73803,7 @@ export namespace Prisma {
     observation?: StringFieldUpdateOperationsInput | string
     nbrOperationClient?: IntFieldUpdateOperationsInput | number
     plafond?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
-    personneld?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+    personnelId?: NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   }
 
   export type FournisseurUpdateWithoutVilleInput = {
@@ -73777,6 +73813,7 @@ export namespace Prisma {
     tel1?: StringFieldUpdateOperationsInput | string
     tel2?: StringFieldUpdateOperationsInput | string
     ice?: StringFieldUpdateOperationsInput | string
+    adresse?: StringFieldUpdateOperationsInput | string
     archiver?: BoolFieldUpdateOperationsInput | boolean
     supprimer?: BoolFieldUpdateOperationsInput | boolean
     stocks?: StockUpdateManyWithoutFournisseurNestedInput
@@ -73789,6 +73826,7 @@ export namespace Prisma {
     tel1?: StringFieldUpdateOperationsInput | string
     tel2?: StringFieldUpdateOperationsInput | string
     ice?: StringFieldUpdateOperationsInput | string
+    adresse?: StringFieldUpdateOperationsInput | string
     archiver?: BoolFieldUpdateOperationsInput | boolean
     supprimer?: BoolFieldUpdateOperationsInput | boolean
     stocks?: StockUncheckedUpdateManyWithoutFournisseurNestedInput
@@ -73801,6 +73839,7 @@ export namespace Prisma {
     tel1?: StringFieldUpdateOperationsInput | string
     tel2?: StringFieldUpdateOperationsInput | string
     ice?: StringFieldUpdateOperationsInput | string
+    adresse?: StringFieldUpdateOperationsInput | string
     archiver?: BoolFieldUpdateOperationsInput | boolean
     supprimer?: BoolFieldUpdateOperationsInput | boolean
   }

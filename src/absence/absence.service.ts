@@ -15,7 +15,11 @@ export class AbsenceService {
   }
 
   findAll() {
-    return this.databaseService.absence.findMany();
+    return this.databaseService.absence.findMany({
+      orderBy: {
+        dateAbsence: 'desc',
+      },
+    });
   }
 
   findOne(id: number) {
