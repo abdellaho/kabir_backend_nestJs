@@ -1,13 +1,15 @@
-/*import { PrismaMariaDb } from '@prisma/adapter-mariadb';
-import { PrismaClient } from 'generated/prisma';
+import "dotenv/config";
 
+import path from "node:path";
+import { defineConfig, env } from "prisma/config";
 
-const adapter = new PrismaMariaDb({
-  host: "localhost",
-  port: 3307,
-  user: "root",
-  password: "root",
-  database: "inventory_db",
-  connectionLimit: 5
+export default defineConfig({
+  schema: path.join("prisma", "schema.prisma"),
+  migrations: {
+    path: path.join("prisma", "migrations"),
+  },
+  engine: "classic",
+  datasource: {
+      url: env('DATABASE_URL'),
+  }  
 });
-const prisma = new PrismaClient({ adapter });*/
