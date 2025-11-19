@@ -8656,6 +8656,7 @@ export namespace Prisma {
     raisonSocial: string | null
     ice: string | null
     ife: string | null
+    rc: string | null
     port: number | null
     hostMail: string | null
     paswordMail: string | null
@@ -8696,6 +8697,7 @@ export namespace Prisma {
     raisonSocial: string | null
     ice: string | null
     ife: string | null
+    rc: string | null
     port: number | null
     hostMail: string | null
     paswordMail: string | null
@@ -8736,6 +8738,7 @@ export namespace Prisma {
     raisonSocial: number
     ice: number
     ife: number
+    rc: number
     port: number
     hostMail: number
     paswordMail: number
@@ -8798,6 +8801,7 @@ export namespace Prisma {
     raisonSocial?: true
     ice?: true
     ife?: true
+    rc?: true
     port?: true
     hostMail?: true
     paswordMail?: true
@@ -8838,6 +8842,7 @@ export namespace Prisma {
     raisonSocial?: true
     ice?: true
     ife?: true
+    rc?: true
     port?: true
     hostMail?: true
     paswordMail?: true
@@ -8878,6 +8883,7 @@ export namespace Prisma {
     raisonSocial?: true
     ice?: true
     ife?: true
+    rc?: true
     port?: true
     hostMail?: true
     paswordMail?: true
@@ -9005,6 +9011,7 @@ export namespace Prisma {
     raisonSocial: string
     ice: string
     ife: string
+    rc: string
     port: number
     hostMail: string
     paswordMail: string
@@ -9064,6 +9071,7 @@ export namespace Prisma {
     raisonSocial?: boolean
     ice?: boolean
     ife?: boolean
+    rc?: boolean
     port?: boolean
     hostMail?: boolean
     paswordMail?: boolean
@@ -9107,6 +9115,7 @@ export namespace Prisma {
     raisonSocial?: boolean
     ice?: boolean
     ife?: boolean
+    rc?: boolean
     port?: boolean
     hostMail?: boolean
     paswordMail?: boolean
@@ -9130,7 +9139,7 @@ export namespace Prisma {
     villeId?: boolean
   }
 
-  export type EtablissementOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "nom" | "cheminBD" | "tel1" | "tel2" | "tel3" | "fax" | "gsm" | "email" | "siteweb" | "cnss" | "patente" | "adresse" | "raisonSocial" | "ice" | "ife" | "port" | "hostMail" | "paswordMail" | "paswordMailFake" | "fromMail" | "userMail" | "capitale" | "pourcentageLiv" | "lienDbDump" | "lienBackupDB" | "lundi" | "mardi" | "mercredi" | "jeudi" | "vendredi" | "samedi" | "dimanche" | "dateTime" | "typeExec" | "numJour" | "villeId", ExtArgs["result"]["etablissement"]>
+  export type EtablissementOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "nom" | "cheminBD" | "tel1" | "tel2" | "tel3" | "fax" | "gsm" | "email" | "siteweb" | "cnss" | "patente" | "adresse" | "raisonSocial" | "ice" | "ife" | "rc" | "port" | "hostMail" | "paswordMail" | "paswordMailFake" | "fromMail" | "userMail" | "capitale" | "pourcentageLiv" | "lienDbDump" | "lienBackupDB" | "lundi" | "mardi" | "mercredi" | "jeudi" | "vendredi" | "samedi" | "dimanche" | "dateTime" | "typeExec" | "numJour" | "villeId", ExtArgs["result"]["etablissement"]>
   export type EtablissementInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     ville?: boolean | Etablissement$villeArgs<ExtArgs>
   }
@@ -9157,6 +9166,7 @@ export namespace Prisma {
       raisonSocial: string
       ice: string
       ife: string
+      rc: string
       port: number
       hostMail: string
       paswordMail: string
@@ -9564,6 +9574,7 @@ export namespace Prisma {
     readonly raisonSocial: FieldRef<"Etablissement", 'String'>
     readonly ice: FieldRef<"Etablissement", 'String'>
     readonly ife: FieldRef<"Etablissement", 'String'>
+    readonly rc: FieldRef<"Etablissement", 'String'>
     readonly port: FieldRef<"Etablissement", 'Int'>
     readonly hostMail: FieldRef<"Etablissement", 'String'>
     readonly paswordMail: FieldRef<"Etablissement", 'String'>
@@ -46294,6 +46305,7 @@ export namespace Prisma {
     raisonSocial: 'raisonSocial',
     ice: 'ice',
     ife: 'ife',
+    rc: 'rc',
     port: 'port',
     hostMail: 'hostMail',
     paswordMail: 'paswordMail',
@@ -47115,6 +47127,7 @@ export namespace Prisma {
     raisonSocial: 'raisonSocial',
     ice: 'ice',
     ife: 'ife',
+    rc: 'rc',
     hostMail: 'hostMail',
     paswordMail: 'paswordMail',
     paswordMailFake: 'paswordMailFake',
@@ -47645,6 +47658,7 @@ export namespace Prisma {
     raisonSocial?: StringFilter<"Etablissement"> | string
     ice?: StringFilter<"Etablissement"> | string
     ife?: StringFilter<"Etablissement"> | string
+    rc?: StringFilter<"Etablissement"> | string
     port?: IntFilter<"Etablissement"> | number
     hostMail?: StringFilter<"Etablissement"> | string
     paswordMail?: StringFilter<"Etablissement"> | string
@@ -47686,6 +47700,7 @@ export namespace Prisma {
     raisonSocial?: SortOrder
     ice?: SortOrder
     ife?: SortOrder
+    rc?: SortOrder
     port?: SortOrder
     hostMail?: SortOrder
     paswordMail?: SortOrder
@@ -47731,6 +47746,7 @@ export namespace Prisma {
     raisonSocial?: StringFilter<"Etablissement"> | string
     ice?: StringFilter<"Etablissement"> | string
     ife?: StringFilter<"Etablissement"> | string
+    rc?: StringFilter<"Etablissement"> | string
     port?: IntFilter<"Etablissement"> | number
     hostMail?: StringFilter<"Etablissement"> | string
     paswordMail?: StringFilter<"Etablissement"> | string
@@ -47772,6 +47788,7 @@ export namespace Prisma {
     raisonSocial?: SortOrder
     ice?: SortOrder
     ife?: SortOrder
+    rc?: SortOrder
     port?: SortOrder
     hostMail?: SortOrder
     paswordMail?: SortOrder
@@ -47820,6 +47837,7 @@ export namespace Prisma {
     raisonSocial?: StringWithAggregatesFilter<"Etablissement"> | string
     ice?: StringWithAggregatesFilter<"Etablissement"> | string
     ife?: StringWithAggregatesFilter<"Etablissement"> | string
+    rc?: StringWithAggregatesFilter<"Etablissement"> | string
     port?: IntWithAggregatesFilter<"Etablissement"> | number
     hostMail?: StringWithAggregatesFilter<"Etablissement"> | string
     paswordMail?: StringWithAggregatesFilter<"Etablissement"> | string
@@ -52003,6 +52021,7 @@ export namespace Prisma {
     raisonSocial: string
     ice: string
     ife: string
+    rc: string
     port: number
     hostMail: string
     paswordMail: string
@@ -52043,6 +52062,7 @@ export namespace Prisma {
     raisonSocial: string
     ice: string
     ife: string
+    rc: string
     port: number
     hostMail: string
     paswordMail: string
@@ -52083,6 +52103,7 @@ export namespace Prisma {
     raisonSocial?: StringFieldUpdateOperationsInput | string
     ice?: StringFieldUpdateOperationsInput | string
     ife?: StringFieldUpdateOperationsInput | string
+    rc?: StringFieldUpdateOperationsInput | string
     port?: IntFieldUpdateOperationsInput | number
     hostMail?: StringFieldUpdateOperationsInput | string
     paswordMail?: StringFieldUpdateOperationsInput | string
@@ -52123,6 +52144,7 @@ export namespace Prisma {
     raisonSocial?: StringFieldUpdateOperationsInput | string
     ice?: StringFieldUpdateOperationsInput | string
     ife?: StringFieldUpdateOperationsInput | string
+    rc?: StringFieldUpdateOperationsInput | string
     port?: IntFieldUpdateOperationsInput | number
     hostMail?: StringFieldUpdateOperationsInput | string
     paswordMail?: StringFieldUpdateOperationsInput | string
@@ -52163,6 +52185,7 @@ export namespace Prisma {
     raisonSocial: string
     ice: string
     ife: string
+    rc: string
     port: number
     hostMail: string
     paswordMail: string
@@ -52203,6 +52226,7 @@ export namespace Prisma {
     raisonSocial?: StringFieldUpdateOperationsInput | string
     ice?: StringFieldUpdateOperationsInput | string
     ife?: StringFieldUpdateOperationsInput | string
+    rc?: StringFieldUpdateOperationsInput | string
     port?: IntFieldUpdateOperationsInput | number
     hostMail?: StringFieldUpdateOperationsInput | string
     paswordMail?: StringFieldUpdateOperationsInput | string
@@ -52242,6 +52266,7 @@ export namespace Prisma {
     raisonSocial?: StringFieldUpdateOperationsInput | string
     ice?: StringFieldUpdateOperationsInput | string
     ife?: StringFieldUpdateOperationsInput | string
+    rc?: StringFieldUpdateOperationsInput | string
     port?: IntFieldUpdateOperationsInput | number
     hostMail?: StringFieldUpdateOperationsInput | string
     paswordMail?: StringFieldUpdateOperationsInput | string
@@ -57237,6 +57262,7 @@ export namespace Prisma {
     raisonSocial?: SortOrder
     ice?: SortOrder
     ife?: SortOrder
+    rc?: SortOrder
     port?: SortOrder
     hostMail?: SortOrder
     paswordMail?: SortOrder
@@ -57287,6 +57313,7 @@ export namespace Prisma {
     raisonSocial?: SortOrder
     ice?: SortOrder
     ife?: SortOrder
+    rc?: SortOrder
     port?: SortOrder
     hostMail?: SortOrder
     paswordMail?: SortOrder
@@ -57327,6 +57354,7 @@ export namespace Prisma {
     raisonSocial?: SortOrder
     ice?: SortOrder
     ife?: SortOrder
+    rc?: SortOrder
     port?: SortOrder
     hostMail?: SortOrder
     paswordMail?: SortOrder
@@ -63138,6 +63166,7 @@ export namespace Prisma {
     raisonSocial: string
     ice: string
     ife: string
+    rc: string
     port: number
     hostMail: string
     paswordMail: string
@@ -63177,6 +63206,7 @@ export namespace Prisma {
     raisonSocial: string
     ice: string
     ife: string
+    rc: string
     port: number
     hostMail: string
     paswordMail: string
@@ -63351,6 +63381,7 @@ export namespace Prisma {
     raisonSocial?: StringFilter<"Etablissement"> | string
     ice?: StringFilter<"Etablissement"> | string
     ife?: StringFilter<"Etablissement"> | string
+    rc?: StringFilter<"Etablissement"> | string
     port?: IntFilter<"Etablissement"> | number
     hostMail?: StringFilter<"Etablissement"> | string
     paswordMail?: StringFilter<"Etablissement"> | string
@@ -71912,6 +71943,7 @@ export namespace Prisma {
     raisonSocial: string
     ice: string
     ife: string
+    rc: string
     port: number
     hostMail: string
     paswordMail: string
@@ -71983,6 +72015,7 @@ export namespace Prisma {
     raisonSocial?: StringFieldUpdateOperationsInput | string
     ice?: StringFieldUpdateOperationsInput | string
     ife?: StringFieldUpdateOperationsInput | string
+    rc?: StringFieldUpdateOperationsInput | string
     port?: IntFieldUpdateOperationsInput | number
     hostMail?: StringFieldUpdateOperationsInput | string
     paswordMail?: StringFieldUpdateOperationsInput | string
@@ -72022,6 +72055,7 @@ export namespace Prisma {
     raisonSocial?: StringFieldUpdateOperationsInput | string
     ice?: StringFieldUpdateOperationsInput | string
     ife?: StringFieldUpdateOperationsInput | string
+    rc?: StringFieldUpdateOperationsInput | string
     port?: IntFieldUpdateOperationsInput | number
     hostMail?: StringFieldUpdateOperationsInput | string
     paswordMail?: StringFieldUpdateOperationsInput | string
@@ -72061,6 +72095,7 @@ export namespace Prisma {
     raisonSocial?: StringFieldUpdateOperationsInput | string
     ice?: StringFieldUpdateOperationsInput | string
     ife?: StringFieldUpdateOperationsInput | string
+    rc?: StringFieldUpdateOperationsInput | string
     port?: IntFieldUpdateOperationsInput | number
     hostMail?: StringFieldUpdateOperationsInput | string
     paswordMail?: StringFieldUpdateOperationsInput | string

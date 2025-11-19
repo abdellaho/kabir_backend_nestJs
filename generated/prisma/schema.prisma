@@ -80,6 +80,7 @@ model Etablissement {
   raisonSocial    String
   ice             String
   ife             String
+  rc              String
   port            Int
   hostMail        String
   paswordMail     String

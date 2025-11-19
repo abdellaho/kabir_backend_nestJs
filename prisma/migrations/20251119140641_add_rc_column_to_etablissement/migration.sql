@@ -69,6 +69,7 @@ CREATE TABLE `Etablissement` (
     `raisonSocial` VARCHAR(191) NOT NULL,
     `ice` VARCHAR(191) NOT NULL,
     `ife` VARCHAR(191) NOT NULL,
+    `rc` VARCHAR(191) NOT NULL,
     `port` INTEGER NOT NULL,
     `hostMail` VARCHAR(191) NOT NULL,
     `paswordMail` VARCHAR(191) NOT NULL,
