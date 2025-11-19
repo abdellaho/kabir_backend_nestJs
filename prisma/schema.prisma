@@ -29,6 +29,7 @@ model Fournisseur {
   tel1             				      String
   tel2             				      String
   ice                           String
+  adresse         				      String
   archiver              		    Boolean @default(false)
   supprimer              		    Boolean @default(false)
   ville           				      Ville?     				                @relation(fields: [villeId], references: [id])
@@ -136,8 +137,8 @@ model Repertoire {
    observation     				      String
    nbrOperationClient 			    Int
    plafond   			              Decimal
-   personnel         			      Personnel?  			          @relation(fields: [personneld], references: [id])
-   personneld    				        BigInt?
+   personnel         			      Personnel?  			          @relation(fields: [personnelId], references: [id])
+   personnelId    				      BigInt?
    ville           				      Ville?     				          @relation(fields: [villeId], references: [id])
    villeId         				      BigInt?
    employes         			      Employe[]
@@ -197,6 +198,16 @@ model Stock {
   detLivraisons      			      DetLivraison[]
   detailBonSorties   			      DetailBonSortie[]
   detBulttinPais	  			      DetBulttinPai[]
+  stockDepots      			        StockDepot[]
+}
+
+model StockDepot {
+  id              				      BigInt    					              @id @default(autoincrement())
+  qteStockDepot   				      Int
+  dateOperation   				      DateTime
+  dateSys  				              DateTime
+  stock         				        Stock     				                @relation(fields: [stockId], references: [id])
+  stockId       				        BigInt
 }
 
 model Employe {

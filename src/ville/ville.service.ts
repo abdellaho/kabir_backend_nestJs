@@ -14,14 +14,21 @@ export class VilleService {
   }
 
   findAll() {
-    return this.databaseService.ville.findMany();
+    return this.databaseService.ville.findMany({
+      orderBy: {
+        nomVille: 'asc',
+      },
+  });
   }
 
   findByName(nomVille: string) {
     return this.databaseService.ville.findMany({
       where: { nomVille: {
         contains: nomVille
-      } }
+        }
+      }, orderBy: {
+        nomVille: 'asc',
+      },
     });
   }
 

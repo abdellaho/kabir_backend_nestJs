@@ -39,9 +39,10 @@ import { PersonnelModule } from './personnel/personnel.module';
 import { VoitureModule } from './voiture/voiture.module';
 import { FournisseurModule } from './fournisseur/fournisseur.module';
 import { LoggerMiddleware } from './common/middleware/logger.middleware';
+import { StockDepotModule } from './stock-depot/stock-depot.module';
 
 @Module({
-  imports: [VilleModule, EtablissementModule, ParamPrimeModule, ParamComissModule, RepertoireModule, StockModule, EmployeModule, DroitModule, DatabaseModule, AbsenceModule, AchatFactureModule, AchatLivraisonModule, BalanceModule, BilanModule, BonSortieModule, BulttinPaiModule, CaisseModule, ChequeModule, ComptaModule, ComptabiliteModule, CompteCaisseModule, DetAchatFactureModule, DetAchatLivraisonModule, DetailBonSortieModule, DetBulttinLivraisonModule, DetBulttinPaiModule, DetFactureModule, DetImportationsModule, DetLivraisonModule, FactureModule, ImportationsModule, LivraisonModule, PlanComptableModule, SoldeModule, PersonnelModule, VoitureModule, FournisseurModule],
+  imports: [VilleModule, EtablissementModule, ParamPrimeModule, ParamComissModule, RepertoireModule, StockModule, EmployeModule, DroitModule, DatabaseModule, AbsenceModule, AchatFactureModule, AchatLivraisonModule, BalanceModule, BilanModule, BonSortieModule, BulttinPaiModule, CaisseModule, ChequeModule, ComptaModule, ComptabiliteModule, CompteCaisseModule, DetAchatFactureModule, DetAchatLivraisonModule, DetailBonSortieModule, DetBulttinLivraisonModule, DetBulttinPaiModule, DetFactureModule, DetImportationsModule, DetLivraisonModule, FactureModule, ImportationsModule, LivraisonModule, PlanComptableModule, SoldeModule, PersonnelModule, VoitureModule, FournisseurModule, StockDepotModule],
   controllers: [AppController],
   providers: [AppService],
 })

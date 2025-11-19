@@ -20,12 +20,12 @@ exports.Prisma = Prisma
 exports.$Enums = {}
 
 /**
- * Prisma Client JS version: 6.17.1
- * Query Engine version: 272a37d34178c2894197e17273bf937f25acdeac
+ * Prisma Client JS version: 6.16.2
+ * Query Engine version: 1c57fdcd7e44b29b9313256c76699e91c3ac3c43
  */
 Prisma.prismaVersion = {
-  client: "6.17.1",
-  engine: "272a37d34178c2894197e17273bf937f25acdeac"
+  client: "6.16.2",
+  engine: "1c57fdcd7e44b29b9313256c76699e91c3ac3c43"
 }
 
 Prisma.PrismaClientKnownRequestError = () => {
@@ -132,6 +132,7 @@ exports.Prisma.FournisseurScalarFieldEnum = {
   tel1: 'tel1',
   tel2: 'tel2',
   ice: 'ice',
+  adresse: 'adresse',
   archiver: 'archiver',
   supprimer: 'supprimer',
   villeId: 'villeId'
@@ -233,7 +234,7 @@ exports.Prisma.RepertoireScalarFieldEnum = {
   observation: 'observation',
   nbrOperationClient: 'nbrOperationClient',
   plafond: 'plafond',
-  personneld: 'personneld',
+  personnelId: 'personnelId',
   villeId: 'villeId'
 };
 
@@ -274,6 +275,14 @@ exports.Prisma.StockScalarFieldEnum = {
   prime2: 'prime2',
   prime3: 'prime3',
   fournisseurId: 'fournisseurId'
+};
+
+exports.Prisma.StockDepotScalarFieldEnum = {
+  id: 'id',
+  qteStockDepot: 'qteStockDepot',
+  dateOperation: 'dateOperation',
+  dateSys: 'dateSys',
+  stockId: 'stockId'
 };
 
 exports.Prisma.EmployeScalarFieldEnum = {
@@ -852,7 +861,8 @@ exports.Prisma.FournisseurOrderByRelevanceFieldEnum = {
   designation: 'designation',
   tel1: 'tel1',
   tel2: 'tel2',
-  ice: 'ice'
+  ice: 'ice',
+  adresse: 'adresse'
 };
 
 exports.Prisma.PersonnelOrderByRelevanceFieldEnum = {
@@ -1011,6 +1021,7 @@ exports.Prisma.ModelName = {
   ParamCommiss: 'ParamCommiss',
   Repertoire: 'Repertoire',
   Stock: 'Stock',
+  StockDepot: 'StockDepot',
   Employe: 'Employe',
   Droit: 'Droit',
   Absence: 'Absence',
