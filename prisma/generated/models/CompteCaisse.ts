@@ -28,12 +28,12 @@ export type AggregateCompteCaisse = {
 
 export type CompteCaisseAvgAggregateOutputType = {
   id: number | null
-  montant: number | null
+  montant: runtime.Decimal | null
 }
 
 export type CompteCaisseSumAggregateOutputType = {
   id: bigint | null
-  montant: number | null
+  montant: runtime.Decimal | null
 }
 
 export type CompteCaisseMinAggregateOutputType = {
@@ -41,7 +41,7 @@ export type CompteCaisseMinAggregateOutputType = {
   date: Date | null
   designation: string | null
   numFacture: string | null
-  montant: number | null
+  montant: runtime.Decimal | null
   compteCaisse: boolean | null
 }
 
@@ -50,7 +50,7 @@ export type CompteCaisseMaxAggregateOutputType = {
   date: Date | null
   designation: string | null
   numFacture: string | null
-  montant: number | null
+  montant: runtime.Decimal | null
   compteCaisse: boolean | null
 }
 
@@ -194,7 +194,7 @@ export type CompteCaisseGroupByOutputType = {
   date: Date
   designation: string
   numFacture: string
-  montant: number
+  montant: runtime.Decimal
   compteCaisse: boolean
   _count: CompteCaisseCountAggregateOutputType | null
   _avg: CompteCaisseAvgAggregateOutputType | null
@@ -226,7 +226,7 @@ export type CompteCaisseWhereInput = {
   date?: Prisma.DateTimeFilter<"CompteCaisse"> | Date | string
   designation?: Prisma.StringFilter<"CompteCaisse"> | string
   numFacture?: Prisma.StringFilter<"CompteCaisse"> | string
-  montant?: Prisma.FloatFilter<"CompteCaisse"> | number
+  montant?: Prisma.DecimalFilter<"CompteCaisse"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   compteCaisse?: Prisma.BoolFilter<"CompteCaisse"> | boolean
 }
 
@@ -248,7 +248,7 @@ export type CompteCaisseWhereUniqueInput = Prisma.AtLeast<{
   date?: Prisma.DateTimeFilter<"CompteCaisse"> | Date | string
   designation?: Prisma.StringFilter<"CompteCaisse"> | string
   numFacture?: Prisma.StringFilter<"CompteCaisse"> | string
-  montant?: Prisma.FloatFilter<"CompteCaisse"> | number
+  montant?: Prisma.DecimalFilter<"CompteCaisse"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   compteCaisse?: Prisma.BoolFilter<"CompteCaisse"> | boolean
 }, "id">
 
@@ -274,7 +274,7 @@ export type CompteCaisseScalarWhereWithAggregatesInput = {
   date?: Prisma.DateTimeWithAggregatesFilter<"CompteCaisse"> | Date | string
   designation?: Prisma.StringWithAggregatesFilter<"CompteCaisse"> | string
   numFacture?: Prisma.StringWithAggregatesFilter<"CompteCaisse"> | string
-  montant?: Prisma.FloatWithAggregatesFilter<"CompteCaisse"> | number
+  montant?: Prisma.DecimalWithAggregatesFilter<"CompteCaisse"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   compteCaisse?: Prisma.BoolWithAggregatesFilter<"CompteCaisse"> | boolean
 }
 
@@ -283,7 +283,7 @@ export type CompteCaisseCreateInput = {
   date: Date | string
   designation: string
   numFacture: string
-  montant: number
+  montant: runtime.Decimal | runtime.DecimalJsLike | number | string
   compteCaisse?: boolean
 }
 
@@ -292,7 +292,7 @@ export type CompteCaisseUncheckedCreateInput = {
   date: Date | string
   designation: string
   numFacture: string
-  montant: number
+  montant: runtime.Decimal | runtime.DecimalJsLike | number | string
   compteCaisse?: boolean
 }
 
@@ -301,7 +301,7 @@ export type CompteCaisseUpdateInput = {
   date?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   designation?: Prisma.StringFieldUpdateOperationsInput | string
   numFacture?: Prisma.StringFieldUpdateOperationsInput | string
-  montant?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   compteCaisse?: Prisma.BoolFieldUpdateOperationsInput | boolean
 }
 
@@ -310,7 +310,7 @@ export type CompteCaisseUncheckedUpdateInput = {
   date?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   designation?: Prisma.StringFieldUpdateOperationsInput | string
   numFacture?: Prisma.StringFieldUpdateOperationsInput | string
-  montant?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   compteCaisse?: Prisma.BoolFieldUpdateOperationsInput | boolean
 }
 
@@ -319,7 +319,7 @@ export type CompteCaisseCreateManyInput = {
   date: Date | string
   designation: string
   numFacture: string
-  montant: number
+  montant: runtime.Decimal | runtime.DecimalJsLike | number | string
   compteCaisse?: boolean
 }
 
@@ -328,7 +328,7 @@ export type CompteCaisseUpdateManyMutationInput = {
   date?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   designation?: Prisma.StringFieldUpdateOperationsInput | string
   numFacture?: Prisma.StringFieldUpdateOperationsInput | string
-  montant?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   compteCaisse?: Prisma.BoolFieldUpdateOperationsInput | boolean
 }
 
@@ -337,7 +337,7 @@ export type CompteCaisseUncheckedUpdateManyInput = {
   date?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   designation?: Prisma.StringFieldUpdateOperationsInput | string
   numFacture?: Prisma.StringFieldUpdateOperationsInput | string
-  montant?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   compteCaisse?: Prisma.BoolFieldUpdateOperationsInput | boolean
 }
 
@@ -416,7 +416,7 @@ export type $CompteCaissePayload<ExtArgs extends runtime.Types.Extensions.Intern
     date: Date
     designation: string
     numFacture: string
-    montant: number
+    montant: runtime.Decimal
     compteCaisse: boolean
   }, ExtArgs["result"]["compteCaisse"]>
   composites: {}
@@ -791,7 +791,7 @@ export interface CompteCaisseFieldRefs {
   readonly date: Prisma.FieldRef<"CompteCaisse", 'DateTime'>
   readonly designation: Prisma.FieldRef<"CompteCaisse", 'String'>
   readonly numFacture: Prisma.FieldRef<"CompteCaisse", 'String'>
-  readonly montant: Prisma.FieldRef<"CompteCaisse", 'Float'>
+  readonly montant: Prisma.FieldRef<"CompteCaisse", 'Decimal'>
   readonly compteCaisse: Prisma.FieldRef<"CompteCaisse", 'Boolean'>
 }
     

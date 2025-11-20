@@ -28,30 +28,30 @@ export type AggregateParamCommiss = {
 
 export type ParamCommissAvgAggregateOutputType = {
   id: number | null
-  mntDepart: number | null
-  mntFin: number | null
-  pourc: number | null
+  mntDepart: runtime.Decimal | null
+  mntFin: runtime.Decimal | null
+  pourc: runtime.Decimal | null
 }
 
 export type ParamCommissSumAggregateOutputType = {
   id: bigint | null
-  mntDepart: number | null
-  mntFin: number | null
-  pourc: number | null
+  mntDepart: runtime.Decimal | null
+  mntFin: runtime.Decimal | null
+  pourc: runtime.Decimal | null
 }
 
 export type ParamCommissMinAggregateOutputType = {
   id: bigint | null
-  mntDepart: number | null
-  mntFin: number | null
-  pourc: number | null
+  mntDepart: runtime.Decimal | null
+  mntFin: runtime.Decimal | null
+  pourc: runtime.Decimal | null
 }
 
 export type ParamCommissMaxAggregateOutputType = {
   id: bigint | null
-  mntDepart: number | null
-  mntFin: number | null
-  pourc: number | null
+  mntDepart: runtime.Decimal | null
+  mntFin: runtime.Decimal | null
+  pourc: runtime.Decimal | null
 }
 
 export type ParamCommissCountAggregateOutputType = {
@@ -187,9 +187,9 @@ export type ParamCommissGroupByArgs<ExtArgs extends runtime.Types.Extensions.Int
 
 export type ParamCommissGroupByOutputType = {
   id: bigint
-  mntDepart: number
-  mntFin: number
-  pourc: number
+  mntDepart: runtime.Decimal
+  mntFin: runtime.Decimal
+  pourc: runtime.Decimal
   _count: ParamCommissCountAggregateOutputType | null
   _avg: ParamCommissAvgAggregateOutputType | null
   _sum: ParamCommissSumAggregateOutputType | null
@@ -217,9 +217,9 @@ export type ParamCommissWhereInput = {
   OR?: Prisma.ParamCommissWhereInput[]
   NOT?: Prisma.ParamCommissWhereInput | Prisma.ParamCommissWhereInput[]
   id?: Prisma.BigIntFilter<"ParamCommiss"> | bigint | number
-  mntDepart?: Prisma.FloatFilter<"ParamCommiss"> | number
-  mntFin?: Prisma.FloatFilter<"ParamCommiss"> | number
-  pourc?: Prisma.FloatFilter<"ParamCommiss"> | number
+  mntDepart?: Prisma.DecimalFilter<"ParamCommiss"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFin?: Prisma.DecimalFilter<"ParamCommiss"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pourc?: Prisma.DecimalFilter<"ParamCommiss"> | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type ParamCommissOrderByWithRelationInput = {
@@ -234,9 +234,9 @@ export type ParamCommissWhereUniqueInput = Prisma.AtLeast<{
   AND?: Prisma.ParamCommissWhereInput | Prisma.ParamCommissWhereInput[]
   OR?: Prisma.ParamCommissWhereInput[]
   NOT?: Prisma.ParamCommissWhereInput | Prisma.ParamCommissWhereInput[]
-  mntDepart?: Prisma.FloatFilter<"ParamCommiss"> | number
-  mntFin?: Prisma.FloatFilter<"ParamCommiss"> | number
-  pourc?: Prisma.FloatFilter<"ParamCommiss"> | number
+  mntDepart?: Prisma.DecimalFilter<"ParamCommiss"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFin?: Prisma.DecimalFilter<"ParamCommiss"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pourc?: Prisma.DecimalFilter<"ParamCommiss"> | runtime.Decimal | runtime.DecimalJsLike | number | string
 }, "id">
 
 export type ParamCommissOrderByWithAggregationInput = {
@@ -256,58 +256,58 @@ export type ParamCommissScalarWhereWithAggregatesInput = {
   OR?: Prisma.ParamCommissScalarWhereWithAggregatesInput[]
   NOT?: Prisma.ParamCommissScalarWhereWithAggregatesInput | Prisma.ParamCommissScalarWhereWithAggregatesInput[]
   id?: Prisma.BigIntWithAggregatesFilter<"ParamCommiss"> | bigint | number
-  mntDepart?: Prisma.FloatWithAggregatesFilter<"ParamCommiss"> | number
-  mntFin?: Prisma.FloatWithAggregatesFilter<"ParamCommiss"> | number
-  pourc?: Prisma.FloatWithAggregatesFilter<"ParamCommiss"> | number
+  mntDepart?: Prisma.DecimalWithAggregatesFilter<"ParamCommiss"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFin?: Prisma.DecimalWithAggregatesFilter<"ParamCommiss"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pourc?: Prisma.DecimalWithAggregatesFilter<"ParamCommiss"> | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type ParamCommissCreateInput = {
   id?: bigint | number
-  mntDepart: number
-  mntFin: number
-  pourc: number
+  mntDepart: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFin: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pourc: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type ParamCommissUncheckedCreateInput = {
   id?: bigint | number
-  mntDepart: number
-  mntFin: number
-  pourc: number
+  mntDepart: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFin: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pourc: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type ParamCommissUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  mntDepart?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntFin?: Prisma.FloatFieldUpdateOperationsInput | number
-  pourc?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntDepart?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFin?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pourc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type ParamCommissUncheckedUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  mntDepart?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntFin?: Prisma.FloatFieldUpdateOperationsInput | number
-  pourc?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntDepart?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFin?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pourc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type ParamCommissCreateManyInput = {
   id?: bigint | number
-  mntDepart: number
-  mntFin: number
-  pourc: number
+  mntDepart: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFin: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pourc: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type ParamCommissUpdateManyMutationInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  mntDepart?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntFin?: Prisma.FloatFieldUpdateOperationsInput | number
-  pourc?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntDepart?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFin?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pourc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type ParamCommissUncheckedUpdateManyInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  mntDepart?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntFin?: Prisma.FloatFieldUpdateOperationsInput | number
-  pourc?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntDepart?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFin?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pourc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type ParamCommissCountOrderByAggregateInput = {
@@ -370,9 +370,9 @@ export type $ParamCommissPayload<ExtArgs extends runtime.Types.Extensions.Intern
   objects: {}
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: bigint
-    mntDepart: number
-    mntFin: number
-    pourc: number
+    mntDepart: runtime.Decimal
+    mntFin: runtime.Decimal
+    pourc: runtime.Decimal
   }, ExtArgs["result"]["paramCommiss"]>
   composites: {}
 }
@@ -743,9 +743,9 @@ export interface Prisma__ParamCommissClient<T, Null = never, ExtArgs extends run
  */
 export interface ParamCommissFieldRefs {
   readonly id: Prisma.FieldRef<"ParamCommiss", 'BigInt'>
-  readonly mntDepart: Prisma.FieldRef<"ParamCommiss", 'Float'>
-  readonly mntFin: Prisma.FieldRef<"ParamCommiss", 'Float'>
-  readonly pourc: Prisma.FieldRef<"ParamCommiss", 'Float'>
+  readonly mntDepart: Prisma.FieldRef<"ParamCommiss", 'Decimal'>
+  readonly mntFin: Prisma.FieldRef<"ParamCommiss", 'Decimal'>
+  readonly pourc: Prisma.FieldRef<"ParamCommiss", 'Decimal'>
 }
     
 

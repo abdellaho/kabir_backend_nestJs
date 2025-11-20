@@ -28,26 +28,26 @@ export type AggregateCaisse = {
 
 export type CaisseAvgAggregateOutputType = {
   id: number | null
-  montant: number | null
+  montant: runtime.Decimal | null
   type: number | null
 }
 
 export type CaisseSumAggregateOutputType = {
   id: bigint | null
-  montant: number | null
+  montant: runtime.Decimal | null
   type: number | null
 }
 
 export type CaisseMinAggregateOutputType = {
   id: bigint | null
-  montant: number | null
+  montant: runtime.Decimal | null
   dateOperation: Date | null
   type: number | null
 }
 
 export type CaisseMaxAggregateOutputType = {
   id: bigint | null
-  montant: number | null
+  montant: runtime.Decimal | null
   dateOperation: Date | null
   type: number | null
 }
@@ -183,7 +183,7 @@ export type CaisseGroupByArgs<ExtArgs extends runtime.Types.Extensions.InternalA
 
 export type CaisseGroupByOutputType = {
   id: bigint
-  montant: number
+  montant: runtime.Decimal
   dateOperation: Date
   type: number
   _count: CaisseCountAggregateOutputType | null
@@ -213,7 +213,7 @@ export type CaisseWhereInput = {
   OR?: Prisma.CaisseWhereInput[]
   NOT?: Prisma.CaisseWhereInput | Prisma.CaisseWhereInput[]
   id?: Prisma.BigIntFilter<"Caisse"> | bigint | number
-  montant?: Prisma.FloatFilter<"Caisse"> | number
+  montant?: Prisma.DecimalFilter<"Caisse"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   dateOperation?: Prisma.DateTimeFilter<"Caisse"> | Date | string
   type?: Prisma.IntFilter<"Caisse"> | number
 }
@@ -230,7 +230,7 @@ export type CaisseWhereUniqueInput = Prisma.AtLeast<{
   AND?: Prisma.CaisseWhereInput | Prisma.CaisseWhereInput[]
   OR?: Prisma.CaisseWhereInput[]
   NOT?: Prisma.CaisseWhereInput | Prisma.CaisseWhereInput[]
-  montant?: Prisma.FloatFilter<"Caisse"> | number
+  montant?: Prisma.DecimalFilter<"Caisse"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   dateOperation?: Prisma.DateTimeFilter<"Caisse"> | Date | string
   type?: Prisma.IntFilter<"Caisse"> | number
 }, "id">
@@ -252,56 +252,56 @@ export type CaisseScalarWhereWithAggregatesInput = {
   OR?: Prisma.CaisseScalarWhereWithAggregatesInput[]
   NOT?: Prisma.CaisseScalarWhereWithAggregatesInput | Prisma.CaisseScalarWhereWithAggregatesInput[]
   id?: Prisma.BigIntWithAggregatesFilter<"Caisse"> | bigint | number
-  montant?: Prisma.FloatWithAggregatesFilter<"Caisse"> | number
+  montant?: Prisma.DecimalWithAggregatesFilter<"Caisse"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   dateOperation?: Prisma.DateTimeWithAggregatesFilter<"Caisse"> | Date | string
   type?: Prisma.IntWithAggregatesFilter<"Caisse"> | number
 }
 
 export type CaisseCreateInput = {
   id?: bigint | number
-  montant: number
+  montant: runtime.Decimal | runtime.DecimalJsLike | number | string
   dateOperation: Date | string
   type: number
 }
 
 export type CaisseUncheckedCreateInput = {
   id?: bigint | number
-  montant: number
+  montant: runtime.Decimal | runtime.DecimalJsLike | number | string
   dateOperation: Date | string
   type: number
 }
 
 export type CaisseUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  montant?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   dateOperation?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   type?: Prisma.IntFieldUpdateOperationsInput | number
 }
 
 export type CaisseUncheckedUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  montant?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   dateOperation?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   type?: Prisma.IntFieldUpdateOperationsInput | number
 }
 
 export type CaisseCreateManyInput = {
   id?: bigint | number
-  montant: number
+  montant: runtime.Decimal | runtime.DecimalJsLike | number | string
   dateOperation: Date | string
   type: number
 }
 
 export type CaisseUpdateManyMutationInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  montant?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   dateOperation?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   type?: Prisma.IntFieldUpdateOperationsInput | number
 }
 
 export type CaisseUncheckedUpdateManyInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  montant?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   dateOperation?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   type?: Prisma.IntFieldUpdateOperationsInput | number
 }
@@ -364,7 +364,7 @@ export type $CaissePayload<ExtArgs extends runtime.Types.Extensions.InternalArgs
   objects: {}
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: bigint
-    montant: number
+    montant: runtime.Decimal
     dateOperation: Date
     type: number
   }, ExtArgs["result"]["caisse"]>
@@ -737,7 +737,7 @@ export interface Prisma__CaisseClient<T, Null = never, ExtArgs extends runtime.T
  */
 export interface CaisseFieldRefs {
   readonly id: Prisma.FieldRef<"Caisse", 'BigInt'>
-  readonly montant: Prisma.FieldRef<"Caisse", 'Float'>
+  readonly montant: Prisma.FieldRef<"Caisse", 'Decimal'>
   readonly dateOperation: Prisma.FieldRef<"Caisse", 'DateTime'>
   readonly type: Prisma.FieldRef<"Caisse", 'Int'>
 }

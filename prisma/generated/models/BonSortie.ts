@@ -29,7 +29,7 @@ export type AggregateBonSortie = {
 export type BonSortieAvgAggregateOutputType = {
   id: number | null
   numSortie: number | null
-  mnt: number | null
+  mnt: runtime.Decimal | null
   employeId: number | null
   repertoireId: number | null
 }
@@ -37,7 +37,7 @@ export type BonSortieAvgAggregateOutputType = {
 export type BonSortieSumAggregateOutputType = {
   id: bigint | null
   numSortie: number | null
-  mnt: number | null
+  mnt: runtime.Decimal | null
   employeId: bigint | null
   repertoireId: bigint | null
 }
@@ -47,7 +47,7 @@ export type BonSortieMinAggregateOutputType = {
   numSortie: number | null
   codeSortie: string | null
   dateOperation: Date | null
-  mnt: number | null
+  mnt: runtime.Decimal | null
   employeId: bigint | null
   repertoireId: bigint | null
 }
@@ -57,7 +57,7 @@ export type BonSortieMaxAggregateOutputType = {
   numSortie: number | null
   codeSortie: string | null
   dateOperation: Date | null
-  mnt: number | null
+  mnt: runtime.Decimal | null
   employeId: bigint | null
   repertoireId: bigint | null
 }
@@ -212,7 +212,7 @@ export type BonSortieGroupByOutputType = {
   numSortie: number
   codeSortie: string
   dateOperation: Date
-  mnt: number
+  mnt: runtime.Decimal
   employeId: bigint
   repertoireId: bigint
   _count: BonSortieCountAggregateOutputType | null
@@ -245,7 +245,7 @@ export type BonSortieWhereInput = {
   numSortie?: Prisma.IntFilter<"BonSortie"> | number
   codeSortie?: Prisma.StringFilter<"BonSortie"> | string
   dateOperation?: Prisma.DateTimeFilter<"BonSortie"> | Date | string
-  mnt?: Prisma.FloatFilter<"BonSortie"> | number
+  mnt?: Prisma.DecimalFilter<"BonSortie"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   employeId?: Prisma.BigIntFilter<"BonSortie"> | bigint | number
   repertoireId?: Prisma.BigIntFilter<"BonSortie"> | bigint | number
   employe?: Prisma.XOR<Prisma.EmployeScalarRelationFilter, Prisma.EmployeWhereInput>
@@ -275,7 +275,7 @@ export type BonSortieWhereUniqueInput = Prisma.AtLeast<{
   numSortie?: Prisma.IntFilter<"BonSortie"> | number
   codeSortie?: Prisma.StringFilter<"BonSortie"> | string
   dateOperation?: Prisma.DateTimeFilter<"BonSortie"> | Date | string
-  mnt?: Prisma.FloatFilter<"BonSortie"> | number
+  mnt?: Prisma.DecimalFilter<"BonSortie"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   employeId?: Prisma.BigIntFilter<"BonSortie"> | bigint | number
   repertoireId?: Prisma.BigIntFilter<"BonSortie"> | bigint | number
   employe?: Prisma.XOR<Prisma.EmployeScalarRelationFilter, Prisma.EmployeWhereInput>
@@ -306,7 +306,7 @@ export type BonSortieScalarWhereWithAggregatesInput = {
   numSortie?: Prisma.IntWithAggregatesFilter<"BonSortie"> | number
   codeSortie?: Prisma.StringWithAggregatesFilter<"BonSortie"> | string
   dateOperation?: Prisma.DateTimeWithAggregatesFilter<"BonSortie"> | Date | string
-  mnt?: Prisma.FloatWithAggregatesFilter<"BonSortie"> | number
+  mnt?: Prisma.DecimalWithAggregatesFilter<"BonSortie"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   employeId?: Prisma.BigIntWithAggregatesFilter<"BonSortie"> | bigint | number
   repertoireId?: Prisma.BigIntWithAggregatesFilter<"BonSortie"> | bigint | number
 }
@@ -316,7 +316,7 @@ export type BonSortieCreateInput = {
   numSortie: number
   codeSortie: string
   dateOperation: Date | string
-  mnt: number
+  mnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   employe: Prisma.EmployeCreateNestedOneWithoutBonSortiesInput
   repertoire: Prisma.RepertoireCreateNestedOneWithoutBonSortiesInput
   detailBonSorties?: Prisma.DetailBonSortieCreateNestedManyWithoutBonSortieInput
@@ -327,7 +327,7 @@ export type BonSortieUncheckedCreateInput = {
   numSortie: number
   codeSortie: string
   dateOperation: Date | string
-  mnt: number
+  mnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   employeId: bigint | number
   repertoireId: bigint | number
   detailBonSorties?: Prisma.DetailBonSortieUncheckedCreateNestedManyWithoutBonSortieInput
@@ -338,7 +338,7 @@ export type BonSortieUpdateInput = {
   numSortie?: Prisma.IntFieldUpdateOperationsInput | number
   codeSortie?: Prisma.StringFieldUpdateOperationsInput | string
   dateOperation?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  mnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   employe?: Prisma.EmployeUpdateOneRequiredWithoutBonSortiesNestedInput
   repertoire?: Prisma.RepertoireUpdateOneRequiredWithoutBonSortiesNestedInput
   detailBonSorties?: Prisma.DetailBonSortieUpdateManyWithoutBonSortieNestedInput
@@ -349,7 +349,7 @@ export type BonSortieUncheckedUpdateInput = {
   numSortie?: Prisma.IntFieldUpdateOperationsInput | number
   codeSortie?: Prisma.StringFieldUpdateOperationsInput | string
   dateOperation?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  mnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   employeId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   repertoireId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detailBonSorties?: Prisma.DetailBonSortieUncheckedUpdateManyWithoutBonSortieNestedInput
@@ -360,7 +360,7 @@ export type BonSortieCreateManyInput = {
   numSortie: number
   codeSortie: string
   dateOperation: Date | string
-  mnt: number
+  mnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   employeId: bigint | number
   repertoireId: bigint | number
 }
@@ -370,7 +370,7 @@ export type BonSortieUpdateManyMutationInput = {
   numSortie?: Prisma.IntFieldUpdateOperationsInput | number
   codeSortie?: Prisma.StringFieldUpdateOperationsInput | string
   dateOperation?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  mnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type BonSortieUncheckedUpdateManyInput = {
@@ -378,7 +378,7 @@ export type BonSortieUncheckedUpdateManyInput = {
   numSortie?: Prisma.IntFieldUpdateOperationsInput | number
   codeSortie?: Prisma.StringFieldUpdateOperationsInput | string
   dateOperation?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  mnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   employeId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   repertoireId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
@@ -553,7 +553,7 @@ export type BonSortieCreateWithoutRepertoireInput = {
   numSortie: number
   codeSortie: string
   dateOperation: Date | string
-  mnt: number
+  mnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   employe: Prisma.EmployeCreateNestedOneWithoutBonSortiesInput
   detailBonSorties?: Prisma.DetailBonSortieCreateNestedManyWithoutBonSortieInput
 }
@@ -563,7 +563,7 @@ export type BonSortieUncheckedCreateWithoutRepertoireInput = {
   numSortie: number
   codeSortie: string
   dateOperation: Date | string
-  mnt: number
+  mnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   employeId: bigint | number
   detailBonSorties?: Prisma.DetailBonSortieUncheckedCreateNestedManyWithoutBonSortieInput
 }
@@ -602,7 +602,7 @@ export type BonSortieScalarWhereInput = {
   numSortie?: Prisma.IntFilter<"BonSortie"> | number
   codeSortie?: Prisma.StringFilter<"BonSortie"> | string
   dateOperation?: Prisma.DateTimeFilter<"BonSortie"> | Date | string
-  mnt?: Prisma.FloatFilter<"BonSortie"> | number
+  mnt?: Prisma.DecimalFilter<"BonSortie"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   employeId?: Prisma.BigIntFilter<"BonSortie"> | bigint | number
   repertoireId?: Prisma.BigIntFilter<"BonSortie"> | bigint | number
 }
@@ -612,7 +612,7 @@ export type BonSortieCreateWithoutEmployeInput = {
   numSortie: number
   codeSortie: string
   dateOperation: Date | string
-  mnt: number
+  mnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoire: Prisma.RepertoireCreateNestedOneWithoutBonSortiesInput
   detailBonSorties?: Prisma.DetailBonSortieCreateNestedManyWithoutBonSortieInput
 }
@@ -622,7 +622,7 @@ export type BonSortieUncheckedCreateWithoutEmployeInput = {
   numSortie: number
   codeSortie: string
   dateOperation: Date | string
-  mnt: number
+  mnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireId: bigint | number
   detailBonSorties?: Prisma.DetailBonSortieUncheckedCreateNestedManyWithoutBonSortieInput
 }
@@ -658,7 +658,7 @@ export type BonSortieCreateWithoutDetailBonSortiesInput = {
   numSortie: number
   codeSortie: string
   dateOperation: Date | string
-  mnt: number
+  mnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   employe: Prisma.EmployeCreateNestedOneWithoutBonSortiesInput
   repertoire: Prisma.RepertoireCreateNestedOneWithoutBonSortiesInput
 }
@@ -668,7 +668,7 @@ export type BonSortieUncheckedCreateWithoutDetailBonSortiesInput = {
   numSortie: number
   codeSortie: string
   dateOperation: Date | string
-  mnt: number
+  mnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   employeId: bigint | number
   repertoireId: bigint | number
 }
@@ -694,7 +694,7 @@ export type BonSortieUpdateWithoutDetailBonSortiesInput = {
   numSortie?: Prisma.IntFieldUpdateOperationsInput | number
   codeSortie?: Prisma.StringFieldUpdateOperationsInput | string
   dateOperation?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  mnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   employe?: Prisma.EmployeUpdateOneRequiredWithoutBonSortiesNestedInput
   repertoire?: Prisma.RepertoireUpdateOneRequiredWithoutBonSortiesNestedInput
 }
@@ -704,7 +704,7 @@ export type BonSortieUncheckedUpdateWithoutDetailBonSortiesInput = {
   numSortie?: Prisma.IntFieldUpdateOperationsInput | number
   codeSortie?: Prisma.StringFieldUpdateOperationsInput | string
   dateOperation?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  mnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   employeId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   repertoireId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
@@ -714,7 +714,7 @@ export type BonSortieCreateManyRepertoireInput = {
   numSortie: number
   codeSortie: string
   dateOperation: Date | string
-  mnt: number
+  mnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   employeId: bigint | number
 }
 
@@ -723,7 +723,7 @@ export type BonSortieUpdateWithoutRepertoireInput = {
   numSortie?: Prisma.IntFieldUpdateOperationsInput | number
   codeSortie?: Prisma.StringFieldUpdateOperationsInput | string
   dateOperation?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  mnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   employe?: Prisma.EmployeUpdateOneRequiredWithoutBonSortiesNestedInput
   detailBonSorties?: Prisma.DetailBonSortieUpdateManyWithoutBonSortieNestedInput
 }
@@ -733,7 +733,7 @@ export type BonSortieUncheckedUpdateWithoutRepertoireInput = {
   numSortie?: Prisma.IntFieldUpdateOperationsInput | number
   codeSortie?: Prisma.StringFieldUpdateOperationsInput | string
   dateOperation?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  mnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   employeId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detailBonSorties?: Prisma.DetailBonSortieUncheckedUpdateManyWithoutBonSortieNestedInput
 }
@@ -743,7 +743,7 @@ export type BonSortieUncheckedUpdateManyWithoutRepertoireInput = {
   numSortie?: Prisma.IntFieldUpdateOperationsInput | number
   codeSortie?: Prisma.StringFieldUpdateOperationsInput | string
   dateOperation?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  mnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   employeId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
@@ -752,7 +752,7 @@ export type BonSortieCreateManyEmployeInput = {
   numSortie: number
   codeSortie: string
   dateOperation: Date | string
-  mnt: number
+  mnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireId: bigint | number
 }
 
@@ -761,7 +761,7 @@ export type BonSortieUpdateWithoutEmployeInput = {
   numSortie?: Prisma.IntFieldUpdateOperationsInput | number
   codeSortie?: Prisma.StringFieldUpdateOperationsInput | string
   dateOperation?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  mnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoire?: Prisma.RepertoireUpdateOneRequiredWithoutBonSortiesNestedInput
   detailBonSorties?: Prisma.DetailBonSortieUpdateManyWithoutBonSortieNestedInput
 }
@@ -771,7 +771,7 @@ export type BonSortieUncheckedUpdateWithoutEmployeInput = {
   numSortie?: Prisma.IntFieldUpdateOperationsInput | number
   codeSortie?: Prisma.StringFieldUpdateOperationsInput | string
   dateOperation?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  mnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detailBonSorties?: Prisma.DetailBonSortieUncheckedUpdateManyWithoutBonSortieNestedInput
 }
@@ -781,7 +781,7 @@ export type BonSortieUncheckedUpdateManyWithoutEmployeInput = {
   numSortie?: Prisma.IntFieldUpdateOperationsInput | number
   codeSortie?: Prisma.StringFieldUpdateOperationsInput | string
   dateOperation?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  mnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
@@ -862,7 +862,7 @@ export type $BonSortiePayload<ExtArgs extends runtime.Types.Extensions.InternalA
     numSortie: number
     codeSortie: string
     dateOperation: Date
-    mnt: number
+    mnt: runtime.Decimal
     employeId: bigint
     repertoireId: bigint
   }, ExtArgs["result"]["bonSortie"]>
@@ -1241,7 +1241,7 @@ export interface BonSortieFieldRefs {
   readonly numSortie: Prisma.FieldRef<"BonSortie", 'Int'>
   readonly codeSortie: Prisma.FieldRef<"BonSortie", 'String'>
   readonly dateOperation: Prisma.FieldRef<"BonSortie", 'DateTime'>
-  readonly mnt: Prisma.FieldRef<"BonSortie", 'Float'>
+  readonly mnt: Prisma.FieldRef<"BonSortie", 'Decimal'>
   readonly employeId: Prisma.FieldRef<"BonSortie", 'BigInt'>
   readonly repertoireId: Prisma.FieldRef<"BonSortie", 'BigInt'>
 }

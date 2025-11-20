@@ -28,71 +28,71 @@ export type AggregateStock = {
 
 export type StockAvgAggregateOutputType = {
   id: number | null
-  pahtGrossiste: number | null
-  prixCommercial: number | null
-  tva: number | null
-  pattc: number | null
-  pvttc: number | null
-  pvaht: number | null
-  benifice: number | null
+  pahtGrossiste: runtime.Decimal | null
+  prixCommercial: runtime.Decimal | null
+  tva: runtime.Decimal | null
+  pattc: runtime.Decimal | null
+  pvttc: runtime.Decimal | null
+  pvaht: runtime.Decimal | null
+  benifice: runtime.Decimal | null
   qteStock: number | null
   qtePVMin1: number | null
   qtePVMin2: number | null
   qtePVMin3: number | null
   qtePVMin4: number | null
   qteFacturer: number | null
-  prixVentMin1: number | null
-  prixVentMin2: number | null
-  prixVentMin3: number | null
-  prixVentMin4: number | null
-  remiseMax1: number | null
-  remiseMax2: number | null
-  remiseMax3: number | null
-  remiseMax4: number | null
-  prixImport: number | null
-  commission: number | null
+  prixVentMin1: runtime.Decimal | null
+  prixVentMin2: runtime.Decimal | null
+  prixVentMin3: runtime.Decimal | null
+  prixVentMin4: runtime.Decimal | null
+  remiseMax1: runtime.Decimal | null
+  remiseMax2: runtime.Decimal | null
+  remiseMax3: runtime.Decimal | null
+  remiseMax4: runtime.Decimal | null
+  prixImport: runtime.Decimal | null
+  commission: runtime.Decimal | null
   qteStockImport: number | null
-  montant1: number | null
-  montant2: number | null
-  montant3: number | null
-  prime1: number | null
-  prime2: number | null
-  prime3: number | null
+  montant1: runtime.Decimal | null
+  montant2: runtime.Decimal | null
+  montant3: runtime.Decimal | null
+  prime1: runtime.Decimal | null
+  prime2: runtime.Decimal | null
+  prime3: runtime.Decimal | null
   fournisseurId: number | null
 }
 
 export type StockSumAggregateOutputType = {
   id: bigint | null
-  pahtGrossiste: number | null
-  prixCommercial: number | null
-  tva: number | null
-  pattc: number | null
-  pvttc: number | null
-  pvaht: number | null
-  benifice: number | null
+  pahtGrossiste: runtime.Decimal | null
+  prixCommercial: runtime.Decimal | null
+  tva: runtime.Decimal | null
+  pattc: runtime.Decimal | null
+  pvttc: runtime.Decimal | null
+  pvaht: runtime.Decimal | null
+  benifice: runtime.Decimal | null
   qteStock: number | null
   qtePVMin1: number | null
   qtePVMin2: number | null
   qtePVMin3: number | null
   qtePVMin4: number | null
   qteFacturer: number | null
-  prixVentMin1: number | null
-  prixVentMin2: number | null
-  prixVentMin3: number | null
-  prixVentMin4: number | null
-  remiseMax1: number | null
-  remiseMax2: number | null
-  remiseMax3: number | null
-  remiseMax4: number | null
-  prixImport: number | null
-  commission: number | null
+  prixVentMin1: runtime.Decimal | null
+  prixVentMin2: runtime.Decimal | null
+  prixVentMin3: runtime.Decimal | null
+  prixVentMin4: runtime.Decimal | null
+  remiseMax1: runtime.Decimal | null
+  remiseMax2: runtime.Decimal | null
+  remiseMax3: runtime.Decimal | null
+  remiseMax4: runtime.Decimal | null
+  prixImport: runtime.Decimal | null
+  commission: runtime.Decimal | null
   qteStockImport: number | null
-  montant1: number | null
-  montant2: number | null
-  montant3: number | null
-  prime1: number | null
-  prime2: number | null
-  prime3: number | null
+  montant1: runtime.Decimal | null
+  montant2: runtime.Decimal | null
+  montant3: runtime.Decimal | null
+  prime1: runtime.Decimal | null
+  prime2: runtime.Decimal | null
+  prime3: runtime.Decimal | null
   fournisseurId: bigint | null
 }
 
@@ -100,38 +100,38 @@ export type StockMinAggregateOutputType = {
   id: bigint | null
   designation: string | null
   sysDate: Date | null
-  pahtGrossiste: number | null
-  prixCommercial: number | null
-  tva: number | null
-  pattc: number | null
-  pvttc: number | null
-  pvaht: number | null
-  benifice: number | null
+  pahtGrossiste: runtime.Decimal | null
+  prixCommercial: runtime.Decimal | null
+  tva: runtime.Decimal | null
+  pattc: runtime.Decimal | null
+  pvttc: runtime.Decimal | null
+  pvaht: runtime.Decimal | null
+  benifice: runtime.Decimal | null
   qteStock: number | null
   qtePVMin1: number | null
   qtePVMin2: number | null
   qtePVMin3: number | null
   qtePVMin4: number | null
   qteFacturer: number | null
-  prixVentMin1: number | null
-  prixVentMin2: number | null
-  prixVentMin3: number | null
-  prixVentMin4: number | null
-  remiseMax1: number | null
-  remiseMax2: number | null
-  remiseMax3: number | null
-  remiseMax4: number | null
-  prixImport: number | null
-  commission: number | null
+  prixVentMin1: runtime.Decimal | null
+  prixVentMin2: runtime.Decimal | null
+  prixVentMin3: runtime.Decimal | null
+  prixVentMin4: runtime.Decimal | null
+  remiseMax1: runtime.Decimal | null
+  remiseMax2: runtime.Decimal | null
+  remiseMax3: runtime.Decimal | null
+  remiseMax4: runtime.Decimal | null
+  prixImport: runtime.Decimal | null
+  commission: runtime.Decimal | null
   archiver: boolean | null
   supprimer: boolean | null
   qteStockImport: number | null
-  montant1: number | null
-  montant2: number | null
-  montant3: number | null
-  prime1: number | null
-  prime2: number | null
-  prime3: number | null
+  montant1: runtime.Decimal | null
+  montant2: runtime.Decimal | null
+  montant3: runtime.Decimal | null
+  prime1: runtime.Decimal | null
+  prime2: runtime.Decimal | null
+  prime3: runtime.Decimal | null
   fournisseurId: bigint | null
 }
 
@@ -139,38 +139,38 @@ export type StockMaxAggregateOutputType = {
   id: bigint | null
   designation: string | null
   sysDate: Date | null
-  pahtGrossiste: number | null
-  prixCommercial: number | null
-  tva: number | null
-  pattc: number | null
-  pvttc: number | null
-  pvaht: number | null
-  benifice: number | null
+  pahtGrossiste: runtime.Decimal | null
+  prixCommercial: runtime.Decimal | null
+  tva: runtime.Decimal | null
+  pattc: runtime.Decimal | null
+  pvttc: runtime.Decimal | null
+  pvaht: runtime.Decimal | null
+  benifice: runtime.Decimal | null
   qteStock: number | null
   qtePVMin1: number | null
   qtePVMin2: number | null
   qtePVMin3: number | null
   qtePVMin4: number | null
   qteFacturer: number | null
-  prixVentMin1: number | null
-  prixVentMin2: number | null
-  prixVentMin3: number | null
-  prixVentMin4: number | null
-  remiseMax1: number | null
-  remiseMax2: number | null
-  remiseMax3: number | null
-  remiseMax4: number | null
-  prixImport: number | null
-  commission: number | null
+  prixVentMin1: runtime.Decimal | null
+  prixVentMin2: runtime.Decimal | null
+  prixVentMin3: runtime.Decimal | null
+  prixVentMin4: runtime.Decimal | null
+  remiseMax1: runtime.Decimal | null
+  remiseMax2: runtime.Decimal | null
+  remiseMax3: runtime.Decimal | null
+  remiseMax4: runtime.Decimal | null
+  prixImport: runtime.Decimal | null
+  commission: runtime.Decimal | null
   archiver: boolean | null
   supprimer: boolean | null
   qteStockImport: number | null
-  montant1: number | null
-  montant2: number | null
-  montant3: number | null
-  prime1: number | null
-  prime2: number | null
-  prime3: number | null
+  montant1: runtime.Decimal | null
+  montant2: runtime.Decimal | null
+  montant3: runtime.Decimal | null
+  prime1: runtime.Decimal | null
+  prime2: runtime.Decimal | null
+  prime3: runtime.Decimal | null
   fournisseurId: bigint | null
 }
 
@@ -493,38 +493,38 @@ export type StockGroupByOutputType = {
   id: bigint
   designation: string
   sysDate: Date
-  pahtGrossiste: number
-  prixCommercial: number
-  tva: number
-  pattc: number
-  pvttc: number
-  pvaht: number
-  benifice: number
+  pahtGrossiste: runtime.Decimal
+  prixCommercial: runtime.Decimal
+  tva: runtime.Decimal
+  pattc: runtime.Decimal
+  pvttc: runtime.Decimal
+  pvaht: runtime.Decimal
+  benifice: runtime.Decimal
   qteStock: number
   qtePVMin1: number
   qtePVMin2: number
   qtePVMin3: number
   qtePVMin4: number
   qteFacturer: number
-  prixVentMin1: number
-  prixVentMin2: number
-  prixVentMin3: number
-  prixVentMin4: number
-  remiseMax1: number
-  remiseMax2: number
-  remiseMax3: number
-  remiseMax4: number
-  prixImport: number
-  commission: number
+  prixVentMin1: runtime.Decimal
+  prixVentMin2: runtime.Decimal
+  prixVentMin3: runtime.Decimal
+  prixVentMin4: runtime.Decimal
+  remiseMax1: runtime.Decimal
+  remiseMax2: runtime.Decimal
+  remiseMax3: runtime.Decimal
+  remiseMax4: runtime.Decimal
+  prixImport: runtime.Decimal
+  commission: runtime.Decimal
   archiver: boolean
   supprimer: boolean
   qteStockImport: number
-  montant1: number
-  montant2: number
-  montant3: number
-  prime1: number
-  prime2: number
-  prime3: number
+  montant1: runtime.Decimal
+  montant2: runtime.Decimal
+  montant3: runtime.Decimal
+  prime1: runtime.Decimal
+  prime2: runtime.Decimal
+  prime3: runtime.Decimal
   fournisseurId: bigint
   _count: StockCountAggregateOutputType | null
   _avg: StockAvgAggregateOutputType | null
@@ -555,38 +555,38 @@ export type StockWhereInput = {
   id?: Prisma.BigIntFilter<"Stock"> | bigint | number
   designation?: Prisma.StringFilter<"Stock"> | string
   sysDate?: Prisma.DateTimeFilter<"Stock"> | Date | string
-  pahtGrossiste?: Prisma.FloatFilter<"Stock"> | number
-  prixCommercial?: Prisma.FloatFilter<"Stock"> | number
-  tva?: Prisma.FloatFilter<"Stock"> | number
-  pattc?: Prisma.FloatFilter<"Stock"> | number
-  pvttc?: Prisma.FloatFilter<"Stock"> | number
-  pvaht?: Prisma.FloatFilter<"Stock"> | number
-  benifice?: Prisma.FloatFilter<"Stock"> | number
+  pahtGrossiste?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock?: Prisma.IntFilter<"Stock"> | number
   qtePVMin1?: Prisma.IntFilter<"Stock"> | number
   qtePVMin2?: Prisma.IntFilter<"Stock"> | number
   qtePVMin3?: Prisma.IntFilter<"Stock"> | number
   qtePVMin4?: Prisma.IntFilter<"Stock"> | number
   qteFacturer?: Prisma.IntFilter<"Stock"> | number
-  prixVentMin1?: Prisma.FloatFilter<"Stock"> | number
-  prixVentMin2?: Prisma.FloatFilter<"Stock"> | number
-  prixVentMin3?: Prisma.FloatFilter<"Stock"> | number
-  prixVentMin4?: Prisma.FloatFilter<"Stock"> | number
-  remiseMax1?: Prisma.FloatFilter<"Stock"> | number
-  remiseMax2?: Prisma.FloatFilter<"Stock"> | number
-  remiseMax3?: Prisma.FloatFilter<"Stock"> | number
-  remiseMax4?: Prisma.FloatFilter<"Stock"> | number
-  prixImport?: Prisma.FloatFilter<"Stock"> | number
-  commission?: Prisma.FloatFilter<"Stock"> | number
+  prixVentMin1?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFilter<"Stock"> | boolean
   supprimer?: Prisma.BoolFilter<"Stock"> | boolean
   qteStockImport?: Prisma.IntFilter<"Stock"> | number
-  montant1?: Prisma.FloatFilter<"Stock"> | number
-  montant2?: Prisma.FloatFilter<"Stock"> | number
-  montant3?: Prisma.FloatFilter<"Stock"> | number
-  prime1?: Prisma.FloatFilter<"Stock"> | number
-  prime2?: Prisma.FloatFilter<"Stock"> | number
-  prime3?: Prisma.FloatFilter<"Stock"> | number
+  montant1?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseurId?: Prisma.BigIntFilter<"Stock"> | bigint | number
   fournisseur?: Prisma.XOR<Prisma.FournisseurScalarRelationFilter, Prisma.FournisseurWhereInput>
   detAchatFactures?: Prisma.DetAchatFactureListRelationFilter
@@ -655,38 +655,38 @@ export type StockWhereUniqueInput = Prisma.AtLeast<{
   NOT?: Prisma.StockWhereInput | Prisma.StockWhereInput[]
   designation?: Prisma.StringFilter<"Stock"> | string
   sysDate?: Prisma.DateTimeFilter<"Stock"> | Date | string
-  pahtGrossiste?: Prisma.FloatFilter<"Stock"> | number
-  prixCommercial?: Prisma.FloatFilter<"Stock"> | number
-  tva?: Prisma.FloatFilter<"Stock"> | number
-  pattc?: Prisma.FloatFilter<"Stock"> | number
-  pvttc?: Prisma.FloatFilter<"Stock"> | number
-  pvaht?: Prisma.FloatFilter<"Stock"> | number
-  benifice?: Prisma.FloatFilter<"Stock"> | number
+  pahtGrossiste?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock?: Prisma.IntFilter<"Stock"> | number
   qtePVMin1?: Prisma.IntFilter<"Stock"> | number
   qtePVMin2?: Prisma.IntFilter<"Stock"> | number
   qtePVMin3?: Prisma.IntFilter<"Stock"> | number
   qtePVMin4?: Prisma.IntFilter<"Stock"> | number
   qteFacturer?: Prisma.IntFilter<"Stock"> | number
-  prixVentMin1?: Prisma.FloatFilter<"Stock"> | number
-  prixVentMin2?: Prisma.FloatFilter<"Stock"> | number
-  prixVentMin3?: Prisma.FloatFilter<"Stock"> | number
-  prixVentMin4?: Prisma.FloatFilter<"Stock"> | number
-  remiseMax1?: Prisma.FloatFilter<"Stock"> | number
-  remiseMax2?: Prisma.FloatFilter<"Stock"> | number
-  remiseMax3?: Prisma.FloatFilter<"Stock"> | number
-  remiseMax4?: Prisma.FloatFilter<"Stock"> | number
-  prixImport?: Prisma.FloatFilter<"Stock"> | number
-  commission?: Prisma.FloatFilter<"Stock"> | number
+  prixVentMin1?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFilter<"Stock"> | boolean
   supprimer?: Prisma.BoolFilter<"Stock"> | boolean
   qteStockImport?: Prisma.IntFilter<"Stock"> | number
-  montant1?: Prisma.FloatFilter<"Stock"> | number
-  montant2?: Prisma.FloatFilter<"Stock"> | number
-  montant3?: Prisma.FloatFilter<"Stock"> | number
-  prime1?: Prisma.FloatFilter<"Stock"> | number
-  prime2?: Prisma.FloatFilter<"Stock"> | number
-  prime3?: Prisma.FloatFilter<"Stock"> | number
+  montant1?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseurId?: Prisma.BigIntFilter<"Stock"> | bigint | number
   fournisseur?: Prisma.XOR<Prisma.FournisseurScalarRelationFilter, Prisma.FournisseurWhereInput>
   detAchatFactures?: Prisma.DetAchatFactureListRelationFilter
@@ -750,38 +750,38 @@ export type StockScalarWhereWithAggregatesInput = {
   id?: Prisma.BigIntWithAggregatesFilter<"Stock"> | bigint | number
   designation?: Prisma.StringWithAggregatesFilter<"Stock"> | string
   sysDate?: Prisma.DateTimeWithAggregatesFilter<"Stock"> | Date | string
-  pahtGrossiste?: Prisma.FloatWithAggregatesFilter<"Stock"> | number
-  prixCommercial?: Prisma.FloatWithAggregatesFilter<"Stock"> | number
-  tva?: Prisma.FloatWithAggregatesFilter<"Stock"> | number
-  pattc?: Prisma.FloatWithAggregatesFilter<"Stock"> | number
-  pvttc?: Prisma.FloatWithAggregatesFilter<"Stock"> | number
-  pvaht?: Prisma.FloatWithAggregatesFilter<"Stock"> | number
-  benifice?: Prisma.FloatWithAggregatesFilter<"Stock"> | number
+  pahtGrossiste?: Prisma.DecimalWithAggregatesFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalWithAggregatesFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalWithAggregatesFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc?: Prisma.DecimalWithAggregatesFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc?: Prisma.DecimalWithAggregatesFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht?: Prisma.DecimalWithAggregatesFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice?: Prisma.DecimalWithAggregatesFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock?: Prisma.IntWithAggregatesFilter<"Stock"> | number
   qtePVMin1?: Prisma.IntWithAggregatesFilter<"Stock"> | number
   qtePVMin2?: Prisma.IntWithAggregatesFilter<"Stock"> | number
   qtePVMin3?: Prisma.IntWithAggregatesFilter<"Stock"> | number
   qtePVMin4?: Prisma.IntWithAggregatesFilter<"Stock"> | number
   qteFacturer?: Prisma.IntWithAggregatesFilter<"Stock"> | number
-  prixVentMin1?: Prisma.FloatWithAggregatesFilter<"Stock"> | number
-  prixVentMin2?: Prisma.FloatWithAggregatesFilter<"Stock"> | number
-  prixVentMin3?: Prisma.FloatWithAggregatesFilter<"Stock"> | number
-  prixVentMin4?: Prisma.FloatWithAggregatesFilter<"Stock"> | number
-  remiseMax1?: Prisma.FloatWithAggregatesFilter<"Stock"> | number
-  remiseMax2?: Prisma.FloatWithAggregatesFilter<"Stock"> | number
-  remiseMax3?: Prisma.FloatWithAggregatesFilter<"Stock"> | number
-  remiseMax4?: Prisma.FloatWithAggregatesFilter<"Stock"> | number
-  prixImport?: Prisma.FloatWithAggregatesFilter<"Stock"> | number
-  commission?: Prisma.FloatWithAggregatesFilter<"Stock"> | number
+  prixVentMin1?: Prisma.DecimalWithAggregatesFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2?: Prisma.DecimalWithAggregatesFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3?: Prisma.DecimalWithAggregatesFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4?: Prisma.DecimalWithAggregatesFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1?: Prisma.DecimalWithAggregatesFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2?: Prisma.DecimalWithAggregatesFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3?: Prisma.DecimalWithAggregatesFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4?: Prisma.DecimalWithAggregatesFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport?: Prisma.DecimalWithAggregatesFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalWithAggregatesFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolWithAggregatesFilter<"Stock"> | boolean
   supprimer?: Prisma.BoolWithAggregatesFilter<"Stock"> | boolean
   qteStockImport?: Prisma.IntWithAggregatesFilter<"Stock"> | number
-  montant1?: Prisma.FloatWithAggregatesFilter<"Stock"> | number
-  montant2?: Prisma.FloatWithAggregatesFilter<"Stock"> | number
-  montant3?: Prisma.FloatWithAggregatesFilter<"Stock"> | number
-  prime1?: Prisma.FloatWithAggregatesFilter<"Stock"> | number
-  prime2?: Prisma.FloatWithAggregatesFilter<"Stock"> | number
-  prime3?: Prisma.FloatWithAggregatesFilter<"Stock"> | number
+  montant1?: Prisma.DecimalWithAggregatesFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2?: Prisma.DecimalWithAggregatesFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3?: Prisma.DecimalWithAggregatesFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1?: Prisma.DecimalWithAggregatesFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2?: Prisma.DecimalWithAggregatesFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3?: Prisma.DecimalWithAggregatesFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseurId?: Prisma.BigIntWithAggregatesFilter<"Stock"> | bigint | number
 }
 
@@ -789,38 +789,38 @@ export type StockCreateInput = {
   id?: bigint | number
   designation: string
   sysDate: Date | string
-  pahtGrossiste: number
-  prixCommercial: number
-  tva: number
-  pattc: number
-  pvttc: number
-  pvaht: number
-  benifice: number
+  pahtGrossiste: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice: runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock: number
   qtePVMin1: number
   qtePVMin2: number
   qtePVMin3: number
   qtePVMin4: number
   qteFacturer: number
-  prixVentMin1: number
-  prixVentMin2: number
-  prixVentMin3: number
-  prixVentMin4: number
-  remiseMax1: number
-  remiseMax2: number
-  remiseMax3: number
-  remiseMax4: number
-  prixImport: number
-  commission: number
+  prixVentMin1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
   qteStockImport: number
-  montant1: number
-  montant2: number
-  montant3: number
-  prime1: number
-  prime2: number
-  prime3: number
+  montant1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseur: Prisma.FournisseurCreateNestedOneWithoutStocksInput
   detAchatFactures?: Prisma.DetAchatFactureCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonCreateNestedManyWithoutStockInput
@@ -836,38 +836,38 @@ export type StockUncheckedCreateInput = {
   id?: bigint | number
   designation: string
   sysDate: Date | string
-  pahtGrossiste: number
-  prixCommercial: number
-  tva: number
-  pattc: number
-  pvttc: number
-  pvaht: number
-  benifice: number
+  pahtGrossiste: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice: runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock: number
   qtePVMin1: number
   qtePVMin2: number
   qtePVMin3: number
   qtePVMin4: number
   qteFacturer: number
-  prixVentMin1: number
-  prixVentMin2: number
-  prixVentMin3: number
-  prixVentMin4: number
-  remiseMax1: number
-  remiseMax2: number
-  remiseMax3: number
-  remiseMax4: number
-  prixImport: number
-  commission: number
+  prixVentMin1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
   qteStockImport: number
-  montant1: number
-  montant2: number
-  montant3: number
-  prime1: number
-  prime2: number
-  prime3: number
+  montant1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseurId: bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedCreateNestedManyWithoutStockInput
@@ -883,38 +883,38 @@ export type StockUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   designation?: Prisma.StringFieldUpdateOperationsInput | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  pahtGrossiste?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva?: Prisma.FloatFieldUpdateOperationsInput | number
-  pattc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvttc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvaht?: Prisma.FloatFieldUpdateOperationsInput | number
-  benifice?: Prisma.FloatFieldUpdateOperationsInput | number
+  pahtGrossiste?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin1?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin2?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin3?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin4?: Prisma.IntFieldUpdateOperationsInput | number
   qteFacturer?: Prisma.IntFieldUpdateOperationsInput | number
-  prixVentMin1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin4?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax1?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax2?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax3?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax4?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixImport?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixVentMin1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   qteStockImport?: Prisma.IntFieldUpdateOperationsInput | number
-  montant1?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant2?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime3?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutStocksNestedInput
   detAchatFactures?: Prisma.DetAchatFactureUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUpdateManyWithoutStockNestedInput
@@ -930,38 +930,38 @@ export type StockUncheckedUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   designation?: Prisma.StringFieldUpdateOperationsInput | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  pahtGrossiste?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva?: Prisma.FloatFieldUpdateOperationsInput | number
-  pattc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvttc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvaht?: Prisma.FloatFieldUpdateOperationsInput | number
-  benifice?: Prisma.FloatFieldUpdateOperationsInput | number
+  pahtGrossiste?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin1?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin2?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin3?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin4?: Prisma.IntFieldUpdateOperationsInput | number
   qteFacturer?: Prisma.IntFieldUpdateOperationsInput | number
-  prixVentMin1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin4?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax1?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax2?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax3?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax4?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixImport?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixVentMin1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   qteStockImport?: Prisma.IntFieldUpdateOperationsInput | number
-  montant1?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant2?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime3?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedUpdateManyWithoutStockNestedInput
@@ -977,38 +977,38 @@ export type StockCreateManyInput = {
   id?: bigint | number
   designation: string
   sysDate: Date | string
-  pahtGrossiste: number
-  prixCommercial: number
-  tva: number
-  pattc: number
-  pvttc: number
-  pvaht: number
-  benifice: number
+  pahtGrossiste: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice: runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock: number
   qtePVMin1: number
   qtePVMin2: number
   qtePVMin3: number
   qtePVMin4: number
   qteFacturer: number
-  prixVentMin1: number
-  prixVentMin2: number
-  prixVentMin3: number
-  prixVentMin4: number
-  remiseMax1: number
-  remiseMax2: number
-  remiseMax3: number
-  remiseMax4: number
-  prixImport: number
-  commission: number
+  prixVentMin1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
   qteStockImport: number
-  montant1: number
-  montant2: number
-  montant3: number
-  prime1: number
-  prime2: number
-  prime3: number
+  montant1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseurId: bigint | number
 }
 
@@ -1016,76 +1016,76 @@ export type StockUpdateManyMutationInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   designation?: Prisma.StringFieldUpdateOperationsInput | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  pahtGrossiste?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva?: Prisma.FloatFieldUpdateOperationsInput | number
-  pattc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvttc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvaht?: Prisma.FloatFieldUpdateOperationsInput | number
-  benifice?: Prisma.FloatFieldUpdateOperationsInput | number
+  pahtGrossiste?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin1?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin2?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin3?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin4?: Prisma.IntFieldUpdateOperationsInput | number
   qteFacturer?: Prisma.IntFieldUpdateOperationsInput | number
-  prixVentMin1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin4?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax1?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax2?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax3?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax4?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixImport?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixVentMin1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   qteStockImport?: Prisma.IntFieldUpdateOperationsInput | number
-  montant1?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant2?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime3?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type StockUncheckedUpdateManyInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   designation?: Prisma.StringFieldUpdateOperationsInput | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  pahtGrossiste?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva?: Prisma.FloatFieldUpdateOperationsInput | number
-  pattc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvttc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvaht?: Prisma.FloatFieldUpdateOperationsInput | number
-  benifice?: Prisma.FloatFieldUpdateOperationsInput | number
+  pahtGrossiste?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin1?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin2?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin3?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin4?: Prisma.IntFieldUpdateOperationsInput | number
   qteFacturer?: Prisma.IntFieldUpdateOperationsInput | number
-  prixVentMin1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin4?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax1?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax2?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax3?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax4?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixImport?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixVentMin1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   qteStockImport?: Prisma.IntFieldUpdateOperationsInput | number
-  montant1?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant2?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime3?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
@@ -1455,38 +1455,38 @@ export type StockCreateWithoutFournisseurInput = {
   id?: bigint | number
   designation: string
   sysDate: Date | string
-  pahtGrossiste: number
-  prixCommercial: number
-  tva: number
-  pattc: number
-  pvttc: number
-  pvaht: number
-  benifice: number
+  pahtGrossiste: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice: runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock: number
   qtePVMin1: number
   qtePVMin2: number
   qtePVMin3: number
   qtePVMin4: number
   qteFacturer: number
-  prixVentMin1: number
-  prixVentMin2: number
-  prixVentMin3: number
-  prixVentMin4: number
-  remiseMax1: number
-  remiseMax2: number
-  remiseMax3: number
-  remiseMax4: number
-  prixImport: number
-  commission: number
+  prixVentMin1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
   qteStockImport: number
-  montant1: number
-  montant2: number
-  montant3: number
-  prime1: number
-  prime2: number
-  prime3: number
+  montant1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
   detAchatFactures?: Prisma.DetAchatFactureCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonCreateNestedManyWithoutStockInput
   detFactures?: Prisma.DetFactureCreateNestedManyWithoutStockInput
@@ -1501,38 +1501,38 @@ export type StockUncheckedCreateWithoutFournisseurInput = {
   id?: bigint | number
   designation: string
   sysDate: Date | string
-  pahtGrossiste: number
-  prixCommercial: number
-  tva: number
-  pattc: number
-  pvttc: number
-  pvaht: number
-  benifice: number
+  pahtGrossiste: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice: runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock: number
   qtePVMin1: number
   qtePVMin2: number
   qtePVMin3: number
   qtePVMin4: number
   qteFacturer: number
-  prixVentMin1: number
-  prixVentMin2: number
-  prixVentMin3: number
-  prixVentMin4: number
-  remiseMax1: number
-  remiseMax2: number
-  remiseMax3: number
-  remiseMax4: number
-  prixImport: number
-  commission: number
+  prixVentMin1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
   qteStockImport: number
-  montant1: number
-  montant2: number
-  montant3: number
-  prime1: number
-  prime2: number
-  prime3: number
+  montant1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
   detAchatFactures?: Prisma.DetAchatFactureUncheckedCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedCreateNestedManyWithoutStockInput
   detFactures?: Prisma.DetFactureUncheckedCreateNestedManyWithoutStockInput
@@ -1576,38 +1576,38 @@ export type StockScalarWhereInput = {
   id?: Prisma.BigIntFilter<"Stock"> | bigint | number
   designation?: Prisma.StringFilter<"Stock"> | string
   sysDate?: Prisma.DateTimeFilter<"Stock"> | Date | string
-  pahtGrossiste?: Prisma.FloatFilter<"Stock"> | number
-  prixCommercial?: Prisma.FloatFilter<"Stock"> | number
-  tva?: Prisma.FloatFilter<"Stock"> | number
-  pattc?: Prisma.FloatFilter<"Stock"> | number
-  pvttc?: Prisma.FloatFilter<"Stock"> | number
-  pvaht?: Prisma.FloatFilter<"Stock"> | number
-  benifice?: Prisma.FloatFilter<"Stock"> | number
+  pahtGrossiste?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock?: Prisma.IntFilter<"Stock"> | number
   qtePVMin1?: Prisma.IntFilter<"Stock"> | number
   qtePVMin2?: Prisma.IntFilter<"Stock"> | number
   qtePVMin3?: Prisma.IntFilter<"Stock"> | number
   qtePVMin4?: Prisma.IntFilter<"Stock"> | number
   qteFacturer?: Prisma.IntFilter<"Stock"> | number
-  prixVentMin1?: Prisma.FloatFilter<"Stock"> | number
-  prixVentMin2?: Prisma.FloatFilter<"Stock"> | number
-  prixVentMin3?: Prisma.FloatFilter<"Stock"> | number
-  prixVentMin4?: Prisma.FloatFilter<"Stock"> | number
-  remiseMax1?: Prisma.FloatFilter<"Stock"> | number
-  remiseMax2?: Prisma.FloatFilter<"Stock"> | number
-  remiseMax3?: Prisma.FloatFilter<"Stock"> | number
-  remiseMax4?: Prisma.FloatFilter<"Stock"> | number
-  prixImport?: Prisma.FloatFilter<"Stock"> | number
-  commission?: Prisma.FloatFilter<"Stock"> | number
+  prixVentMin1?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFilter<"Stock"> | boolean
   supprimer?: Prisma.BoolFilter<"Stock"> | boolean
   qteStockImport?: Prisma.IntFilter<"Stock"> | number
-  montant1?: Prisma.FloatFilter<"Stock"> | number
-  montant2?: Prisma.FloatFilter<"Stock"> | number
-  montant3?: Prisma.FloatFilter<"Stock"> | number
-  prime1?: Prisma.FloatFilter<"Stock"> | number
-  prime2?: Prisma.FloatFilter<"Stock"> | number
-  prime3?: Prisma.FloatFilter<"Stock"> | number
+  montant1?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseurId?: Prisma.BigIntFilter<"Stock"> | bigint | number
 }
 
@@ -1615,38 +1615,38 @@ export type StockCreateWithoutStockDepotsInput = {
   id?: bigint | number
   designation: string
   sysDate: Date | string
-  pahtGrossiste: number
-  prixCommercial: number
-  tva: number
-  pattc: number
-  pvttc: number
-  pvaht: number
-  benifice: number
+  pahtGrossiste: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice: runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock: number
   qtePVMin1: number
   qtePVMin2: number
   qtePVMin3: number
   qtePVMin4: number
   qteFacturer: number
-  prixVentMin1: number
-  prixVentMin2: number
-  prixVentMin3: number
-  prixVentMin4: number
-  remiseMax1: number
-  remiseMax2: number
-  remiseMax3: number
-  remiseMax4: number
-  prixImport: number
-  commission: number
+  prixVentMin1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
   qteStockImport: number
-  montant1: number
-  montant2: number
-  montant3: number
-  prime1: number
-  prime2: number
-  prime3: number
+  montant1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseur: Prisma.FournisseurCreateNestedOneWithoutStocksInput
   detAchatFactures?: Prisma.DetAchatFactureCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonCreateNestedManyWithoutStockInput
@@ -1661,38 +1661,38 @@ export type StockUncheckedCreateWithoutStockDepotsInput = {
   id?: bigint | number
   designation: string
   sysDate: Date | string
-  pahtGrossiste: number
-  prixCommercial: number
-  tva: number
-  pattc: number
-  pvttc: number
-  pvaht: number
-  benifice: number
+  pahtGrossiste: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice: runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock: number
   qtePVMin1: number
   qtePVMin2: number
   qtePVMin3: number
   qtePVMin4: number
   qteFacturer: number
-  prixVentMin1: number
-  prixVentMin2: number
-  prixVentMin3: number
-  prixVentMin4: number
-  remiseMax1: number
-  remiseMax2: number
-  remiseMax3: number
-  remiseMax4: number
-  prixImport: number
-  commission: number
+  prixVentMin1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
   qteStockImport: number
-  montant1: number
-  montant2: number
-  montant3: number
-  prime1: number
-  prime2: number
-  prime3: number
+  montant1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseurId: bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedCreateNestedManyWithoutStockInput
@@ -1723,38 +1723,38 @@ export type StockUpdateWithoutStockDepotsInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   designation?: Prisma.StringFieldUpdateOperationsInput | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  pahtGrossiste?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva?: Prisma.FloatFieldUpdateOperationsInput | number
-  pattc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvttc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvaht?: Prisma.FloatFieldUpdateOperationsInput | number
-  benifice?: Prisma.FloatFieldUpdateOperationsInput | number
+  pahtGrossiste?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin1?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin2?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin3?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin4?: Prisma.IntFieldUpdateOperationsInput | number
   qteFacturer?: Prisma.IntFieldUpdateOperationsInput | number
-  prixVentMin1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin4?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax1?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax2?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax3?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax4?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixImport?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixVentMin1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   qteStockImport?: Prisma.IntFieldUpdateOperationsInput | number
-  montant1?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant2?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime3?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutStocksNestedInput
   detAchatFactures?: Prisma.DetAchatFactureUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUpdateManyWithoutStockNestedInput
@@ -1769,38 +1769,38 @@ export type StockUncheckedUpdateWithoutStockDepotsInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   designation?: Prisma.StringFieldUpdateOperationsInput | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  pahtGrossiste?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva?: Prisma.FloatFieldUpdateOperationsInput | number
-  pattc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvttc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvaht?: Prisma.FloatFieldUpdateOperationsInput | number
-  benifice?: Prisma.FloatFieldUpdateOperationsInput | number
+  pahtGrossiste?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin1?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin2?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin3?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin4?: Prisma.IntFieldUpdateOperationsInput | number
   qteFacturer?: Prisma.IntFieldUpdateOperationsInput | number
-  prixVentMin1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin4?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax1?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax2?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax3?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax4?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixImport?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixVentMin1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   qteStockImport?: Prisma.IntFieldUpdateOperationsInput | number
-  montant1?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant2?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime3?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedUpdateManyWithoutStockNestedInput
@@ -1815,38 +1815,38 @@ export type StockCreateWithoutDetAchatFacturesInput = {
   id?: bigint | number
   designation: string
   sysDate: Date | string
-  pahtGrossiste: number
-  prixCommercial: number
-  tva: number
-  pattc: number
-  pvttc: number
-  pvaht: number
-  benifice: number
+  pahtGrossiste: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice: runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock: number
   qtePVMin1: number
   qtePVMin2: number
   qtePVMin3: number
   qtePVMin4: number
   qteFacturer: number
-  prixVentMin1: number
-  prixVentMin2: number
-  prixVentMin3: number
-  prixVentMin4: number
-  remiseMax1: number
-  remiseMax2: number
-  remiseMax3: number
-  remiseMax4: number
-  prixImport: number
-  commission: number
+  prixVentMin1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
   qteStockImport: number
-  montant1: number
-  montant2: number
-  montant3: number
-  prime1: number
-  prime2: number
-  prime3: number
+  montant1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseur: Prisma.FournisseurCreateNestedOneWithoutStocksInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonCreateNestedManyWithoutStockInput
   detFactures?: Prisma.DetFactureCreateNestedManyWithoutStockInput
@@ -1861,38 +1861,38 @@ export type StockUncheckedCreateWithoutDetAchatFacturesInput = {
   id?: bigint | number
   designation: string
   sysDate: Date | string
-  pahtGrossiste: number
-  prixCommercial: number
-  tva: number
-  pattc: number
-  pvttc: number
-  pvaht: number
-  benifice: number
+  pahtGrossiste: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice: runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock: number
   qtePVMin1: number
   qtePVMin2: number
   qtePVMin3: number
   qtePVMin4: number
   qteFacturer: number
-  prixVentMin1: number
-  prixVentMin2: number
-  prixVentMin3: number
-  prixVentMin4: number
-  remiseMax1: number
-  remiseMax2: number
-  remiseMax3: number
-  remiseMax4: number
-  prixImport: number
-  commission: number
+  prixVentMin1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
   qteStockImport: number
-  montant1: number
-  montant2: number
-  montant3: number
-  prime1: number
-  prime2: number
-  prime3: number
+  montant1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseurId: bigint | number
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedCreateNestedManyWithoutStockInput
   detFactures?: Prisma.DetFactureUncheckedCreateNestedManyWithoutStockInput
@@ -1923,38 +1923,38 @@ export type StockUpdateWithoutDetAchatFacturesInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   designation?: Prisma.StringFieldUpdateOperationsInput | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  pahtGrossiste?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva?: Prisma.FloatFieldUpdateOperationsInput | number
-  pattc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvttc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvaht?: Prisma.FloatFieldUpdateOperationsInput | number
-  benifice?: Prisma.FloatFieldUpdateOperationsInput | number
+  pahtGrossiste?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin1?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin2?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin3?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin4?: Prisma.IntFieldUpdateOperationsInput | number
   qteFacturer?: Prisma.IntFieldUpdateOperationsInput | number
-  prixVentMin1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin4?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax1?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax2?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax3?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax4?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixImport?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixVentMin1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   qteStockImport?: Prisma.IntFieldUpdateOperationsInput | number
-  montant1?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant2?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime3?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutStocksNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUpdateManyWithoutStockNestedInput
   detFactures?: Prisma.DetFactureUpdateManyWithoutStockNestedInput
@@ -1969,38 +1969,38 @@ export type StockUncheckedUpdateWithoutDetAchatFacturesInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   designation?: Prisma.StringFieldUpdateOperationsInput | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  pahtGrossiste?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva?: Prisma.FloatFieldUpdateOperationsInput | number
-  pattc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvttc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvaht?: Prisma.FloatFieldUpdateOperationsInput | number
-  benifice?: Prisma.FloatFieldUpdateOperationsInput | number
+  pahtGrossiste?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin1?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin2?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin3?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin4?: Prisma.IntFieldUpdateOperationsInput | number
   qteFacturer?: Prisma.IntFieldUpdateOperationsInput | number
-  prixVentMin1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin4?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax1?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax2?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax3?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax4?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixImport?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixVentMin1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   qteStockImport?: Prisma.IntFieldUpdateOperationsInput | number
-  montant1?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant2?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime3?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedUpdateManyWithoutStockNestedInput
   detFactures?: Prisma.DetFactureUncheckedUpdateManyWithoutStockNestedInput
@@ -2015,38 +2015,38 @@ export type StockCreateWithoutDetAchatLivraisonsInput = {
   id?: bigint | number
   designation: string
   sysDate: Date | string
-  pahtGrossiste: number
-  prixCommercial: number
-  tva: number
-  pattc: number
-  pvttc: number
-  pvaht: number
-  benifice: number
+  pahtGrossiste: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice: runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock: number
   qtePVMin1: number
   qtePVMin2: number
   qtePVMin3: number
   qtePVMin4: number
   qteFacturer: number
-  prixVentMin1: number
-  prixVentMin2: number
-  prixVentMin3: number
-  prixVentMin4: number
-  remiseMax1: number
-  remiseMax2: number
-  remiseMax3: number
-  remiseMax4: number
-  prixImport: number
-  commission: number
+  prixVentMin1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
   qteStockImport: number
-  montant1: number
-  montant2: number
-  montant3: number
-  prime1: number
-  prime2: number
-  prime3: number
+  montant1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseur: Prisma.FournisseurCreateNestedOneWithoutStocksInput
   detAchatFactures?: Prisma.DetAchatFactureCreateNestedManyWithoutStockInput
   detFactures?: Prisma.DetFactureCreateNestedManyWithoutStockInput
@@ -2061,38 +2061,38 @@ export type StockUncheckedCreateWithoutDetAchatLivraisonsInput = {
   id?: bigint | number
   designation: string
   sysDate: Date | string
-  pahtGrossiste: number
-  prixCommercial: number
-  tva: number
-  pattc: number
-  pvttc: number
-  pvaht: number
-  benifice: number
+  pahtGrossiste: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice: runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock: number
   qtePVMin1: number
   qtePVMin2: number
   qtePVMin3: number
   qtePVMin4: number
   qteFacturer: number
-  prixVentMin1: number
-  prixVentMin2: number
-  prixVentMin3: number
-  prixVentMin4: number
-  remiseMax1: number
-  remiseMax2: number
-  remiseMax3: number
-  remiseMax4: number
-  prixImport: number
-  commission: number
+  prixVentMin1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
   qteStockImport: number
-  montant1: number
-  montant2: number
-  montant3: number
-  prime1: number
-  prime2: number
-  prime3: number
+  montant1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseurId: bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedCreateNestedManyWithoutStockInput
   detFactures?: Prisma.DetFactureUncheckedCreateNestedManyWithoutStockInput
@@ -2123,38 +2123,38 @@ export type StockUpdateWithoutDetAchatLivraisonsInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   designation?: Prisma.StringFieldUpdateOperationsInput | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  pahtGrossiste?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva?: Prisma.FloatFieldUpdateOperationsInput | number
-  pattc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvttc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvaht?: Prisma.FloatFieldUpdateOperationsInput | number
-  benifice?: Prisma.FloatFieldUpdateOperationsInput | number
+  pahtGrossiste?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin1?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin2?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin3?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin4?: Prisma.IntFieldUpdateOperationsInput | number
   qteFacturer?: Prisma.IntFieldUpdateOperationsInput | number
-  prixVentMin1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin4?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax1?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax2?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax3?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax4?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixImport?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixVentMin1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   qteStockImport?: Prisma.IntFieldUpdateOperationsInput | number
-  montant1?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant2?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime3?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutStocksNestedInput
   detAchatFactures?: Prisma.DetAchatFactureUpdateManyWithoutStockNestedInput
   detFactures?: Prisma.DetFactureUpdateManyWithoutStockNestedInput
@@ -2169,38 +2169,38 @@ export type StockUncheckedUpdateWithoutDetAchatLivraisonsInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   designation?: Prisma.StringFieldUpdateOperationsInput | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  pahtGrossiste?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva?: Prisma.FloatFieldUpdateOperationsInput | number
-  pattc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvttc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvaht?: Prisma.FloatFieldUpdateOperationsInput | number
-  benifice?: Prisma.FloatFieldUpdateOperationsInput | number
+  pahtGrossiste?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin1?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin2?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin3?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin4?: Prisma.IntFieldUpdateOperationsInput | number
   qteFacturer?: Prisma.IntFieldUpdateOperationsInput | number
-  prixVentMin1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin4?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax1?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax2?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax3?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax4?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixImport?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixVentMin1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   qteStockImport?: Prisma.IntFieldUpdateOperationsInput | number
-  montant1?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant2?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime3?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedUpdateManyWithoutStockNestedInput
   detFactures?: Prisma.DetFactureUncheckedUpdateManyWithoutStockNestedInput
@@ -2215,38 +2215,38 @@ export type StockCreateWithoutDetailBonSortiesInput = {
   id?: bigint | number
   designation: string
   sysDate: Date | string
-  pahtGrossiste: number
-  prixCommercial: number
-  tva: number
-  pattc: number
-  pvttc: number
-  pvaht: number
-  benifice: number
+  pahtGrossiste: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice: runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock: number
   qtePVMin1: number
   qtePVMin2: number
   qtePVMin3: number
   qtePVMin4: number
   qteFacturer: number
-  prixVentMin1: number
-  prixVentMin2: number
-  prixVentMin3: number
-  prixVentMin4: number
-  remiseMax1: number
-  remiseMax2: number
-  remiseMax3: number
-  remiseMax4: number
-  prixImport: number
-  commission: number
+  prixVentMin1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
   qteStockImport: number
-  montant1: number
-  montant2: number
-  montant3: number
-  prime1: number
-  prime2: number
-  prime3: number
+  montant1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseur: Prisma.FournisseurCreateNestedOneWithoutStocksInput
   detAchatFactures?: Prisma.DetAchatFactureCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonCreateNestedManyWithoutStockInput
@@ -2261,38 +2261,38 @@ export type StockUncheckedCreateWithoutDetailBonSortiesInput = {
   id?: bigint | number
   designation: string
   sysDate: Date | string
-  pahtGrossiste: number
-  prixCommercial: number
-  tva: number
-  pattc: number
-  pvttc: number
-  pvaht: number
-  benifice: number
+  pahtGrossiste: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice: runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock: number
   qtePVMin1: number
   qtePVMin2: number
   qtePVMin3: number
   qtePVMin4: number
   qteFacturer: number
-  prixVentMin1: number
-  prixVentMin2: number
-  prixVentMin3: number
-  prixVentMin4: number
-  remiseMax1: number
-  remiseMax2: number
-  remiseMax3: number
-  remiseMax4: number
-  prixImport: number
-  commission: number
+  prixVentMin1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
   qteStockImport: number
-  montant1: number
-  montant2: number
-  montant3: number
-  prime1: number
-  prime2: number
-  prime3: number
+  montant1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseurId: bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedCreateNestedManyWithoutStockInput
@@ -2323,38 +2323,38 @@ export type StockUpdateWithoutDetailBonSortiesInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   designation?: Prisma.StringFieldUpdateOperationsInput | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  pahtGrossiste?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva?: Prisma.FloatFieldUpdateOperationsInput | number
-  pattc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvttc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvaht?: Prisma.FloatFieldUpdateOperationsInput | number
-  benifice?: Prisma.FloatFieldUpdateOperationsInput | number
+  pahtGrossiste?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin1?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin2?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin3?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin4?: Prisma.IntFieldUpdateOperationsInput | number
   qteFacturer?: Prisma.IntFieldUpdateOperationsInput | number
-  prixVentMin1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin4?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax1?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax2?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax3?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax4?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixImport?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixVentMin1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   qteStockImport?: Prisma.IntFieldUpdateOperationsInput | number
-  montant1?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant2?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime3?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutStocksNestedInput
   detAchatFactures?: Prisma.DetAchatFactureUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUpdateManyWithoutStockNestedInput
@@ -2369,38 +2369,38 @@ export type StockUncheckedUpdateWithoutDetailBonSortiesInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   designation?: Prisma.StringFieldUpdateOperationsInput | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  pahtGrossiste?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva?: Prisma.FloatFieldUpdateOperationsInput | number
-  pattc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvttc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvaht?: Prisma.FloatFieldUpdateOperationsInput | number
-  benifice?: Prisma.FloatFieldUpdateOperationsInput | number
+  pahtGrossiste?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin1?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin2?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin3?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin4?: Prisma.IntFieldUpdateOperationsInput | number
   qteFacturer?: Prisma.IntFieldUpdateOperationsInput | number
-  prixVentMin1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin4?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax1?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax2?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax3?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax4?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixImport?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixVentMin1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   qteStockImport?: Prisma.IntFieldUpdateOperationsInput | number
-  montant1?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant2?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime3?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedUpdateManyWithoutStockNestedInput
@@ -2415,38 +2415,38 @@ export type StockCreateWithoutDetBulttinPaisInput = {
   id?: bigint | number
   designation: string
   sysDate: Date | string
-  pahtGrossiste: number
-  prixCommercial: number
-  tva: number
-  pattc: number
-  pvttc: number
-  pvaht: number
-  benifice: number
+  pahtGrossiste: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice: runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock: number
   qtePVMin1: number
   qtePVMin2: number
   qtePVMin3: number
   qtePVMin4: number
   qteFacturer: number
-  prixVentMin1: number
-  prixVentMin2: number
-  prixVentMin3: number
-  prixVentMin4: number
-  remiseMax1: number
-  remiseMax2: number
-  remiseMax3: number
-  remiseMax4: number
-  prixImport: number
-  commission: number
+  prixVentMin1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
   qteStockImport: number
-  montant1: number
-  montant2: number
-  montant3: number
-  prime1: number
-  prime2: number
-  prime3: number
+  montant1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseur: Prisma.FournisseurCreateNestedOneWithoutStocksInput
   detAchatFactures?: Prisma.DetAchatFactureCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonCreateNestedManyWithoutStockInput
@@ -2461,38 +2461,38 @@ export type StockUncheckedCreateWithoutDetBulttinPaisInput = {
   id?: bigint | number
   designation: string
   sysDate: Date | string
-  pahtGrossiste: number
-  prixCommercial: number
-  tva: number
-  pattc: number
-  pvttc: number
-  pvaht: number
-  benifice: number
+  pahtGrossiste: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice: runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock: number
   qtePVMin1: number
   qtePVMin2: number
   qtePVMin3: number
   qtePVMin4: number
   qteFacturer: number
-  prixVentMin1: number
-  prixVentMin2: number
-  prixVentMin3: number
-  prixVentMin4: number
-  remiseMax1: number
-  remiseMax2: number
-  remiseMax3: number
-  remiseMax4: number
-  prixImport: number
-  commission: number
+  prixVentMin1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
   qteStockImport: number
-  montant1: number
-  montant2: number
-  montant3: number
-  prime1: number
-  prime2: number
-  prime3: number
+  montant1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseurId: bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedCreateNestedManyWithoutStockInput
@@ -2523,38 +2523,38 @@ export type StockUpdateWithoutDetBulttinPaisInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   designation?: Prisma.StringFieldUpdateOperationsInput | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  pahtGrossiste?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva?: Prisma.FloatFieldUpdateOperationsInput | number
-  pattc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvttc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvaht?: Prisma.FloatFieldUpdateOperationsInput | number
-  benifice?: Prisma.FloatFieldUpdateOperationsInput | number
+  pahtGrossiste?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin1?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin2?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin3?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin4?: Prisma.IntFieldUpdateOperationsInput | number
   qteFacturer?: Prisma.IntFieldUpdateOperationsInput | number
-  prixVentMin1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin4?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax1?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax2?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax3?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax4?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixImport?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixVentMin1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   qteStockImport?: Prisma.IntFieldUpdateOperationsInput | number
-  montant1?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant2?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime3?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutStocksNestedInput
   detAchatFactures?: Prisma.DetAchatFactureUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUpdateManyWithoutStockNestedInput
@@ -2569,38 +2569,38 @@ export type StockUncheckedUpdateWithoutDetBulttinPaisInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   designation?: Prisma.StringFieldUpdateOperationsInput | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  pahtGrossiste?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva?: Prisma.FloatFieldUpdateOperationsInput | number
-  pattc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvttc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvaht?: Prisma.FloatFieldUpdateOperationsInput | number
-  benifice?: Prisma.FloatFieldUpdateOperationsInput | number
+  pahtGrossiste?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin1?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin2?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin3?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin4?: Prisma.IntFieldUpdateOperationsInput | number
   qteFacturer?: Prisma.IntFieldUpdateOperationsInput | number
-  prixVentMin1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin4?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax1?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax2?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax3?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax4?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixImport?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixVentMin1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   qteStockImport?: Prisma.IntFieldUpdateOperationsInput | number
-  montant1?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant2?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime3?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedUpdateManyWithoutStockNestedInput
@@ -2615,38 +2615,38 @@ export type StockCreateWithoutDetFacturesInput = {
   id?: bigint | number
   designation: string
   sysDate: Date | string
-  pahtGrossiste: number
-  prixCommercial: number
-  tva: number
-  pattc: number
-  pvttc: number
-  pvaht: number
-  benifice: number
+  pahtGrossiste: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice: runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock: number
   qtePVMin1: number
   qtePVMin2: number
   qtePVMin3: number
   qtePVMin4: number
   qteFacturer: number
-  prixVentMin1: number
-  prixVentMin2: number
-  prixVentMin3: number
-  prixVentMin4: number
-  remiseMax1: number
-  remiseMax2: number
-  remiseMax3: number
-  remiseMax4: number
-  prixImport: number
-  commission: number
+  prixVentMin1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
   qteStockImport: number
-  montant1: number
-  montant2: number
-  montant3: number
-  prime1: number
-  prime2: number
-  prime3: number
+  montant1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseur: Prisma.FournisseurCreateNestedOneWithoutStocksInput
   detAchatFactures?: Prisma.DetAchatFactureCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonCreateNestedManyWithoutStockInput
@@ -2661,38 +2661,38 @@ export type StockUncheckedCreateWithoutDetFacturesInput = {
   id?: bigint | number
   designation: string
   sysDate: Date | string
-  pahtGrossiste: number
-  prixCommercial: number
-  tva: number
-  pattc: number
-  pvttc: number
-  pvaht: number
-  benifice: number
+  pahtGrossiste: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice: runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock: number
   qtePVMin1: number
   qtePVMin2: number
   qtePVMin3: number
   qtePVMin4: number
   qteFacturer: number
-  prixVentMin1: number
-  prixVentMin2: number
-  prixVentMin3: number
-  prixVentMin4: number
-  remiseMax1: number
-  remiseMax2: number
-  remiseMax3: number
-  remiseMax4: number
-  prixImport: number
-  commission: number
+  prixVentMin1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
   qteStockImport: number
-  montant1: number
-  montant2: number
-  montant3: number
-  prime1: number
-  prime2: number
-  prime3: number
+  montant1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseurId: bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedCreateNestedManyWithoutStockInput
@@ -2723,38 +2723,38 @@ export type StockUpdateWithoutDetFacturesInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   designation?: Prisma.StringFieldUpdateOperationsInput | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  pahtGrossiste?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva?: Prisma.FloatFieldUpdateOperationsInput | number
-  pattc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvttc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvaht?: Prisma.FloatFieldUpdateOperationsInput | number
-  benifice?: Prisma.FloatFieldUpdateOperationsInput | number
+  pahtGrossiste?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin1?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin2?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin3?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin4?: Prisma.IntFieldUpdateOperationsInput | number
   qteFacturer?: Prisma.IntFieldUpdateOperationsInput | number
-  prixVentMin1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin4?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax1?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax2?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax3?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax4?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixImport?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixVentMin1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   qteStockImport?: Prisma.IntFieldUpdateOperationsInput | number
-  montant1?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant2?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime3?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutStocksNestedInput
   detAchatFactures?: Prisma.DetAchatFactureUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUpdateManyWithoutStockNestedInput
@@ -2769,38 +2769,38 @@ export type StockUncheckedUpdateWithoutDetFacturesInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   designation?: Prisma.StringFieldUpdateOperationsInput | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  pahtGrossiste?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva?: Prisma.FloatFieldUpdateOperationsInput | number
-  pattc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvttc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvaht?: Prisma.FloatFieldUpdateOperationsInput | number
-  benifice?: Prisma.FloatFieldUpdateOperationsInput | number
+  pahtGrossiste?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin1?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin2?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin3?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin4?: Prisma.IntFieldUpdateOperationsInput | number
   qteFacturer?: Prisma.IntFieldUpdateOperationsInput | number
-  prixVentMin1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin4?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax1?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax2?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax3?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax4?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixImport?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixVentMin1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   qteStockImport?: Prisma.IntFieldUpdateOperationsInput | number
-  montant1?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant2?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime3?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedUpdateManyWithoutStockNestedInput
@@ -2815,38 +2815,38 @@ export type StockCreateWithoutDetImportationsInput = {
   id?: bigint | number
   designation: string
   sysDate: Date | string
-  pahtGrossiste: number
-  prixCommercial: number
-  tva: number
-  pattc: number
-  pvttc: number
-  pvaht: number
-  benifice: number
+  pahtGrossiste: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice: runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock: number
   qtePVMin1: number
   qtePVMin2: number
   qtePVMin3: number
   qtePVMin4: number
   qteFacturer: number
-  prixVentMin1: number
-  prixVentMin2: number
-  prixVentMin3: number
-  prixVentMin4: number
-  remiseMax1: number
-  remiseMax2: number
-  remiseMax3: number
-  remiseMax4: number
-  prixImport: number
-  commission: number
+  prixVentMin1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
   qteStockImport: number
-  montant1: number
-  montant2: number
-  montant3: number
-  prime1: number
-  prime2: number
-  prime3: number
+  montant1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseur: Prisma.FournisseurCreateNestedOneWithoutStocksInput
   detAchatFactures?: Prisma.DetAchatFactureCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonCreateNestedManyWithoutStockInput
@@ -2861,38 +2861,38 @@ export type StockUncheckedCreateWithoutDetImportationsInput = {
   id?: bigint | number
   designation: string
   sysDate: Date | string
-  pahtGrossiste: number
-  prixCommercial: number
-  tva: number
-  pattc: number
-  pvttc: number
-  pvaht: number
-  benifice: number
+  pahtGrossiste: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice: runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock: number
   qtePVMin1: number
   qtePVMin2: number
   qtePVMin3: number
   qtePVMin4: number
   qteFacturer: number
-  prixVentMin1: number
-  prixVentMin2: number
-  prixVentMin3: number
-  prixVentMin4: number
-  remiseMax1: number
-  remiseMax2: number
-  remiseMax3: number
-  remiseMax4: number
-  prixImport: number
-  commission: number
+  prixVentMin1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
   qteStockImport: number
-  montant1: number
-  montant2: number
-  montant3: number
-  prime1: number
-  prime2: number
-  prime3: number
+  montant1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseurId: bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedCreateNestedManyWithoutStockInput
@@ -2923,38 +2923,38 @@ export type StockUpdateWithoutDetImportationsInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   designation?: Prisma.StringFieldUpdateOperationsInput | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  pahtGrossiste?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva?: Prisma.FloatFieldUpdateOperationsInput | number
-  pattc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvttc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvaht?: Prisma.FloatFieldUpdateOperationsInput | number
-  benifice?: Prisma.FloatFieldUpdateOperationsInput | number
+  pahtGrossiste?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin1?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin2?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin3?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin4?: Prisma.IntFieldUpdateOperationsInput | number
   qteFacturer?: Prisma.IntFieldUpdateOperationsInput | number
-  prixVentMin1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin4?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax1?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax2?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax3?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax4?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixImport?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixVentMin1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   qteStockImport?: Prisma.IntFieldUpdateOperationsInput | number
-  montant1?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant2?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime3?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutStocksNestedInput
   detAchatFactures?: Prisma.DetAchatFactureUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUpdateManyWithoutStockNestedInput
@@ -2969,38 +2969,38 @@ export type StockUncheckedUpdateWithoutDetImportationsInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   designation?: Prisma.StringFieldUpdateOperationsInput | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  pahtGrossiste?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva?: Prisma.FloatFieldUpdateOperationsInput | number
-  pattc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvttc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvaht?: Prisma.FloatFieldUpdateOperationsInput | number
-  benifice?: Prisma.FloatFieldUpdateOperationsInput | number
+  pahtGrossiste?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin1?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin2?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin3?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin4?: Prisma.IntFieldUpdateOperationsInput | number
   qteFacturer?: Prisma.IntFieldUpdateOperationsInput | number
-  prixVentMin1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin4?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax1?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax2?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax3?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax4?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixImport?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixVentMin1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   qteStockImport?: Prisma.IntFieldUpdateOperationsInput | number
-  montant1?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant2?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime3?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedUpdateManyWithoutStockNestedInput
@@ -3015,38 +3015,38 @@ export type StockCreateWithoutDetLivraisonsInput = {
   id?: bigint | number
   designation: string
   sysDate: Date | string
-  pahtGrossiste: number
-  prixCommercial: number
-  tva: number
-  pattc: number
-  pvttc: number
-  pvaht: number
-  benifice: number
+  pahtGrossiste: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice: runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock: number
   qtePVMin1: number
   qtePVMin2: number
   qtePVMin3: number
   qtePVMin4: number
   qteFacturer: number
-  prixVentMin1: number
-  prixVentMin2: number
-  prixVentMin3: number
-  prixVentMin4: number
-  remiseMax1: number
-  remiseMax2: number
-  remiseMax3: number
-  remiseMax4: number
-  prixImport: number
-  commission: number
+  prixVentMin1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
   qteStockImport: number
-  montant1: number
-  montant2: number
-  montant3: number
-  prime1: number
-  prime2: number
-  prime3: number
+  montant1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseur: Prisma.FournisseurCreateNestedOneWithoutStocksInput
   detAchatFactures?: Prisma.DetAchatFactureCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonCreateNestedManyWithoutStockInput
@@ -3061,38 +3061,38 @@ export type StockUncheckedCreateWithoutDetLivraisonsInput = {
   id?: bigint | number
   designation: string
   sysDate: Date | string
-  pahtGrossiste: number
-  prixCommercial: number
-  tva: number
-  pattc: number
-  pvttc: number
-  pvaht: number
-  benifice: number
+  pahtGrossiste: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice: runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock: number
   qtePVMin1: number
   qtePVMin2: number
   qtePVMin3: number
   qtePVMin4: number
   qteFacturer: number
-  prixVentMin1: number
-  prixVentMin2: number
-  prixVentMin3: number
-  prixVentMin4: number
-  remiseMax1: number
-  remiseMax2: number
-  remiseMax3: number
-  remiseMax4: number
-  prixImport: number
-  commission: number
+  prixVentMin1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
   qteStockImport: number
-  montant1: number
-  montant2: number
-  montant3: number
-  prime1: number
-  prime2: number
-  prime3: number
+  montant1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseurId: bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedCreateNestedManyWithoutStockInput
@@ -3123,38 +3123,38 @@ export type StockUpdateWithoutDetLivraisonsInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   designation?: Prisma.StringFieldUpdateOperationsInput | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  pahtGrossiste?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva?: Prisma.FloatFieldUpdateOperationsInput | number
-  pattc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvttc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvaht?: Prisma.FloatFieldUpdateOperationsInput | number
-  benifice?: Prisma.FloatFieldUpdateOperationsInput | number
+  pahtGrossiste?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin1?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin2?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin3?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin4?: Prisma.IntFieldUpdateOperationsInput | number
   qteFacturer?: Prisma.IntFieldUpdateOperationsInput | number
-  prixVentMin1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin4?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax1?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax2?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax3?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax4?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixImport?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixVentMin1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   qteStockImport?: Prisma.IntFieldUpdateOperationsInput | number
-  montant1?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant2?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime3?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutStocksNestedInput
   detAchatFactures?: Prisma.DetAchatFactureUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUpdateManyWithoutStockNestedInput
@@ -3169,38 +3169,38 @@ export type StockUncheckedUpdateWithoutDetLivraisonsInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   designation?: Prisma.StringFieldUpdateOperationsInput | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  pahtGrossiste?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva?: Prisma.FloatFieldUpdateOperationsInput | number
-  pattc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvttc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvaht?: Prisma.FloatFieldUpdateOperationsInput | number
-  benifice?: Prisma.FloatFieldUpdateOperationsInput | number
+  pahtGrossiste?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin1?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin2?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin3?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin4?: Prisma.IntFieldUpdateOperationsInput | number
   qteFacturer?: Prisma.IntFieldUpdateOperationsInput | number
-  prixVentMin1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin4?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax1?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax2?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax3?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax4?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixImport?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixVentMin1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   qteStockImport?: Prisma.IntFieldUpdateOperationsInput | number
-  montant1?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant2?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime3?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedUpdateManyWithoutStockNestedInput
@@ -3215,76 +3215,76 @@ export type StockCreateManyFournisseurInput = {
   id?: bigint | number
   designation: string
   sysDate: Date | string
-  pahtGrossiste: number
-  prixCommercial: number
-  tva: number
-  pattc: number
-  pvttc: number
-  pvaht: number
-  benifice: number
+  pahtGrossiste: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice: runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock: number
   qtePVMin1: number
   qtePVMin2: number
   qtePVMin3: number
   qtePVMin4: number
   qteFacturer: number
-  prixVentMin1: number
-  prixVentMin2: number
-  prixVentMin3: number
-  prixVentMin4: number
-  remiseMax1: number
-  remiseMax2: number
-  remiseMax3: number
-  remiseMax4: number
-  prixImport: number
-  commission: number
+  prixVentMin1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
   qteStockImport: number
-  montant1: number
-  montant2: number
-  montant3: number
-  prime1: number
-  prime2: number
-  prime3: number
+  montant1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type StockUpdateWithoutFournisseurInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   designation?: Prisma.StringFieldUpdateOperationsInput | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  pahtGrossiste?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva?: Prisma.FloatFieldUpdateOperationsInput | number
-  pattc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvttc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvaht?: Prisma.FloatFieldUpdateOperationsInput | number
-  benifice?: Prisma.FloatFieldUpdateOperationsInput | number
+  pahtGrossiste?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin1?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin2?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin3?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin4?: Prisma.IntFieldUpdateOperationsInput | number
   qteFacturer?: Prisma.IntFieldUpdateOperationsInput | number
-  prixVentMin1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin4?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax1?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax2?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax3?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax4?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixImport?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixVentMin1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   qteStockImport?: Prisma.IntFieldUpdateOperationsInput | number
-  montant1?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant2?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime3?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   detAchatFactures?: Prisma.DetAchatFactureUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUpdateManyWithoutStockNestedInput
   detFactures?: Prisma.DetFactureUpdateManyWithoutStockNestedInput
@@ -3299,38 +3299,38 @@ export type StockUncheckedUpdateWithoutFournisseurInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   designation?: Prisma.StringFieldUpdateOperationsInput | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  pahtGrossiste?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva?: Prisma.FloatFieldUpdateOperationsInput | number
-  pattc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvttc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvaht?: Prisma.FloatFieldUpdateOperationsInput | number
-  benifice?: Prisma.FloatFieldUpdateOperationsInput | number
+  pahtGrossiste?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin1?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin2?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin3?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin4?: Prisma.IntFieldUpdateOperationsInput | number
   qteFacturer?: Prisma.IntFieldUpdateOperationsInput | number
-  prixVentMin1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin4?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax1?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax2?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax3?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax4?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixImport?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixVentMin1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   qteStockImport?: Prisma.IntFieldUpdateOperationsInput | number
-  montant1?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant2?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime3?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   detAchatFactures?: Prisma.DetAchatFactureUncheckedUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedUpdateManyWithoutStockNestedInput
   detFactures?: Prisma.DetFactureUncheckedUpdateManyWithoutStockNestedInput
@@ -3345,38 +3345,38 @@ export type StockUncheckedUpdateManyWithoutFournisseurInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   designation?: Prisma.StringFieldUpdateOperationsInput | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  pahtGrossiste?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva?: Prisma.FloatFieldUpdateOperationsInput | number
-  pattc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvttc?: Prisma.FloatFieldUpdateOperationsInput | number
-  pvaht?: Prisma.FloatFieldUpdateOperationsInput | number
-  benifice?: Prisma.FloatFieldUpdateOperationsInput | number
+  pahtGrossiste?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pattc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvttc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  pvaht?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benifice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin1?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin2?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin3?: Prisma.IntFieldUpdateOperationsInput | number
   qtePVMin4?: Prisma.IntFieldUpdateOperationsInput | number
   qteFacturer?: Prisma.IntFieldUpdateOperationsInput | number
-  prixVentMin1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVentMin4?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax1?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax2?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax3?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseMax4?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixImport?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixVentMin1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVentMin4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseMax4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixImport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   qteStockImport?: Prisma.IntFieldUpdateOperationsInput | number
-  montant1?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant2?: Prisma.FloatFieldUpdateOperationsInput | number
-  montant3?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime1?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime2?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime3?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montant3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 
@@ -3594,38 +3594,38 @@ export type $StockPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs 
     id: bigint
     designation: string
     sysDate: Date
-    pahtGrossiste: number
-    prixCommercial: number
-    tva: number
-    pattc: number
-    pvttc: number
-    pvaht: number
-    benifice: number
+    pahtGrossiste: runtime.Decimal
+    prixCommercial: runtime.Decimal
+    tva: runtime.Decimal
+    pattc: runtime.Decimal
+    pvttc: runtime.Decimal
+    pvaht: runtime.Decimal
+    benifice: runtime.Decimal
     qteStock: number
     qtePVMin1: number
     qtePVMin2: number
     qtePVMin3: number
     qtePVMin4: number
     qteFacturer: number
-    prixVentMin1: number
-    prixVentMin2: number
-    prixVentMin3: number
-    prixVentMin4: number
-    remiseMax1: number
-    remiseMax2: number
-    remiseMax3: number
-    remiseMax4: number
-    prixImport: number
-    commission: number
+    prixVentMin1: runtime.Decimal
+    prixVentMin2: runtime.Decimal
+    prixVentMin3: runtime.Decimal
+    prixVentMin4: runtime.Decimal
+    remiseMax1: runtime.Decimal
+    remiseMax2: runtime.Decimal
+    remiseMax3: runtime.Decimal
+    remiseMax4: runtime.Decimal
+    prixImport: runtime.Decimal
+    commission: runtime.Decimal
     archiver: boolean
     supprimer: boolean
     qteStockImport: number
-    montant1: number
-    montant2: number
-    montant3: number
-    prime1: number
-    prime2: number
-    prime3: number
+    montant1: runtime.Decimal
+    montant2: runtime.Decimal
+    montant3: runtime.Decimal
+    prime1: runtime.Decimal
+    prime2: runtime.Decimal
+    prime3: runtime.Decimal
     fournisseurId: bigint
   }, ExtArgs["result"]["stock"]>
   composites: {}
@@ -4008,38 +4008,38 @@ export interface StockFieldRefs {
   readonly id: Prisma.FieldRef<"Stock", 'BigInt'>
   readonly designation: Prisma.FieldRef<"Stock", 'String'>
   readonly sysDate: Prisma.FieldRef<"Stock", 'DateTime'>
-  readonly pahtGrossiste: Prisma.FieldRef<"Stock", 'Float'>
-  readonly prixCommercial: Prisma.FieldRef<"Stock", 'Float'>
-  readonly tva: Prisma.FieldRef<"Stock", 'Float'>
-  readonly pattc: Prisma.FieldRef<"Stock", 'Float'>
-  readonly pvttc: Prisma.FieldRef<"Stock", 'Float'>
-  readonly pvaht: Prisma.FieldRef<"Stock", 'Float'>
-  readonly benifice: Prisma.FieldRef<"Stock", 'Float'>
+  readonly pahtGrossiste: Prisma.FieldRef<"Stock", 'Decimal'>
+  readonly prixCommercial: Prisma.FieldRef<"Stock", 'Decimal'>
+  readonly tva: Prisma.FieldRef<"Stock", 'Decimal'>
+  readonly pattc: Prisma.FieldRef<"Stock", 'Decimal'>
+  readonly pvttc: Prisma.FieldRef<"Stock", 'Decimal'>
+  readonly pvaht: Prisma.FieldRef<"Stock", 'Decimal'>
+  readonly benifice: Prisma.FieldRef<"Stock", 'Decimal'>
   readonly qteStock: Prisma.FieldRef<"Stock", 'Int'>
   readonly qtePVMin1: Prisma.FieldRef<"Stock", 'Int'>
   readonly qtePVMin2: Prisma.FieldRef<"Stock", 'Int'>
   readonly qtePVMin3: Prisma.FieldRef<"Stock", 'Int'>
   readonly qtePVMin4: Prisma.FieldRef<"Stock", 'Int'>
   readonly qteFacturer: Prisma.FieldRef<"Stock", 'Int'>
-  readonly prixVentMin1: Prisma.FieldRef<"Stock", 'Float'>
-  readonly prixVentMin2: Prisma.FieldRef<"Stock", 'Float'>
-  readonly prixVentMin3: Prisma.FieldRef<"Stock", 'Float'>
-  readonly prixVentMin4: Prisma.FieldRef<"Stock", 'Float'>
-  readonly remiseMax1: Prisma.FieldRef<"Stock", 'Float'>
-  readonly remiseMax2: Prisma.FieldRef<"Stock", 'Float'>
-  readonly remiseMax3: Prisma.FieldRef<"Stock", 'Float'>
-  readonly remiseMax4: Prisma.FieldRef<"Stock", 'Float'>
-  readonly prixImport: Prisma.FieldRef<"Stock", 'Float'>
-  readonly commission: Prisma.FieldRef<"Stock", 'Float'>
+  readonly prixVentMin1: Prisma.FieldRef<"Stock", 'Decimal'>
+  readonly prixVentMin2: Prisma.FieldRef<"Stock", 'Decimal'>
+  readonly prixVentMin3: Prisma.FieldRef<"Stock", 'Decimal'>
+  readonly prixVentMin4: Prisma.FieldRef<"Stock", 'Decimal'>
+  readonly remiseMax1: Prisma.FieldRef<"Stock", 'Decimal'>
+  readonly remiseMax2: Prisma.FieldRef<"Stock", 'Decimal'>
+  readonly remiseMax3: Prisma.FieldRef<"Stock", 'Decimal'>
+  readonly remiseMax4: Prisma.FieldRef<"Stock", 'Decimal'>
+  readonly prixImport: Prisma.FieldRef<"Stock", 'Decimal'>
+  readonly commission: Prisma.FieldRef<"Stock", 'Decimal'>
   readonly archiver: Prisma.FieldRef<"Stock", 'Boolean'>
   readonly supprimer: Prisma.FieldRef<"Stock", 'Boolean'>
   readonly qteStockImport: Prisma.FieldRef<"Stock", 'Int'>
-  readonly montant1: Prisma.FieldRef<"Stock", 'Float'>
-  readonly montant2: Prisma.FieldRef<"Stock", 'Float'>
-  readonly montant3: Prisma.FieldRef<"Stock", 'Float'>
-  readonly prime1: Prisma.FieldRef<"Stock", 'Float'>
-  readonly prime2: Prisma.FieldRef<"Stock", 'Float'>
-  readonly prime3: Prisma.FieldRef<"Stock", 'Float'>
+  readonly montant1: Prisma.FieldRef<"Stock", 'Decimal'>
+  readonly montant2: Prisma.FieldRef<"Stock", 'Decimal'>
+  readonly montant3: Prisma.FieldRef<"Stock", 'Decimal'>
+  readonly prime1: Prisma.FieldRef<"Stock", 'Decimal'>
+  readonly prime2: Prisma.FieldRef<"Stock", 'Decimal'>
+  readonly prime3: Prisma.FieldRef<"Stock", 'Decimal'>
   readonly fournisseurId: Prisma.FieldRef<"Stock", 'BigInt'>
 }
     

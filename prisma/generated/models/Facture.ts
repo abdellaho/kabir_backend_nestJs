@@ -33,26 +33,26 @@ export type FactureAvgAggregateOutputType = {
   typeReglment2: number | null
   typeReglment3: number | null
   typeReglment4: number | null
-  mantantBF: number | null
-  mantantBFBenefice: number | null
-  tva7Total: number | null
-  tva20Total: number | null
-  mantantBFHT: number | null
-  mntHT2O: number | null
-  mntHT7: number | null
-  tva7: number | null
-  tva20: number | null
-  mntReglement: number | null
-  mntReglement2: number | null
-  mntReglement3: number | null
-  mntReglement4: number | null
+  mantantBF: runtime.Decimal | null
+  mantantBFBenefice: runtime.Decimal | null
+  tva7Total: runtime.Decimal | null
+  tva20Total: runtime.Decimal | null
+  mantantBFHT: runtime.Decimal | null
+  mntHT2O: runtime.Decimal | null
+  mntHT7: runtime.Decimal | null
+  tva7: runtime.Decimal | null
+  tva20: runtime.Decimal | null
+  mntReglement: runtime.Decimal | null
+  mntReglement2: runtime.Decimal | null
+  mntReglement3: runtime.Decimal | null
+  mntReglement4: runtime.Decimal | null
   type: number | null
-  tva20Reglement1: number | null
-  tva20Reglement2: number | null
-  tva20Reglement3: number | null
-  tva20Reglement4: number | null
-  mntHT20Reglement1: number | null
-  mntHT20Reglement2: number | null
+  tva20Reglement1: runtime.Decimal | null
+  tva20Reglement2: runtime.Decimal | null
+  tva20Reglement3: runtime.Decimal | null
+  tva20Reglement4: runtime.Decimal | null
+  mntHT20Reglement1: runtime.Decimal | null
+  mntHT20Reglement2: runtime.Decimal | null
 }
 
 export type FactureSumAggregateOutputType = {
@@ -62,26 +62,26 @@ export type FactureSumAggregateOutputType = {
   typeReglment2: number | null
   typeReglment3: number | null
   typeReglment4: number | null
-  mantantBF: number | null
-  mantantBFBenefice: number | null
-  tva7Total: number | null
-  tva20Total: number | null
-  mantantBFHT: number | null
-  mntHT2O: number | null
-  mntHT7: number | null
-  tva7: number | null
-  tva20: number | null
-  mntReglement: number | null
-  mntReglement2: number | null
-  mntReglement3: number | null
-  mntReglement4: number | null
+  mantantBF: runtime.Decimal | null
+  mantantBFBenefice: runtime.Decimal | null
+  tva7Total: runtime.Decimal | null
+  tva20Total: runtime.Decimal | null
+  mantantBFHT: runtime.Decimal | null
+  mntHT2O: runtime.Decimal | null
+  mntHT7: runtime.Decimal | null
+  tva7: runtime.Decimal | null
+  tva20: runtime.Decimal | null
+  mntReglement: runtime.Decimal | null
+  mntReglement2: runtime.Decimal | null
+  mntReglement3: runtime.Decimal | null
+  mntReglement4: runtime.Decimal | null
   type: number | null
-  tva20Reglement1: number | null
-  tva20Reglement2: number | null
-  tva20Reglement3: number | null
-  tva20Reglement4: number | null
-  mntHT20Reglement1: number | null
-  mntHT20Reglement2: number | null
+  tva20Reglement1: runtime.Decimal | null
+  tva20Reglement2: runtime.Decimal | null
+  tva20Reglement3: runtime.Decimal | null
+  tva20Reglement4: runtime.Decimal | null
+  mntHT20Reglement1: runtime.Decimal | null
+  mntHT20Reglement2: runtime.Decimal | null
 }
 
 export type FactureMinAggregateOutputType = {
@@ -98,17 +98,17 @@ export type FactureMinAggregateOutputType = {
   typeReglment3: number | null
   typeReglment4: number | null
   typePaiement: string | null
-  mantantBF: number | null
-  mantantBFBenefice: number | null
-  tva7Total: number | null
-  tva20Total: number | null
+  mantantBF: runtime.Decimal | null
+  mantantBFBenefice: runtime.Decimal | null
+  tva7Total: runtime.Decimal | null
+  tva20Total: runtime.Decimal | null
   sysDate: Date | null
-  mantantBFHT: number | null
+  mantantBFHT: runtime.Decimal | null
   numeroLibil: string | null
-  mntHT2O: number | null
-  mntHT7: number | null
-  tva7: number | null
-  tva20: number | null
+  mntHT2O: runtime.Decimal | null
+  mntHT7: runtime.Decimal | null
+  tva7: runtime.Decimal | null
+  tva20: runtime.Decimal | null
   numCheque: string | null
   numCheque2: string | null
   numCheque3: string | null
@@ -117,10 +117,10 @@ export type FactureMinAggregateOutputType = {
   numRemise2: string | null
   numRemise3: string | null
   numRemise4: string | null
-  mntReglement: number | null
-  mntReglement2: number | null
-  mntReglement3: number | null
-  mntReglement4: number | null
+  mntReglement: runtime.Decimal | null
+  mntReglement2: runtime.Decimal | null
+  mntReglement3: runtime.Decimal | null
+  mntReglement4: runtime.Decimal | null
   type: number | null
   facturer100: boolean | null
   calculer: boolean | null
@@ -130,12 +130,12 @@ export type FactureMinAggregateOutputType = {
   dateReglement2In: boolean | null
   dateReglement3In: boolean | null
   dateReglement4In: boolean | null
-  tva20Reglement1: number | null
-  tva20Reglement2: number | null
-  tva20Reglement3: number | null
-  tva20Reglement4: number | null
-  mntHT20Reglement1: number | null
-  mntHT20Reglement2: number | null
+  tva20Reglement1: runtime.Decimal | null
+  tva20Reglement2: runtime.Decimal | null
+  tva20Reglement3: runtime.Decimal | null
+  tva20Reglement4: runtime.Decimal | null
+  mntHT20Reglement1: runtime.Decimal | null
+  mntHT20Reglement2: runtime.Decimal | null
 }
 
 export type FactureMaxAggregateOutputType = {
@@ -152,17 +152,17 @@ export type FactureMaxAggregateOutputType = {
   typeReglment3: number | null
   typeReglment4: number | null
   typePaiement: string | null
-  mantantBF: number | null
-  mantantBFBenefice: number | null
-  tva7Total: number | null
-  tva20Total: number | null
+  mantantBF: runtime.Decimal | null
+  mantantBFBenefice: runtime.Decimal | null
+  tva7Total: runtime.Decimal | null
+  tva20Total: runtime.Decimal | null
   sysDate: Date | null
-  mantantBFHT: number | null
+  mantantBFHT: runtime.Decimal | null
   numeroLibil: string | null
-  mntHT2O: number | null
-  mntHT7: number | null
-  tva7: number | null
-  tva20: number | null
+  mntHT2O: runtime.Decimal | null
+  mntHT7: runtime.Decimal | null
+  tva7: runtime.Decimal | null
+  tva20: runtime.Decimal | null
   numCheque: string | null
   numCheque2: string | null
   numCheque3: string | null
@@ -171,10 +171,10 @@ export type FactureMaxAggregateOutputType = {
   numRemise2: string | null
   numRemise3: string | null
   numRemise4: string | null
-  mntReglement: number | null
-  mntReglement2: number | null
-  mntReglement3: number | null
-  mntReglement4: number | null
+  mntReglement: runtime.Decimal | null
+  mntReglement2: runtime.Decimal | null
+  mntReglement3: runtime.Decimal | null
+  mntReglement4: runtime.Decimal | null
   type: number | null
   facturer100: boolean | null
   calculer: boolean | null
@@ -184,12 +184,12 @@ export type FactureMaxAggregateOutputType = {
   dateReglement2In: boolean | null
   dateReglement3In: boolean | null
   dateReglement4In: boolean | null
-  tva20Reglement1: number | null
-  tva20Reglement2: number | null
-  tva20Reglement3: number | null
-  tva20Reglement4: number | null
-  mntHT20Reglement1: number | null
-  mntHT20Reglement2: number | null
+  tva20Reglement1: runtime.Decimal | null
+  tva20Reglement2: runtime.Decimal | null
+  tva20Reglement3: runtime.Decimal | null
+  tva20Reglement4: runtime.Decimal | null
+  mntHT20Reglement1: runtime.Decimal | null
+  mntHT20Reglement2: runtime.Decimal | null
 }
 
 export type FactureCountAggregateOutputType = {
@@ -569,17 +569,17 @@ export type FactureGroupByOutputType = {
   typeReglment3: number
   typeReglment4: number
   typePaiement: string
-  mantantBF: number
-  mantantBFBenefice: number
-  tva7Total: number
-  tva20Total: number
+  mantantBF: runtime.Decimal
+  mantantBFBenefice: runtime.Decimal
+  tva7Total: runtime.Decimal
+  tva20Total: runtime.Decimal
   sysDate: Date
-  mantantBFHT: number
+  mantantBFHT: runtime.Decimal
   numeroLibil: string
-  mntHT2O: number
-  mntHT7: number
-  tva7: number
-  tva20: number
+  mntHT2O: runtime.Decimal
+  mntHT7: runtime.Decimal
+  tva7: runtime.Decimal
+  tva20: runtime.Decimal
   numCheque: string
   numCheque2: string
   numCheque3: string
@@ -588,10 +588,10 @@ export type FactureGroupByOutputType = {
   numRemise2: string
   numRemise3: string
   numRemise4: string
-  mntReglement: number
-  mntReglement2: number
-  mntReglement3: number
-  mntReglement4: number
+  mntReglement: runtime.Decimal
+  mntReglement2: runtime.Decimal
+  mntReglement3: runtime.Decimal
+  mntReglement4: runtime.Decimal
   type: number
   facturer100: boolean
   calculer: boolean
@@ -601,12 +601,12 @@ export type FactureGroupByOutputType = {
   dateReglement2In: boolean | null
   dateReglement3In: boolean | null
   dateReglement4In: boolean | null
-  tva20Reglement1: number
-  tva20Reglement2: number
-  tva20Reglement3: number
-  tva20Reglement4: number
-  mntHT20Reglement1: number
-  mntHT20Reglement2: number
+  tva20Reglement1: runtime.Decimal
+  tva20Reglement2: runtime.Decimal
+  tva20Reglement3: runtime.Decimal
+  tva20Reglement4: runtime.Decimal
+  mntHT20Reglement1: runtime.Decimal
+  mntHT20Reglement2: runtime.Decimal
   _count: FactureCountAggregateOutputType | null
   _avg: FactureAvgAggregateOutputType | null
   _sum: FactureSumAggregateOutputType | null
@@ -646,17 +646,17 @@ export type FactureWhereInput = {
   typeReglment3?: Prisma.IntFilter<"Facture"> | number
   typeReglment4?: Prisma.IntFilter<"Facture"> | number
   typePaiement?: Prisma.StringFilter<"Facture"> | string
-  mantantBF?: Prisma.FloatFilter<"Facture"> | number
-  mantantBFBenefice?: Prisma.FloatFilter<"Facture"> | number
-  tva7Total?: Prisma.FloatFilter<"Facture"> | number
-  tva20Total?: Prisma.FloatFilter<"Facture"> | number
+  mantantBF?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7Total?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Total?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   sysDate?: Prisma.DateTimeFilter<"Facture"> | Date | string
-  mantantBFHT?: Prisma.FloatFilter<"Facture"> | number
+  mantantBFHT?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   numeroLibil?: Prisma.StringFilter<"Facture"> | string
-  mntHT2O?: Prisma.FloatFilter<"Facture"> | number
-  mntHT7?: Prisma.FloatFilter<"Facture"> | number
-  tva7?: Prisma.FloatFilter<"Facture"> | number
-  tva20?: Prisma.FloatFilter<"Facture"> | number
+  mntHT2O?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT7?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   numCheque?: Prisma.StringFilter<"Facture"> | string
   numCheque2?: Prisma.StringFilter<"Facture"> | string
   numCheque3?: Prisma.StringFilter<"Facture"> | string
@@ -665,10 +665,10 @@ export type FactureWhereInput = {
   numRemise2?: Prisma.StringFilter<"Facture"> | string
   numRemise3?: Prisma.StringFilter<"Facture"> | string
   numRemise4?: Prisma.StringFilter<"Facture"> | string
-  mntReglement?: Prisma.FloatFilter<"Facture"> | number
-  mntReglement2?: Prisma.FloatFilter<"Facture"> | number
-  mntReglement3?: Prisma.FloatFilter<"Facture"> | number
-  mntReglement4?: Prisma.FloatFilter<"Facture"> | number
+  mntReglement?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   type?: Prisma.IntFilter<"Facture"> | number
   facturer100?: Prisma.BoolFilter<"Facture"> | boolean
   calculer?: Prisma.BoolFilter<"Facture"> | boolean
@@ -678,12 +678,12 @@ export type FactureWhereInput = {
   dateReglement2In?: Prisma.BoolNullableFilter<"Facture"> | boolean | null
   dateReglement3In?: Prisma.BoolNullableFilter<"Facture"> | boolean | null
   dateReglement4In?: Prisma.BoolNullableFilter<"Facture"> | boolean | null
-  tva20Reglement1?: Prisma.FloatFilter<"Facture"> | number
-  tva20Reglement2?: Prisma.FloatFilter<"Facture"> | number
-  tva20Reglement3?: Prisma.FloatFilter<"Facture"> | number
-  tva20Reglement4?: Prisma.FloatFilter<"Facture"> | number
-  mntHT20Reglement1?: Prisma.FloatFilter<"Facture"> | number
-  mntHT20Reglement2?: Prisma.FloatFilter<"Facture"> | number
+  tva20Reglement1?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement2?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement3?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement4?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement1?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement2?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   detFactures?: Prisma.DetFactureListRelationFilter
 }
 
@@ -760,17 +760,17 @@ export type FactureWhereUniqueInput = Prisma.AtLeast<{
   typeReglment3?: Prisma.IntFilter<"Facture"> | number
   typeReglment4?: Prisma.IntFilter<"Facture"> | number
   typePaiement?: Prisma.StringFilter<"Facture"> | string
-  mantantBF?: Prisma.FloatFilter<"Facture"> | number
-  mantantBFBenefice?: Prisma.FloatFilter<"Facture"> | number
-  tva7Total?: Prisma.FloatFilter<"Facture"> | number
-  tva20Total?: Prisma.FloatFilter<"Facture"> | number
+  mantantBF?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7Total?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Total?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   sysDate?: Prisma.DateTimeFilter<"Facture"> | Date | string
-  mantantBFHT?: Prisma.FloatFilter<"Facture"> | number
+  mantantBFHT?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   numeroLibil?: Prisma.StringFilter<"Facture"> | string
-  mntHT2O?: Prisma.FloatFilter<"Facture"> | number
-  mntHT7?: Prisma.FloatFilter<"Facture"> | number
-  tva7?: Prisma.FloatFilter<"Facture"> | number
-  tva20?: Prisma.FloatFilter<"Facture"> | number
+  mntHT2O?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT7?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   numCheque?: Prisma.StringFilter<"Facture"> | string
   numCheque2?: Prisma.StringFilter<"Facture"> | string
   numCheque3?: Prisma.StringFilter<"Facture"> | string
@@ -779,10 +779,10 @@ export type FactureWhereUniqueInput = Prisma.AtLeast<{
   numRemise2?: Prisma.StringFilter<"Facture"> | string
   numRemise3?: Prisma.StringFilter<"Facture"> | string
   numRemise4?: Prisma.StringFilter<"Facture"> | string
-  mntReglement?: Prisma.FloatFilter<"Facture"> | number
-  mntReglement2?: Prisma.FloatFilter<"Facture"> | number
-  mntReglement3?: Prisma.FloatFilter<"Facture"> | number
-  mntReglement4?: Prisma.FloatFilter<"Facture"> | number
+  mntReglement?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   type?: Prisma.IntFilter<"Facture"> | number
   facturer100?: Prisma.BoolFilter<"Facture"> | boolean
   calculer?: Prisma.BoolFilter<"Facture"> | boolean
@@ -792,12 +792,12 @@ export type FactureWhereUniqueInput = Prisma.AtLeast<{
   dateReglement2In?: Prisma.BoolNullableFilter<"Facture"> | boolean | null
   dateReglement3In?: Prisma.BoolNullableFilter<"Facture"> | boolean | null
   dateReglement4In?: Prisma.BoolNullableFilter<"Facture"> | boolean | null
-  tva20Reglement1?: Prisma.FloatFilter<"Facture"> | number
-  tva20Reglement2?: Prisma.FloatFilter<"Facture"> | number
-  tva20Reglement3?: Prisma.FloatFilter<"Facture"> | number
-  tva20Reglement4?: Prisma.FloatFilter<"Facture"> | number
-  mntHT20Reglement1?: Prisma.FloatFilter<"Facture"> | number
-  mntHT20Reglement2?: Prisma.FloatFilter<"Facture"> | number
+  tva20Reglement1?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement2?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement3?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement4?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement1?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement2?: Prisma.DecimalFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   detFactures?: Prisma.DetFactureListRelationFilter
 }, "id">
 
@@ -877,17 +877,17 @@ export type FactureScalarWhereWithAggregatesInput = {
   typeReglment3?: Prisma.IntWithAggregatesFilter<"Facture"> | number
   typeReglment4?: Prisma.IntWithAggregatesFilter<"Facture"> | number
   typePaiement?: Prisma.StringWithAggregatesFilter<"Facture"> | string
-  mantantBF?: Prisma.FloatWithAggregatesFilter<"Facture"> | number
-  mantantBFBenefice?: Prisma.FloatWithAggregatesFilter<"Facture"> | number
-  tva7Total?: Prisma.FloatWithAggregatesFilter<"Facture"> | number
-  tva20Total?: Prisma.FloatWithAggregatesFilter<"Facture"> | number
+  mantantBF?: Prisma.DecimalWithAggregatesFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice?: Prisma.DecimalWithAggregatesFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7Total?: Prisma.DecimalWithAggregatesFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Total?: Prisma.DecimalWithAggregatesFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   sysDate?: Prisma.DateTimeWithAggregatesFilter<"Facture"> | Date | string
-  mantantBFHT?: Prisma.FloatWithAggregatesFilter<"Facture"> | number
+  mantantBFHT?: Prisma.DecimalWithAggregatesFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   numeroLibil?: Prisma.StringWithAggregatesFilter<"Facture"> | string
-  mntHT2O?: Prisma.FloatWithAggregatesFilter<"Facture"> | number
-  mntHT7?: Prisma.FloatWithAggregatesFilter<"Facture"> | number
-  tva7?: Prisma.FloatWithAggregatesFilter<"Facture"> | number
-  tva20?: Prisma.FloatWithAggregatesFilter<"Facture"> | number
+  mntHT2O?: Prisma.DecimalWithAggregatesFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT7?: Prisma.DecimalWithAggregatesFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7?: Prisma.DecimalWithAggregatesFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20?: Prisma.DecimalWithAggregatesFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   numCheque?: Prisma.StringWithAggregatesFilter<"Facture"> | string
   numCheque2?: Prisma.StringWithAggregatesFilter<"Facture"> | string
   numCheque3?: Prisma.StringWithAggregatesFilter<"Facture"> | string
@@ -896,10 +896,10 @@ export type FactureScalarWhereWithAggregatesInput = {
   numRemise2?: Prisma.StringWithAggregatesFilter<"Facture"> | string
   numRemise3?: Prisma.StringWithAggregatesFilter<"Facture"> | string
   numRemise4?: Prisma.StringWithAggregatesFilter<"Facture"> | string
-  mntReglement?: Prisma.FloatWithAggregatesFilter<"Facture"> | number
-  mntReglement2?: Prisma.FloatWithAggregatesFilter<"Facture"> | number
-  mntReglement3?: Prisma.FloatWithAggregatesFilter<"Facture"> | number
-  mntReglement4?: Prisma.FloatWithAggregatesFilter<"Facture"> | number
+  mntReglement?: Prisma.DecimalWithAggregatesFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalWithAggregatesFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalWithAggregatesFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalWithAggregatesFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   type?: Prisma.IntWithAggregatesFilter<"Facture"> | number
   facturer100?: Prisma.BoolWithAggregatesFilter<"Facture"> | boolean
   calculer?: Prisma.BoolWithAggregatesFilter<"Facture"> | boolean
@@ -909,12 +909,12 @@ export type FactureScalarWhereWithAggregatesInput = {
   dateReglement2In?: Prisma.BoolNullableWithAggregatesFilter<"Facture"> | boolean | null
   dateReglement3In?: Prisma.BoolNullableWithAggregatesFilter<"Facture"> | boolean | null
   dateReglement4In?: Prisma.BoolNullableWithAggregatesFilter<"Facture"> | boolean | null
-  tva20Reglement1?: Prisma.FloatWithAggregatesFilter<"Facture"> | number
-  tva20Reglement2?: Prisma.FloatWithAggregatesFilter<"Facture"> | number
-  tva20Reglement3?: Prisma.FloatWithAggregatesFilter<"Facture"> | number
-  tva20Reglement4?: Prisma.FloatWithAggregatesFilter<"Facture"> | number
-  mntHT20Reglement1?: Prisma.FloatWithAggregatesFilter<"Facture"> | number
-  mntHT20Reglement2?: Prisma.FloatWithAggregatesFilter<"Facture"> | number
+  tva20Reglement1?: Prisma.DecimalWithAggregatesFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement2?: Prisma.DecimalWithAggregatesFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement3?: Prisma.DecimalWithAggregatesFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement4?: Prisma.DecimalWithAggregatesFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement1?: Prisma.DecimalWithAggregatesFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement2?: Prisma.DecimalWithAggregatesFilter<"Facture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type FactureCreateInput = {
@@ -931,17 +931,17 @@ export type FactureCreateInput = {
   typeReglment3: number
   typeReglment4: number
   typePaiement: string
-  mantantBF: number
-  mantantBFBenefice: number
-  tva7Total: number
-  tva20Total: number
+  mantantBF: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7Total: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Total: runtime.Decimal | runtime.DecimalJsLike | number | string
   sysDate: Date | string
-  mantantBFHT: number
+  mantantBFHT: runtime.Decimal | runtime.DecimalJsLike | number | string
   numeroLibil: string
-  mntHT2O: number
-  mntHT7: number
-  tva7: number
-  tva20: number
+  mntHT2O: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20: runtime.Decimal | runtime.DecimalJsLike | number | string
   numCheque: string
   numCheque2: string
   numCheque3: string
@@ -950,10 +950,10 @@ export type FactureCreateInput = {
   numRemise2: string
   numRemise3: string
   numRemise4: string
-  mntReglement: number
-  mntReglement2: number
-  mntReglement3: number
-  mntReglement4: number
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   type: number
   facturer100?: boolean
   calculer?: boolean
@@ -963,12 +963,12 @@ export type FactureCreateInput = {
   dateReglement2In?: boolean | null
   dateReglement3In?: boolean | null
   dateReglement4In?: boolean | null
-  tva20Reglement1: number
-  tva20Reglement2: number
-  tva20Reglement3: number
-  tva20Reglement4: number
-  mntHT20Reglement1: number
-  mntHT20Reglement2: number
+  tva20Reglement1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
   detFactures?: Prisma.DetFactureCreateNestedManyWithoutFactureInput
 }
 
@@ -986,17 +986,17 @@ export type FactureUncheckedCreateInput = {
   typeReglment3: number
   typeReglment4: number
   typePaiement: string
-  mantantBF: number
-  mantantBFBenefice: number
-  tva7Total: number
-  tva20Total: number
+  mantantBF: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7Total: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Total: runtime.Decimal | runtime.DecimalJsLike | number | string
   sysDate: Date | string
-  mantantBFHT: number
+  mantantBFHT: runtime.Decimal | runtime.DecimalJsLike | number | string
   numeroLibil: string
-  mntHT2O: number
-  mntHT7: number
-  tva7: number
-  tva20: number
+  mntHT2O: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20: runtime.Decimal | runtime.DecimalJsLike | number | string
   numCheque: string
   numCheque2: string
   numCheque3: string
@@ -1005,10 +1005,10 @@ export type FactureUncheckedCreateInput = {
   numRemise2: string
   numRemise3: string
   numRemise4: string
-  mntReglement: number
-  mntReglement2: number
-  mntReglement3: number
-  mntReglement4: number
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   type: number
   facturer100?: boolean
   calculer?: boolean
@@ -1018,12 +1018,12 @@ export type FactureUncheckedCreateInput = {
   dateReglement2In?: boolean | null
   dateReglement3In?: boolean | null
   dateReglement4In?: boolean | null
-  tva20Reglement1: number
-  tva20Reglement2: number
-  tva20Reglement3: number
-  tva20Reglement4: number
-  mntHT20Reglement1: number
-  mntHT20Reglement2: number
+  tva20Reglement1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
   detFactures?: Prisma.DetFactureUncheckedCreateNestedManyWithoutFactureInput
 }
 
@@ -1041,17 +1041,17 @@ export type FactureUpdateInput = {
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
   typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBF?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBFBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva7Total?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20Total?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBF?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7Total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantBFHT?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBFHT?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   numeroLibil?: Prisma.StringFieldUpdateOperationsInput | string
-  mntHT2O?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntHT7?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva7?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntHT2O?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   numCheque?: Prisma.StringFieldUpdateOperationsInput | string
   numCheque2?: Prisma.StringFieldUpdateOperationsInput | string
   numCheque3?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1060,10 +1060,10 @@ export type FactureUpdateInput = {
   numRemise2?: Prisma.StringFieldUpdateOperationsInput | string
   numRemise3?: Prisma.StringFieldUpdateOperationsInput | string
   numRemise4?: Prisma.StringFieldUpdateOperationsInput | string
-  mntReglement?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement4?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   type?: Prisma.IntFieldUpdateOperationsInput | number
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   calculer?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1073,12 +1073,12 @@ export type FactureUpdateInput = {
   dateReglement2In?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
   dateReglement3In?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
   dateReglement4In?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
-  tva20Reglement1?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20Reglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20Reglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20Reglement4?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntHT20Reglement1?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntHT20Reglement2?: Prisma.FloatFieldUpdateOperationsInput | number
+  tva20Reglement1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   detFactures?: Prisma.DetFactureUpdateManyWithoutFactureNestedInput
 }
 
@@ -1096,17 +1096,17 @@ export type FactureUncheckedUpdateInput = {
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
   typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBF?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBFBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva7Total?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20Total?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBF?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7Total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantBFHT?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBFHT?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   numeroLibil?: Prisma.StringFieldUpdateOperationsInput | string
-  mntHT2O?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntHT7?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva7?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntHT2O?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   numCheque?: Prisma.StringFieldUpdateOperationsInput | string
   numCheque2?: Prisma.StringFieldUpdateOperationsInput | string
   numCheque3?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1115,10 +1115,10 @@ export type FactureUncheckedUpdateInput = {
   numRemise2?: Prisma.StringFieldUpdateOperationsInput | string
   numRemise3?: Prisma.StringFieldUpdateOperationsInput | string
   numRemise4?: Prisma.StringFieldUpdateOperationsInput | string
-  mntReglement?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement4?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   type?: Prisma.IntFieldUpdateOperationsInput | number
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   calculer?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1128,12 +1128,12 @@ export type FactureUncheckedUpdateInput = {
   dateReglement2In?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
   dateReglement3In?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
   dateReglement4In?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
-  tva20Reglement1?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20Reglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20Reglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20Reglement4?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntHT20Reglement1?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntHT20Reglement2?: Prisma.FloatFieldUpdateOperationsInput | number
+  tva20Reglement1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   detFactures?: Prisma.DetFactureUncheckedUpdateManyWithoutFactureNestedInput
 }
 
@@ -1151,17 +1151,17 @@ export type FactureCreateManyInput = {
   typeReglment3: number
   typeReglment4: number
   typePaiement: string
-  mantantBF: number
-  mantantBFBenefice: number
-  tva7Total: number
-  tva20Total: number
+  mantantBF: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7Total: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Total: runtime.Decimal | runtime.DecimalJsLike | number | string
   sysDate: Date | string
-  mantantBFHT: number
+  mantantBFHT: runtime.Decimal | runtime.DecimalJsLike | number | string
   numeroLibil: string
-  mntHT2O: number
-  mntHT7: number
-  tva7: number
-  tva20: number
+  mntHT2O: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20: runtime.Decimal | runtime.DecimalJsLike | number | string
   numCheque: string
   numCheque2: string
   numCheque3: string
@@ -1170,10 +1170,10 @@ export type FactureCreateManyInput = {
   numRemise2: string
   numRemise3: string
   numRemise4: string
-  mntReglement: number
-  mntReglement2: number
-  mntReglement3: number
-  mntReglement4: number
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   type: number
   facturer100?: boolean
   calculer?: boolean
@@ -1183,12 +1183,12 @@ export type FactureCreateManyInput = {
   dateReglement2In?: boolean | null
   dateReglement3In?: boolean | null
   dateReglement4In?: boolean | null
-  tva20Reglement1: number
-  tva20Reglement2: number
-  tva20Reglement3: number
-  tva20Reglement4: number
-  mntHT20Reglement1: number
-  mntHT20Reglement2: number
+  tva20Reglement1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type FactureUpdateManyMutationInput = {
@@ -1205,17 +1205,17 @@ export type FactureUpdateManyMutationInput = {
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
   typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBF?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBFBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva7Total?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20Total?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBF?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7Total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantBFHT?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBFHT?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   numeroLibil?: Prisma.StringFieldUpdateOperationsInput | string
-  mntHT2O?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntHT7?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva7?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntHT2O?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   numCheque?: Prisma.StringFieldUpdateOperationsInput | string
   numCheque2?: Prisma.StringFieldUpdateOperationsInput | string
   numCheque3?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1224,10 +1224,10 @@ export type FactureUpdateManyMutationInput = {
   numRemise2?: Prisma.StringFieldUpdateOperationsInput | string
   numRemise3?: Prisma.StringFieldUpdateOperationsInput | string
   numRemise4?: Prisma.StringFieldUpdateOperationsInput | string
-  mntReglement?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement4?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   type?: Prisma.IntFieldUpdateOperationsInput | number
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   calculer?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1237,12 +1237,12 @@ export type FactureUpdateManyMutationInput = {
   dateReglement2In?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
   dateReglement3In?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
   dateReglement4In?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
-  tva20Reglement1?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20Reglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20Reglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20Reglement4?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntHT20Reglement1?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntHT20Reglement2?: Prisma.FloatFieldUpdateOperationsInput | number
+  tva20Reglement1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type FactureUncheckedUpdateManyInput = {
@@ -1259,17 +1259,17 @@ export type FactureUncheckedUpdateManyInput = {
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
   typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBF?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBFBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva7Total?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20Total?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBF?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7Total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantBFHT?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBFHT?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   numeroLibil?: Prisma.StringFieldUpdateOperationsInput | string
-  mntHT2O?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntHT7?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva7?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntHT2O?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   numCheque?: Prisma.StringFieldUpdateOperationsInput | string
   numCheque2?: Prisma.StringFieldUpdateOperationsInput | string
   numCheque3?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1278,10 +1278,10 @@ export type FactureUncheckedUpdateManyInput = {
   numRemise2?: Prisma.StringFieldUpdateOperationsInput | string
   numRemise3?: Prisma.StringFieldUpdateOperationsInput | string
   numRemise4?: Prisma.StringFieldUpdateOperationsInput | string
-  mntReglement?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement4?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   type?: Prisma.IntFieldUpdateOperationsInput | number
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   calculer?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1291,12 +1291,12 @@ export type FactureUncheckedUpdateManyInput = {
   dateReglement2In?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
   dateReglement3In?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
   dateReglement4In?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
-  tva20Reglement1?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20Reglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20Reglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20Reglement4?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntHT20Reglement1?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntHT20Reglement2?: Prisma.FloatFieldUpdateOperationsInput | number
+  tva20Reglement1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type FactureScalarRelationFilter = {
@@ -1562,17 +1562,17 @@ export type FactureCreateWithoutDetFacturesInput = {
   typeReglment3: number
   typeReglment4: number
   typePaiement: string
-  mantantBF: number
-  mantantBFBenefice: number
-  tva7Total: number
-  tva20Total: number
+  mantantBF: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7Total: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Total: runtime.Decimal | runtime.DecimalJsLike | number | string
   sysDate: Date | string
-  mantantBFHT: number
+  mantantBFHT: runtime.Decimal | runtime.DecimalJsLike | number | string
   numeroLibil: string
-  mntHT2O: number
-  mntHT7: number
-  tva7: number
-  tva20: number
+  mntHT2O: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20: runtime.Decimal | runtime.DecimalJsLike | number | string
   numCheque: string
   numCheque2: string
   numCheque3: string
@@ -1581,10 +1581,10 @@ export type FactureCreateWithoutDetFacturesInput = {
   numRemise2: string
   numRemise3: string
   numRemise4: string
-  mntReglement: number
-  mntReglement2: number
-  mntReglement3: number
-  mntReglement4: number
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   type: number
   facturer100?: boolean
   calculer?: boolean
@@ -1594,12 +1594,12 @@ export type FactureCreateWithoutDetFacturesInput = {
   dateReglement2In?: boolean | null
   dateReglement3In?: boolean | null
   dateReglement4In?: boolean | null
-  tva20Reglement1: number
-  tva20Reglement2: number
-  tva20Reglement3: number
-  tva20Reglement4: number
-  mntHT20Reglement1: number
-  mntHT20Reglement2: number
+  tva20Reglement1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type FactureUncheckedCreateWithoutDetFacturesInput = {
@@ -1616,17 +1616,17 @@ export type FactureUncheckedCreateWithoutDetFacturesInput = {
   typeReglment3: number
   typeReglment4: number
   typePaiement: string
-  mantantBF: number
-  mantantBFBenefice: number
-  tva7Total: number
-  tva20Total: number
+  mantantBF: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7Total: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Total: runtime.Decimal | runtime.DecimalJsLike | number | string
   sysDate: Date | string
-  mantantBFHT: number
+  mantantBFHT: runtime.Decimal | runtime.DecimalJsLike | number | string
   numeroLibil: string
-  mntHT2O: number
-  mntHT7: number
-  tva7: number
-  tva20: number
+  mntHT2O: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20: runtime.Decimal | runtime.DecimalJsLike | number | string
   numCheque: string
   numCheque2: string
   numCheque3: string
@@ -1635,10 +1635,10 @@ export type FactureUncheckedCreateWithoutDetFacturesInput = {
   numRemise2: string
   numRemise3: string
   numRemise4: string
-  mntReglement: number
-  mntReglement2: number
-  mntReglement3: number
-  mntReglement4: number
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   type: number
   facturer100?: boolean
   calculer?: boolean
@@ -1648,12 +1648,12 @@ export type FactureUncheckedCreateWithoutDetFacturesInput = {
   dateReglement2In?: boolean | null
   dateReglement3In?: boolean | null
   dateReglement4In?: boolean | null
-  tva20Reglement1: number
-  tva20Reglement2: number
-  tva20Reglement3: number
-  tva20Reglement4: number
-  mntHT20Reglement1: number
-  mntHT20Reglement2: number
+  tva20Reglement1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type FactureCreateOrConnectWithoutDetFacturesInput = {
@@ -1686,17 +1686,17 @@ export type FactureUpdateWithoutDetFacturesInput = {
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
   typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBF?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBFBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva7Total?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20Total?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBF?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7Total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantBFHT?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBFHT?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   numeroLibil?: Prisma.StringFieldUpdateOperationsInput | string
-  mntHT2O?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntHT7?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva7?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntHT2O?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   numCheque?: Prisma.StringFieldUpdateOperationsInput | string
   numCheque2?: Prisma.StringFieldUpdateOperationsInput | string
   numCheque3?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1705,10 +1705,10 @@ export type FactureUpdateWithoutDetFacturesInput = {
   numRemise2?: Prisma.StringFieldUpdateOperationsInput | string
   numRemise3?: Prisma.StringFieldUpdateOperationsInput | string
   numRemise4?: Prisma.StringFieldUpdateOperationsInput | string
-  mntReglement?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement4?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   type?: Prisma.IntFieldUpdateOperationsInput | number
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   calculer?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1718,12 +1718,12 @@ export type FactureUpdateWithoutDetFacturesInput = {
   dateReglement2In?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
   dateReglement3In?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
   dateReglement4In?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
-  tva20Reglement1?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20Reglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20Reglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20Reglement4?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntHT20Reglement1?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntHT20Reglement2?: Prisma.FloatFieldUpdateOperationsInput | number
+  tva20Reglement1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type FactureUncheckedUpdateWithoutDetFacturesInput = {
@@ -1740,17 +1740,17 @@ export type FactureUncheckedUpdateWithoutDetFacturesInput = {
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
   typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBF?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBFBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva7Total?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20Total?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBF?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7Total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantBFHT?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBFHT?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   numeroLibil?: Prisma.StringFieldUpdateOperationsInput | string
-  mntHT2O?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntHT7?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva7?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntHT2O?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   numCheque?: Prisma.StringFieldUpdateOperationsInput | string
   numCheque2?: Prisma.StringFieldUpdateOperationsInput | string
   numCheque3?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1759,10 +1759,10 @@ export type FactureUncheckedUpdateWithoutDetFacturesInput = {
   numRemise2?: Prisma.StringFieldUpdateOperationsInput | string
   numRemise3?: Prisma.StringFieldUpdateOperationsInput | string
   numRemise4?: Prisma.StringFieldUpdateOperationsInput | string
-  mntReglement?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement4?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   type?: Prisma.IntFieldUpdateOperationsInput | number
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   calculer?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1772,12 +1772,12 @@ export type FactureUncheckedUpdateWithoutDetFacturesInput = {
   dateReglement2In?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
   dateReglement3In?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
   dateReglement4In?: Prisma.NullableBoolFieldUpdateOperationsInput | boolean | null
-  tva20Reglement1?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20Reglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20Reglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20Reglement4?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntHT20Reglement1?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntHT20Reglement2?: Prisma.FloatFieldUpdateOperationsInput | number
+  tva20Reglement1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20Reglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntHT20Reglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 
@@ -1948,17 +1948,17 @@ export type $FacturePayload<ExtArgs extends runtime.Types.Extensions.InternalArg
     typeReglment3: number
     typeReglment4: number
     typePaiement: string
-    mantantBF: number
-    mantantBFBenefice: number
-    tva7Total: number
-    tva20Total: number
+    mantantBF: runtime.Decimal
+    mantantBFBenefice: runtime.Decimal
+    tva7Total: runtime.Decimal
+    tva20Total: runtime.Decimal
     sysDate: Date
-    mantantBFHT: number
+    mantantBFHT: runtime.Decimal
     numeroLibil: string
-    mntHT2O: number
-    mntHT7: number
-    tva7: number
-    tva20: number
+    mntHT2O: runtime.Decimal
+    mntHT7: runtime.Decimal
+    tva7: runtime.Decimal
+    tva20: runtime.Decimal
     numCheque: string
     numCheque2: string
     numCheque3: string
@@ -1967,10 +1967,10 @@ export type $FacturePayload<ExtArgs extends runtime.Types.Extensions.InternalArg
     numRemise2: string
     numRemise3: string
     numRemise4: string
-    mntReglement: number
-    mntReglement2: number
-    mntReglement3: number
-    mntReglement4: number
+    mntReglement: runtime.Decimal
+    mntReglement2: runtime.Decimal
+    mntReglement3: runtime.Decimal
+    mntReglement4: runtime.Decimal
     type: number
     facturer100: boolean
     calculer: boolean
@@ -1980,12 +1980,12 @@ export type $FacturePayload<ExtArgs extends runtime.Types.Extensions.InternalArg
     dateReglement2In: boolean | null
     dateReglement3In: boolean | null
     dateReglement4In: boolean | null
-    tva20Reglement1: number
-    tva20Reglement2: number
-    tva20Reglement3: number
-    tva20Reglement4: number
-    mntHT20Reglement1: number
-    mntHT20Reglement2: number
+    tva20Reglement1: runtime.Decimal
+    tva20Reglement2: runtime.Decimal
+    tva20Reglement3: runtime.Decimal
+    tva20Reglement4: runtime.Decimal
+    mntHT20Reglement1: runtime.Decimal
+    mntHT20Reglement2: runtime.Decimal
   }, ExtArgs["result"]["facture"]>
   composites: {}
 }
@@ -2369,17 +2369,17 @@ export interface FactureFieldRefs {
   readonly typeReglment3: Prisma.FieldRef<"Facture", 'Int'>
   readonly typeReglment4: Prisma.FieldRef<"Facture", 'Int'>
   readonly typePaiement: Prisma.FieldRef<"Facture", 'String'>
-  readonly mantantBF: Prisma.FieldRef<"Facture", 'Float'>
-  readonly mantantBFBenefice: Prisma.FieldRef<"Facture", 'Float'>
-  readonly tva7Total: Prisma.FieldRef<"Facture", 'Float'>
-  readonly tva20Total: Prisma.FieldRef<"Facture", 'Float'>
+  readonly mantantBF: Prisma.FieldRef<"Facture", 'Decimal'>
+  readonly mantantBFBenefice: Prisma.FieldRef<"Facture", 'Decimal'>
+  readonly tva7Total: Prisma.FieldRef<"Facture", 'Decimal'>
+  readonly tva20Total: Prisma.FieldRef<"Facture", 'Decimal'>
   readonly sysDate: Prisma.FieldRef<"Facture", 'DateTime'>
-  readonly mantantBFHT: Prisma.FieldRef<"Facture", 'Float'>
+  readonly mantantBFHT: Prisma.FieldRef<"Facture", 'Decimal'>
   readonly numeroLibil: Prisma.FieldRef<"Facture", 'String'>
-  readonly mntHT2O: Prisma.FieldRef<"Facture", 'Float'>
-  readonly mntHT7: Prisma.FieldRef<"Facture", 'Float'>
-  readonly tva7: Prisma.FieldRef<"Facture", 'Float'>
-  readonly tva20: Prisma.FieldRef<"Facture", 'Float'>
+  readonly mntHT2O: Prisma.FieldRef<"Facture", 'Decimal'>
+  readonly mntHT7: Prisma.FieldRef<"Facture", 'Decimal'>
+  readonly tva7: Prisma.FieldRef<"Facture", 'Decimal'>
+  readonly tva20: Prisma.FieldRef<"Facture", 'Decimal'>
   readonly numCheque: Prisma.FieldRef<"Facture", 'String'>
   readonly numCheque2: Prisma.FieldRef<"Facture", 'String'>
   readonly numCheque3: Prisma.FieldRef<"Facture", 'String'>
@@ -2388,10 +2388,10 @@ export interface FactureFieldRefs {
   readonly numRemise2: Prisma.FieldRef<"Facture", 'String'>
   readonly numRemise3: Prisma.FieldRef<"Facture", 'String'>
   readonly numRemise4: Prisma.FieldRef<"Facture", 'String'>
-  readonly mntReglement: Prisma.FieldRef<"Facture", 'Float'>
-  readonly mntReglement2: Prisma.FieldRef<"Facture", 'Float'>
-  readonly mntReglement3: Prisma.FieldRef<"Facture", 'Float'>
-  readonly mntReglement4: Prisma.FieldRef<"Facture", 'Float'>
+  readonly mntReglement: Prisma.FieldRef<"Facture", 'Decimal'>
+  readonly mntReglement2: Prisma.FieldRef<"Facture", 'Decimal'>
+  readonly mntReglement3: Prisma.FieldRef<"Facture", 'Decimal'>
+  readonly mntReglement4: Prisma.FieldRef<"Facture", 'Decimal'>
   readonly type: Prisma.FieldRef<"Facture", 'Int'>
   readonly facturer100: Prisma.FieldRef<"Facture", 'Boolean'>
   readonly calculer: Prisma.FieldRef<"Facture", 'Boolean'>
@@ -2401,12 +2401,12 @@ export interface FactureFieldRefs {
   readonly dateReglement2In: Prisma.FieldRef<"Facture", 'Boolean'>
   readonly dateReglement3In: Prisma.FieldRef<"Facture", 'Boolean'>
   readonly dateReglement4In: Prisma.FieldRef<"Facture", 'Boolean'>
-  readonly tva20Reglement1: Prisma.FieldRef<"Facture", 'Float'>
-  readonly tva20Reglement2: Prisma.FieldRef<"Facture", 'Float'>
-  readonly tva20Reglement3: Prisma.FieldRef<"Facture", 'Float'>
-  readonly tva20Reglement4: Prisma.FieldRef<"Facture", 'Float'>
-  readonly mntHT20Reglement1: Prisma.FieldRef<"Facture", 'Float'>
-  readonly mntHT20Reglement2: Prisma.FieldRef<"Facture", 'Float'>
+  readonly tva20Reglement1: Prisma.FieldRef<"Facture", 'Decimal'>
+  readonly tva20Reglement2: Prisma.FieldRef<"Facture", 'Decimal'>
+  readonly tva20Reglement3: Prisma.FieldRef<"Facture", 'Decimal'>
+  readonly tva20Reglement4: Prisma.FieldRef<"Facture", 'Decimal'>
+  readonly mntHT20Reglement1: Prisma.FieldRef<"Facture", 'Decimal'>
+  readonly mntHT20Reglement2: Prisma.FieldRef<"Facture", 'Decimal'>
 }
     
 

@@ -30,11 +30,11 @@ export type DetLivraisonAvgAggregateOutputType = {
   id: number | null
   qteLivrer: number | null
   champsRouge: number | null
-  remiseLivraison: number | null
-  prixVente: number | null
-  montantProduit: number | null
-  beneficeDH: number | null
-  benepourcentage: number | null
+  remiseLivraison: runtime.Decimal | null
+  prixVente: runtime.Decimal | null
+  montantProduit: runtime.Decimal | null
+  beneficeDH: runtime.Decimal | null
+  benepourcentage: runtime.Decimal | null
   infinity: number | null
   livraisonId: number | null
   stockId: number | null
@@ -44,11 +44,11 @@ export type DetLivraisonSumAggregateOutputType = {
   id: bigint | null
   qteLivrer: number | null
   champsRouge: number | null
-  remiseLivraison: number | null
-  prixVente: number | null
-  montantProduit: number | null
-  beneficeDH: number | null
-  benepourcentage: number | null
+  remiseLivraison: runtime.Decimal | null
+  prixVente: runtime.Decimal | null
+  montantProduit: runtime.Decimal | null
+  beneficeDH: runtime.Decimal | null
+  benepourcentage: runtime.Decimal | null
   infinity: number | null
   livraisonId: bigint | null
   stockId: bigint | null
@@ -58,11 +58,11 @@ export type DetLivraisonMinAggregateOutputType = {
   id: bigint | null
   qteLivrer: number | null
   champsRouge: number | null
-  remiseLivraison: number | null
-  prixVente: number | null
-  montantProduit: number | null
-  beneficeDH: number | null
-  benepourcentage: number | null
+  remiseLivraison: runtime.Decimal | null
+  prixVente: runtime.Decimal | null
+  montantProduit: runtime.Decimal | null
+  beneficeDH: runtime.Decimal | null
+  benepourcentage: runtime.Decimal | null
   infinity: number | null
   avecRemise: boolean | null
   livraisonId: bigint | null
@@ -73,11 +73,11 @@ export type DetLivraisonMaxAggregateOutputType = {
   id: bigint | null
   qteLivrer: number | null
   champsRouge: number | null
-  remiseLivraison: number | null
-  prixVente: number | null
-  montantProduit: number | null
-  beneficeDH: number | null
-  benepourcentage: number | null
+  remiseLivraison: runtime.Decimal | null
+  prixVente: runtime.Decimal | null
+  montantProduit: runtime.Decimal | null
+  beneficeDH: runtime.Decimal | null
+  benepourcentage: runtime.Decimal | null
   infinity: number | null
   avecRemise: boolean | null
   livraisonId: bigint | null
@@ -265,11 +265,11 @@ export type DetLivraisonGroupByOutputType = {
   id: bigint
   qteLivrer: number
   champsRouge: number
-  remiseLivraison: number
-  prixVente: number
-  montantProduit: number
-  beneficeDH: number
-  benepourcentage: number
+  remiseLivraison: runtime.Decimal
+  prixVente: runtime.Decimal
+  montantProduit: runtime.Decimal
+  beneficeDH: runtime.Decimal
+  benepourcentage: runtime.Decimal
   infinity: number
   avecRemise: boolean
   livraisonId: bigint
@@ -303,11 +303,11 @@ export type DetLivraisonWhereInput = {
   id?: Prisma.BigIntFilter<"DetLivraison"> | bigint | number
   qteLivrer?: Prisma.IntFilter<"DetLivraison"> | number
   champsRouge?: Prisma.IntFilter<"DetLivraison"> | number
-  remiseLivraison?: Prisma.FloatFilter<"DetLivraison"> | number
-  prixVente?: Prisma.FloatFilter<"DetLivraison"> | number
-  montantProduit?: Prisma.FloatFilter<"DetLivraison"> | number
-  beneficeDH?: Prisma.FloatFilter<"DetLivraison"> | number
-  benepourcentage?: Prisma.FloatFilter<"DetLivraison"> | number
+  remiseLivraison?: Prisma.DecimalFilter<"DetLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVente?: Prisma.DecimalFilter<"DetLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantProduit?: Prisma.DecimalFilter<"DetLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalFilter<"DetLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalFilter<"DetLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity?: Prisma.IntFilter<"DetLivraison"> | number
   avecRemise?: Prisma.BoolFilter<"DetLivraison"> | boolean
   livraisonId?: Prisma.BigIntFilter<"DetLivraison"> | bigint | number
@@ -340,11 +340,11 @@ export type DetLivraisonWhereUniqueInput = Prisma.AtLeast<{
   NOT?: Prisma.DetLivraisonWhereInput | Prisma.DetLivraisonWhereInput[]
   qteLivrer?: Prisma.IntFilter<"DetLivraison"> | number
   champsRouge?: Prisma.IntFilter<"DetLivraison"> | number
-  remiseLivraison?: Prisma.FloatFilter<"DetLivraison"> | number
-  prixVente?: Prisma.FloatFilter<"DetLivraison"> | number
-  montantProduit?: Prisma.FloatFilter<"DetLivraison"> | number
-  beneficeDH?: Prisma.FloatFilter<"DetLivraison"> | number
-  benepourcentage?: Prisma.FloatFilter<"DetLivraison"> | number
+  remiseLivraison?: Prisma.DecimalFilter<"DetLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVente?: Prisma.DecimalFilter<"DetLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantProduit?: Prisma.DecimalFilter<"DetLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalFilter<"DetLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalFilter<"DetLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity?: Prisma.IntFilter<"DetLivraison"> | number
   avecRemise?: Prisma.BoolFilter<"DetLivraison"> | boolean
   livraisonId?: Prisma.BigIntFilter<"DetLivraison"> | bigint | number
@@ -380,11 +380,11 @@ export type DetLivraisonScalarWhereWithAggregatesInput = {
   id?: Prisma.BigIntWithAggregatesFilter<"DetLivraison"> | bigint | number
   qteLivrer?: Prisma.IntWithAggregatesFilter<"DetLivraison"> | number
   champsRouge?: Prisma.IntWithAggregatesFilter<"DetLivraison"> | number
-  remiseLivraison?: Prisma.FloatWithAggregatesFilter<"DetLivraison"> | number
-  prixVente?: Prisma.FloatWithAggregatesFilter<"DetLivraison"> | number
-  montantProduit?: Prisma.FloatWithAggregatesFilter<"DetLivraison"> | number
-  beneficeDH?: Prisma.FloatWithAggregatesFilter<"DetLivraison"> | number
-  benepourcentage?: Prisma.FloatWithAggregatesFilter<"DetLivraison"> | number
+  remiseLivraison?: Prisma.DecimalWithAggregatesFilter<"DetLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVente?: Prisma.DecimalWithAggregatesFilter<"DetLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantProduit?: Prisma.DecimalWithAggregatesFilter<"DetLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalWithAggregatesFilter<"DetLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalWithAggregatesFilter<"DetLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity?: Prisma.IntWithAggregatesFilter<"DetLivraison"> | number
   avecRemise?: Prisma.BoolWithAggregatesFilter<"DetLivraison"> | boolean
   livraisonId?: Prisma.BigIntWithAggregatesFilter<"DetLivraison"> | bigint | number
@@ -395,11 +395,11 @@ export type DetLivraisonCreateInput = {
   id?: bigint | number
   qteLivrer: number
   champsRouge: number
-  remiseLivraison: number
-  prixVente: number
-  montantProduit: number
-  beneficeDH: number
-  benepourcentage: number
+  remiseLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVente: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage: runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity: number
   avecRemise: boolean
   livraison: Prisma.LivraisonCreateNestedOneWithoutDetLivraisonsInput
@@ -410,11 +410,11 @@ export type DetLivraisonUncheckedCreateInput = {
   id?: bigint | number
   qteLivrer: number
   champsRouge: number
-  remiseLivraison: number
-  prixVente: number
-  montantProduit: number
-  beneficeDH: number
-  benepourcentage: number
+  remiseLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVente: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage: runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity: number
   avecRemise: boolean
   livraisonId: bigint | number
@@ -425,11 +425,11 @@ export type DetLivraisonUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteLivrer?: Prisma.IntFieldUpdateOperationsInput | number
   champsRouge?: Prisma.IntFieldUpdateOperationsInput | number
-  remiseLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVente?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  beneficeDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  benepourcentage?: Prisma.FloatFieldUpdateOperationsInput | number
+  remiseLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVente?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
   livraison?: Prisma.LivraisonUpdateOneRequiredWithoutDetLivraisonsNestedInput
@@ -440,11 +440,11 @@ export type DetLivraisonUncheckedUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteLivrer?: Prisma.IntFieldUpdateOperationsInput | number
   champsRouge?: Prisma.IntFieldUpdateOperationsInput | number
-  remiseLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVente?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  beneficeDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  benepourcentage?: Prisma.FloatFieldUpdateOperationsInput | number
+  remiseLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVente?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
   livraisonId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
@@ -455,11 +455,11 @@ export type DetLivraisonCreateManyInput = {
   id?: bigint | number
   qteLivrer: number
   champsRouge: number
-  remiseLivraison: number
-  prixVente: number
-  montantProduit: number
-  beneficeDH: number
-  benepourcentage: number
+  remiseLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVente: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage: runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity: number
   avecRemise: boolean
   livraisonId: bigint | number
@@ -470,11 +470,11 @@ export type DetLivraisonUpdateManyMutationInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteLivrer?: Prisma.IntFieldUpdateOperationsInput | number
   champsRouge?: Prisma.IntFieldUpdateOperationsInput | number
-  remiseLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVente?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  beneficeDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  benepourcentage?: Prisma.FloatFieldUpdateOperationsInput | number
+  remiseLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVente?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
 }
@@ -483,11 +483,11 @@ export type DetLivraisonUncheckedUpdateManyInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteLivrer?: Prisma.IntFieldUpdateOperationsInput | number
   champsRouge?: Prisma.IntFieldUpdateOperationsInput | number
-  remiseLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVente?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  beneficeDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  benepourcentage?: Prisma.FloatFieldUpdateOperationsInput | number
+  remiseLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVente?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
   livraisonId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
@@ -665,11 +665,11 @@ export type DetLivraisonCreateWithoutStockInput = {
   id?: bigint | number
   qteLivrer: number
   champsRouge: number
-  remiseLivraison: number
-  prixVente: number
-  montantProduit: number
-  beneficeDH: number
-  benepourcentage: number
+  remiseLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVente: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage: runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity: number
   avecRemise: boolean
   livraison: Prisma.LivraisonCreateNestedOneWithoutDetLivraisonsInput
@@ -679,11 +679,11 @@ export type DetLivraisonUncheckedCreateWithoutStockInput = {
   id?: bigint | number
   qteLivrer: number
   champsRouge: number
-  remiseLivraison: number
-  prixVente: number
-  montantProduit: number
-  beneficeDH: number
-  benepourcentage: number
+  remiseLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVente: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage: runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity: number
   avecRemise: boolean
   livraisonId: bigint | number
@@ -722,11 +722,11 @@ export type DetLivraisonScalarWhereInput = {
   id?: Prisma.BigIntFilter<"DetLivraison"> | bigint | number
   qteLivrer?: Prisma.IntFilter<"DetLivraison"> | number
   champsRouge?: Prisma.IntFilter<"DetLivraison"> | number
-  remiseLivraison?: Prisma.FloatFilter<"DetLivraison"> | number
-  prixVente?: Prisma.FloatFilter<"DetLivraison"> | number
-  montantProduit?: Prisma.FloatFilter<"DetLivraison"> | number
-  beneficeDH?: Prisma.FloatFilter<"DetLivraison"> | number
-  benepourcentage?: Prisma.FloatFilter<"DetLivraison"> | number
+  remiseLivraison?: Prisma.DecimalFilter<"DetLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVente?: Prisma.DecimalFilter<"DetLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantProduit?: Prisma.DecimalFilter<"DetLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalFilter<"DetLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalFilter<"DetLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity?: Prisma.IntFilter<"DetLivraison"> | number
   avecRemise?: Prisma.BoolFilter<"DetLivraison"> | boolean
   livraisonId?: Prisma.BigIntFilter<"DetLivraison"> | bigint | number
@@ -737,11 +737,11 @@ export type DetLivraisonCreateWithoutLivraisonInput = {
   id?: bigint | number
   qteLivrer: number
   champsRouge: number
-  remiseLivraison: number
-  prixVente: number
-  montantProduit: number
-  beneficeDH: number
-  benepourcentage: number
+  remiseLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVente: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage: runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity: number
   avecRemise: boolean
   stock: Prisma.StockCreateNestedOneWithoutDetLivraisonsInput
@@ -751,11 +751,11 @@ export type DetLivraisonUncheckedCreateWithoutLivraisonInput = {
   id?: bigint | number
   qteLivrer: number
   champsRouge: number
-  remiseLivraison: number
-  prixVente: number
-  montantProduit: number
-  beneficeDH: number
-  benepourcentage: number
+  remiseLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVente: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage: runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity: number
   avecRemise: boolean
   stockId: bigint | number
@@ -791,11 +791,11 @@ export type DetLivraisonCreateManyStockInput = {
   id?: bigint | number
   qteLivrer: number
   champsRouge: number
-  remiseLivraison: number
-  prixVente: number
-  montantProduit: number
-  beneficeDH: number
-  benepourcentage: number
+  remiseLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVente: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage: runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity: number
   avecRemise: boolean
   livraisonId: bigint | number
@@ -805,11 +805,11 @@ export type DetLivraisonUpdateWithoutStockInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteLivrer?: Prisma.IntFieldUpdateOperationsInput | number
   champsRouge?: Prisma.IntFieldUpdateOperationsInput | number
-  remiseLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVente?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  beneficeDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  benepourcentage?: Prisma.FloatFieldUpdateOperationsInput | number
+  remiseLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVente?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
   livraison?: Prisma.LivraisonUpdateOneRequiredWithoutDetLivraisonsNestedInput
@@ -819,11 +819,11 @@ export type DetLivraisonUncheckedUpdateWithoutStockInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteLivrer?: Prisma.IntFieldUpdateOperationsInput | number
   champsRouge?: Prisma.IntFieldUpdateOperationsInput | number
-  remiseLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVente?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  beneficeDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  benepourcentage?: Prisma.FloatFieldUpdateOperationsInput | number
+  remiseLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVente?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
   livraisonId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
@@ -833,11 +833,11 @@ export type DetLivraisonUncheckedUpdateManyWithoutStockInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteLivrer?: Prisma.IntFieldUpdateOperationsInput | number
   champsRouge?: Prisma.IntFieldUpdateOperationsInput | number
-  remiseLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVente?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  beneficeDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  benepourcentage?: Prisma.FloatFieldUpdateOperationsInput | number
+  remiseLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVente?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
   livraisonId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
@@ -847,11 +847,11 @@ export type DetLivraisonCreateManyLivraisonInput = {
   id?: bigint | number
   qteLivrer: number
   champsRouge: number
-  remiseLivraison: number
-  prixVente: number
-  montantProduit: number
-  beneficeDH: number
-  benepourcentage: number
+  remiseLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVente: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage: runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity: number
   avecRemise: boolean
   stockId: bigint | number
@@ -861,11 +861,11 @@ export type DetLivraisonUpdateWithoutLivraisonInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteLivrer?: Prisma.IntFieldUpdateOperationsInput | number
   champsRouge?: Prisma.IntFieldUpdateOperationsInput | number
-  remiseLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVente?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  beneficeDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  benepourcentage?: Prisma.FloatFieldUpdateOperationsInput | number
+  remiseLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVente?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
   stock?: Prisma.StockUpdateOneRequiredWithoutDetLivraisonsNestedInput
@@ -875,11 +875,11 @@ export type DetLivraisonUncheckedUpdateWithoutLivraisonInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteLivrer?: Prisma.IntFieldUpdateOperationsInput | number
   champsRouge?: Prisma.IntFieldUpdateOperationsInput | number
-  remiseLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVente?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  beneficeDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  benepourcentage?: Prisma.FloatFieldUpdateOperationsInput | number
+  remiseLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVente?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
   stockId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
@@ -889,11 +889,11 @@ export type DetLivraisonUncheckedUpdateManyWithoutLivraisonInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteLivrer?: Prisma.IntFieldUpdateOperationsInput | number
   champsRouge?: Prisma.IntFieldUpdateOperationsInput | number
-  remiseLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVente?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  beneficeDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  benepourcentage?: Prisma.FloatFieldUpdateOperationsInput | number
+  remiseLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVente?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
   stockId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
@@ -951,11 +951,11 @@ export type $DetLivraisonPayload<ExtArgs extends runtime.Types.Extensions.Intern
     id: bigint
     qteLivrer: number
     champsRouge: number
-    remiseLivraison: number
-    prixVente: number
-    montantProduit: number
-    beneficeDH: number
-    benepourcentage: number
+    remiseLivraison: runtime.Decimal
+    prixVente: runtime.Decimal
+    montantProduit: runtime.Decimal
+    beneficeDH: runtime.Decimal
+    benepourcentage: runtime.Decimal
     infinity: number
     avecRemise: boolean
     livraisonId: bigint
@@ -1334,11 +1334,11 @@ export interface DetLivraisonFieldRefs {
   readonly id: Prisma.FieldRef<"DetLivraison", 'BigInt'>
   readonly qteLivrer: Prisma.FieldRef<"DetLivraison", 'Int'>
   readonly champsRouge: Prisma.FieldRef<"DetLivraison", 'Int'>
-  readonly remiseLivraison: Prisma.FieldRef<"DetLivraison", 'Float'>
-  readonly prixVente: Prisma.FieldRef<"DetLivraison", 'Float'>
-  readonly montantProduit: Prisma.FieldRef<"DetLivraison", 'Float'>
-  readonly beneficeDH: Prisma.FieldRef<"DetLivraison", 'Float'>
-  readonly benepourcentage: Prisma.FieldRef<"DetLivraison", 'Float'>
+  readonly remiseLivraison: Prisma.FieldRef<"DetLivraison", 'Decimal'>
+  readonly prixVente: Prisma.FieldRef<"DetLivraison", 'Decimal'>
+  readonly montantProduit: Prisma.FieldRef<"DetLivraison", 'Decimal'>
+  readonly beneficeDH: Prisma.FieldRef<"DetLivraison", 'Decimal'>
+  readonly benepourcentage: Prisma.FieldRef<"DetLivraison", 'Decimal'>
   readonly infinity: Prisma.FieldRef<"DetLivraison", 'Int'>
   readonly avecRemise: Prisma.FieldRef<"DetLivraison", 'Boolean'>
   readonly livraisonId: Prisma.FieldRef<"DetLivraison", 'BigInt'>

@@ -28,86 +28,86 @@ export type AggregateBilan = {
 
 export type BilanAvgAggregateOutputType = {
   id: number | null
-  stock: number | null
-  banque: number | null
-  caisse1: number | null
-  caisse2: number | null
-  actifDivers: number | null
-  capital: number | null
-  dgi: number | null
-  cnss: number | null
-  loyer: number | null
-  salaire: number | null
-  tva: number | null
-  chiffreAffaire: number | null
-  passifDivers: number | null
-  compteCourant: number | null
-  resultatPrecedent: number | null
-  resultat: number | null
+  stock: runtime.Decimal | null
+  banque: runtime.Decimal | null
+  caisse1: runtime.Decimal | null
+  caisse2: runtime.Decimal | null
+  actifDivers: runtime.Decimal | null
+  capital: runtime.Decimal | null
+  dgi: runtime.Decimal | null
+  cnss: runtime.Decimal | null
+  loyer: runtime.Decimal | null
+  salaire: runtime.Decimal | null
+  tva: runtime.Decimal | null
+  chiffreAffaire: runtime.Decimal | null
+  passifDivers: runtime.Decimal | null
+  compteCourant: runtime.Decimal | null
+  resultatPrecedent: runtime.Decimal | null
+  resultat: runtime.Decimal | null
 }
 
 export type BilanSumAggregateOutputType = {
   id: bigint | null
-  stock: number | null
-  banque: number | null
-  caisse1: number | null
-  caisse2: number | null
-  actifDivers: number | null
-  capital: number | null
-  dgi: number | null
-  cnss: number | null
-  loyer: number | null
-  salaire: number | null
-  tva: number | null
-  chiffreAffaire: number | null
-  passifDivers: number | null
-  compteCourant: number | null
-  resultatPrecedent: number | null
-  resultat: number | null
+  stock: runtime.Decimal | null
+  banque: runtime.Decimal | null
+  caisse1: runtime.Decimal | null
+  caisse2: runtime.Decimal | null
+  actifDivers: runtime.Decimal | null
+  capital: runtime.Decimal | null
+  dgi: runtime.Decimal | null
+  cnss: runtime.Decimal | null
+  loyer: runtime.Decimal | null
+  salaire: runtime.Decimal | null
+  tva: runtime.Decimal | null
+  chiffreAffaire: runtime.Decimal | null
+  passifDivers: runtime.Decimal | null
+  compteCourant: runtime.Decimal | null
+  resultatPrecedent: runtime.Decimal | null
+  resultat: runtime.Decimal | null
 }
 
 export type BilanMinAggregateOutputType = {
   id: bigint | null
   date1: Date | null
   date2: Date | null
-  stock: number | null
-  banque: number | null
-  caisse1: number | null
-  caisse2: number | null
-  actifDivers: number | null
-  capital: number | null
-  dgi: number | null
-  cnss: number | null
-  loyer: number | null
-  salaire: number | null
-  tva: number | null
-  chiffreAffaire: number | null
-  passifDivers: number | null
-  compteCourant: number | null
-  resultatPrecedent: number | null
-  resultat: number | null
+  stock: runtime.Decimal | null
+  banque: runtime.Decimal | null
+  caisse1: runtime.Decimal | null
+  caisse2: runtime.Decimal | null
+  actifDivers: runtime.Decimal | null
+  capital: runtime.Decimal | null
+  dgi: runtime.Decimal | null
+  cnss: runtime.Decimal | null
+  loyer: runtime.Decimal | null
+  salaire: runtime.Decimal | null
+  tva: runtime.Decimal | null
+  chiffreAffaire: runtime.Decimal | null
+  passifDivers: runtime.Decimal | null
+  compteCourant: runtime.Decimal | null
+  resultatPrecedent: runtime.Decimal | null
+  resultat: runtime.Decimal | null
 }
 
 export type BilanMaxAggregateOutputType = {
   id: bigint | null
   date1: Date | null
   date2: Date | null
-  stock: number | null
-  banque: number | null
-  caisse1: number | null
-  caisse2: number | null
-  actifDivers: number | null
-  capital: number | null
-  dgi: number | null
-  cnss: number | null
-  loyer: number | null
-  salaire: number | null
-  tva: number | null
-  chiffreAffaire: number | null
-  passifDivers: number | null
-  compteCourant: number | null
-  resultatPrecedent: number | null
-  resultat: number | null
+  stock: runtime.Decimal | null
+  banque: runtime.Decimal | null
+  caisse1: runtime.Decimal | null
+  caisse2: runtime.Decimal | null
+  actifDivers: runtime.Decimal | null
+  capital: runtime.Decimal | null
+  dgi: runtime.Decimal | null
+  cnss: runtime.Decimal | null
+  loyer: runtime.Decimal | null
+  salaire: runtime.Decimal | null
+  tva: runtime.Decimal | null
+  chiffreAffaire: runtime.Decimal | null
+  passifDivers: runtime.Decimal | null
+  compteCourant: runtime.Decimal | null
+  resultatPrecedent: runtime.Decimal | null
+  resultat: runtime.Decimal | null
 }
 
 export type BilanCountAggregateOutputType = {
@@ -331,22 +331,22 @@ export type BilanGroupByOutputType = {
   id: bigint
   date1: Date
   date2: Date
-  stock: number
-  banque: number
-  caisse1: number
-  caisse2: number
-  actifDivers: number
-  capital: number
-  dgi: number
-  cnss: number
-  loyer: number
-  salaire: number
-  tva: number
-  chiffreAffaire: number
-  passifDivers: number
-  compteCourant: number
-  resultatPrecedent: number
-  resultat: number
+  stock: runtime.Decimal
+  banque: runtime.Decimal
+  caisse1: runtime.Decimal
+  caisse2: runtime.Decimal
+  actifDivers: runtime.Decimal
+  capital: runtime.Decimal
+  dgi: runtime.Decimal
+  cnss: runtime.Decimal
+  loyer: runtime.Decimal
+  salaire: runtime.Decimal
+  tva: runtime.Decimal
+  chiffreAffaire: runtime.Decimal
+  passifDivers: runtime.Decimal
+  compteCourant: runtime.Decimal
+  resultatPrecedent: runtime.Decimal
+  resultat: runtime.Decimal
   _count: BilanCountAggregateOutputType | null
   _avg: BilanAvgAggregateOutputType | null
   _sum: BilanSumAggregateOutputType | null
@@ -376,22 +376,22 @@ export type BilanWhereInput = {
   id?: Prisma.BigIntFilter<"Bilan"> | bigint | number
   date1?: Prisma.DateTimeFilter<"Bilan"> | Date | string
   date2?: Prisma.DateTimeFilter<"Bilan"> | Date | string
-  stock?: Prisma.FloatFilter<"Bilan"> | number
-  banque?: Prisma.FloatFilter<"Bilan"> | number
-  caisse1?: Prisma.FloatFilter<"Bilan"> | number
-  caisse2?: Prisma.FloatFilter<"Bilan"> | number
-  actifDivers?: Prisma.FloatFilter<"Bilan"> | number
-  capital?: Prisma.FloatFilter<"Bilan"> | number
-  dgi?: Prisma.FloatFilter<"Bilan"> | number
-  cnss?: Prisma.FloatFilter<"Bilan"> | number
-  loyer?: Prisma.FloatFilter<"Bilan"> | number
-  salaire?: Prisma.FloatFilter<"Bilan"> | number
-  tva?: Prisma.FloatFilter<"Bilan"> | number
-  chiffreAffaire?: Prisma.FloatFilter<"Bilan"> | number
-  passifDivers?: Prisma.FloatFilter<"Bilan"> | number
-  compteCourant?: Prisma.FloatFilter<"Bilan"> | number
-  resultatPrecedent?: Prisma.FloatFilter<"Bilan"> | number
-  resultat?: Prisma.FloatFilter<"Bilan"> | number
+  stock?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  banque?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  caisse1?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  caisse2?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  actifDivers?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  capital?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dgi?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  cnss?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  loyer?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  salaire?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  chiffreAffaire?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  passifDivers?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  compteCourant?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  resultatPrecedent?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  resultat?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type BilanOrderByWithRelationInput = {
@@ -423,22 +423,22 @@ export type BilanWhereUniqueInput = Prisma.AtLeast<{
   NOT?: Prisma.BilanWhereInput | Prisma.BilanWhereInput[]
   date1?: Prisma.DateTimeFilter<"Bilan"> | Date | string
   date2?: Prisma.DateTimeFilter<"Bilan"> | Date | string
-  stock?: Prisma.FloatFilter<"Bilan"> | number
-  banque?: Prisma.FloatFilter<"Bilan"> | number
-  caisse1?: Prisma.FloatFilter<"Bilan"> | number
-  caisse2?: Prisma.FloatFilter<"Bilan"> | number
-  actifDivers?: Prisma.FloatFilter<"Bilan"> | number
-  capital?: Prisma.FloatFilter<"Bilan"> | number
-  dgi?: Prisma.FloatFilter<"Bilan"> | number
-  cnss?: Prisma.FloatFilter<"Bilan"> | number
-  loyer?: Prisma.FloatFilter<"Bilan"> | number
-  salaire?: Prisma.FloatFilter<"Bilan"> | number
-  tva?: Prisma.FloatFilter<"Bilan"> | number
-  chiffreAffaire?: Prisma.FloatFilter<"Bilan"> | number
-  passifDivers?: Prisma.FloatFilter<"Bilan"> | number
-  compteCourant?: Prisma.FloatFilter<"Bilan"> | number
-  resultatPrecedent?: Prisma.FloatFilter<"Bilan"> | number
-  resultat?: Prisma.FloatFilter<"Bilan"> | number
+  stock?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  banque?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  caisse1?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  caisse2?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  actifDivers?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  capital?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dgi?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  cnss?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  loyer?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  salaire?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  chiffreAffaire?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  passifDivers?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  compteCourant?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  resultatPrecedent?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  resultat?: Prisma.DecimalFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
 }, "id">
 
 export type BilanOrderByWithAggregationInput = {
@@ -475,176 +475,176 @@ export type BilanScalarWhereWithAggregatesInput = {
   id?: Prisma.BigIntWithAggregatesFilter<"Bilan"> | bigint | number
   date1?: Prisma.DateTimeWithAggregatesFilter<"Bilan"> | Date | string
   date2?: Prisma.DateTimeWithAggregatesFilter<"Bilan"> | Date | string
-  stock?: Prisma.FloatWithAggregatesFilter<"Bilan"> | number
-  banque?: Prisma.FloatWithAggregatesFilter<"Bilan"> | number
-  caisse1?: Prisma.FloatWithAggregatesFilter<"Bilan"> | number
-  caisse2?: Prisma.FloatWithAggregatesFilter<"Bilan"> | number
-  actifDivers?: Prisma.FloatWithAggregatesFilter<"Bilan"> | number
-  capital?: Prisma.FloatWithAggregatesFilter<"Bilan"> | number
-  dgi?: Prisma.FloatWithAggregatesFilter<"Bilan"> | number
-  cnss?: Prisma.FloatWithAggregatesFilter<"Bilan"> | number
-  loyer?: Prisma.FloatWithAggregatesFilter<"Bilan"> | number
-  salaire?: Prisma.FloatWithAggregatesFilter<"Bilan"> | number
-  tva?: Prisma.FloatWithAggregatesFilter<"Bilan"> | number
-  chiffreAffaire?: Prisma.FloatWithAggregatesFilter<"Bilan"> | number
-  passifDivers?: Prisma.FloatWithAggregatesFilter<"Bilan"> | number
-  compteCourant?: Prisma.FloatWithAggregatesFilter<"Bilan"> | number
-  resultatPrecedent?: Prisma.FloatWithAggregatesFilter<"Bilan"> | number
-  resultat?: Prisma.FloatWithAggregatesFilter<"Bilan"> | number
+  stock?: Prisma.DecimalWithAggregatesFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  banque?: Prisma.DecimalWithAggregatesFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  caisse1?: Prisma.DecimalWithAggregatesFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  caisse2?: Prisma.DecimalWithAggregatesFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  actifDivers?: Prisma.DecimalWithAggregatesFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  capital?: Prisma.DecimalWithAggregatesFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dgi?: Prisma.DecimalWithAggregatesFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  cnss?: Prisma.DecimalWithAggregatesFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  loyer?: Prisma.DecimalWithAggregatesFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  salaire?: Prisma.DecimalWithAggregatesFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalWithAggregatesFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  chiffreAffaire?: Prisma.DecimalWithAggregatesFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  passifDivers?: Prisma.DecimalWithAggregatesFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  compteCourant?: Prisma.DecimalWithAggregatesFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  resultatPrecedent?: Prisma.DecimalWithAggregatesFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  resultat?: Prisma.DecimalWithAggregatesFilter<"Bilan"> | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type BilanCreateInput = {
   id?: bigint | number
   date1: Date | string
   date2: Date | string
-  stock: number
-  banque: number
-  caisse1: number
-  caisse2: number
-  actifDivers: number
-  capital: number
-  dgi: number
-  cnss: number
-  loyer: number
-  salaire: number
-  tva: number
-  chiffreAffaire: number
-  passifDivers: number
-  compteCourant: number
-  resultatPrecedent: number
-  resultat: number
+  stock: runtime.Decimal | runtime.DecimalJsLike | number | string
+  banque: runtime.Decimal | runtime.DecimalJsLike | number | string
+  caisse1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  caisse2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  actifDivers: runtime.Decimal | runtime.DecimalJsLike | number | string
+  capital: runtime.Decimal | runtime.DecimalJsLike | number | string
+  dgi: runtime.Decimal | runtime.DecimalJsLike | number | string
+  cnss: runtime.Decimal | runtime.DecimalJsLike | number | string
+  loyer: runtime.Decimal | runtime.DecimalJsLike | number | string
+  salaire: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva: runtime.Decimal | runtime.DecimalJsLike | number | string
+  chiffreAffaire: runtime.Decimal | runtime.DecimalJsLike | number | string
+  passifDivers: runtime.Decimal | runtime.DecimalJsLike | number | string
+  compteCourant: runtime.Decimal | runtime.DecimalJsLike | number | string
+  resultatPrecedent: runtime.Decimal | runtime.DecimalJsLike | number | string
+  resultat: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type BilanUncheckedCreateInput = {
   id?: bigint | number
   date1: Date | string
   date2: Date | string
-  stock: number
-  banque: number
-  caisse1: number
-  caisse2: number
-  actifDivers: number
-  capital: number
-  dgi: number
-  cnss: number
-  loyer: number
-  salaire: number
-  tva: number
-  chiffreAffaire: number
-  passifDivers: number
-  compteCourant: number
-  resultatPrecedent: number
-  resultat: number
+  stock: runtime.Decimal | runtime.DecimalJsLike | number | string
+  banque: runtime.Decimal | runtime.DecimalJsLike | number | string
+  caisse1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  caisse2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  actifDivers: runtime.Decimal | runtime.DecimalJsLike | number | string
+  capital: runtime.Decimal | runtime.DecimalJsLike | number | string
+  dgi: runtime.Decimal | runtime.DecimalJsLike | number | string
+  cnss: runtime.Decimal | runtime.DecimalJsLike | number | string
+  loyer: runtime.Decimal | runtime.DecimalJsLike | number | string
+  salaire: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva: runtime.Decimal | runtime.DecimalJsLike | number | string
+  chiffreAffaire: runtime.Decimal | runtime.DecimalJsLike | number | string
+  passifDivers: runtime.Decimal | runtime.DecimalJsLike | number | string
+  compteCourant: runtime.Decimal | runtime.DecimalJsLike | number | string
+  resultatPrecedent: runtime.Decimal | runtime.DecimalJsLike | number | string
+  resultat: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type BilanUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   date1?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   date2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  stock?: Prisma.FloatFieldUpdateOperationsInput | number
-  banque?: Prisma.FloatFieldUpdateOperationsInput | number
-  caisse1?: Prisma.FloatFieldUpdateOperationsInput | number
-  caisse2?: Prisma.FloatFieldUpdateOperationsInput | number
-  actifDivers?: Prisma.FloatFieldUpdateOperationsInput | number
-  capital?: Prisma.FloatFieldUpdateOperationsInput | number
-  dgi?: Prisma.FloatFieldUpdateOperationsInput | number
-  cnss?: Prisma.FloatFieldUpdateOperationsInput | number
-  loyer?: Prisma.FloatFieldUpdateOperationsInput | number
-  salaire?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva?: Prisma.FloatFieldUpdateOperationsInput | number
-  chiffreAffaire?: Prisma.FloatFieldUpdateOperationsInput | number
-  passifDivers?: Prisma.FloatFieldUpdateOperationsInput | number
-  compteCourant?: Prisma.FloatFieldUpdateOperationsInput | number
-  resultatPrecedent?: Prisma.FloatFieldUpdateOperationsInput | number
-  resultat?: Prisma.FloatFieldUpdateOperationsInput | number
+  stock?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  banque?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  caisse1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  caisse2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  actifDivers?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  capital?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dgi?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  cnss?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  loyer?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  chiffreAffaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  passifDivers?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  compteCourant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  resultatPrecedent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  resultat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type BilanUncheckedUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   date1?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   date2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  stock?: Prisma.FloatFieldUpdateOperationsInput | number
-  banque?: Prisma.FloatFieldUpdateOperationsInput | number
-  caisse1?: Prisma.FloatFieldUpdateOperationsInput | number
-  caisse2?: Prisma.FloatFieldUpdateOperationsInput | number
-  actifDivers?: Prisma.FloatFieldUpdateOperationsInput | number
-  capital?: Prisma.FloatFieldUpdateOperationsInput | number
-  dgi?: Prisma.FloatFieldUpdateOperationsInput | number
-  cnss?: Prisma.FloatFieldUpdateOperationsInput | number
-  loyer?: Prisma.FloatFieldUpdateOperationsInput | number
-  salaire?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva?: Prisma.FloatFieldUpdateOperationsInput | number
-  chiffreAffaire?: Prisma.FloatFieldUpdateOperationsInput | number
-  passifDivers?: Prisma.FloatFieldUpdateOperationsInput | number
-  compteCourant?: Prisma.FloatFieldUpdateOperationsInput | number
-  resultatPrecedent?: Prisma.FloatFieldUpdateOperationsInput | number
-  resultat?: Prisma.FloatFieldUpdateOperationsInput | number
+  stock?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  banque?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  caisse1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  caisse2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  actifDivers?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  capital?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dgi?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  cnss?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  loyer?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  chiffreAffaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  passifDivers?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  compteCourant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  resultatPrecedent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  resultat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type BilanCreateManyInput = {
   id?: bigint | number
   date1: Date | string
   date2: Date | string
-  stock: number
-  banque: number
-  caisse1: number
-  caisse2: number
-  actifDivers: number
-  capital: number
-  dgi: number
-  cnss: number
-  loyer: number
-  salaire: number
-  tva: number
-  chiffreAffaire: number
-  passifDivers: number
-  compteCourant: number
-  resultatPrecedent: number
-  resultat: number
+  stock: runtime.Decimal | runtime.DecimalJsLike | number | string
+  banque: runtime.Decimal | runtime.DecimalJsLike | number | string
+  caisse1: runtime.Decimal | runtime.DecimalJsLike | number | string
+  caisse2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  actifDivers: runtime.Decimal | runtime.DecimalJsLike | number | string
+  capital: runtime.Decimal | runtime.DecimalJsLike | number | string
+  dgi: runtime.Decimal | runtime.DecimalJsLike | number | string
+  cnss: runtime.Decimal | runtime.DecimalJsLike | number | string
+  loyer: runtime.Decimal | runtime.DecimalJsLike | number | string
+  salaire: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva: runtime.Decimal | runtime.DecimalJsLike | number | string
+  chiffreAffaire: runtime.Decimal | runtime.DecimalJsLike | number | string
+  passifDivers: runtime.Decimal | runtime.DecimalJsLike | number | string
+  compteCourant: runtime.Decimal | runtime.DecimalJsLike | number | string
+  resultatPrecedent: runtime.Decimal | runtime.DecimalJsLike | number | string
+  resultat: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type BilanUpdateManyMutationInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   date1?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   date2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  stock?: Prisma.FloatFieldUpdateOperationsInput | number
-  banque?: Prisma.FloatFieldUpdateOperationsInput | number
-  caisse1?: Prisma.FloatFieldUpdateOperationsInput | number
-  caisse2?: Prisma.FloatFieldUpdateOperationsInput | number
-  actifDivers?: Prisma.FloatFieldUpdateOperationsInput | number
-  capital?: Prisma.FloatFieldUpdateOperationsInput | number
-  dgi?: Prisma.FloatFieldUpdateOperationsInput | number
-  cnss?: Prisma.FloatFieldUpdateOperationsInput | number
-  loyer?: Prisma.FloatFieldUpdateOperationsInput | number
-  salaire?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva?: Prisma.FloatFieldUpdateOperationsInput | number
-  chiffreAffaire?: Prisma.FloatFieldUpdateOperationsInput | number
-  passifDivers?: Prisma.FloatFieldUpdateOperationsInput | number
-  compteCourant?: Prisma.FloatFieldUpdateOperationsInput | number
-  resultatPrecedent?: Prisma.FloatFieldUpdateOperationsInput | number
-  resultat?: Prisma.FloatFieldUpdateOperationsInput | number
+  stock?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  banque?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  caisse1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  caisse2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  actifDivers?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  capital?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dgi?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  cnss?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  loyer?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  chiffreAffaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  passifDivers?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  compteCourant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  resultatPrecedent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  resultat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type BilanUncheckedUpdateManyInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   date1?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   date2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  stock?: Prisma.FloatFieldUpdateOperationsInput | number
-  banque?: Prisma.FloatFieldUpdateOperationsInput | number
-  caisse1?: Prisma.FloatFieldUpdateOperationsInput | number
-  caisse2?: Prisma.FloatFieldUpdateOperationsInput | number
-  actifDivers?: Prisma.FloatFieldUpdateOperationsInput | number
-  capital?: Prisma.FloatFieldUpdateOperationsInput | number
-  dgi?: Prisma.FloatFieldUpdateOperationsInput | number
-  cnss?: Prisma.FloatFieldUpdateOperationsInput | number
-  loyer?: Prisma.FloatFieldUpdateOperationsInput | number
-  salaire?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva?: Prisma.FloatFieldUpdateOperationsInput | number
-  chiffreAffaire?: Prisma.FloatFieldUpdateOperationsInput | number
-  passifDivers?: Prisma.FloatFieldUpdateOperationsInput | number
-  compteCourant?: Prisma.FloatFieldUpdateOperationsInput | number
-  resultatPrecedent?: Prisma.FloatFieldUpdateOperationsInput | number
-  resultat?: Prisma.FloatFieldUpdateOperationsInput | number
+  stock?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  banque?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  caisse1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  caisse2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  actifDivers?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  capital?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dgi?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  cnss?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  loyer?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  chiffreAffaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  passifDivers?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  compteCourant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  resultatPrecedent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  resultat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type BilanCountOrderByAggregateInput = {
@@ -810,22 +810,22 @@ export type $BilanPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs 
     id: bigint
     date1: Date
     date2: Date
-    stock: number
-    banque: number
-    caisse1: number
-    caisse2: number
-    actifDivers: number
-    capital: number
-    dgi: number
-    cnss: number
-    loyer: number
-    salaire: number
-    tva: number
-    chiffreAffaire: number
-    passifDivers: number
-    compteCourant: number
-    resultatPrecedent: number
-    resultat: number
+    stock: runtime.Decimal
+    banque: runtime.Decimal
+    caisse1: runtime.Decimal
+    caisse2: runtime.Decimal
+    actifDivers: runtime.Decimal
+    capital: runtime.Decimal
+    dgi: runtime.Decimal
+    cnss: runtime.Decimal
+    loyer: runtime.Decimal
+    salaire: runtime.Decimal
+    tva: runtime.Decimal
+    chiffreAffaire: runtime.Decimal
+    passifDivers: runtime.Decimal
+    compteCourant: runtime.Decimal
+    resultatPrecedent: runtime.Decimal
+    resultat: runtime.Decimal
   }, ExtArgs["result"]["bilan"]>
   composites: {}
 }
@@ -1198,22 +1198,22 @@ export interface BilanFieldRefs {
   readonly id: Prisma.FieldRef<"Bilan", 'BigInt'>
   readonly date1: Prisma.FieldRef<"Bilan", 'DateTime'>
   readonly date2: Prisma.FieldRef<"Bilan", 'DateTime'>
-  readonly stock: Prisma.FieldRef<"Bilan", 'Float'>
-  readonly banque: Prisma.FieldRef<"Bilan", 'Float'>
-  readonly caisse1: Prisma.FieldRef<"Bilan", 'Float'>
-  readonly caisse2: Prisma.FieldRef<"Bilan", 'Float'>
-  readonly actifDivers: Prisma.FieldRef<"Bilan", 'Float'>
-  readonly capital: Prisma.FieldRef<"Bilan", 'Float'>
-  readonly dgi: Prisma.FieldRef<"Bilan", 'Float'>
-  readonly cnss: Prisma.FieldRef<"Bilan", 'Float'>
-  readonly loyer: Prisma.FieldRef<"Bilan", 'Float'>
-  readonly salaire: Prisma.FieldRef<"Bilan", 'Float'>
-  readonly tva: Prisma.FieldRef<"Bilan", 'Float'>
-  readonly chiffreAffaire: Prisma.FieldRef<"Bilan", 'Float'>
-  readonly passifDivers: Prisma.FieldRef<"Bilan", 'Float'>
-  readonly compteCourant: Prisma.FieldRef<"Bilan", 'Float'>
-  readonly resultatPrecedent: Prisma.FieldRef<"Bilan", 'Float'>
-  readonly resultat: Prisma.FieldRef<"Bilan", 'Float'>
+  readonly stock: Prisma.FieldRef<"Bilan", 'Decimal'>
+  readonly banque: Prisma.FieldRef<"Bilan", 'Decimal'>
+  readonly caisse1: Prisma.FieldRef<"Bilan", 'Decimal'>
+  readonly caisse2: Prisma.FieldRef<"Bilan", 'Decimal'>
+  readonly actifDivers: Prisma.FieldRef<"Bilan", 'Decimal'>
+  readonly capital: Prisma.FieldRef<"Bilan", 'Decimal'>
+  readonly dgi: Prisma.FieldRef<"Bilan", 'Decimal'>
+  readonly cnss: Prisma.FieldRef<"Bilan", 'Decimal'>
+  readonly loyer: Prisma.FieldRef<"Bilan", 'Decimal'>
+  readonly salaire: Prisma.FieldRef<"Bilan", 'Decimal'>
+  readonly tva: Prisma.FieldRef<"Bilan", 'Decimal'>
+  readonly chiffreAffaire: Prisma.FieldRef<"Bilan", 'Decimal'>
+  readonly passifDivers: Prisma.FieldRef<"Bilan", 'Decimal'>
+  readonly compteCourant: Prisma.FieldRef<"Bilan", 'Decimal'>
+  readonly resultatPrecedent: Prisma.FieldRef<"Bilan", 'Decimal'>
+  readonly resultat: Prisma.FieldRef<"Bilan", 'Decimal'>
 }
     
 

@@ -50,8 +50,8 @@ model Personnel {
   tel2             				      String
   adresse         				      String
   email           				      String
-  dateEntrer      				      DateTime
-  salaire         				      Float
+  dateEntrer      				      DateTime @db.Date
+  salaire         				      Decimal @db.Decimal(10, 2)
   archiver              		    Boolean @default(false)
   supprimer              		    Boolean @default(false)
   absencesOperation         		Absence[] @relation("personnelOperationAbsence")
@@ -90,7 +90,7 @@ model Etablissement {
   fromMail        				      String
   userMail        				      String
   capitale        				      Int
-  pourcentageLiv  				      Float
+  pourcentageLiv  				      Decimal @db.Decimal(10, 2)
   lienDbDump      			    	  String
   lienBackupDB   			 	        String
   lundi           				      Boolean @default(false)
@@ -109,15 +109,15 @@ model Etablissement {
 
 model Prime {
   id              				      BigInt    					            @id @default(autoincrement())
-  montant         				      Float
-  prime           				      Float
+  montant         				      Decimal @db.Decimal(10, 2)
+  prime           				      Decimal @db.Decimal(10, 2)
 }
 
 model ParamCommiss {
   id              				      BigInt    					            @id @default(autoincrement())
-  mntDepart         			      Float
-  mntFin           				      Float
-  pourc           				      Float
+  mntDepart         			      Decimal @db.Decimal(10, 2)
+  mntFin           				      Decimal @db.Decimal(10, 2)
+  pourc           				      Decimal @db.Decimal(10, 2)
 }
 
 model Repertoire {
@@ -137,7 +137,7 @@ model Repertoire {
    sysDate         				      DateTime
    observation     				      String
    nbrOperationClient 			    Int
-   plafond   			              Float
+   plafond   			              Decimal @db.Decimal(10, 2)
    personnel         			      Personnel?  			          @relation(fields: [personnelId], references: [id])
    personnelId    				      BigInt?
    ville           				      Ville?     				          @relation(fields: [villeId], references: [id])
@@ -158,38 +158,38 @@ model Stock {
   id              				      BigInt    					            @id @default(autoincrement())
   designation         			   	String
   sysDate             			    DateTime
-  pahtGrossiste           		  Float
-  prixCommercial           		 	Float
-  tva           				        Float
-  pattc           				      Float
-  pvttc           				      Float
-  pvaht           				      Float
-  benifice           			      Float
+  pahtGrossiste           		  Decimal @db.Decimal(10, 2)
+  prixCommercial           		 	Decimal @db.Decimal(10, 2)
+  tva           				        Decimal @db.Decimal(10, 2)
+  pattc           				      Decimal @db.Decimal(10, 2)
+  pvttc           				      Decimal @db.Decimal(10, 2)
+  pvaht           				      Decimal @db.Decimal(10, 2)
+  benifice           			      Decimal @db.Decimal(10, 2)
   qteStock        				      Int
   qtePVMin1        				      Int
   qtePVMin2        				      Int
   qtePVMin3        				      Int
   qtePVMin4        				      Int
   qteFacturer        			      Int
-  prixVentMin1           		    Float
-  prixVentMin2           		    Float
-  prixVentMin3           		    Float
-  prixVentMin4          	 	    Float
-  remiseMax1             		    Float
-  remiseMax2           			    Float
-  remiseMax3           			    Float
-  remiseMax4           			    Float
-  prixImport            		    Float
-  commission            		    Float
+  prixVentMin1           		    Decimal @db.Decimal(10, 2)
+  prixVentMin2           		    Decimal @db.Decimal(10, 2)
+  prixVentMin3           		    Decimal @db.Decimal(10, 2)
+  prixVentMin4          	 	    Decimal @db.Decimal(10, 2)
+  remiseMax1             		    Decimal @db.Decimal(10, 2)
+  remiseMax2           			    Decimal @db.Decimal(10, 2)
+  remiseMax3           			    Decimal @db.Decimal(10, 2)
+  remiseMax4           			    Decimal @db.Decimal(10, 2)
+  prixImport            		    Decimal @db.Decimal(10, 2)
+  commission            		    Decimal @db.Decimal(10, 2)
   archiver              		    Boolean @default(false)
   supprimer              		    Boolean @default(false)
   qteStockImport              	Int
-  montant1       			          Float
-  montant2       			          Float
-  montant3       			          Float
-  prime1       			            Float
-  prime2       			            Float
-  prime3       			            Float
+  montant1       			          Decimal @db.Decimal(10, 2)
+  montant2       			          Decimal @db.Decimal(10, 2)
+  montant3       			          Decimal @db.Decimal(10, 2)
+  prime1       			            Decimal @db.Decimal(10, 2)
+  prime2       			            Decimal @db.Decimal(10, 2)
+  prime3       			            Decimal @db.Decimal(10, 2)
   fournisseur        			      Fournisseur          	        @relation(fields: [fournisseurId], references: [id])
   fournisseurId      			      BigInt
   detAchatFactures   			      DetAchatFacture[]
@@ -205,7 +205,7 @@ model Stock {
 model StockDepot {
   id              				      BigInt    					              @id @default(autoincrement())
   qteStockDepot   				      Int
-  dateOperation   				      DateTime
+  dateOperation   				      DateTime @db.Date
   dateSys  				              DateTime
   stock         				        Stock     				                @relation(fields: [stockId], references: [id])
   stockId       				        BigInt
@@ -223,7 +223,7 @@ model Employe {
   email           				      String
   typeUser        				      Int 
   etatCompte      				      Boolean @default(false)
-  validationMnt   				      Float
+  validationMnt   				      Decimal @db.Decimal(10, 2)
   motPassFake     				      String
   commercial      				      Boolean @default(false)
   pvLibre         				      Boolean @default(false)
@@ -290,7 +290,7 @@ model Droit {
 
 model Absence {
   id              				      	BigInt    					            @id @default(autoincrement())
-  dateAbsence          				    DateTime
+  dateAbsence          				    DateTime @db.Date
   matin          				      	  Boolean @default(false)
   apresMidi      				      	  Boolean @default(false)
   dateOperation  				      	  DateTime
@@ -304,53 +304,53 @@ model AchatFacture {
   id              				      	BigInt    					            @id @default(autoincrement())
   codeAF         				      	  String
   numAchat       				      	  Int
-  dateAF         				      	  DateTime
+  dateAF         				      	  DateTime @db.Date
   sysDate       				      	  DateTime
-  dateAvances   				      	  DateTime
-  mantantAvancs  				      	  Float
+  dateAvances   				      	  DateTime @db.Date
+  mantantAvancs  				      	  Decimal @db.Decimal(10, 2)
   prixNormalAchatHt  				      Int
   numeroFacExterne  				      String
   numeroIF      				      	  String
-  mantantAF      				      	  Float
-  mantantBFBenefice  				      Float
-  montantNonTaxable  				      Float
-  dateReglement  				      	  DateTime
+  mantantAF      				      	  Decimal @db.Decimal(10, 2)
+  mantantBFBenefice  				      Decimal @db.Decimal(10, 2)
+  montantNonTaxable  				      Decimal @db.Decimal(10, 2)
+  dateReglement  				      	  DateTime @db.Date
   typeReglment   				      	  Int
   typePaiement   				      	  String
   numCheque      				      	  String
-  mantantTotHT   				      	  Float
-  mantantTotHTVA  				      	Float
-  mantantTotTTC  				      	  Float
-  tva20         				      	  Float
-  tva7          				      	  Float
-  tvaArbtraire  				      	  Float
+  mantantTotHT   				      	  Decimal @db.Decimal(10, 2)
+  mantantTotHTVA  				      	Decimal @db.Decimal(10, 2)
+  mantantTotTTC  				      	  Decimal @db.Decimal(10, 2)
+  tva20         				      	  Decimal @db.Decimal(10, 2)
+  tva7          				      	  Decimal @db.Decimal(10, 2)
+  tvaArbtraire  				      	  Decimal @db.Decimal(10, 2)
   manuelAutoMatique  				      Int
-  mntManuelTva7  				      	  Float
-  mntManuelTva10  				      	Float
-  mntManuelTva12  				      	Float
-  mntManuelTva13  				      	Float
-  mntManuelTva14  				      	Float
-  mntManuelTva20  				      	Float
-  montantTVA7   				      	  Float
-  montantTVA10  				      	  Float
-  montantTVA12  				      	  Float
-  montantTVA13  				      	  Float
-  montantTVA14  				      	  Float
-  montantTVA20  				      	  Float
-  mntHtTVA7     				      	  Float
-  mntHtTVA10    				      	  Float
-  mntHtTVA12    				      	  Float
-  mntHtTVA13    				      	  Float
-  mntHtTVA14    				      	  Float
-  mntHtTVA20    				      	  Float
-  mntTtcTVA7    				      	  Float
-  mntTtcTVA10   				      	  Float
-  mntTtcTVA12   				      	  Float
-  mntTtcTVA13   				      	  Float
-  mntTtcTVA14   				      	  Float
-  mntTtcTVA20   				      	  Float
-  mntTtc        				      	  Float
-  montantDroitSupplementaire  		Float
+  mntManuelTva7  				      	  Decimal @db.Decimal(10, 2)
+  mntManuelTva10  				      	Decimal @db.Decimal(10, 2)
+  mntManuelTva12  				      	Decimal @db.Decimal(10, 2)
+  mntManuelTva13  				      	Decimal @db.Decimal(10, 2)
+  mntManuelTva14  				      	Decimal @db.Decimal(10, 2)
+  mntManuelTva20  				      	Decimal @db.Decimal(10, 2)
+  montantTVA7   				      	  Decimal @db.Decimal(10, 2)
+  montantTVA10  				      	  Decimal @db.Decimal(10, 2)
+  montantTVA12  				      	  Decimal @db.Decimal(10, 2)
+  montantTVA13  				      	  Decimal @db.Decimal(10, 2)
+  montantTVA14  				      	  Decimal @db.Decimal(10, 2)
+  montantTVA20  				      	  Decimal @db.Decimal(10, 2)
+  mntHtTVA7     				      	  Decimal @db.Decimal(10, 2)
+  mntHtTVA10    				      	  Decimal @db.Decimal(10, 2)
+  mntHtTVA12    				      	  Decimal @db.Decimal(10, 2)
+  mntHtTVA13    				      	  Decimal @db.Decimal(10, 2)
+  mntHtTVA14    				      	  Decimal @db.Decimal(10, 2)
+  mntHtTVA20    				      	  Decimal @db.Decimal(10, 2)
+  mntTtcTVA7    				      	  Decimal @db.Decimal(10, 2)
+  mntTtcTVA10   				      	  Decimal @db.Decimal(10, 2)
+  mntTtcTVA12   				      	  Decimal @db.Decimal(10, 2)
+  mntTtcTVA13   				      	  Decimal @db.Decimal(10, 2)
+  mntTtcTVA14   				      	  Decimal @db.Decimal(10, 2)
+  mntTtcTVA20   				      	  Decimal @db.Decimal(10, 2)
+  mntTtc        				      	  Decimal @db.Decimal(10, 2)
+  montantDroitSupplementaire  		Decimal @db.Decimal(10, 2)
   disabledHT    				      	  Boolean @default(false)
   disabledManuel  				      	Boolean @default(false)
   detAchatFactures  				      DetAchatFacture[]
@@ -360,57 +360,57 @@ model AchatLivraison {
   id              				      	BigInt    					           @id @default(autoincrement())
   codeAL        				      	  String
   numAchat       				      	  Int
-  dateAL         				      	  DateTime
+  dateAL         				      	  DateTime @db.Date
   sysDate       				      	  DateTime
   prixNormalAchatHt  				      Int
   numeroBlExterne  				    	  String
-  mantantAL      				      	  Float
-  mantantALTTC   				      	  Float
-  mantantALTVA20  				      	Float
-  mantantALTVA7   				      	Float
-  totalMantantALTVA  				      Float
-  mantantBFBenefice  				      Float
-  montantTVA7   				      	  Float
-  montantTVA10  				      	  Float
-  montantTVA14  				      	  Float
-  montantTVA20  				      	  Float
+  mantantAL      				      	  Decimal @db.Decimal(10, 2)
+  mantantALTTC   				      	  Decimal @db.Decimal(10, 2)
+  mantantALTVA20  				      	Decimal @db.Decimal(10, 2)
+  mantantALTVA7   				      	Decimal @db.Decimal(10, 2)
+  totalMantantALTVA  				      Decimal @db.Decimal(10, 2)
+  mantantBFBenefice  				      Decimal @db.Decimal(10, 2)
+  montantTVA7   				      	  Decimal @db.Decimal(10, 2)
+  montantTVA10  				      	  Decimal @db.Decimal(10, 2)
+  montantTVA14  				      	  Decimal @db.Decimal(10, 2)
+  montantTVA20  				      	  Decimal @db.Decimal(10, 2)
   detAchatLivraisons              DetAchatLivraison[]
 }
 
 model Balance {
   id              				      	BigInt    					           @id @default(autoincrement())
-  dateBalance          				    DateTime
+  dateBalance          				    DateTime @db.Date
   nature        				      	  String
-  debitPrec     				      	  Float
-  creditPrec    				      	  Float
-  debit         				      	  Float
-  credit        				      	  Float
-  soldeDebiteur  				      	  Float
-  soldeCrediteur  				      	Float
+  debitPrec     				      	  Decimal @db.Decimal(10, 2)
+  creditPrec    				      	  Decimal @db.Decimal(10, 2)
+  debit         				      	  Decimal @db.Decimal(10, 2)
+  credit        				      	  Decimal @db.Decimal(10, 2)
+  soldeDebiteur  				      	  Decimal @db.Decimal(10, 2)
+  soldeCrediteur  				      	Decimal @db.Decimal(10, 2)
   planComptable  				      	  PlanComptable  			          @relation(fields: [planComptableId], references: [id])
   planComptableId  			      		BigInt
 }
 
 model Bilan {
   id              				      	BigInt    					           @id @default(autoincrement())
-  date1         				      	  DateTime
-  date2         				      	  DateTime
-  stock        				      		  Float
-  banque       				      		  Float
-  caisse1      				      		  Float
-  caisse2      				      		  Float
-  actifDivers  				      		  Float
-  capital      				      		  Float
-  dgi          				      		  Float
-  cnss         				      		  Float
-  loyer        				      		  Float
-  salaire      				      		  Float
-  tva          				      		  Float
-  chiffreAffaire  				      	Float
-  passifDivers  				      	  Float
-  compteCourant  				      	  Float
-  resultatPrecedent  				      Float
-  resultat     				      		  Float
+  date1         				      	  DateTime @db.Date
+  date2         				      	  DateTime @db.Date
+  stock        				      		  Decimal @db.Decimal(10, 2)
+  banque       				      		  Decimal @db.Decimal(10, 2)
+  caisse1      				      		  Decimal @db.Decimal(10, 2)
+  caisse2      				      		  Decimal @db.Decimal(10, 2)
+  actifDivers  				      		  Decimal @db.Decimal(10, 2)
+  capital      				      		  Decimal @db.Decimal(10, 2)
+  dgi          				      		  Decimal @db.Decimal(10, 2)
+  cnss         				      		  Decimal @db.Decimal(10, 2)
+  loyer        				      		  Decimal @db.Decimal(10, 2)
+  salaire      				      		  Decimal @db.Decimal(10, 2)
+  tva          				      		  Decimal @db.Decimal(10, 2)
+  chiffreAffaire  				      	Decimal @db.Decimal(10, 2)
+  passifDivers  				      	  Decimal @db.Decimal(10, 2)
+  compteCourant  				      	  Decimal @db.Decimal(10, 2)
+  resultatPrecedent  				      Decimal @db.Decimal(10, 2)
+  resultat     				      		  Decimal @db.Decimal(10, 2)
 }
 
 model BonSortie {
@@ -418,7 +418,7 @@ model BonSortie {
   numSortie       				      	Int
   codeSortie     				      	  String
   dateOperation  				      	  DateTime
-  mnt           				      	  Float
+  mnt           				      	  Decimal @db.Decimal(10, 2)
   employe       				      	  Employe     				      	  @relation(fields: [employeId], references: [id])
   employeId     				      	  BigInt
   repertoire    				      	  Repertoire  			            @relation(fields: [repertoireId], references: [id])
@@ -432,30 +432,30 @@ model BulttinPai {
   observation   				      	String
   numbultin     				      	Int
   dateOperation  				      	DateTime
-  dateDebut     				      	DateTime
-  dateFin       				      	DateTime
+  dateDebut     				      	DateTime @db.Date
+  dateFin       				      	DateTime @db.Date
   idTypeBultinPai  				    	Int
-  salairefx     				      	Float
-  commission    				      	Float
-  frais         				      	Float
-  total         				      	Float
-  totalMntVendue  				    	Float
-  totalMntVendueProduit  		    	Float
-  totalMntVendueLivraison  		  		Float
-  mntNegative   				      	Float
-  mntNegativeProduit  			    	Float
-  mntNegativeLivraison  			  	Float
-  mntCNSS       				      	Float
-  mntPenalite   				      	Float
-  mntBenefice   				      	Float
-  commissionParProduit  			    Float
-  primeSpecial  				      	Float
-  fraisSupp     				      	Float
-  primeCommercial  				    	Float
+  salairefx     				      	Decimal @db.Decimal(10, 2)
+  commission    				      	Decimal @db.Decimal(10, 2)
+  frais         				      	Decimal @db.Decimal(10, 2)
+  total         				      	Decimal @db.Decimal(10, 2)
+  totalMntVendue  				    	Decimal @db.Decimal(10, 2)
+  totalMntVendueProduit  		    	Decimal @db.Decimal(10, 2)
+  totalMntVendueLivraison  		  		Decimal @db.Decimal(10, 2)
+  mntNegative   				      	Decimal @db.Decimal(10, 2)
+  mntNegativeProduit  			    	Decimal @db.Decimal(10, 2)
+  mntNegativeLivraison  			  	Decimal @db.Decimal(10, 2)
+  mntCNSS       				      	Decimal @db.Decimal(10, 2)
+  mntPenalite   				      	Decimal @db.Decimal(10, 2)
+  mntBenefice   				      	Decimal @db.Decimal(10, 2)
+  commissionParProduit  			    Decimal @db.Decimal(10, 2)
+  primeSpecial  				      	Decimal @db.Decimal(10, 2)
+  fraisSupp     				      	Decimal @db.Decimal(10, 2)
+  primeCommercial  				    	Decimal @db.Decimal(10, 2)
   externe       				      	Boolean
-  totalMntVenduePrixCommercial  	  	Float
-  totalMntVendueSansPrixCommercial  	Float
-  primeProduit  				      	Float
+  totalMntVenduePrixCommercial  	  	Decimal @db.Decimal(10, 2)
+  totalMntVendueSansPrixCommercial  	Decimal @db.Decimal(10, 2)
+  primeProduit  				      	Decimal @db.Decimal(10, 2)
   commercail    				      	Repertoire  			            @relation(fields: [commercailId], references: [id])
   commercailId  				      	BigInt
   employeOperateur  				    Employe     				      	@relation(fields: [employeOperateurId], references: [id])
@@ -466,7 +466,7 @@ model BulttinPai {
 
 model Caisse {
   id              				      BigInt    					           @id @default(autoincrement())
-  montant        				      	Float
+  montant        				      	Decimal @db.Decimal(10, 2)
   dateOperation  				      	DateTime
   type          				      	Int
 }
@@ -475,9 +475,9 @@ model Cheque {
   id              				      BigInt    					           @id @default(autoincrement())
   numero        				      	String
   codeCheque     				      	String
-  dateCheque     				      	DateTime
+  dateCheque     				      	DateTime @db.Date
   typeRepertoire  				    	Int
-  montant       				      	Float
+  montant       				      	Decimal @db.Decimal(10, 2)
   typePersoScte  				    	  Int
   numCheque     				      	Int
   etatcheque    				      	Boolean @default(false)
@@ -490,37 +490,37 @@ model Cheque {
 
 model Compta {
   id              				      BigInt    					           @id @default(autoincrement())
-  dateDebut     				      	DateTime
-  dateFin       				      	DateTime
-  montantTVAPrecedent  			    Float
-  montantTVAAchat  				    	Float
-  montantTVAVente  				    	Float
-  resutMnt      				      	Float
+  dateDebut     				      	DateTime @db.Date
+  dateFin       				      	DateTime @db.Date
+  montantTVAPrecedent  			    Decimal @db.Decimal(10, 2)
+  montantTVAAchat  				    	Decimal @db.Decimal(10, 2)
+  montantTVAVente  				    	Decimal @db.Decimal(10, 2)
+  resutMnt      				      	Decimal @db.Decimal(10, 2)
   repertoire    				      	Repertoire  			            @relation(fields: [repertoireId], references: [id])
   repertoireId  				      	BigInt
 }
 
 model Comptabilite {
   id              				      	BigInt    					           @id @default(autoincrement())
-  montantTTC     				      	Float
-  montantTVA     				      	Float
-  montantTVA0    				      	Float
-  montantTVA7    				      	Float
-  montantTVA10   				      	Float
-  montantTVA14   				      	Float
-  montantTVA20   				      	Float
-  montantHT      				      	Float
-  montantHT7     				      	Float
-  montantHT10    				      	Float
-  montantHT14    				      	Float
-  montantHT20    				      	Float
+  montantTTC     				      	Decimal @db.Decimal(10, 2)
+  montantTVA     				      	Decimal @db.Decimal(10, 2)
+  montantTVA0    				      	Decimal @db.Decimal(10, 2)
+  montantTVA7    				      	Decimal @db.Decimal(10, 2)
+  montantTVA10   				      	Decimal @db.Decimal(10, 2)
+  montantTVA14   				      	Decimal @db.Decimal(10, 2)
+  montantTVA20   				      	Decimal @db.Decimal(10, 2)
+  montantHT      				      	Decimal @db.Decimal(10, 2)
+  montantHT7     				      	Decimal @db.Decimal(10, 2)
+  montantHT10    				      	Decimal @db.Decimal(10, 2)
+  montantHT14    				      	Decimal @db.Decimal(10, 2)
+  montantHT20    				      	Decimal @db.Decimal(10, 2)
   modeReglement  				    	String
   typeManuelAuto  				    	Int
   typeReglement  				    	Int
-  dateFacture   				      	DateTime
-  dateRegelement  				    	DateTime
+  dateFacture   				      	DateTime @db.Date
+  dateRegelement  				    	DateTime @db.Date
   numFcture     				      	String
-  montantDroitSupplementaire  			Float
+  montantDroitSupplementaire  			Decimal @db.Decimal(10, 2)
   typeRepertoire  				    	Int
   repertoire    				      	Repertoire  			            @relation(fields: [repertoireId], references: [id])
   repertoireId  				      	BigInt
@@ -530,28 +530,28 @@ model Comptabilite {
 
 model CompteCaisse {
   id              				      	BigInt    					           @id @default(autoincrement())
-  date          				      	DateTime
-  designation   				      	String
-  numFacture    				      	String
-  montant       				      	Float
-  compteCaisse  				    	Boolean @default(false)
+  date          				      	  DateTime @db.Date
+  designation   				      	  String
+  numFacture    				      	  String
+  montant       				      	  Decimal @db.Decimal(10, 2)
+  compteCaisse  				    	    Boolean @default(false)
 }
 
 model DetAchatFacture {
   id              				      	BigInt    					           @id @default(autoincrement())
   unitegratuit   				      	Int
   qteacheter     				      	Int
-  prixAchatHt    				      	Float
-  prixAchatTtc   				      	Float
-  remiseAchat    				      	Float
-  prixVenteTtc   				      	Float
-  mantantHt      				      	Float
-  mantantTTC     				      	Float
-  prixVenteAchatHT  				    Float
-  beneficeDH     				      	Float
-  benepourcentage  				    	Float
-  tva20         				      	Float
-  tva7          				      	Float
+  prixAchatHt    				      	Decimal @db.Decimal(10, 2)
+  prixAchatTtc   				      	Decimal @db.Decimal(10, 2)
+  remiseAchat    				      	Decimal @db.Decimal(10, 2)
+  prixVenteTtc   				      	Decimal @db.Decimal(10, 2)
+  mantantHt      				      	Decimal @db.Decimal(10, 2)
+  mantantTTC     				      	Decimal @db.Decimal(10, 2)
+  prixVenteAchatHT  				    Decimal @db.Decimal(10, 2)
+  beneficeDH     				      	Decimal @db.Decimal(10, 2)
+  benepourcentage  				    	Decimal @db.Decimal(10, 2)
+  tva20         				      	Decimal @db.Decimal(10, 2)
+  tva7          				      	Decimal @db.Decimal(10, 2)
   achatFacture  				    	  AchatFacture  			        	@relation(fields: [achatFactureId], references: [id])
   achatFactureId  				    	BigInt
   stock         				      	Stock     				        	@relation(fields: [stockId], references: [id])
@@ -562,19 +562,19 @@ model DetAchatLivraison {
   id              				      	BigInt    					           @id @default(autoincrement())
   unitegratuit   				      	Int
   qteacheter     				      	Int
-  prixAchatHt    				      	Float
-  prixAchatTtc   				      	Float
-  remiseAchat    				      	Float
-  prixVenteAchatHT  				    Float
-  prixVenteTtc   				      	Float
-  mantantHt      				      	Float
-  mantantTTC     				      	Float
-  tva7          				      	Float
-  tva20         				      	Float
-  tva14         				      	Float
-  tva10         				      	Float
-  beneficeDH     				      	Float
-  benepourcentage  				    	Float
+  prixAchatHt    				      	Decimal @db.Decimal(10, 2)
+  prixAchatTtc   				      	Decimal @db.Decimal(10, 2)
+  remiseAchat    				      	Decimal @db.Decimal(10, 2)
+  prixVenteAchatHT  				    Decimal @db.Decimal(10, 2)
+  prixVenteTtc   				      	Decimal @db.Decimal(10, 2)
+  mantantHt      				      	Decimal @db.Decimal(10, 2)
+  mantantTTC     				      	Decimal @db.Decimal(10, 2)
+  tva7          				      	Decimal @db.Decimal(10, 2)
+  tva20         				      	Decimal @db.Decimal(10, 2)
+  tva14         				      	Decimal @db.Decimal(10, 2)
+  tva10         				      	Decimal @db.Decimal(10, 2)
+  beneficeDH     				      	Decimal @db.Decimal(10, 2)
+  benepourcentage  				    	Decimal @db.Decimal(10, 2)
   achatLivraison  				    	AchatLivraison  			        @relation(fields: [achatLivraisonId], references: [id])
   achatLivraisonId  				    BigInt
   stock         				      	Stock     				        	@relation(fields: [stockId], references: [id])
@@ -584,8 +584,8 @@ model DetAchatLivraison {
 model DetailBonSortie {
   id              				      	BigInt    					           @id @default(autoincrement())
   qteSortie      				      	Int
-  mntProduit     				      	Float
-  total         				      	Float
+  mntProduit     				      	Decimal @db.Decimal(10, 2)
+  total         				      	Decimal @db.Decimal(10, 2)
   bonSortie     				      	BonSortie  				        	@relation(fields: [bonSortieId], references: [id])
   bonSortieId   				      	BigInt
   stock         				      	Stock     				        	@relation(fields: [stockId], references: [id])
@@ -594,11 +594,11 @@ model DetailBonSortie {
 
 model DetBulttinLivraison {
   id              				      	BigInt    					           @id @default(autoincrement())
-  commission     				      	Float
-  commissionFixe  				    	Float
-  commsiondh     				      	Float
-  mantantcommission  				    Float
-  benDH         				      	Float
+  commission     				      	Decimal @db.Decimal(10, 2)
+  commissionFixe  				    	Decimal @db.Decimal(10, 2)
+  commsiondh     				      	Decimal @db.Decimal(10, 2)
+  mantantcommission  				    Decimal @db.Decimal(10, 2)
+  benDH         				      	Decimal @db.Decimal(10, 2)
   rougenormal   				      	Boolean
   bulttinPai    				      	BulttinPai  			          	@relation(fields: [bulttinPaiId], references: [id])
   bulttinPaiId  				    	BigInt
@@ -608,19 +608,19 @@ model DetBulttinLivraison {
 
 model DetBulttinPai {
   id              				      	BigInt    					           @id @default(autoincrement())
-  prixlivraison  				    	Float
+  prixlivraison  				    	Decimal @db.Decimal(10, 2)
   qtevendu      				      	Int
-  prixvente     				      	Float
-  remise        				      	Float
-  mantantvendu   				      	Float
-  commission     				      	Float
-  commsiondh     				      	Float
-  mantant       				      	Float
-  benDH         				      	Float
-  commissionFixe  				    	Float
-  prixCommercial  				    	Float
-  primeCommercial  				    	Float
-  primeProduit  				    	Float
+  prixvente     				      	Decimal @db.Decimal(10, 2)
+  remise        				      	Decimal @db.Decimal(10, 2)
+  mantantvendu   				      	Decimal @db.Decimal(10, 2)
+  commission     				      	Decimal @db.Decimal(10, 2)
+  commsiondh     				      	Decimal @db.Decimal(10, 2)
+  mantant       				      	Decimal @db.Decimal(10, 2)
+  benDH         				      	Decimal @db.Decimal(10, 2)
+  commissionFixe  				    	Decimal @db.Decimal(10, 2)
+  prixCommercial  				    	Decimal @db.Decimal(10, 2)
+  primeCommercial  				    	Decimal @db.Decimal(10, 2)
+  primeProduit  				    	Decimal @db.Decimal(10, 2)
   avecZero      				      	Boolean @default(false)
   bulttinPai    				      	BulttinPai  			          	@relation(fields: [bulttinPaiId], references: [id])
   bulttinPaiId  				    	BigInt
@@ -631,14 +631,14 @@ model DetBulttinPai {
 model DetFacture {
   id              				      	BigInt    					           @id @default(autoincrement())
   qteFacturer    				      	Int
-  remiseFacture  				    	  Float
-  prixVente     				      	Float
-  montantProduit  				    	Float
-  beneficeDH     				      	Float
-  benepourcentage  				    	Float
-  tva7          				      	Float
-  tva20         				      	Float
-  montantProduitHT  				    Float
+  remiseFacture  				    	  Decimal @db.Decimal(10, 2)
+  prixVente     				      	Decimal @db.Decimal(10, 2)
+  montantProduit  				    	Decimal @db.Decimal(10, 2)
+  beneficeDH     				      	Decimal @db.Decimal(10, 2)
+  benepourcentage  				    	Decimal @db.Decimal(10, 2)
+  tva7          				      	Decimal @db.Decimal(10, 2)
+  tva20         				      	Decimal @db.Decimal(10, 2)
+  montantProduitHT  				    Decimal @db.Decimal(10, 2)
   directFacture  				    	  Int
   avecRemise    				      	Boolean
   facture       				      	Facture   				        	  @relation(fields: [factureId], references: [id])
@@ -651,7 +651,7 @@ model DetImportations {
   id              				      BigInt    					          @id @default(autoincrement())
   qteAchat      				      	Int
   qteStock      				      	Int
-  prixAchat     				      	Float
+  prixAchat     				      	Decimal @db.Decimal(10, 2)
   importations  				    	  Importations  			        	@relation(fields: [importationsId], references: [id])
   importationsId  				    	BigInt
   stock         				      	Stock     				        	  @relation(fields: [stockId], references: [id])
@@ -662,11 +662,11 @@ model DetLivraison {
   id              				      BigInt    					           @id @default(autoincrement())
   qteLivrer      				      	Int
   champsRouge   				      	Int
-  remiseLivraison  				    	Float
-  prixVente     				      	Float
-  montantProduit  				    	Float
-  beneficeDH     				      	Float
-  benepourcentage  				    	Float
+  remiseLivraison  				    	Decimal @db.Decimal(10, 2)
+  prixVente     				      	Decimal @db.Decimal(10, 2)
+  montantProduit  				    	Decimal @db.Decimal(10, 2)
+  beneficeDH     				      	Decimal @db.Decimal(10, 2)
+  benepourcentage  				    	Decimal @db.Decimal(10, 2)
   infinity      				      	Int
   avecRemise    				      	Boolean
   livraison     				      	Livraison  				        	@relation(fields: [livraisonId], references: [id])
@@ -679,27 +679,27 @@ model Facture {
   id              				      BigInt    					           @id @default(autoincrement())
   numFacture     				      	Int
   codeBF        				      	String
-  dateBF        				      	DateTime
-  dateReglement  				    	  DateTime
-  dateReglement2  				    	DateTime
-  dateReglement3  				    	DateTime
-  dateReglement4  				    	DateTime
+  dateBF        				      	DateTime @db.Date
+  dateReglement  				    	  DateTime @db.Date
+  dateReglement2  				    	DateTime @db.Date
+  dateReglement3  				    	DateTime @db.Date
+  dateReglement4  				    	DateTime @db.Date
   typeReglment   				      	Int
   typeReglment2  				    	  Int
   typeReglment3  				    	  Int
   typeReglment4  				    	  Int
   typePaiement   				      	String
-  mantantBF      				      	Float
-  mantantBFBenefice  				    Float
-  tva7Total     				      	Float
-  tva20Total    				      	Float
+  mantantBF      				      	Decimal @db.Decimal(10, 2)
+  mantantBFBenefice  				    Decimal @db.Decimal(10, 2)
+  tva7Total     				      	Decimal @db.Decimal(10, 2)
+  tva20Total    				      	Decimal @db.Decimal(10, 2)
   sysDate       				      	DateTime
-  mantantBFHT   				      	Float
+  mantantBFHT   				      	Decimal @db.Decimal(10, 2)
   numeroLibil   				      	String
-  mntHT2O       				      	Float
-  mntHT7        				      	Float
-  tva7          				      	Float
-  tva20         				      	Float
+  mntHT2O       				      	Decimal @db.Decimal(10, 2)
+  mntHT7        				      	Decimal @db.Decimal(10, 2)
+  tva7          				      	Decimal @db.Decimal(10, 2)
+  tva20         				      	Decimal @db.Decimal(10, 2)
   numCheque     				      	String
   numCheque2    				      	String
   numCheque3    				      	String
@@ -708,10 +708,10 @@ model Facture {
   numRemise2    				      	String
   numRemise3    				      	String
   numRemise4    				      	String
-  mntReglement  				    	  Float
-  mntReglement2  				    	  Float
-  mntReglement3  				    	  Float
-  mntReglement4  				    	  Float
+  mntReglement  				    	  Decimal @db.Decimal(10, 2)
+  mntReglement2  				    	  Decimal @db.Decimal(10, 2)
+  mntReglement3  				    	  Decimal @db.Decimal(10, 2)
+  mntReglement4  				    	  Decimal @db.Decimal(10, 2)
   type          				      	Int
   facturer100   				      	Boolean @default(false)
   calculer      				      	Boolean @default(false)
@@ -721,72 +721,72 @@ model Facture {
   dateReglement2In 			      		Boolean? @default(false)
   dateReglement3In 			      		Boolean? @default(false)
   dateReglement4In 			      		Boolean? @default(false)
-  tva20Reglement1  				    	Float
-  tva20Reglement2  				    	Float
-  tva20Reglement3  				    	Float
-  tva20Reglement4  				    	Float
-  mntHT20Reglement1  				    Float
-  mntHT20Reglement2  				    Float
+  tva20Reglement1  				    	Decimal @db.Decimal(10, 2)
+  tva20Reglement2  				    	Decimal @db.Decimal(10, 2)
+  tva20Reglement3  				    	Decimal @db.Decimal(10, 2)
+  tva20Reglement4  				    	Decimal @db.Decimal(10, 2)
+  mntHT20Reglement1  				    Decimal @db.Decimal(10, 2)
+  mntHT20Reglement2  				    Decimal @db.Decimal(10, 2)
   detFactures  				    		DetFacture[]
 }
 
 model Importations {
   id              				      	BigInt    					           @id @default(autoincrement())
-  codeFacture    				    	String
-  devisEuroDolar  				    	String
-  numFacture     				      	Int
-  dateFacture   				      	DateTime
-  sysDate       				      	DateTime
-  dateAvances1  				    	DateTime
-  mantantAvancs1  				    	Float
-  dateAvances2  				    	DateTime
-  mantantAvancs2  				    	Float
-  totalPaye     				      	Float
-  mntFacture    				    	Float
-  mntDouane     				      	Float
-  mntTransport  				    	Float
-  mntTransportIntern  				    Float
-  mntTransit    				    	Float
-  mntMagasinage  				    	Float
-  prixAchatDetaille  				    Float
-  totalAllMnt   				      	Float
-  repertoireFour  				    	Repertoire  			            @relation(fields: [repertoireFourId], references: [id])
-  repertoireFourId  				    BigInt
-  employeOperateur  				    Employe     				      	@relation(fields: [employeOperateurId], references: [id])
+  codeFacture    				    	    String
+  devisEuroDolar  				    	  String
+  numFacture     				      	  Int
+  dateFacture   				      	  DateTime @db.Date
+  sysDate       				      	  DateTime
+  dateAvances1  				    	    DateTime @db.Date
+  mantantAvancs1  				    	  Decimal @db.Decimal(10, 2)
+  dateAvances2  				    	    DateTime @db.Date
+mantantAvancs2  				    	    Decimal @db.Decimal(10, 2)
+  totalPaye     				      	  Decimal @db.Decimal(10, 2)
+  mntFacture    				    	    Decimal @db.Decimal(10, 2)
+  mntDouane     				      	  Decimal @db.Decimal(10, 2)
+  mntTransport  				    	    Decimal @db.Decimal(10, 2)
+  mntTransportIntern  				    Decimal @db.Decimal(10, 2)
+  mntTransit    				    	    Decimal @db.Decimal(10, 2)
+  mntMagasinage  				    	    Decimal @db.Decimal(10, 2)
+  prixAchatDetaille  				      Decimal @db.Decimal(10, 2)
+  totalAllMnt   				      	  Decimal @db.Decimal(10, 2)
+  repertoireFour  				    	  Repertoire  			            @relation(fields: [repertoireFourId], references: [id])
+  repertoireFourId  				      BigInt
+  employeOperateur  				      Employe     				      	@relation(fields: [employeOperateurId], references: [id])
   employeOperateurId  			    	BigInt
-  detImportations    				    DetImportations[]
+  detImportations    				      DetImportations[]
 }
 
 model Livraison {
   id              				      	BigInt    					           @id @default(autoincrement())
   numLivraison   				      	Int
   codeBl        				      	String
-  dateBl        				      	DateTime
-  dateReglement  				    	DateTime
-  dateReglement2  				    	DateTime
-  dateReglement3  				    	DateTime
-  dateReglement4  				    	DateTime
+  dateBl        				      	DateTime @db.Date
+  dateReglement  				    	  DateTime @db.Date
+  dateReglement2  				    	DateTime @db.Date
+  dateReglement3  				    	DateTime @db.Date
+  dateReglement4  				    	DateTime @db.Date
   typeReglment   				      	Int
-  typeReglment2  				    	Int
-  typeReglment3  				    	Int
-  typeReglment4  				    	Int
-  mantantBL      				      	Float
-  mantantBLReel  				    	Float
-  mantantBLBenefice  				    Float
+  typeReglment2  				    	  Int
+  typeReglment3  				    	  Int
+  typeReglment4  				    	  Int
+  mantantBL      				      	Decimal @db.Decimal(10, 2)
+  mantantBLReel  				    	  Decimal @db.Decimal(10, 2)
+  mantantBLBenefice  				    Decimal @db.Decimal(10, 2)
   typePaiement   				      	String
-  mantantBLPourcent  				    Float
+  mantantBLPourcent  				    Decimal @db.Decimal(10, 2)
   reglerNonRegler  				    	Int
   sysDate       				      	DateTime
   infinity      				      	Int
   etatBultinPaie  				    	Int
   livrernonlivrer  				    	Int
   avecRemise    				      	Boolean
-  mntReglement  				    	Float
-  mntReglement2  				    	Float
-  mntReglement3  				    	Float
-  mntReglement4  				    	Float
+  mntReglement  				    	  Decimal @db.Decimal(10, 2)
+  mntReglement2  				    	  Decimal @db.Decimal(10, 2)
+  mntReglement3  				    	  Decimal @db.Decimal(10, 2)
+  mntReglement4  				    	  Decimal @db.Decimal(10, 2)
   facturer100   				      	Boolean @default(false)
-  codeTransport  				    	String
+  codeTransport  				    	  String
   employeOperateur  				    Employe     				      	@relation(fields: [employeOperateurId], references: [id])
   employeOperateurId  			    	BigInt
   repertoireByCommercial  		    	Repertoire  			            @relation("commercialLivraison", fields: [repertoireByCommercialId], references: [id])
@@ -813,10 +813,10 @@ model PlanComptable {
 model Solde {
   id              				      	BigInt    					           @id @default(autoincrement())
   dateOperation  				    	    DateTime
-  dateReglement  				    	    DateTime
-  debit         				      	  Float
-  credit        				      	  Float
-  solde         				      	  Float
+  dateReglement  				    	    DateTime @db.Date
+  debit         				      	  Decimal @db.Decimal(10, 2)
+  credit        				      	  Decimal @db.Decimal(10, 2)
+  solde         				      	  Decimal @db.Decimal(10, 2)
   nature        				      	  String
   planComptable  				      	  PlanComptable  			            @relation(fields: [planComptableId], references: [id])
   planComptableId  			      		BigInt

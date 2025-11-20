@@ -28,17 +28,17 @@ export type AggregateSolde = {
 
 export type SoldeAvgAggregateOutputType = {
   id: number | null
-  debit: number | null
-  credit: number | null
-  solde: number | null
+  debit: runtime.Decimal | null
+  credit: runtime.Decimal | null
+  solde: runtime.Decimal | null
   planComptableId: number | null
 }
 
 export type SoldeSumAggregateOutputType = {
   id: bigint | null
-  debit: number | null
-  credit: number | null
-  solde: number | null
+  debit: runtime.Decimal | null
+  credit: runtime.Decimal | null
+  solde: runtime.Decimal | null
   planComptableId: bigint | null
 }
 
@@ -46,9 +46,9 @@ export type SoldeMinAggregateOutputType = {
   id: bigint | null
   dateOperation: Date | null
   dateReglement: Date | null
-  debit: number | null
-  credit: number | null
-  solde: number | null
+  debit: runtime.Decimal | null
+  credit: runtime.Decimal | null
+  solde: runtime.Decimal | null
   nature: string | null
   planComptableId: bigint | null
 }
@@ -57,9 +57,9 @@ export type SoldeMaxAggregateOutputType = {
   id: bigint | null
   dateOperation: Date | null
   dateReglement: Date | null
-  debit: number | null
-  credit: number | null
-  solde: number | null
+  debit: runtime.Decimal | null
+  credit: runtime.Decimal | null
+  solde: runtime.Decimal | null
   nature: string | null
   planComptableId: bigint | null
 }
@@ -217,9 +217,9 @@ export type SoldeGroupByOutputType = {
   id: bigint
   dateOperation: Date
   dateReglement: Date
-  debit: number
-  credit: number
-  solde: number
+  debit: runtime.Decimal
+  credit: runtime.Decimal
+  solde: runtime.Decimal
   nature: string
   planComptableId: bigint
   _count: SoldeCountAggregateOutputType | null
@@ -251,9 +251,9 @@ export type SoldeWhereInput = {
   id?: Prisma.BigIntFilter<"Solde"> | bigint | number
   dateOperation?: Prisma.DateTimeFilter<"Solde"> | Date | string
   dateReglement?: Prisma.DateTimeFilter<"Solde"> | Date | string
-  debit?: Prisma.FloatFilter<"Solde"> | number
-  credit?: Prisma.FloatFilter<"Solde"> | number
-  solde?: Prisma.FloatFilter<"Solde"> | number
+  debit?: Prisma.DecimalFilter<"Solde"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit?: Prisma.DecimalFilter<"Solde"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  solde?: Prisma.DecimalFilter<"Solde"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   nature?: Prisma.StringFilter<"Solde"> | string
   planComptableId?: Prisma.BigIntFilter<"Solde"> | bigint | number
   planComptable?: Prisma.XOR<Prisma.PlanComptableScalarRelationFilter, Prisma.PlanComptableWhereInput>
@@ -279,9 +279,9 @@ export type SoldeWhereUniqueInput = Prisma.AtLeast<{
   NOT?: Prisma.SoldeWhereInput | Prisma.SoldeWhereInput[]
   dateOperation?: Prisma.DateTimeFilter<"Solde"> | Date | string
   dateReglement?: Prisma.DateTimeFilter<"Solde"> | Date | string
-  debit?: Prisma.FloatFilter<"Solde"> | number
-  credit?: Prisma.FloatFilter<"Solde"> | number
-  solde?: Prisma.FloatFilter<"Solde"> | number
+  debit?: Prisma.DecimalFilter<"Solde"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit?: Prisma.DecimalFilter<"Solde"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  solde?: Prisma.DecimalFilter<"Solde"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   nature?: Prisma.StringFilter<"Solde"> | string
   planComptableId?: Prisma.BigIntFilter<"Solde"> | bigint | number
   planComptable?: Prisma.XOR<Prisma.PlanComptableScalarRelationFilter, Prisma.PlanComptableWhereInput>
@@ -310,9 +310,9 @@ export type SoldeScalarWhereWithAggregatesInput = {
   id?: Prisma.BigIntWithAggregatesFilter<"Solde"> | bigint | number
   dateOperation?: Prisma.DateTimeWithAggregatesFilter<"Solde"> | Date | string
   dateReglement?: Prisma.DateTimeWithAggregatesFilter<"Solde"> | Date | string
-  debit?: Prisma.FloatWithAggregatesFilter<"Solde"> | number
-  credit?: Prisma.FloatWithAggregatesFilter<"Solde"> | number
-  solde?: Prisma.FloatWithAggregatesFilter<"Solde"> | number
+  debit?: Prisma.DecimalWithAggregatesFilter<"Solde"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit?: Prisma.DecimalWithAggregatesFilter<"Solde"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  solde?: Prisma.DecimalWithAggregatesFilter<"Solde"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   nature?: Prisma.StringWithAggregatesFilter<"Solde"> | string
   planComptableId?: Prisma.BigIntWithAggregatesFilter<"Solde"> | bigint | number
 }
@@ -321,9 +321,9 @@ export type SoldeCreateInput = {
   id?: bigint | number
   dateOperation: Date | string
   dateReglement: Date | string
-  debit: number
-  credit: number
-  solde: number
+  debit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  solde: runtime.Decimal | runtime.DecimalJsLike | number | string
   nature: string
   planComptable: Prisma.PlanComptableCreateNestedOneWithoutSoldesInput
 }
@@ -332,9 +332,9 @@ export type SoldeUncheckedCreateInput = {
   id?: bigint | number
   dateOperation: Date | string
   dateReglement: Date | string
-  debit: number
-  credit: number
-  solde: number
+  debit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  solde: runtime.Decimal | runtime.DecimalJsLike | number | string
   nature: string
   planComptableId: bigint | number
 }
@@ -343,9 +343,9 @@ export type SoldeUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   dateOperation?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  debit?: Prisma.FloatFieldUpdateOperationsInput | number
-  credit?: Prisma.FloatFieldUpdateOperationsInput | number
-  solde?: Prisma.FloatFieldUpdateOperationsInput | number
+  debit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  solde?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   nature?: Prisma.StringFieldUpdateOperationsInput | string
   planComptable?: Prisma.PlanComptableUpdateOneRequiredWithoutSoldesNestedInput
 }
@@ -354,9 +354,9 @@ export type SoldeUncheckedUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   dateOperation?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  debit?: Prisma.FloatFieldUpdateOperationsInput | number
-  credit?: Prisma.FloatFieldUpdateOperationsInput | number
-  solde?: Prisma.FloatFieldUpdateOperationsInput | number
+  debit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  solde?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   nature?: Prisma.StringFieldUpdateOperationsInput | string
   planComptableId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
@@ -365,9 +365,9 @@ export type SoldeCreateManyInput = {
   id?: bigint | number
   dateOperation: Date | string
   dateReglement: Date | string
-  debit: number
-  credit: number
-  solde: number
+  debit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  solde: runtime.Decimal | runtime.DecimalJsLike | number | string
   nature: string
   planComptableId: bigint | number
 }
@@ -376,9 +376,9 @@ export type SoldeUpdateManyMutationInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   dateOperation?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  debit?: Prisma.FloatFieldUpdateOperationsInput | number
-  credit?: Prisma.FloatFieldUpdateOperationsInput | number
-  solde?: Prisma.FloatFieldUpdateOperationsInput | number
+  debit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  solde?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   nature?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
@@ -386,9 +386,9 @@ export type SoldeUncheckedUpdateManyInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   dateOperation?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  debit?: Prisma.FloatFieldUpdateOperationsInput | number
-  credit?: Prisma.FloatFieldUpdateOperationsInput | number
-  solde?: Prisma.FloatFieldUpdateOperationsInput | number
+  debit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  solde?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   nature?: Prisma.StringFieldUpdateOperationsInput | string
   planComptableId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
@@ -504,9 +504,9 @@ export type SoldeCreateWithoutPlanComptableInput = {
   id?: bigint | number
   dateOperation: Date | string
   dateReglement: Date | string
-  debit: number
-  credit: number
-  solde: number
+  debit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  solde: runtime.Decimal | runtime.DecimalJsLike | number | string
   nature: string
 }
 
@@ -514,9 +514,9 @@ export type SoldeUncheckedCreateWithoutPlanComptableInput = {
   id?: bigint | number
   dateOperation: Date | string
   dateReglement: Date | string
-  debit: number
-  credit: number
-  solde: number
+  debit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  solde: runtime.Decimal | runtime.DecimalJsLike | number | string
   nature: string
 }
 
@@ -553,9 +553,9 @@ export type SoldeScalarWhereInput = {
   id?: Prisma.BigIntFilter<"Solde"> | bigint | number
   dateOperation?: Prisma.DateTimeFilter<"Solde"> | Date | string
   dateReglement?: Prisma.DateTimeFilter<"Solde"> | Date | string
-  debit?: Prisma.FloatFilter<"Solde"> | number
-  credit?: Prisma.FloatFilter<"Solde"> | number
-  solde?: Prisma.FloatFilter<"Solde"> | number
+  debit?: Prisma.DecimalFilter<"Solde"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit?: Prisma.DecimalFilter<"Solde"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  solde?: Prisma.DecimalFilter<"Solde"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   nature?: Prisma.StringFilter<"Solde"> | string
   planComptableId?: Prisma.BigIntFilter<"Solde"> | bigint | number
 }
@@ -564,9 +564,9 @@ export type SoldeCreateManyPlanComptableInput = {
   id?: bigint | number
   dateOperation: Date | string
   dateReglement: Date | string
-  debit: number
-  credit: number
-  solde: number
+  debit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  solde: runtime.Decimal | runtime.DecimalJsLike | number | string
   nature: string
 }
 
@@ -574,9 +574,9 @@ export type SoldeUpdateWithoutPlanComptableInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   dateOperation?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  debit?: Prisma.FloatFieldUpdateOperationsInput | number
-  credit?: Prisma.FloatFieldUpdateOperationsInput | number
-  solde?: Prisma.FloatFieldUpdateOperationsInput | number
+  debit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  solde?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   nature?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
@@ -584,9 +584,9 @@ export type SoldeUncheckedUpdateWithoutPlanComptableInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   dateOperation?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  debit?: Prisma.FloatFieldUpdateOperationsInput | number
-  credit?: Prisma.FloatFieldUpdateOperationsInput | number
-  solde?: Prisma.FloatFieldUpdateOperationsInput | number
+  debit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  solde?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   nature?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
@@ -594,9 +594,9 @@ export type SoldeUncheckedUpdateManyWithoutPlanComptableInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   dateOperation?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  debit?: Prisma.FloatFieldUpdateOperationsInput | number
-  credit?: Prisma.FloatFieldUpdateOperationsInput | number
-  solde?: Prisma.FloatFieldUpdateOperationsInput | number
+  debit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  solde?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   nature?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
@@ -641,9 +641,9 @@ export type $SoldePayload<ExtArgs extends runtime.Types.Extensions.InternalArgs 
     id: bigint
     dateOperation: Date
     dateReglement: Date
-    debit: number
-    credit: number
-    solde: number
+    debit: runtime.Decimal
+    credit: runtime.Decimal
+    solde: runtime.Decimal
     nature: string
     planComptableId: bigint
   }, ExtArgs["result"]["solde"]>
@@ -1019,9 +1019,9 @@ export interface SoldeFieldRefs {
   readonly id: Prisma.FieldRef<"Solde", 'BigInt'>
   readonly dateOperation: Prisma.FieldRef<"Solde", 'DateTime'>
   readonly dateReglement: Prisma.FieldRef<"Solde", 'DateTime'>
-  readonly debit: Prisma.FieldRef<"Solde", 'Float'>
-  readonly credit: Prisma.FieldRef<"Solde", 'Float'>
-  readonly solde: Prisma.FieldRef<"Solde", 'Float'>
+  readonly debit: Prisma.FieldRef<"Solde", 'Decimal'>
+  readonly credit: Prisma.FieldRef<"Solde", 'Decimal'>
+  readonly solde: Prisma.FieldRef<"Solde", 'Decimal'>
   readonly nature: Prisma.FieldRef<"Solde", 'String'>
   readonly planComptableId: Prisma.FieldRef<"Solde", 'BigInt'>
 }

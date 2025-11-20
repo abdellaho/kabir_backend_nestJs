@@ -29,8 +29,8 @@ export type AggregateDetailBonSortie = {
 export type DetailBonSortieAvgAggregateOutputType = {
   id: number | null
   qteSortie: number | null
-  mntProduit: number | null
-  total: number | null
+  mntProduit: runtime.Decimal | null
+  total: runtime.Decimal | null
   bonSortieId: number | null
   stockId: number | null
 }
@@ -38,8 +38,8 @@ export type DetailBonSortieAvgAggregateOutputType = {
 export type DetailBonSortieSumAggregateOutputType = {
   id: bigint | null
   qteSortie: number | null
-  mntProduit: number | null
-  total: number | null
+  mntProduit: runtime.Decimal | null
+  total: runtime.Decimal | null
   bonSortieId: bigint | null
   stockId: bigint | null
 }
@@ -47,8 +47,8 @@ export type DetailBonSortieSumAggregateOutputType = {
 export type DetailBonSortieMinAggregateOutputType = {
   id: bigint | null
   qteSortie: number | null
-  mntProduit: number | null
-  total: number | null
+  mntProduit: runtime.Decimal | null
+  total: runtime.Decimal | null
   bonSortieId: bigint | null
   stockId: bigint | null
 }
@@ -56,8 +56,8 @@ export type DetailBonSortieMinAggregateOutputType = {
 export type DetailBonSortieMaxAggregateOutputType = {
   id: bigint | null
   qteSortie: number | null
-  mntProduit: number | null
-  total: number | null
+  mntProduit: runtime.Decimal | null
+  total: runtime.Decimal | null
   bonSortieId: bigint | null
   stockId: bigint | null
 }
@@ -208,8 +208,8 @@ export type DetailBonSortieGroupByArgs<ExtArgs extends runtime.Types.Extensions.
 export type DetailBonSortieGroupByOutputType = {
   id: bigint
   qteSortie: number
-  mntProduit: number
-  total: number
+  mntProduit: runtime.Decimal
+  total: runtime.Decimal
   bonSortieId: bigint
   stockId: bigint
   _count: DetailBonSortieCountAggregateOutputType | null
@@ -240,8 +240,8 @@ export type DetailBonSortieWhereInput = {
   NOT?: Prisma.DetailBonSortieWhereInput | Prisma.DetailBonSortieWhereInput[]
   id?: Prisma.BigIntFilter<"DetailBonSortie"> | bigint | number
   qteSortie?: Prisma.IntFilter<"DetailBonSortie"> | number
-  mntProduit?: Prisma.FloatFilter<"DetailBonSortie"> | number
-  total?: Prisma.FloatFilter<"DetailBonSortie"> | number
+  mntProduit?: Prisma.DecimalFilter<"DetailBonSortie"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFilter<"DetailBonSortie"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   bonSortieId?: Prisma.BigIntFilter<"DetailBonSortie"> | bigint | number
   stockId?: Prisma.BigIntFilter<"DetailBonSortie"> | bigint | number
   bonSortie?: Prisma.XOR<Prisma.BonSortieScalarRelationFilter, Prisma.BonSortieWhereInput>
@@ -265,8 +265,8 @@ export type DetailBonSortieWhereUniqueInput = Prisma.AtLeast<{
   OR?: Prisma.DetailBonSortieWhereInput[]
   NOT?: Prisma.DetailBonSortieWhereInput | Prisma.DetailBonSortieWhereInput[]
   qteSortie?: Prisma.IntFilter<"DetailBonSortie"> | number
-  mntProduit?: Prisma.FloatFilter<"DetailBonSortie"> | number
-  total?: Prisma.FloatFilter<"DetailBonSortie"> | number
+  mntProduit?: Prisma.DecimalFilter<"DetailBonSortie"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFilter<"DetailBonSortie"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   bonSortieId?: Prisma.BigIntFilter<"DetailBonSortie"> | bigint | number
   stockId?: Prisma.BigIntFilter<"DetailBonSortie"> | bigint | number
   bonSortie?: Prisma.XOR<Prisma.BonSortieScalarRelationFilter, Prisma.BonSortieWhereInput>
@@ -293,8 +293,8 @@ export type DetailBonSortieScalarWhereWithAggregatesInput = {
   NOT?: Prisma.DetailBonSortieScalarWhereWithAggregatesInput | Prisma.DetailBonSortieScalarWhereWithAggregatesInput[]
   id?: Prisma.BigIntWithAggregatesFilter<"DetailBonSortie"> | bigint | number
   qteSortie?: Prisma.IntWithAggregatesFilter<"DetailBonSortie"> | number
-  mntProduit?: Prisma.FloatWithAggregatesFilter<"DetailBonSortie"> | number
-  total?: Prisma.FloatWithAggregatesFilter<"DetailBonSortie"> | number
+  mntProduit?: Prisma.DecimalWithAggregatesFilter<"DetailBonSortie"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalWithAggregatesFilter<"DetailBonSortie"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   bonSortieId?: Prisma.BigIntWithAggregatesFilter<"DetailBonSortie"> | bigint | number
   stockId?: Prisma.BigIntWithAggregatesFilter<"DetailBonSortie"> | bigint | number
 }
@@ -302,8 +302,8 @@ export type DetailBonSortieScalarWhereWithAggregatesInput = {
 export type DetailBonSortieCreateInput = {
   id?: bigint | number
   qteSortie: number
-  mntProduit: number
-  total: number
+  mntProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  total: runtime.Decimal | runtime.DecimalJsLike | number | string
   bonSortie: Prisma.BonSortieCreateNestedOneWithoutDetailBonSortiesInput
   stock: Prisma.StockCreateNestedOneWithoutDetailBonSortiesInput
 }
@@ -311,8 +311,8 @@ export type DetailBonSortieCreateInput = {
 export type DetailBonSortieUncheckedCreateInput = {
   id?: bigint | number
   qteSortie: number
-  mntProduit: number
-  total: number
+  mntProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  total: runtime.Decimal | runtime.DecimalJsLike | number | string
   bonSortieId: bigint | number
   stockId: bigint | number
 }
@@ -320,8 +320,8 @@ export type DetailBonSortieUncheckedCreateInput = {
 export type DetailBonSortieUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteSortie?: Prisma.IntFieldUpdateOperationsInput | number
-  mntProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  total?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   bonSortie?: Prisma.BonSortieUpdateOneRequiredWithoutDetailBonSortiesNestedInput
   stock?: Prisma.StockUpdateOneRequiredWithoutDetailBonSortiesNestedInput
 }
@@ -329,8 +329,8 @@ export type DetailBonSortieUpdateInput = {
 export type DetailBonSortieUncheckedUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteSortie?: Prisma.IntFieldUpdateOperationsInput | number
-  mntProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  total?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   bonSortieId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   stockId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
@@ -338,8 +338,8 @@ export type DetailBonSortieUncheckedUpdateInput = {
 export type DetailBonSortieCreateManyInput = {
   id?: bigint | number
   qteSortie: number
-  mntProduit: number
-  total: number
+  mntProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  total: runtime.Decimal | runtime.DecimalJsLike | number | string
   bonSortieId: bigint | number
   stockId: bigint | number
 }
@@ -347,15 +347,15 @@ export type DetailBonSortieCreateManyInput = {
 export type DetailBonSortieUpdateManyMutationInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteSortie?: Prisma.IntFieldUpdateOperationsInput | number
-  mntProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  total?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type DetailBonSortieUncheckedUpdateManyInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteSortie?: Prisma.IntFieldUpdateOperationsInput | number
-  mntProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  total?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   bonSortieId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   stockId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
@@ -502,16 +502,16 @@ export type DetailBonSortieUncheckedUpdateManyWithoutBonSortieNestedInput = {
 export type DetailBonSortieCreateWithoutStockInput = {
   id?: bigint | number
   qteSortie: number
-  mntProduit: number
-  total: number
+  mntProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  total: runtime.Decimal | runtime.DecimalJsLike | number | string
   bonSortie: Prisma.BonSortieCreateNestedOneWithoutDetailBonSortiesInput
 }
 
 export type DetailBonSortieUncheckedCreateWithoutStockInput = {
   id?: bigint | number
   qteSortie: number
-  mntProduit: number
-  total: number
+  mntProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  total: runtime.Decimal | runtime.DecimalJsLike | number | string
   bonSortieId: bigint | number
 }
 
@@ -547,8 +547,8 @@ export type DetailBonSortieScalarWhereInput = {
   NOT?: Prisma.DetailBonSortieScalarWhereInput | Prisma.DetailBonSortieScalarWhereInput[]
   id?: Prisma.BigIntFilter<"DetailBonSortie"> | bigint | number
   qteSortie?: Prisma.IntFilter<"DetailBonSortie"> | number
-  mntProduit?: Prisma.FloatFilter<"DetailBonSortie"> | number
-  total?: Prisma.FloatFilter<"DetailBonSortie"> | number
+  mntProduit?: Prisma.DecimalFilter<"DetailBonSortie"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFilter<"DetailBonSortie"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   bonSortieId?: Prisma.BigIntFilter<"DetailBonSortie"> | bigint | number
   stockId?: Prisma.BigIntFilter<"DetailBonSortie"> | bigint | number
 }
@@ -556,16 +556,16 @@ export type DetailBonSortieScalarWhereInput = {
 export type DetailBonSortieCreateWithoutBonSortieInput = {
   id?: bigint | number
   qteSortie: number
-  mntProduit: number
-  total: number
+  mntProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  total: runtime.Decimal | runtime.DecimalJsLike | number | string
   stock: Prisma.StockCreateNestedOneWithoutDetailBonSortiesInput
 }
 
 export type DetailBonSortieUncheckedCreateWithoutBonSortieInput = {
   id?: bigint | number
   qteSortie: number
-  mntProduit: number
-  total: number
+  mntProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  total: runtime.Decimal | runtime.DecimalJsLike | number | string
   stockId: bigint | number
 }
 
@@ -598,64 +598,64 @@ export type DetailBonSortieUpdateManyWithWhereWithoutBonSortieInput = {
 export type DetailBonSortieCreateManyStockInput = {
   id?: bigint | number
   qteSortie: number
-  mntProduit: number
-  total: number
+  mntProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  total: runtime.Decimal | runtime.DecimalJsLike | number | string
   bonSortieId: bigint | number
 }
 
 export type DetailBonSortieUpdateWithoutStockInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteSortie?: Prisma.IntFieldUpdateOperationsInput | number
-  mntProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  total?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   bonSortie?: Prisma.BonSortieUpdateOneRequiredWithoutDetailBonSortiesNestedInput
 }
 
 export type DetailBonSortieUncheckedUpdateWithoutStockInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteSortie?: Prisma.IntFieldUpdateOperationsInput | number
-  mntProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  total?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   bonSortieId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
 export type DetailBonSortieUncheckedUpdateManyWithoutStockInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteSortie?: Prisma.IntFieldUpdateOperationsInput | number
-  mntProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  total?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   bonSortieId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
 export type DetailBonSortieCreateManyBonSortieInput = {
   id?: bigint | number
   qteSortie: number
-  mntProduit: number
-  total: number
+  mntProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  total: runtime.Decimal | runtime.DecimalJsLike | number | string
   stockId: bigint | number
 }
 
 export type DetailBonSortieUpdateWithoutBonSortieInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteSortie?: Prisma.IntFieldUpdateOperationsInput | number
-  mntProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  total?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   stock?: Prisma.StockUpdateOneRequiredWithoutDetailBonSortiesNestedInput
 }
 
 export type DetailBonSortieUncheckedUpdateWithoutBonSortieInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteSortie?: Prisma.IntFieldUpdateOperationsInput | number
-  mntProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  total?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   stockId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
 export type DetailBonSortieUncheckedUpdateManyWithoutBonSortieInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteSortie?: Prisma.IntFieldUpdateOperationsInput | number
-  mntProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  total?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   stockId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
@@ -698,8 +698,8 @@ export type $DetailBonSortiePayload<ExtArgs extends runtime.Types.Extensions.Int
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: bigint
     qteSortie: number
-    mntProduit: number
-    total: number
+    mntProduit: runtime.Decimal
+    total: runtime.Decimal
     bonSortieId: bigint
     stockId: bigint
   }, ExtArgs["result"]["detailBonSortie"]>
@@ -1075,8 +1075,8 @@ export interface Prisma__DetailBonSortieClient<T, Null = never, ExtArgs extends 
 export interface DetailBonSortieFieldRefs {
   readonly id: Prisma.FieldRef<"DetailBonSortie", 'BigInt'>
   readonly qteSortie: Prisma.FieldRef<"DetailBonSortie", 'Int'>
-  readonly mntProduit: Prisma.FieldRef<"DetailBonSortie", 'Float'>
-  readonly total: Prisma.FieldRef<"DetailBonSortie", 'Float'>
+  readonly mntProduit: Prisma.FieldRef<"DetailBonSortie", 'Decimal'>
+  readonly total: Prisma.FieldRef<"DetailBonSortie", 'Decimal'>
   readonly bonSortieId: Prisma.FieldRef<"DetailBonSortie", 'BigInt'>
   readonly stockId: Prisma.FieldRef<"DetailBonSortie", 'BigInt'>
 }

@@ -30,7 +30,7 @@ export type DetImportationsAvgAggregateOutputType = {
   id: number | null
   qteAchat: number | null
   qteStock: number | null
-  prixAchat: number | null
+  prixAchat: runtime.Decimal | null
   importationsId: number | null
   stockId: number | null
 }
@@ -39,7 +39,7 @@ export type DetImportationsSumAggregateOutputType = {
   id: bigint | null
   qteAchat: number | null
   qteStock: number | null
-  prixAchat: number | null
+  prixAchat: runtime.Decimal | null
   importationsId: bigint | null
   stockId: bigint | null
 }
@@ -48,7 +48,7 @@ export type DetImportationsMinAggregateOutputType = {
   id: bigint | null
   qteAchat: number | null
   qteStock: number | null
-  prixAchat: number | null
+  prixAchat: runtime.Decimal | null
   importationsId: bigint | null
   stockId: bigint | null
 }
@@ -57,7 +57,7 @@ export type DetImportationsMaxAggregateOutputType = {
   id: bigint | null
   qteAchat: number | null
   qteStock: number | null
-  prixAchat: number | null
+  prixAchat: runtime.Decimal | null
   importationsId: bigint | null
   stockId: bigint | null
 }
@@ -209,7 +209,7 @@ export type DetImportationsGroupByOutputType = {
   id: bigint
   qteAchat: number
   qteStock: number
-  prixAchat: number
+  prixAchat: runtime.Decimal
   importationsId: bigint
   stockId: bigint
   _count: DetImportationsCountAggregateOutputType | null
@@ -241,7 +241,7 @@ export type DetImportationsWhereInput = {
   id?: Prisma.BigIntFilter<"DetImportations"> | bigint | number
   qteAchat?: Prisma.IntFilter<"DetImportations"> | number
   qteStock?: Prisma.IntFilter<"DetImportations"> | number
-  prixAchat?: Prisma.FloatFilter<"DetImportations"> | number
+  prixAchat?: Prisma.DecimalFilter<"DetImportations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   importationsId?: Prisma.BigIntFilter<"DetImportations"> | bigint | number
   stockId?: Prisma.BigIntFilter<"DetImportations"> | bigint | number
   importations?: Prisma.XOR<Prisma.ImportationsScalarRelationFilter, Prisma.ImportationsWhereInput>
@@ -266,7 +266,7 @@ export type DetImportationsWhereUniqueInput = Prisma.AtLeast<{
   NOT?: Prisma.DetImportationsWhereInput | Prisma.DetImportationsWhereInput[]
   qteAchat?: Prisma.IntFilter<"DetImportations"> | number
   qteStock?: Prisma.IntFilter<"DetImportations"> | number
-  prixAchat?: Prisma.FloatFilter<"DetImportations"> | number
+  prixAchat?: Prisma.DecimalFilter<"DetImportations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   importationsId?: Prisma.BigIntFilter<"DetImportations"> | bigint | number
   stockId?: Prisma.BigIntFilter<"DetImportations"> | bigint | number
   importations?: Prisma.XOR<Prisma.ImportationsScalarRelationFilter, Prisma.ImportationsWhereInput>
@@ -294,7 +294,7 @@ export type DetImportationsScalarWhereWithAggregatesInput = {
   id?: Prisma.BigIntWithAggregatesFilter<"DetImportations"> | bigint | number
   qteAchat?: Prisma.IntWithAggregatesFilter<"DetImportations"> | number
   qteStock?: Prisma.IntWithAggregatesFilter<"DetImportations"> | number
-  prixAchat?: Prisma.FloatWithAggregatesFilter<"DetImportations"> | number
+  prixAchat?: Prisma.DecimalWithAggregatesFilter<"DetImportations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   importationsId?: Prisma.BigIntWithAggregatesFilter<"DetImportations"> | bigint | number
   stockId?: Prisma.BigIntWithAggregatesFilter<"DetImportations"> | bigint | number
 }
@@ -303,7 +303,7 @@ export type DetImportationsCreateInput = {
   id?: bigint | number
   qteAchat: number
   qteStock: number
-  prixAchat: number
+  prixAchat: runtime.Decimal | runtime.DecimalJsLike | number | string
   importations: Prisma.ImportationsCreateNestedOneWithoutDetImportationsInput
   stock: Prisma.StockCreateNestedOneWithoutDetImportationsInput
 }
@@ -312,7 +312,7 @@ export type DetImportationsUncheckedCreateInput = {
   id?: bigint | number
   qteAchat: number
   qteStock: number
-  prixAchat: number
+  prixAchat: runtime.Decimal | runtime.DecimalJsLike | number | string
   importationsId: bigint | number
   stockId: bigint | number
 }
@@ -321,7 +321,7 @@ export type DetImportationsUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteAchat?: Prisma.IntFieldUpdateOperationsInput | number
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
-  prixAchat?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixAchat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   importations?: Prisma.ImportationsUpdateOneRequiredWithoutDetImportationsNestedInput
   stock?: Prisma.StockUpdateOneRequiredWithoutDetImportationsNestedInput
 }
@@ -330,7 +330,7 @@ export type DetImportationsUncheckedUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteAchat?: Prisma.IntFieldUpdateOperationsInput | number
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
-  prixAchat?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixAchat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   importationsId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   stockId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
@@ -339,7 +339,7 @@ export type DetImportationsCreateManyInput = {
   id?: bigint | number
   qteAchat: number
   qteStock: number
-  prixAchat: number
+  prixAchat: runtime.Decimal | runtime.DecimalJsLike | number | string
   importationsId: bigint | number
   stockId: bigint | number
 }
@@ -348,14 +348,14 @@ export type DetImportationsUpdateManyMutationInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteAchat?: Prisma.IntFieldUpdateOperationsInput | number
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
-  prixAchat?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixAchat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type DetImportationsUncheckedUpdateManyInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteAchat?: Prisma.IntFieldUpdateOperationsInput | number
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
-  prixAchat?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixAchat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   importationsId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   stockId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
@@ -503,7 +503,7 @@ export type DetImportationsCreateWithoutStockInput = {
   id?: bigint | number
   qteAchat: number
   qteStock: number
-  prixAchat: number
+  prixAchat: runtime.Decimal | runtime.DecimalJsLike | number | string
   importations: Prisma.ImportationsCreateNestedOneWithoutDetImportationsInput
 }
 
@@ -511,7 +511,7 @@ export type DetImportationsUncheckedCreateWithoutStockInput = {
   id?: bigint | number
   qteAchat: number
   qteStock: number
-  prixAchat: number
+  prixAchat: runtime.Decimal | runtime.DecimalJsLike | number | string
   importationsId: bigint | number
 }
 
@@ -548,7 +548,7 @@ export type DetImportationsScalarWhereInput = {
   id?: Prisma.BigIntFilter<"DetImportations"> | bigint | number
   qteAchat?: Prisma.IntFilter<"DetImportations"> | number
   qteStock?: Prisma.IntFilter<"DetImportations"> | number
-  prixAchat?: Prisma.FloatFilter<"DetImportations"> | number
+  prixAchat?: Prisma.DecimalFilter<"DetImportations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   importationsId?: Prisma.BigIntFilter<"DetImportations"> | bigint | number
   stockId?: Prisma.BigIntFilter<"DetImportations"> | bigint | number
 }
@@ -557,7 +557,7 @@ export type DetImportationsCreateWithoutImportationsInput = {
   id?: bigint | number
   qteAchat: number
   qteStock: number
-  prixAchat: number
+  prixAchat: runtime.Decimal | runtime.DecimalJsLike | number | string
   stock: Prisma.StockCreateNestedOneWithoutDetImportationsInput
 }
 
@@ -565,7 +565,7 @@ export type DetImportationsUncheckedCreateWithoutImportationsInput = {
   id?: bigint | number
   qteAchat: number
   qteStock: number
-  prixAchat: number
+  prixAchat: runtime.Decimal | runtime.DecimalJsLike | number | string
   stockId: bigint | number
 }
 
@@ -599,7 +599,7 @@ export type DetImportationsCreateManyStockInput = {
   id?: bigint | number
   qteAchat: number
   qteStock: number
-  prixAchat: number
+  prixAchat: runtime.Decimal | runtime.DecimalJsLike | number | string
   importationsId: bigint | number
 }
 
@@ -607,7 +607,7 @@ export type DetImportationsUpdateWithoutStockInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteAchat?: Prisma.IntFieldUpdateOperationsInput | number
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
-  prixAchat?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixAchat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   importations?: Prisma.ImportationsUpdateOneRequiredWithoutDetImportationsNestedInput
 }
 
@@ -615,7 +615,7 @@ export type DetImportationsUncheckedUpdateWithoutStockInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteAchat?: Prisma.IntFieldUpdateOperationsInput | number
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
-  prixAchat?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixAchat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   importationsId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
@@ -623,7 +623,7 @@ export type DetImportationsUncheckedUpdateManyWithoutStockInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteAchat?: Prisma.IntFieldUpdateOperationsInput | number
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
-  prixAchat?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixAchat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   importationsId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
@@ -631,7 +631,7 @@ export type DetImportationsCreateManyImportationsInput = {
   id?: bigint | number
   qteAchat: number
   qteStock: number
-  prixAchat: number
+  prixAchat: runtime.Decimal | runtime.DecimalJsLike | number | string
   stockId: bigint | number
 }
 
@@ -639,7 +639,7 @@ export type DetImportationsUpdateWithoutImportationsInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteAchat?: Prisma.IntFieldUpdateOperationsInput | number
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
-  prixAchat?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixAchat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   stock?: Prisma.StockUpdateOneRequiredWithoutDetImportationsNestedInput
 }
 
@@ -647,7 +647,7 @@ export type DetImportationsUncheckedUpdateWithoutImportationsInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteAchat?: Prisma.IntFieldUpdateOperationsInput | number
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
-  prixAchat?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixAchat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   stockId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
@@ -655,7 +655,7 @@ export type DetImportationsUncheckedUpdateManyWithoutImportationsInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   qteAchat?: Prisma.IntFieldUpdateOperationsInput | number
   qteStock?: Prisma.IntFieldUpdateOperationsInput | number
-  prixAchat?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixAchat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   stockId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
@@ -699,7 +699,7 @@ export type $DetImportationsPayload<ExtArgs extends runtime.Types.Extensions.Int
     id: bigint
     qteAchat: number
     qteStock: number
-    prixAchat: number
+    prixAchat: runtime.Decimal
     importationsId: bigint
     stockId: bigint
   }, ExtArgs["result"]["detImportations"]>
@@ -1076,7 +1076,7 @@ export interface DetImportationsFieldRefs {
   readonly id: Prisma.FieldRef<"DetImportations", 'BigInt'>
   readonly qteAchat: Prisma.FieldRef<"DetImportations", 'Int'>
   readonly qteStock: Prisma.FieldRef<"DetImportations", 'Int'>
-  readonly prixAchat: Prisma.FieldRef<"DetImportations", 'Float'>
+  readonly prixAchat: Prisma.FieldRef<"DetImportations", 'Decimal'>
   readonly importationsId: Prisma.FieldRef<"DetImportations", 'BigInt'>
   readonly stockId: Prisma.FieldRef<"DetImportations", 'BigInt'>
 }

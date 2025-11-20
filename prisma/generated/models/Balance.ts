@@ -28,23 +28,23 @@ export type AggregateBalance = {
 
 export type BalanceAvgAggregateOutputType = {
   id: number | null
-  debitPrec: number | null
-  creditPrec: number | null
-  debit: number | null
-  credit: number | null
-  soldeDebiteur: number | null
-  soldeCrediteur: number | null
+  debitPrec: runtime.Decimal | null
+  creditPrec: runtime.Decimal | null
+  debit: runtime.Decimal | null
+  credit: runtime.Decimal | null
+  soldeDebiteur: runtime.Decimal | null
+  soldeCrediteur: runtime.Decimal | null
   planComptableId: number | null
 }
 
 export type BalanceSumAggregateOutputType = {
   id: bigint | null
-  debitPrec: number | null
-  creditPrec: number | null
-  debit: number | null
-  credit: number | null
-  soldeDebiteur: number | null
-  soldeCrediteur: number | null
+  debitPrec: runtime.Decimal | null
+  creditPrec: runtime.Decimal | null
+  debit: runtime.Decimal | null
+  credit: runtime.Decimal | null
+  soldeDebiteur: runtime.Decimal | null
+  soldeCrediteur: runtime.Decimal | null
   planComptableId: bigint | null
 }
 
@@ -52,12 +52,12 @@ export type BalanceMinAggregateOutputType = {
   id: bigint | null
   dateBalance: Date | null
   nature: string | null
-  debitPrec: number | null
-  creditPrec: number | null
-  debit: number | null
-  credit: number | null
-  soldeDebiteur: number | null
-  soldeCrediteur: number | null
+  debitPrec: runtime.Decimal | null
+  creditPrec: runtime.Decimal | null
+  debit: runtime.Decimal | null
+  credit: runtime.Decimal | null
+  soldeDebiteur: runtime.Decimal | null
+  soldeCrediteur: runtime.Decimal | null
   planComptableId: bigint | null
 }
 
@@ -65,12 +65,12 @@ export type BalanceMaxAggregateOutputType = {
   id: bigint | null
   dateBalance: Date | null
   nature: string | null
-  debitPrec: number | null
-  creditPrec: number | null
-  debit: number | null
-  credit: number | null
-  soldeDebiteur: number | null
-  soldeCrediteur: number | null
+  debitPrec: runtime.Decimal | null
+  creditPrec: runtime.Decimal | null
+  debit: runtime.Decimal | null
+  credit: runtime.Decimal | null
+  soldeDebiteur: runtime.Decimal | null
+  soldeCrediteur: runtime.Decimal | null
   planComptableId: bigint | null
 }
 
@@ -241,12 +241,12 @@ export type BalanceGroupByOutputType = {
   id: bigint
   dateBalance: Date
   nature: string
-  debitPrec: number
-  creditPrec: number
-  debit: number
-  credit: number
-  soldeDebiteur: number
-  soldeCrediteur: number
+  debitPrec: runtime.Decimal
+  creditPrec: runtime.Decimal
+  debit: runtime.Decimal
+  credit: runtime.Decimal
+  soldeDebiteur: runtime.Decimal
+  soldeCrediteur: runtime.Decimal
   planComptableId: bigint
   _count: BalanceCountAggregateOutputType | null
   _avg: BalanceAvgAggregateOutputType | null
@@ -277,12 +277,12 @@ export type BalanceWhereInput = {
   id?: Prisma.BigIntFilter<"Balance"> | bigint | number
   dateBalance?: Prisma.DateTimeFilter<"Balance"> | Date | string
   nature?: Prisma.StringFilter<"Balance"> | string
-  debitPrec?: Prisma.FloatFilter<"Balance"> | number
-  creditPrec?: Prisma.FloatFilter<"Balance"> | number
-  debit?: Prisma.FloatFilter<"Balance"> | number
-  credit?: Prisma.FloatFilter<"Balance"> | number
-  soldeDebiteur?: Prisma.FloatFilter<"Balance"> | number
-  soldeCrediteur?: Prisma.FloatFilter<"Balance"> | number
+  debitPrec?: Prisma.DecimalFilter<"Balance"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  creditPrec?: Prisma.DecimalFilter<"Balance"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  debit?: Prisma.DecimalFilter<"Balance"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit?: Prisma.DecimalFilter<"Balance"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeDebiteur?: Prisma.DecimalFilter<"Balance"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeCrediteur?: Prisma.DecimalFilter<"Balance"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   planComptableId?: Prisma.BigIntFilter<"Balance"> | bigint | number
   planComptable?: Prisma.XOR<Prisma.PlanComptableScalarRelationFilter, Prisma.PlanComptableWhereInput>
 }
@@ -309,12 +309,12 @@ export type BalanceWhereUniqueInput = Prisma.AtLeast<{
   NOT?: Prisma.BalanceWhereInput | Prisma.BalanceWhereInput[]
   dateBalance?: Prisma.DateTimeFilter<"Balance"> | Date | string
   nature?: Prisma.StringFilter<"Balance"> | string
-  debitPrec?: Prisma.FloatFilter<"Balance"> | number
-  creditPrec?: Prisma.FloatFilter<"Balance"> | number
-  debit?: Prisma.FloatFilter<"Balance"> | number
-  credit?: Prisma.FloatFilter<"Balance"> | number
-  soldeDebiteur?: Prisma.FloatFilter<"Balance"> | number
-  soldeCrediteur?: Prisma.FloatFilter<"Balance"> | number
+  debitPrec?: Prisma.DecimalFilter<"Balance"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  creditPrec?: Prisma.DecimalFilter<"Balance"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  debit?: Prisma.DecimalFilter<"Balance"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit?: Prisma.DecimalFilter<"Balance"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeDebiteur?: Prisma.DecimalFilter<"Balance"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeCrediteur?: Prisma.DecimalFilter<"Balance"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   planComptableId?: Prisma.BigIntFilter<"Balance"> | bigint | number
   planComptable?: Prisma.XOR<Prisma.PlanComptableScalarRelationFilter, Prisma.PlanComptableWhereInput>
 }, "id">
@@ -344,12 +344,12 @@ export type BalanceScalarWhereWithAggregatesInput = {
   id?: Prisma.BigIntWithAggregatesFilter<"Balance"> | bigint | number
   dateBalance?: Prisma.DateTimeWithAggregatesFilter<"Balance"> | Date | string
   nature?: Prisma.StringWithAggregatesFilter<"Balance"> | string
-  debitPrec?: Prisma.FloatWithAggregatesFilter<"Balance"> | number
-  creditPrec?: Prisma.FloatWithAggregatesFilter<"Balance"> | number
-  debit?: Prisma.FloatWithAggregatesFilter<"Balance"> | number
-  credit?: Prisma.FloatWithAggregatesFilter<"Balance"> | number
-  soldeDebiteur?: Prisma.FloatWithAggregatesFilter<"Balance"> | number
-  soldeCrediteur?: Prisma.FloatWithAggregatesFilter<"Balance"> | number
+  debitPrec?: Prisma.DecimalWithAggregatesFilter<"Balance"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  creditPrec?: Prisma.DecimalWithAggregatesFilter<"Balance"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  debit?: Prisma.DecimalWithAggregatesFilter<"Balance"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit?: Prisma.DecimalWithAggregatesFilter<"Balance"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeDebiteur?: Prisma.DecimalWithAggregatesFilter<"Balance"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeCrediteur?: Prisma.DecimalWithAggregatesFilter<"Balance"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   planComptableId?: Prisma.BigIntWithAggregatesFilter<"Balance"> | bigint | number
 }
 
@@ -357,12 +357,12 @@ export type BalanceCreateInput = {
   id?: bigint | number
   dateBalance: Date | string
   nature: string
-  debitPrec: number
-  creditPrec: number
-  debit: number
-  credit: number
-  soldeDebiteur: number
-  soldeCrediteur: number
+  debitPrec: runtime.Decimal | runtime.DecimalJsLike | number | string
+  creditPrec: runtime.Decimal | runtime.DecimalJsLike | number | string
+  debit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeDebiteur: runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeCrediteur: runtime.Decimal | runtime.DecimalJsLike | number | string
   planComptable: Prisma.PlanComptableCreateNestedOneWithoutBalancesInput
 }
 
@@ -370,12 +370,12 @@ export type BalanceUncheckedCreateInput = {
   id?: bigint | number
   dateBalance: Date | string
   nature: string
-  debitPrec: number
-  creditPrec: number
-  debit: number
-  credit: number
-  soldeDebiteur: number
-  soldeCrediteur: number
+  debitPrec: runtime.Decimal | runtime.DecimalJsLike | number | string
+  creditPrec: runtime.Decimal | runtime.DecimalJsLike | number | string
+  debit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeDebiteur: runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeCrediteur: runtime.Decimal | runtime.DecimalJsLike | number | string
   planComptableId: bigint | number
 }
 
@@ -383,12 +383,12 @@ export type BalanceUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   dateBalance?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   nature?: Prisma.StringFieldUpdateOperationsInput | string
-  debitPrec?: Prisma.FloatFieldUpdateOperationsInput | number
-  creditPrec?: Prisma.FloatFieldUpdateOperationsInput | number
-  debit?: Prisma.FloatFieldUpdateOperationsInput | number
-  credit?: Prisma.FloatFieldUpdateOperationsInput | number
-  soldeDebiteur?: Prisma.FloatFieldUpdateOperationsInput | number
-  soldeCrediteur?: Prisma.FloatFieldUpdateOperationsInput | number
+  debitPrec?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  creditPrec?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  debit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeDebiteur?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeCrediteur?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   planComptable?: Prisma.PlanComptableUpdateOneRequiredWithoutBalancesNestedInput
 }
 
@@ -396,12 +396,12 @@ export type BalanceUncheckedUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   dateBalance?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   nature?: Prisma.StringFieldUpdateOperationsInput | string
-  debitPrec?: Prisma.FloatFieldUpdateOperationsInput | number
-  creditPrec?: Prisma.FloatFieldUpdateOperationsInput | number
-  debit?: Prisma.FloatFieldUpdateOperationsInput | number
-  credit?: Prisma.FloatFieldUpdateOperationsInput | number
-  soldeDebiteur?: Prisma.FloatFieldUpdateOperationsInput | number
-  soldeCrediteur?: Prisma.FloatFieldUpdateOperationsInput | number
+  debitPrec?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  creditPrec?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  debit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeDebiteur?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeCrediteur?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   planComptableId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
@@ -409,12 +409,12 @@ export type BalanceCreateManyInput = {
   id?: bigint | number
   dateBalance: Date | string
   nature: string
-  debitPrec: number
-  creditPrec: number
-  debit: number
-  credit: number
-  soldeDebiteur: number
-  soldeCrediteur: number
+  debitPrec: runtime.Decimal | runtime.DecimalJsLike | number | string
+  creditPrec: runtime.Decimal | runtime.DecimalJsLike | number | string
+  debit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeDebiteur: runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeCrediteur: runtime.Decimal | runtime.DecimalJsLike | number | string
   planComptableId: bigint | number
 }
 
@@ -422,24 +422,24 @@ export type BalanceUpdateManyMutationInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   dateBalance?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   nature?: Prisma.StringFieldUpdateOperationsInput | string
-  debitPrec?: Prisma.FloatFieldUpdateOperationsInput | number
-  creditPrec?: Prisma.FloatFieldUpdateOperationsInput | number
-  debit?: Prisma.FloatFieldUpdateOperationsInput | number
-  credit?: Prisma.FloatFieldUpdateOperationsInput | number
-  soldeDebiteur?: Prisma.FloatFieldUpdateOperationsInput | number
-  soldeCrediteur?: Prisma.FloatFieldUpdateOperationsInput | number
+  debitPrec?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  creditPrec?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  debit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeDebiteur?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeCrediteur?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type BalanceUncheckedUpdateManyInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   dateBalance?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   nature?: Prisma.StringFieldUpdateOperationsInput | string
-  debitPrec?: Prisma.FloatFieldUpdateOperationsInput | number
-  creditPrec?: Prisma.FloatFieldUpdateOperationsInput | number
-  debit?: Prisma.FloatFieldUpdateOperationsInput | number
-  credit?: Prisma.FloatFieldUpdateOperationsInput | number
-  soldeDebiteur?: Prisma.FloatFieldUpdateOperationsInput | number
-  soldeCrediteur?: Prisma.FloatFieldUpdateOperationsInput | number
+  debitPrec?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  creditPrec?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  debit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeDebiteur?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeCrediteur?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   planComptableId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
@@ -566,24 +566,24 @@ export type BalanceCreateWithoutPlanComptableInput = {
   id?: bigint | number
   dateBalance: Date | string
   nature: string
-  debitPrec: number
-  creditPrec: number
-  debit: number
-  credit: number
-  soldeDebiteur: number
-  soldeCrediteur: number
+  debitPrec: runtime.Decimal | runtime.DecimalJsLike | number | string
+  creditPrec: runtime.Decimal | runtime.DecimalJsLike | number | string
+  debit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeDebiteur: runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeCrediteur: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type BalanceUncheckedCreateWithoutPlanComptableInput = {
   id?: bigint | number
   dateBalance: Date | string
   nature: string
-  debitPrec: number
-  creditPrec: number
-  debit: number
-  credit: number
-  soldeDebiteur: number
-  soldeCrediteur: number
+  debitPrec: runtime.Decimal | runtime.DecimalJsLike | number | string
+  creditPrec: runtime.Decimal | runtime.DecimalJsLike | number | string
+  debit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeDebiteur: runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeCrediteur: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type BalanceCreateOrConnectWithoutPlanComptableInput = {
@@ -619,12 +619,12 @@ export type BalanceScalarWhereInput = {
   id?: Prisma.BigIntFilter<"Balance"> | bigint | number
   dateBalance?: Prisma.DateTimeFilter<"Balance"> | Date | string
   nature?: Prisma.StringFilter<"Balance"> | string
-  debitPrec?: Prisma.FloatFilter<"Balance"> | number
-  creditPrec?: Prisma.FloatFilter<"Balance"> | number
-  debit?: Prisma.FloatFilter<"Balance"> | number
-  credit?: Prisma.FloatFilter<"Balance"> | number
-  soldeDebiteur?: Prisma.FloatFilter<"Balance"> | number
-  soldeCrediteur?: Prisma.FloatFilter<"Balance"> | number
+  debitPrec?: Prisma.DecimalFilter<"Balance"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  creditPrec?: Prisma.DecimalFilter<"Balance"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  debit?: Prisma.DecimalFilter<"Balance"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit?: Prisma.DecimalFilter<"Balance"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeDebiteur?: Prisma.DecimalFilter<"Balance"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeCrediteur?: Prisma.DecimalFilter<"Balance"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   planComptableId?: Prisma.BigIntFilter<"Balance"> | bigint | number
 }
 
@@ -632,48 +632,48 @@ export type BalanceCreateManyPlanComptableInput = {
   id?: bigint | number
   dateBalance: Date | string
   nature: string
-  debitPrec: number
-  creditPrec: number
-  debit: number
-  credit: number
-  soldeDebiteur: number
-  soldeCrediteur: number
+  debitPrec: runtime.Decimal | runtime.DecimalJsLike | number | string
+  creditPrec: runtime.Decimal | runtime.DecimalJsLike | number | string
+  debit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeDebiteur: runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeCrediteur: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type BalanceUpdateWithoutPlanComptableInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   dateBalance?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   nature?: Prisma.StringFieldUpdateOperationsInput | string
-  debitPrec?: Prisma.FloatFieldUpdateOperationsInput | number
-  creditPrec?: Prisma.FloatFieldUpdateOperationsInput | number
-  debit?: Prisma.FloatFieldUpdateOperationsInput | number
-  credit?: Prisma.FloatFieldUpdateOperationsInput | number
-  soldeDebiteur?: Prisma.FloatFieldUpdateOperationsInput | number
-  soldeCrediteur?: Prisma.FloatFieldUpdateOperationsInput | number
+  debitPrec?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  creditPrec?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  debit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeDebiteur?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeCrediteur?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type BalanceUncheckedUpdateWithoutPlanComptableInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   dateBalance?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   nature?: Prisma.StringFieldUpdateOperationsInput | string
-  debitPrec?: Prisma.FloatFieldUpdateOperationsInput | number
-  creditPrec?: Prisma.FloatFieldUpdateOperationsInput | number
-  debit?: Prisma.FloatFieldUpdateOperationsInput | number
-  credit?: Prisma.FloatFieldUpdateOperationsInput | number
-  soldeDebiteur?: Prisma.FloatFieldUpdateOperationsInput | number
-  soldeCrediteur?: Prisma.FloatFieldUpdateOperationsInput | number
+  debitPrec?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  creditPrec?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  debit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeDebiteur?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeCrediteur?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type BalanceUncheckedUpdateManyWithoutPlanComptableInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   dateBalance?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   nature?: Prisma.StringFieldUpdateOperationsInput | string
-  debitPrec?: Prisma.FloatFieldUpdateOperationsInput | number
-  creditPrec?: Prisma.FloatFieldUpdateOperationsInput | number
-  debit?: Prisma.FloatFieldUpdateOperationsInput | number
-  credit?: Prisma.FloatFieldUpdateOperationsInput | number
-  soldeDebiteur?: Prisma.FloatFieldUpdateOperationsInput | number
-  soldeCrediteur?: Prisma.FloatFieldUpdateOperationsInput | number
+  debitPrec?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  creditPrec?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  debit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  credit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeDebiteur?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  soldeCrediteur?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 
@@ -721,12 +721,12 @@ export type $BalancePayload<ExtArgs extends runtime.Types.Extensions.InternalArg
     id: bigint
     dateBalance: Date
     nature: string
-    debitPrec: number
-    creditPrec: number
-    debit: number
-    credit: number
-    soldeDebiteur: number
-    soldeCrediteur: number
+    debitPrec: runtime.Decimal
+    creditPrec: runtime.Decimal
+    debit: runtime.Decimal
+    credit: runtime.Decimal
+    soldeDebiteur: runtime.Decimal
+    soldeCrediteur: runtime.Decimal
     planComptableId: bigint
   }, ExtArgs["result"]["balance"]>
   composites: {}
@@ -1101,12 +1101,12 @@ export interface BalanceFieldRefs {
   readonly id: Prisma.FieldRef<"Balance", 'BigInt'>
   readonly dateBalance: Prisma.FieldRef<"Balance", 'DateTime'>
   readonly nature: Prisma.FieldRef<"Balance", 'String'>
-  readonly debitPrec: Prisma.FieldRef<"Balance", 'Float'>
-  readonly creditPrec: Prisma.FieldRef<"Balance", 'Float'>
-  readonly debit: Prisma.FieldRef<"Balance", 'Float'>
-  readonly credit: Prisma.FieldRef<"Balance", 'Float'>
-  readonly soldeDebiteur: Prisma.FieldRef<"Balance", 'Float'>
-  readonly soldeCrediteur: Prisma.FieldRef<"Balance", 'Float'>
+  readonly debitPrec: Prisma.FieldRef<"Balance", 'Decimal'>
+  readonly creditPrec: Prisma.FieldRef<"Balance", 'Decimal'>
+  readonly debit: Prisma.FieldRef<"Balance", 'Decimal'>
+  readonly credit: Prisma.FieldRef<"Balance", 'Decimal'>
+  readonly soldeDebiteur: Prisma.FieldRef<"Balance", 'Decimal'>
+  readonly soldeCrediteur: Prisma.FieldRef<"Balance", 'Decimal'>
   readonly planComptableId: Prisma.FieldRef<"Balance", 'BigInt'>
 }
     

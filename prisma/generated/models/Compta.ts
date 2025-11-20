@@ -28,19 +28,19 @@ export type AggregateCompta = {
 
 export type ComptaAvgAggregateOutputType = {
   id: number | null
-  montantTVAPrecedent: number | null
-  montantTVAAchat: number | null
-  montantTVAVente: number | null
-  resutMnt: number | null
+  montantTVAPrecedent: runtime.Decimal | null
+  montantTVAAchat: runtime.Decimal | null
+  montantTVAVente: runtime.Decimal | null
+  resutMnt: runtime.Decimal | null
   repertoireId: number | null
 }
 
 export type ComptaSumAggregateOutputType = {
   id: bigint | null
-  montantTVAPrecedent: number | null
-  montantTVAAchat: number | null
-  montantTVAVente: number | null
-  resutMnt: number | null
+  montantTVAPrecedent: runtime.Decimal | null
+  montantTVAAchat: runtime.Decimal | null
+  montantTVAVente: runtime.Decimal | null
+  resutMnt: runtime.Decimal | null
   repertoireId: bigint | null
 }
 
@@ -48,10 +48,10 @@ export type ComptaMinAggregateOutputType = {
   id: bigint | null
   dateDebut: Date | null
   dateFin: Date | null
-  montantTVAPrecedent: number | null
-  montantTVAAchat: number | null
-  montantTVAVente: number | null
-  resutMnt: number | null
+  montantTVAPrecedent: runtime.Decimal | null
+  montantTVAAchat: runtime.Decimal | null
+  montantTVAVente: runtime.Decimal | null
+  resutMnt: runtime.Decimal | null
   repertoireId: bigint | null
 }
 
@@ -59,10 +59,10 @@ export type ComptaMaxAggregateOutputType = {
   id: bigint | null
   dateDebut: Date | null
   dateFin: Date | null
-  montantTVAPrecedent: number | null
-  montantTVAAchat: number | null
-  montantTVAVente: number | null
-  resutMnt: number | null
+  montantTVAPrecedent: runtime.Decimal | null
+  montantTVAAchat: runtime.Decimal | null
+  montantTVAVente: runtime.Decimal | null
+  resutMnt: runtime.Decimal | null
   repertoireId: bigint | null
 }
 
@@ -221,10 +221,10 @@ export type ComptaGroupByOutputType = {
   id: bigint
   dateDebut: Date
   dateFin: Date
-  montantTVAPrecedent: number
-  montantTVAAchat: number
-  montantTVAVente: number
-  resutMnt: number
+  montantTVAPrecedent: runtime.Decimal
+  montantTVAAchat: runtime.Decimal
+  montantTVAVente: runtime.Decimal
+  resutMnt: runtime.Decimal
   repertoireId: bigint
   _count: ComptaCountAggregateOutputType | null
   _avg: ComptaAvgAggregateOutputType | null
@@ -255,10 +255,10 @@ export type ComptaWhereInput = {
   id?: Prisma.BigIntFilter<"Compta"> | bigint | number
   dateDebut?: Prisma.DateTimeFilter<"Compta"> | Date | string
   dateFin?: Prisma.DateTimeFilter<"Compta"> | Date | string
-  montantTVAPrecedent?: Prisma.FloatFilter<"Compta"> | number
-  montantTVAAchat?: Prisma.FloatFilter<"Compta"> | number
-  montantTVAVente?: Prisma.FloatFilter<"Compta"> | number
-  resutMnt?: Prisma.FloatFilter<"Compta"> | number
+  montantTVAPrecedent?: Prisma.DecimalFilter<"Compta"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAAchat?: Prisma.DecimalFilter<"Compta"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAVente?: Prisma.DecimalFilter<"Compta"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  resutMnt?: Prisma.DecimalFilter<"Compta"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireId?: Prisma.BigIntFilter<"Compta"> | bigint | number
   repertoire?: Prisma.XOR<Prisma.RepertoireScalarRelationFilter, Prisma.RepertoireWhereInput>
 }
@@ -282,10 +282,10 @@ export type ComptaWhereUniqueInput = Prisma.AtLeast<{
   NOT?: Prisma.ComptaWhereInput | Prisma.ComptaWhereInput[]
   dateDebut?: Prisma.DateTimeFilter<"Compta"> | Date | string
   dateFin?: Prisma.DateTimeFilter<"Compta"> | Date | string
-  montantTVAPrecedent?: Prisma.FloatFilter<"Compta"> | number
-  montantTVAAchat?: Prisma.FloatFilter<"Compta"> | number
-  montantTVAVente?: Prisma.FloatFilter<"Compta"> | number
-  resutMnt?: Prisma.FloatFilter<"Compta"> | number
+  montantTVAPrecedent?: Prisma.DecimalFilter<"Compta"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAAchat?: Prisma.DecimalFilter<"Compta"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAVente?: Prisma.DecimalFilter<"Compta"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  resutMnt?: Prisma.DecimalFilter<"Compta"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireId?: Prisma.BigIntFilter<"Compta"> | bigint | number
   repertoire?: Prisma.XOR<Prisma.RepertoireScalarRelationFilter, Prisma.RepertoireWhereInput>
 }, "id">
@@ -313,10 +313,10 @@ export type ComptaScalarWhereWithAggregatesInput = {
   id?: Prisma.BigIntWithAggregatesFilter<"Compta"> | bigint | number
   dateDebut?: Prisma.DateTimeWithAggregatesFilter<"Compta"> | Date | string
   dateFin?: Prisma.DateTimeWithAggregatesFilter<"Compta"> | Date | string
-  montantTVAPrecedent?: Prisma.FloatWithAggregatesFilter<"Compta"> | number
-  montantTVAAchat?: Prisma.FloatWithAggregatesFilter<"Compta"> | number
-  montantTVAVente?: Prisma.FloatWithAggregatesFilter<"Compta"> | number
-  resutMnt?: Prisma.FloatWithAggregatesFilter<"Compta"> | number
+  montantTVAPrecedent?: Prisma.DecimalWithAggregatesFilter<"Compta"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAAchat?: Prisma.DecimalWithAggregatesFilter<"Compta"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAVente?: Prisma.DecimalWithAggregatesFilter<"Compta"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  resutMnt?: Prisma.DecimalWithAggregatesFilter<"Compta"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireId?: Prisma.BigIntWithAggregatesFilter<"Compta"> | bigint | number
 }
 
@@ -324,10 +324,10 @@ export type ComptaCreateInput = {
   id?: bigint | number
   dateDebut: Date | string
   dateFin: Date | string
-  montantTVAPrecedent: number
-  montantTVAAchat: number
-  montantTVAVente: number
-  resutMnt: number
+  montantTVAPrecedent: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAAchat: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAVente: runtime.Decimal | runtime.DecimalJsLike | number | string
+  resutMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoire: Prisma.RepertoireCreateNestedOneWithoutComptasInput
 }
 
@@ -335,10 +335,10 @@ export type ComptaUncheckedCreateInput = {
   id?: bigint | number
   dateDebut: Date | string
   dateFin: Date | string
-  montantTVAPrecedent: number
-  montantTVAAchat: number
-  montantTVAVente: number
-  resutMnt: number
+  montantTVAPrecedent: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAAchat: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAVente: runtime.Decimal | runtime.DecimalJsLike | number | string
+  resutMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireId: bigint | number
 }
 
@@ -346,10 +346,10 @@ export type ComptaUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   dateDebut?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateFin?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  montantTVAPrecedent?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVAAchat?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVAVente?: Prisma.FloatFieldUpdateOperationsInput | number
-  resutMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  montantTVAPrecedent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAAchat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAVente?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  resutMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoire?: Prisma.RepertoireUpdateOneRequiredWithoutComptasNestedInput
 }
 
@@ -357,10 +357,10 @@ export type ComptaUncheckedUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   dateDebut?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateFin?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  montantTVAPrecedent?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVAAchat?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVAVente?: Prisma.FloatFieldUpdateOperationsInput | number
-  resutMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  montantTVAPrecedent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAAchat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAVente?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  resutMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
@@ -368,10 +368,10 @@ export type ComptaCreateManyInput = {
   id?: bigint | number
   dateDebut: Date | string
   dateFin: Date | string
-  montantTVAPrecedent: number
-  montantTVAAchat: number
-  montantTVAVente: number
-  resutMnt: number
+  montantTVAPrecedent: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAAchat: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAVente: runtime.Decimal | runtime.DecimalJsLike | number | string
+  resutMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireId: bigint | number
 }
 
@@ -379,20 +379,20 @@ export type ComptaUpdateManyMutationInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   dateDebut?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateFin?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  montantTVAPrecedent?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVAAchat?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVAVente?: Prisma.FloatFieldUpdateOperationsInput | number
-  resutMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  montantTVAPrecedent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAAchat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAVente?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  resutMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type ComptaUncheckedUpdateManyInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   dateDebut?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateFin?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  montantTVAPrecedent?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVAAchat?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVAVente?: Prisma.FloatFieldUpdateOperationsInput | number
-  resutMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  montantTVAPrecedent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAAchat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAVente?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  resutMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
@@ -503,20 +503,20 @@ export type ComptaCreateWithoutRepertoireInput = {
   id?: bigint | number
   dateDebut: Date | string
   dateFin: Date | string
-  montantTVAPrecedent: number
-  montantTVAAchat: number
-  montantTVAVente: number
-  resutMnt: number
+  montantTVAPrecedent: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAAchat: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAVente: runtime.Decimal | runtime.DecimalJsLike | number | string
+  resutMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type ComptaUncheckedCreateWithoutRepertoireInput = {
   id?: bigint | number
   dateDebut: Date | string
   dateFin: Date | string
-  montantTVAPrecedent: number
-  montantTVAAchat: number
-  montantTVAVente: number
-  resutMnt: number
+  montantTVAPrecedent: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAAchat: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAVente: runtime.Decimal | runtime.DecimalJsLike | number | string
+  resutMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type ComptaCreateOrConnectWithoutRepertoireInput = {
@@ -552,10 +552,10 @@ export type ComptaScalarWhereInput = {
   id?: Prisma.BigIntFilter<"Compta"> | bigint | number
   dateDebut?: Prisma.DateTimeFilter<"Compta"> | Date | string
   dateFin?: Prisma.DateTimeFilter<"Compta"> | Date | string
-  montantTVAPrecedent?: Prisma.FloatFilter<"Compta"> | number
-  montantTVAAchat?: Prisma.FloatFilter<"Compta"> | number
-  montantTVAVente?: Prisma.FloatFilter<"Compta"> | number
-  resutMnt?: Prisma.FloatFilter<"Compta"> | number
+  montantTVAPrecedent?: Prisma.DecimalFilter<"Compta"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAAchat?: Prisma.DecimalFilter<"Compta"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAVente?: Prisma.DecimalFilter<"Compta"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  resutMnt?: Prisma.DecimalFilter<"Compta"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireId?: Prisma.BigIntFilter<"Compta"> | bigint | number
 }
 
@@ -563,40 +563,40 @@ export type ComptaCreateManyRepertoireInput = {
   id?: bigint | number
   dateDebut: Date | string
   dateFin: Date | string
-  montantTVAPrecedent: number
-  montantTVAAchat: number
-  montantTVAVente: number
-  resutMnt: number
+  montantTVAPrecedent: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAAchat: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAVente: runtime.Decimal | runtime.DecimalJsLike | number | string
+  resutMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type ComptaUpdateWithoutRepertoireInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   dateDebut?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateFin?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  montantTVAPrecedent?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVAAchat?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVAVente?: Prisma.FloatFieldUpdateOperationsInput | number
-  resutMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  montantTVAPrecedent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAAchat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAVente?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  resutMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type ComptaUncheckedUpdateWithoutRepertoireInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   dateDebut?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateFin?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  montantTVAPrecedent?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVAAchat?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVAVente?: Prisma.FloatFieldUpdateOperationsInput | number
-  resutMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  montantTVAPrecedent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAAchat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAVente?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  resutMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type ComptaUncheckedUpdateManyWithoutRepertoireInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   dateDebut?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateFin?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  montantTVAPrecedent?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVAAchat?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVAVente?: Prisma.FloatFieldUpdateOperationsInput | number
-  resutMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  montantTVAPrecedent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAAchat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVAVente?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  resutMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 
@@ -640,10 +640,10 @@ export type $ComptaPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs
     id: bigint
     dateDebut: Date
     dateFin: Date
-    montantTVAPrecedent: number
-    montantTVAAchat: number
-    montantTVAVente: number
-    resutMnt: number
+    montantTVAPrecedent: runtime.Decimal
+    montantTVAAchat: runtime.Decimal
+    montantTVAVente: runtime.Decimal
+    resutMnt: runtime.Decimal
     repertoireId: bigint
   }, ExtArgs["result"]["compta"]>
   composites: {}
@@ -1018,10 +1018,10 @@ export interface ComptaFieldRefs {
   readonly id: Prisma.FieldRef<"Compta", 'BigInt'>
   readonly dateDebut: Prisma.FieldRef<"Compta", 'DateTime'>
   readonly dateFin: Prisma.FieldRef<"Compta", 'DateTime'>
-  readonly montantTVAPrecedent: Prisma.FieldRef<"Compta", 'Float'>
-  readonly montantTVAAchat: Prisma.FieldRef<"Compta", 'Float'>
-  readonly montantTVAVente: Prisma.FieldRef<"Compta", 'Float'>
-  readonly resutMnt: Prisma.FieldRef<"Compta", 'Float'>
+  readonly montantTVAPrecedent: Prisma.FieldRef<"Compta", 'Decimal'>
+  readonly montantTVAAchat: Prisma.FieldRef<"Compta", 'Decimal'>
+  readonly montantTVAVente: Prisma.FieldRef<"Compta", 'Decimal'>
+  readonly resutMnt: Prisma.FieldRef<"Compta", 'Decimal'>
   readonly repertoireId: Prisma.FieldRef<"Compta", 'BigInt'>
 }
     

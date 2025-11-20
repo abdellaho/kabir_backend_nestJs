@@ -83,7 +83,7 @@ export class PersonnelService {
     }
     
     // Build the query with OR conditions and exclude current id if provided
-    const exists = await this.databaseService.repertoire.findFirst({
+    const exists = await this.databaseService.personnel.findFirst({
       where: {
         OR: orConditions,
         ...(id && { id: { not: id } }) //Exclude the current record if updating

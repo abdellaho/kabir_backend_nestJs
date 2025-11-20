@@ -28,57 +28,57 @@ export type AggregateDetBulttinPai = {
 
 export type DetBulttinPaiAvgAggregateOutputType = {
   id: number | null
-  prixlivraison: number | null
+  prixlivraison: runtime.Decimal | null
   qtevendu: number | null
-  prixvente: number | null
-  remise: number | null
-  mantantvendu: number | null
-  commission: number | null
-  commsiondh: number | null
-  mantant: number | null
-  benDH: number | null
-  commissionFixe: number | null
-  prixCommercial: number | null
-  primeCommercial: number | null
-  primeProduit: number | null
+  prixvente: runtime.Decimal | null
+  remise: runtime.Decimal | null
+  mantantvendu: runtime.Decimal | null
+  commission: runtime.Decimal | null
+  commsiondh: runtime.Decimal | null
+  mantant: runtime.Decimal | null
+  benDH: runtime.Decimal | null
+  commissionFixe: runtime.Decimal | null
+  prixCommercial: runtime.Decimal | null
+  primeCommercial: runtime.Decimal | null
+  primeProduit: runtime.Decimal | null
   bulttinPaiId: number | null
   produitId: number | null
 }
 
 export type DetBulttinPaiSumAggregateOutputType = {
   id: bigint | null
-  prixlivraison: number | null
+  prixlivraison: runtime.Decimal | null
   qtevendu: number | null
-  prixvente: number | null
-  remise: number | null
-  mantantvendu: number | null
-  commission: number | null
-  commsiondh: number | null
-  mantant: number | null
-  benDH: number | null
-  commissionFixe: number | null
-  prixCommercial: number | null
-  primeCommercial: number | null
-  primeProduit: number | null
+  prixvente: runtime.Decimal | null
+  remise: runtime.Decimal | null
+  mantantvendu: runtime.Decimal | null
+  commission: runtime.Decimal | null
+  commsiondh: runtime.Decimal | null
+  mantant: runtime.Decimal | null
+  benDH: runtime.Decimal | null
+  commissionFixe: runtime.Decimal | null
+  prixCommercial: runtime.Decimal | null
+  primeCommercial: runtime.Decimal | null
+  primeProduit: runtime.Decimal | null
   bulttinPaiId: bigint | null
   produitId: bigint | null
 }
 
 export type DetBulttinPaiMinAggregateOutputType = {
   id: bigint | null
-  prixlivraison: number | null
+  prixlivraison: runtime.Decimal | null
   qtevendu: number | null
-  prixvente: number | null
-  remise: number | null
-  mantantvendu: number | null
-  commission: number | null
-  commsiondh: number | null
-  mantant: number | null
-  benDH: number | null
-  commissionFixe: number | null
-  prixCommercial: number | null
-  primeCommercial: number | null
-  primeProduit: number | null
+  prixvente: runtime.Decimal | null
+  remise: runtime.Decimal | null
+  mantantvendu: runtime.Decimal | null
+  commission: runtime.Decimal | null
+  commsiondh: runtime.Decimal | null
+  mantant: runtime.Decimal | null
+  benDH: runtime.Decimal | null
+  commissionFixe: runtime.Decimal | null
+  prixCommercial: runtime.Decimal | null
+  primeCommercial: runtime.Decimal | null
+  primeProduit: runtime.Decimal | null
   avecZero: boolean | null
   bulttinPaiId: bigint | null
   produitId: bigint | null
@@ -86,19 +86,19 @@ export type DetBulttinPaiMinAggregateOutputType = {
 
 export type DetBulttinPaiMaxAggregateOutputType = {
   id: bigint | null
-  prixlivraison: number | null
+  prixlivraison: runtime.Decimal | null
   qtevendu: number | null
-  prixvente: number | null
-  remise: number | null
-  mantantvendu: number | null
-  commission: number | null
-  commsiondh: number | null
-  mantant: number | null
-  benDH: number | null
-  commissionFixe: number | null
-  prixCommercial: number | null
-  primeCommercial: number | null
-  primeProduit: number | null
+  prixvente: runtime.Decimal | null
+  remise: runtime.Decimal | null
+  mantantvendu: runtime.Decimal | null
+  commission: runtime.Decimal | null
+  commsiondh: runtime.Decimal | null
+  mantant: runtime.Decimal | null
+  benDH: runtime.Decimal | null
+  commissionFixe: runtime.Decimal | null
+  prixCommercial: runtime.Decimal | null
+  primeCommercial: runtime.Decimal | null
+  primeProduit: runtime.Decimal | null
   avecZero: boolean | null
   bulttinPaiId: bigint | null
   produitId: bigint | null
@@ -313,19 +313,19 @@ export type DetBulttinPaiGroupByArgs<ExtArgs extends runtime.Types.Extensions.In
 
 export type DetBulttinPaiGroupByOutputType = {
   id: bigint
-  prixlivraison: number
+  prixlivraison: runtime.Decimal
   qtevendu: number
-  prixvente: number
-  remise: number
-  mantantvendu: number
-  commission: number
-  commsiondh: number
-  mantant: number
-  benDH: number
-  commissionFixe: number
-  prixCommercial: number
-  primeCommercial: number
-  primeProduit: number
+  prixvente: runtime.Decimal
+  remise: runtime.Decimal
+  mantantvendu: runtime.Decimal
+  commission: runtime.Decimal
+  commsiondh: runtime.Decimal
+  mantant: runtime.Decimal
+  benDH: runtime.Decimal
+  commissionFixe: runtime.Decimal
+  prixCommercial: runtime.Decimal
+  primeCommercial: runtime.Decimal
+  primeProduit: runtime.Decimal
   avecZero: boolean
   bulttinPaiId: bigint
   produitId: bigint
@@ -356,19 +356,19 @@ export type DetBulttinPaiWhereInput = {
   OR?: Prisma.DetBulttinPaiWhereInput[]
   NOT?: Prisma.DetBulttinPaiWhereInput | Prisma.DetBulttinPaiWhereInput[]
   id?: Prisma.BigIntFilter<"DetBulttinPai"> | bigint | number
-  prixlivraison?: Prisma.FloatFilter<"DetBulttinPai"> | number
+  prixlivraison?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   qtevendu?: Prisma.IntFilter<"DetBulttinPai"> | number
-  prixvente?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  remise?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  mantantvendu?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  commission?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  commsiondh?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  mantant?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  benDH?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  commissionFixe?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  prixCommercial?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  primeCommercial?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  primeProduit?: Prisma.FloatFilter<"DetBulttinPai"> | number
+  prixvente?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remise?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantvendu?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commsiondh?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantant?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benDH?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionFixe?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   avecZero?: Prisma.BoolFilter<"DetBulttinPai"> | boolean
   bulttinPaiId?: Prisma.BigIntFilter<"DetBulttinPai"> | bigint | number
   produitId?: Prisma.BigIntFilter<"DetBulttinPai"> | bigint | number
@@ -403,19 +403,19 @@ export type DetBulttinPaiWhereUniqueInput = Prisma.AtLeast<{
   AND?: Prisma.DetBulttinPaiWhereInput | Prisma.DetBulttinPaiWhereInput[]
   OR?: Prisma.DetBulttinPaiWhereInput[]
   NOT?: Prisma.DetBulttinPaiWhereInput | Prisma.DetBulttinPaiWhereInput[]
-  prixlivraison?: Prisma.FloatFilter<"DetBulttinPai"> | number
+  prixlivraison?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   qtevendu?: Prisma.IntFilter<"DetBulttinPai"> | number
-  prixvente?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  remise?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  mantantvendu?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  commission?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  commsiondh?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  mantant?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  benDH?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  commissionFixe?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  prixCommercial?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  primeCommercial?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  primeProduit?: Prisma.FloatFilter<"DetBulttinPai"> | number
+  prixvente?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remise?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantvendu?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commsiondh?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantant?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benDH?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionFixe?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   avecZero?: Prisma.BoolFilter<"DetBulttinPai"> | boolean
   bulttinPaiId?: Prisma.BigIntFilter<"DetBulttinPai"> | bigint | number
   produitId?: Prisma.BigIntFilter<"DetBulttinPai"> | bigint | number
@@ -453,19 +453,19 @@ export type DetBulttinPaiScalarWhereWithAggregatesInput = {
   OR?: Prisma.DetBulttinPaiScalarWhereWithAggregatesInput[]
   NOT?: Prisma.DetBulttinPaiScalarWhereWithAggregatesInput | Prisma.DetBulttinPaiScalarWhereWithAggregatesInput[]
   id?: Prisma.BigIntWithAggregatesFilter<"DetBulttinPai"> | bigint | number
-  prixlivraison?: Prisma.FloatWithAggregatesFilter<"DetBulttinPai"> | number
+  prixlivraison?: Prisma.DecimalWithAggregatesFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   qtevendu?: Prisma.IntWithAggregatesFilter<"DetBulttinPai"> | number
-  prixvente?: Prisma.FloatWithAggregatesFilter<"DetBulttinPai"> | number
-  remise?: Prisma.FloatWithAggregatesFilter<"DetBulttinPai"> | number
-  mantantvendu?: Prisma.FloatWithAggregatesFilter<"DetBulttinPai"> | number
-  commission?: Prisma.FloatWithAggregatesFilter<"DetBulttinPai"> | number
-  commsiondh?: Prisma.FloatWithAggregatesFilter<"DetBulttinPai"> | number
-  mantant?: Prisma.FloatWithAggregatesFilter<"DetBulttinPai"> | number
-  benDH?: Prisma.FloatWithAggregatesFilter<"DetBulttinPai"> | number
-  commissionFixe?: Prisma.FloatWithAggregatesFilter<"DetBulttinPai"> | number
-  prixCommercial?: Prisma.FloatWithAggregatesFilter<"DetBulttinPai"> | number
-  primeCommercial?: Prisma.FloatWithAggregatesFilter<"DetBulttinPai"> | number
-  primeProduit?: Prisma.FloatWithAggregatesFilter<"DetBulttinPai"> | number
+  prixvente?: Prisma.DecimalWithAggregatesFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remise?: Prisma.DecimalWithAggregatesFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantvendu?: Prisma.DecimalWithAggregatesFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalWithAggregatesFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commsiondh?: Prisma.DecimalWithAggregatesFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantant?: Prisma.DecimalWithAggregatesFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benDH?: Prisma.DecimalWithAggregatesFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionFixe?: Prisma.DecimalWithAggregatesFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalWithAggregatesFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalWithAggregatesFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalWithAggregatesFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   avecZero?: Prisma.BoolWithAggregatesFilter<"DetBulttinPai"> | boolean
   bulttinPaiId?: Prisma.BigIntWithAggregatesFilter<"DetBulttinPai"> | bigint | number
   produitId?: Prisma.BigIntWithAggregatesFilter<"DetBulttinPai"> | bigint | number
@@ -473,19 +473,19 @@ export type DetBulttinPaiScalarWhereWithAggregatesInput = {
 
 export type DetBulttinPaiCreateInput = {
   id?: bigint | number
-  prixlivraison: number
+  prixlivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
   qtevendu: number
-  prixvente: number
-  remise: number
-  mantantvendu: number
-  commission: number
-  commsiondh: number
-  mantant: number
-  benDH: number
-  commissionFixe: number
-  prixCommercial: number
-  primeCommercial: number
-  primeProduit: number
+  prixvente: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remise: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantvendu: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commsiondh: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantant: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benDH: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionFixe: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
   avecZero?: boolean
   bulttinPai: Prisma.BulttinPaiCreateNestedOneWithoutBulttinPaisInput
   produit: Prisma.StockCreateNestedOneWithoutDetBulttinPaisInput
@@ -493,19 +493,19 @@ export type DetBulttinPaiCreateInput = {
 
 export type DetBulttinPaiUncheckedCreateInput = {
   id?: bigint | number
-  prixlivraison: number
+  prixlivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
   qtevendu: number
-  prixvente: number
-  remise: number
-  mantantvendu: number
-  commission: number
-  commsiondh: number
-  mantant: number
-  benDH: number
-  commissionFixe: number
-  prixCommercial: number
-  primeCommercial: number
-  primeProduit: number
+  prixvente: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remise: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantvendu: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commsiondh: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantant: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benDH: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionFixe: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
   avecZero?: boolean
   bulttinPaiId: bigint | number
   produitId: bigint | number
@@ -513,19 +513,19 @@ export type DetBulttinPaiUncheckedCreateInput = {
 
 export type DetBulttinPaiUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  prixlivraison?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixlivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qtevendu?: Prisma.IntFieldUpdateOperationsInput | number
-  prixvente?: Prisma.FloatFieldUpdateOperationsInput | number
-  remise?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantvendu?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
-  commsiondh?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantant?: Prisma.FloatFieldUpdateOperationsInput | number
-  benDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  commissionFixe?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixvente?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remise?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantvendu?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commsiondh?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionFixe?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   avecZero?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bulttinPai?: Prisma.BulttinPaiUpdateOneRequiredWithoutBulttinPaisNestedInput
   produit?: Prisma.StockUpdateOneRequiredWithoutDetBulttinPaisNestedInput
@@ -533,19 +533,19 @@ export type DetBulttinPaiUpdateInput = {
 
 export type DetBulttinPaiUncheckedUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  prixlivraison?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixlivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qtevendu?: Prisma.IntFieldUpdateOperationsInput | number
-  prixvente?: Prisma.FloatFieldUpdateOperationsInput | number
-  remise?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantvendu?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
-  commsiondh?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantant?: Prisma.FloatFieldUpdateOperationsInput | number
-  benDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  commissionFixe?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixvente?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remise?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantvendu?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commsiondh?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionFixe?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   avecZero?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bulttinPaiId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   produitId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
@@ -553,19 +553,19 @@ export type DetBulttinPaiUncheckedUpdateInput = {
 
 export type DetBulttinPaiCreateManyInput = {
   id?: bigint | number
-  prixlivraison: number
+  prixlivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
   qtevendu: number
-  prixvente: number
-  remise: number
-  mantantvendu: number
-  commission: number
-  commsiondh: number
-  mantant: number
-  benDH: number
-  commissionFixe: number
-  prixCommercial: number
-  primeCommercial: number
-  primeProduit: number
+  prixvente: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remise: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantvendu: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commsiondh: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantant: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benDH: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionFixe: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
   avecZero?: boolean
   bulttinPaiId: bigint | number
   produitId: bigint | number
@@ -573,37 +573,37 @@ export type DetBulttinPaiCreateManyInput = {
 
 export type DetBulttinPaiUpdateManyMutationInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  prixlivraison?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixlivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qtevendu?: Prisma.IntFieldUpdateOperationsInput | number
-  prixvente?: Prisma.FloatFieldUpdateOperationsInput | number
-  remise?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantvendu?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
-  commsiondh?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantant?: Prisma.FloatFieldUpdateOperationsInput | number
-  benDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  commissionFixe?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixvente?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remise?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantvendu?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commsiondh?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionFixe?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   avecZero?: Prisma.BoolFieldUpdateOperationsInput | boolean
 }
 
 export type DetBulttinPaiUncheckedUpdateManyInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  prixlivraison?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixlivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qtevendu?: Prisma.IntFieldUpdateOperationsInput | number
-  prixvente?: Prisma.FloatFieldUpdateOperationsInput | number
-  remise?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantvendu?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
-  commsiondh?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantant?: Prisma.FloatFieldUpdateOperationsInput | number
-  benDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  commissionFixe?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixvente?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remise?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantvendu?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commsiondh?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionFixe?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   avecZero?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bulttinPaiId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   produitId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
@@ -803,38 +803,38 @@ export type DetBulttinPaiUncheckedUpdateManyWithoutBulttinPaiNestedInput = {
 
 export type DetBulttinPaiCreateWithoutProduitInput = {
   id?: bigint | number
-  prixlivraison: number
+  prixlivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
   qtevendu: number
-  prixvente: number
-  remise: number
-  mantantvendu: number
-  commission: number
-  commsiondh: number
-  mantant: number
-  benDH: number
-  commissionFixe: number
-  prixCommercial: number
-  primeCommercial: number
-  primeProduit: number
+  prixvente: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remise: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantvendu: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commsiondh: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantant: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benDH: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionFixe: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
   avecZero?: boolean
   bulttinPai: Prisma.BulttinPaiCreateNestedOneWithoutBulttinPaisInput
 }
 
 export type DetBulttinPaiUncheckedCreateWithoutProduitInput = {
   id?: bigint | number
-  prixlivraison: number
+  prixlivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
   qtevendu: number
-  prixvente: number
-  remise: number
-  mantantvendu: number
-  commission: number
-  commsiondh: number
-  mantant: number
-  benDH: number
-  commissionFixe: number
-  prixCommercial: number
-  primeCommercial: number
-  primeProduit: number
+  prixvente: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remise: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantvendu: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commsiondh: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantant: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benDH: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionFixe: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
   avecZero?: boolean
   bulttinPaiId: bigint | number
 }
@@ -870,19 +870,19 @@ export type DetBulttinPaiScalarWhereInput = {
   OR?: Prisma.DetBulttinPaiScalarWhereInput[]
   NOT?: Prisma.DetBulttinPaiScalarWhereInput | Prisma.DetBulttinPaiScalarWhereInput[]
   id?: Prisma.BigIntFilter<"DetBulttinPai"> | bigint | number
-  prixlivraison?: Prisma.FloatFilter<"DetBulttinPai"> | number
+  prixlivraison?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   qtevendu?: Prisma.IntFilter<"DetBulttinPai"> | number
-  prixvente?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  remise?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  mantantvendu?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  commission?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  commsiondh?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  mantant?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  benDH?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  commissionFixe?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  prixCommercial?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  primeCommercial?: Prisma.FloatFilter<"DetBulttinPai"> | number
-  primeProduit?: Prisma.FloatFilter<"DetBulttinPai"> | number
+  prixvente?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remise?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantvendu?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commsiondh?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantant?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benDH?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionFixe?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFilter<"DetBulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   avecZero?: Prisma.BoolFilter<"DetBulttinPai"> | boolean
   bulttinPaiId?: Prisma.BigIntFilter<"DetBulttinPai"> | bigint | number
   produitId?: Prisma.BigIntFilter<"DetBulttinPai"> | bigint | number
@@ -890,38 +890,38 @@ export type DetBulttinPaiScalarWhereInput = {
 
 export type DetBulttinPaiCreateWithoutBulttinPaiInput = {
   id?: bigint | number
-  prixlivraison: number
+  prixlivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
   qtevendu: number
-  prixvente: number
-  remise: number
-  mantantvendu: number
-  commission: number
-  commsiondh: number
-  mantant: number
-  benDH: number
-  commissionFixe: number
-  prixCommercial: number
-  primeCommercial: number
-  primeProduit: number
+  prixvente: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remise: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantvendu: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commsiondh: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantant: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benDH: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionFixe: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
   avecZero?: boolean
   produit: Prisma.StockCreateNestedOneWithoutDetBulttinPaisInput
 }
 
 export type DetBulttinPaiUncheckedCreateWithoutBulttinPaiInput = {
   id?: bigint | number
-  prixlivraison: number
+  prixlivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
   qtevendu: number
-  prixvente: number
-  remise: number
-  mantantvendu: number
-  commission: number
-  commsiondh: number
-  mantant: number
-  benDH: number
-  commissionFixe: number
-  prixCommercial: number
-  primeCommercial: number
-  primeProduit: number
+  prixvente: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remise: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantvendu: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commsiondh: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantant: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benDH: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionFixe: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
   avecZero?: boolean
   produitId: bigint | number
 }
@@ -954,152 +954,152 @@ export type DetBulttinPaiUpdateManyWithWhereWithoutBulttinPaiInput = {
 
 export type DetBulttinPaiCreateManyProduitInput = {
   id?: bigint | number
-  prixlivraison: number
+  prixlivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
   qtevendu: number
-  prixvente: number
-  remise: number
-  mantantvendu: number
-  commission: number
-  commsiondh: number
-  mantant: number
-  benDH: number
-  commissionFixe: number
-  prixCommercial: number
-  primeCommercial: number
-  primeProduit: number
+  prixvente: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remise: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantvendu: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commsiondh: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantant: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benDH: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionFixe: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
   avecZero?: boolean
   bulttinPaiId: bigint | number
 }
 
 export type DetBulttinPaiUpdateWithoutProduitInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  prixlivraison?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixlivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qtevendu?: Prisma.IntFieldUpdateOperationsInput | number
-  prixvente?: Prisma.FloatFieldUpdateOperationsInput | number
-  remise?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantvendu?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
-  commsiondh?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantant?: Prisma.FloatFieldUpdateOperationsInput | number
-  benDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  commissionFixe?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixvente?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remise?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantvendu?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commsiondh?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionFixe?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   avecZero?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bulttinPai?: Prisma.BulttinPaiUpdateOneRequiredWithoutBulttinPaisNestedInput
 }
 
 export type DetBulttinPaiUncheckedUpdateWithoutProduitInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  prixlivraison?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixlivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qtevendu?: Prisma.IntFieldUpdateOperationsInput | number
-  prixvente?: Prisma.FloatFieldUpdateOperationsInput | number
-  remise?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantvendu?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
-  commsiondh?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantant?: Prisma.FloatFieldUpdateOperationsInput | number
-  benDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  commissionFixe?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixvente?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remise?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantvendu?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commsiondh?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionFixe?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   avecZero?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bulttinPaiId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
 export type DetBulttinPaiUncheckedUpdateManyWithoutProduitInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  prixlivraison?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixlivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qtevendu?: Prisma.IntFieldUpdateOperationsInput | number
-  prixvente?: Prisma.FloatFieldUpdateOperationsInput | number
-  remise?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantvendu?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
-  commsiondh?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantant?: Prisma.FloatFieldUpdateOperationsInput | number
-  benDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  commissionFixe?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixvente?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remise?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantvendu?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commsiondh?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionFixe?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   avecZero?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bulttinPaiId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
 export type DetBulttinPaiCreateManyBulttinPaiInput = {
   id?: bigint | number
-  prixlivraison: number
+  prixlivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
   qtevendu: number
-  prixvente: number
-  remise: number
-  mantantvendu: number
-  commission: number
-  commsiondh: number
-  mantant: number
-  benDH: number
-  commissionFixe: number
-  prixCommercial: number
-  primeCommercial: number
-  primeProduit: number
+  prixvente: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remise: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantvendu: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commsiondh: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantant: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benDH: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionFixe: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
   avecZero?: boolean
   produitId: bigint | number
 }
 
 export type DetBulttinPaiUpdateWithoutBulttinPaiInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  prixlivraison?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixlivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qtevendu?: Prisma.IntFieldUpdateOperationsInput | number
-  prixvente?: Prisma.FloatFieldUpdateOperationsInput | number
-  remise?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantvendu?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
-  commsiondh?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantant?: Prisma.FloatFieldUpdateOperationsInput | number
-  benDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  commissionFixe?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixvente?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remise?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantvendu?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commsiondh?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionFixe?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   avecZero?: Prisma.BoolFieldUpdateOperationsInput | boolean
   produit?: Prisma.StockUpdateOneRequiredWithoutDetBulttinPaisNestedInput
 }
 
 export type DetBulttinPaiUncheckedUpdateWithoutBulttinPaiInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  prixlivraison?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixlivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qtevendu?: Prisma.IntFieldUpdateOperationsInput | number
-  prixvente?: Prisma.FloatFieldUpdateOperationsInput | number
-  remise?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantvendu?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
-  commsiondh?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantant?: Prisma.FloatFieldUpdateOperationsInput | number
-  benDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  commissionFixe?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixvente?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remise?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantvendu?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commsiondh?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionFixe?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   avecZero?: Prisma.BoolFieldUpdateOperationsInput | boolean
   produitId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
 export type DetBulttinPaiUncheckedUpdateManyWithoutBulttinPaiInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  prixlivraison?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixlivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   qtevendu?: Prisma.IntFieldUpdateOperationsInput | number
-  prixvente?: Prisma.FloatFieldUpdateOperationsInput | number
-  remise?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantvendu?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
-  commsiondh?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantant?: Prisma.FloatFieldUpdateOperationsInput | number
-  benDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  commissionFixe?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixvente?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remise?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantvendu?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commsiondh?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionFixe?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   avecZero?: Prisma.BoolFieldUpdateOperationsInput | boolean
   produitId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
@@ -1164,19 +1164,19 @@ export type $DetBulttinPaiPayload<ExtArgs extends runtime.Types.Extensions.Inter
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: bigint
-    prixlivraison: number
+    prixlivraison: runtime.Decimal
     qtevendu: number
-    prixvente: number
-    remise: number
-    mantantvendu: number
-    commission: number
-    commsiondh: number
-    mantant: number
-    benDH: number
-    commissionFixe: number
-    prixCommercial: number
-    primeCommercial: number
-    primeProduit: number
+    prixvente: runtime.Decimal
+    remise: runtime.Decimal
+    mantantvendu: runtime.Decimal
+    commission: runtime.Decimal
+    commsiondh: runtime.Decimal
+    mantant: runtime.Decimal
+    benDH: runtime.Decimal
+    commissionFixe: runtime.Decimal
+    prixCommercial: runtime.Decimal
+    primeCommercial: runtime.Decimal
+    primeProduit: runtime.Decimal
     avecZero: boolean
     bulttinPaiId: bigint
     produitId: bigint
@@ -1552,19 +1552,19 @@ export interface Prisma__DetBulttinPaiClient<T, Null = never, ExtArgs extends ru
  */
 export interface DetBulttinPaiFieldRefs {
   readonly id: Prisma.FieldRef<"DetBulttinPai", 'BigInt'>
-  readonly prixlivraison: Prisma.FieldRef<"DetBulttinPai", 'Float'>
+  readonly prixlivraison: Prisma.FieldRef<"DetBulttinPai", 'Decimal'>
   readonly qtevendu: Prisma.FieldRef<"DetBulttinPai", 'Int'>
-  readonly prixvente: Prisma.FieldRef<"DetBulttinPai", 'Float'>
-  readonly remise: Prisma.FieldRef<"DetBulttinPai", 'Float'>
-  readonly mantantvendu: Prisma.FieldRef<"DetBulttinPai", 'Float'>
-  readonly commission: Prisma.FieldRef<"DetBulttinPai", 'Float'>
-  readonly commsiondh: Prisma.FieldRef<"DetBulttinPai", 'Float'>
-  readonly mantant: Prisma.FieldRef<"DetBulttinPai", 'Float'>
-  readonly benDH: Prisma.FieldRef<"DetBulttinPai", 'Float'>
-  readonly commissionFixe: Prisma.FieldRef<"DetBulttinPai", 'Float'>
-  readonly prixCommercial: Prisma.FieldRef<"DetBulttinPai", 'Float'>
-  readonly primeCommercial: Prisma.FieldRef<"DetBulttinPai", 'Float'>
-  readonly primeProduit: Prisma.FieldRef<"DetBulttinPai", 'Float'>
+  readonly prixvente: Prisma.FieldRef<"DetBulttinPai", 'Decimal'>
+  readonly remise: Prisma.FieldRef<"DetBulttinPai", 'Decimal'>
+  readonly mantantvendu: Prisma.FieldRef<"DetBulttinPai", 'Decimal'>
+  readonly commission: Prisma.FieldRef<"DetBulttinPai", 'Decimal'>
+  readonly commsiondh: Prisma.FieldRef<"DetBulttinPai", 'Decimal'>
+  readonly mantant: Prisma.FieldRef<"DetBulttinPai", 'Decimal'>
+  readonly benDH: Prisma.FieldRef<"DetBulttinPai", 'Decimal'>
+  readonly commissionFixe: Prisma.FieldRef<"DetBulttinPai", 'Decimal'>
+  readonly prixCommercial: Prisma.FieldRef<"DetBulttinPai", 'Decimal'>
+  readonly primeCommercial: Prisma.FieldRef<"DetBulttinPai", 'Decimal'>
+  readonly primeProduit: Prisma.FieldRef<"DetBulttinPai", 'Decimal'>
   readonly avecZero: Prisma.FieldRef<"DetBulttinPai", 'Boolean'>
   readonly bulttinPaiId: Prisma.FieldRef<"DetBulttinPai", 'BigInt'>
   readonly produitId: Prisma.FieldRef<"DetBulttinPai", 'BigInt'>

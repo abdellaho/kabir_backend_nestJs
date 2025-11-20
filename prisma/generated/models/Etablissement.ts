@@ -30,7 +30,7 @@ export type EtablissementAvgAggregateOutputType = {
   id: number | null
   port: number | null
   capitale: number | null
-  pourcentageLiv: number | null
+  pourcentageLiv: runtime.Decimal | null
   typeExec: number | null
   numJour: number | null
   villeId: number | null
@@ -40,7 +40,7 @@ export type EtablissementSumAggregateOutputType = {
   id: bigint | null
   port: number | null
   capitale: number | null
-  pourcentageLiv: number | null
+  pourcentageLiv: runtime.Decimal | null
   typeExec: number | null
   numJour: number | null
   villeId: bigint | null
@@ -71,7 +71,7 @@ export type EtablissementMinAggregateOutputType = {
   fromMail: string | null
   userMail: string | null
   capitale: number | null
-  pourcentageLiv: number | null
+  pourcentageLiv: runtime.Decimal | null
   lienDbDump: string | null
   lienBackupDB: string | null
   lundi: boolean | null
@@ -112,7 +112,7 @@ export type EtablissementMaxAggregateOutputType = {
   fromMail: string | null
   userMail: string | null
   capitale: number | null
-  pourcentageLiv: number | null
+  pourcentageLiv: runtime.Decimal | null
   lienDbDump: string | null
   lienBackupDB: string | null
   lundi: boolean | null
@@ -426,7 +426,7 @@ export type EtablissementGroupByOutputType = {
   fromMail: string
   userMail: string
   capitale: number
-  pourcentageLiv: number
+  pourcentageLiv: runtime.Decimal
   lienDbDump: string
   lienBackupDB: string
   lundi: boolean
@@ -490,7 +490,7 @@ export type EtablissementWhereInput = {
   fromMail?: Prisma.StringFilter<"Etablissement"> | string
   userMail?: Prisma.StringFilter<"Etablissement"> | string
   capitale?: Prisma.IntFilter<"Etablissement"> | number
-  pourcentageLiv?: Prisma.FloatFilter<"Etablissement"> | number
+  pourcentageLiv?: Prisma.DecimalFilter<"Etablissement"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   lienDbDump?: Prisma.StringFilter<"Etablissement"> | string
   lienBackupDB?: Prisma.StringFilter<"Etablissement"> | string
   lundi?: Prisma.BoolFilter<"Etablissement"> | boolean
@@ -578,7 +578,7 @@ export type EtablissementWhereUniqueInput = Prisma.AtLeast<{
   fromMail?: Prisma.StringFilter<"Etablissement"> | string
   userMail?: Prisma.StringFilter<"Etablissement"> | string
   capitale?: Prisma.IntFilter<"Etablissement"> | number
-  pourcentageLiv?: Prisma.FloatFilter<"Etablissement"> | number
+  pourcentageLiv?: Prisma.DecimalFilter<"Etablissement"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   lienDbDump?: Prisma.StringFilter<"Etablissement"> | string
   lienBackupDB?: Prisma.StringFilter<"Etablissement"> | string
   lundi?: Prisma.BoolFilter<"Etablissement"> | boolean
@@ -669,7 +669,7 @@ export type EtablissementScalarWhereWithAggregatesInput = {
   fromMail?: Prisma.StringWithAggregatesFilter<"Etablissement"> | string
   userMail?: Prisma.StringWithAggregatesFilter<"Etablissement"> | string
   capitale?: Prisma.IntWithAggregatesFilter<"Etablissement"> | number
-  pourcentageLiv?: Prisma.FloatWithAggregatesFilter<"Etablissement"> | number
+  pourcentageLiv?: Prisma.DecimalWithAggregatesFilter<"Etablissement"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   lienDbDump?: Prisma.StringWithAggregatesFilter<"Etablissement"> | string
   lienBackupDB?: Prisma.StringWithAggregatesFilter<"Etablissement"> | string
   lundi?: Prisma.BoolWithAggregatesFilter<"Etablissement"> | boolean
@@ -710,7 +710,7 @@ export type EtablissementCreateInput = {
   fromMail: string
   userMail: string
   capitale: number
-  pourcentageLiv: number
+  pourcentageLiv: runtime.Decimal | runtime.DecimalJsLike | number | string
   lienDbDump: string
   lienBackupDB: string
   lundi?: boolean
@@ -751,7 +751,7 @@ export type EtablissementUncheckedCreateInput = {
   fromMail: string
   userMail: string
   capitale: number
-  pourcentageLiv: number
+  pourcentageLiv: runtime.Decimal | runtime.DecimalJsLike | number | string
   lienDbDump: string
   lienBackupDB: string
   lundi?: boolean
@@ -792,7 +792,7 @@ export type EtablissementUpdateInput = {
   fromMail?: Prisma.StringFieldUpdateOperationsInput | string
   userMail?: Prisma.StringFieldUpdateOperationsInput | string
   capitale?: Prisma.IntFieldUpdateOperationsInput | number
-  pourcentageLiv?: Prisma.FloatFieldUpdateOperationsInput | number
+  pourcentageLiv?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   lienDbDump?: Prisma.StringFieldUpdateOperationsInput | string
   lienBackupDB?: Prisma.StringFieldUpdateOperationsInput | string
   lundi?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -833,7 +833,7 @@ export type EtablissementUncheckedUpdateInput = {
   fromMail?: Prisma.StringFieldUpdateOperationsInput | string
   userMail?: Prisma.StringFieldUpdateOperationsInput | string
   capitale?: Prisma.IntFieldUpdateOperationsInput | number
-  pourcentageLiv?: Prisma.FloatFieldUpdateOperationsInput | number
+  pourcentageLiv?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   lienDbDump?: Prisma.StringFieldUpdateOperationsInput | string
   lienBackupDB?: Prisma.StringFieldUpdateOperationsInput | string
   lundi?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -874,7 +874,7 @@ export type EtablissementCreateManyInput = {
   fromMail: string
   userMail: string
   capitale: number
-  pourcentageLiv: number
+  pourcentageLiv: runtime.Decimal | runtime.DecimalJsLike | number | string
   lienDbDump: string
   lienBackupDB: string
   lundi?: boolean
@@ -915,7 +915,7 @@ export type EtablissementUpdateManyMutationInput = {
   fromMail?: Prisma.StringFieldUpdateOperationsInput | string
   userMail?: Prisma.StringFieldUpdateOperationsInput | string
   capitale?: Prisma.IntFieldUpdateOperationsInput | number
-  pourcentageLiv?: Prisma.FloatFieldUpdateOperationsInput | number
+  pourcentageLiv?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   lienDbDump?: Prisma.StringFieldUpdateOperationsInput | string
   lienBackupDB?: Prisma.StringFieldUpdateOperationsInput | string
   lundi?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -955,7 +955,7 @@ export type EtablissementUncheckedUpdateManyInput = {
   fromMail?: Prisma.StringFieldUpdateOperationsInput | string
   userMail?: Prisma.StringFieldUpdateOperationsInput | string
   capitale?: Prisma.IntFieldUpdateOperationsInput | number
-  pourcentageLiv?: Prisma.FloatFieldUpdateOperationsInput | number
+  pourcentageLiv?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   lienDbDump?: Prisma.StringFieldUpdateOperationsInput | string
   lienBackupDB?: Prisma.StringFieldUpdateOperationsInput | string
   lundi?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1197,7 +1197,7 @@ export type EtablissementCreateWithoutVilleInput = {
   fromMail: string
   userMail: string
   capitale: number
-  pourcentageLiv: number
+  pourcentageLiv: runtime.Decimal | runtime.DecimalJsLike | number | string
   lienDbDump: string
   lienBackupDB: string
   lundi?: boolean
@@ -1237,7 +1237,7 @@ export type EtablissementUncheckedCreateWithoutVilleInput = {
   fromMail: string
   userMail: string
   capitale: number
-  pourcentageLiv: number
+  pourcentageLiv: runtime.Decimal | runtime.DecimalJsLike | number | string
   lienDbDump: string
   lienBackupDB: string
   lundi?: boolean
@@ -1306,7 +1306,7 @@ export type EtablissementScalarWhereInput = {
   fromMail?: Prisma.StringFilter<"Etablissement"> | string
   userMail?: Prisma.StringFilter<"Etablissement"> | string
   capitale?: Prisma.IntFilter<"Etablissement"> | number
-  pourcentageLiv?: Prisma.FloatFilter<"Etablissement"> | number
+  pourcentageLiv?: Prisma.DecimalFilter<"Etablissement"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   lienDbDump?: Prisma.StringFilter<"Etablissement"> | string
   lienBackupDB?: Prisma.StringFilter<"Etablissement"> | string
   lundi?: Prisma.BoolFilter<"Etablissement"> | boolean
@@ -1347,7 +1347,7 @@ export type EtablissementCreateManyVilleInput = {
   fromMail: string
   userMail: string
   capitale: number
-  pourcentageLiv: number
+  pourcentageLiv: runtime.Decimal | runtime.DecimalJsLike | number | string
   lienDbDump: string
   lienBackupDB: string
   lundi?: boolean
@@ -1387,7 +1387,7 @@ export type EtablissementUpdateWithoutVilleInput = {
   fromMail?: Prisma.StringFieldUpdateOperationsInput | string
   userMail?: Prisma.StringFieldUpdateOperationsInput | string
   capitale?: Prisma.IntFieldUpdateOperationsInput | number
-  pourcentageLiv?: Prisma.FloatFieldUpdateOperationsInput | number
+  pourcentageLiv?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   lienDbDump?: Prisma.StringFieldUpdateOperationsInput | string
   lienBackupDB?: Prisma.StringFieldUpdateOperationsInput | string
   lundi?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1427,7 +1427,7 @@ export type EtablissementUncheckedUpdateWithoutVilleInput = {
   fromMail?: Prisma.StringFieldUpdateOperationsInput | string
   userMail?: Prisma.StringFieldUpdateOperationsInput | string
   capitale?: Prisma.IntFieldUpdateOperationsInput | number
-  pourcentageLiv?: Prisma.FloatFieldUpdateOperationsInput | number
+  pourcentageLiv?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   lienDbDump?: Prisma.StringFieldUpdateOperationsInput | string
   lienBackupDB?: Prisma.StringFieldUpdateOperationsInput | string
   lundi?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1467,7 +1467,7 @@ export type EtablissementUncheckedUpdateManyWithoutVilleInput = {
   fromMail?: Prisma.StringFieldUpdateOperationsInput | string
   userMail?: Prisma.StringFieldUpdateOperationsInput | string
   capitale?: Prisma.IntFieldUpdateOperationsInput | number
-  pourcentageLiv?: Prisma.FloatFieldUpdateOperationsInput | number
+  pourcentageLiv?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   lienDbDump?: Prisma.StringFieldUpdateOperationsInput | string
   lienBackupDB?: Prisma.StringFieldUpdateOperationsInput | string
   lundi?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1604,7 +1604,7 @@ export type $EtablissementPayload<ExtArgs extends runtime.Types.Extensions.Inter
     fromMail: string
     userMail: string
     capitale: number
-    pourcentageLiv: number
+    pourcentageLiv: runtime.Decimal
     lienDbDump: string
     lienBackupDB: string
     lundi: boolean
@@ -2012,7 +2012,7 @@ export interface EtablissementFieldRefs {
   readonly fromMail: Prisma.FieldRef<"Etablissement", 'String'>
   readonly userMail: Prisma.FieldRef<"Etablissement", 'String'>
   readonly capitale: Prisma.FieldRef<"Etablissement", 'Int'>
-  readonly pourcentageLiv: Prisma.FieldRef<"Etablissement", 'Float'>
+  readonly pourcentageLiv: Prisma.FieldRef<"Etablissement", 'Decimal'>
   readonly lienDbDump: Prisma.FieldRef<"Etablissement", 'String'>
   readonly lienBackupDB: Prisma.FieldRef<"Etablissement", 'String'>
   readonly lundi: Prisma.FieldRef<"Etablissement", 'Boolean'>

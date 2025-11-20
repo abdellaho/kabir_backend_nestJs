@@ -31,7 +31,7 @@ export type EmployeAvgAggregateOutputType = {
   numEmp: number | null
   livrerNonLivrerDroit: number | null
   typeUser: number | null
-  validationMnt: number | null
+  validationMnt: runtime.Decimal | null
   repertoireId: number | null
 }
 
@@ -40,7 +40,7 @@ export type EmployeSumAggregateOutputType = {
   numEmp: number | null
   livrerNonLivrerDroit: number | null
   typeUser: number | null
-  validationMnt: number | null
+  validationMnt: runtime.Decimal | null
   repertoireId: bigint | null
 }
 
@@ -56,7 +56,7 @@ export type EmployeMinAggregateOutputType = {
   email: string | null
   typeUser: number | null
   etatCompte: boolean | null
-  validationMnt: number | null
+  validationMnt: runtime.Decimal | null
   motPassFake: string | null
   commercial: boolean | null
   pvLibre: boolean | null
@@ -80,7 +80,7 @@ export type EmployeMaxAggregateOutputType = {
   email: string | null
   typeUser: number | null
   etatCompte: boolean | null
-  validationMnt: number | null
+  validationMnt: runtime.Decimal | null
   motPassFake: string | null
   commercial: boolean | null
   pvLibre: boolean | null
@@ -307,7 +307,7 @@ export type EmployeGroupByOutputType = {
   email: string
   typeUser: number
   etatCompte: boolean
-  validationMnt: number
+  validationMnt: runtime.Decimal
   motPassFake: string
   commercial: boolean
   pvLibre: boolean
@@ -354,7 +354,7 @@ export type EmployeWhereInput = {
   email?: Prisma.StringFilter<"Employe"> | string
   typeUser?: Prisma.IntFilter<"Employe"> | number
   etatCompte?: Prisma.BoolFilter<"Employe"> | boolean
-  validationMnt?: Prisma.FloatFilter<"Employe"> | number
+  validationMnt?: Prisma.DecimalFilter<"Employe"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake?: Prisma.StringFilter<"Employe"> | string
   commercial?: Prisma.BoolFilter<"Employe"> | boolean
   pvLibre?: Prisma.BoolFilter<"Employe"> | boolean
@@ -420,7 +420,7 @@ export type EmployeWhereUniqueInput = Prisma.AtLeast<{
   email?: Prisma.StringFilter<"Employe"> | string
   typeUser?: Prisma.IntFilter<"Employe"> | number
   etatCompte?: Prisma.BoolFilter<"Employe"> | boolean
-  validationMnt?: Prisma.FloatFilter<"Employe"> | number
+  validationMnt?: Prisma.DecimalFilter<"Employe"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake?: Prisma.StringFilter<"Employe"> | string
   commercial?: Prisma.BoolFilter<"Employe"> | boolean
   pvLibre?: Prisma.BoolFilter<"Employe"> | boolean
@@ -483,7 +483,7 @@ export type EmployeScalarWhereWithAggregatesInput = {
   email?: Prisma.StringWithAggregatesFilter<"Employe"> | string
   typeUser?: Prisma.IntWithAggregatesFilter<"Employe"> | number
   etatCompte?: Prisma.BoolWithAggregatesFilter<"Employe"> | boolean
-  validationMnt?: Prisma.FloatWithAggregatesFilter<"Employe"> | number
+  validationMnt?: Prisma.DecimalWithAggregatesFilter<"Employe"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake?: Prisma.StringWithAggregatesFilter<"Employe"> | string
   commercial?: Prisma.BoolWithAggregatesFilter<"Employe"> | boolean
   pvLibre?: Prisma.BoolWithAggregatesFilter<"Employe"> | boolean
@@ -507,7 +507,7 @@ export type EmployeCreateInput = {
   email: string
   typeUser: number
   etatCompte?: boolean
-  validationMnt: number
+  validationMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake: string
   commercial?: boolean
   pvLibre?: boolean
@@ -537,7 +537,7 @@ export type EmployeUncheckedCreateInput = {
   email: string
   typeUser: number
   etatCompte?: boolean
-  validationMnt: number
+  validationMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake: string
   commercial?: boolean
   pvLibre?: boolean
@@ -567,7 +567,7 @@ export type EmployeUpdateInput = {
   email?: Prisma.StringFieldUpdateOperationsInput | string
   typeUser?: Prisma.IntFieldUpdateOperationsInput | number
   etatCompte?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  validationMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  validationMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake?: Prisma.StringFieldUpdateOperationsInput | string
   commercial?: Prisma.BoolFieldUpdateOperationsInput | boolean
   pvLibre?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -597,7 +597,7 @@ export type EmployeUncheckedUpdateInput = {
   email?: Prisma.StringFieldUpdateOperationsInput | string
   typeUser?: Prisma.IntFieldUpdateOperationsInput | number
   etatCompte?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  validationMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  validationMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake?: Prisma.StringFieldUpdateOperationsInput | string
   commercial?: Prisma.BoolFieldUpdateOperationsInput | boolean
   pvLibre?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -627,7 +627,7 @@ export type EmployeCreateManyInput = {
   email: string
   typeUser: number
   etatCompte?: boolean
-  validationMnt: number
+  validationMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake: string
   commercial?: boolean
   pvLibre?: boolean
@@ -651,7 +651,7 @@ export type EmployeUpdateManyMutationInput = {
   email?: Prisma.StringFieldUpdateOperationsInput | string
   typeUser?: Prisma.IntFieldUpdateOperationsInput | number
   etatCompte?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  validationMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  validationMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake?: Prisma.StringFieldUpdateOperationsInput | string
   commercial?: Prisma.BoolFieldUpdateOperationsInput | boolean
   pvLibre?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -674,7 +674,7 @@ export type EmployeUncheckedUpdateManyInput = {
   email?: Prisma.StringFieldUpdateOperationsInput | string
   typeUser?: Prisma.IntFieldUpdateOperationsInput | number
   etatCompte?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  validationMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  validationMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake?: Prisma.StringFieldUpdateOperationsInput | string
   commercial?: Prisma.BoolFieldUpdateOperationsInput | boolean
   pvLibre?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -935,7 +935,7 @@ export type EmployeCreateWithoutRepertoireInput = {
   email: string
   typeUser: number
   etatCompte?: boolean
-  validationMnt: number
+  validationMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake: string
   commercial?: boolean
   pvLibre?: boolean
@@ -964,7 +964,7 @@ export type EmployeUncheckedCreateWithoutRepertoireInput = {
   email: string
   typeUser: number
   etatCompte?: boolean
-  validationMnt: number
+  validationMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake: string
   commercial?: boolean
   pvLibre?: boolean
@@ -1022,7 +1022,7 @@ export type EmployeScalarWhereInput = {
   email?: Prisma.StringFilter<"Employe"> | string
   typeUser?: Prisma.IntFilter<"Employe"> | number
   etatCompte?: Prisma.BoolFilter<"Employe"> | boolean
-  validationMnt?: Prisma.FloatFilter<"Employe"> | number
+  validationMnt?: Prisma.DecimalFilter<"Employe"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake?: Prisma.StringFilter<"Employe"> | string
   commercial?: Prisma.BoolFilter<"Employe"> | boolean
   pvLibre?: Prisma.BoolFilter<"Employe"> | boolean
@@ -1046,7 +1046,7 @@ export type EmployeCreateWithoutBonSortiesInput = {
   email: string
   typeUser: number
   etatCompte?: boolean
-  validationMnt: number
+  validationMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake: string
   commercial?: boolean
   pvLibre?: boolean
@@ -1075,7 +1075,7 @@ export type EmployeUncheckedCreateWithoutBonSortiesInput = {
   email: string
   typeUser: number
   etatCompte?: boolean
-  validationMnt: number
+  validationMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake: string
   commercial?: boolean
   pvLibre?: boolean
@@ -1120,7 +1120,7 @@ export type EmployeUpdateWithoutBonSortiesInput = {
   email?: Prisma.StringFieldUpdateOperationsInput | string
   typeUser?: Prisma.IntFieldUpdateOperationsInput | number
   etatCompte?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  validationMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  validationMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake?: Prisma.StringFieldUpdateOperationsInput | string
   commercial?: Prisma.BoolFieldUpdateOperationsInput | boolean
   pvLibre?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1149,7 +1149,7 @@ export type EmployeUncheckedUpdateWithoutBonSortiesInput = {
   email?: Prisma.StringFieldUpdateOperationsInput | string
   typeUser?: Prisma.IntFieldUpdateOperationsInput | number
   etatCompte?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  validationMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  validationMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake?: Prisma.StringFieldUpdateOperationsInput | string
   commercial?: Prisma.BoolFieldUpdateOperationsInput | boolean
   pvLibre?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1178,7 +1178,7 @@ export type EmployeCreateWithoutBulttinPaisInput = {
   email: string
   typeUser: number
   etatCompte?: boolean
-  validationMnt: number
+  validationMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake: string
   commercial?: boolean
   pvLibre?: boolean
@@ -1207,7 +1207,7 @@ export type EmployeUncheckedCreateWithoutBulttinPaisInput = {
   email: string
   typeUser: number
   etatCompte?: boolean
-  validationMnt: number
+  validationMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake: string
   commercial?: boolean
   pvLibre?: boolean
@@ -1252,7 +1252,7 @@ export type EmployeUpdateWithoutBulttinPaisInput = {
   email?: Prisma.StringFieldUpdateOperationsInput | string
   typeUser?: Prisma.IntFieldUpdateOperationsInput | number
   etatCompte?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  validationMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  validationMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake?: Prisma.StringFieldUpdateOperationsInput | string
   commercial?: Prisma.BoolFieldUpdateOperationsInput | boolean
   pvLibre?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1281,7 +1281,7 @@ export type EmployeUncheckedUpdateWithoutBulttinPaisInput = {
   email?: Prisma.StringFieldUpdateOperationsInput | string
   typeUser?: Prisma.IntFieldUpdateOperationsInput | number
   etatCompte?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  validationMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  validationMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake?: Prisma.StringFieldUpdateOperationsInput | string
   commercial?: Prisma.BoolFieldUpdateOperationsInput | boolean
   pvLibre?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1310,7 +1310,7 @@ export type EmployeCreateWithoutChequesInput = {
   email: string
   typeUser: number
   etatCompte?: boolean
-  validationMnt: number
+  validationMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake: string
   commercial?: boolean
   pvLibre?: boolean
@@ -1339,7 +1339,7 @@ export type EmployeUncheckedCreateWithoutChequesInput = {
   email: string
   typeUser: number
   etatCompte?: boolean
-  validationMnt: number
+  validationMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake: string
   commercial?: boolean
   pvLibre?: boolean
@@ -1384,7 +1384,7 @@ export type EmployeUpdateWithoutChequesInput = {
   email?: Prisma.StringFieldUpdateOperationsInput | string
   typeUser?: Prisma.IntFieldUpdateOperationsInput | number
   etatCompte?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  validationMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  validationMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake?: Prisma.StringFieldUpdateOperationsInput | string
   commercial?: Prisma.BoolFieldUpdateOperationsInput | boolean
   pvLibre?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1413,7 +1413,7 @@ export type EmployeUncheckedUpdateWithoutChequesInput = {
   email?: Prisma.StringFieldUpdateOperationsInput | string
   typeUser?: Prisma.IntFieldUpdateOperationsInput | number
   etatCompte?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  validationMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  validationMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake?: Prisma.StringFieldUpdateOperationsInput | string
   commercial?: Prisma.BoolFieldUpdateOperationsInput | boolean
   pvLibre?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1442,7 +1442,7 @@ export type EmployeCreateWithoutComptabilitesInput = {
   email: string
   typeUser: number
   etatCompte?: boolean
-  validationMnt: number
+  validationMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake: string
   commercial?: boolean
   pvLibre?: boolean
@@ -1471,7 +1471,7 @@ export type EmployeUncheckedCreateWithoutComptabilitesInput = {
   email: string
   typeUser: number
   etatCompte?: boolean
-  validationMnt: number
+  validationMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake: string
   commercial?: boolean
   pvLibre?: boolean
@@ -1516,7 +1516,7 @@ export type EmployeUpdateWithoutComptabilitesInput = {
   email?: Prisma.StringFieldUpdateOperationsInput | string
   typeUser?: Prisma.IntFieldUpdateOperationsInput | number
   etatCompte?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  validationMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  validationMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake?: Prisma.StringFieldUpdateOperationsInput | string
   commercial?: Prisma.BoolFieldUpdateOperationsInput | boolean
   pvLibre?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1545,7 +1545,7 @@ export type EmployeUncheckedUpdateWithoutComptabilitesInput = {
   email?: Prisma.StringFieldUpdateOperationsInput | string
   typeUser?: Prisma.IntFieldUpdateOperationsInput | number
   etatCompte?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  validationMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  validationMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake?: Prisma.StringFieldUpdateOperationsInput | string
   commercial?: Prisma.BoolFieldUpdateOperationsInput | boolean
   pvLibre?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1574,7 +1574,7 @@ export type EmployeCreateWithoutImportationsInput = {
   email: string
   typeUser: number
   etatCompte?: boolean
-  validationMnt: number
+  validationMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake: string
   commercial?: boolean
   pvLibre?: boolean
@@ -1603,7 +1603,7 @@ export type EmployeUncheckedCreateWithoutImportationsInput = {
   email: string
   typeUser: number
   etatCompte?: boolean
-  validationMnt: number
+  validationMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake: string
   commercial?: boolean
   pvLibre?: boolean
@@ -1648,7 +1648,7 @@ export type EmployeUpdateWithoutImportationsInput = {
   email?: Prisma.StringFieldUpdateOperationsInput | string
   typeUser?: Prisma.IntFieldUpdateOperationsInput | number
   etatCompte?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  validationMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  validationMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake?: Prisma.StringFieldUpdateOperationsInput | string
   commercial?: Prisma.BoolFieldUpdateOperationsInput | boolean
   pvLibre?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1677,7 +1677,7 @@ export type EmployeUncheckedUpdateWithoutImportationsInput = {
   email?: Prisma.StringFieldUpdateOperationsInput | string
   typeUser?: Prisma.IntFieldUpdateOperationsInput | number
   etatCompte?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  validationMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  validationMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake?: Prisma.StringFieldUpdateOperationsInput | string
   commercial?: Prisma.BoolFieldUpdateOperationsInput | boolean
   pvLibre?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1706,7 +1706,7 @@ export type EmployeCreateWithoutLivraisonsInput = {
   email: string
   typeUser: number
   etatCompte?: boolean
-  validationMnt: number
+  validationMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake: string
   commercial?: boolean
   pvLibre?: boolean
@@ -1735,7 +1735,7 @@ export type EmployeUncheckedCreateWithoutLivraisonsInput = {
   email: string
   typeUser: number
   etatCompte?: boolean
-  validationMnt: number
+  validationMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake: string
   commercial?: boolean
   pvLibre?: boolean
@@ -1780,7 +1780,7 @@ export type EmployeUpdateWithoutLivraisonsInput = {
   email?: Prisma.StringFieldUpdateOperationsInput | string
   typeUser?: Prisma.IntFieldUpdateOperationsInput | number
   etatCompte?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  validationMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  validationMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake?: Prisma.StringFieldUpdateOperationsInput | string
   commercial?: Prisma.BoolFieldUpdateOperationsInput | boolean
   pvLibre?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1809,7 +1809,7 @@ export type EmployeUncheckedUpdateWithoutLivraisonsInput = {
   email?: Prisma.StringFieldUpdateOperationsInput | string
   typeUser?: Prisma.IntFieldUpdateOperationsInput | number
   etatCompte?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  validationMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  validationMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake?: Prisma.StringFieldUpdateOperationsInput | string
   commercial?: Prisma.BoolFieldUpdateOperationsInput | boolean
   pvLibre?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1838,7 +1838,7 @@ export type EmployeCreateManyRepertoireInput = {
   email: string
   typeUser: number
   etatCompte?: boolean
-  validationMnt: number
+  validationMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake: string
   commercial?: boolean
   pvLibre?: boolean
@@ -1861,7 +1861,7 @@ export type EmployeUpdateWithoutRepertoireInput = {
   email?: Prisma.StringFieldUpdateOperationsInput | string
   typeUser?: Prisma.IntFieldUpdateOperationsInput | number
   etatCompte?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  validationMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  validationMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake?: Prisma.StringFieldUpdateOperationsInput | string
   commercial?: Prisma.BoolFieldUpdateOperationsInput | boolean
   pvLibre?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1890,7 +1890,7 @@ export type EmployeUncheckedUpdateWithoutRepertoireInput = {
   email?: Prisma.StringFieldUpdateOperationsInput | string
   typeUser?: Prisma.IntFieldUpdateOperationsInput | number
   etatCompte?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  validationMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  validationMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake?: Prisma.StringFieldUpdateOperationsInput | string
   commercial?: Prisma.BoolFieldUpdateOperationsInput | boolean
   pvLibre?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1919,7 +1919,7 @@ export type EmployeUncheckedUpdateManyWithoutRepertoireInput = {
   email?: Prisma.StringFieldUpdateOperationsInput | string
   typeUser?: Prisma.IntFieldUpdateOperationsInput | number
   etatCompte?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  validationMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  validationMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   motPassFake?: Prisma.StringFieldUpdateOperationsInput | string
   commercial?: Prisma.BoolFieldUpdateOperationsInput | boolean
   pvLibre?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -2099,7 +2099,7 @@ export type $EmployePayload<ExtArgs extends runtime.Types.Extensions.InternalArg
     email: string
     typeUser: number
     etatCompte: boolean
-    validationMnt: number
+    validationMnt: runtime.Decimal
     motPassFake: string
     commercial: boolean
     pvLibre: boolean
@@ -2496,7 +2496,7 @@ export interface EmployeFieldRefs {
   readonly email: Prisma.FieldRef<"Employe", 'String'>
   readonly typeUser: Prisma.FieldRef<"Employe", 'Int'>
   readonly etatCompte: Prisma.FieldRef<"Employe", 'Boolean'>
-  readonly validationMnt: Prisma.FieldRef<"Employe", 'Float'>
+  readonly validationMnt: Prisma.FieldRef<"Employe", 'Decimal'>
   readonly motPassFake: Prisma.FieldRef<"Employe", 'String'>
   readonly commercial: Prisma.FieldRef<"Employe", 'Boolean'>
   readonly pvLibre: Prisma.FieldRef<"Employe", 'Boolean'>

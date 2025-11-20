@@ -29,7 +29,7 @@ export type AggregateCheque = {
 export type ChequeAvgAggregateOutputType = {
   id: number | null
   typeRepertoire: number | null
-  montant: number | null
+  montant: runtime.Decimal | null
   typePersoScte: number | null
   numCheque: number | null
   typeReglment: number | null
@@ -40,7 +40,7 @@ export type ChequeAvgAggregateOutputType = {
 export type ChequeSumAggregateOutputType = {
   id: bigint | null
   typeRepertoire: number | null
-  montant: number | null
+  montant: runtime.Decimal | null
   typePersoScte: number | null
   numCheque: number | null
   typeReglment: number | null
@@ -54,7 +54,7 @@ export type ChequeMinAggregateOutputType = {
   codeCheque: string | null
   dateCheque: Date | null
   typeRepertoire: number | null
-  montant: number | null
+  montant: runtime.Decimal | null
   typePersoScte: number | null
   numCheque: number | null
   etatcheque: boolean | null
@@ -69,7 +69,7 @@ export type ChequeMaxAggregateOutputType = {
   codeCheque: string | null
   dateCheque: Date | null
   typeRepertoire: number | null
-  montant: number | null
+  montant: runtime.Decimal | null
   typePersoScte: number | null
   numCheque: number | null
   etatcheque: boolean | null
@@ -255,7 +255,7 @@ export type ChequeGroupByOutputType = {
   codeCheque: string
   dateCheque: Date
   typeRepertoire: number
-  montant: number
+  montant: runtime.Decimal
   typePersoScte: number
   numCheque: number
   etatcheque: boolean
@@ -293,7 +293,7 @@ export type ChequeWhereInput = {
   codeCheque?: Prisma.StringFilter<"Cheque"> | string
   dateCheque?: Prisma.DateTimeFilter<"Cheque"> | Date | string
   typeRepertoire?: Prisma.IntFilter<"Cheque"> | number
-  montant?: Prisma.FloatFilter<"Cheque"> | number
+  montant?: Prisma.DecimalFilter<"Cheque"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePersoScte?: Prisma.IntFilter<"Cheque"> | number
   numCheque?: Prisma.IntFilter<"Cheque"> | number
   etatcheque?: Prisma.BoolFilter<"Cheque"> | boolean
@@ -331,7 +331,7 @@ export type ChequeWhereUniqueInput = Prisma.AtLeast<{
   codeCheque?: Prisma.StringFilter<"Cheque"> | string
   dateCheque?: Prisma.DateTimeFilter<"Cheque"> | Date | string
   typeRepertoire?: Prisma.IntFilter<"Cheque"> | number
-  montant?: Prisma.FloatFilter<"Cheque"> | number
+  montant?: Prisma.DecimalFilter<"Cheque"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePersoScte?: Prisma.IntFilter<"Cheque"> | number
   numCheque?: Prisma.IntFilter<"Cheque"> | number
   etatcheque?: Prisma.BoolFilter<"Cheque"> | boolean
@@ -371,7 +371,7 @@ export type ChequeScalarWhereWithAggregatesInput = {
   codeCheque?: Prisma.StringWithAggregatesFilter<"Cheque"> | string
   dateCheque?: Prisma.DateTimeWithAggregatesFilter<"Cheque"> | Date | string
   typeRepertoire?: Prisma.IntWithAggregatesFilter<"Cheque"> | number
-  montant?: Prisma.FloatWithAggregatesFilter<"Cheque"> | number
+  montant?: Prisma.DecimalWithAggregatesFilter<"Cheque"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePersoScte?: Prisma.IntWithAggregatesFilter<"Cheque"> | number
   numCheque?: Prisma.IntWithAggregatesFilter<"Cheque"> | number
   etatcheque?: Prisma.BoolWithAggregatesFilter<"Cheque"> | boolean
@@ -386,7 +386,7 @@ export type ChequeCreateInput = {
   codeCheque: string
   dateCheque: Date | string
   typeRepertoire: number
-  montant: number
+  montant: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePersoScte: number
   numCheque: number
   etatcheque?: boolean
@@ -401,7 +401,7 @@ export type ChequeUncheckedCreateInput = {
   codeCheque: string
   dateCheque: Date | string
   typeRepertoire: number
-  montant: number
+  montant: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePersoScte: number
   numCheque: number
   etatcheque?: boolean
@@ -416,7 +416,7 @@ export type ChequeUpdateInput = {
   codeCheque?: Prisma.StringFieldUpdateOperationsInput | string
   dateCheque?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
-  montant?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePersoScte?: Prisma.IntFieldUpdateOperationsInput | number
   numCheque?: Prisma.IntFieldUpdateOperationsInput | number
   etatcheque?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -431,7 +431,7 @@ export type ChequeUncheckedUpdateInput = {
   codeCheque?: Prisma.StringFieldUpdateOperationsInput | string
   dateCheque?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
-  montant?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePersoScte?: Prisma.IntFieldUpdateOperationsInput | number
   numCheque?: Prisma.IntFieldUpdateOperationsInput | number
   etatcheque?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -446,7 +446,7 @@ export type ChequeCreateManyInput = {
   codeCheque: string
   dateCheque: Date | string
   typeRepertoire: number
-  montant: number
+  montant: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePersoScte: number
   numCheque: number
   etatcheque?: boolean
@@ -461,7 +461,7 @@ export type ChequeUpdateManyMutationInput = {
   codeCheque?: Prisma.StringFieldUpdateOperationsInput | string
   dateCheque?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
-  montant?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePersoScte?: Prisma.IntFieldUpdateOperationsInput | number
   numCheque?: Prisma.IntFieldUpdateOperationsInput | number
   etatcheque?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -474,7 +474,7 @@ export type ChequeUncheckedUpdateManyInput = {
   codeCheque?: Prisma.StringFieldUpdateOperationsInput | string
   dateCheque?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
-  montant?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePersoScte?: Prisma.IntFieldUpdateOperationsInput | number
   numCheque?: Prisma.IntFieldUpdateOperationsInput | number
   etatcheque?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -656,7 +656,7 @@ export type ChequeCreateWithoutRepertoireInput = {
   codeCheque: string
   dateCheque: Date | string
   typeRepertoire: number
-  montant: number
+  montant: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePersoScte: number
   numCheque: number
   etatcheque?: boolean
@@ -670,7 +670,7 @@ export type ChequeUncheckedCreateWithoutRepertoireInput = {
   codeCheque: string
   dateCheque: Date | string
   typeRepertoire: number
-  montant: number
+  montant: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePersoScte: number
   numCheque: number
   etatcheque?: boolean
@@ -713,7 +713,7 @@ export type ChequeScalarWhereInput = {
   codeCheque?: Prisma.StringFilter<"Cheque"> | string
   dateCheque?: Prisma.DateTimeFilter<"Cheque"> | Date | string
   typeRepertoire?: Prisma.IntFilter<"Cheque"> | number
-  montant?: Prisma.FloatFilter<"Cheque"> | number
+  montant?: Prisma.DecimalFilter<"Cheque"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePersoScte?: Prisma.IntFilter<"Cheque"> | number
   numCheque?: Prisma.IntFilter<"Cheque"> | number
   etatcheque?: Prisma.BoolFilter<"Cheque"> | boolean
@@ -728,7 +728,7 @@ export type ChequeCreateWithoutEmployeOperateurInput = {
   codeCheque: string
   dateCheque: Date | string
   typeRepertoire: number
-  montant: number
+  montant: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePersoScte: number
   numCheque: number
   etatcheque?: boolean
@@ -742,7 +742,7 @@ export type ChequeUncheckedCreateWithoutEmployeOperateurInput = {
   codeCheque: string
   dateCheque: Date | string
   typeRepertoire: number
-  montant: number
+  montant: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePersoScte: number
   numCheque: number
   etatcheque?: boolean
@@ -782,7 +782,7 @@ export type ChequeCreateManyRepertoireInput = {
   codeCheque: string
   dateCheque: Date | string
   typeRepertoire: number
-  montant: number
+  montant: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePersoScte: number
   numCheque: number
   etatcheque?: boolean
@@ -796,7 +796,7 @@ export type ChequeUpdateWithoutRepertoireInput = {
   codeCheque?: Prisma.StringFieldUpdateOperationsInput | string
   dateCheque?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
-  montant?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePersoScte?: Prisma.IntFieldUpdateOperationsInput | number
   numCheque?: Prisma.IntFieldUpdateOperationsInput | number
   etatcheque?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -810,7 +810,7 @@ export type ChequeUncheckedUpdateWithoutRepertoireInput = {
   codeCheque?: Prisma.StringFieldUpdateOperationsInput | string
   dateCheque?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
-  montant?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePersoScte?: Prisma.IntFieldUpdateOperationsInput | number
   numCheque?: Prisma.IntFieldUpdateOperationsInput | number
   etatcheque?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -824,7 +824,7 @@ export type ChequeUncheckedUpdateManyWithoutRepertoireInput = {
   codeCheque?: Prisma.StringFieldUpdateOperationsInput | string
   dateCheque?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
-  montant?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePersoScte?: Prisma.IntFieldUpdateOperationsInput | number
   numCheque?: Prisma.IntFieldUpdateOperationsInput | number
   etatcheque?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -838,7 +838,7 @@ export type ChequeCreateManyEmployeOperateurInput = {
   codeCheque: string
   dateCheque: Date | string
   typeRepertoire: number
-  montant: number
+  montant: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePersoScte: number
   numCheque: number
   etatcheque?: boolean
@@ -852,7 +852,7 @@ export type ChequeUpdateWithoutEmployeOperateurInput = {
   codeCheque?: Prisma.StringFieldUpdateOperationsInput | string
   dateCheque?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
-  montant?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePersoScte?: Prisma.IntFieldUpdateOperationsInput | number
   numCheque?: Prisma.IntFieldUpdateOperationsInput | number
   etatcheque?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -866,7 +866,7 @@ export type ChequeUncheckedUpdateWithoutEmployeOperateurInput = {
   codeCheque?: Prisma.StringFieldUpdateOperationsInput | string
   dateCheque?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
-  montant?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePersoScte?: Prisma.IntFieldUpdateOperationsInput | number
   numCheque?: Prisma.IntFieldUpdateOperationsInput | number
   etatcheque?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -880,7 +880,7 @@ export type ChequeUncheckedUpdateManyWithoutEmployeOperateurInput = {
   codeCheque?: Prisma.StringFieldUpdateOperationsInput | string
   dateCheque?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
-  montant?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePersoScte?: Prisma.IntFieldUpdateOperationsInput | number
   numCheque?: Prisma.IntFieldUpdateOperationsInput | number
   etatcheque?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -942,7 +942,7 @@ export type $ChequePayload<ExtArgs extends runtime.Types.Extensions.InternalArgs
     codeCheque: string
     dateCheque: Date
     typeRepertoire: number
-    montant: number
+    montant: runtime.Decimal
     typePersoScte: number
     numCheque: number
     etatcheque: boolean
@@ -1325,7 +1325,7 @@ export interface ChequeFieldRefs {
   readonly codeCheque: Prisma.FieldRef<"Cheque", 'String'>
   readonly dateCheque: Prisma.FieldRef<"Cheque", 'DateTime'>
   readonly typeRepertoire: Prisma.FieldRef<"Cheque", 'Int'>
-  readonly montant: Prisma.FieldRef<"Cheque", 'Float'>
+  readonly montant: Prisma.FieldRef<"Cheque", 'Decimal'>
   readonly typePersoScte: Prisma.FieldRef<"Cheque", 'Int'>
   readonly numCheque: Prisma.FieldRef<"Cheque", 'Int'>
   readonly etatcheque: Prisma.FieldRef<"Cheque", 'Boolean'>

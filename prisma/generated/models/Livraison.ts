@@ -33,18 +33,18 @@ export type LivraisonAvgAggregateOutputType = {
   typeReglment2: number | null
   typeReglment3: number | null
   typeReglment4: number | null
-  mantantBL: number | null
-  mantantBLReel: number | null
-  mantantBLBenefice: number | null
-  mantantBLPourcent: number | null
+  mantantBL: runtime.Decimal | null
+  mantantBLReel: runtime.Decimal | null
+  mantantBLBenefice: runtime.Decimal | null
+  mantantBLPourcent: runtime.Decimal | null
   reglerNonRegler: number | null
   infinity: number | null
   etatBultinPaie: number | null
   livrernonlivrer: number | null
-  mntReglement: number | null
-  mntReglement2: number | null
-  mntReglement3: number | null
-  mntReglement4: number | null
+  mntReglement: runtime.Decimal | null
+  mntReglement2: runtime.Decimal | null
+  mntReglement3: runtime.Decimal | null
+  mntReglement4: runtime.Decimal | null
   employeOperateurId: number | null
   repertoireByCommercialId: number | null
   repertoireByCommercialAncienId: number | null
@@ -58,18 +58,18 @@ export type LivraisonSumAggregateOutputType = {
   typeReglment2: number | null
   typeReglment3: number | null
   typeReglment4: number | null
-  mantantBL: number | null
-  mantantBLReel: number | null
-  mantantBLBenefice: number | null
-  mantantBLPourcent: number | null
+  mantantBL: runtime.Decimal | null
+  mantantBLReel: runtime.Decimal | null
+  mantantBLBenefice: runtime.Decimal | null
+  mantantBLPourcent: runtime.Decimal | null
   reglerNonRegler: number | null
   infinity: number | null
   etatBultinPaie: number | null
   livrernonlivrer: number | null
-  mntReglement: number | null
-  mntReglement2: number | null
-  mntReglement3: number | null
-  mntReglement4: number | null
+  mntReglement: runtime.Decimal | null
+  mntReglement2: runtime.Decimal | null
+  mntReglement3: runtime.Decimal | null
+  mntReglement4: runtime.Decimal | null
   employeOperateurId: bigint | null
   repertoireByCommercialId: bigint | null
   repertoireByCommercialAncienId: bigint | null
@@ -89,21 +89,21 @@ export type LivraisonMinAggregateOutputType = {
   typeReglment2: number | null
   typeReglment3: number | null
   typeReglment4: number | null
-  mantantBL: number | null
-  mantantBLReel: number | null
-  mantantBLBenefice: number | null
+  mantantBL: runtime.Decimal | null
+  mantantBLReel: runtime.Decimal | null
+  mantantBLBenefice: runtime.Decimal | null
   typePaiement: string | null
-  mantantBLPourcent: number | null
+  mantantBLPourcent: runtime.Decimal | null
   reglerNonRegler: number | null
   sysDate: Date | null
   infinity: number | null
   etatBultinPaie: number | null
   livrernonlivrer: number | null
   avecRemise: boolean | null
-  mntReglement: number | null
-  mntReglement2: number | null
-  mntReglement3: number | null
-  mntReglement4: number | null
+  mntReglement: runtime.Decimal | null
+  mntReglement2: runtime.Decimal | null
+  mntReglement3: runtime.Decimal | null
+  mntReglement4: runtime.Decimal | null
   facturer100: boolean | null
   codeTransport: string | null
   employeOperateurId: bigint | null
@@ -125,21 +125,21 @@ export type LivraisonMaxAggregateOutputType = {
   typeReglment2: number | null
   typeReglment3: number | null
   typeReglment4: number | null
-  mantantBL: number | null
-  mantantBLReel: number | null
-  mantantBLBenefice: number | null
+  mantantBL: runtime.Decimal | null
+  mantantBLReel: runtime.Decimal | null
+  mantantBLBenefice: runtime.Decimal | null
   typePaiement: string | null
-  mantantBLPourcent: number | null
+  mantantBLPourcent: runtime.Decimal | null
   reglerNonRegler: number | null
   sysDate: Date | null
   infinity: number | null
   etatBultinPaie: number | null
   livrernonlivrer: number | null
   avecRemise: boolean | null
-  mntReglement: number | null
-  mntReglement2: number | null
-  mntReglement3: number | null
-  mntReglement4: number | null
+  mntReglement: runtime.Decimal | null
+  mntReglement2: runtime.Decimal | null
+  mntReglement3: runtime.Decimal | null
+  mntReglement4: runtime.Decimal | null
   facturer100: boolean | null
   codeTransport: string | null
   employeOperateurId: bigint | null
@@ -444,21 +444,21 @@ export type LivraisonGroupByOutputType = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
-  mantantBL: number
-  mantantBLReel: number
-  mantantBLBenefice: number
+  mantantBL: runtime.Decimal
+  mantantBLReel: runtime.Decimal
+  mantantBLBenefice: runtime.Decimal
   typePaiement: string
-  mantantBLPourcent: number
+  mantantBLPourcent: runtime.Decimal
   reglerNonRegler: number
   sysDate: Date
   infinity: number
   etatBultinPaie: number
   livrernonlivrer: number
   avecRemise: boolean
-  mntReglement: number
-  mntReglement2: number
-  mntReglement3: number
-  mntReglement4: number
+  mntReglement: runtime.Decimal
+  mntReglement2: runtime.Decimal
+  mntReglement3: runtime.Decimal
+  mntReglement4: runtime.Decimal
   facturer100: boolean
   codeTransport: string
   employeOperateurId: bigint
@@ -503,21 +503,21 @@ export type LivraisonWhereInput = {
   typeReglment2?: Prisma.IntFilter<"Livraison"> | number
   typeReglment3?: Prisma.IntFilter<"Livraison"> | number
   typeReglment4?: Prisma.IntFilter<"Livraison"> | number
-  mantantBL?: Prisma.FloatFilter<"Livraison"> | number
-  mantantBLReel?: Prisma.FloatFilter<"Livraison"> | number
-  mantantBLBenefice?: Prisma.FloatFilter<"Livraison"> | number
+  mantantBL?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement?: Prisma.StringFilter<"Livraison"> | string
-  mantantBLPourcent?: Prisma.FloatFilter<"Livraison"> | number
+  mantantBLPourcent?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler?: Prisma.IntFilter<"Livraison"> | number
   sysDate?: Prisma.DateTimeFilter<"Livraison"> | Date | string
   infinity?: Prisma.IntFilter<"Livraison"> | number
   etatBultinPaie?: Prisma.IntFilter<"Livraison"> | number
   livrernonlivrer?: Prisma.IntFilter<"Livraison"> | number
   avecRemise?: Prisma.BoolFilter<"Livraison"> | boolean
-  mntReglement?: Prisma.FloatFilter<"Livraison"> | number
-  mntReglement2?: Prisma.FloatFilter<"Livraison"> | number
-  mntReglement3?: Prisma.FloatFilter<"Livraison"> | number
-  mntReglement4?: Prisma.FloatFilter<"Livraison"> | number
+  mntReglement?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFilter<"Livraison"> | boolean
   codeTransport?: Prisma.StringFilter<"Livraison"> | string
   employeOperateurId?: Prisma.BigIntFilter<"Livraison"> | bigint | number
@@ -591,21 +591,21 @@ export type LivraisonWhereUniqueInput = Prisma.AtLeast<{
   typeReglment2?: Prisma.IntFilter<"Livraison"> | number
   typeReglment3?: Prisma.IntFilter<"Livraison"> | number
   typeReglment4?: Prisma.IntFilter<"Livraison"> | number
-  mantantBL?: Prisma.FloatFilter<"Livraison"> | number
-  mantantBLReel?: Prisma.FloatFilter<"Livraison"> | number
-  mantantBLBenefice?: Prisma.FloatFilter<"Livraison"> | number
+  mantantBL?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement?: Prisma.StringFilter<"Livraison"> | string
-  mantantBLPourcent?: Prisma.FloatFilter<"Livraison"> | number
+  mantantBLPourcent?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler?: Prisma.IntFilter<"Livraison"> | number
   sysDate?: Prisma.DateTimeFilter<"Livraison"> | Date | string
   infinity?: Prisma.IntFilter<"Livraison"> | number
   etatBultinPaie?: Prisma.IntFilter<"Livraison"> | number
   livrernonlivrer?: Prisma.IntFilter<"Livraison"> | number
   avecRemise?: Prisma.BoolFilter<"Livraison"> | boolean
-  mntReglement?: Prisma.FloatFilter<"Livraison"> | number
-  mntReglement2?: Prisma.FloatFilter<"Livraison"> | number
-  mntReglement3?: Prisma.FloatFilter<"Livraison"> | number
-  mntReglement4?: Prisma.FloatFilter<"Livraison"> | number
+  mntReglement?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFilter<"Livraison"> | boolean
   codeTransport?: Prisma.StringFilter<"Livraison"> | string
   employeOperateurId?: Prisma.BigIntFilter<"Livraison"> | bigint | number
@@ -677,21 +677,21 @@ export type LivraisonScalarWhereWithAggregatesInput = {
   typeReglment2?: Prisma.IntWithAggregatesFilter<"Livraison"> | number
   typeReglment3?: Prisma.IntWithAggregatesFilter<"Livraison"> | number
   typeReglment4?: Prisma.IntWithAggregatesFilter<"Livraison"> | number
-  mantantBL?: Prisma.FloatWithAggregatesFilter<"Livraison"> | number
-  mantantBLReel?: Prisma.FloatWithAggregatesFilter<"Livraison"> | number
-  mantantBLBenefice?: Prisma.FloatWithAggregatesFilter<"Livraison"> | number
+  mantantBL?: Prisma.DecimalWithAggregatesFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel?: Prisma.DecimalWithAggregatesFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice?: Prisma.DecimalWithAggregatesFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement?: Prisma.StringWithAggregatesFilter<"Livraison"> | string
-  mantantBLPourcent?: Prisma.FloatWithAggregatesFilter<"Livraison"> | number
+  mantantBLPourcent?: Prisma.DecimalWithAggregatesFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler?: Prisma.IntWithAggregatesFilter<"Livraison"> | number
   sysDate?: Prisma.DateTimeWithAggregatesFilter<"Livraison"> | Date | string
   infinity?: Prisma.IntWithAggregatesFilter<"Livraison"> | number
   etatBultinPaie?: Prisma.IntWithAggregatesFilter<"Livraison"> | number
   livrernonlivrer?: Prisma.IntWithAggregatesFilter<"Livraison"> | number
   avecRemise?: Prisma.BoolWithAggregatesFilter<"Livraison"> | boolean
-  mntReglement?: Prisma.FloatWithAggregatesFilter<"Livraison"> | number
-  mntReglement2?: Prisma.FloatWithAggregatesFilter<"Livraison"> | number
-  mntReglement3?: Prisma.FloatWithAggregatesFilter<"Livraison"> | number
-  mntReglement4?: Prisma.FloatWithAggregatesFilter<"Livraison"> | number
+  mntReglement?: Prisma.DecimalWithAggregatesFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalWithAggregatesFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalWithAggregatesFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalWithAggregatesFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolWithAggregatesFilter<"Livraison"> | boolean
   codeTransport?: Prisma.StringWithAggregatesFilter<"Livraison"> | string
   employeOperateurId?: Prisma.BigIntWithAggregatesFilter<"Livraison"> | bigint | number
@@ -713,21 +713,21 @@ export type LivraisonCreateInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
-  mantantBL: number
-  mantantBLReel: number
-  mantantBLBenefice: number
+  mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement: string
-  mantantBLPourcent: number
+  mantantBLPourcent: runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler: number
   sysDate: Date | string
   infinity: number
   etatBultinPaie: number
   livrernonlivrer: number
   avecRemise: boolean
-  mntReglement: number
-  mntReglement2: number
-  mntReglement3: number
-  mntReglement4: number
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
   employeOperateur: Prisma.EmployeCreateNestedOneWithoutLivraisonsInput
@@ -751,21 +751,21 @@ export type LivraisonUncheckedCreateInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
-  mantantBL: number
-  mantantBLReel: number
-  mantantBLBenefice: number
+  mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement: string
-  mantantBLPourcent: number
+  mantantBLPourcent: runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler: number
   sysDate: Date | string
   infinity: number
   etatBultinPaie: number
   livrernonlivrer: number
   avecRemise: boolean
-  mntReglement: number
-  mntReglement2: number
-  mntReglement3: number
-  mntReglement4: number
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
   employeOperateurId: bigint | number
@@ -789,21 +789,21 @@ export type LivraisonUpdateInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
-  mantantBL?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLReel?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBLPourcent?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBLPourcent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler?: Prisma.IntFieldUpdateOperationsInput | number
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   etatBultinPaie?: Prisma.IntFieldUpdateOperationsInput | number
   livrernonlivrer?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  mntReglement?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement4?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
   employeOperateur?: Prisma.EmployeUpdateOneRequiredWithoutLivraisonsNestedInput
@@ -827,21 +827,21 @@ export type LivraisonUncheckedUpdateInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
-  mantantBL?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLReel?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBLPourcent?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBLPourcent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler?: Prisma.IntFieldUpdateOperationsInput | number
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   etatBultinPaie?: Prisma.IntFieldUpdateOperationsInput | number
   livrernonlivrer?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  mntReglement?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement4?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
   employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
@@ -865,21 +865,21 @@ export type LivraisonCreateManyInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
-  mantantBL: number
-  mantantBLReel: number
-  mantantBLBenefice: number
+  mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement: string
-  mantantBLPourcent: number
+  mantantBLPourcent: runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler: number
   sysDate: Date | string
   infinity: number
   etatBultinPaie: number
   livrernonlivrer: number
   avecRemise: boolean
-  mntReglement: number
-  mntReglement2: number
-  mntReglement3: number
-  mntReglement4: number
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
   employeOperateurId: bigint | number
@@ -901,21 +901,21 @@ export type LivraisonUpdateManyMutationInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
-  mantantBL?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLReel?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBLPourcent?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBLPourcent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler?: Prisma.IntFieldUpdateOperationsInput | number
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   etatBultinPaie?: Prisma.IntFieldUpdateOperationsInput | number
   livrernonlivrer?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  mntReglement?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement4?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
 }
@@ -933,21 +933,21 @@ export type LivraisonUncheckedUpdateManyInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
-  mantantBL?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLReel?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBLPourcent?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBLPourcent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler?: Prisma.IntFieldUpdateOperationsInput | number
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   etatBultinPaie?: Prisma.IntFieldUpdateOperationsInput | number
   livrernonlivrer?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  mntReglement?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement4?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
   employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
@@ -1344,21 +1344,21 @@ export type LivraisonCreateWithoutRepertoireByCommercialInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
-  mantantBL: number
-  mantantBLReel: number
-  mantantBLBenefice: number
+  mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement: string
-  mantantBLPourcent: number
+  mantantBLPourcent: runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler: number
   sysDate: Date | string
   infinity: number
   etatBultinPaie: number
   livrernonlivrer: number
   avecRemise: boolean
-  mntReglement: number
-  mntReglement2: number
-  mntReglement3: number
-  mntReglement4: number
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
   employeOperateur: Prisma.EmployeCreateNestedOneWithoutLivraisonsInput
@@ -1381,21 +1381,21 @@ export type LivraisonUncheckedCreateWithoutRepertoireByCommercialInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
-  mantantBL: number
-  mantantBLReel: number
-  mantantBLBenefice: number
+  mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement: string
-  mantantBLPourcent: number
+  mantantBLPourcent: runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler: number
   sysDate: Date | string
   infinity: number
   etatBultinPaie: number
   livrernonlivrer: number
   avecRemise: boolean
-  mntReglement: number
-  mntReglement2: number
-  mntReglement3: number
-  mntReglement4: number
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
   employeOperateurId: bigint | number
@@ -1428,21 +1428,21 @@ export type LivraisonCreateWithoutRepertoireByCommercialAncienInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
-  mantantBL: number
-  mantantBLReel: number
-  mantantBLBenefice: number
+  mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement: string
-  mantantBLPourcent: number
+  mantantBLPourcent: runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler: number
   sysDate: Date | string
   infinity: number
   etatBultinPaie: number
   livrernonlivrer: number
   avecRemise: boolean
-  mntReglement: number
-  mntReglement2: number
-  mntReglement3: number
-  mntReglement4: number
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
   employeOperateur: Prisma.EmployeCreateNestedOneWithoutLivraisonsInput
@@ -1465,21 +1465,21 @@ export type LivraisonUncheckedCreateWithoutRepertoireByCommercialAncienInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
-  mantantBL: number
-  mantantBLReel: number
-  mantantBLBenefice: number
+  mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement: string
-  mantantBLPourcent: number
+  mantantBLPourcent: runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler: number
   sysDate: Date | string
   infinity: number
   etatBultinPaie: number
   livrernonlivrer: number
   avecRemise: boolean
-  mntReglement: number
-  mntReglement2: number
-  mntReglement3: number
-  mntReglement4: number
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
   employeOperateurId: bigint | number
@@ -1512,21 +1512,21 @@ export type LivraisonCreateWithoutRepertoireByClientInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
-  mantantBL: number
-  mantantBLReel: number
-  mantantBLBenefice: number
+  mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement: string
-  mantantBLPourcent: number
+  mantantBLPourcent: runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler: number
   sysDate: Date | string
   infinity: number
   etatBultinPaie: number
   livrernonlivrer: number
   avecRemise: boolean
-  mntReglement: number
-  mntReglement2: number
-  mntReglement3: number
-  mntReglement4: number
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
   employeOperateur: Prisma.EmployeCreateNestedOneWithoutLivraisonsInput
@@ -1549,21 +1549,21 @@ export type LivraisonUncheckedCreateWithoutRepertoireByClientInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
-  mantantBL: number
-  mantantBLReel: number
-  mantantBLBenefice: number
+  mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement: string
-  mantantBLPourcent: number
+  mantantBLPourcent: runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler: number
   sysDate: Date | string
   infinity: number
   etatBultinPaie: number
   livrernonlivrer: number
   avecRemise: boolean
-  mntReglement: number
-  mntReglement2: number
-  mntReglement3: number
-  mntReglement4: number
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
   employeOperateurId: bigint | number
@@ -1615,21 +1615,21 @@ export type LivraisonScalarWhereInput = {
   typeReglment2?: Prisma.IntFilter<"Livraison"> | number
   typeReglment3?: Prisma.IntFilter<"Livraison"> | number
   typeReglment4?: Prisma.IntFilter<"Livraison"> | number
-  mantantBL?: Prisma.FloatFilter<"Livraison"> | number
-  mantantBLReel?: Prisma.FloatFilter<"Livraison"> | number
-  mantantBLBenefice?: Prisma.FloatFilter<"Livraison"> | number
+  mantantBL?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement?: Prisma.StringFilter<"Livraison"> | string
-  mantantBLPourcent?: Prisma.FloatFilter<"Livraison"> | number
+  mantantBLPourcent?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler?: Prisma.IntFilter<"Livraison"> | number
   sysDate?: Prisma.DateTimeFilter<"Livraison"> | Date | string
   infinity?: Prisma.IntFilter<"Livraison"> | number
   etatBultinPaie?: Prisma.IntFilter<"Livraison"> | number
   livrernonlivrer?: Prisma.IntFilter<"Livraison"> | number
   avecRemise?: Prisma.BoolFilter<"Livraison"> | boolean
-  mntReglement?: Prisma.FloatFilter<"Livraison"> | number
-  mntReglement2?: Prisma.FloatFilter<"Livraison"> | number
-  mntReglement3?: Prisma.FloatFilter<"Livraison"> | number
-  mntReglement4?: Prisma.FloatFilter<"Livraison"> | number
+  mntReglement?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFilter<"Livraison"> | boolean
   codeTransport?: Prisma.StringFilter<"Livraison"> | string
   employeOperateurId?: Prisma.BigIntFilter<"Livraison"> | bigint | number
@@ -1683,21 +1683,21 @@ export type LivraisonCreateWithoutEmployeOperateurInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
-  mantantBL: number
-  mantantBLReel: number
-  mantantBLBenefice: number
+  mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement: string
-  mantantBLPourcent: number
+  mantantBLPourcent: runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler: number
   sysDate: Date | string
   infinity: number
   etatBultinPaie: number
   livrernonlivrer: number
   avecRemise: boolean
-  mntReglement: number
-  mntReglement2: number
-  mntReglement3: number
-  mntReglement4: number
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
   repertoireByCommercial: Prisma.RepertoireCreateNestedOneWithoutLivraisonCommercialsInput
@@ -1720,21 +1720,21 @@ export type LivraisonUncheckedCreateWithoutEmployeOperateurInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
-  mantantBL: number
-  mantantBLReel: number
-  mantantBLBenefice: number
+  mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement: string
-  mantantBLPourcent: number
+  mantantBLPourcent: runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler: number
   sysDate: Date | string
   infinity: number
   etatBultinPaie: number
   livrernonlivrer: number
   avecRemise: boolean
-  mntReglement: number
-  mntReglement2: number
-  mntReglement3: number
-  mntReglement4: number
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
   repertoireByCommercialId: bigint | number
@@ -1783,21 +1783,21 @@ export type LivraisonCreateWithoutDetBulttinLivraisonsInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
-  mantantBL: number
-  mantantBLReel: number
-  mantantBLBenefice: number
+  mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement: string
-  mantantBLPourcent: number
+  mantantBLPourcent: runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler: number
   sysDate: Date | string
   infinity: number
   etatBultinPaie: number
   livrernonlivrer: number
   avecRemise: boolean
-  mntReglement: number
-  mntReglement2: number
-  mntReglement3: number
-  mntReglement4: number
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
   employeOperateur: Prisma.EmployeCreateNestedOneWithoutLivraisonsInput
@@ -1820,21 +1820,21 @@ export type LivraisonUncheckedCreateWithoutDetBulttinLivraisonsInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
-  mantantBL: number
-  mantantBLReel: number
-  mantantBLBenefice: number
+  mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement: string
-  mantantBLPourcent: number
+  mantantBLPourcent: runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler: number
   sysDate: Date | string
   infinity: number
   etatBultinPaie: number
   livrernonlivrer: number
   avecRemise: boolean
-  mntReglement: number
-  mntReglement2: number
-  mntReglement3: number
-  mntReglement4: number
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
   employeOperateurId: bigint | number
@@ -1873,21 +1873,21 @@ export type LivraisonUpdateWithoutDetBulttinLivraisonsInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
-  mantantBL?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLReel?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBLPourcent?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBLPourcent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler?: Prisma.IntFieldUpdateOperationsInput | number
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   etatBultinPaie?: Prisma.IntFieldUpdateOperationsInput | number
   livrernonlivrer?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  mntReglement?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement4?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
   employeOperateur?: Prisma.EmployeUpdateOneRequiredWithoutLivraisonsNestedInput
@@ -1910,21 +1910,21 @@ export type LivraisonUncheckedUpdateWithoutDetBulttinLivraisonsInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
-  mantantBL?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLReel?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBLPourcent?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBLPourcent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler?: Prisma.IntFieldUpdateOperationsInput | number
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   etatBultinPaie?: Prisma.IntFieldUpdateOperationsInput | number
   livrernonlivrer?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  mntReglement?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement4?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
   employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
@@ -1947,21 +1947,21 @@ export type LivraisonCreateWithoutDetLivraisonsInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
-  mantantBL: number
-  mantantBLReel: number
-  mantantBLBenefice: number
+  mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement: string
-  mantantBLPourcent: number
+  mantantBLPourcent: runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler: number
   sysDate: Date | string
   infinity: number
   etatBultinPaie: number
   livrernonlivrer: number
   avecRemise: boolean
-  mntReglement: number
-  mntReglement2: number
-  mntReglement3: number
-  mntReglement4: number
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
   employeOperateur: Prisma.EmployeCreateNestedOneWithoutLivraisonsInput
@@ -1984,21 +1984,21 @@ export type LivraisonUncheckedCreateWithoutDetLivraisonsInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
-  mantantBL: number
-  mantantBLReel: number
-  mantantBLBenefice: number
+  mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement: string
-  mantantBLPourcent: number
+  mantantBLPourcent: runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler: number
   sysDate: Date | string
   infinity: number
   etatBultinPaie: number
   livrernonlivrer: number
   avecRemise: boolean
-  mntReglement: number
-  mntReglement2: number
-  mntReglement3: number
-  mntReglement4: number
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
   employeOperateurId: bigint | number
@@ -2037,21 +2037,21 @@ export type LivraisonUpdateWithoutDetLivraisonsInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
-  mantantBL?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLReel?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBLPourcent?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBLPourcent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler?: Prisma.IntFieldUpdateOperationsInput | number
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   etatBultinPaie?: Prisma.IntFieldUpdateOperationsInput | number
   livrernonlivrer?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  mntReglement?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement4?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
   employeOperateur?: Prisma.EmployeUpdateOneRequiredWithoutLivraisonsNestedInput
@@ -2074,21 +2074,21 @@ export type LivraisonUncheckedUpdateWithoutDetLivraisonsInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
-  mantantBL?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLReel?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBLPourcent?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBLPourcent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler?: Prisma.IntFieldUpdateOperationsInput | number
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   etatBultinPaie?: Prisma.IntFieldUpdateOperationsInput | number
   livrernonlivrer?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  mntReglement?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement4?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
   employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
@@ -2111,21 +2111,21 @@ export type LivraisonCreateManyRepertoireByCommercialInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
-  mantantBL: number
-  mantantBLReel: number
-  mantantBLBenefice: number
+  mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement: string
-  mantantBLPourcent: number
+  mantantBLPourcent: runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler: number
   sysDate: Date | string
   infinity: number
   etatBultinPaie: number
   livrernonlivrer: number
   avecRemise: boolean
-  mntReglement: number
-  mntReglement2: number
-  mntReglement3: number
-  mntReglement4: number
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
   employeOperateurId: bigint | number
@@ -2146,21 +2146,21 @@ export type LivraisonCreateManyRepertoireByCommercialAncienInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
-  mantantBL: number
-  mantantBLReel: number
-  mantantBLBenefice: number
+  mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement: string
-  mantantBLPourcent: number
+  mantantBLPourcent: runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler: number
   sysDate: Date | string
   infinity: number
   etatBultinPaie: number
   livrernonlivrer: number
   avecRemise: boolean
-  mntReglement: number
-  mntReglement2: number
-  mntReglement3: number
-  mntReglement4: number
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
   employeOperateurId: bigint | number
@@ -2181,21 +2181,21 @@ export type LivraisonCreateManyRepertoireByClientInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
-  mantantBL: number
-  mantantBLReel: number
-  mantantBLBenefice: number
+  mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement: string
-  mantantBLPourcent: number
+  mantantBLPourcent: runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler: number
   sysDate: Date | string
   infinity: number
   etatBultinPaie: number
   livrernonlivrer: number
   avecRemise: boolean
-  mntReglement: number
-  mntReglement2: number
-  mntReglement3: number
-  mntReglement4: number
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
   employeOperateurId: bigint | number
@@ -2216,21 +2216,21 @@ export type LivraisonUpdateWithoutRepertoireByCommercialInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
-  mantantBL?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLReel?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBLPourcent?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBLPourcent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler?: Prisma.IntFieldUpdateOperationsInput | number
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   etatBultinPaie?: Prisma.IntFieldUpdateOperationsInput | number
   livrernonlivrer?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  mntReglement?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement4?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
   employeOperateur?: Prisma.EmployeUpdateOneRequiredWithoutLivraisonsNestedInput
@@ -2253,21 +2253,21 @@ export type LivraisonUncheckedUpdateWithoutRepertoireByCommercialInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
-  mantantBL?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLReel?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBLPourcent?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBLPourcent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler?: Prisma.IntFieldUpdateOperationsInput | number
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   etatBultinPaie?: Prisma.IntFieldUpdateOperationsInput | number
   livrernonlivrer?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  mntReglement?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement4?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
   employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
@@ -2290,21 +2290,21 @@ export type LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
-  mantantBL?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLReel?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBLPourcent?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBLPourcent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler?: Prisma.IntFieldUpdateOperationsInput | number
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   etatBultinPaie?: Prisma.IntFieldUpdateOperationsInput | number
   livrernonlivrer?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  mntReglement?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement4?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
   employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
@@ -2325,21 +2325,21 @@ export type LivraisonUpdateWithoutRepertoireByCommercialAncienInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
-  mantantBL?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLReel?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBLPourcent?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBLPourcent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler?: Prisma.IntFieldUpdateOperationsInput | number
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   etatBultinPaie?: Prisma.IntFieldUpdateOperationsInput | number
   livrernonlivrer?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  mntReglement?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement4?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
   employeOperateur?: Prisma.EmployeUpdateOneRequiredWithoutLivraisonsNestedInput
@@ -2362,21 +2362,21 @@ export type LivraisonUncheckedUpdateWithoutRepertoireByCommercialAncienInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
-  mantantBL?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLReel?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBLPourcent?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBLPourcent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler?: Prisma.IntFieldUpdateOperationsInput | number
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   etatBultinPaie?: Prisma.IntFieldUpdateOperationsInput | number
   livrernonlivrer?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  mntReglement?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement4?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
   employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
@@ -2399,21 +2399,21 @@ export type LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialAncienInput
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
-  mantantBL?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLReel?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBLPourcent?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBLPourcent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler?: Prisma.IntFieldUpdateOperationsInput | number
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   etatBultinPaie?: Prisma.IntFieldUpdateOperationsInput | number
   livrernonlivrer?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  mntReglement?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement4?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
   employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
@@ -2434,21 +2434,21 @@ export type LivraisonUpdateWithoutRepertoireByClientInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
-  mantantBL?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLReel?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBLPourcent?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBLPourcent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler?: Prisma.IntFieldUpdateOperationsInput | number
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   etatBultinPaie?: Prisma.IntFieldUpdateOperationsInput | number
   livrernonlivrer?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  mntReglement?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement4?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
   employeOperateur?: Prisma.EmployeUpdateOneRequiredWithoutLivraisonsNestedInput
@@ -2471,21 +2471,21 @@ export type LivraisonUncheckedUpdateWithoutRepertoireByClientInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
-  mantantBL?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLReel?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBLPourcent?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBLPourcent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler?: Prisma.IntFieldUpdateOperationsInput | number
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   etatBultinPaie?: Prisma.IntFieldUpdateOperationsInput | number
   livrernonlivrer?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  mntReglement?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement4?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
   employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
@@ -2508,21 +2508,21 @@ export type LivraisonUncheckedUpdateManyWithoutRepertoireByClientInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
-  mantantBL?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLReel?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBLPourcent?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBLPourcent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler?: Prisma.IntFieldUpdateOperationsInput | number
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   etatBultinPaie?: Prisma.IntFieldUpdateOperationsInput | number
   livrernonlivrer?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  mntReglement?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement4?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
   employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
@@ -2543,21 +2543,21 @@ export type LivraisonCreateManyEmployeOperateurInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
-  mantantBL: number
-  mantantBLReel: number
-  mantantBLBenefice: number
+  mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement: string
-  mantantBLPourcent: number
+  mantantBLPourcent: runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler: number
   sysDate: Date | string
   infinity: number
   etatBultinPaie: number
   livrernonlivrer: number
   avecRemise: boolean
-  mntReglement: number
-  mntReglement2: number
-  mntReglement3: number
-  mntReglement4: number
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
   repertoireByCommercialId: bigint | number
@@ -2578,21 +2578,21 @@ export type LivraisonUpdateWithoutEmployeOperateurInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
-  mantantBL?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLReel?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBLPourcent?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBLPourcent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler?: Prisma.IntFieldUpdateOperationsInput | number
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   etatBultinPaie?: Prisma.IntFieldUpdateOperationsInput | number
   livrernonlivrer?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  mntReglement?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement4?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
   repertoireByCommercial?: Prisma.RepertoireUpdateOneRequiredWithoutLivraisonCommercialsNestedInput
@@ -2615,21 +2615,21 @@ export type LivraisonUncheckedUpdateWithoutEmployeOperateurInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
-  mantantBL?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLReel?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBLPourcent?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBLPourcent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler?: Prisma.IntFieldUpdateOperationsInput | number
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   etatBultinPaie?: Prisma.IntFieldUpdateOperationsInput | number
   livrernonlivrer?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  mntReglement?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement4?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
   repertoireByCommercialId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
@@ -2652,21 +2652,21 @@ export type LivraisonUncheckedUpdateManyWithoutEmployeOperateurInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
-  mantantBL?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLReel?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBLBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBLPourcent?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantBLPourcent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   reglerNonRegler?: Prisma.IntFieldUpdateOperationsInput | number
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   etatBultinPaie?: Prisma.IntFieldUpdateOperationsInput | number
   livrernonlivrer?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  mntReglement?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement2?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement3?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntReglement4?: Prisma.FloatFieldUpdateOperationsInput | number
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
   repertoireByCommercialId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
@@ -2829,21 +2829,21 @@ export type $LivraisonPayload<ExtArgs extends runtime.Types.Extensions.InternalA
     typeReglment2: number
     typeReglment3: number
     typeReglment4: number
-    mantantBL: number
-    mantantBLReel: number
-    mantantBLBenefice: number
+    mantantBL: runtime.Decimal
+    mantantBLReel: runtime.Decimal
+    mantantBLBenefice: runtime.Decimal
     typePaiement: string
-    mantantBLPourcent: number
+    mantantBLPourcent: runtime.Decimal
     reglerNonRegler: number
     sysDate: Date
     infinity: number
     etatBultinPaie: number
     livrernonlivrer: number
     avecRemise: boolean
-    mntReglement: number
-    mntReglement2: number
-    mntReglement3: number
-    mntReglement4: number
+    mntReglement: runtime.Decimal
+    mntReglement2: runtime.Decimal
+    mntReglement3: runtime.Decimal
+    mntReglement4: runtime.Decimal
     facturer100: boolean
     codeTransport: string
     employeOperateurId: bigint
@@ -3237,21 +3237,21 @@ export interface LivraisonFieldRefs {
   readonly typeReglment2: Prisma.FieldRef<"Livraison", 'Int'>
   readonly typeReglment3: Prisma.FieldRef<"Livraison", 'Int'>
   readonly typeReglment4: Prisma.FieldRef<"Livraison", 'Int'>
-  readonly mantantBL: Prisma.FieldRef<"Livraison", 'Float'>
-  readonly mantantBLReel: Prisma.FieldRef<"Livraison", 'Float'>
-  readonly mantantBLBenefice: Prisma.FieldRef<"Livraison", 'Float'>
+  readonly mantantBL: Prisma.FieldRef<"Livraison", 'Decimal'>
+  readonly mantantBLReel: Prisma.FieldRef<"Livraison", 'Decimal'>
+  readonly mantantBLBenefice: Prisma.FieldRef<"Livraison", 'Decimal'>
   readonly typePaiement: Prisma.FieldRef<"Livraison", 'String'>
-  readonly mantantBLPourcent: Prisma.FieldRef<"Livraison", 'Float'>
+  readonly mantantBLPourcent: Prisma.FieldRef<"Livraison", 'Decimal'>
   readonly reglerNonRegler: Prisma.FieldRef<"Livraison", 'Int'>
   readonly sysDate: Prisma.FieldRef<"Livraison", 'DateTime'>
   readonly infinity: Prisma.FieldRef<"Livraison", 'Int'>
   readonly etatBultinPaie: Prisma.FieldRef<"Livraison", 'Int'>
   readonly livrernonlivrer: Prisma.FieldRef<"Livraison", 'Int'>
   readonly avecRemise: Prisma.FieldRef<"Livraison", 'Boolean'>
-  readonly mntReglement: Prisma.FieldRef<"Livraison", 'Float'>
-  readonly mntReglement2: Prisma.FieldRef<"Livraison", 'Float'>
-  readonly mntReglement3: Prisma.FieldRef<"Livraison", 'Float'>
-  readonly mntReglement4: Prisma.FieldRef<"Livraison", 'Float'>
+  readonly mntReglement: Prisma.FieldRef<"Livraison", 'Decimal'>
+  readonly mntReglement2: Prisma.FieldRef<"Livraison", 'Decimal'>
+  readonly mntReglement3: Prisma.FieldRef<"Livraison", 'Decimal'>
+  readonly mntReglement4: Prisma.FieldRef<"Livraison", 'Decimal'>
   readonly facturer100: Prisma.FieldRef<"Livraison", 'Boolean'>
   readonly codeTransport: Prisma.FieldRef<"Livraison", 'String'>
   readonly employeOperateurId: Prisma.FieldRef<"Livraison", 'BigInt'>

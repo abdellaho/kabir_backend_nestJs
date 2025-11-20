@@ -31,7 +31,7 @@ export type RepertoireAvgAggregateOutputType = {
   typeRepertoire: number | null
   typeReglment: number | null
   nbrOperationClient: number | null
-  plafond: number | null
+  plafond: runtime.Decimal | null
   personnelId: number | null
   villeId: number | null
 }
@@ -41,7 +41,7 @@ export type RepertoireSumAggregateOutputType = {
   typeRepertoire: number | null
   typeReglment: number | null
   nbrOperationClient: number | null
-  plafond: number | null
+  plafond: runtime.Decimal | null
   personnelId: bigint | null
   villeId: bigint | null
 }
@@ -63,7 +63,7 @@ export type RepertoireMinAggregateOutputType = {
   sysDate: Date | null
   observation: string | null
   nbrOperationClient: number | null
-  plafond: number | null
+  plafond: runtime.Decimal | null
   personnelId: bigint | null
   villeId: bigint | null
 }
@@ -85,7 +85,7 @@ export type RepertoireMaxAggregateOutputType = {
   sysDate: Date | null
   observation: string | null
   nbrOperationClient: number | null
-  plafond: number | null
+  plafond: runtime.Decimal | null
   personnelId: bigint | null
   villeId: bigint | null
 }
@@ -304,7 +304,7 @@ export type RepertoireGroupByOutputType = {
   sysDate: Date
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal
   personnelId: bigint | null
   villeId: bigint | null
   _count: RepertoireCountAggregateOutputType | null
@@ -349,7 +349,7 @@ export type RepertoireWhereInput = {
   sysDate?: Prisma.DateTimeFilter<"Repertoire"> | Date | string
   observation?: Prisma.StringFilter<"Repertoire"> | string
   nbrOperationClient?: Prisma.IntFilter<"Repertoire"> | number
-  plafond?: Prisma.FloatFilter<"Repertoire"> | number
+  plafond?: Prisma.DecimalFilter<"Repertoire"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: Prisma.BigIntNullableFilter<"Repertoire"> | bigint | number | null
   villeId?: Prisma.BigIntNullableFilter<"Repertoire"> | bigint | number | null
   personnel?: Prisma.XOR<Prisma.PersonnelNullableScalarRelationFilter, Prisma.PersonnelWhereInput> | null
@@ -421,7 +421,7 @@ export type RepertoireWhereUniqueInput = Prisma.AtLeast<{
   sysDate?: Prisma.DateTimeFilter<"Repertoire"> | Date | string
   observation?: Prisma.StringFilter<"Repertoire"> | string
   nbrOperationClient?: Prisma.IntFilter<"Repertoire"> | number
-  plafond?: Prisma.FloatFilter<"Repertoire"> | number
+  plafond?: Prisma.DecimalFilter<"Repertoire"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: Prisma.BigIntNullableFilter<"Repertoire"> | bigint | number | null
   villeId?: Prisma.BigIntNullableFilter<"Repertoire"> | bigint | number | null
   personnel?: Prisma.XOR<Prisma.PersonnelNullableScalarRelationFilter, Prisma.PersonnelWhereInput> | null
@@ -485,7 +485,7 @@ export type RepertoireScalarWhereWithAggregatesInput = {
   sysDate?: Prisma.DateTimeWithAggregatesFilter<"Repertoire"> | Date | string
   observation?: Prisma.StringWithAggregatesFilter<"Repertoire"> | string
   nbrOperationClient?: Prisma.IntWithAggregatesFilter<"Repertoire"> | number
-  plafond?: Prisma.FloatWithAggregatesFilter<"Repertoire"> | number
+  plafond?: Prisma.DecimalWithAggregatesFilter<"Repertoire"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: Prisma.BigIntNullableWithAggregatesFilter<"Repertoire"> | bigint | number | null
   villeId?: Prisma.BigIntNullableWithAggregatesFilter<"Repertoire"> | bigint | number | null
 }
@@ -507,7 +507,7 @@ export type RepertoireCreateInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   personnel?: Prisma.PersonnelCreateNestedOneWithoutRepertoiresInput
   ville?: Prisma.VilleCreateNestedOneWithoutRepertoiresInput
   employes?: Prisma.EmployeCreateNestedManyWithoutRepertoireInput
@@ -539,7 +539,7 @@ export type RepertoireUncheckedCreateInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: bigint | number | null
   villeId?: bigint | number | null
   employes?: Prisma.EmployeUncheckedCreateNestedManyWithoutRepertoireInput
@@ -571,7 +571,7 @@ export type RepertoireUpdateInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnel?: Prisma.PersonnelUpdateOneWithoutRepertoiresNestedInput
   ville?: Prisma.VilleUpdateOneWithoutRepertoiresNestedInput
   employes?: Prisma.EmployeUpdateManyWithoutRepertoireNestedInput
@@ -603,7 +603,7 @@ export type RepertoireUncheckedUpdateInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   employes?: Prisma.EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
@@ -635,7 +635,7 @@ export type RepertoireCreateManyInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: bigint | number | null
   villeId?: bigint | number | null
 }
@@ -657,7 +657,7 @@ export type RepertoireUpdateManyMutationInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type RepertoireUncheckedUpdateManyInput = {
@@ -677,7 +677,7 @@ export type RepertoireUncheckedUpdateManyInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
 }
@@ -1037,7 +1037,7 @@ export type RepertoireCreateWithoutVilleInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   personnel?: Prisma.PersonnelCreateNestedOneWithoutRepertoiresInput
   employes?: Prisma.EmployeCreateNestedManyWithoutRepertoireInput
   bonSorties?: Prisma.BonSortieCreateNestedManyWithoutRepertoireInput
@@ -1068,7 +1068,7 @@ export type RepertoireUncheckedCreateWithoutVilleInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: bigint | number | null
   employes?: Prisma.EmployeUncheckedCreateNestedManyWithoutRepertoireInput
   bonSorties?: Prisma.BonSortieUncheckedCreateNestedManyWithoutRepertoireInput
@@ -1128,7 +1128,7 @@ export type RepertoireScalarWhereInput = {
   sysDate?: Prisma.DateTimeFilter<"Repertoire"> | Date | string
   observation?: Prisma.StringFilter<"Repertoire"> | string
   nbrOperationClient?: Prisma.IntFilter<"Repertoire"> | number
-  plafond?: Prisma.FloatFilter<"Repertoire"> | number
+  plafond?: Prisma.DecimalFilter<"Repertoire"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: Prisma.BigIntNullableFilter<"Repertoire"> | bigint | number | null
   villeId?: Prisma.BigIntNullableFilter<"Repertoire"> | bigint | number | null
 }
@@ -1150,7 +1150,7 @@ export type RepertoireCreateWithoutPersonnelInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   ville?: Prisma.VilleCreateNestedOneWithoutRepertoiresInput
   employes?: Prisma.EmployeCreateNestedManyWithoutRepertoireInput
   bonSorties?: Prisma.BonSortieCreateNestedManyWithoutRepertoireInput
@@ -1181,7 +1181,7 @@ export type RepertoireUncheckedCreateWithoutPersonnelInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   villeId?: bigint | number | null
   employes?: Prisma.EmployeUncheckedCreateNestedManyWithoutRepertoireInput
   bonSorties?: Prisma.BonSortieUncheckedCreateNestedManyWithoutRepertoireInput
@@ -1238,7 +1238,7 @@ export type RepertoireCreateWithoutEmployesInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   personnel?: Prisma.PersonnelCreateNestedOneWithoutRepertoiresInput
   ville?: Prisma.VilleCreateNestedOneWithoutRepertoiresInput
   bonSorties?: Prisma.BonSortieCreateNestedManyWithoutRepertoireInput
@@ -1269,7 +1269,7 @@ export type RepertoireUncheckedCreateWithoutEmployesInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: bigint | number | null
   villeId?: bigint | number | null
   bonSorties?: Prisma.BonSortieUncheckedCreateNestedManyWithoutRepertoireInput
@@ -1316,7 +1316,7 @@ export type RepertoireUpdateWithoutEmployesInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnel?: Prisma.PersonnelUpdateOneWithoutRepertoiresNestedInput
   ville?: Prisma.VilleUpdateOneWithoutRepertoiresNestedInput
   bonSorties?: Prisma.BonSortieUpdateManyWithoutRepertoireNestedInput
@@ -1347,7 +1347,7 @@ export type RepertoireUncheckedUpdateWithoutEmployesInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   bonSorties?: Prisma.BonSortieUncheckedUpdateManyWithoutRepertoireNestedInput
@@ -1378,7 +1378,7 @@ export type RepertoireCreateWithoutBonSortiesInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   personnel?: Prisma.PersonnelCreateNestedOneWithoutRepertoiresInput
   ville?: Prisma.VilleCreateNestedOneWithoutRepertoiresInput
   employes?: Prisma.EmployeCreateNestedManyWithoutRepertoireInput
@@ -1409,7 +1409,7 @@ export type RepertoireUncheckedCreateWithoutBonSortiesInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: bigint | number | null
   villeId?: bigint | number | null
   employes?: Prisma.EmployeUncheckedCreateNestedManyWithoutRepertoireInput
@@ -1456,7 +1456,7 @@ export type RepertoireUpdateWithoutBonSortiesInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnel?: Prisma.PersonnelUpdateOneWithoutRepertoiresNestedInput
   ville?: Prisma.VilleUpdateOneWithoutRepertoiresNestedInput
   employes?: Prisma.EmployeUpdateManyWithoutRepertoireNestedInput
@@ -1487,7 +1487,7 @@ export type RepertoireUncheckedUpdateWithoutBonSortiesInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   employes?: Prisma.EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
@@ -1518,7 +1518,7 @@ export type RepertoireCreateWithoutBulttinPaisInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   personnel?: Prisma.PersonnelCreateNestedOneWithoutRepertoiresInput
   ville?: Prisma.VilleCreateNestedOneWithoutRepertoiresInput
   employes?: Prisma.EmployeCreateNestedManyWithoutRepertoireInput
@@ -1549,7 +1549,7 @@ export type RepertoireUncheckedCreateWithoutBulttinPaisInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: bigint | number | null
   villeId?: bigint | number | null
   employes?: Prisma.EmployeUncheckedCreateNestedManyWithoutRepertoireInput
@@ -1596,7 +1596,7 @@ export type RepertoireUpdateWithoutBulttinPaisInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnel?: Prisma.PersonnelUpdateOneWithoutRepertoiresNestedInput
   ville?: Prisma.VilleUpdateOneWithoutRepertoiresNestedInput
   employes?: Prisma.EmployeUpdateManyWithoutRepertoireNestedInput
@@ -1627,7 +1627,7 @@ export type RepertoireUncheckedUpdateWithoutBulttinPaisInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   employes?: Prisma.EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
@@ -1658,7 +1658,7 @@ export type RepertoireCreateWithoutChequesInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   personnel?: Prisma.PersonnelCreateNestedOneWithoutRepertoiresInput
   ville?: Prisma.VilleCreateNestedOneWithoutRepertoiresInput
   employes?: Prisma.EmployeCreateNestedManyWithoutRepertoireInput
@@ -1689,7 +1689,7 @@ export type RepertoireUncheckedCreateWithoutChequesInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: bigint | number | null
   villeId?: bigint | number | null
   employes?: Prisma.EmployeUncheckedCreateNestedManyWithoutRepertoireInput
@@ -1736,7 +1736,7 @@ export type RepertoireUpdateWithoutChequesInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnel?: Prisma.PersonnelUpdateOneWithoutRepertoiresNestedInput
   ville?: Prisma.VilleUpdateOneWithoutRepertoiresNestedInput
   employes?: Prisma.EmployeUpdateManyWithoutRepertoireNestedInput
@@ -1767,7 +1767,7 @@ export type RepertoireUncheckedUpdateWithoutChequesInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   employes?: Prisma.EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
@@ -1798,7 +1798,7 @@ export type RepertoireCreateWithoutComptasInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   personnel?: Prisma.PersonnelCreateNestedOneWithoutRepertoiresInput
   ville?: Prisma.VilleCreateNestedOneWithoutRepertoiresInput
   employes?: Prisma.EmployeCreateNestedManyWithoutRepertoireInput
@@ -1829,7 +1829,7 @@ export type RepertoireUncheckedCreateWithoutComptasInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: bigint | number | null
   villeId?: bigint | number | null
   employes?: Prisma.EmployeUncheckedCreateNestedManyWithoutRepertoireInput
@@ -1876,7 +1876,7 @@ export type RepertoireUpdateWithoutComptasInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnel?: Prisma.PersonnelUpdateOneWithoutRepertoiresNestedInput
   ville?: Prisma.VilleUpdateOneWithoutRepertoiresNestedInput
   employes?: Prisma.EmployeUpdateManyWithoutRepertoireNestedInput
@@ -1907,7 +1907,7 @@ export type RepertoireUncheckedUpdateWithoutComptasInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   employes?: Prisma.EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
@@ -1938,7 +1938,7 @@ export type RepertoireCreateWithoutComptabilitesInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   personnel?: Prisma.PersonnelCreateNestedOneWithoutRepertoiresInput
   ville?: Prisma.VilleCreateNestedOneWithoutRepertoiresInput
   employes?: Prisma.EmployeCreateNestedManyWithoutRepertoireInput
@@ -1969,7 +1969,7 @@ export type RepertoireUncheckedCreateWithoutComptabilitesInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: bigint | number | null
   villeId?: bigint | number | null
   employes?: Prisma.EmployeUncheckedCreateNestedManyWithoutRepertoireInput
@@ -2016,7 +2016,7 @@ export type RepertoireUpdateWithoutComptabilitesInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnel?: Prisma.PersonnelUpdateOneWithoutRepertoiresNestedInput
   ville?: Prisma.VilleUpdateOneWithoutRepertoiresNestedInput
   employes?: Prisma.EmployeUpdateManyWithoutRepertoireNestedInput
@@ -2047,7 +2047,7 @@ export type RepertoireUncheckedUpdateWithoutComptabilitesInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   employes?: Prisma.EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
@@ -2078,7 +2078,7 @@ export type RepertoireCreateWithoutImportationsInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   personnel?: Prisma.PersonnelCreateNestedOneWithoutRepertoiresInput
   ville?: Prisma.VilleCreateNestedOneWithoutRepertoiresInput
   employes?: Prisma.EmployeCreateNestedManyWithoutRepertoireInput
@@ -2109,7 +2109,7 @@ export type RepertoireUncheckedCreateWithoutImportationsInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: bigint | number | null
   villeId?: bigint | number | null
   employes?: Prisma.EmployeUncheckedCreateNestedManyWithoutRepertoireInput
@@ -2156,7 +2156,7 @@ export type RepertoireUpdateWithoutImportationsInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnel?: Prisma.PersonnelUpdateOneWithoutRepertoiresNestedInput
   ville?: Prisma.VilleUpdateOneWithoutRepertoiresNestedInput
   employes?: Prisma.EmployeUpdateManyWithoutRepertoireNestedInput
@@ -2187,7 +2187,7 @@ export type RepertoireUncheckedUpdateWithoutImportationsInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   employes?: Prisma.EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
@@ -2218,7 +2218,7 @@ export type RepertoireCreateWithoutLivraisonCommercialsInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   personnel?: Prisma.PersonnelCreateNestedOneWithoutRepertoiresInput
   ville?: Prisma.VilleCreateNestedOneWithoutRepertoiresInput
   employes?: Prisma.EmployeCreateNestedManyWithoutRepertoireInput
@@ -2249,7 +2249,7 @@ export type RepertoireUncheckedCreateWithoutLivraisonCommercialsInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: bigint | number | null
   villeId?: bigint | number | null
   employes?: Prisma.EmployeUncheckedCreateNestedManyWithoutRepertoireInput
@@ -2285,7 +2285,7 @@ export type RepertoireCreateWithoutLivraisonCommercialAnciensInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   personnel?: Prisma.PersonnelCreateNestedOneWithoutRepertoiresInput
   ville?: Prisma.VilleCreateNestedOneWithoutRepertoiresInput
   employes?: Prisma.EmployeCreateNestedManyWithoutRepertoireInput
@@ -2316,7 +2316,7 @@ export type RepertoireUncheckedCreateWithoutLivraisonCommercialAnciensInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: bigint | number | null
   villeId?: bigint | number | null
   employes?: Prisma.EmployeUncheckedCreateNestedManyWithoutRepertoireInput
@@ -2352,7 +2352,7 @@ export type RepertoireCreateWithoutLivraisonClientsInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   personnel?: Prisma.PersonnelCreateNestedOneWithoutRepertoiresInput
   ville?: Prisma.VilleCreateNestedOneWithoutRepertoiresInput
   employes?: Prisma.EmployeCreateNestedManyWithoutRepertoireInput
@@ -2383,7 +2383,7 @@ export type RepertoireUncheckedCreateWithoutLivraisonClientsInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: bigint | number | null
   villeId?: bigint | number | null
   employes?: Prisma.EmployeUncheckedCreateNestedManyWithoutRepertoireInput
@@ -2430,7 +2430,7 @@ export type RepertoireUpdateWithoutLivraisonCommercialsInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnel?: Prisma.PersonnelUpdateOneWithoutRepertoiresNestedInput
   ville?: Prisma.VilleUpdateOneWithoutRepertoiresNestedInput
   employes?: Prisma.EmployeUpdateManyWithoutRepertoireNestedInput
@@ -2461,7 +2461,7 @@ export type RepertoireUncheckedUpdateWithoutLivraisonCommercialsInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   employes?: Prisma.EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
@@ -2503,7 +2503,7 @@ export type RepertoireUpdateWithoutLivraisonCommercialAnciensInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnel?: Prisma.PersonnelUpdateOneWithoutRepertoiresNestedInput
   ville?: Prisma.VilleUpdateOneWithoutRepertoiresNestedInput
   employes?: Prisma.EmployeUpdateManyWithoutRepertoireNestedInput
@@ -2534,7 +2534,7 @@ export type RepertoireUncheckedUpdateWithoutLivraisonCommercialAnciensInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   employes?: Prisma.EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
@@ -2576,7 +2576,7 @@ export type RepertoireUpdateWithoutLivraisonClientsInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnel?: Prisma.PersonnelUpdateOneWithoutRepertoiresNestedInput
   ville?: Prisma.VilleUpdateOneWithoutRepertoiresNestedInput
   employes?: Prisma.EmployeUpdateManyWithoutRepertoireNestedInput
@@ -2607,7 +2607,7 @@ export type RepertoireUncheckedUpdateWithoutLivraisonClientsInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   employes?: Prisma.EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
@@ -2638,7 +2638,7 @@ export type RepertoireCreateManyVilleInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: bigint | number | null
 }
 
@@ -2659,7 +2659,7 @@ export type RepertoireUpdateWithoutVilleInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnel?: Prisma.PersonnelUpdateOneWithoutRepertoiresNestedInput
   employes?: Prisma.EmployeUpdateManyWithoutRepertoireNestedInput
   bonSorties?: Prisma.BonSortieUpdateManyWithoutRepertoireNestedInput
@@ -2690,7 +2690,7 @@ export type RepertoireUncheckedUpdateWithoutVilleInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   employes?: Prisma.EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
   bonSorties?: Prisma.BonSortieUncheckedUpdateManyWithoutRepertoireNestedInput
@@ -2721,7 +2721,7 @@ export type RepertoireUncheckedUpdateManyWithoutVilleInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   personnelId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
 }
 
@@ -2742,7 +2742,7 @@ export type RepertoireCreateManyPersonnelInput = {
   sysDate: Date | string
   observation: string
   nbrOperationClient: number
-  plafond: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
   villeId?: bigint | number | null
 }
 
@@ -2763,7 +2763,7 @@ export type RepertoireUpdateWithoutPersonnelInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   ville?: Prisma.VilleUpdateOneWithoutRepertoiresNestedInput
   employes?: Prisma.EmployeUpdateManyWithoutRepertoireNestedInput
   bonSorties?: Prisma.BonSortieUpdateManyWithoutRepertoireNestedInput
@@ -2794,7 +2794,7 @@ export type RepertoireUncheckedUpdateWithoutPersonnelInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   employes?: Prisma.EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
   bonSorties?: Prisma.BonSortieUncheckedUpdateManyWithoutRepertoireNestedInput
@@ -2825,7 +2825,7 @@ export type RepertoireUncheckedUpdateManyWithoutPersonnelInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.FloatFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
 }
 
@@ -3050,7 +3050,7 @@ export type $RepertoirePayload<ExtArgs extends runtime.Types.Extensions.Internal
     sysDate: Date
     observation: string
     nbrOperationClient: number
-    plafond: number
+    plafond: runtime.Decimal
     personnelId: bigint | null
     villeId: bigint | null
   }, ExtArgs["result"]["repertoire"]>
@@ -3450,7 +3450,7 @@ export interface RepertoireFieldRefs {
   readonly sysDate: Prisma.FieldRef<"Repertoire", 'DateTime'>
   readonly observation: Prisma.FieldRef<"Repertoire", 'String'>
   readonly nbrOperationClient: Prisma.FieldRef<"Repertoire", 'Int'>
-  readonly plafond: Prisma.FieldRef<"Repertoire", 'Float'>
+  readonly plafond: Prisma.FieldRef<"Repertoire", 'Decimal'>
   readonly personnelId: Prisma.FieldRef<"Repertoire", 'BigInt'>
   readonly villeId: Prisma.FieldRef<"Repertoire", 'BigInt'>
 }

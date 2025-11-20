@@ -30,26 +30,26 @@ export type BulttinPaiAvgAggregateOutputType = {
   id: number | null
   numbultin: number | null
   idTypeBultinPai: number | null
-  salairefx: number | null
-  commission: number | null
-  frais: number | null
-  total: number | null
-  totalMntVendue: number | null
-  totalMntVendueProduit: number | null
-  totalMntVendueLivraison: number | null
-  mntNegative: number | null
-  mntNegativeProduit: number | null
-  mntNegativeLivraison: number | null
-  mntCNSS: number | null
-  mntPenalite: number | null
-  mntBenefice: number | null
-  commissionParProduit: number | null
-  primeSpecial: number | null
-  fraisSupp: number | null
-  primeCommercial: number | null
-  totalMntVenduePrixCommercial: number | null
-  totalMntVendueSansPrixCommercial: number | null
-  primeProduit: number | null
+  salairefx: runtime.Decimal | null
+  commission: runtime.Decimal | null
+  frais: runtime.Decimal | null
+  total: runtime.Decimal | null
+  totalMntVendue: runtime.Decimal | null
+  totalMntVendueProduit: runtime.Decimal | null
+  totalMntVendueLivraison: runtime.Decimal | null
+  mntNegative: runtime.Decimal | null
+  mntNegativeProduit: runtime.Decimal | null
+  mntNegativeLivraison: runtime.Decimal | null
+  mntCNSS: runtime.Decimal | null
+  mntPenalite: runtime.Decimal | null
+  mntBenefice: runtime.Decimal | null
+  commissionParProduit: runtime.Decimal | null
+  primeSpecial: runtime.Decimal | null
+  fraisSupp: runtime.Decimal | null
+  primeCommercial: runtime.Decimal | null
+  totalMntVenduePrixCommercial: runtime.Decimal | null
+  totalMntVendueSansPrixCommercial: runtime.Decimal | null
+  primeProduit: runtime.Decimal | null
   commercailId: number | null
   employeOperateurId: number | null
 }
@@ -58,26 +58,26 @@ export type BulttinPaiSumAggregateOutputType = {
   id: bigint | null
   numbultin: number | null
   idTypeBultinPai: number | null
-  salairefx: number | null
-  commission: number | null
-  frais: number | null
-  total: number | null
-  totalMntVendue: number | null
-  totalMntVendueProduit: number | null
-  totalMntVendueLivraison: number | null
-  mntNegative: number | null
-  mntNegativeProduit: number | null
-  mntNegativeLivraison: number | null
-  mntCNSS: number | null
-  mntPenalite: number | null
-  mntBenefice: number | null
-  commissionParProduit: number | null
-  primeSpecial: number | null
-  fraisSupp: number | null
-  primeCommercial: number | null
-  totalMntVenduePrixCommercial: number | null
-  totalMntVendueSansPrixCommercial: number | null
-  primeProduit: number | null
+  salairefx: runtime.Decimal | null
+  commission: runtime.Decimal | null
+  frais: runtime.Decimal | null
+  total: runtime.Decimal | null
+  totalMntVendue: runtime.Decimal | null
+  totalMntVendueProduit: runtime.Decimal | null
+  totalMntVendueLivraison: runtime.Decimal | null
+  mntNegative: runtime.Decimal | null
+  mntNegativeProduit: runtime.Decimal | null
+  mntNegativeLivraison: runtime.Decimal | null
+  mntCNSS: runtime.Decimal | null
+  mntPenalite: runtime.Decimal | null
+  mntBenefice: runtime.Decimal | null
+  commissionParProduit: runtime.Decimal | null
+  primeSpecial: runtime.Decimal | null
+  fraisSupp: runtime.Decimal | null
+  primeCommercial: runtime.Decimal | null
+  totalMntVenduePrixCommercial: runtime.Decimal | null
+  totalMntVendueSansPrixCommercial: runtime.Decimal | null
+  primeProduit: runtime.Decimal | null
   commercailId: bigint | null
   employeOperateurId: bigint | null
 }
@@ -91,27 +91,27 @@ export type BulttinPaiMinAggregateOutputType = {
   dateDebut: Date | null
   dateFin: Date | null
   idTypeBultinPai: number | null
-  salairefx: number | null
-  commission: number | null
-  frais: number | null
-  total: number | null
-  totalMntVendue: number | null
-  totalMntVendueProduit: number | null
-  totalMntVendueLivraison: number | null
-  mntNegative: number | null
-  mntNegativeProduit: number | null
-  mntNegativeLivraison: number | null
-  mntCNSS: number | null
-  mntPenalite: number | null
-  mntBenefice: number | null
-  commissionParProduit: number | null
-  primeSpecial: number | null
-  fraisSupp: number | null
-  primeCommercial: number | null
+  salairefx: runtime.Decimal | null
+  commission: runtime.Decimal | null
+  frais: runtime.Decimal | null
+  total: runtime.Decimal | null
+  totalMntVendue: runtime.Decimal | null
+  totalMntVendueProduit: runtime.Decimal | null
+  totalMntVendueLivraison: runtime.Decimal | null
+  mntNegative: runtime.Decimal | null
+  mntNegativeProduit: runtime.Decimal | null
+  mntNegativeLivraison: runtime.Decimal | null
+  mntCNSS: runtime.Decimal | null
+  mntPenalite: runtime.Decimal | null
+  mntBenefice: runtime.Decimal | null
+  commissionParProduit: runtime.Decimal | null
+  primeSpecial: runtime.Decimal | null
+  fraisSupp: runtime.Decimal | null
+  primeCommercial: runtime.Decimal | null
   externe: boolean | null
-  totalMntVenduePrixCommercial: number | null
-  totalMntVendueSansPrixCommercial: number | null
-  primeProduit: number | null
+  totalMntVenduePrixCommercial: runtime.Decimal | null
+  totalMntVendueSansPrixCommercial: runtime.Decimal | null
+  primeProduit: runtime.Decimal | null
   commercailId: bigint | null
   employeOperateurId: bigint | null
 }
@@ -125,27 +125,27 @@ export type BulttinPaiMaxAggregateOutputType = {
   dateDebut: Date | null
   dateFin: Date | null
   idTypeBultinPai: number | null
-  salairefx: number | null
-  commission: number | null
-  frais: number | null
-  total: number | null
-  totalMntVendue: number | null
-  totalMntVendueProduit: number | null
-  totalMntVendueLivraison: number | null
-  mntNegative: number | null
-  mntNegativeProduit: number | null
-  mntNegativeLivraison: number | null
-  mntCNSS: number | null
-  mntPenalite: number | null
-  mntBenefice: number | null
-  commissionParProduit: number | null
-  primeSpecial: number | null
-  fraisSupp: number | null
-  primeCommercial: number | null
+  salairefx: runtime.Decimal | null
+  commission: runtime.Decimal | null
+  frais: runtime.Decimal | null
+  total: runtime.Decimal | null
+  totalMntVendue: runtime.Decimal | null
+  totalMntVendueProduit: runtime.Decimal | null
+  totalMntVendueLivraison: runtime.Decimal | null
+  mntNegative: runtime.Decimal | null
+  mntNegativeProduit: runtime.Decimal | null
+  mntNegativeLivraison: runtime.Decimal | null
+  mntCNSS: runtime.Decimal | null
+  mntPenalite: runtime.Decimal | null
+  mntBenefice: runtime.Decimal | null
+  commissionParProduit: runtime.Decimal | null
+  primeSpecial: runtime.Decimal | null
+  fraisSupp: runtime.Decimal | null
+  primeCommercial: runtime.Decimal | null
   externe: boolean | null
-  totalMntVenduePrixCommercial: number | null
-  totalMntVendueSansPrixCommercial: number | null
-  primeProduit: number | null
+  totalMntVenduePrixCommercial: runtime.Decimal | null
+  totalMntVendueSansPrixCommercial: runtime.Decimal | null
+  primeProduit: runtime.Decimal | null
   commercailId: bigint | null
   employeOperateurId: bigint | null
 }
@@ -440,27 +440,27 @@ export type BulttinPaiGroupByOutputType = {
   dateDebut: Date
   dateFin: Date
   idTypeBultinPai: number
-  salairefx: number
-  commission: number
-  frais: number
-  total: number
-  totalMntVendue: number
-  totalMntVendueProduit: number
-  totalMntVendueLivraison: number
-  mntNegative: number
-  mntNegativeProduit: number
-  mntNegativeLivraison: number
-  mntCNSS: number
-  mntPenalite: number
-  mntBenefice: number
-  commissionParProduit: number
-  primeSpecial: number
-  fraisSupp: number
-  primeCommercial: number
+  salairefx: runtime.Decimal
+  commission: runtime.Decimal
+  frais: runtime.Decimal
+  total: runtime.Decimal
+  totalMntVendue: runtime.Decimal
+  totalMntVendueProduit: runtime.Decimal
+  totalMntVendueLivraison: runtime.Decimal
+  mntNegative: runtime.Decimal
+  mntNegativeProduit: runtime.Decimal
+  mntNegativeLivraison: runtime.Decimal
+  mntCNSS: runtime.Decimal
+  mntPenalite: runtime.Decimal
+  mntBenefice: runtime.Decimal
+  commissionParProduit: runtime.Decimal
+  primeSpecial: runtime.Decimal
+  fraisSupp: runtime.Decimal
+  primeCommercial: runtime.Decimal
   externe: boolean
-  totalMntVenduePrixCommercial: number
-  totalMntVendueSansPrixCommercial: number
-  primeProduit: number
+  totalMntVenduePrixCommercial: runtime.Decimal
+  totalMntVendueSansPrixCommercial: runtime.Decimal
+  primeProduit: runtime.Decimal
   commercailId: bigint
   employeOperateurId: bigint
   _count: BulttinPaiCountAggregateOutputType | null
@@ -497,27 +497,27 @@ export type BulttinPaiWhereInput = {
   dateDebut?: Prisma.DateTimeFilter<"BulttinPai"> | Date | string
   dateFin?: Prisma.DateTimeFilter<"BulttinPai"> | Date | string
   idTypeBultinPai?: Prisma.IntFilter<"BulttinPai"> | number
-  salairefx?: Prisma.FloatFilter<"BulttinPai"> | number
-  commission?: Prisma.FloatFilter<"BulttinPai"> | number
-  frais?: Prisma.FloatFilter<"BulttinPai"> | number
-  total?: Prisma.FloatFilter<"BulttinPai"> | number
-  totalMntVendue?: Prisma.FloatFilter<"BulttinPai"> | number
-  totalMntVendueProduit?: Prisma.FloatFilter<"BulttinPai"> | number
-  totalMntVendueLivraison?: Prisma.FloatFilter<"BulttinPai"> | number
-  mntNegative?: Prisma.FloatFilter<"BulttinPai"> | number
-  mntNegativeProduit?: Prisma.FloatFilter<"BulttinPai"> | number
-  mntNegativeLivraison?: Prisma.FloatFilter<"BulttinPai"> | number
-  mntCNSS?: Prisma.FloatFilter<"BulttinPai"> | number
-  mntPenalite?: Prisma.FloatFilter<"BulttinPai"> | number
-  mntBenefice?: Prisma.FloatFilter<"BulttinPai"> | number
-  commissionParProduit?: Prisma.FloatFilter<"BulttinPai"> | number
-  primeSpecial?: Prisma.FloatFilter<"BulttinPai"> | number
-  fraisSupp?: Prisma.FloatFilter<"BulttinPai"> | number
-  primeCommercial?: Prisma.FloatFilter<"BulttinPai"> | number
+  salairefx?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   externe?: Prisma.BoolFilter<"BulttinPai"> | boolean
-  totalMntVenduePrixCommercial?: Prisma.FloatFilter<"BulttinPai"> | number
-  totalMntVendueSansPrixCommercial?: Prisma.FloatFilter<"BulttinPai"> | number
-  primeProduit?: Prisma.FloatFilter<"BulttinPai"> | number
+  totalMntVenduePrixCommercial?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   commercailId?: Prisma.BigIntFilter<"BulttinPai"> | bigint | number
   employeOperateurId?: Prisma.BigIntFilter<"BulttinPai"> | bigint | number
   commercail?: Prisma.XOR<Prisma.RepertoireScalarRelationFilter, Prisma.RepertoireWhereInput>
@@ -577,27 +577,27 @@ export type BulttinPaiWhereUniqueInput = Prisma.AtLeast<{
   dateDebut?: Prisma.DateTimeFilter<"BulttinPai"> | Date | string
   dateFin?: Prisma.DateTimeFilter<"BulttinPai"> | Date | string
   idTypeBultinPai?: Prisma.IntFilter<"BulttinPai"> | number
-  salairefx?: Prisma.FloatFilter<"BulttinPai"> | number
-  commission?: Prisma.FloatFilter<"BulttinPai"> | number
-  frais?: Prisma.FloatFilter<"BulttinPai"> | number
-  total?: Prisma.FloatFilter<"BulttinPai"> | number
-  totalMntVendue?: Prisma.FloatFilter<"BulttinPai"> | number
-  totalMntVendueProduit?: Prisma.FloatFilter<"BulttinPai"> | number
-  totalMntVendueLivraison?: Prisma.FloatFilter<"BulttinPai"> | number
-  mntNegative?: Prisma.FloatFilter<"BulttinPai"> | number
-  mntNegativeProduit?: Prisma.FloatFilter<"BulttinPai"> | number
-  mntNegativeLivraison?: Prisma.FloatFilter<"BulttinPai"> | number
-  mntCNSS?: Prisma.FloatFilter<"BulttinPai"> | number
-  mntPenalite?: Prisma.FloatFilter<"BulttinPai"> | number
-  mntBenefice?: Prisma.FloatFilter<"BulttinPai"> | number
-  commissionParProduit?: Prisma.FloatFilter<"BulttinPai"> | number
-  primeSpecial?: Prisma.FloatFilter<"BulttinPai"> | number
-  fraisSupp?: Prisma.FloatFilter<"BulttinPai"> | number
-  primeCommercial?: Prisma.FloatFilter<"BulttinPai"> | number
+  salairefx?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   externe?: Prisma.BoolFilter<"BulttinPai"> | boolean
-  totalMntVenduePrixCommercial?: Prisma.FloatFilter<"BulttinPai"> | number
-  totalMntVendueSansPrixCommercial?: Prisma.FloatFilter<"BulttinPai"> | number
-  primeProduit?: Prisma.FloatFilter<"BulttinPai"> | number
+  totalMntVenduePrixCommercial?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   commercailId?: Prisma.BigIntFilter<"BulttinPai"> | bigint | number
   employeOperateurId?: Prisma.BigIntFilter<"BulttinPai"> | bigint | number
   commercail?: Prisma.XOR<Prisma.RepertoireScalarRelationFilter, Prisma.RepertoireWhereInput>
@@ -657,27 +657,27 @@ export type BulttinPaiScalarWhereWithAggregatesInput = {
   dateDebut?: Prisma.DateTimeWithAggregatesFilter<"BulttinPai"> | Date | string
   dateFin?: Prisma.DateTimeWithAggregatesFilter<"BulttinPai"> | Date | string
   idTypeBultinPai?: Prisma.IntWithAggregatesFilter<"BulttinPai"> | number
-  salairefx?: Prisma.FloatWithAggregatesFilter<"BulttinPai"> | number
-  commission?: Prisma.FloatWithAggregatesFilter<"BulttinPai"> | number
-  frais?: Prisma.FloatWithAggregatesFilter<"BulttinPai"> | number
-  total?: Prisma.FloatWithAggregatesFilter<"BulttinPai"> | number
-  totalMntVendue?: Prisma.FloatWithAggregatesFilter<"BulttinPai"> | number
-  totalMntVendueProduit?: Prisma.FloatWithAggregatesFilter<"BulttinPai"> | number
-  totalMntVendueLivraison?: Prisma.FloatWithAggregatesFilter<"BulttinPai"> | number
-  mntNegative?: Prisma.FloatWithAggregatesFilter<"BulttinPai"> | number
-  mntNegativeProduit?: Prisma.FloatWithAggregatesFilter<"BulttinPai"> | number
-  mntNegativeLivraison?: Prisma.FloatWithAggregatesFilter<"BulttinPai"> | number
-  mntCNSS?: Prisma.FloatWithAggregatesFilter<"BulttinPai"> | number
-  mntPenalite?: Prisma.FloatWithAggregatesFilter<"BulttinPai"> | number
-  mntBenefice?: Prisma.FloatWithAggregatesFilter<"BulttinPai"> | number
-  commissionParProduit?: Prisma.FloatWithAggregatesFilter<"BulttinPai"> | number
-  primeSpecial?: Prisma.FloatWithAggregatesFilter<"BulttinPai"> | number
-  fraisSupp?: Prisma.FloatWithAggregatesFilter<"BulttinPai"> | number
-  primeCommercial?: Prisma.FloatWithAggregatesFilter<"BulttinPai"> | number
+  salairefx?: Prisma.DecimalWithAggregatesFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalWithAggregatesFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais?: Prisma.DecimalWithAggregatesFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalWithAggregatesFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue?: Prisma.DecimalWithAggregatesFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit?: Prisma.DecimalWithAggregatesFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison?: Prisma.DecimalWithAggregatesFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative?: Prisma.DecimalWithAggregatesFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit?: Prisma.DecimalWithAggregatesFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison?: Prisma.DecimalWithAggregatesFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS?: Prisma.DecimalWithAggregatesFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite?: Prisma.DecimalWithAggregatesFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice?: Prisma.DecimalWithAggregatesFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit?: Prisma.DecimalWithAggregatesFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial?: Prisma.DecimalWithAggregatesFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp?: Prisma.DecimalWithAggregatesFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalWithAggregatesFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   externe?: Prisma.BoolWithAggregatesFilter<"BulttinPai"> | boolean
-  totalMntVenduePrixCommercial?: Prisma.FloatWithAggregatesFilter<"BulttinPai"> | number
-  totalMntVendueSansPrixCommercial?: Prisma.FloatWithAggregatesFilter<"BulttinPai"> | number
-  primeProduit?: Prisma.FloatWithAggregatesFilter<"BulttinPai"> | number
+  totalMntVenduePrixCommercial?: Prisma.DecimalWithAggregatesFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial?: Prisma.DecimalWithAggregatesFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalWithAggregatesFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   commercailId?: Prisma.BigIntWithAggregatesFilter<"BulttinPai"> | bigint | number
   employeOperateurId?: Prisma.BigIntWithAggregatesFilter<"BulttinPai"> | bigint | number
 }
@@ -691,27 +691,27 @@ export type BulttinPaiCreateInput = {
   dateDebut: Date | string
   dateFin: Date | string
   idTypeBultinPai: number
-  salairefx: number
-  commission: number
-  frais: number
-  total: number
-  totalMntVendue: number
-  totalMntVendueProduit: number
-  totalMntVendueLivraison: number
-  mntNegative: number
-  mntNegativeProduit: number
-  mntNegativeLivraison: number
-  mntCNSS: number
-  mntPenalite: number
-  mntBenefice: number
-  commissionParProduit: number
-  primeSpecial: number
-  fraisSupp: number
-  primeCommercial: number
+  salairefx: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais: runtime.Decimal | runtime.DecimalJsLike | number | string
+  total: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
   externe: boolean
-  totalMntVenduePrixCommercial: number
-  totalMntVendueSansPrixCommercial: number
-  primeProduit: number
+  totalMntVenduePrixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
   commercail: Prisma.RepertoireCreateNestedOneWithoutBulttinPaisInput
   employeOperateur: Prisma.EmployeCreateNestedOneWithoutBulttinPaisInput
   bulttinPais?: Prisma.DetBulttinPaiCreateNestedManyWithoutBulttinPaiInput
@@ -727,27 +727,27 @@ export type BulttinPaiUncheckedCreateInput = {
   dateDebut: Date | string
   dateFin: Date | string
   idTypeBultinPai: number
-  salairefx: number
-  commission: number
-  frais: number
-  total: number
-  totalMntVendue: number
-  totalMntVendueProduit: number
-  totalMntVendueLivraison: number
-  mntNegative: number
-  mntNegativeProduit: number
-  mntNegativeLivraison: number
-  mntCNSS: number
-  mntPenalite: number
-  mntBenefice: number
-  commissionParProduit: number
-  primeSpecial: number
-  fraisSupp: number
-  primeCommercial: number
+  salairefx: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais: runtime.Decimal | runtime.DecimalJsLike | number | string
+  total: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
   externe: boolean
-  totalMntVenduePrixCommercial: number
-  totalMntVendueSansPrixCommercial: number
-  primeProduit: number
+  totalMntVenduePrixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
   commercailId: bigint | number
   employeOperateurId: bigint | number
   bulttinPais?: Prisma.DetBulttinPaiUncheckedCreateNestedManyWithoutBulttinPaiInput
@@ -763,27 +763,27 @@ export type BulttinPaiUpdateInput = {
   dateDebut?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateFin?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   idTypeBultinPai?: Prisma.IntFieldUpdateOperationsInput | number
-  salairefx?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
-  frais?: Prisma.FloatFieldUpdateOperationsInput | number
-  total?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendue?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegative?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntCNSS?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntPenalite?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
-  commissionParProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeSpecial?: Prisma.FloatFieldUpdateOperationsInput | number
-  fraisSupp?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
+  salairefx?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   externe?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  totalMntVenduePrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueSansPrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
+  totalMntVenduePrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   commercail?: Prisma.RepertoireUpdateOneRequiredWithoutBulttinPaisNestedInput
   employeOperateur?: Prisma.EmployeUpdateOneRequiredWithoutBulttinPaisNestedInput
   bulttinPais?: Prisma.DetBulttinPaiUpdateManyWithoutBulttinPaiNestedInput
@@ -799,27 +799,27 @@ export type BulttinPaiUncheckedUpdateInput = {
   dateDebut?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateFin?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   idTypeBultinPai?: Prisma.IntFieldUpdateOperationsInput | number
-  salairefx?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
-  frais?: Prisma.FloatFieldUpdateOperationsInput | number
-  total?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendue?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegative?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntCNSS?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntPenalite?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
-  commissionParProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeSpecial?: Prisma.FloatFieldUpdateOperationsInput | number
-  fraisSupp?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
+  salairefx?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   externe?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  totalMntVenduePrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueSansPrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
+  totalMntVenduePrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   commercailId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   bulttinPais?: Prisma.DetBulttinPaiUncheckedUpdateManyWithoutBulttinPaiNestedInput
@@ -835,27 +835,27 @@ export type BulttinPaiCreateManyInput = {
   dateDebut: Date | string
   dateFin: Date | string
   idTypeBultinPai: number
-  salairefx: number
-  commission: number
-  frais: number
-  total: number
-  totalMntVendue: number
-  totalMntVendueProduit: number
-  totalMntVendueLivraison: number
-  mntNegative: number
-  mntNegativeProduit: number
-  mntNegativeLivraison: number
-  mntCNSS: number
-  mntPenalite: number
-  mntBenefice: number
-  commissionParProduit: number
-  primeSpecial: number
-  fraisSupp: number
-  primeCommercial: number
+  salairefx: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais: runtime.Decimal | runtime.DecimalJsLike | number | string
+  total: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
   externe: boolean
-  totalMntVenduePrixCommercial: number
-  totalMntVendueSansPrixCommercial: number
-  primeProduit: number
+  totalMntVenduePrixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
   commercailId: bigint | number
   employeOperateurId: bigint | number
 }
@@ -869,27 +869,27 @@ export type BulttinPaiUpdateManyMutationInput = {
   dateDebut?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateFin?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   idTypeBultinPai?: Prisma.IntFieldUpdateOperationsInput | number
-  salairefx?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
-  frais?: Prisma.FloatFieldUpdateOperationsInput | number
-  total?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendue?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegative?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntCNSS?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntPenalite?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
-  commissionParProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeSpecial?: Prisma.FloatFieldUpdateOperationsInput | number
-  fraisSupp?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
+  salairefx?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   externe?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  totalMntVenduePrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueSansPrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
+  totalMntVenduePrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type BulttinPaiUncheckedUpdateManyInput = {
@@ -901,27 +901,27 @@ export type BulttinPaiUncheckedUpdateManyInput = {
   dateDebut?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateFin?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   idTypeBultinPai?: Prisma.IntFieldUpdateOperationsInput | number
-  salairefx?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
-  frais?: Prisma.FloatFieldUpdateOperationsInput | number
-  total?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendue?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegative?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntCNSS?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntPenalite?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
-  commissionParProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeSpecial?: Prisma.FloatFieldUpdateOperationsInput | number
-  fraisSupp?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
+  salairefx?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   externe?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  totalMntVenduePrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueSansPrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
+  totalMntVenduePrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   commercailId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
@@ -1226,27 +1226,27 @@ export type BulttinPaiCreateWithoutCommercailInput = {
   dateDebut: Date | string
   dateFin: Date | string
   idTypeBultinPai: number
-  salairefx: number
-  commission: number
-  frais: number
-  total: number
-  totalMntVendue: number
-  totalMntVendueProduit: number
-  totalMntVendueLivraison: number
-  mntNegative: number
-  mntNegativeProduit: number
-  mntNegativeLivraison: number
-  mntCNSS: number
-  mntPenalite: number
-  mntBenefice: number
-  commissionParProduit: number
-  primeSpecial: number
-  fraisSupp: number
-  primeCommercial: number
+  salairefx: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais: runtime.Decimal | runtime.DecimalJsLike | number | string
+  total: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
   externe: boolean
-  totalMntVenduePrixCommercial: number
-  totalMntVendueSansPrixCommercial: number
-  primeProduit: number
+  totalMntVenduePrixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
   employeOperateur: Prisma.EmployeCreateNestedOneWithoutBulttinPaisInput
   bulttinPais?: Prisma.DetBulttinPaiCreateNestedManyWithoutBulttinPaiInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonCreateNestedManyWithoutBulttinPaiInput
@@ -1261,27 +1261,27 @@ export type BulttinPaiUncheckedCreateWithoutCommercailInput = {
   dateDebut: Date | string
   dateFin: Date | string
   idTypeBultinPai: number
-  salairefx: number
-  commission: number
-  frais: number
-  total: number
-  totalMntVendue: number
-  totalMntVendueProduit: number
-  totalMntVendueLivraison: number
-  mntNegative: number
-  mntNegativeProduit: number
-  mntNegativeLivraison: number
-  mntCNSS: number
-  mntPenalite: number
-  mntBenefice: number
-  commissionParProduit: number
-  primeSpecial: number
-  fraisSupp: number
-  primeCommercial: number
+  salairefx: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais: runtime.Decimal | runtime.DecimalJsLike | number | string
+  total: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
   externe: boolean
-  totalMntVenduePrixCommercial: number
-  totalMntVendueSansPrixCommercial: number
-  primeProduit: number
+  totalMntVenduePrixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
   employeOperateurId: bigint | number
   bulttinPais?: Prisma.DetBulttinPaiUncheckedCreateNestedManyWithoutBulttinPaiInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUncheckedCreateNestedManyWithoutBulttinPaiInput
@@ -1325,27 +1325,27 @@ export type BulttinPaiScalarWhereInput = {
   dateDebut?: Prisma.DateTimeFilter<"BulttinPai"> | Date | string
   dateFin?: Prisma.DateTimeFilter<"BulttinPai"> | Date | string
   idTypeBultinPai?: Prisma.IntFilter<"BulttinPai"> | number
-  salairefx?: Prisma.FloatFilter<"BulttinPai"> | number
-  commission?: Prisma.FloatFilter<"BulttinPai"> | number
-  frais?: Prisma.FloatFilter<"BulttinPai"> | number
-  total?: Prisma.FloatFilter<"BulttinPai"> | number
-  totalMntVendue?: Prisma.FloatFilter<"BulttinPai"> | number
-  totalMntVendueProduit?: Prisma.FloatFilter<"BulttinPai"> | number
-  totalMntVendueLivraison?: Prisma.FloatFilter<"BulttinPai"> | number
-  mntNegative?: Prisma.FloatFilter<"BulttinPai"> | number
-  mntNegativeProduit?: Prisma.FloatFilter<"BulttinPai"> | number
-  mntNegativeLivraison?: Prisma.FloatFilter<"BulttinPai"> | number
-  mntCNSS?: Prisma.FloatFilter<"BulttinPai"> | number
-  mntPenalite?: Prisma.FloatFilter<"BulttinPai"> | number
-  mntBenefice?: Prisma.FloatFilter<"BulttinPai"> | number
-  commissionParProduit?: Prisma.FloatFilter<"BulttinPai"> | number
-  primeSpecial?: Prisma.FloatFilter<"BulttinPai"> | number
-  fraisSupp?: Prisma.FloatFilter<"BulttinPai"> | number
-  primeCommercial?: Prisma.FloatFilter<"BulttinPai"> | number
+  salairefx?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   externe?: Prisma.BoolFilter<"BulttinPai"> | boolean
-  totalMntVenduePrixCommercial?: Prisma.FloatFilter<"BulttinPai"> | number
-  totalMntVendueSansPrixCommercial?: Prisma.FloatFilter<"BulttinPai"> | number
-  primeProduit?: Prisma.FloatFilter<"BulttinPai"> | number
+  totalMntVenduePrixCommercial?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFilter<"BulttinPai"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   commercailId?: Prisma.BigIntFilter<"BulttinPai"> | bigint | number
   employeOperateurId?: Prisma.BigIntFilter<"BulttinPai"> | bigint | number
 }
@@ -1359,27 +1359,27 @@ export type BulttinPaiCreateWithoutEmployeOperateurInput = {
   dateDebut: Date | string
   dateFin: Date | string
   idTypeBultinPai: number
-  salairefx: number
-  commission: number
-  frais: number
-  total: number
-  totalMntVendue: number
-  totalMntVendueProduit: number
-  totalMntVendueLivraison: number
-  mntNegative: number
-  mntNegativeProduit: number
-  mntNegativeLivraison: number
-  mntCNSS: number
-  mntPenalite: number
-  mntBenefice: number
-  commissionParProduit: number
-  primeSpecial: number
-  fraisSupp: number
-  primeCommercial: number
+  salairefx: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais: runtime.Decimal | runtime.DecimalJsLike | number | string
+  total: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
   externe: boolean
-  totalMntVenduePrixCommercial: number
-  totalMntVendueSansPrixCommercial: number
-  primeProduit: number
+  totalMntVenduePrixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
   commercail: Prisma.RepertoireCreateNestedOneWithoutBulttinPaisInput
   bulttinPais?: Prisma.DetBulttinPaiCreateNestedManyWithoutBulttinPaiInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonCreateNestedManyWithoutBulttinPaiInput
@@ -1394,27 +1394,27 @@ export type BulttinPaiUncheckedCreateWithoutEmployeOperateurInput = {
   dateDebut: Date | string
   dateFin: Date | string
   idTypeBultinPai: number
-  salairefx: number
-  commission: number
-  frais: number
-  total: number
-  totalMntVendue: number
-  totalMntVendueProduit: number
-  totalMntVendueLivraison: number
-  mntNegative: number
-  mntNegativeProduit: number
-  mntNegativeLivraison: number
-  mntCNSS: number
-  mntPenalite: number
-  mntBenefice: number
-  commissionParProduit: number
-  primeSpecial: number
-  fraisSupp: number
-  primeCommercial: number
+  salairefx: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais: runtime.Decimal | runtime.DecimalJsLike | number | string
+  total: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
   externe: boolean
-  totalMntVenduePrixCommercial: number
-  totalMntVendueSansPrixCommercial: number
-  primeProduit: number
+  totalMntVenduePrixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
   commercailId: bigint | number
   bulttinPais?: Prisma.DetBulttinPaiUncheckedCreateNestedManyWithoutBulttinPaiInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUncheckedCreateNestedManyWithoutBulttinPaiInput
@@ -1455,27 +1455,27 @@ export type BulttinPaiCreateWithoutDetBulttinLivraisonsInput = {
   dateDebut: Date | string
   dateFin: Date | string
   idTypeBultinPai: number
-  salairefx: number
-  commission: number
-  frais: number
-  total: number
-  totalMntVendue: number
-  totalMntVendueProduit: number
-  totalMntVendueLivraison: number
-  mntNegative: number
-  mntNegativeProduit: number
-  mntNegativeLivraison: number
-  mntCNSS: number
-  mntPenalite: number
-  mntBenefice: number
-  commissionParProduit: number
-  primeSpecial: number
-  fraisSupp: number
-  primeCommercial: number
+  salairefx: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais: runtime.Decimal | runtime.DecimalJsLike | number | string
+  total: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
   externe: boolean
-  totalMntVenduePrixCommercial: number
-  totalMntVendueSansPrixCommercial: number
-  primeProduit: number
+  totalMntVenduePrixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
   commercail: Prisma.RepertoireCreateNestedOneWithoutBulttinPaisInput
   employeOperateur: Prisma.EmployeCreateNestedOneWithoutBulttinPaisInput
   bulttinPais?: Prisma.DetBulttinPaiCreateNestedManyWithoutBulttinPaiInput
@@ -1490,27 +1490,27 @@ export type BulttinPaiUncheckedCreateWithoutDetBulttinLivraisonsInput = {
   dateDebut: Date | string
   dateFin: Date | string
   idTypeBultinPai: number
-  salairefx: number
-  commission: number
-  frais: number
-  total: number
-  totalMntVendue: number
-  totalMntVendueProduit: number
-  totalMntVendueLivraison: number
-  mntNegative: number
-  mntNegativeProduit: number
-  mntNegativeLivraison: number
-  mntCNSS: number
-  mntPenalite: number
-  mntBenefice: number
-  commissionParProduit: number
-  primeSpecial: number
-  fraisSupp: number
-  primeCommercial: number
+  salairefx: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais: runtime.Decimal | runtime.DecimalJsLike | number | string
+  total: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
   externe: boolean
-  totalMntVenduePrixCommercial: number
-  totalMntVendueSansPrixCommercial: number
-  primeProduit: number
+  totalMntVenduePrixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
   commercailId: bigint | number
   employeOperateurId: bigint | number
   bulttinPais?: Prisma.DetBulttinPaiUncheckedCreateNestedManyWithoutBulttinPaiInput
@@ -1541,27 +1541,27 @@ export type BulttinPaiUpdateWithoutDetBulttinLivraisonsInput = {
   dateDebut?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateFin?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   idTypeBultinPai?: Prisma.IntFieldUpdateOperationsInput | number
-  salairefx?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
-  frais?: Prisma.FloatFieldUpdateOperationsInput | number
-  total?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendue?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegative?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntCNSS?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntPenalite?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
-  commissionParProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeSpecial?: Prisma.FloatFieldUpdateOperationsInput | number
-  fraisSupp?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
+  salairefx?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   externe?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  totalMntVenduePrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueSansPrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
+  totalMntVenduePrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   commercail?: Prisma.RepertoireUpdateOneRequiredWithoutBulttinPaisNestedInput
   employeOperateur?: Prisma.EmployeUpdateOneRequiredWithoutBulttinPaisNestedInput
   bulttinPais?: Prisma.DetBulttinPaiUpdateManyWithoutBulttinPaiNestedInput
@@ -1576,27 +1576,27 @@ export type BulttinPaiUncheckedUpdateWithoutDetBulttinLivraisonsInput = {
   dateDebut?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateFin?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   idTypeBultinPai?: Prisma.IntFieldUpdateOperationsInput | number
-  salairefx?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
-  frais?: Prisma.FloatFieldUpdateOperationsInput | number
-  total?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendue?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegative?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntCNSS?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntPenalite?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
-  commissionParProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeSpecial?: Prisma.FloatFieldUpdateOperationsInput | number
-  fraisSupp?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
+  salairefx?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   externe?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  totalMntVenduePrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueSansPrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
+  totalMntVenduePrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   commercailId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   bulttinPais?: Prisma.DetBulttinPaiUncheckedUpdateManyWithoutBulttinPaiNestedInput
@@ -1611,27 +1611,27 @@ export type BulttinPaiCreateWithoutBulttinPaisInput = {
   dateDebut: Date | string
   dateFin: Date | string
   idTypeBultinPai: number
-  salairefx: number
-  commission: number
-  frais: number
-  total: number
-  totalMntVendue: number
-  totalMntVendueProduit: number
-  totalMntVendueLivraison: number
-  mntNegative: number
-  mntNegativeProduit: number
-  mntNegativeLivraison: number
-  mntCNSS: number
-  mntPenalite: number
-  mntBenefice: number
-  commissionParProduit: number
-  primeSpecial: number
-  fraisSupp: number
-  primeCommercial: number
+  salairefx: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais: runtime.Decimal | runtime.DecimalJsLike | number | string
+  total: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
   externe: boolean
-  totalMntVenduePrixCommercial: number
-  totalMntVendueSansPrixCommercial: number
-  primeProduit: number
+  totalMntVenduePrixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
   commercail: Prisma.RepertoireCreateNestedOneWithoutBulttinPaisInput
   employeOperateur: Prisma.EmployeCreateNestedOneWithoutBulttinPaisInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonCreateNestedManyWithoutBulttinPaiInput
@@ -1646,27 +1646,27 @@ export type BulttinPaiUncheckedCreateWithoutBulttinPaisInput = {
   dateDebut: Date | string
   dateFin: Date | string
   idTypeBultinPai: number
-  salairefx: number
-  commission: number
-  frais: number
-  total: number
-  totalMntVendue: number
-  totalMntVendueProduit: number
-  totalMntVendueLivraison: number
-  mntNegative: number
-  mntNegativeProduit: number
-  mntNegativeLivraison: number
-  mntCNSS: number
-  mntPenalite: number
-  mntBenefice: number
-  commissionParProduit: number
-  primeSpecial: number
-  fraisSupp: number
-  primeCommercial: number
+  salairefx: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais: runtime.Decimal | runtime.DecimalJsLike | number | string
+  total: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
   externe: boolean
-  totalMntVenduePrixCommercial: number
-  totalMntVendueSansPrixCommercial: number
-  primeProduit: number
+  totalMntVenduePrixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
   commercailId: bigint | number
   employeOperateurId: bigint | number
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUncheckedCreateNestedManyWithoutBulttinPaiInput
@@ -1697,27 +1697,27 @@ export type BulttinPaiUpdateWithoutBulttinPaisInput = {
   dateDebut?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateFin?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   idTypeBultinPai?: Prisma.IntFieldUpdateOperationsInput | number
-  salairefx?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
-  frais?: Prisma.FloatFieldUpdateOperationsInput | number
-  total?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendue?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegative?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntCNSS?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntPenalite?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
-  commissionParProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeSpecial?: Prisma.FloatFieldUpdateOperationsInput | number
-  fraisSupp?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
+  salairefx?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   externe?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  totalMntVenduePrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueSansPrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
+  totalMntVenduePrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   commercail?: Prisma.RepertoireUpdateOneRequiredWithoutBulttinPaisNestedInput
   employeOperateur?: Prisma.EmployeUpdateOneRequiredWithoutBulttinPaisNestedInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUpdateManyWithoutBulttinPaiNestedInput
@@ -1732,27 +1732,27 @@ export type BulttinPaiUncheckedUpdateWithoutBulttinPaisInput = {
   dateDebut?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateFin?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   idTypeBultinPai?: Prisma.IntFieldUpdateOperationsInput | number
-  salairefx?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
-  frais?: Prisma.FloatFieldUpdateOperationsInput | number
-  total?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendue?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegative?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntCNSS?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntPenalite?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
-  commissionParProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeSpecial?: Prisma.FloatFieldUpdateOperationsInput | number
-  fraisSupp?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
+  salairefx?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   externe?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  totalMntVenduePrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueSansPrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
+  totalMntVenduePrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   commercailId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUncheckedUpdateManyWithoutBulttinPaiNestedInput
@@ -1767,27 +1767,27 @@ export type BulttinPaiCreateManyCommercailInput = {
   dateDebut: Date | string
   dateFin: Date | string
   idTypeBultinPai: number
-  salairefx: number
-  commission: number
-  frais: number
-  total: number
-  totalMntVendue: number
-  totalMntVendueProduit: number
-  totalMntVendueLivraison: number
-  mntNegative: number
-  mntNegativeProduit: number
-  mntNegativeLivraison: number
-  mntCNSS: number
-  mntPenalite: number
-  mntBenefice: number
-  commissionParProduit: number
-  primeSpecial: number
-  fraisSupp: number
-  primeCommercial: number
+  salairefx: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais: runtime.Decimal | runtime.DecimalJsLike | number | string
+  total: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
   externe: boolean
-  totalMntVenduePrixCommercial: number
-  totalMntVendueSansPrixCommercial: number
-  primeProduit: number
+  totalMntVenduePrixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
   employeOperateurId: bigint | number
 }
 
@@ -1800,27 +1800,27 @@ export type BulttinPaiUpdateWithoutCommercailInput = {
   dateDebut?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateFin?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   idTypeBultinPai?: Prisma.IntFieldUpdateOperationsInput | number
-  salairefx?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
-  frais?: Prisma.FloatFieldUpdateOperationsInput | number
-  total?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendue?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegative?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntCNSS?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntPenalite?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
-  commissionParProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeSpecial?: Prisma.FloatFieldUpdateOperationsInput | number
-  fraisSupp?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
+  salairefx?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   externe?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  totalMntVenduePrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueSansPrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
+  totalMntVenduePrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   employeOperateur?: Prisma.EmployeUpdateOneRequiredWithoutBulttinPaisNestedInput
   bulttinPais?: Prisma.DetBulttinPaiUpdateManyWithoutBulttinPaiNestedInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUpdateManyWithoutBulttinPaiNestedInput
@@ -1835,27 +1835,27 @@ export type BulttinPaiUncheckedUpdateWithoutCommercailInput = {
   dateDebut?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateFin?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   idTypeBultinPai?: Prisma.IntFieldUpdateOperationsInput | number
-  salairefx?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
-  frais?: Prisma.FloatFieldUpdateOperationsInput | number
-  total?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendue?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegative?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntCNSS?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntPenalite?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
-  commissionParProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeSpecial?: Prisma.FloatFieldUpdateOperationsInput | number
-  fraisSupp?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
+  salairefx?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   externe?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  totalMntVenduePrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueSansPrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
+  totalMntVenduePrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   bulttinPais?: Prisma.DetBulttinPaiUncheckedUpdateManyWithoutBulttinPaiNestedInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUncheckedUpdateManyWithoutBulttinPaiNestedInput
@@ -1870,27 +1870,27 @@ export type BulttinPaiUncheckedUpdateManyWithoutCommercailInput = {
   dateDebut?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateFin?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   idTypeBultinPai?: Prisma.IntFieldUpdateOperationsInput | number
-  salairefx?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
-  frais?: Prisma.FloatFieldUpdateOperationsInput | number
-  total?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendue?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegative?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntCNSS?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntPenalite?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
-  commissionParProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeSpecial?: Prisma.FloatFieldUpdateOperationsInput | number
-  fraisSupp?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
+  salairefx?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   externe?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  totalMntVenduePrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueSansPrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
+  totalMntVenduePrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
@@ -1903,27 +1903,27 @@ export type BulttinPaiCreateManyEmployeOperateurInput = {
   dateDebut: Date | string
   dateFin: Date | string
   idTypeBultinPai: number
-  salairefx: number
-  commission: number
-  frais: number
-  total: number
-  totalMntVendue: number
-  totalMntVendueProduit: number
-  totalMntVendueLivraison: number
-  mntNegative: number
-  mntNegativeProduit: number
-  mntNegativeLivraison: number
-  mntCNSS: number
-  mntPenalite: number
-  mntBenefice: number
-  commissionParProduit: number
-  primeSpecial: number
-  fraisSupp: number
-  primeCommercial: number
+  salairefx: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission: runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais: runtime.Decimal | runtime.DecimalJsLike | number | string
+  total: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
   externe: boolean
-  totalMntVenduePrixCommercial: number
-  totalMntVendueSansPrixCommercial: number
-  primeProduit: number
+  totalMntVenduePrixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial: runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit: runtime.Decimal | runtime.DecimalJsLike | number | string
   commercailId: bigint | number
 }
 
@@ -1936,27 +1936,27 @@ export type BulttinPaiUpdateWithoutEmployeOperateurInput = {
   dateDebut?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateFin?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   idTypeBultinPai?: Prisma.IntFieldUpdateOperationsInput | number
-  salairefx?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
-  frais?: Prisma.FloatFieldUpdateOperationsInput | number
-  total?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendue?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegative?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntCNSS?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntPenalite?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
-  commissionParProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeSpecial?: Prisma.FloatFieldUpdateOperationsInput | number
-  fraisSupp?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
+  salairefx?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   externe?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  totalMntVenduePrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueSansPrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
+  totalMntVenduePrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   commercail?: Prisma.RepertoireUpdateOneRequiredWithoutBulttinPaisNestedInput
   bulttinPais?: Prisma.DetBulttinPaiUpdateManyWithoutBulttinPaiNestedInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUpdateManyWithoutBulttinPaiNestedInput
@@ -1971,27 +1971,27 @@ export type BulttinPaiUncheckedUpdateWithoutEmployeOperateurInput = {
   dateDebut?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateFin?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   idTypeBultinPai?: Prisma.IntFieldUpdateOperationsInput | number
-  salairefx?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
-  frais?: Prisma.FloatFieldUpdateOperationsInput | number
-  total?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendue?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegative?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntCNSS?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntPenalite?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
-  commissionParProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeSpecial?: Prisma.FloatFieldUpdateOperationsInput | number
-  fraisSupp?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
+  salairefx?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   externe?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  totalMntVenduePrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueSansPrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
+  totalMntVenduePrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   commercailId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   bulttinPais?: Prisma.DetBulttinPaiUncheckedUpdateManyWithoutBulttinPaiNestedInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUncheckedUpdateManyWithoutBulttinPaiNestedInput
@@ -2006,27 +2006,27 @@ export type BulttinPaiUncheckedUpdateManyWithoutEmployeOperateurInput = {
   dateDebut?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateFin?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   idTypeBultinPai?: Prisma.IntFieldUpdateOperationsInput | number
-  salairefx?: Prisma.FloatFieldUpdateOperationsInput | number
-  commission?: Prisma.FloatFieldUpdateOperationsInput | number
-  frais?: Prisma.FloatFieldUpdateOperationsInput | number
-  total?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendue?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegative?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntNegativeLivraison?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntCNSS?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntPenalite?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
-  commissionParProduit?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeSpecial?: Prisma.FloatFieldUpdateOperationsInput | number
-  fraisSupp?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
+  salairefx?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commission?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  frais?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  total?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendue?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegative?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntNegativeLivraison?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntCNSS?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntPenalite?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  commissionParProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeSpecial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  fraisSupp?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   externe?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  totalMntVenduePrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMntVendueSansPrixCommercial?: Prisma.FloatFieldUpdateOperationsInput | number
-  primeProduit?: Prisma.FloatFieldUpdateOperationsInput | number
+  totalMntVenduePrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMntVendueSansPrixCommercial?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  primeProduit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   commercailId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
@@ -2171,27 +2171,27 @@ export type $BulttinPaiPayload<ExtArgs extends runtime.Types.Extensions.Internal
     dateDebut: Date
     dateFin: Date
     idTypeBultinPai: number
-    salairefx: number
-    commission: number
-    frais: number
-    total: number
-    totalMntVendue: number
-    totalMntVendueProduit: number
-    totalMntVendueLivraison: number
-    mntNegative: number
-    mntNegativeProduit: number
-    mntNegativeLivraison: number
-    mntCNSS: number
-    mntPenalite: number
-    mntBenefice: number
-    commissionParProduit: number
-    primeSpecial: number
-    fraisSupp: number
-    primeCommercial: number
+    salairefx: runtime.Decimal
+    commission: runtime.Decimal
+    frais: runtime.Decimal
+    total: runtime.Decimal
+    totalMntVendue: runtime.Decimal
+    totalMntVendueProduit: runtime.Decimal
+    totalMntVendueLivraison: runtime.Decimal
+    mntNegative: runtime.Decimal
+    mntNegativeProduit: runtime.Decimal
+    mntNegativeLivraison: runtime.Decimal
+    mntCNSS: runtime.Decimal
+    mntPenalite: runtime.Decimal
+    mntBenefice: runtime.Decimal
+    commissionParProduit: runtime.Decimal
+    primeSpecial: runtime.Decimal
+    fraisSupp: runtime.Decimal
+    primeCommercial: runtime.Decimal
     externe: boolean
-    totalMntVenduePrixCommercial: number
-    totalMntVendueSansPrixCommercial: number
-    primeProduit: number
+    totalMntVenduePrixCommercial: runtime.Decimal
+    totalMntVendueSansPrixCommercial: runtime.Decimal
+    primeProduit: runtime.Decimal
     commercailId: bigint
     employeOperateurId: bigint
   }, ExtArgs["result"]["bulttinPai"]>
@@ -2575,27 +2575,27 @@ export interface BulttinPaiFieldRefs {
   readonly dateDebut: Prisma.FieldRef<"BulttinPai", 'DateTime'>
   readonly dateFin: Prisma.FieldRef<"BulttinPai", 'DateTime'>
   readonly idTypeBultinPai: Prisma.FieldRef<"BulttinPai", 'Int'>
-  readonly salairefx: Prisma.FieldRef<"BulttinPai", 'Float'>
-  readonly commission: Prisma.FieldRef<"BulttinPai", 'Float'>
-  readonly frais: Prisma.FieldRef<"BulttinPai", 'Float'>
-  readonly total: Prisma.FieldRef<"BulttinPai", 'Float'>
-  readonly totalMntVendue: Prisma.FieldRef<"BulttinPai", 'Float'>
-  readonly totalMntVendueProduit: Prisma.FieldRef<"BulttinPai", 'Float'>
-  readonly totalMntVendueLivraison: Prisma.FieldRef<"BulttinPai", 'Float'>
-  readonly mntNegative: Prisma.FieldRef<"BulttinPai", 'Float'>
-  readonly mntNegativeProduit: Prisma.FieldRef<"BulttinPai", 'Float'>
-  readonly mntNegativeLivraison: Prisma.FieldRef<"BulttinPai", 'Float'>
-  readonly mntCNSS: Prisma.FieldRef<"BulttinPai", 'Float'>
-  readonly mntPenalite: Prisma.FieldRef<"BulttinPai", 'Float'>
-  readonly mntBenefice: Prisma.FieldRef<"BulttinPai", 'Float'>
-  readonly commissionParProduit: Prisma.FieldRef<"BulttinPai", 'Float'>
-  readonly primeSpecial: Prisma.FieldRef<"BulttinPai", 'Float'>
-  readonly fraisSupp: Prisma.FieldRef<"BulttinPai", 'Float'>
-  readonly primeCommercial: Prisma.FieldRef<"BulttinPai", 'Float'>
+  readonly salairefx: Prisma.FieldRef<"BulttinPai", 'Decimal'>
+  readonly commission: Prisma.FieldRef<"BulttinPai", 'Decimal'>
+  readonly frais: Prisma.FieldRef<"BulttinPai", 'Decimal'>
+  readonly total: Prisma.FieldRef<"BulttinPai", 'Decimal'>
+  readonly totalMntVendue: Prisma.FieldRef<"BulttinPai", 'Decimal'>
+  readonly totalMntVendueProduit: Prisma.FieldRef<"BulttinPai", 'Decimal'>
+  readonly totalMntVendueLivraison: Prisma.FieldRef<"BulttinPai", 'Decimal'>
+  readonly mntNegative: Prisma.FieldRef<"BulttinPai", 'Decimal'>
+  readonly mntNegativeProduit: Prisma.FieldRef<"BulttinPai", 'Decimal'>
+  readonly mntNegativeLivraison: Prisma.FieldRef<"BulttinPai", 'Decimal'>
+  readonly mntCNSS: Prisma.FieldRef<"BulttinPai", 'Decimal'>
+  readonly mntPenalite: Prisma.FieldRef<"BulttinPai", 'Decimal'>
+  readonly mntBenefice: Prisma.FieldRef<"BulttinPai", 'Decimal'>
+  readonly commissionParProduit: Prisma.FieldRef<"BulttinPai", 'Decimal'>
+  readonly primeSpecial: Prisma.FieldRef<"BulttinPai", 'Decimal'>
+  readonly fraisSupp: Prisma.FieldRef<"BulttinPai", 'Decimal'>
+  readonly primeCommercial: Prisma.FieldRef<"BulttinPai", 'Decimal'>
   readonly externe: Prisma.FieldRef<"BulttinPai", 'Boolean'>
-  readonly totalMntVenduePrixCommercial: Prisma.FieldRef<"BulttinPai", 'Float'>
-  readonly totalMntVendueSansPrixCommercial: Prisma.FieldRef<"BulttinPai", 'Float'>
-  readonly primeProduit: Prisma.FieldRef<"BulttinPai", 'Float'>
+  readonly totalMntVenduePrixCommercial: Prisma.FieldRef<"BulttinPai", 'Decimal'>
+  readonly totalMntVendueSansPrixCommercial: Prisma.FieldRef<"BulttinPai", 'Decimal'>
+  readonly primeProduit: Prisma.FieldRef<"BulttinPai", 'Decimal'>
   readonly commercailId: Prisma.FieldRef<"BulttinPai", 'BigInt'>
   readonly employeOperateurId: Prisma.FieldRef<"BulttinPai", 'BigInt'>
 }

@@ -28,21 +28,21 @@ export type AggregateComptabilite = {
 
 export type ComptabiliteAvgAggregateOutputType = {
   id: number | null
-  montantTTC: number | null
-  montantTVA: number | null
-  montantTVA0: number | null
-  montantTVA7: number | null
-  montantTVA10: number | null
-  montantTVA14: number | null
-  montantTVA20: number | null
-  montantHT: number | null
-  montantHT7: number | null
-  montantHT10: number | null
-  montantHT14: number | null
-  montantHT20: number | null
+  montantTTC: runtime.Decimal | null
+  montantTVA: runtime.Decimal | null
+  montantTVA0: runtime.Decimal | null
+  montantTVA7: runtime.Decimal | null
+  montantTVA10: runtime.Decimal | null
+  montantTVA14: runtime.Decimal | null
+  montantTVA20: runtime.Decimal | null
+  montantHT: runtime.Decimal | null
+  montantHT7: runtime.Decimal | null
+  montantHT10: runtime.Decimal | null
+  montantHT14: runtime.Decimal | null
+  montantHT20: runtime.Decimal | null
   typeManuelAuto: number | null
   typeReglement: number | null
-  montantDroitSupplementaire: number | null
+  montantDroitSupplementaire: runtime.Decimal | null
   typeRepertoire: number | null
   repertoireId: number | null
   employeOperateurId: number | null
@@ -50,21 +50,21 @@ export type ComptabiliteAvgAggregateOutputType = {
 
 export type ComptabiliteSumAggregateOutputType = {
   id: bigint | null
-  montantTTC: number | null
-  montantTVA: number | null
-  montantTVA0: number | null
-  montantTVA7: number | null
-  montantTVA10: number | null
-  montantTVA14: number | null
-  montantTVA20: number | null
-  montantHT: number | null
-  montantHT7: number | null
-  montantHT10: number | null
-  montantHT14: number | null
-  montantHT20: number | null
+  montantTTC: runtime.Decimal | null
+  montantTVA: runtime.Decimal | null
+  montantTVA0: runtime.Decimal | null
+  montantTVA7: runtime.Decimal | null
+  montantTVA10: runtime.Decimal | null
+  montantTVA14: runtime.Decimal | null
+  montantTVA20: runtime.Decimal | null
+  montantHT: runtime.Decimal | null
+  montantHT7: runtime.Decimal | null
+  montantHT10: runtime.Decimal | null
+  montantHT14: runtime.Decimal | null
+  montantHT20: runtime.Decimal | null
   typeManuelAuto: number | null
   typeReglement: number | null
-  montantDroitSupplementaire: number | null
+  montantDroitSupplementaire: runtime.Decimal | null
   typeRepertoire: number | null
   repertoireId: bigint | null
   employeOperateurId: bigint | null
@@ -72,25 +72,25 @@ export type ComptabiliteSumAggregateOutputType = {
 
 export type ComptabiliteMinAggregateOutputType = {
   id: bigint | null
-  montantTTC: number | null
-  montantTVA: number | null
-  montantTVA0: number | null
-  montantTVA7: number | null
-  montantTVA10: number | null
-  montantTVA14: number | null
-  montantTVA20: number | null
-  montantHT: number | null
-  montantHT7: number | null
-  montantHT10: number | null
-  montantHT14: number | null
-  montantHT20: number | null
+  montantTTC: runtime.Decimal | null
+  montantTVA: runtime.Decimal | null
+  montantTVA0: runtime.Decimal | null
+  montantTVA7: runtime.Decimal | null
+  montantTVA10: runtime.Decimal | null
+  montantTVA14: runtime.Decimal | null
+  montantTVA20: runtime.Decimal | null
+  montantHT: runtime.Decimal | null
+  montantHT7: runtime.Decimal | null
+  montantHT10: runtime.Decimal | null
+  montantHT14: runtime.Decimal | null
+  montantHT20: runtime.Decimal | null
   modeReglement: string | null
   typeManuelAuto: number | null
   typeReglement: number | null
   dateFacture: Date | null
   dateRegelement: Date | null
   numFcture: string | null
-  montantDroitSupplementaire: number | null
+  montantDroitSupplementaire: runtime.Decimal | null
   typeRepertoire: number | null
   repertoireId: bigint | null
   employeOperateurId: bigint | null
@@ -98,25 +98,25 @@ export type ComptabiliteMinAggregateOutputType = {
 
 export type ComptabiliteMaxAggregateOutputType = {
   id: bigint | null
-  montantTTC: number | null
-  montantTVA: number | null
-  montantTVA0: number | null
-  montantTVA7: number | null
-  montantTVA10: number | null
-  montantTVA14: number | null
-  montantTVA20: number | null
-  montantHT: number | null
-  montantHT7: number | null
-  montantHT10: number | null
-  montantHT14: number | null
-  montantHT20: number | null
+  montantTTC: runtime.Decimal | null
+  montantTVA: runtime.Decimal | null
+  montantTVA0: runtime.Decimal | null
+  montantTVA7: runtime.Decimal | null
+  montantTVA10: runtime.Decimal | null
+  montantTVA14: runtime.Decimal | null
+  montantTVA20: runtime.Decimal | null
+  montantHT: runtime.Decimal | null
+  montantHT7: runtime.Decimal | null
+  montantHT10: runtime.Decimal | null
+  montantHT14: runtime.Decimal | null
+  montantHT20: runtime.Decimal | null
   modeReglement: string | null
   typeManuelAuto: number | null
   typeReglement: number | null
   dateFacture: Date | null
   dateRegelement: Date | null
   numFcture: string | null
-  montantDroitSupplementaire: number | null
+  montantDroitSupplementaire: runtime.Decimal | null
   typeRepertoire: number | null
   repertoireId: bigint | null
   employeOperateurId: bigint | null
@@ -361,25 +361,25 @@ export type ComptabiliteGroupByArgs<ExtArgs extends runtime.Types.Extensions.Int
 
 export type ComptabiliteGroupByOutputType = {
   id: bigint
-  montantTTC: number
-  montantTVA: number
-  montantTVA0: number
-  montantTVA7: number
-  montantTVA10: number
-  montantTVA14: number
-  montantTVA20: number
-  montantHT: number
-  montantHT7: number
-  montantHT10: number
-  montantHT14: number
-  montantHT20: number
+  montantTTC: runtime.Decimal
+  montantTVA: runtime.Decimal
+  montantTVA0: runtime.Decimal
+  montantTVA7: runtime.Decimal
+  montantTVA10: runtime.Decimal
+  montantTVA14: runtime.Decimal
+  montantTVA20: runtime.Decimal
+  montantHT: runtime.Decimal
+  montantHT7: runtime.Decimal
+  montantHT10: runtime.Decimal
+  montantHT14: runtime.Decimal
+  montantHT20: runtime.Decimal
   modeReglement: string
   typeManuelAuto: number
   typeReglement: number
   dateFacture: Date
   dateRegelement: Date
   numFcture: string
-  montantDroitSupplementaire: number
+  montantDroitSupplementaire: runtime.Decimal
   typeRepertoire: number
   repertoireId: bigint
   employeOperateurId: bigint
@@ -410,25 +410,25 @@ export type ComptabiliteWhereInput = {
   OR?: Prisma.ComptabiliteWhereInput[]
   NOT?: Prisma.ComptabiliteWhereInput | Prisma.ComptabiliteWhereInput[]
   id?: Prisma.BigIntFilter<"Comptabilite"> | bigint | number
-  montantTTC?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantTVA?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantTVA0?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantTVA7?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantTVA10?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantTVA14?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantTVA20?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantHT?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantHT7?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantHT10?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantHT14?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantHT20?: Prisma.FloatFilter<"Comptabilite"> | number
+  montantTTC?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA0?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT7?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT10?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT14?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT20?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   modeReglement?: Prisma.StringFilter<"Comptabilite"> | string
   typeManuelAuto?: Prisma.IntFilter<"Comptabilite"> | number
   typeReglement?: Prisma.IntFilter<"Comptabilite"> | number
   dateFacture?: Prisma.DateTimeFilter<"Comptabilite"> | Date | string
   dateRegelement?: Prisma.DateTimeFilter<"Comptabilite"> | Date | string
   numFcture?: Prisma.StringFilter<"Comptabilite"> | string
-  montantDroitSupplementaire?: Prisma.FloatFilter<"Comptabilite"> | number
+  montantDroitSupplementaire?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   typeRepertoire?: Prisma.IntFilter<"Comptabilite"> | number
   repertoireId?: Prisma.BigIntFilter<"Comptabilite"> | bigint | number
   employeOperateurId?: Prisma.BigIntFilter<"Comptabilite"> | bigint | number
@@ -470,25 +470,25 @@ export type ComptabiliteWhereUniqueInput = Prisma.AtLeast<{
   AND?: Prisma.ComptabiliteWhereInput | Prisma.ComptabiliteWhereInput[]
   OR?: Prisma.ComptabiliteWhereInput[]
   NOT?: Prisma.ComptabiliteWhereInput | Prisma.ComptabiliteWhereInput[]
-  montantTTC?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantTVA?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantTVA0?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantTVA7?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantTVA10?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantTVA14?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantTVA20?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantHT?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantHT7?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantHT10?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantHT14?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantHT20?: Prisma.FloatFilter<"Comptabilite"> | number
+  montantTTC?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA0?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT7?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT10?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT14?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT20?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   modeReglement?: Prisma.StringFilter<"Comptabilite"> | string
   typeManuelAuto?: Prisma.IntFilter<"Comptabilite"> | number
   typeReglement?: Prisma.IntFilter<"Comptabilite"> | number
   dateFacture?: Prisma.DateTimeFilter<"Comptabilite"> | Date | string
   dateRegelement?: Prisma.DateTimeFilter<"Comptabilite"> | Date | string
   numFcture?: Prisma.StringFilter<"Comptabilite"> | string
-  montantDroitSupplementaire?: Prisma.FloatFilter<"Comptabilite"> | number
+  montantDroitSupplementaire?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   typeRepertoire?: Prisma.IntFilter<"Comptabilite"> | number
   repertoireId?: Prisma.BigIntFilter<"Comptabilite"> | bigint | number
   employeOperateurId?: Prisma.BigIntFilter<"Comptabilite"> | bigint | number
@@ -532,25 +532,25 @@ export type ComptabiliteScalarWhereWithAggregatesInput = {
   OR?: Prisma.ComptabiliteScalarWhereWithAggregatesInput[]
   NOT?: Prisma.ComptabiliteScalarWhereWithAggregatesInput | Prisma.ComptabiliteScalarWhereWithAggregatesInput[]
   id?: Prisma.BigIntWithAggregatesFilter<"Comptabilite"> | bigint | number
-  montantTTC?: Prisma.FloatWithAggregatesFilter<"Comptabilite"> | number
-  montantTVA?: Prisma.FloatWithAggregatesFilter<"Comptabilite"> | number
-  montantTVA0?: Prisma.FloatWithAggregatesFilter<"Comptabilite"> | number
-  montantTVA7?: Prisma.FloatWithAggregatesFilter<"Comptabilite"> | number
-  montantTVA10?: Prisma.FloatWithAggregatesFilter<"Comptabilite"> | number
-  montantTVA14?: Prisma.FloatWithAggregatesFilter<"Comptabilite"> | number
-  montantTVA20?: Prisma.FloatWithAggregatesFilter<"Comptabilite"> | number
-  montantHT?: Prisma.FloatWithAggregatesFilter<"Comptabilite"> | number
-  montantHT7?: Prisma.FloatWithAggregatesFilter<"Comptabilite"> | number
-  montantHT10?: Prisma.FloatWithAggregatesFilter<"Comptabilite"> | number
-  montantHT14?: Prisma.FloatWithAggregatesFilter<"Comptabilite"> | number
-  montantHT20?: Prisma.FloatWithAggregatesFilter<"Comptabilite"> | number
+  montantTTC?: Prisma.DecimalWithAggregatesFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA?: Prisma.DecimalWithAggregatesFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA0?: Prisma.DecimalWithAggregatesFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7?: Prisma.DecimalWithAggregatesFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10?: Prisma.DecimalWithAggregatesFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14?: Prisma.DecimalWithAggregatesFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20?: Prisma.DecimalWithAggregatesFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT?: Prisma.DecimalWithAggregatesFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT7?: Prisma.DecimalWithAggregatesFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT10?: Prisma.DecimalWithAggregatesFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT14?: Prisma.DecimalWithAggregatesFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT20?: Prisma.DecimalWithAggregatesFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   modeReglement?: Prisma.StringWithAggregatesFilter<"Comptabilite"> | string
   typeManuelAuto?: Prisma.IntWithAggregatesFilter<"Comptabilite"> | number
   typeReglement?: Prisma.IntWithAggregatesFilter<"Comptabilite"> | number
   dateFacture?: Prisma.DateTimeWithAggregatesFilter<"Comptabilite"> | Date | string
   dateRegelement?: Prisma.DateTimeWithAggregatesFilter<"Comptabilite"> | Date | string
   numFcture?: Prisma.StringWithAggregatesFilter<"Comptabilite"> | string
-  montantDroitSupplementaire?: Prisma.FloatWithAggregatesFilter<"Comptabilite"> | number
+  montantDroitSupplementaire?: Prisma.DecimalWithAggregatesFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   typeRepertoire?: Prisma.IntWithAggregatesFilter<"Comptabilite"> | number
   repertoireId?: Prisma.BigIntWithAggregatesFilter<"Comptabilite"> | bigint | number
   employeOperateurId?: Prisma.BigIntWithAggregatesFilter<"Comptabilite"> | bigint | number
@@ -558,25 +558,25 @@ export type ComptabiliteScalarWhereWithAggregatesInput = {
 
 export type ComptabiliteCreateInput = {
   id?: bigint | number
-  montantTTC: number
-  montantTVA: number
-  montantTVA0: number
-  montantTVA7: number
-  montantTVA10: number
-  montantTVA14: number
-  montantTVA20: number
-  montantHT: number
-  montantHT7: number
-  montantHT10: number
-  montantHT14: number
-  montantHT20: number
+  montantTTC: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA0: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT10: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT14: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT20: runtime.Decimal | runtime.DecimalJsLike | number | string
   modeReglement: string
   typeManuelAuto: number
   typeReglement: number
   dateFacture: Date | string
   dateRegelement: Date | string
   numFcture: string
-  montantDroitSupplementaire: number
+  montantDroitSupplementaire: runtime.Decimal | runtime.DecimalJsLike | number | string
   typeRepertoire: number
   repertoire: Prisma.RepertoireCreateNestedOneWithoutComptabilitesInput
   employeOperateur: Prisma.EmployeCreateNestedOneWithoutComptabilitesInput
@@ -584,25 +584,25 @@ export type ComptabiliteCreateInput = {
 
 export type ComptabiliteUncheckedCreateInput = {
   id?: bigint | number
-  montantTTC: number
-  montantTVA: number
-  montantTVA0: number
-  montantTVA7: number
-  montantTVA10: number
-  montantTVA14: number
-  montantTVA20: number
-  montantHT: number
-  montantHT7: number
-  montantHT10: number
-  montantHT14: number
-  montantHT20: number
+  montantTTC: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA0: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT10: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT14: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT20: runtime.Decimal | runtime.DecimalJsLike | number | string
   modeReglement: string
   typeManuelAuto: number
   typeReglement: number
   dateFacture: Date | string
   dateRegelement: Date | string
   numFcture: string
-  montantDroitSupplementaire: number
+  montantDroitSupplementaire: runtime.Decimal | runtime.DecimalJsLike | number | string
   typeRepertoire: number
   repertoireId: bigint | number
   employeOperateurId: bigint | number
@@ -610,25 +610,25 @@ export type ComptabiliteUncheckedCreateInput = {
 
 export type ComptabiliteUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  montantTTC?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA0?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA7?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA10?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA14?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA20?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT7?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT10?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT14?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT20?: Prisma.FloatFieldUpdateOperationsInput | number
+  montantTTC?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA0?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT10?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT14?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   modeReglement?: Prisma.StringFieldUpdateOperationsInput | string
   typeManuelAuto?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglement?: Prisma.IntFieldUpdateOperationsInput | number
   dateFacture?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateRegelement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   numFcture?: Prisma.StringFieldUpdateOperationsInput | string
-  montantDroitSupplementaire?: Prisma.FloatFieldUpdateOperationsInput | number
+  montantDroitSupplementaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
   repertoire?: Prisma.RepertoireUpdateOneRequiredWithoutComptabilitesNestedInput
   employeOperateur?: Prisma.EmployeUpdateOneRequiredWithoutComptabilitesNestedInput
@@ -636,25 +636,25 @@ export type ComptabiliteUpdateInput = {
 
 export type ComptabiliteUncheckedUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  montantTTC?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA0?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA7?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA10?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA14?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA20?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT7?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT10?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT14?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT20?: Prisma.FloatFieldUpdateOperationsInput | number
+  montantTTC?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA0?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT10?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT14?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   modeReglement?: Prisma.StringFieldUpdateOperationsInput | string
   typeManuelAuto?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglement?: Prisma.IntFieldUpdateOperationsInput | number
   dateFacture?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateRegelement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   numFcture?: Prisma.StringFieldUpdateOperationsInput | string
-  montantDroitSupplementaire?: Prisma.FloatFieldUpdateOperationsInput | number
+  montantDroitSupplementaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
   repertoireId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
@@ -662,25 +662,25 @@ export type ComptabiliteUncheckedUpdateInput = {
 
 export type ComptabiliteCreateManyInput = {
   id?: bigint | number
-  montantTTC: number
-  montantTVA: number
-  montantTVA0: number
-  montantTVA7: number
-  montantTVA10: number
-  montantTVA14: number
-  montantTVA20: number
-  montantHT: number
-  montantHT7: number
-  montantHT10: number
-  montantHT14: number
-  montantHT20: number
+  montantTTC: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA0: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT10: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT14: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT20: runtime.Decimal | runtime.DecimalJsLike | number | string
   modeReglement: string
   typeManuelAuto: number
   typeReglement: number
   dateFacture: Date | string
   dateRegelement: Date | string
   numFcture: string
-  montantDroitSupplementaire: number
+  montantDroitSupplementaire: runtime.Decimal | runtime.DecimalJsLike | number | string
   typeRepertoire: number
   repertoireId: bigint | number
   employeOperateurId: bigint | number
@@ -688,49 +688,49 @@ export type ComptabiliteCreateManyInput = {
 
 export type ComptabiliteUpdateManyMutationInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  montantTTC?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA0?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA7?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA10?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA14?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA20?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT7?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT10?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT14?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT20?: Prisma.FloatFieldUpdateOperationsInput | number
+  montantTTC?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA0?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT10?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT14?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   modeReglement?: Prisma.StringFieldUpdateOperationsInput | string
   typeManuelAuto?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglement?: Prisma.IntFieldUpdateOperationsInput | number
   dateFacture?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateRegelement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   numFcture?: Prisma.StringFieldUpdateOperationsInput | string
-  montantDroitSupplementaire?: Prisma.FloatFieldUpdateOperationsInput | number
+  montantDroitSupplementaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
 }
 
 export type ComptabiliteUncheckedUpdateManyInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  montantTTC?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA0?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA7?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA10?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA14?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA20?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT7?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT10?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT14?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT20?: Prisma.FloatFieldUpdateOperationsInput | number
+  montantTTC?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA0?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT10?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT14?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   modeReglement?: Prisma.StringFieldUpdateOperationsInput | string
   typeManuelAuto?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglement?: Prisma.IntFieldUpdateOperationsInput | number
   dateFacture?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateRegelement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   numFcture?: Prisma.StringFieldUpdateOperationsInput | string
-  montantDroitSupplementaire?: Prisma.FloatFieldUpdateOperationsInput | number
+  montantDroitSupplementaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
   repertoireId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
@@ -960,50 +960,50 @@ export type ComptabiliteUncheckedUpdateManyWithoutEmployeOperateurNestedInput = 
 
 export type ComptabiliteCreateWithoutRepertoireInput = {
   id?: bigint | number
-  montantTTC: number
-  montantTVA: number
-  montantTVA0: number
-  montantTVA7: number
-  montantTVA10: number
-  montantTVA14: number
-  montantTVA20: number
-  montantHT: number
-  montantHT7: number
-  montantHT10: number
-  montantHT14: number
-  montantHT20: number
+  montantTTC: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA0: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT10: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT14: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT20: runtime.Decimal | runtime.DecimalJsLike | number | string
   modeReglement: string
   typeManuelAuto: number
   typeReglement: number
   dateFacture: Date | string
   dateRegelement: Date | string
   numFcture: string
-  montantDroitSupplementaire: number
+  montantDroitSupplementaire: runtime.Decimal | runtime.DecimalJsLike | number | string
   typeRepertoire: number
   employeOperateur: Prisma.EmployeCreateNestedOneWithoutComptabilitesInput
 }
 
 export type ComptabiliteUncheckedCreateWithoutRepertoireInput = {
   id?: bigint | number
-  montantTTC: number
-  montantTVA: number
-  montantTVA0: number
-  montantTVA7: number
-  montantTVA10: number
-  montantTVA14: number
-  montantTVA20: number
-  montantHT: number
-  montantHT7: number
-  montantHT10: number
-  montantHT14: number
-  montantHT20: number
+  montantTTC: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA0: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT10: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT14: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT20: runtime.Decimal | runtime.DecimalJsLike | number | string
   modeReglement: string
   typeManuelAuto: number
   typeReglement: number
   dateFacture: Date | string
   dateRegelement: Date | string
   numFcture: string
-  montantDroitSupplementaire: number
+  montantDroitSupplementaire: runtime.Decimal | runtime.DecimalJsLike | number | string
   typeRepertoire: number
   employeOperateurId: bigint | number
 }
@@ -1039,25 +1039,25 @@ export type ComptabiliteScalarWhereInput = {
   OR?: Prisma.ComptabiliteScalarWhereInput[]
   NOT?: Prisma.ComptabiliteScalarWhereInput | Prisma.ComptabiliteScalarWhereInput[]
   id?: Prisma.BigIntFilter<"Comptabilite"> | bigint | number
-  montantTTC?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantTVA?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantTVA0?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantTVA7?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantTVA10?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantTVA14?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantTVA20?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantHT?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantHT7?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantHT10?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantHT14?: Prisma.FloatFilter<"Comptabilite"> | number
-  montantHT20?: Prisma.FloatFilter<"Comptabilite"> | number
+  montantTTC?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA0?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT7?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT10?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT14?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT20?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   modeReglement?: Prisma.StringFilter<"Comptabilite"> | string
   typeManuelAuto?: Prisma.IntFilter<"Comptabilite"> | number
   typeReglement?: Prisma.IntFilter<"Comptabilite"> | number
   dateFacture?: Prisma.DateTimeFilter<"Comptabilite"> | Date | string
   dateRegelement?: Prisma.DateTimeFilter<"Comptabilite"> | Date | string
   numFcture?: Prisma.StringFilter<"Comptabilite"> | string
-  montantDroitSupplementaire?: Prisma.FloatFilter<"Comptabilite"> | number
+  montantDroitSupplementaire?: Prisma.DecimalFilter<"Comptabilite"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   typeRepertoire?: Prisma.IntFilter<"Comptabilite"> | number
   repertoireId?: Prisma.BigIntFilter<"Comptabilite"> | bigint | number
   employeOperateurId?: Prisma.BigIntFilter<"Comptabilite"> | bigint | number
@@ -1065,50 +1065,50 @@ export type ComptabiliteScalarWhereInput = {
 
 export type ComptabiliteCreateWithoutEmployeOperateurInput = {
   id?: bigint | number
-  montantTTC: number
-  montantTVA: number
-  montantTVA0: number
-  montantTVA7: number
-  montantTVA10: number
-  montantTVA14: number
-  montantTVA20: number
-  montantHT: number
-  montantHT7: number
-  montantHT10: number
-  montantHT14: number
-  montantHT20: number
+  montantTTC: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA0: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT10: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT14: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT20: runtime.Decimal | runtime.DecimalJsLike | number | string
   modeReglement: string
   typeManuelAuto: number
   typeReglement: number
   dateFacture: Date | string
   dateRegelement: Date | string
   numFcture: string
-  montantDroitSupplementaire: number
+  montantDroitSupplementaire: runtime.Decimal | runtime.DecimalJsLike | number | string
   typeRepertoire: number
   repertoire: Prisma.RepertoireCreateNestedOneWithoutComptabilitesInput
 }
 
 export type ComptabiliteUncheckedCreateWithoutEmployeOperateurInput = {
   id?: bigint | number
-  montantTTC: number
-  montantTVA: number
-  montantTVA0: number
-  montantTVA7: number
-  montantTVA10: number
-  montantTVA14: number
-  montantTVA20: number
-  montantHT: number
-  montantHT7: number
-  montantHT10: number
-  montantHT14: number
-  montantHT20: number
+  montantTTC: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA0: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT10: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT14: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT20: runtime.Decimal | runtime.DecimalJsLike | number | string
   modeReglement: string
   typeManuelAuto: number
   typeReglement: number
   dateFacture: Date | string
   dateRegelement: Date | string
   numFcture: string
-  montantDroitSupplementaire: number
+  montantDroitSupplementaire: runtime.Decimal | runtime.DecimalJsLike | number | string
   typeRepertoire: number
   repertoireId: bigint | number
 }
@@ -1141,200 +1141,200 @@ export type ComptabiliteUpdateManyWithWhereWithoutEmployeOperateurInput = {
 
 export type ComptabiliteCreateManyRepertoireInput = {
   id?: bigint | number
-  montantTTC: number
-  montantTVA: number
-  montantTVA0: number
-  montantTVA7: number
-  montantTVA10: number
-  montantTVA14: number
-  montantTVA20: number
-  montantHT: number
-  montantHT7: number
-  montantHT10: number
-  montantHT14: number
-  montantHT20: number
+  montantTTC: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA0: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT10: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT14: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT20: runtime.Decimal | runtime.DecimalJsLike | number | string
   modeReglement: string
   typeManuelAuto: number
   typeReglement: number
   dateFacture: Date | string
   dateRegelement: Date | string
   numFcture: string
-  montantDroitSupplementaire: number
+  montantDroitSupplementaire: runtime.Decimal | runtime.DecimalJsLike | number | string
   typeRepertoire: number
   employeOperateurId: bigint | number
 }
 
 export type ComptabiliteUpdateWithoutRepertoireInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  montantTTC?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA0?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA7?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA10?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA14?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA20?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT7?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT10?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT14?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT20?: Prisma.FloatFieldUpdateOperationsInput | number
+  montantTTC?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA0?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT10?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT14?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   modeReglement?: Prisma.StringFieldUpdateOperationsInput | string
   typeManuelAuto?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglement?: Prisma.IntFieldUpdateOperationsInput | number
   dateFacture?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateRegelement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   numFcture?: Prisma.StringFieldUpdateOperationsInput | string
-  montantDroitSupplementaire?: Prisma.FloatFieldUpdateOperationsInput | number
+  montantDroitSupplementaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
   employeOperateur?: Prisma.EmployeUpdateOneRequiredWithoutComptabilitesNestedInput
 }
 
 export type ComptabiliteUncheckedUpdateWithoutRepertoireInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  montantTTC?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA0?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA7?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA10?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA14?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA20?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT7?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT10?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT14?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT20?: Prisma.FloatFieldUpdateOperationsInput | number
+  montantTTC?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA0?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT10?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT14?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   modeReglement?: Prisma.StringFieldUpdateOperationsInput | string
   typeManuelAuto?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglement?: Prisma.IntFieldUpdateOperationsInput | number
   dateFacture?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateRegelement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   numFcture?: Prisma.StringFieldUpdateOperationsInput | string
-  montantDroitSupplementaire?: Prisma.FloatFieldUpdateOperationsInput | number
+  montantDroitSupplementaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
   employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
 export type ComptabiliteUncheckedUpdateManyWithoutRepertoireInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  montantTTC?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA0?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA7?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA10?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA14?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA20?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT7?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT10?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT14?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT20?: Prisma.FloatFieldUpdateOperationsInput | number
+  montantTTC?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA0?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT10?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT14?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   modeReglement?: Prisma.StringFieldUpdateOperationsInput | string
   typeManuelAuto?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglement?: Prisma.IntFieldUpdateOperationsInput | number
   dateFacture?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateRegelement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   numFcture?: Prisma.StringFieldUpdateOperationsInput | string
-  montantDroitSupplementaire?: Prisma.FloatFieldUpdateOperationsInput | number
+  montantDroitSupplementaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
   employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
 export type ComptabiliteCreateManyEmployeOperateurInput = {
   id?: bigint | number
-  montantTTC: number
-  montantTVA: number
-  montantTVA0: number
-  montantTVA7: number
-  montantTVA10: number
-  montantTVA14: number
-  montantTVA20: number
-  montantHT: number
-  montantHT7: number
-  montantHT10: number
-  montantHT14: number
-  montantHT20: number
+  montantTTC: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA0: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT10: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT14: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT20: runtime.Decimal | runtime.DecimalJsLike | number | string
   modeReglement: string
   typeManuelAuto: number
   typeReglement: number
   dateFacture: Date | string
   dateRegelement: Date | string
   numFcture: string
-  montantDroitSupplementaire: number
+  montantDroitSupplementaire: runtime.Decimal | runtime.DecimalJsLike | number | string
   typeRepertoire: number
   repertoireId: bigint | number
 }
 
 export type ComptabiliteUpdateWithoutEmployeOperateurInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  montantTTC?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA0?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA7?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA10?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA14?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA20?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT7?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT10?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT14?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT20?: Prisma.FloatFieldUpdateOperationsInput | number
+  montantTTC?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA0?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT10?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT14?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   modeReglement?: Prisma.StringFieldUpdateOperationsInput | string
   typeManuelAuto?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglement?: Prisma.IntFieldUpdateOperationsInput | number
   dateFacture?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateRegelement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   numFcture?: Prisma.StringFieldUpdateOperationsInput | string
-  montantDroitSupplementaire?: Prisma.FloatFieldUpdateOperationsInput | number
+  montantDroitSupplementaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
   repertoire?: Prisma.RepertoireUpdateOneRequiredWithoutComptabilitesNestedInput
 }
 
 export type ComptabiliteUncheckedUpdateWithoutEmployeOperateurInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  montantTTC?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA0?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA7?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA10?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA14?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA20?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT7?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT10?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT14?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT20?: Prisma.FloatFieldUpdateOperationsInput | number
+  montantTTC?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA0?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT10?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT14?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   modeReglement?: Prisma.StringFieldUpdateOperationsInput | string
   typeManuelAuto?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglement?: Prisma.IntFieldUpdateOperationsInput | number
   dateFacture?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateRegelement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   numFcture?: Prisma.StringFieldUpdateOperationsInput | string
-  montantDroitSupplementaire?: Prisma.FloatFieldUpdateOperationsInput | number
+  montantDroitSupplementaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
   repertoireId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
 export type ComptabiliteUncheckedUpdateManyWithoutEmployeOperateurInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  montantTTC?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA0?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA7?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA10?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA14?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA20?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT7?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT10?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT14?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantHT20?: Prisma.FloatFieldUpdateOperationsInput | number
+  montantTTC?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA0?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT10?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT14?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantHT20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   modeReglement?: Prisma.StringFieldUpdateOperationsInput | string
   typeManuelAuto?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglement?: Prisma.IntFieldUpdateOperationsInput | number
   dateFacture?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateRegelement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   numFcture?: Prisma.StringFieldUpdateOperationsInput | string
-  montantDroitSupplementaire?: Prisma.FloatFieldUpdateOperationsInput | number
+  montantDroitSupplementaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
   repertoireId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
@@ -1411,25 +1411,25 @@ export type $ComptabilitePayload<ExtArgs extends runtime.Types.Extensions.Intern
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: bigint
-    montantTTC: number
-    montantTVA: number
-    montantTVA0: number
-    montantTVA7: number
-    montantTVA10: number
-    montantTVA14: number
-    montantTVA20: number
-    montantHT: number
-    montantHT7: number
-    montantHT10: number
-    montantHT14: number
-    montantHT20: number
+    montantTTC: runtime.Decimal
+    montantTVA: runtime.Decimal
+    montantTVA0: runtime.Decimal
+    montantTVA7: runtime.Decimal
+    montantTVA10: runtime.Decimal
+    montantTVA14: runtime.Decimal
+    montantTVA20: runtime.Decimal
+    montantHT: runtime.Decimal
+    montantHT7: runtime.Decimal
+    montantHT10: runtime.Decimal
+    montantHT14: runtime.Decimal
+    montantHT20: runtime.Decimal
     modeReglement: string
     typeManuelAuto: number
     typeReglement: number
     dateFacture: Date
     dateRegelement: Date
     numFcture: string
-    montantDroitSupplementaire: number
+    montantDroitSupplementaire: runtime.Decimal
     typeRepertoire: number
     repertoireId: bigint
     employeOperateurId: bigint
@@ -1805,25 +1805,25 @@ export interface Prisma__ComptabiliteClient<T, Null = never, ExtArgs extends run
  */
 export interface ComptabiliteFieldRefs {
   readonly id: Prisma.FieldRef<"Comptabilite", 'BigInt'>
-  readonly montantTTC: Prisma.FieldRef<"Comptabilite", 'Float'>
-  readonly montantTVA: Prisma.FieldRef<"Comptabilite", 'Float'>
-  readonly montantTVA0: Prisma.FieldRef<"Comptabilite", 'Float'>
-  readonly montantTVA7: Prisma.FieldRef<"Comptabilite", 'Float'>
-  readonly montantTVA10: Prisma.FieldRef<"Comptabilite", 'Float'>
-  readonly montantTVA14: Prisma.FieldRef<"Comptabilite", 'Float'>
-  readonly montantTVA20: Prisma.FieldRef<"Comptabilite", 'Float'>
-  readonly montantHT: Prisma.FieldRef<"Comptabilite", 'Float'>
-  readonly montantHT7: Prisma.FieldRef<"Comptabilite", 'Float'>
-  readonly montantHT10: Prisma.FieldRef<"Comptabilite", 'Float'>
-  readonly montantHT14: Prisma.FieldRef<"Comptabilite", 'Float'>
-  readonly montantHT20: Prisma.FieldRef<"Comptabilite", 'Float'>
+  readonly montantTTC: Prisma.FieldRef<"Comptabilite", 'Decimal'>
+  readonly montantTVA: Prisma.FieldRef<"Comptabilite", 'Decimal'>
+  readonly montantTVA0: Prisma.FieldRef<"Comptabilite", 'Decimal'>
+  readonly montantTVA7: Prisma.FieldRef<"Comptabilite", 'Decimal'>
+  readonly montantTVA10: Prisma.FieldRef<"Comptabilite", 'Decimal'>
+  readonly montantTVA14: Prisma.FieldRef<"Comptabilite", 'Decimal'>
+  readonly montantTVA20: Prisma.FieldRef<"Comptabilite", 'Decimal'>
+  readonly montantHT: Prisma.FieldRef<"Comptabilite", 'Decimal'>
+  readonly montantHT7: Prisma.FieldRef<"Comptabilite", 'Decimal'>
+  readonly montantHT10: Prisma.FieldRef<"Comptabilite", 'Decimal'>
+  readonly montantHT14: Prisma.FieldRef<"Comptabilite", 'Decimal'>
+  readonly montantHT20: Prisma.FieldRef<"Comptabilite", 'Decimal'>
   readonly modeReglement: Prisma.FieldRef<"Comptabilite", 'String'>
   readonly typeManuelAuto: Prisma.FieldRef<"Comptabilite", 'Int'>
   readonly typeReglement: Prisma.FieldRef<"Comptabilite", 'Int'>
   readonly dateFacture: Prisma.FieldRef<"Comptabilite", 'DateTime'>
   readonly dateRegelement: Prisma.FieldRef<"Comptabilite", 'DateTime'>
   readonly numFcture: Prisma.FieldRef<"Comptabilite", 'String'>
-  readonly montantDroitSupplementaire: Prisma.FieldRef<"Comptabilite", 'Float'>
+  readonly montantDroitSupplementaire: Prisma.FieldRef<"Comptabilite", 'Decimal'>
   readonly typeRepertoire: Prisma.FieldRef<"Comptabilite", 'Int'>
   readonly repertoireId: Prisma.FieldRef<"Comptabilite", 'BigInt'>
   readonly employeOperateurId: Prisma.FieldRef<"Comptabilite", 'BigInt'>

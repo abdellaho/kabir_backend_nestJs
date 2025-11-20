@@ -30,32 +30,32 @@ export type AchatLivraisonAvgAggregateOutputType = {
   id: number | null
   numAchat: number | null
   prixNormalAchatHt: number | null
-  mantantAL: number | null
-  mantantALTTC: number | null
-  mantantALTVA20: number | null
-  mantantALTVA7: number | null
-  totalMantantALTVA: number | null
-  mantantBFBenefice: number | null
-  montantTVA7: number | null
-  montantTVA10: number | null
-  montantTVA14: number | null
-  montantTVA20: number | null
+  mantantAL: runtime.Decimal | null
+  mantantALTTC: runtime.Decimal | null
+  mantantALTVA20: runtime.Decimal | null
+  mantantALTVA7: runtime.Decimal | null
+  totalMantantALTVA: runtime.Decimal | null
+  mantantBFBenefice: runtime.Decimal | null
+  montantTVA7: runtime.Decimal | null
+  montantTVA10: runtime.Decimal | null
+  montantTVA14: runtime.Decimal | null
+  montantTVA20: runtime.Decimal | null
 }
 
 export type AchatLivraisonSumAggregateOutputType = {
   id: bigint | null
   numAchat: number | null
   prixNormalAchatHt: number | null
-  mantantAL: number | null
-  mantantALTTC: number | null
-  mantantALTVA20: number | null
-  mantantALTVA7: number | null
-  totalMantantALTVA: number | null
-  mantantBFBenefice: number | null
-  montantTVA7: number | null
-  montantTVA10: number | null
-  montantTVA14: number | null
-  montantTVA20: number | null
+  mantantAL: runtime.Decimal | null
+  mantantALTTC: runtime.Decimal | null
+  mantantALTVA20: runtime.Decimal | null
+  mantantALTVA7: runtime.Decimal | null
+  totalMantantALTVA: runtime.Decimal | null
+  mantantBFBenefice: runtime.Decimal | null
+  montantTVA7: runtime.Decimal | null
+  montantTVA10: runtime.Decimal | null
+  montantTVA14: runtime.Decimal | null
+  montantTVA20: runtime.Decimal | null
 }
 
 export type AchatLivraisonMinAggregateOutputType = {
@@ -66,16 +66,16 @@ export type AchatLivraisonMinAggregateOutputType = {
   sysDate: Date | null
   prixNormalAchatHt: number | null
   numeroBlExterne: string | null
-  mantantAL: number | null
-  mantantALTTC: number | null
-  mantantALTVA20: number | null
-  mantantALTVA7: number | null
-  totalMantantALTVA: number | null
-  mantantBFBenefice: number | null
-  montantTVA7: number | null
-  montantTVA10: number | null
-  montantTVA14: number | null
-  montantTVA20: number | null
+  mantantAL: runtime.Decimal | null
+  mantantALTTC: runtime.Decimal | null
+  mantantALTVA20: runtime.Decimal | null
+  mantantALTVA7: runtime.Decimal | null
+  totalMantantALTVA: runtime.Decimal | null
+  mantantBFBenefice: runtime.Decimal | null
+  montantTVA7: runtime.Decimal | null
+  montantTVA10: runtime.Decimal | null
+  montantTVA14: runtime.Decimal | null
+  montantTVA20: runtime.Decimal | null
 }
 
 export type AchatLivraisonMaxAggregateOutputType = {
@@ -86,16 +86,16 @@ export type AchatLivraisonMaxAggregateOutputType = {
   sysDate: Date | null
   prixNormalAchatHt: number | null
   numeroBlExterne: string | null
-  mantantAL: number | null
-  mantantALTTC: number | null
-  mantantALTVA20: number | null
-  mantantALTVA7: number | null
-  totalMantantALTVA: number | null
-  mantantBFBenefice: number | null
-  montantTVA7: number | null
-  montantTVA10: number | null
-  montantTVA14: number | null
-  montantTVA20: number | null
+  mantantAL: runtime.Decimal | null
+  mantantALTTC: runtime.Decimal | null
+  mantantALTVA20: runtime.Decimal | null
+  mantantALTVA7: runtime.Decimal | null
+  totalMantantALTVA: runtime.Decimal | null
+  mantantBFBenefice: runtime.Decimal | null
+  montantTVA7: runtime.Decimal | null
+  montantTVA10: runtime.Decimal | null
+  montantTVA14: runtime.Decimal | null
+  montantTVA20: runtime.Decimal | null
 }
 
 export type AchatLivraisonCountAggregateOutputType = {
@@ -307,16 +307,16 @@ export type AchatLivraisonGroupByOutputType = {
   sysDate: Date
   prixNormalAchatHt: number
   numeroBlExterne: string
-  mantantAL: number
-  mantantALTTC: number
-  mantantALTVA20: number
-  mantantALTVA7: number
-  totalMantantALTVA: number
-  mantantBFBenefice: number
-  montantTVA7: number
-  montantTVA10: number
-  montantTVA14: number
-  montantTVA20: number
+  mantantAL: runtime.Decimal
+  mantantALTTC: runtime.Decimal
+  mantantALTVA20: runtime.Decimal
+  mantantALTVA7: runtime.Decimal
+  totalMantantALTVA: runtime.Decimal
+  mantantBFBenefice: runtime.Decimal
+  montantTVA7: runtime.Decimal
+  montantTVA10: runtime.Decimal
+  montantTVA14: runtime.Decimal
+  montantTVA20: runtime.Decimal
   _count: AchatLivraisonCountAggregateOutputType | null
   _avg: AchatLivraisonAvgAggregateOutputType | null
   _sum: AchatLivraisonSumAggregateOutputType | null
@@ -350,16 +350,16 @@ export type AchatLivraisonWhereInput = {
   sysDate?: Prisma.DateTimeFilter<"AchatLivraison"> | Date | string
   prixNormalAchatHt?: Prisma.IntFilter<"AchatLivraison"> | number
   numeroBlExterne?: Prisma.StringFilter<"AchatLivraison"> | string
-  mantantAL?: Prisma.FloatFilter<"AchatLivraison"> | number
-  mantantALTTC?: Prisma.FloatFilter<"AchatLivraison"> | number
-  mantantALTVA20?: Prisma.FloatFilter<"AchatLivraison"> | number
-  mantantALTVA7?: Prisma.FloatFilter<"AchatLivraison"> | number
-  totalMantantALTVA?: Prisma.FloatFilter<"AchatLivraison"> | number
-  mantantBFBenefice?: Prisma.FloatFilter<"AchatLivraison"> | number
-  montantTVA7?: Prisma.FloatFilter<"AchatLivraison"> | number
-  montantTVA10?: Prisma.FloatFilter<"AchatLivraison"> | number
-  montantTVA14?: Prisma.FloatFilter<"AchatLivraison"> | number
-  montantTVA20?: Prisma.FloatFilter<"AchatLivraison"> | number
+  mantantAL?: Prisma.DecimalFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTTC?: Prisma.DecimalFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA20?: Prisma.DecimalFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA7?: Prisma.DecimalFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMantantALTVA?: Prisma.DecimalFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice?: Prisma.DecimalFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7?: Prisma.DecimalFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10?: Prisma.DecimalFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14?: Prisma.DecimalFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20?: Prisma.DecimalFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   detAchatLivraisons?: Prisma.DetAchatLivraisonListRelationFilter
 }
 
@@ -396,16 +396,16 @@ export type AchatLivraisonWhereUniqueInput = Prisma.AtLeast<{
   sysDate?: Prisma.DateTimeFilter<"AchatLivraison"> | Date | string
   prixNormalAchatHt?: Prisma.IntFilter<"AchatLivraison"> | number
   numeroBlExterne?: Prisma.StringFilter<"AchatLivraison"> | string
-  mantantAL?: Prisma.FloatFilter<"AchatLivraison"> | number
-  mantantALTTC?: Prisma.FloatFilter<"AchatLivraison"> | number
-  mantantALTVA20?: Prisma.FloatFilter<"AchatLivraison"> | number
-  mantantALTVA7?: Prisma.FloatFilter<"AchatLivraison"> | number
-  totalMantantALTVA?: Prisma.FloatFilter<"AchatLivraison"> | number
-  mantantBFBenefice?: Prisma.FloatFilter<"AchatLivraison"> | number
-  montantTVA7?: Prisma.FloatFilter<"AchatLivraison"> | number
-  montantTVA10?: Prisma.FloatFilter<"AchatLivraison"> | number
-  montantTVA14?: Prisma.FloatFilter<"AchatLivraison"> | number
-  montantTVA20?: Prisma.FloatFilter<"AchatLivraison"> | number
+  mantantAL?: Prisma.DecimalFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTTC?: Prisma.DecimalFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA20?: Prisma.DecimalFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA7?: Prisma.DecimalFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMantantALTVA?: Prisma.DecimalFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice?: Prisma.DecimalFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7?: Prisma.DecimalFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10?: Prisma.DecimalFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14?: Prisma.DecimalFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20?: Prisma.DecimalFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   detAchatLivraisons?: Prisma.DetAchatLivraisonListRelationFilter
 }, "id">
 
@@ -445,16 +445,16 @@ export type AchatLivraisonScalarWhereWithAggregatesInput = {
   sysDate?: Prisma.DateTimeWithAggregatesFilter<"AchatLivraison"> | Date | string
   prixNormalAchatHt?: Prisma.IntWithAggregatesFilter<"AchatLivraison"> | number
   numeroBlExterne?: Prisma.StringWithAggregatesFilter<"AchatLivraison"> | string
-  mantantAL?: Prisma.FloatWithAggregatesFilter<"AchatLivraison"> | number
-  mantantALTTC?: Prisma.FloatWithAggregatesFilter<"AchatLivraison"> | number
-  mantantALTVA20?: Prisma.FloatWithAggregatesFilter<"AchatLivraison"> | number
-  mantantALTVA7?: Prisma.FloatWithAggregatesFilter<"AchatLivraison"> | number
-  totalMantantALTVA?: Prisma.FloatWithAggregatesFilter<"AchatLivraison"> | number
-  mantantBFBenefice?: Prisma.FloatWithAggregatesFilter<"AchatLivraison"> | number
-  montantTVA7?: Prisma.FloatWithAggregatesFilter<"AchatLivraison"> | number
-  montantTVA10?: Prisma.FloatWithAggregatesFilter<"AchatLivraison"> | number
-  montantTVA14?: Prisma.FloatWithAggregatesFilter<"AchatLivraison"> | number
-  montantTVA20?: Prisma.FloatWithAggregatesFilter<"AchatLivraison"> | number
+  mantantAL?: Prisma.DecimalWithAggregatesFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTTC?: Prisma.DecimalWithAggregatesFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA20?: Prisma.DecimalWithAggregatesFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA7?: Prisma.DecimalWithAggregatesFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMantantALTVA?: Prisma.DecimalWithAggregatesFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice?: Prisma.DecimalWithAggregatesFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7?: Prisma.DecimalWithAggregatesFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10?: Prisma.DecimalWithAggregatesFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14?: Prisma.DecimalWithAggregatesFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20?: Prisma.DecimalWithAggregatesFilter<"AchatLivraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type AchatLivraisonCreateInput = {
@@ -465,16 +465,16 @@ export type AchatLivraisonCreateInput = {
   sysDate: Date | string
   prixNormalAchatHt: number
   numeroBlExterne: string
-  mantantAL: number
-  mantantALTTC: number
-  mantantALTVA20: number
-  mantantALTVA7: number
-  totalMantantALTVA: number
-  mantantBFBenefice: number
-  montantTVA7: number
-  montantTVA10: number
-  montantTVA14: number
-  montantTVA20: number
+  mantantAL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTTC: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA20: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMantantALTVA: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20: runtime.Decimal | runtime.DecimalJsLike | number | string
   detAchatLivraisons?: Prisma.DetAchatLivraisonCreateNestedManyWithoutAchatLivraisonInput
 }
 
@@ -486,16 +486,16 @@ export type AchatLivraisonUncheckedCreateInput = {
   sysDate: Date | string
   prixNormalAchatHt: number
   numeroBlExterne: string
-  mantantAL: number
-  mantantALTTC: number
-  mantantALTVA20: number
-  mantantALTVA7: number
-  totalMantantALTVA: number
-  mantantBFBenefice: number
-  montantTVA7: number
-  montantTVA10: number
-  montantTVA14: number
-  montantTVA20: number
+  mantantAL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTTC: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA20: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMantantALTVA: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20: runtime.Decimal | runtime.DecimalJsLike | number | string
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedCreateNestedManyWithoutAchatLivraisonInput
 }
 
@@ -507,16 +507,16 @@ export type AchatLivraisonUpdateInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   prixNormalAchatHt?: Prisma.IntFieldUpdateOperationsInput | number
   numeroBlExterne?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantAL?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantALTTC?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantALTVA20?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantALTVA7?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMantantALTVA?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBFBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA7?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA10?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA14?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA20?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTTC?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMantantALTVA?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   detAchatLivraisons?: Prisma.DetAchatLivraisonUpdateManyWithoutAchatLivraisonNestedInput
 }
 
@@ -528,16 +528,16 @@ export type AchatLivraisonUncheckedUpdateInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   prixNormalAchatHt?: Prisma.IntFieldUpdateOperationsInput | number
   numeroBlExterne?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantAL?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantALTTC?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantALTVA20?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantALTVA7?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMantantALTVA?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBFBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA7?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA10?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA14?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA20?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTTC?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMantantALTVA?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedUpdateManyWithoutAchatLivraisonNestedInput
 }
 
@@ -549,16 +549,16 @@ export type AchatLivraisonCreateManyInput = {
   sysDate: Date | string
   prixNormalAchatHt: number
   numeroBlExterne: string
-  mantantAL: number
-  mantantALTTC: number
-  mantantALTVA20: number
-  mantantALTVA7: number
-  totalMantantALTVA: number
-  mantantBFBenefice: number
-  montantTVA7: number
-  montantTVA10: number
-  montantTVA14: number
-  montantTVA20: number
+  mantantAL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTTC: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA20: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMantantALTVA: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type AchatLivraisonUpdateManyMutationInput = {
@@ -569,16 +569,16 @@ export type AchatLivraisonUpdateManyMutationInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   prixNormalAchatHt?: Prisma.IntFieldUpdateOperationsInput | number
   numeroBlExterne?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantAL?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantALTTC?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantALTVA20?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantALTVA7?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMantantALTVA?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBFBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA7?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA10?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA14?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA20?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTTC?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMantantALTVA?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type AchatLivraisonUncheckedUpdateManyInput = {
@@ -589,16 +589,16 @@ export type AchatLivraisonUncheckedUpdateManyInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   prixNormalAchatHt?: Prisma.IntFieldUpdateOperationsInput | number
   numeroBlExterne?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantAL?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantALTTC?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantALTVA20?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantALTVA7?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMantantALTVA?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBFBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA7?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA10?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA14?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA20?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTTC?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMantantALTVA?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type AchatLivraisonOrderByRelevanceInput = {
@@ -726,16 +726,16 @@ export type AchatLivraisonCreateWithoutDetAchatLivraisonsInput = {
   sysDate: Date | string
   prixNormalAchatHt: number
   numeroBlExterne: string
-  mantantAL: number
-  mantantALTTC: number
-  mantantALTVA20: number
-  mantantALTVA7: number
-  totalMantantALTVA: number
-  mantantBFBenefice: number
-  montantTVA7: number
-  montantTVA10: number
-  montantTVA14: number
-  montantTVA20: number
+  mantantAL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTTC: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA20: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMantantALTVA: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type AchatLivraisonUncheckedCreateWithoutDetAchatLivraisonsInput = {
@@ -746,16 +746,16 @@ export type AchatLivraisonUncheckedCreateWithoutDetAchatLivraisonsInput = {
   sysDate: Date | string
   prixNormalAchatHt: number
   numeroBlExterne: string
-  mantantAL: number
-  mantantALTTC: number
-  mantantALTVA20: number
-  mantantALTVA7: number
-  totalMantantALTVA: number
-  mantantBFBenefice: number
-  montantTVA7: number
-  montantTVA10: number
-  montantTVA14: number
-  montantTVA20: number
+  mantantAL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTTC: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA20: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMantantALTVA: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14: runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type AchatLivraisonCreateOrConnectWithoutDetAchatLivraisonsInput = {
@@ -782,16 +782,16 @@ export type AchatLivraisonUpdateWithoutDetAchatLivraisonsInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   prixNormalAchatHt?: Prisma.IntFieldUpdateOperationsInput | number
   numeroBlExterne?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantAL?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantALTTC?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantALTVA20?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantALTVA7?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMantantALTVA?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBFBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA7?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA10?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA14?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA20?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTTC?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMantantALTVA?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type AchatLivraisonUncheckedUpdateWithoutDetAchatLivraisonsInput = {
@@ -802,16 +802,16 @@ export type AchatLivraisonUncheckedUpdateWithoutDetAchatLivraisonsInput = {
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   prixNormalAchatHt?: Prisma.IntFieldUpdateOperationsInput | number
   numeroBlExterne?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantAL?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantALTTC?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantALTVA20?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantALTVA7?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalMantantALTVA?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantBFBenefice?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA7?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA10?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA14?: Prisma.FloatFieldUpdateOperationsInput | number
-  montantTVA20?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTTC?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantALTVA7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalMantantALTVA?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBFBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA10?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA14?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  montantTVA20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 
@@ -908,16 +908,16 @@ export type $AchatLivraisonPayload<ExtArgs extends runtime.Types.Extensions.Inte
     sysDate: Date
     prixNormalAchatHt: number
     numeroBlExterne: string
-    mantantAL: number
-    mantantALTTC: number
-    mantantALTVA20: number
-    mantantALTVA7: number
-    totalMantantALTVA: number
-    mantantBFBenefice: number
-    montantTVA7: number
-    montantTVA10: number
-    montantTVA14: number
-    montantTVA20: number
+    mantantAL: runtime.Decimal
+    mantantALTTC: runtime.Decimal
+    mantantALTVA20: runtime.Decimal
+    mantantALTVA7: runtime.Decimal
+    totalMantantALTVA: runtime.Decimal
+    mantantBFBenefice: runtime.Decimal
+    montantTVA7: runtime.Decimal
+    montantTVA10: runtime.Decimal
+    montantTVA14: runtime.Decimal
+    montantTVA20: runtime.Decimal
   }, ExtArgs["result"]["achatLivraison"]>
   composites: {}
 }
@@ -1295,16 +1295,16 @@ export interface AchatLivraisonFieldRefs {
   readonly sysDate: Prisma.FieldRef<"AchatLivraison", 'DateTime'>
   readonly prixNormalAchatHt: Prisma.FieldRef<"AchatLivraison", 'Int'>
   readonly numeroBlExterne: Prisma.FieldRef<"AchatLivraison", 'String'>
-  readonly mantantAL: Prisma.FieldRef<"AchatLivraison", 'Float'>
-  readonly mantantALTTC: Prisma.FieldRef<"AchatLivraison", 'Float'>
-  readonly mantantALTVA20: Prisma.FieldRef<"AchatLivraison", 'Float'>
-  readonly mantantALTVA7: Prisma.FieldRef<"AchatLivraison", 'Float'>
-  readonly totalMantantALTVA: Prisma.FieldRef<"AchatLivraison", 'Float'>
-  readonly mantantBFBenefice: Prisma.FieldRef<"AchatLivraison", 'Float'>
-  readonly montantTVA7: Prisma.FieldRef<"AchatLivraison", 'Float'>
-  readonly montantTVA10: Prisma.FieldRef<"AchatLivraison", 'Float'>
-  readonly montantTVA14: Prisma.FieldRef<"AchatLivraison", 'Float'>
-  readonly montantTVA20: Prisma.FieldRef<"AchatLivraison", 'Float'>
+  readonly mantantAL: Prisma.FieldRef<"AchatLivraison", 'Decimal'>
+  readonly mantantALTTC: Prisma.FieldRef<"AchatLivraison", 'Decimal'>
+  readonly mantantALTVA20: Prisma.FieldRef<"AchatLivraison", 'Decimal'>
+  readonly mantantALTVA7: Prisma.FieldRef<"AchatLivraison", 'Decimal'>
+  readonly totalMantantALTVA: Prisma.FieldRef<"AchatLivraison", 'Decimal'>
+  readonly mantantBFBenefice: Prisma.FieldRef<"AchatLivraison", 'Decimal'>
+  readonly montantTVA7: Prisma.FieldRef<"AchatLivraison", 'Decimal'>
+  readonly montantTVA10: Prisma.FieldRef<"AchatLivraison", 'Decimal'>
+  readonly montantTVA14: Prisma.FieldRef<"AchatLivraison", 'Decimal'>
+  readonly montantTVA20: Prisma.FieldRef<"AchatLivraison", 'Decimal'>
 }
     
 

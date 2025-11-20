@@ -29,17 +29,17 @@ export type AggregateImportations = {
 export type ImportationsAvgAggregateOutputType = {
   id: number | null
   numFacture: number | null
-  mantantAvancs1: number | null
-  mantantAvancs2: number | null
-  totalPaye: number | null
-  mntFacture: number | null
-  mntDouane: number | null
-  mntTransport: number | null
-  mntTransportIntern: number | null
-  mntTransit: number | null
-  mntMagasinage: number | null
-  prixAchatDetaille: number | null
-  totalAllMnt: number | null
+  mantantAvancs1: runtime.Decimal | null
+  mantantAvancs2: runtime.Decimal | null
+  totalPaye: runtime.Decimal | null
+  mntFacture: runtime.Decimal | null
+  mntDouane: runtime.Decimal | null
+  mntTransport: runtime.Decimal | null
+  mntTransportIntern: runtime.Decimal | null
+  mntTransit: runtime.Decimal | null
+  mntMagasinage: runtime.Decimal | null
+  prixAchatDetaille: runtime.Decimal | null
+  totalAllMnt: runtime.Decimal | null
   repertoireFourId: number | null
   employeOperateurId: number | null
 }
@@ -47,17 +47,17 @@ export type ImportationsAvgAggregateOutputType = {
 export type ImportationsSumAggregateOutputType = {
   id: bigint | null
   numFacture: number | null
-  mantantAvancs1: number | null
-  mantantAvancs2: number | null
-  totalPaye: number | null
-  mntFacture: number | null
-  mntDouane: number | null
-  mntTransport: number | null
-  mntTransportIntern: number | null
-  mntTransit: number | null
-  mntMagasinage: number | null
-  prixAchatDetaille: number | null
-  totalAllMnt: number | null
+  mantantAvancs1: runtime.Decimal | null
+  mantantAvancs2: runtime.Decimal | null
+  totalPaye: runtime.Decimal | null
+  mntFacture: runtime.Decimal | null
+  mntDouane: runtime.Decimal | null
+  mntTransport: runtime.Decimal | null
+  mntTransportIntern: runtime.Decimal | null
+  mntTransit: runtime.Decimal | null
+  mntMagasinage: runtime.Decimal | null
+  prixAchatDetaille: runtime.Decimal | null
+  totalAllMnt: runtime.Decimal | null
   repertoireFourId: bigint | null
   employeOperateurId: bigint | null
 }
@@ -70,18 +70,18 @@ export type ImportationsMinAggregateOutputType = {
   dateFacture: Date | null
   sysDate: Date | null
   dateAvances1: Date | null
-  mantantAvancs1: number | null
+  mantantAvancs1: runtime.Decimal | null
   dateAvances2: Date | null
-  mantantAvancs2: number | null
-  totalPaye: number | null
-  mntFacture: number | null
-  mntDouane: number | null
-  mntTransport: number | null
-  mntTransportIntern: number | null
-  mntTransit: number | null
-  mntMagasinage: number | null
-  prixAchatDetaille: number | null
-  totalAllMnt: number | null
+  mantantAvancs2: runtime.Decimal | null
+  totalPaye: runtime.Decimal | null
+  mntFacture: runtime.Decimal | null
+  mntDouane: runtime.Decimal | null
+  mntTransport: runtime.Decimal | null
+  mntTransportIntern: runtime.Decimal | null
+  mntTransit: runtime.Decimal | null
+  mntMagasinage: runtime.Decimal | null
+  prixAchatDetaille: runtime.Decimal | null
+  totalAllMnt: runtime.Decimal | null
   repertoireFourId: bigint | null
   employeOperateurId: bigint | null
 }
@@ -94,18 +94,18 @@ export type ImportationsMaxAggregateOutputType = {
   dateFacture: Date | null
   sysDate: Date | null
   dateAvances1: Date | null
-  mantantAvancs1: number | null
+  mantantAvancs1: runtime.Decimal | null
   dateAvances2: Date | null
-  mantantAvancs2: number | null
-  totalPaye: number | null
-  mntFacture: number | null
-  mntDouane: number | null
-  mntTransport: number | null
-  mntTransportIntern: number | null
-  mntTransit: number | null
-  mntMagasinage: number | null
-  prixAchatDetaille: number | null
-  totalAllMnt: number | null
+  mantantAvancs2: runtime.Decimal | null
+  totalPaye: runtime.Decimal | null
+  mntFacture: runtime.Decimal | null
+  mntDouane: runtime.Decimal | null
+  mntTransport: runtime.Decimal | null
+  mntTransportIntern: runtime.Decimal | null
+  mntTransit: runtime.Decimal | null
+  mntMagasinage: runtime.Decimal | null
+  prixAchatDetaille: runtime.Decimal | null
+  totalAllMnt: runtime.Decimal | null
   repertoireFourId: bigint | null
   employeOperateurId: bigint | null
 }
@@ -339,18 +339,18 @@ export type ImportationsGroupByOutputType = {
   dateFacture: Date
   sysDate: Date
   dateAvances1: Date
-  mantantAvancs1: number
+  mantantAvancs1: runtime.Decimal
   dateAvances2: Date
-  mantantAvancs2: number
-  totalPaye: number
-  mntFacture: number
-  mntDouane: number
-  mntTransport: number
-  mntTransportIntern: number
-  mntTransit: number
-  mntMagasinage: number
-  prixAchatDetaille: number
-  totalAllMnt: number
+  mantantAvancs2: runtime.Decimal
+  totalPaye: runtime.Decimal
+  mntFacture: runtime.Decimal
+  mntDouane: runtime.Decimal
+  mntTransport: runtime.Decimal
+  mntTransportIntern: runtime.Decimal
+  mntTransit: runtime.Decimal
+  mntMagasinage: runtime.Decimal
+  prixAchatDetaille: runtime.Decimal
+  totalAllMnt: runtime.Decimal
   repertoireFourId: bigint
   employeOperateurId: bigint
   _count: ImportationsCountAggregateOutputType | null
@@ -386,18 +386,18 @@ export type ImportationsWhereInput = {
   dateFacture?: Prisma.DateTimeFilter<"Importations"> | Date | string
   sysDate?: Prisma.DateTimeFilter<"Importations"> | Date | string
   dateAvances1?: Prisma.DateTimeFilter<"Importations"> | Date | string
-  mantantAvancs1?: Prisma.FloatFilter<"Importations"> | number
+  mantantAvancs1?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   dateAvances2?: Prisma.DateTimeFilter<"Importations"> | Date | string
-  mantantAvancs2?: Prisma.FloatFilter<"Importations"> | number
-  totalPaye?: Prisma.FloatFilter<"Importations"> | number
-  mntFacture?: Prisma.FloatFilter<"Importations"> | number
-  mntDouane?: Prisma.FloatFilter<"Importations"> | number
-  mntTransport?: Prisma.FloatFilter<"Importations"> | number
-  mntTransportIntern?: Prisma.FloatFilter<"Importations"> | number
-  mntTransit?: Prisma.FloatFilter<"Importations"> | number
-  mntMagasinage?: Prisma.FloatFilter<"Importations"> | number
-  prixAchatDetaille?: Prisma.FloatFilter<"Importations"> | number
-  totalAllMnt?: Prisma.FloatFilter<"Importations"> | number
+  mantantAvancs2?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalPaye?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFacture?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntDouane?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransport?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransportIntern?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransit?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntMagasinage?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatDetaille?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAllMnt?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireFourId?: Prisma.BigIntFilter<"Importations"> | bigint | number
   employeOperateurId?: Prisma.BigIntFilter<"Importations"> | bigint | number
   repertoireFour?: Prisma.XOR<Prisma.RepertoireScalarRelationFilter, Prisma.RepertoireWhereInput>
@@ -444,18 +444,18 @@ export type ImportationsWhereUniqueInput = Prisma.AtLeast<{
   dateFacture?: Prisma.DateTimeFilter<"Importations"> | Date | string
   sysDate?: Prisma.DateTimeFilter<"Importations"> | Date | string
   dateAvances1?: Prisma.DateTimeFilter<"Importations"> | Date | string
-  mantantAvancs1?: Prisma.FloatFilter<"Importations"> | number
+  mantantAvancs1?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   dateAvances2?: Prisma.DateTimeFilter<"Importations"> | Date | string
-  mantantAvancs2?: Prisma.FloatFilter<"Importations"> | number
-  totalPaye?: Prisma.FloatFilter<"Importations"> | number
-  mntFacture?: Prisma.FloatFilter<"Importations"> | number
-  mntDouane?: Prisma.FloatFilter<"Importations"> | number
-  mntTransport?: Prisma.FloatFilter<"Importations"> | number
-  mntTransportIntern?: Prisma.FloatFilter<"Importations"> | number
-  mntTransit?: Prisma.FloatFilter<"Importations"> | number
-  mntMagasinage?: Prisma.FloatFilter<"Importations"> | number
-  prixAchatDetaille?: Prisma.FloatFilter<"Importations"> | number
-  totalAllMnt?: Prisma.FloatFilter<"Importations"> | number
+  mantantAvancs2?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalPaye?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFacture?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntDouane?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransport?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransportIntern?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransit?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntMagasinage?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatDetaille?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAllMnt?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireFourId?: Prisma.BigIntFilter<"Importations"> | bigint | number
   employeOperateurId?: Prisma.BigIntFilter<"Importations"> | bigint | number
   repertoireFour?: Prisma.XOR<Prisma.RepertoireScalarRelationFilter, Prisma.RepertoireWhereInput>
@@ -503,18 +503,18 @@ export type ImportationsScalarWhereWithAggregatesInput = {
   dateFacture?: Prisma.DateTimeWithAggregatesFilter<"Importations"> | Date | string
   sysDate?: Prisma.DateTimeWithAggregatesFilter<"Importations"> | Date | string
   dateAvances1?: Prisma.DateTimeWithAggregatesFilter<"Importations"> | Date | string
-  mantantAvancs1?: Prisma.FloatWithAggregatesFilter<"Importations"> | number
+  mantantAvancs1?: Prisma.DecimalWithAggregatesFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   dateAvances2?: Prisma.DateTimeWithAggregatesFilter<"Importations"> | Date | string
-  mantantAvancs2?: Prisma.FloatWithAggregatesFilter<"Importations"> | number
-  totalPaye?: Prisma.FloatWithAggregatesFilter<"Importations"> | number
-  mntFacture?: Prisma.FloatWithAggregatesFilter<"Importations"> | number
-  mntDouane?: Prisma.FloatWithAggregatesFilter<"Importations"> | number
-  mntTransport?: Prisma.FloatWithAggregatesFilter<"Importations"> | number
-  mntTransportIntern?: Prisma.FloatWithAggregatesFilter<"Importations"> | number
-  mntTransit?: Prisma.FloatWithAggregatesFilter<"Importations"> | number
-  mntMagasinage?: Prisma.FloatWithAggregatesFilter<"Importations"> | number
-  prixAchatDetaille?: Prisma.FloatWithAggregatesFilter<"Importations"> | number
-  totalAllMnt?: Prisma.FloatWithAggregatesFilter<"Importations"> | number
+  mantantAvancs2?: Prisma.DecimalWithAggregatesFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalPaye?: Prisma.DecimalWithAggregatesFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFacture?: Prisma.DecimalWithAggregatesFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntDouane?: Prisma.DecimalWithAggregatesFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransport?: Prisma.DecimalWithAggregatesFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransportIntern?: Prisma.DecimalWithAggregatesFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransit?: Prisma.DecimalWithAggregatesFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntMagasinage?: Prisma.DecimalWithAggregatesFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatDetaille?: Prisma.DecimalWithAggregatesFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAllMnt?: Prisma.DecimalWithAggregatesFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireFourId?: Prisma.BigIntWithAggregatesFilter<"Importations"> | bigint | number
   employeOperateurId?: Prisma.BigIntWithAggregatesFilter<"Importations"> | bigint | number
 }
@@ -527,18 +527,18 @@ export type ImportationsCreateInput = {
   dateFacture: Date | string
   sysDate: Date | string
   dateAvances1: Date | string
-  mantantAvancs1: number
+  mantantAvancs1: runtime.Decimal | runtime.DecimalJsLike | number | string
   dateAvances2: Date | string
-  mantantAvancs2: number
-  totalPaye: number
-  mntFacture: number
-  mntDouane: number
-  mntTransport: number
-  mntTransportIntern: number
-  mntTransit: number
-  mntMagasinage: number
-  prixAchatDetaille: number
-  totalAllMnt: number
+  mantantAvancs2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalPaye: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFacture: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntDouane: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransportIntern: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntMagasinage: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatDetaille: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAllMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireFour: Prisma.RepertoireCreateNestedOneWithoutImportationsInput
   employeOperateur: Prisma.EmployeCreateNestedOneWithoutImportationsInput
   detImportations?: Prisma.DetImportationsCreateNestedManyWithoutImportationsInput
@@ -552,18 +552,18 @@ export type ImportationsUncheckedCreateInput = {
   dateFacture: Date | string
   sysDate: Date | string
   dateAvances1: Date | string
-  mantantAvancs1: number
+  mantantAvancs1: runtime.Decimal | runtime.DecimalJsLike | number | string
   dateAvances2: Date | string
-  mantantAvancs2: number
-  totalPaye: number
-  mntFacture: number
-  mntDouane: number
-  mntTransport: number
-  mntTransportIntern: number
-  mntTransit: number
-  mntMagasinage: number
-  prixAchatDetaille: number
-  totalAllMnt: number
+  mantantAvancs2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalPaye: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFacture: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntDouane: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransportIntern: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntMagasinage: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatDetaille: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAllMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireFourId: bigint | number
   employeOperateurId: bigint | number
   detImportations?: Prisma.DetImportationsUncheckedCreateNestedManyWithoutImportationsInput
@@ -577,18 +577,18 @@ export type ImportationsUpdateInput = {
   dateFacture?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateAvances1?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantAvancs1?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAvancs1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   dateAvances2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantAvancs2?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalPaye?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntFacture?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntDouane?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransport?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransportIntern?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransit?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntMagasinage?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixAchatDetaille?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalAllMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAvancs2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalPaye?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFacture?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntDouane?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransportIntern?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntMagasinage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatDetaille?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAllMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireFour?: Prisma.RepertoireUpdateOneRequiredWithoutImportationsNestedInput
   employeOperateur?: Prisma.EmployeUpdateOneRequiredWithoutImportationsNestedInput
   detImportations?: Prisma.DetImportationsUpdateManyWithoutImportationsNestedInput
@@ -602,18 +602,18 @@ export type ImportationsUncheckedUpdateInput = {
   dateFacture?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateAvances1?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantAvancs1?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAvancs1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   dateAvances2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantAvancs2?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalPaye?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntFacture?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntDouane?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransport?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransportIntern?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransit?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntMagasinage?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixAchatDetaille?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalAllMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAvancs2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalPaye?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFacture?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntDouane?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransportIntern?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntMagasinage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatDetaille?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAllMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireFourId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detImportations?: Prisma.DetImportationsUncheckedUpdateManyWithoutImportationsNestedInput
@@ -627,18 +627,18 @@ export type ImportationsCreateManyInput = {
   dateFacture: Date | string
   sysDate: Date | string
   dateAvances1: Date | string
-  mantantAvancs1: number
+  mantantAvancs1: runtime.Decimal | runtime.DecimalJsLike | number | string
   dateAvances2: Date | string
-  mantantAvancs2: number
-  totalPaye: number
-  mntFacture: number
-  mntDouane: number
-  mntTransport: number
-  mntTransportIntern: number
-  mntTransit: number
-  mntMagasinage: number
-  prixAchatDetaille: number
-  totalAllMnt: number
+  mantantAvancs2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalPaye: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFacture: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntDouane: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransportIntern: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntMagasinage: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatDetaille: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAllMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireFourId: bigint | number
   employeOperateurId: bigint | number
 }
@@ -651,18 +651,18 @@ export type ImportationsUpdateManyMutationInput = {
   dateFacture?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateAvances1?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantAvancs1?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAvancs1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   dateAvances2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantAvancs2?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalPaye?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntFacture?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntDouane?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransport?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransportIntern?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransit?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntMagasinage?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixAchatDetaille?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalAllMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAvancs2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalPaye?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFacture?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntDouane?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransportIntern?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntMagasinage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatDetaille?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAllMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type ImportationsUncheckedUpdateManyInput = {
@@ -673,18 +673,18 @@ export type ImportationsUncheckedUpdateManyInput = {
   dateFacture?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateAvances1?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantAvancs1?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAvancs1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   dateAvances2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantAvancs2?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalPaye?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntFacture?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntDouane?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransport?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransportIntern?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransit?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntMagasinage?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixAchatDetaille?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalAllMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAvancs2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalPaye?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFacture?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntDouane?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransportIntern?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntMagasinage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatDetaille?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAllMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireFourId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
@@ -924,18 +924,18 @@ export type ImportationsCreateWithoutRepertoireFourInput = {
   dateFacture: Date | string
   sysDate: Date | string
   dateAvances1: Date | string
-  mantantAvancs1: number
+  mantantAvancs1: runtime.Decimal | runtime.DecimalJsLike | number | string
   dateAvances2: Date | string
-  mantantAvancs2: number
-  totalPaye: number
-  mntFacture: number
-  mntDouane: number
-  mntTransport: number
-  mntTransportIntern: number
-  mntTransit: number
-  mntMagasinage: number
-  prixAchatDetaille: number
-  totalAllMnt: number
+  mantantAvancs2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalPaye: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFacture: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntDouane: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransportIntern: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntMagasinage: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatDetaille: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAllMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   employeOperateur: Prisma.EmployeCreateNestedOneWithoutImportationsInput
   detImportations?: Prisma.DetImportationsCreateNestedManyWithoutImportationsInput
 }
@@ -948,18 +948,18 @@ export type ImportationsUncheckedCreateWithoutRepertoireFourInput = {
   dateFacture: Date | string
   sysDate: Date | string
   dateAvances1: Date | string
-  mantantAvancs1: number
+  mantantAvancs1: runtime.Decimal | runtime.DecimalJsLike | number | string
   dateAvances2: Date | string
-  mantantAvancs2: number
-  totalPaye: number
-  mntFacture: number
-  mntDouane: number
-  mntTransport: number
-  mntTransportIntern: number
-  mntTransit: number
-  mntMagasinage: number
-  prixAchatDetaille: number
-  totalAllMnt: number
+  mantantAvancs2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalPaye: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFacture: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntDouane: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransportIntern: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntMagasinage: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatDetaille: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAllMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   employeOperateurId: bigint | number
   detImportations?: Prisma.DetImportationsUncheckedCreateNestedManyWithoutImportationsInput
 }
@@ -1001,18 +1001,18 @@ export type ImportationsScalarWhereInput = {
   dateFacture?: Prisma.DateTimeFilter<"Importations"> | Date | string
   sysDate?: Prisma.DateTimeFilter<"Importations"> | Date | string
   dateAvances1?: Prisma.DateTimeFilter<"Importations"> | Date | string
-  mantantAvancs1?: Prisma.FloatFilter<"Importations"> | number
+  mantantAvancs1?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   dateAvances2?: Prisma.DateTimeFilter<"Importations"> | Date | string
-  mantantAvancs2?: Prisma.FloatFilter<"Importations"> | number
-  totalPaye?: Prisma.FloatFilter<"Importations"> | number
-  mntFacture?: Prisma.FloatFilter<"Importations"> | number
-  mntDouane?: Prisma.FloatFilter<"Importations"> | number
-  mntTransport?: Prisma.FloatFilter<"Importations"> | number
-  mntTransportIntern?: Prisma.FloatFilter<"Importations"> | number
-  mntTransit?: Prisma.FloatFilter<"Importations"> | number
-  mntMagasinage?: Prisma.FloatFilter<"Importations"> | number
-  prixAchatDetaille?: Prisma.FloatFilter<"Importations"> | number
-  totalAllMnt?: Prisma.FloatFilter<"Importations"> | number
+  mantantAvancs2?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalPaye?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFacture?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntDouane?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransport?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransportIntern?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransit?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntMagasinage?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatDetaille?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAllMnt?: Prisma.DecimalFilter<"Importations"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireFourId?: Prisma.BigIntFilter<"Importations"> | bigint | number
   employeOperateurId?: Prisma.BigIntFilter<"Importations"> | bigint | number
 }
@@ -1025,18 +1025,18 @@ export type ImportationsCreateWithoutEmployeOperateurInput = {
   dateFacture: Date | string
   sysDate: Date | string
   dateAvances1: Date | string
-  mantantAvancs1: number
+  mantantAvancs1: runtime.Decimal | runtime.DecimalJsLike | number | string
   dateAvances2: Date | string
-  mantantAvancs2: number
-  totalPaye: number
-  mntFacture: number
-  mntDouane: number
-  mntTransport: number
-  mntTransportIntern: number
-  mntTransit: number
-  mntMagasinage: number
-  prixAchatDetaille: number
-  totalAllMnt: number
+  mantantAvancs2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalPaye: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFacture: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntDouane: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransportIntern: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntMagasinage: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatDetaille: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAllMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireFour: Prisma.RepertoireCreateNestedOneWithoutImportationsInput
   detImportations?: Prisma.DetImportationsCreateNestedManyWithoutImportationsInput
 }
@@ -1049,18 +1049,18 @@ export type ImportationsUncheckedCreateWithoutEmployeOperateurInput = {
   dateFacture: Date | string
   sysDate: Date | string
   dateAvances1: Date | string
-  mantantAvancs1: number
+  mantantAvancs1: runtime.Decimal | runtime.DecimalJsLike | number | string
   dateAvances2: Date | string
-  mantantAvancs2: number
-  totalPaye: number
-  mntFacture: number
-  mntDouane: number
-  mntTransport: number
-  mntTransportIntern: number
-  mntTransit: number
-  mntMagasinage: number
-  prixAchatDetaille: number
-  totalAllMnt: number
+  mantantAvancs2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalPaye: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFacture: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntDouane: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransportIntern: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntMagasinage: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatDetaille: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAllMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireFourId: bigint | number
   detImportations?: Prisma.DetImportationsUncheckedCreateNestedManyWithoutImportationsInput
 }
@@ -1099,18 +1099,18 @@ export type ImportationsCreateWithoutDetImportationsInput = {
   dateFacture: Date | string
   sysDate: Date | string
   dateAvances1: Date | string
-  mantantAvancs1: number
+  mantantAvancs1: runtime.Decimal | runtime.DecimalJsLike | number | string
   dateAvances2: Date | string
-  mantantAvancs2: number
-  totalPaye: number
-  mntFacture: number
-  mntDouane: number
-  mntTransport: number
-  mntTransportIntern: number
-  mntTransit: number
-  mntMagasinage: number
-  prixAchatDetaille: number
-  totalAllMnt: number
+  mantantAvancs2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalPaye: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFacture: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntDouane: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransportIntern: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntMagasinage: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatDetaille: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAllMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireFour: Prisma.RepertoireCreateNestedOneWithoutImportationsInput
   employeOperateur: Prisma.EmployeCreateNestedOneWithoutImportationsInput
 }
@@ -1123,18 +1123,18 @@ export type ImportationsUncheckedCreateWithoutDetImportationsInput = {
   dateFacture: Date | string
   sysDate: Date | string
   dateAvances1: Date | string
-  mantantAvancs1: number
+  mantantAvancs1: runtime.Decimal | runtime.DecimalJsLike | number | string
   dateAvances2: Date | string
-  mantantAvancs2: number
-  totalPaye: number
-  mntFacture: number
-  mntDouane: number
-  mntTransport: number
-  mntTransportIntern: number
-  mntTransit: number
-  mntMagasinage: number
-  prixAchatDetaille: number
-  totalAllMnt: number
+  mantantAvancs2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalPaye: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFacture: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntDouane: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransportIntern: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntMagasinage: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatDetaille: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAllMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireFourId: bigint | number
   employeOperateurId: bigint | number
 }
@@ -1163,18 +1163,18 @@ export type ImportationsUpdateWithoutDetImportationsInput = {
   dateFacture?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateAvances1?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantAvancs1?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAvancs1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   dateAvances2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantAvancs2?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalPaye?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntFacture?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntDouane?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransport?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransportIntern?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransit?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntMagasinage?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixAchatDetaille?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalAllMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAvancs2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalPaye?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFacture?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntDouane?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransportIntern?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntMagasinage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatDetaille?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAllMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireFour?: Prisma.RepertoireUpdateOneRequiredWithoutImportationsNestedInput
   employeOperateur?: Prisma.EmployeUpdateOneRequiredWithoutImportationsNestedInput
 }
@@ -1187,18 +1187,18 @@ export type ImportationsUncheckedUpdateWithoutDetImportationsInput = {
   dateFacture?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateAvances1?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantAvancs1?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAvancs1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   dateAvances2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantAvancs2?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalPaye?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntFacture?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntDouane?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransport?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransportIntern?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransit?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntMagasinage?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixAchatDetaille?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalAllMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAvancs2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalPaye?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFacture?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntDouane?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransportIntern?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntMagasinage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatDetaille?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAllMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireFourId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
@@ -1211,18 +1211,18 @@ export type ImportationsCreateManyRepertoireFourInput = {
   dateFacture: Date | string
   sysDate: Date | string
   dateAvances1: Date | string
-  mantantAvancs1: number
+  mantantAvancs1: runtime.Decimal | runtime.DecimalJsLike | number | string
   dateAvances2: Date | string
-  mantantAvancs2: number
-  totalPaye: number
-  mntFacture: number
-  mntDouane: number
-  mntTransport: number
-  mntTransportIntern: number
-  mntTransit: number
-  mntMagasinage: number
-  prixAchatDetaille: number
-  totalAllMnt: number
+  mantantAvancs2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalPaye: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFacture: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntDouane: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransportIntern: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntMagasinage: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatDetaille: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAllMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   employeOperateurId: bigint | number
 }
 
@@ -1234,18 +1234,18 @@ export type ImportationsUpdateWithoutRepertoireFourInput = {
   dateFacture?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateAvances1?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantAvancs1?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAvancs1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   dateAvances2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantAvancs2?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalPaye?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntFacture?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntDouane?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransport?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransportIntern?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransit?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntMagasinage?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixAchatDetaille?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalAllMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAvancs2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalPaye?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFacture?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntDouane?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransportIntern?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntMagasinage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatDetaille?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAllMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   employeOperateur?: Prisma.EmployeUpdateOneRequiredWithoutImportationsNestedInput
   detImportations?: Prisma.DetImportationsUpdateManyWithoutImportationsNestedInput
 }
@@ -1258,18 +1258,18 @@ export type ImportationsUncheckedUpdateWithoutRepertoireFourInput = {
   dateFacture?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateAvances1?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantAvancs1?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAvancs1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   dateAvances2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantAvancs2?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalPaye?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntFacture?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntDouane?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransport?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransportIntern?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransit?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntMagasinage?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixAchatDetaille?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalAllMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAvancs2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalPaye?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFacture?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntDouane?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransportIntern?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntMagasinage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatDetaille?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAllMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detImportations?: Prisma.DetImportationsUncheckedUpdateManyWithoutImportationsNestedInput
 }
@@ -1282,18 +1282,18 @@ export type ImportationsUncheckedUpdateManyWithoutRepertoireFourInput = {
   dateFacture?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateAvances1?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantAvancs1?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAvancs1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   dateAvances2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantAvancs2?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalPaye?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntFacture?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntDouane?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransport?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransportIntern?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransit?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntMagasinage?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixAchatDetaille?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalAllMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAvancs2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalPaye?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFacture?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntDouane?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransportIntern?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntMagasinage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatDetaille?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAllMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
@@ -1305,18 +1305,18 @@ export type ImportationsCreateManyEmployeOperateurInput = {
   dateFacture: Date | string
   sysDate: Date | string
   dateAvances1: Date | string
-  mantantAvancs1: number
+  mantantAvancs1: runtime.Decimal | runtime.DecimalJsLike | number | string
   dateAvances2: Date | string
-  mantantAvancs2: number
-  totalPaye: number
-  mntFacture: number
-  mntDouane: number
-  mntTransport: number
-  mntTransportIntern: number
-  mntTransit: number
-  mntMagasinage: number
-  prixAchatDetaille: number
-  totalAllMnt: number
+  mantantAvancs2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalPaye: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFacture: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntDouane: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransport: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransportIntern: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransit: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntMagasinage: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatDetaille: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAllMnt: runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireFourId: bigint | number
 }
 
@@ -1328,18 +1328,18 @@ export type ImportationsUpdateWithoutEmployeOperateurInput = {
   dateFacture?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateAvances1?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantAvancs1?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAvancs1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   dateAvances2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantAvancs2?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalPaye?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntFacture?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntDouane?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransport?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransportIntern?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransit?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntMagasinage?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixAchatDetaille?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalAllMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAvancs2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalPaye?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFacture?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntDouane?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransportIntern?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntMagasinage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatDetaille?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAllMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireFour?: Prisma.RepertoireUpdateOneRequiredWithoutImportationsNestedInput
   detImportations?: Prisma.DetImportationsUpdateManyWithoutImportationsNestedInput
 }
@@ -1352,18 +1352,18 @@ export type ImportationsUncheckedUpdateWithoutEmployeOperateurInput = {
   dateFacture?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateAvances1?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantAvancs1?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAvancs1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   dateAvances2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantAvancs2?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalPaye?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntFacture?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntDouane?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransport?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransportIntern?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransit?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntMagasinage?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixAchatDetaille?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalAllMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAvancs2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalPaye?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFacture?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntDouane?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransportIntern?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntMagasinage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatDetaille?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAllMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireFourId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detImportations?: Prisma.DetImportationsUncheckedUpdateManyWithoutImportationsNestedInput
 }
@@ -1376,18 +1376,18 @@ export type ImportationsUncheckedUpdateManyWithoutEmployeOperateurInput = {
   dateFacture?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateAvances1?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantAvancs1?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAvancs1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   dateAvances2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  mantantAvancs2?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalPaye?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntFacture?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntDouane?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransport?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransportIntern?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntTransit?: Prisma.FloatFieldUpdateOperationsInput | number
-  mntMagasinage?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixAchatDetaille?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalAllMnt?: Prisma.FloatFieldUpdateOperationsInput | number
+  mantantAvancs2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalPaye?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntFacture?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntDouane?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransport?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransportIntern?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntTransit?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntMagasinage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatDetaille?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAllMnt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   repertoireFourId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
@@ -1499,18 +1499,18 @@ export type $ImportationsPayload<ExtArgs extends runtime.Types.Extensions.Intern
     dateFacture: Date
     sysDate: Date
     dateAvances1: Date
-    mantantAvancs1: number
+    mantantAvancs1: runtime.Decimal
     dateAvances2: Date
-    mantantAvancs2: number
-    totalPaye: number
-    mntFacture: number
-    mntDouane: number
-    mntTransport: number
-    mntTransportIntern: number
-    mntTransit: number
-    mntMagasinage: number
-    prixAchatDetaille: number
-    totalAllMnt: number
+    mantantAvancs2: runtime.Decimal
+    totalPaye: runtime.Decimal
+    mntFacture: runtime.Decimal
+    mntDouane: runtime.Decimal
+    mntTransport: runtime.Decimal
+    mntTransportIntern: runtime.Decimal
+    mntTransit: runtime.Decimal
+    mntMagasinage: runtime.Decimal
+    prixAchatDetaille: runtime.Decimal
+    totalAllMnt: runtime.Decimal
     repertoireFourId: bigint
     employeOperateurId: bigint
   }, ExtArgs["result"]["importations"]>
@@ -1892,18 +1892,18 @@ export interface ImportationsFieldRefs {
   readonly dateFacture: Prisma.FieldRef<"Importations", 'DateTime'>
   readonly sysDate: Prisma.FieldRef<"Importations", 'DateTime'>
   readonly dateAvances1: Prisma.FieldRef<"Importations", 'DateTime'>
-  readonly mantantAvancs1: Prisma.FieldRef<"Importations", 'Float'>
+  readonly mantantAvancs1: Prisma.FieldRef<"Importations", 'Decimal'>
   readonly dateAvances2: Prisma.FieldRef<"Importations", 'DateTime'>
-  readonly mantantAvancs2: Prisma.FieldRef<"Importations", 'Float'>
-  readonly totalPaye: Prisma.FieldRef<"Importations", 'Float'>
-  readonly mntFacture: Prisma.FieldRef<"Importations", 'Float'>
-  readonly mntDouane: Prisma.FieldRef<"Importations", 'Float'>
-  readonly mntTransport: Prisma.FieldRef<"Importations", 'Float'>
-  readonly mntTransportIntern: Prisma.FieldRef<"Importations", 'Float'>
-  readonly mntTransit: Prisma.FieldRef<"Importations", 'Float'>
-  readonly mntMagasinage: Prisma.FieldRef<"Importations", 'Float'>
-  readonly prixAchatDetaille: Prisma.FieldRef<"Importations", 'Float'>
-  readonly totalAllMnt: Prisma.FieldRef<"Importations", 'Float'>
+  readonly mantantAvancs2: Prisma.FieldRef<"Importations", 'Decimal'>
+  readonly totalPaye: Prisma.FieldRef<"Importations", 'Decimal'>
+  readonly mntFacture: Prisma.FieldRef<"Importations", 'Decimal'>
+  readonly mntDouane: Prisma.FieldRef<"Importations", 'Decimal'>
+  readonly mntTransport: Prisma.FieldRef<"Importations", 'Decimal'>
+  readonly mntTransportIntern: Prisma.FieldRef<"Importations", 'Decimal'>
+  readonly mntTransit: Prisma.FieldRef<"Importations", 'Decimal'>
+  readonly mntMagasinage: Prisma.FieldRef<"Importations", 'Decimal'>
+  readonly prixAchatDetaille: Prisma.FieldRef<"Importations", 'Decimal'>
+  readonly totalAllMnt: Prisma.FieldRef<"Importations", 'Decimal'>
   readonly repertoireFourId: Prisma.FieldRef<"Importations", 'BigInt'>
   readonly employeOperateurId: Prisma.FieldRef<"Importations", 'BigInt'>
 }

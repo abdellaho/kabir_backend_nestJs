@@ -28,26 +28,26 @@ export type AggregatePrime = {
 
 export type PrimeAvgAggregateOutputType = {
   id: number | null
-  montant: number | null
-  prime: number | null
+  montant: runtime.Decimal | null
+  prime: runtime.Decimal | null
 }
 
 export type PrimeSumAggregateOutputType = {
   id: bigint | null
-  montant: number | null
-  prime: number | null
+  montant: runtime.Decimal | null
+  prime: runtime.Decimal | null
 }
 
 export type PrimeMinAggregateOutputType = {
   id: bigint | null
-  montant: number | null
-  prime: number | null
+  montant: runtime.Decimal | null
+  prime: runtime.Decimal | null
 }
 
 export type PrimeMaxAggregateOutputType = {
   id: bigint | null
-  montant: number | null
-  prime: number | null
+  montant: runtime.Decimal | null
+  prime: runtime.Decimal | null
 }
 
 export type PrimeCountAggregateOutputType = {
@@ -177,8 +177,8 @@ export type PrimeGroupByArgs<ExtArgs extends runtime.Types.Extensions.InternalAr
 
 export type PrimeGroupByOutputType = {
   id: bigint
-  montant: number
-  prime: number
+  montant: runtime.Decimal
+  prime: runtime.Decimal
   _count: PrimeCountAggregateOutputType | null
   _avg: PrimeAvgAggregateOutputType | null
   _sum: PrimeSumAggregateOutputType | null
@@ -206,8 +206,8 @@ export type PrimeWhereInput = {
   OR?: Prisma.PrimeWhereInput[]
   NOT?: Prisma.PrimeWhereInput | Prisma.PrimeWhereInput[]
   id?: Prisma.BigIntFilter<"Prime"> | bigint | number
-  montant?: Prisma.FloatFilter<"Prime"> | number
-  prime?: Prisma.FloatFilter<"Prime"> | number
+  montant?: Prisma.DecimalFilter<"Prime"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime?: Prisma.DecimalFilter<"Prime"> | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type PrimeOrderByWithRelationInput = {
@@ -221,8 +221,8 @@ export type PrimeWhereUniqueInput = Prisma.AtLeast<{
   AND?: Prisma.PrimeWhereInput | Prisma.PrimeWhereInput[]
   OR?: Prisma.PrimeWhereInput[]
   NOT?: Prisma.PrimeWhereInput | Prisma.PrimeWhereInput[]
-  montant?: Prisma.FloatFilter<"Prime"> | number
-  prime?: Prisma.FloatFilter<"Prime"> | number
+  montant?: Prisma.DecimalFilter<"Prime"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime?: Prisma.DecimalFilter<"Prime"> | runtime.Decimal | runtime.DecimalJsLike | number | string
 }, "id">
 
 export type PrimeOrderByWithAggregationInput = {
@@ -241,50 +241,50 @@ export type PrimeScalarWhereWithAggregatesInput = {
   OR?: Prisma.PrimeScalarWhereWithAggregatesInput[]
   NOT?: Prisma.PrimeScalarWhereWithAggregatesInput | Prisma.PrimeScalarWhereWithAggregatesInput[]
   id?: Prisma.BigIntWithAggregatesFilter<"Prime"> | bigint | number
-  montant?: Prisma.FloatWithAggregatesFilter<"Prime"> | number
-  prime?: Prisma.FloatWithAggregatesFilter<"Prime"> | number
+  montant?: Prisma.DecimalWithAggregatesFilter<"Prime"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime?: Prisma.DecimalWithAggregatesFilter<"Prime"> | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type PrimeCreateInput = {
   id?: bigint | number
-  montant: number
-  prime: number
+  montant: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type PrimeUncheckedCreateInput = {
   id?: bigint | number
-  montant: number
-  prime: number
+  montant: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type PrimeUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  montant?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type PrimeUncheckedUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  montant?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type PrimeCreateManyInput = {
   id?: bigint | number
-  montant: number
-  prime: number
+  montant: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type PrimeUpdateManyMutationInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  montant?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type PrimeUncheckedUpdateManyInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  montant?: Prisma.FloatFieldUpdateOperationsInput | number
-  prime?: Prisma.FloatFieldUpdateOperationsInput | number
+  montant?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prime?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type PrimeCountOrderByAggregateInput = {
@@ -340,8 +340,8 @@ export type $PrimePayload<ExtArgs extends runtime.Types.Extensions.InternalArgs 
   objects: {}
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: bigint
-    montant: number
-    prime: number
+    montant: runtime.Decimal
+    prime: runtime.Decimal
   }, ExtArgs["result"]["prime"]>
   composites: {}
 }
@@ -712,8 +712,8 @@ export interface Prisma__PrimeClient<T, Null = never, ExtArgs extends runtime.Ty
  */
 export interface PrimeFieldRefs {
   readonly id: Prisma.FieldRef<"Prime", 'BigInt'>
-  readonly montant: Prisma.FieldRef<"Prime", 'Float'>
-  readonly prime: Prisma.FieldRef<"Prime", 'Float'>
+  readonly montant: Prisma.FieldRef<"Prime", 'Decimal'>
+  readonly prime: Prisma.FieldRef<"Prime", 'Decimal'>
 }
     
 

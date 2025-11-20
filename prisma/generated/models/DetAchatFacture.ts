@@ -30,17 +30,17 @@ export type DetAchatFactureAvgAggregateOutputType = {
   id: number | null
   unitegratuit: number | null
   qteacheter: number | null
-  prixAchatHt: number | null
-  prixAchatTtc: number | null
-  remiseAchat: number | null
-  prixVenteTtc: number | null
-  mantantHt: number | null
-  mantantTTC: number | null
-  prixVenteAchatHT: number | null
-  beneficeDH: number | null
-  benepourcentage: number | null
-  tva20: number | null
-  tva7: number | null
+  prixAchatHt: runtime.Decimal | null
+  prixAchatTtc: runtime.Decimal | null
+  remiseAchat: runtime.Decimal | null
+  prixVenteTtc: runtime.Decimal | null
+  mantantHt: runtime.Decimal | null
+  mantantTTC: runtime.Decimal | null
+  prixVenteAchatHT: runtime.Decimal | null
+  beneficeDH: runtime.Decimal | null
+  benepourcentage: runtime.Decimal | null
+  tva20: runtime.Decimal | null
+  tva7: runtime.Decimal | null
   achatFactureId: number | null
   stockId: number | null
 }
@@ -49,17 +49,17 @@ export type DetAchatFactureSumAggregateOutputType = {
   id: bigint | null
   unitegratuit: number | null
   qteacheter: number | null
-  prixAchatHt: number | null
-  prixAchatTtc: number | null
-  remiseAchat: number | null
-  prixVenteTtc: number | null
-  mantantHt: number | null
-  mantantTTC: number | null
-  prixVenteAchatHT: number | null
-  beneficeDH: number | null
-  benepourcentage: number | null
-  tva20: number | null
-  tva7: number | null
+  prixAchatHt: runtime.Decimal | null
+  prixAchatTtc: runtime.Decimal | null
+  remiseAchat: runtime.Decimal | null
+  prixVenteTtc: runtime.Decimal | null
+  mantantHt: runtime.Decimal | null
+  mantantTTC: runtime.Decimal | null
+  prixVenteAchatHT: runtime.Decimal | null
+  beneficeDH: runtime.Decimal | null
+  benepourcentage: runtime.Decimal | null
+  tva20: runtime.Decimal | null
+  tva7: runtime.Decimal | null
   achatFactureId: bigint | null
   stockId: bigint | null
 }
@@ -68,17 +68,17 @@ export type DetAchatFactureMinAggregateOutputType = {
   id: bigint | null
   unitegratuit: number | null
   qteacheter: number | null
-  prixAchatHt: number | null
-  prixAchatTtc: number | null
-  remiseAchat: number | null
-  prixVenteTtc: number | null
-  mantantHt: number | null
-  mantantTTC: number | null
-  prixVenteAchatHT: number | null
-  beneficeDH: number | null
-  benepourcentage: number | null
-  tva20: number | null
-  tva7: number | null
+  prixAchatHt: runtime.Decimal | null
+  prixAchatTtc: runtime.Decimal | null
+  remiseAchat: runtime.Decimal | null
+  prixVenteTtc: runtime.Decimal | null
+  mantantHt: runtime.Decimal | null
+  mantantTTC: runtime.Decimal | null
+  prixVenteAchatHT: runtime.Decimal | null
+  beneficeDH: runtime.Decimal | null
+  benepourcentage: runtime.Decimal | null
+  tva20: runtime.Decimal | null
+  tva7: runtime.Decimal | null
   achatFactureId: bigint | null
   stockId: bigint | null
 }
@@ -87,17 +87,17 @@ export type DetAchatFactureMaxAggregateOutputType = {
   id: bigint | null
   unitegratuit: number | null
   qteacheter: number | null
-  prixAchatHt: number | null
-  prixAchatTtc: number | null
-  remiseAchat: number | null
-  prixVenteTtc: number | null
-  mantantHt: number | null
-  mantantTTC: number | null
-  prixVenteAchatHT: number | null
-  beneficeDH: number | null
-  benepourcentage: number | null
-  tva20: number | null
-  tva7: number | null
+  prixAchatHt: runtime.Decimal | null
+  prixAchatTtc: runtime.Decimal | null
+  remiseAchat: runtime.Decimal | null
+  prixVenteTtc: runtime.Decimal | null
+  mantantHt: runtime.Decimal | null
+  mantantTTC: runtime.Decimal | null
+  prixVenteAchatHT: runtime.Decimal | null
+  beneficeDH: runtime.Decimal | null
+  benepourcentage: runtime.Decimal | null
+  tva20: runtime.Decimal | null
+  tva7: runtime.Decimal | null
   achatFactureId: bigint | null
   stockId: bigint | null
 }
@@ -309,17 +309,17 @@ export type DetAchatFactureGroupByOutputType = {
   id: bigint
   unitegratuit: number
   qteacheter: number
-  prixAchatHt: number
-  prixAchatTtc: number
-  remiseAchat: number
-  prixVenteTtc: number
-  mantantHt: number
-  mantantTTC: number
-  prixVenteAchatHT: number
-  beneficeDH: number
-  benepourcentage: number
-  tva20: number
-  tva7: number
+  prixAchatHt: runtime.Decimal
+  prixAchatTtc: runtime.Decimal
+  remiseAchat: runtime.Decimal
+  prixVenteTtc: runtime.Decimal
+  mantantHt: runtime.Decimal
+  mantantTTC: runtime.Decimal
+  prixVenteAchatHT: runtime.Decimal
+  beneficeDH: runtime.Decimal
+  benepourcentage: runtime.Decimal
+  tva20: runtime.Decimal
+  tva7: runtime.Decimal
   achatFactureId: bigint
   stockId: bigint
   _count: DetAchatFactureCountAggregateOutputType | null
@@ -351,17 +351,17 @@ export type DetAchatFactureWhereInput = {
   id?: Prisma.BigIntFilter<"DetAchatFacture"> | bigint | number
   unitegratuit?: Prisma.IntFilter<"DetAchatFacture"> | number
   qteacheter?: Prisma.IntFilter<"DetAchatFacture"> | number
-  prixAchatHt?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  prixAchatTtc?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  remiseAchat?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  prixVenteTtc?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  mantantHt?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  mantantTTC?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  prixVenteAchatHT?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  beneficeDH?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  benepourcentage?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  tva20?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  tva7?: Prisma.FloatFilter<"DetAchatFacture"> | number
+  prixAchatHt?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatTtc?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseAchat?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteTtc?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantHt?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantTTC?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteAchatHT?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   achatFactureId?: Prisma.BigIntFilter<"DetAchatFacture"> | bigint | number
   stockId?: Prisma.BigIntFilter<"DetAchatFacture"> | bigint | number
   achatFacture?: Prisma.XOR<Prisma.AchatFactureScalarRelationFilter, Prisma.AchatFactureWhereInput>
@@ -396,17 +396,17 @@ export type DetAchatFactureWhereUniqueInput = Prisma.AtLeast<{
   NOT?: Prisma.DetAchatFactureWhereInput | Prisma.DetAchatFactureWhereInput[]
   unitegratuit?: Prisma.IntFilter<"DetAchatFacture"> | number
   qteacheter?: Prisma.IntFilter<"DetAchatFacture"> | number
-  prixAchatHt?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  prixAchatTtc?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  remiseAchat?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  prixVenteTtc?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  mantantHt?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  mantantTTC?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  prixVenteAchatHT?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  beneficeDH?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  benepourcentage?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  tva20?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  tva7?: Prisma.FloatFilter<"DetAchatFacture"> | number
+  prixAchatHt?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatTtc?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseAchat?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteTtc?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantHt?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantTTC?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteAchatHT?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   achatFactureId?: Prisma.BigIntFilter<"DetAchatFacture"> | bigint | number
   stockId?: Prisma.BigIntFilter<"DetAchatFacture"> | bigint | number
   achatFacture?: Prisma.XOR<Prisma.AchatFactureScalarRelationFilter, Prisma.AchatFactureWhereInput>
@@ -444,17 +444,17 @@ export type DetAchatFactureScalarWhereWithAggregatesInput = {
   id?: Prisma.BigIntWithAggregatesFilter<"DetAchatFacture"> | bigint | number
   unitegratuit?: Prisma.IntWithAggregatesFilter<"DetAchatFacture"> | number
   qteacheter?: Prisma.IntWithAggregatesFilter<"DetAchatFacture"> | number
-  prixAchatHt?: Prisma.FloatWithAggregatesFilter<"DetAchatFacture"> | number
-  prixAchatTtc?: Prisma.FloatWithAggregatesFilter<"DetAchatFacture"> | number
-  remiseAchat?: Prisma.FloatWithAggregatesFilter<"DetAchatFacture"> | number
-  prixVenteTtc?: Prisma.FloatWithAggregatesFilter<"DetAchatFacture"> | number
-  mantantHt?: Prisma.FloatWithAggregatesFilter<"DetAchatFacture"> | number
-  mantantTTC?: Prisma.FloatWithAggregatesFilter<"DetAchatFacture"> | number
-  prixVenteAchatHT?: Prisma.FloatWithAggregatesFilter<"DetAchatFacture"> | number
-  beneficeDH?: Prisma.FloatWithAggregatesFilter<"DetAchatFacture"> | number
-  benepourcentage?: Prisma.FloatWithAggregatesFilter<"DetAchatFacture"> | number
-  tva20?: Prisma.FloatWithAggregatesFilter<"DetAchatFacture"> | number
-  tva7?: Prisma.FloatWithAggregatesFilter<"DetAchatFacture"> | number
+  prixAchatHt?: Prisma.DecimalWithAggregatesFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatTtc?: Prisma.DecimalWithAggregatesFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseAchat?: Prisma.DecimalWithAggregatesFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteTtc?: Prisma.DecimalWithAggregatesFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantHt?: Prisma.DecimalWithAggregatesFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantTTC?: Prisma.DecimalWithAggregatesFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteAchatHT?: Prisma.DecimalWithAggregatesFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalWithAggregatesFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalWithAggregatesFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20?: Prisma.DecimalWithAggregatesFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7?: Prisma.DecimalWithAggregatesFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   achatFactureId?: Prisma.BigIntWithAggregatesFilter<"DetAchatFacture"> | bigint | number
   stockId?: Prisma.BigIntWithAggregatesFilter<"DetAchatFacture"> | bigint | number
 }
@@ -463,17 +463,17 @@ export type DetAchatFactureCreateInput = {
   id?: bigint | number
   unitegratuit: number
   qteacheter: number
-  prixAchatHt: number
-  prixAchatTtc: number
-  remiseAchat: number
-  prixVenteTtc: number
-  mantantHt: number
-  mantantTTC: number
-  prixVenteAchatHT: number
-  beneficeDH: number
-  benepourcentage: number
-  tva20: number
-  tva7: number
+  prixAchatHt: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatTtc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseAchat: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteTtc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantHt: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantTTC: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteAchatHT: runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7: runtime.Decimal | runtime.DecimalJsLike | number | string
   achatFacture: Prisma.AchatFactureCreateNestedOneWithoutDetAchatFacturesInput
   stock: Prisma.StockCreateNestedOneWithoutDetAchatFacturesInput
 }
@@ -482,17 +482,17 @@ export type DetAchatFactureUncheckedCreateInput = {
   id?: bigint | number
   unitegratuit: number
   qteacheter: number
-  prixAchatHt: number
-  prixAchatTtc: number
-  remiseAchat: number
-  prixVenteTtc: number
-  mantantHt: number
-  mantantTTC: number
-  prixVenteAchatHT: number
-  beneficeDH: number
-  benepourcentage: number
-  tva20: number
-  tva7: number
+  prixAchatHt: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatTtc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseAchat: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteTtc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantHt: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantTTC: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteAchatHT: runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7: runtime.Decimal | runtime.DecimalJsLike | number | string
   achatFactureId: bigint | number
   stockId: bigint | number
 }
@@ -501,17 +501,17 @@ export type DetAchatFactureUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   unitegratuit?: Prisma.IntFieldUpdateOperationsInput | number
   qteacheter?: Prisma.IntFieldUpdateOperationsInput | number
-  prixAchatHt?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixAchatTtc?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseAchat?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVenteTtc?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantHt?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantTTC?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVenteAchatHT?: Prisma.FloatFieldUpdateOperationsInput | number
-  beneficeDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  benepourcentage?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva7?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixAchatHt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatTtc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseAchat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteTtc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantHt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantTTC?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteAchatHT?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   achatFacture?: Prisma.AchatFactureUpdateOneRequiredWithoutDetAchatFacturesNestedInput
   stock?: Prisma.StockUpdateOneRequiredWithoutDetAchatFacturesNestedInput
 }
@@ -520,17 +520,17 @@ export type DetAchatFactureUncheckedUpdateInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   unitegratuit?: Prisma.IntFieldUpdateOperationsInput | number
   qteacheter?: Prisma.IntFieldUpdateOperationsInput | number
-  prixAchatHt?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixAchatTtc?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseAchat?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVenteTtc?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantHt?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantTTC?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVenteAchatHT?: Prisma.FloatFieldUpdateOperationsInput | number
-  beneficeDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  benepourcentage?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva7?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixAchatHt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatTtc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseAchat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteTtc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantHt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantTTC?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteAchatHT?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   achatFactureId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   stockId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
@@ -539,17 +539,17 @@ export type DetAchatFactureCreateManyInput = {
   id?: bigint | number
   unitegratuit: number
   qteacheter: number
-  prixAchatHt: number
-  prixAchatTtc: number
-  remiseAchat: number
-  prixVenteTtc: number
-  mantantHt: number
-  mantantTTC: number
-  prixVenteAchatHT: number
-  beneficeDH: number
-  benepourcentage: number
-  tva20: number
-  tva7: number
+  prixAchatHt: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatTtc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseAchat: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteTtc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantHt: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantTTC: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteAchatHT: runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7: runtime.Decimal | runtime.DecimalJsLike | number | string
   achatFactureId: bigint | number
   stockId: bigint | number
 }
@@ -558,34 +558,34 @@ export type DetAchatFactureUpdateManyMutationInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   unitegratuit?: Prisma.IntFieldUpdateOperationsInput | number
   qteacheter?: Prisma.IntFieldUpdateOperationsInput | number
-  prixAchatHt?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixAchatTtc?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseAchat?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVenteTtc?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantHt?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantTTC?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVenteAchatHT?: Prisma.FloatFieldUpdateOperationsInput | number
-  beneficeDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  benepourcentage?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva7?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixAchatHt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatTtc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseAchat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteTtc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantHt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantTTC?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteAchatHT?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type DetAchatFactureUncheckedUpdateManyInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   unitegratuit?: Prisma.IntFieldUpdateOperationsInput | number
   qteacheter?: Prisma.IntFieldUpdateOperationsInput | number
-  prixAchatHt?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixAchatTtc?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseAchat?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVenteTtc?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantHt?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantTTC?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVenteAchatHT?: Prisma.FloatFieldUpdateOperationsInput | number
-  beneficeDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  benepourcentage?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva7?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixAchatHt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatTtc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseAchat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteTtc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantHt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantTTC?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteAchatHT?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   achatFactureId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   stockId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
@@ -783,17 +783,17 @@ export type DetAchatFactureCreateWithoutStockInput = {
   id?: bigint | number
   unitegratuit: number
   qteacheter: number
-  prixAchatHt: number
-  prixAchatTtc: number
-  remiseAchat: number
-  prixVenteTtc: number
-  mantantHt: number
-  mantantTTC: number
-  prixVenteAchatHT: number
-  beneficeDH: number
-  benepourcentage: number
-  tva20: number
-  tva7: number
+  prixAchatHt: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatTtc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseAchat: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteTtc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantHt: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantTTC: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteAchatHT: runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7: runtime.Decimal | runtime.DecimalJsLike | number | string
   achatFacture: Prisma.AchatFactureCreateNestedOneWithoutDetAchatFacturesInput
 }
 
@@ -801,17 +801,17 @@ export type DetAchatFactureUncheckedCreateWithoutStockInput = {
   id?: bigint | number
   unitegratuit: number
   qteacheter: number
-  prixAchatHt: number
-  prixAchatTtc: number
-  remiseAchat: number
-  prixVenteTtc: number
-  mantantHt: number
-  mantantTTC: number
-  prixVenteAchatHT: number
-  beneficeDH: number
-  benepourcentage: number
-  tva20: number
-  tva7: number
+  prixAchatHt: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatTtc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseAchat: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteTtc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantHt: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantTTC: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteAchatHT: runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7: runtime.Decimal | runtime.DecimalJsLike | number | string
   achatFactureId: bigint | number
 }
 
@@ -848,17 +848,17 @@ export type DetAchatFactureScalarWhereInput = {
   id?: Prisma.BigIntFilter<"DetAchatFacture"> | bigint | number
   unitegratuit?: Prisma.IntFilter<"DetAchatFacture"> | number
   qteacheter?: Prisma.IntFilter<"DetAchatFacture"> | number
-  prixAchatHt?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  prixAchatTtc?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  remiseAchat?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  prixVenteTtc?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  mantantHt?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  mantantTTC?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  prixVenteAchatHT?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  beneficeDH?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  benepourcentage?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  tva20?: Prisma.FloatFilter<"DetAchatFacture"> | number
-  tva7?: Prisma.FloatFilter<"DetAchatFacture"> | number
+  prixAchatHt?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatTtc?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseAchat?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteTtc?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantHt?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantTTC?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteAchatHT?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7?: Prisma.DecimalFilter<"DetAchatFacture"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   achatFactureId?: Prisma.BigIntFilter<"DetAchatFacture"> | bigint | number
   stockId?: Prisma.BigIntFilter<"DetAchatFacture"> | bigint | number
 }
@@ -867,17 +867,17 @@ export type DetAchatFactureCreateWithoutAchatFactureInput = {
   id?: bigint | number
   unitegratuit: number
   qteacheter: number
-  prixAchatHt: number
-  prixAchatTtc: number
-  remiseAchat: number
-  prixVenteTtc: number
-  mantantHt: number
-  mantantTTC: number
-  prixVenteAchatHT: number
-  beneficeDH: number
-  benepourcentage: number
-  tva20: number
-  tva7: number
+  prixAchatHt: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatTtc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseAchat: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteTtc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantHt: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantTTC: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteAchatHT: runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7: runtime.Decimal | runtime.DecimalJsLike | number | string
   stock: Prisma.StockCreateNestedOneWithoutDetAchatFacturesInput
 }
 
@@ -885,17 +885,17 @@ export type DetAchatFactureUncheckedCreateWithoutAchatFactureInput = {
   id?: bigint | number
   unitegratuit: number
   qteacheter: number
-  prixAchatHt: number
-  prixAchatTtc: number
-  remiseAchat: number
-  prixVenteTtc: number
-  mantantHt: number
-  mantantTTC: number
-  prixVenteAchatHT: number
-  beneficeDH: number
-  benepourcentage: number
-  tva20: number
-  tva7: number
+  prixAchatHt: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatTtc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseAchat: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteTtc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantHt: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantTTC: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteAchatHT: runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7: runtime.Decimal | runtime.DecimalJsLike | number | string
   stockId: bigint | number
 }
 
@@ -929,17 +929,17 @@ export type DetAchatFactureCreateManyStockInput = {
   id?: bigint | number
   unitegratuit: number
   qteacheter: number
-  prixAchatHt: number
-  prixAchatTtc: number
-  remiseAchat: number
-  prixVenteTtc: number
-  mantantHt: number
-  mantantTTC: number
-  prixVenteAchatHT: number
-  beneficeDH: number
-  benepourcentage: number
-  tva20: number
-  tva7: number
+  prixAchatHt: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatTtc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseAchat: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteTtc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantHt: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantTTC: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteAchatHT: runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7: runtime.Decimal | runtime.DecimalJsLike | number | string
   achatFactureId: bigint | number
 }
 
@@ -947,17 +947,17 @@ export type DetAchatFactureUpdateWithoutStockInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   unitegratuit?: Prisma.IntFieldUpdateOperationsInput | number
   qteacheter?: Prisma.IntFieldUpdateOperationsInput | number
-  prixAchatHt?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixAchatTtc?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseAchat?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVenteTtc?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantHt?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantTTC?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVenteAchatHT?: Prisma.FloatFieldUpdateOperationsInput | number
-  beneficeDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  benepourcentage?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva7?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixAchatHt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatTtc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseAchat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteTtc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantHt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantTTC?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteAchatHT?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   achatFacture?: Prisma.AchatFactureUpdateOneRequiredWithoutDetAchatFacturesNestedInput
 }
 
@@ -965,17 +965,17 @@ export type DetAchatFactureUncheckedUpdateWithoutStockInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   unitegratuit?: Prisma.IntFieldUpdateOperationsInput | number
   qteacheter?: Prisma.IntFieldUpdateOperationsInput | number
-  prixAchatHt?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixAchatTtc?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseAchat?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVenteTtc?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantHt?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantTTC?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVenteAchatHT?: Prisma.FloatFieldUpdateOperationsInput | number
-  beneficeDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  benepourcentage?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva7?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixAchatHt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatTtc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseAchat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteTtc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantHt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantTTC?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteAchatHT?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   achatFactureId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
@@ -983,17 +983,17 @@ export type DetAchatFactureUncheckedUpdateManyWithoutStockInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   unitegratuit?: Prisma.IntFieldUpdateOperationsInput | number
   qteacheter?: Prisma.IntFieldUpdateOperationsInput | number
-  prixAchatHt?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixAchatTtc?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseAchat?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVenteTtc?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantHt?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantTTC?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVenteAchatHT?: Prisma.FloatFieldUpdateOperationsInput | number
-  beneficeDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  benepourcentage?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva7?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixAchatHt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatTtc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseAchat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteTtc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantHt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantTTC?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteAchatHT?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   achatFactureId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
@@ -1001,17 +1001,17 @@ export type DetAchatFactureCreateManyAchatFactureInput = {
   id?: bigint | number
   unitegratuit: number
   qteacheter: number
-  prixAchatHt: number
-  prixAchatTtc: number
-  remiseAchat: number
-  prixVenteTtc: number
-  mantantHt: number
-  mantantTTC: number
-  prixVenteAchatHT: number
-  beneficeDH: number
-  benepourcentage: number
-  tva20: number
-  tva7: number
+  prixAchatHt: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatTtc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseAchat: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteTtc: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantHt: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantTTC: runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteAchatHT: runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH: runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20: runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7: runtime.Decimal | runtime.DecimalJsLike | number | string
   stockId: bigint | number
 }
 
@@ -1019,17 +1019,17 @@ export type DetAchatFactureUpdateWithoutAchatFactureInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   unitegratuit?: Prisma.IntFieldUpdateOperationsInput | number
   qteacheter?: Prisma.IntFieldUpdateOperationsInput | number
-  prixAchatHt?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixAchatTtc?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseAchat?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVenteTtc?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantHt?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantTTC?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVenteAchatHT?: Prisma.FloatFieldUpdateOperationsInput | number
-  beneficeDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  benepourcentage?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva7?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixAchatHt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatTtc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseAchat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteTtc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantHt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantTTC?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteAchatHT?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   stock?: Prisma.StockUpdateOneRequiredWithoutDetAchatFacturesNestedInput
 }
 
@@ -1037,17 +1037,17 @@ export type DetAchatFactureUncheckedUpdateWithoutAchatFactureInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   unitegratuit?: Prisma.IntFieldUpdateOperationsInput | number
   qteacheter?: Prisma.IntFieldUpdateOperationsInput | number
-  prixAchatHt?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixAchatTtc?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseAchat?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVenteTtc?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantHt?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantTTC?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVenteAchatHT?: Prisma.FloatFieldUpdateOperationsInput | number
-  beneficeDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  benepourcentage?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva7?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixAchatHt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatTtc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseAchat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteTtc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantHt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantTTC?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteAchatHT?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   stockId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
@@ -1055,17 +1055,17 @@ export type DetAchatFactureUncheckedUpdateManyWithoutAchatFactureInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   unitegratuit?: Prisma.IntFieldUpdateOperationsInput | number
   qteacheter?: Prisma.IntFieldUpdateOperationsInput | number
-  prixAchatHt?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixAchatTtc?: Prisma.FloatFieldUpdateOperationsInput | number
-  remiseAchat?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVenteTtc?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantHt?: Prisma.FloatFieldUpdateOperationsInput | number
-  mantantTTC?: Prisma.FloatFieldUpdateOperationsInput | number
-  prixVenteAchatHT?: Prisma.FloatFieldUpdateOperationsInput | number
-  beneficeDH?: Prisma.FloatFieldUpdateOperationsInput | number
-  benepourcentage?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva20?: Prisma.FloatFieldUpdateOperationsInput | number
-  tva7?: Prisma.FloatFieldUpdateOperationsInput | number
+  prixAchatHt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixAchatTtc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  remiseAchat?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteTtc?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantHt?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantTTC?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  prixVenteAchatHT?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  beneficeDH?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  benepourcentage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva20?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  tva7?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   stockId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
@@ -1129,17 +1129,17 @@ export type $DetAchatFacturePayload<ExtArgs extends runtime.Types.Extensions.Int
     id: bigint
     unitegratuit: number
     qteacheter: number
-    prixAchatHt: number
-    prixAchatTtc: number
-    remiseAchat: number
-    prixVenteTtc: number
-    mantantHt: number
-    mantantTTC: number
-    prixVenteAchatHT: number
-    beneficeDH: number
-    benepourcentage: number
-    tva20: number
-    tva7: number
+    prixAchatHt: runtime.Decimal
+    prixAchatTtc: runtime.Decimal
+    remiseAchat: runtime.Decimal
+    prixVenteTtc: runtime.Decimal
+    mantantHt: runtime.Decimal
+    mantantTTC: runtime.Decimal
+    prixVenteAchatHT: runtime.Decimal
+    beneficeDH: runtime.Decimal
+    benepourcentage: runtime.Decimal
+    tva20: runtime.Decimal
+    tva7: runtime.Decimal
     achatFactureId: bigint
     stockId: bigint
   }, ExtArgs["result"]["detAchatFacture"]>
@@ -1516,17 +1516,17 @@ export interface DetAchatFactureFieldRefs {
   readonly id: Prisma.FieldRef<"DetAchatFacture", 'BigInt'>
   readonly unitegratuit: Prisma.FieldRef<"DetAchatFacture", 'Int'>
   readonly qteacheter: Prisma.FieldRef<"DetAchatFacture", 'Int'>
-  readonly prixAchatHt: Prisma.FieldRef<"DetAchatFacture", 'Float'>
-  readonly prixAchatTtc: Prisma.FieldRef<"DetAchatFacture", 'Float'>
-  readonly remiseAchat: Prisma.FieldRef<"DetAchatFacture", 'Float'>
-  readonly prixVenteTtc: Prisma.FieldRef<"DetAchatFacture", 'Float'>
-  readonly mantantHt: Prisma.FieldRef<"DetAchatFacture", 'Float'>
-  readonly mantantTTC: Prisma.FieldRef<"DetAchatFacture", 'Float'>
-  readonly prixVenteAchatHT: Prisma.FieldRef<"DetAchatFacture", 'Float'>
-  readonly beneficeDH: Prisma.FieldRef<"DetAchatFacture", 'Float'>
-  readonly benepourcentage: Prisma.FieldRef<"DetAchatFacture", 'Float'>
-  readonly tva20: Prisma.FieldRef<"DetAchatFacture", 'Float'>
-  readonly tva7: Prisma.FieldRef<"DetAchatFacture", 'Float'>
+  readonly prixAchatHt: Prisma.FieldRef<"DetAchatFacture", 'Decimal'>
+  readonly prixAchatTtc: Prisma.FieldRef<"DetAchatFacture", 'Decimal'>
+  readonly remiseAchat: Prisma.FieldRef<"DetAchatFacture", 'Decimal'>
+  readonly prixVenteTtc: Prisma.FieldRef<"DetAchatFacture", 'Decimal'>
+  readonly mantantHt: Prisma.FieldRef<"DetAchatFacture", 'Decimal'>
+  readonly mantantTTC: Prisma.FieldRef<"DetAchatFacture", 'Decimal'>
+  readonly prixVenteAchatHT: Prisma.FieldRef<"DetAchatFacture", 'Decimal'>
+  readonly beneficeDH: Prisma.FieldRef<"DetAchatFacture", 'Decimal'>
+  readonly benepourcentage: Prisma.FieldRef<"DetAchatFacture", 'Decimal'>
+  readonly tva20: Prisma.FieldRef<"DetAchatFacture", 'Decimal'>
+  readonly tva7: Prisma.FieldRef<"DetAchatFacture", 'Decimal'>
   readonly achatFactureId: Prisma.FieldRef<"DetAchatFacture", 'BigInt'>
   readonly stockId: Prisma.FieldRef<"DetAchatFacture", 'BigInt'>
 }
