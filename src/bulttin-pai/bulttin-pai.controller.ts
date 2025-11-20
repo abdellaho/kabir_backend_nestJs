@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { BulttinPaiService } from './bulttin-pai.service';
-import { Prisma } from 'generated/prisma';
+import { Prisma } from 'prisma/generated/client'; 
 
 @Controller('bulttin-pai')
 export class BulttinPaiController {

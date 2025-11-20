@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { ChequeService } from './cheque.service';
-import { Prisma } from 'generated/prisma';
+import { Prisma } from 'prisma/generated/client'; 
 
 @Controller('cheque')
 export class ChequeController {

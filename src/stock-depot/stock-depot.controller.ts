@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { StockDepotService } from './stock-depot.service';
-import { Prisma } from 'generated/prisma';
+import { Prisma } from 'prisma/generated/client'; 
 
 @Controller('stock-depot')
 export class StockDepotController {

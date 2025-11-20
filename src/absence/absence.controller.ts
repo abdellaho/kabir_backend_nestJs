@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { AbsenceService } from './absence.service';
-import { Prisma } from 'generated/prisma';
+import { Prisma } from 'prisma/generated/client'; 
 import type { AbsenceSearch } from './search/absenceSearch';
 
 @Controller('absence')

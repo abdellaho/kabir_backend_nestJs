@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { DetBulttinLivraisonService } from './det-bulttin-livraison.service';
-import { Prisma } from 'generated/prisma';
+import { Prisma } from 'prisma/generated/client'; 
 
 @Controller('det-bulttin-livraison')
 export class DetBulttinLivraisonController {

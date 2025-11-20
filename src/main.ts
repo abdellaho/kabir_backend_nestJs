@@ -4,6 +4,10 @@ import { BigIntInterceptor } from './common/interceptors/bigint.interceptor';
 import { PrismaExceptionFilter } from './exceptionHandlers/prisma-exception.filter';
 import { AllExceptionsFilter } from './exceptionHandlers/all-exceptions.filter';
 import { ErrorLoggerInterceptor } from './common/interceptors/error-logger.interceptor';
+import * as dotenv from 'dotenv';
+
+
+dotenv.config();
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);

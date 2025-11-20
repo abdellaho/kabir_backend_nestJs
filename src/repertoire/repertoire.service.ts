@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import * as bcrypt from 'bcrypt';
-import { Prisma } from 'generated/prisma';
+import { Prisma } from 'prisma/generated/client';  
 import { RepertoireSearch } from 'src/common/searchModels/repertoire-search';
 import { DatabaseService } from 'src/database/database.service';
 

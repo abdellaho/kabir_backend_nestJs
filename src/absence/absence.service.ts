@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { DatabaseService } from 'src/database/database.service';
-import { Prisma } from 'generated/prisma';
 import { AbsenceSearch } from './search/absenceSearch';
+import { Prisma } from 'prisma/generated/client'; 
 
 @Injectable()
 export class AbsenceService {

@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { SoldeService } from './solde.service';
-import { Prisma } from 'generated/prisma';
+import { Prisma } from 'prisma/generated/client';  
 
 @Controller('solde')
 export class SoldeController {
