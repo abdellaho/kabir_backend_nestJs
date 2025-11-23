@@ -54,6 +54,14 @@ export type PersonnelMinAggregateOutputType = {
   salaire: runtime.Decimal | null
   archiver: boolean | null
   supprimer: boolean | null
+  consulterStock: boolean | null
+  ajouterStock: boolean | null
+  modifierStock: boolean | null
+  supprimerStock: boolean | null
+  consulterRepertoire: boolean | null
+  ajouterRepertoire: boolean | null
+  modifierRepertoire: boolean | null
+  supprimerRepertoire: boolean | null
 }
 
 export type PersonnelMaxAggregateOutputType = {
@@ -72,6 +80,14 @@ export type PersonnelMaxAggregateOutputType = {
   salaire: runtime.Decimal | null
   archiver: boolean | null
   supprimer: boolean | null
+  consulterStock: boolean | null
+  ajouterStock: boolean | null
+  modifierStock: boolean | null
+  supprimerStock: boolean | null
+  consulterRepertoire: boolean | null
+  ajouterRepertoire: boolean | null
+  modifierRepertoire: boolean | null
+  supprimerRepertoire: boolean | null
 }
 
 export type PersonnelCountAggregateOutputType = {
@@ -90,6 +106,14 @@ export type PersonnelCountAggregateOutputType = {
   salaire: number
   archiver: number
   supprimer: number
+  consulterStock: number
+  ajouterStock: number
+  modifierStock: number
+  supprimerStock: number
+  consulterRepertoire: number
+  ajouterRepertoire: number
+  modifierRepertoire: number
+  supprimerRepertoire: number
   _all: number
 }
 
@@ -122,6 +146,14 @@ export type PersonnelMinAggregateInputType = {
   salaire?: true
   archiver?: true
   supprimer?: true
+  consulterStock?: true
+  ajouterStock?: true
+  modifierStock?: true
+  supprimerStock?: true
+  consulterRepertoire?: true
+  ajouterRepertoire?: true
+  modifierRepertoire?: true
+  supprimerRepertoire?: true
 }
 
 export type PersonnelMaxAggregateInputType = {
@@ -140,6 +172,14 @@ export type PersonnelMaxAggregateInputType = {
   salaire?: true
   archiver?: true
   supprimer?: true
+  consulterStock?: true
+  ajouterStock?: true
+  modifierStock?: true
+  supprimerStock?: true
+  consulterRepertoire?: true
+  ajouterRepertoire?: true
+  modifierRepertoire?: true
+  supprimerRepertoire?: true
 }
 
 export type PersonnelCountAggregateInputType = {
@@ -158,6 +198,14 @@ export type PersonnelCountAggregateInputType = {
   salaire?: true
   archiver?: true
   supprimer?: true
+  consulterStock?: true
+  ajouterStock?: true
+  modifierStock?: true
+  supprimerStock?: true
+  consulterRepertoire?: true
+  ajouterRepertoire?: true
+  modifierRepertoire?: true
+  supprimerRepertoire?: true
   _all?: true
 }
 
@@ -263,6 +311,14 @@ export type PersonnelGroupByOutputType = {
   salaire: runtime.Decimal
   archiver: boolean
   supprimer: boolean
+  consulterStock: boolean
+  ajouterStock: boolean
+  modifierStock: boolean
+  supprimerStock: boolean
+  consulterRepertoire: boolean
+  ajouterRepertoire: boolean
+  modifierRepertoire: boolean
+  supprimerRepertoire: boolean
   _count: PersonnelCountAggregateOutputType | null
   _avg: PersonnelAvgAggregateOutputType | null
   _sum: PersonnelSumAggregateOutputType | null
@@ -304,6 +360,14 @@ export type PersonnelWhereInput = {
   salaire?: Prisma.DecimalFilter<"Personnel"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFilter<"Personnel"> | boolean
   supprimer?: Prisma.BoolFilter<"Personnel"> | boolean
+  consulterStock?: Prisma.BoolFilter<"Personnel"> | boolean
+  ajouterStock?: Prisma.BoolFilter<"Personnel"> | boolean
+  modifierStock?: Prisma.BoolFilter<"Personnel"> | boolean
+  supprimerStock?: Prisma.BoolFilter<"Personnel"> | boolean
+  consulterRepertoire?: Prisma.BoolFilter<"Personnel"> | boolean
+  ajouterRepertoire?: Prisma.BoolFilter<"Personnel"> | boolean
+  modifierRepertoire?: Prisma.BoolFilter<"Personnel"> | boolean
+  supprimerRepertoire?: Prisma.BoolFilter<"Personnel"> | boolean
   absencesOperation?: Prisma.AbsenceListRelationFilter
   absences?: Prisma.AbsenceListRelationFilter
   repertoires?: Prisma.RepertoireListRelationFilter
@@ -325,6 +389,14 @@ export type PersonnelOrderByWithRelationInput = {
   salaire?: Prisma.SortOrder
   archiver?: Prisma.SortOrder
   supprimer?: Prisma.SortOrder
+  consulterStock?: Prisma.SortOrder
+  ajouterStock?: Prisma.SortOrder
+  modifierStock?: Prisma.SortOrder
+  supprimerStock?: Prisma.SortOrder
+  consulterRepertoire?: Prisma.SortOrder
+  ajouterRepertoire?: Prisma.SortOrder
+  modifierRepertoire?: Prisma.SortOrder
+  supprimerRepertoire?: Prisma.SortOrder
   absencesOperation?: Prisma.AbsenceOrderByRelationAggregateInput
   absences?: Prisma.AbsenceOrderByRelationAggregateInput
   repertoires?: Prisma.RepertoireOrderByRelationAggregateInput
@@ -350,6 +422,14 @@ export type PersonnelWhereUniqueInput = Prisma.AtLeast<{
   salaire?: Prisma.DecimalFilter<"Personnel"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFilter<"Personnel"> | boolean
   supprimer?: Prisma.BoolFilter<"Personnel"> | boolean
+  consulterStock?: Prisma.BoolFilter<"Personnel"> | boolean
+  ajouterStock?: Prisma.BoolFilter<"Personnel"> | boolean
+  modifierStock?: Prisma.BoolFilter<"Personnel"> | boolean
+  supprimerStock?: Prisma.BoolFilter<"Personnel"> | boolean
+  consulterRepertoire?: Prisma.BoolFilter<"Personnel"> | boolean
+  ajouterRepertoire?: Prisma.BoolFilter<"Personnel"> | boolean
+  modifierRepertoire?: Prisma.BoolFilter<"Personnel"> | boolean
+  supprimerRepertoire?: Prisma.BoolFilter<"Personnel"> | boolean
   absencesOperation?: Prisma.AbsenceListRelationFilter
   absences?: Prisma.AbsenceListRelationFilter
   repertoires?: Prisma.RepertoireListRelationFilter
@@ -371,6 +451,14 @@ export type PersonnelOrderByWithAggregationInput = {
   salaire?: Prisma.SortOrder
   archiver?: Prisma.SortOrder
   supprimer?: Prisma.SortOrder
+  consulterStock?: Prisma.SortOrder
+  ajouterStock?: Prisma.SortOrder
+  modifierStock?: Prisma.SortOrder
+  supprimerStock?: Prisma.SortOrder
+  consulterRepertoire?: Prisma.SortOrder
+  ajouterRepertoire?: Prisma.SortOrder
+  modifierRepertoire?: Prisma.SortOrder
+  supprimerRepertoire?: Prisma.SortOrder
   _count?: Prisma.PersonnelCountOrderByAggregateInput
   _avg?: Prisma.PersonnelAvgOrderByAggregateInput
   _max?: Prisma.PersonnelMaxOrderByAggregateInput
@@ -397,6 +485,14 @@ export type PersonnelScalarWhereWithAggregatesInput = {
   salaire?: Prisma.DecimalWithAggregatesFilter<"Personnel"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolWithAggregatesFilter<"Personnel"> | boolean
   supprimer?: Prisma.BoolWithAggregatesFilter<"Personnel"> | boolean
+  consulterStock?: Prisma.BoolWithAggregatesFilter<"Personnel"> | boolean
+  ajouterStock?: Prisma.BoolWithAggregatesFilter<"Personnel"> | boolean
+  modifierStock?: Prisma.BoolWithAggregatesFilter<"Personnel"> | boolean
+  supprimerStock?: Prisma.BoolWithAggregatesFilter<"Personnel"> | boolean
+  consulterRepertoire?: Prisma.BoolWithAggregatesFilter<"Personnel"> | boolean
+  ajouterRepertoire?: Prisma.BoolWithAggregatesFilter<"Personnel"> | boolean
+  modifierRepertoire?: Prisma.BoolWithAggregatesFilter<"Personnel"> | boolean
+  supprimerRepertoire?: Prisma.BoolWithAggregatesFilter<"Personnel"> | boolean
 }
 
 export type PersonnelCreateInput = {
@@ -415,6 +511,14 @@ export type PersonnelCreateInput = {
   salaire: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
+  consulterStock?: boolean
+  ajouterStock?: boolean
+  modifierStock?: boolean
+  supprimerStock?: boolean
+  consulterRepertoire?: boolean
+  ajouterRepertoire?: boolean
+  modifierRepertoire?: boolean
+  supprimerRepertoire?: boolean
   absencesOperation?: Prisma.AbsenceCreateNestedManyWithoutPersonnelOperationInput
   absences?: Prisma.AbsenceCreateNestedManyWithoutPersonnelInput
   repertoires?: Prisma.RepertoireCreateNestedManyWithoutPersonnelInput
@@ -436,6 +540,14 @@ export type PersonnelUncheckedCreateInput = {
   salaire: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
+  consulterStock?: boolean
+  ajouterStock?: boolean
+  modifierStock?: boolean
+  supprimerStock?: boolean
+  consulterRepertoire?: boolean
+  ajouterRepertoire?: boolean
+  modifierRepertoire?: boolean
+  supprimerRepertoire?: boolean
   absencesOperation?: Prisma.AbsenceUncheckedCreateNestedManyWithoutPersonnelOperationInput
   absences?: Prisma.AbsenceUncheckedCreateNestedManyWithoutPersonnelInput
   repertoires?: Prisma.RepertoireUncheckedCreateNestedManyWithoutPersonnelInput
@@ -457,6 +569,14 @@ export type PersonnelUpdateInput = {
   salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
   absencesOperation?: Prisma.AbsenceUpdateManyWithoutPersonnelOperationNestedInput
   absences?: Prisma.AbsenceUpdateManyWithoutPersonnelNestedInput
   repertoires?: Prisma.RepertoireUpdateManyWithoutPersonnelNestedInput
@@ -478,6 +598,14 @@ export type PersonnelUncheckedUpdateInput = {
   salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
   absencesOperation?: Prisma.AbsenceUncheckedUpdateManyWithoutPersonnelOperationNestedInput
   absences?: Prisma.AbsenceUncheckedUpdateManyWithoutPersonnelNestedInput
   repertoires?: Prisma.RepertoireUncheckedUpdateManyWithoutPersonnelNestedInput
@@ -499,6 +627,14 @@ export type PersonnelCreateManyInput = {
   salaire: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
+  consulterStock?: boolean
+  ajouterStock?: boolean
+  modifierStock?: boolean
+  supprimerStock?: boolean
+  consulterRepertoire?: boolean
+  ajouterRepertoire?: boolean
+  modifierRepertoire?: boolean
+  supprimerRepertoire?: boolean
 }
 
 export type PersonnelUpdateManyMutationInput = {
@@ -517,6 +653,14 @@ export type PersonnelUpdateManyMutationInput = {
   salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
 }
 
 export type PersonnelUncheckedUpdateManyInput = {
@@ -535,6 +679,14 @@ export type PersonnelUncheckedUpdateManyInput = {
   salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
 }
 
 export type PersonnelOrderByRelevanceInput = {
@@ -559,6 +711,14 @@ export type PersonnelCountOrderByAggregateInput = {
   salaire?: Prisma.SortOrder
   archiver?: Prisma.SortOrder
   supprimer?: Prisma.SortOrder
+  consulterStock?: Prisma.SortOrder
+  ajouterStock?: Prisma.SortOrder
+  modifierStock?: Prisma.SortOrder
+  supprimerStock?: Prisma.SortOrder
+  consulterRepertoire?: Prisma.SortOrder
+  ajouterRepertoire?: Prisma.SortOrder
+  modifierRepertoire?: Prisma.SortOrder
+  supprimerRepertoire?: Prisma.SortOrder
 }
 
 export type PersonnelAvgOrderByAggregateInput = {
@@ -583,6 +743,14 @@ export type PersonnelMaxOrderByAggregateInput = {
   salaire?: Prisma.SortOrder
   archiver?: Prisma.SortOrder
   supprimer?: Prisma.SortOrder
+  consulterStock?: Prisma.SortOrder
+  ajouterStock?: Prisma.SortOrder
+  modifierStock?: Prisma.SortOrder
+  supprimerStock?: Prisma.SortOrder
+  consulterRepertoire?: Prisma.SortOrder
+  ajouterRepertoire?: Prisma.SortOrder
+  modifierRepertoire?: Prisma.SortOrder
+  supprimerRepertoire?: Prisma.SortOrder
 }
 
 export type PersonnelMinOrderByAggregateInput = {
@@ -601,6 +769,14 @@ export type PersonnelMinOrderByAggregateInput = {
   salaire?: Prisma.SortOrder
   archiver?: Prisma.SortOrder
   supprimer?: Prisma.SortOrder
+  consulterStock?: Prisma.SortOrder
+  ajouterStock?: Prisma.SortOrder
+  modifierStock?: Prisma.SortOrder
+  supprimerStock?: Prisma.SortOrder
+  consulterRepertoire?: Prisma.SortOrder
+  ajouterRepertoire?: Prisma.SortOrder
+  modifierRepertoire?: Prisma.SortOrder
+  supprimerRepertoire?: Prisma.SortOrder
 }
 
 export type PersonnelSumOrderByAggregateInput = {
@@ -693,6 +869,14 @@ export type PersonnelCreateWithoutRepertoiresInput = {
   salaire: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
+  consulterStock?: boolean
+  ajouterStock?: boolean
+  modifierStock?: boolean
+  supprimerStock?: boolean
+  consulterRepertoire?: boolean
+  ajouterRepertoire?: boolean
+  modifierRepertoire?: boolean
+  supprimerRepertoire?: boolean
   absencesOperation?: Prisma.AbsenceCreateNestedManyWithoutPersonnelOperationInput
   absences?: Prisma.AbsenceCreateNestedManyWithoutPersonnelInput
 }
@@ -713,6 +897,14 @@ export type PersonnelUncheckedCreateWithoutRepertoiresInput = {
   salaire: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
+  consulterStock?: boolean
+  ajouterStock?: boolean
+  modifierStock?: boolean
+  supprimerStock?: boolean
+  consulterRepertoire?: boolean
+  ajouterRepertoire?: boolean
+  modifierRepertoire?: boolean
+  supprimerRepertoire?: boolean
   absencesOperation?: Prisma.AbsenceUncheckedCreateNestedManyWithoutPersonnelOperationInput
   absences?: Prisma.AbsenceUncheckedCreateNestedManyWithoutPersonnelInput
 }
@@ -749,6 +941,14 @@ export type PersonnelUpdateWithoutRepertoiresInput = {
   salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
   absencesOperation?: Prisma.AbsenceUpdateManyWithoutPersonnelOperationNestedInput
   absences?: Prisma.AbsenceUpdateManyWithoutPersonnelNestedInput
 }
@@ -769,6 +969,14 @@ export type PersonnelUncheckedUpdateWithoutRepertoiresInput = {
   salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
   absencesOperation?: Prisma.AbsenceUncheckedUpdateManyWithoutPersonnelOperationNestedInput
   absences?: Prisma.AbsenceUncheckedUpdateManyWithoutPersonnelNestedInput
 }
@@ -789,6 +997,14 @@ export type PersonnelCreateWithoutAbsencesOperationInput = {
   salaire: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
+  consulterStock?: boolean
+  ajouterStock?: boolean
+  modifierStock?: boolean
+  supprimerStock?: boolean
+  consulterRepertoire?: boolean
+  ajouterRepertoire?: boolean
+  modifierRepertoire?: boolean
+  supprimerRepertoire?: boolean
   absences?: Prisma.AbsenceCreateNestedManyWithoutPersonnelInput
   repertoires?: Prisma.RepertoireCreateNestedManyWithoutPersonnelInput
 }
@@ -809,6 +1025,14 @@ export type PersonnelUncheckedCreateWithoutAbsencesOperationInput = {
   salaire: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
+  consulterStock?: boolean
+  ajouterStock?: boolean
+  modifierStock?: boolean
+  supprimerStock?: boolean
+  consulterRepertoire?: boolean
+  ajouterRepertoire?: boolean
+  modifierRepertoire?: boolean
+  supprimerRepertoire?: boolean
   absences?: Prisma.AbsenceUncheckedCreateNestedManyWithoutPersonnelInput
   repertoires?: Prisma.RepertoireUncheckedCreateNestedManyWithoutPersonnelInput
 }
@@ -834,6 +1058,14 @@ export type PersonnelCreateWithoutAbsencesInput = {
   salaire: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
+  consulterStock?: boolean
+  ajouterStock?: boolean
+  modifierStock?: boolean
+  supprimerStock?: boolean
+  consulterRepertoire?: boolean
+  ajouterRepertoire?: boolean
+  modifierRepertoire?: boolean
+  supprimerRepertoire?: boolean
   absencesOperation?: Prisma.AbsenceCreateNestedManyWithoutPersonnelOperationInput
   repertoires?: Prisma.RepertoireCreateNestedManyWithoutPersonnelInput
 }
@@ -854,6 +1086,14 @@ export type PersonnelUncheckedCreateWithoutAbsencesInput = {
   salaire: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
+  consulterStock?: boolean
+  ajouterStock?: boolean
+  modifierStock?: boolean
+  supprimerStock?: boolean
+  consulterRepertoire?: boolean
+  ajouterRepertoire?: boolean
+  modifierRepertoire?: boolean
+  supprimerRepertoire?: boolean
   absencesOperation?: Prisma.AbsenceUncheckedCreateNestedManyWithoutPersonnelOperationInput
   repertoires?: Prisma.RepertoireUncheckedCreateNestedManyWithoutPersonnelInput
 }
@@ -890,6 +1130,14 @@ export type PersonnelUpdateWithoutAbsencesOperationInput = {
   salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
   absences?: Prisma.AbsenceUpdateManyWithoutPersonnelNestedInput
   repertoires?: Prisma.RepertoireUpdateManyWithoutPersonnelNestedInput
 }
@@ -910,6 +1158,14 @@ export type PersonnelUncheckedUpdateWithoutAbsencesOperationInput = {
   salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
   absences?: Prisma.AbsenceUncheckedUpdateManyWithoutPersonnelNestedInput
   repertoires?: Prisma.RepertoireUncheckedUpdateManyWithoutPersonnelNestedInput
 }
@@ -941,6 +1197,14 @@ export type PersonnelUpdateWithoutAbsencesInput = {
   salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
   absencesOperation?: Prisma.AbsenceUpdateManyWithoutPersonnelOperationNestedInput
   repertoires?: Prisma.RepertoireUpdateManyWithoutPersonnelNestedInput
 }
@@ -961,6 +1225,14 @@ export type PersonnelUncheckedUpdateWithoutAbsencesInput = {
   salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
   absencesOperation?: Prisma.AbsenceUncheckedUpdateManyWithoutPersonnelOperationNestedInput
   repertoires?: Prisma.RepertoireUncheckedUpdateManyWithoutPersonnelNestedInput
 }
@@ -1030,6 +1302,14 @@ export type PersonnelSelect<ExtArgs extends runtime.Types.Extensions.InternalArg
   salaire?: boolean
   archiver?: boolean
   supprimer?: boolean
+  consulterStock?: boolean
+  ajouterStock?: boolean
+  modifierStock?: boolean
+  supprimerStock?: boolean
+  consulterRepertoire?: boolean
+  ajouterRepertoire?: boolean
+  modifierRepertoire?: boolean
+  supprimerRepertoire?: boolean
   absencesOperation?: boolean | Prisma.Personnel$absencesOperationArgs<ExtArgs>
   absences?: boolean | Prisma.Personnel$absencesArgs<ExtArgs>
   repertoires?: boolean | Prisma.Personnel$repertoiresArgs<ExtArgs>
@@ -1054,9 +1334,17 @@ export type PersonnelSelectScalar = {
   salaire?: boolean
   archiver?: boolean
   supprimer?: boolean
+  consulterStock?: boolean
+  ajouterStock?: boolean
+  modifierStock?: boolean
+  supprimerStock?: boolean
+  consulterRepertoire?: boolean
+  ajouterRepertoire?: boolean
+  modifierRepertoire?: boolean
+  supprimerRepertoire?: boolean
 }
 
-export type PersonnelOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "designation" | "cin" | "login" | "password" | "typePersonnel" | "etatComptePersonnel" | "tel1" | "tel2" | "adresse" | "email" | "dateEntrer" | "salaire" | "archiver" | "supprimer", ExtArgs["result"]["personnel"]>
+export type PersonnelOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "designation" | "cin" | "login" | "password" | "typePersonnel" | "etatComptePersonnel" | "tel1" | "tel2" | "adresse" | "email" | "dateEntrer" | "salaire" | "archiver" | "supprimer" | "consulterStock" | "ajouterStock" | "modifierStock" | "supprimerStock" | "consulterRepertoire" | "ajouterRepertoire" | "modifierRepertoire" | "supprimerRepertoire", ExtArgs["result"]["personnel"]>
 export type PersonnelInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   absencesOperation?: boolean | Prisma.Personnel$absencesOperationArgs<ExtArgs>
   absences?: boolean | Prisma.Personnel$absencesArgs<ExtArgs>
@@ -1087,6 +1375,14 @@ export type $PersonnelPayload<ExtArgs extends runtime.Types.Extensions.InternalA
     salaire: runtime.Decimal
     archiver: boolean
     supprimer: boolean
+    consulterStock: boolean
+    ajouterStock: boolean
+    modifierStock: boolean
+    supprimerStock: boolean
+    consulterRepertoire: boolean
+    ajouterRepertoire: boolean
+    modifierRepertoire: boolean
+    supprimerRepertoire: boolean
   }, ExtArgs["result"]["personnel"]>
   composites: {}
 }
@@ -1474,6 +1770,14 @@ export interface PersonnelFieldRefs {
   readonly salaire: Prisma.FieldRef<"Personnel", 'Decimal'>
   readonly archiver: Prisma.FieldRef<"Personnel", 'Boolean'>
   readonly supprimer: Prisma.FieldRef<"Personnel", 'Boolean'>
+  readonly consulterStock: Prisma.FieldRef<"Personnel", 'Boolean'>
+  readonly ajouterStock: Prisma.FieldRef<"Personnel", 'Boolean'>
+  readonly modifierStock: Prisma.FieldRef<"Personnel", 'Boolean'>
+  readonly supprimerStock: Prisma.FieldRef<"Personnel", 'Boolean'>
+  readonly consulterRepertoire: Prisma.FieldRef<"Personnel", 'Boolean'>
+  readonly ajouterRepertoire: Prisma.FieldRef<"Personnel", 'Boolean'>
+  readonly modifierRepertoire: Prisma.FieldRef<"Personnel", 'Boolean'>
+  readonly supprimerRepertoire: Prisma.FieldRef<"Personnel", 'Boolean'>
 }
     
 

@@ -2966,7 +2966,15 @@ export const PersonnelScalarFieldEnum = {
   dateEntrer: 'dateEntrer',
   salaire: 'salaire',
   archiver: 'archiver',
-  supprimer: 'supprimer'
+  supprimer: 'supprimer',
+  consulterStock: 'consulterStock',
+  ajouterStock: 'ajouterStock',
+  modifierStock: 'modifierStock',
+  supprimerStock: 'supprimerStock',
+  consulterRepertoire: 'consulterRepertoire',
+  ajouterRepertoire: 'ajouterRepertoire',
+  modifierRepertoire: 'modifierRepertoire',
+  supprimerRepertoire: 'supprimerRepertoire'
 } as const
 
 export type PersonnelScalarFieldEnum = (typeof PersonnelScalarFieldEnum)[keyof typeof PersonnelScalarFieldEnum]
