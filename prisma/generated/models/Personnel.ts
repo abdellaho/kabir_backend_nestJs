@@ -51,6 +51,7 @@ export type PersonnelMinAggregateOutputType = {
   adresse: string | null
   email: string | null
   dateEntrer: Date | null
+  dateSuppression: Date | null
   salaire: runtime.Decimal | null
   archiver: boolean | null
   supprimer: boolean | null
@@ -77,6 +78,7 @@ export type PersonnelMaxAggregateOutputType = {
   adresse: string | null
   email: string | null
   dateEntrer: Date | null
+  dateSuppression: Date | null
   salaire: runtime.Decimal | null
   archiver: boolean | null
   supprimer: boolean | null
@@ -103,6 +105,7 @@ export type PersonnelCountAggregateOutputType = {
   adresse: number
   email: number
   dateEntrer: number
+  dateSuppression: number
   salaire: number
   archiver: number
   supprimer: number
@@ -143,6 +146,7 @@ export type PersonnelMinAggregateInputType = {
   adresse?: true
   email?: true
   dateEntrer?: true
+  dateSuppression?: true
   salaire?: true
   archiver?: true
   supprimer?: true
@@ -169,6 +173,7 @@ export type PersonnelMaxAggregateInputType = {
   adresse?: true
   email?: true
   dateEntrer?: true
+  dateSuppression?: true
   salaire?: true
   archiver?: true
   supprimer?: true
@@ -195,6 +200,7 @@ export type PersonnelCountAggregateInputType = {
   adresse?: true
   email?: true
   dateEntrer?: true
+  dateSuppression?: true
   salaire?: true
   archiver?: true
   supprimer?: true
@@ -308,6 +314,7 @@ export type PersonnelGroupByOutputType = {
   adresse: string
   email: string
   dateEntrer: Date
+  dateSuppression: Date | null
   salaire: runtime.Decimal
   archiver: boolean
   supprimer: boolean
@@ -357,6 +364,7 @@ export type PersonnelWhereInput = {
   adresse?: Prisma.StringFilter<"Personnel"> | string
   email?: Prisma.StringFilter<"Personnel"> | string
   dateEntrer?: Prisma.DateTimeFilter<"Personnel"> | Date | string
+  dateSuppression?: Prisma.DateTimeNullableFilter<"Personnel"> | Date | string | null
   salaire?: Prisma.DecimalFilter<"Personnel"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFilter<"Personnel"> | boolean
   supprimer?: Prisma.BoolFilter<"Personnel"> | boolean
@@ -386,6 +394,7 @@ export type PersonnelOrderByWithRelationInput = {
   adresse?: Prisma.SortOrder
   email?: Prisma.SortOrder
   dateEntrer?: Prisma.SortOrder
+  dateSuppression?: Prisma.SortOrderInput | Prisma.SortOrder
   salaire?: Prisma.SortOrder
   archiver?: Prisma.SortOrder
   supprimer?: Prisma.SortOrder
@@ -419,6 +428,7 @@ export type PersonnelWhereUniqueInput = Prisma.AtLeast<{
   adresse?: Prisma.StringFilter<"Personnel"> | string
   email?: Prisma.StringFilter<"Personnel"> | string
   dateEntrer?: Prisma.DateTimeFilter<"Personnel"> | Date | string
+  dateSuppression?: Prisma.DateTimeNullableFilter<"Personnel"> | Date | string | null
   salaire?: Prisma.DecimalFilter<"Personnel"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFilter<"Personnel"> | boolean
   supprimer?: Prisma.BoolFilter<"Personnel"> | boolean
@@ -448,6 +458,7 @@ export type PersonnelOrderByWithAggregationInput = {
   adresse?: Prisma.SortOrder
   email?: Prisma.SortOrder
   dateEntrer?: Prisma.SortOrder
+  dateSuppression?: Prisma.SortOrderInput | Prisma.SortOrder
   salaire?: Prisma.SortOrder
   archiver?: Prisma.SortOrder
   supprimer?: Prisma.SortOrder
@@ -482,6 +493,7 @@ export type PersonnelScalarWhereWithAggregatesInput = {
   adresse?: Prisma.StringWithAggregatesFilter<"Personnel"> | string
   email?: Prisma.StringWithAggregatesFilter<"Personnel"> | string
   dateEntrer?: Prisma.DateTimeWithAggregatesFilter<"Personnel"> | Date | string
+  dateSuppression?: Prisma.DateTimeNullableWithAggregatesFilter<"Personnel"> | Date | string | null
   salaire?: Prisma.DecimalWithAggregatesFilter<"Personnel"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolWithAggregatesFilter<"Personnel"> | boolean
   supprimer?: Prisma.BoolWithAggregatesFilter<"Personnel"> | boolean
@@ -508,6 +520,7 @@ export type PersonnelCreateInput = {
   adresse: string
   email: string
   dateEntrer: Date | string
+  dateSuppression?: Date | string | null
   salaire: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
@@ -537,6 +550,7 @@ export type PersonnelUncheckedCreateInput = {
   adresse: string
   email: string
   dateEntrer: Date | string
+  dateSuppression?: Date | string | null
   salaire: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
@@ -566,6 +580,7 @@ export type PersonnelUpdateInput = {
   adresse?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
   dateEntrer?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -595,6 +610,7 @@ export type PersonnelUncheckedUpdateInput = {
   adresse?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
   dateEntrer?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -624,6 +640,7 @@ export type PersonnelCreateManyInput = {
   adresse: string
   email: string
   dateEntrer: Date | string
+  dateSuppression?: Date | string | null
   salaire: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
@@ -650,6 +667,7 @@ export type PersonnelUpdateManyMutationInput = {
   adresse?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
   dateEntrer?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -676,6 +694,7 @@ export type PersonnelUncheckedUpdateManyInput = {
   adresse?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
   dateEntrer?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -708,6 +727,7 @@ export type PersonnelCountOrderByAggregateInput = {
   adresse?: Prisma.SortOrder
   email?: Prisma.SortOrder
   dateEntrer?: Prisma.SortOrder
+  dateSuppression?: Prisma.SortOrder
   salaire?: Prisma.SortOrder
   archiver?: Prisma.SortOrder
   supprimer?: Prisma.SortOrder
@@ -740,6 +760,7 @@ export type PersonnelMaxOrderByAggregateInput = {
   adresse?: Prisma.SortOrder
   email?: Prisma.SortOrder
   dateEntrer?: Prisma.SortOrder
+  dateSuppression?: Prisma.SortOrder
   salaire?: Prisma.SortOrder
   archiver?: Prisma.SortOrder
   supprimer?: Prisma.SortOrder
@@ -766,6 +787,7 @@ export type PersonnelMinOrderByAggregateInput = {
   adresse?: Prisma.SortOrder
   email?: Prisma.SortOrder
   dateEntrer?: Prisma.SortOrder
+  dateSuppression?: Prisma.SortOrder
   salaire?: Prisma.SortOrder
   archiver?: Prisma.SortOrder
   supprimer?: Prisma.SortOrder
@@ -866,6 +888,7 @@ export type PersonnelCreateWithoutRepertoiresInput = {
   adresse: string
   email: string
   dateEntrer: Date | string
+  dateSuppression?: Date | string | null
   salaire: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
@@ -894,6 +917,7 @@ export type PersonnelUncheckedCreateWithoutRepertoiresInput = {
   adresse: string
   email: string
   dateEntrer: Date | string
+  dateSuppression?: Date | string | null
   salaire: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
@@ -938,6 +962,7 @@ export type PersonnelUpdateWithoutRepertoiresInput = {
   adresse?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
   dateEntrer?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -966,6 +991,7 @@ export type PersonnelUncheckedUpdateWithoutRepertoiresInput = {
   adresse?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
   dateEntrer?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -994,6 +1020,7 @@ export type PersonnelCreateWithoutAbsencesOperationInput = {
   adresse: string
   email: string
   dateEntrer: Date | string
+  dateSuppression?: Date | string | null
   salaire: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
@@ -1022,6 +1049,7 @@ export type PersonnelUncheckedCreateWithoutAbsencesOperationInput = {
   adresse: string
   email: string
   dateEntrer: Date | string
+  dateSuppression?: Date | string | null
   salaire: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
@@ -1055,6 +1083,7 @@ export type PersonnelCreateWithoutAbsencesInput = {
   adresse: string
   email: string
   dateEntrer: Date | string
+  dateSuppression?: Date | string | null
   salaire: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
@@ -1083,6 +1112,7 @@ export type PersonnelUncheckedCreateWithoutAbsencesInput = {
   adresse: string
   email: string
   dateEntrer: Date | string
+  dateSuppression?: Date | string | null
   salaire: runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: boolean
   supprimer?: boolean
@@ -1127,6 +1157,7 @@ export type PersonnelUpdateWithoutAbsencesOperationInput = {
   adresse?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
   dateEntrer?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1155,6 +1186,7 @@ export type PersonnelUncheckedUpdateWithoutAbsencesOperationInput = {
   adresse?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
   dateEntrer?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1194,6 +1226,7 @@ export type PersonnelUpdateWithoutAbsencesInput = {
   adresse?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
   dateEntrer?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1222,6 +1255,7 @@ export type PersonnelUncheckedUpdateWithoutAbsencesInput = {
   adresse?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
   dateEntrer?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
@@ -1299,6 +1333,7 @@ export type PersonnelSelect<ExtArgs extends runtime.Types.Extensions.InternalArg
   adresse?: boolean
   email?: boolean
   dateEntrer?: boolean
+  dateSuppression?: boolean
   salaire?: boolean
   archiver?: boolean
   supprimer?: boolean
@@ -1331,6 +1366,7 @@ export type PersonnelSelectScalar = {
   adresse?: boolean
   email?: boolean
   dateEntrer?: boolean
+  dateSuppression?: boolean
   salaire?: boolean
   archiver?: boolean
   supprimer?: boolean
@@ -1344,7 +1380,7 @@ export type PersonnelSelectScalar = {
   supprimerRepertoire?: boolean
 }
 
-export type PersonnelOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "designation" | "cin" | "login" | "password" | "typePersonnel" | "etatComptePersonnel" | "tel1" | "tel2" | "adresse" | "email" | "dateEntrer" | "salaire" | "archiver" | "supprimer" | "consulterStock" | "ajouterStock" | "modifierStock" | "supprimerStock" | "consulterRepertoire" | "ajouterRepertoire" | "modifierRepertoire" | "supprimerRepertoire", ExtArgs["result"]["personnel"]>
+export type PersonnelOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "designation" | "cin" | "login" | "password" | "typePersonnel" | "etatComptePersonnel" | "tel1" | "tel2" | "adresse" | "email" | "dateEntrer" | "dateSuppression" | "salaire" | "archiver" | "supprimer" | "consulterStock" | "ajouterStock" | "modifierStock" | "supprimerStock" | "consulterRepertoire" | "ajouterRepertoire" | "modifierRepertoire" | "supprimerRepertoire", ExtArgs["result"]["personnel"]>
 export type PersonnelInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   absencesOperation?: boolean | Prisma.Personnel$absencesOperationArgs<ExtArgs>
   absences?: boolean | Prisma.Personnel$absencesArgs<ExtArgs>
@@ -1372,6 +1408,7 @@ export type $PersonnelPayload<ExtArgs extends runtime.Types.Extensions.InternalA
     adresse: string
     email: string
     dateEntrer: Date
+    dateSuppression: Date | null
     salaire: runtime.Decimal
     archiver: boolean
     supprimer: boolean
@@ -1767,6 +1804,7 @@ export interface PersonnelFieldRefs {
   readonly adresse: Prisma.FieldRef<"Personnel", 'String'>
   readonly email: Prisma.FieldRef<"Personnel", 'String'>
   readonly dateEntrer: Prisma.FieldRef<"Personnel", 'DateTime'>
+  readonly dateSuppression: Prisma.FieldRef<"Personnel", 'DateTime'>
   readonly salaire: Prisma.FieldRef<"Personnel", 'Decimal'>
   readonly archiver: Prisma.FieldRef<"Personnel", 'Boolean'>
   readonly supprimer: Prisma.FieldRef<"Personnel", 'Boolean'>

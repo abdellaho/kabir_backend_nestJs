@@ -56,7 +56,12 @@ export class StockService {
       where.archiver = stock.archiver;
     }
 
-    return this.databaseService.stock.findMany({ where });
+    return this.databaseService.stock.findMany({ 
+      where, 
+      orderBy: {
+        designation: 'asc'
+      }
+     });
   }
 
   async checkIfExists(data: Prisma.StockCreateInput) {

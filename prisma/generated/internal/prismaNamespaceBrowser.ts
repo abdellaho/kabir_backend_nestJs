@@ -120,6 +120,7 @@ export const FournisseurScalarFieldEnum = {
   tel2: 'tel2',
   ice: 'ice',
   adresse: 'adresse',
+  dateSuppression: 'dateSuppression',
   archiver: 'archiver',
   supprimer: 'supprimer',
   villeId: 'villeId'
@@ -141,6 +142,7 @@ export const PersonnelScalarFieldEnum = {
   adresse: 'adresse',
   email: 'email',
   dateEntrer: 'dateEntrer',
+  dateSuppression: 'dateSuppression',
   salaire: 'salaire',
   archiver: 'archiver',
   supprimer: 'supprimer',
@@ -244,6 +246,7 @@ export const RepertoireScalarFieldEnum = {
   archiver: 'archiver',
   bloquer: 'bloquer',
   sysDate: 'sysDate',
+  dateSuppression: 'dateSuppression',
   observation: 'observation',
   nbrOperationClient: 'nbrOperationClient',
   plafond: 'plafond',
@@ -290,6 +293,7 @@ export const StockScalarFieldEnum = {
   prime1: 'prime1',
   prime2: 'prime2',
   prime3: 'prime3',
+  dateSuppression: 'dateSuppression',
   fournisseurId: 'fournisseurId'
 } as const
 

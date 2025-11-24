@@ -63,7 +63,12 @@ export class RepertoireService {
       where.archiver = stock.archiver;
     }
 
-    return this.databaseService.repertoire.findMany({ where });
+    return this.databaseService.repertoire.findMany({ 
+      where,
+      orderBy: {
+        designation: 'asc'
+      }
+     });
   }
 
   async checkIfExists(data: RepertoireSearch) {

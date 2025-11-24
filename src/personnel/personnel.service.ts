@@ -112,7 +112,12 @@ export class PersonnelService {
       where.archiver = data.archiver;
     }
 
-    return this.databaseService.personnel.findMany({ where });
+    return this.databaseService.personnel.findMany({ 
+      where,
+      orderBy: {
+        designation: 'asc'
+      }
+    });
   }
 
 }

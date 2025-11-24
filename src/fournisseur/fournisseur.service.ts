@@ -55,7 +55,12 @@ export class FournisseurService {
       where.archiver = stock.archiver;
     }
 
-    return this.databaseService.fournisseur.findMany({ where });
+    return this.databaseService.fournisseur.findMany({ 
+      where, 
+      orderBy: {
+        designation: 'asc'
+      }
+    });
   }
 
   async checkIfExists(data: Prisma.FournisseurCreateInput) {
