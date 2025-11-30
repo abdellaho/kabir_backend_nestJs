@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { Prisma } from 'prisma/generated/client'; 
 import * as bcrypt from 'bcrypt';
 import { DatabaseService } from 'src/database/database.service';
+import { mapToDateTimeBackEnd } from 'src/common/common-methods/common-methods';
 
 @Injectable()
 export class PersonnelService {
@@ -20,7 +21,16 @@ export class PersonnelService {
   }
 
   findAll() {
-    return this.databaseService.personnel.findMany();
+    return this.databaseService.personnel.findMany({
+      orderBy: { designation: 'asc' },
+    });
+  }
+
+  findAllAllowed() {
+    return this.databaseService.personnel.findMany({
+      where: { supprimer: false, archiver: false },
+      orderBy: { designation: 'asc' },
+    });
   }
 
   findOne(id: number) {
@@ -117,6 +127,24 @@ export class PersonnelService {
       orderBy: {
         designation: 'asc'
       }
+    });
+  }
+
+  async getPresentPersonnelOnDate(date1: Date) {
+    console.log('date1:', date1);
+    let targetDate: Date = mapToDateTimeBackEnd(date1);
+
+    console.log('Searching present personnel on dateAbsence:', targetDate.toISOString().split('T')[0]);
+    
+    return this.databaseService.personnel.findMany({
+      where: {
+        absences: {
+          none: {
+            dateAbsence: targetDate,
+          },
+        },
+      },
+      orderBy: { designation: 'asc' },
     });
   }
 

@@ -26,9 +26,19 @@ export class PersonnelController {
     return this.personnelService.findAll();
   }
 
+  @Get('allowed')
+  findAllAllowed() {
+    return this.personnelService.findAll();
+  }
+
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.personnelService.findOne(+id);
+  }
+
+  @Post('present')
+  getPresentPersonnelOnDate(@Body() body: { dateAbsence: Date }) {
+    return this.personnelService.getPresentPersonnelOnDate(body.dateAbsence);
   }
 
   @Patch(':id')

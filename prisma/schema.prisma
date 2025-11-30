@@ -308,7 +308,7 @@ model Absence {
   dateOperation  				      	  DateTime
   personnelOperation  				    Personnel?     				      	  @relation(name: "personnelOperationAbsence", fields: [personnelOperationId], references: [id])
   personnelOperationId  			    BigInt?
-  personnel     				      	  Personnel  			                @relation(name: "personnelAbsence", fields: [personnelId], references: [id])
+  personnel     				      	  Personnel  			                @relation(name: "personnelAbsence", fields: [personnelId], references: [id], onDelete: Restrict)
   personnelId   				      	  BigInt
 }
 
