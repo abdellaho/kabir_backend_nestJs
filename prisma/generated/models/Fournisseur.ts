@@ -782,6 +782,7 @@ export type FournisseurCreateWithoutLivraisonsInput = {
   tel2: string
   ice: string
   adresse: string
+  dateSuppression?: Date | string | null
   archiver?: boolean
   supprimer?: boolean
   ville?: Prisma.VilleCreateNestedOneWithoutFournisseursInput
@@ -796,6 +797,7 @@ export type FournisseurUncheckedCreateWithoutLivraisonsInput = {
   tel2: string
   ice: string
   adresse: string
+  dateSuppression?: Date | string | null
   archiver?: boolean
   supprimer?: boolean
   villeId?: bigint | number | null
@@ -826,6 +828,7 @@ export type FournisseurUpdateWithoutLivraisonsInput = {
   tel2?: Prisma.StringFieldUpdateOperationsInput | string
   ice?: Prisma.StringFieldUpdateOperationsInput | string
   adresse?: Prisma.StringFieldUpdateOperationsInput | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   ville?: Prisma.VilleUpdateOneWithoutFournisseursNestedInput
@@ -840,6 +843,7 @@ export type FournisseurUncheckedUpdateWithoutLivraisonsInput = {
   tel2?: Prisma.StringFieldUpdateOperationsInput | string
   ice?: Prisma.StringFieldUpdateOperationsInput | string
   adresse?: Prisma.StringFieldUpdateOperationsInput | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
