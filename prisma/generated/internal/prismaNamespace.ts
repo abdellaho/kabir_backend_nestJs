@@ -3735,9 +3735,9 @@ export const LivraisonScalarFieldEnum = {
   facturer100: 'facturer100',
   codeTransport: 'codeTransport',
   employeOperateurId: 'employeOperateurId',
-  repertoireByCommercialId: 'repertoireByCommercialId',
-  repertoireByCommercialAncienId: 'repertoireByCommercialAncienId',
-  repertoireByClientId: 'repertoireByClientId'
+  personnelId: 'personnelId',
+  personnelAncienId: 'personnelAncienId',
+  fournisseurId: 'fournisseurId'
 } as const
 
 export type LivraisonScalarFieldEnum = (typeof LivraisonScalarFieldEnum)[keyof typeof LivraisonScalarFieldEnum]

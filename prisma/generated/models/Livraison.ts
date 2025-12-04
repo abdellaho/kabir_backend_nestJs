@@ -46,9 +46,9 @@ export type LivraisonAvgAggregateOutputType = {
   mntReglement3: runtime.Decimal | null
   mntReglement4: runtime.Decimal | null
   employeOperateurId: number | null
-  repertoireByCommercialId: number | null
-  repertoireByCommercialAncienId: number | null
-  repertoireByClientId: number | null
+  personnelId: number | null
+  personnelAncienId: number | null
+  fournisseurId: number | null
 }
 
 export type LivraisonSumAggregateOutputType = {
@@ -71,9 +71,9 @@ export type LivraisonSumAggregateOutputType = {
   mntReglement3: runtime.Decimal | null
   mntReglement4: runtime.Decimal | null
   employeOperateurId: bigint | null
-  repertoireByCommercialId: bigint | null
-  repertoireByCommercialAncienId: bigint | null
-  repertoireByClientId: bigint | null
+  personnelId: bigint | null
+  personnelAncienId: bigint | null
+  fournisseurId: bigint | null
 }
 
 export type LivraisonMinAggregateOutputType = {
@@ -107,9 +107,9 @@ export type LivraisonMinAggregateOutputType = {
   facturer100: boolean | null
   codeTransport: string | null
   employeOperateurId: bigint | null
-  repertoireByCommercialId: bigint | null
-  repertoireByCommercialAncienId: bigint | null
-  repertoireByClientId: bigint | null
+  personnelId: bigint | null
+  personnelAncienId: bigint | null
+  fournisseurId: bigint | null
 }
 
 export type LivraisonMaxAggregateOutputType = {
@@ -143,9 +143,9 @@ export type LivraisonMaxAggregateOutputType = {
   facturer100: boolean | null
   codeTransport: string | null
   employeOperateurId: bigint | null
-  repertoireByCommercialId: bigint | null
-  repertoireByCommercialAncienId: bigint | null
-  repertoireByClientId: bigint | null
+  personnelId: bigint | null
+  personnelAncienId: bigint | null
+  fournisseurId: bigint | null
 }
 
 export type LivraisonCountAggregateOutputType = {
@@ -179,9 +179,9 @@ export type LivraisonCountAggregateOutputType = {
   facturer100: number
   codeTransport: number
   employeOperateurId: number
-  repertoireByCommercialId: number
-  repertoireByCommercialAncienId: number
-  repertoireByClientId: number
+  personnelId: number
+  personnelAncienId: number
+  fournisseurId: number
   _all: number
 }
 
@@ -206,9 +206,9 @@ export type LivraisonAvgAggregateInputType = {
   mntReglement3?: true
   mntReglement4?: true
   employeOperateurId?: true
-  repertoireByCommercialId?: true
-  repertoireByCommercialAncienId?: true
-  repertoireByClientId?: true
+  personnelId?: true
+  personnelAncienId?: true
+  fournisseurId?: true
 }
 
 export type LivraisonSumAggregateInputType = {
@@ -231,9 +231,9 @@ export type LivraisonSumAggregateInputType = {
   mntReglement3?: true
   mntReglement4?: true
   employeOperateurId?: true
-  repertoireByCommercialId?: true
-  repertoireByCommercialAncienId?: true
-  repertoireByClientId?: true
+  personnelId?: true
+  personnelAncienId?: true
+  fournisseurId?: true
 }
 
 export type LivraisonMinAggregateInputType = {
@@ -267,9 +267,9 @@ export type LivraisonMinAggregateInputType = {
   facturer100?: true
   codeTransport?: true
   employeOperateurId?: true
-  repertoireByCommercialId?: true
-  repertoireByCommercialAncienId?: true
-  repertoireByClientId?: true
+  personnelId?: true
+  personnelAncienId?: true
+  fournisseurId?: true
 }
 
 export type LivraisonMaxAggregateInputType = {
@@ -303,9 +303,9 @@ export type LivraisonMaxAggregateInputType = {
   facturer100?: true
   codeTransport?: true
   employeOperateurId?: true
-  repertoireByCommercialId?: true
-  repertoireByCommercialAncienId?: true
-  repertoireByClientId?: true
+  personnelId?: true
+  personnelAncienId?: true
+  fournisseurId?: true
 }
 
 export type LivraisonCountAggregateInputType = {
@@ -339,9 +339,9 @@ export type LivraisonCountAggregateInputType = {
   facturer100?: true
   codeTransport?: true
   employeOperateurId?: true
-  repertoireByCommercialId?: true
-  repertoireByCommercialAncienId?: true
-  repertoireByClientId?: true
+  personnelId?: true
+  personnelAncienId?: true
+  fournisseurId?: true
   _all?: true
 }
 
@@ -461,10 +461,10 @@ export type LivraisonGroupByOutputType = {
   mntReglement4: runtime.Decimal
   facturer100: boolean
   codeTransport: string
-  employeOperateurId: bigint
-  repertoireByCommercialId: bigint
-  repertoireByCommercialAncienId: bigint
-  repertoireByClientId: bigint
+  employeOperateurId: bigint | null
+  personnelId: bigint
+  personnelAncienId: bigint | null
+  fournisseurId: bigint
   _count: LivraisonCountAggregateOutputType | null
   _avg: LivraisonAvgAggregateOutputType | null
   _sum: LivraisonSumAggregateOutputType | null
@@ -520,14 +520,14 @@ export type LivraisonWhereInput = {
   mntReglement4?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFilter<"Livraison"> | boolean
   codeTransport?: Prisma.StringFilter<"Livraison"> | string
-  employeOperateurId?: Prisma.BigIntFilter<"Livraison"> | bigint | number
-  repertoireByCommercialId?: Prisma.BigIntFilter<"Livraison"> | bigint | number
-  repertoireByCommercialAncienId?: Prisma.BigIntFilter<"Livraison"> | bigint | number
-  repertoireByClientId?: Prisma.BigIntFilter<"Livraison"> | bigint | number
-  employeOperateur?: Prisma.XOR<Prisma.EmployeScalarRelationFilter, Prisma.EmployeWhereInput>
-  repertoireByCommercial?: Prisma.XOR<Prisma.RepertoireScalarRelationFilter, Prisma.RepertoireWhereInput>
-  repertoireByCommercialAncien?: Prisma.XOR<Prisma.RepertoireNullableScalarRelationFilter, Prisma.RepertoireWhereInput> | null
-  repertoireByClient?: Prisma.XOR<Prisma.RepertoireScalarRelationFilter, Prisma.RepertoireWhereInput>
+  employeOperateurId?: Prisma.BigIntNullableFilter<"Livraison"> | bigint | number | null
+  personnelId?: Prisma.BigIntFilter<"Livraison"> | bigint | number
+  personnelAncienId?: Prisma.BigIntNullableFilter<"Livraison"> | bigint | number | null
+  fournisseurId?: Prisma.BigIntFilter<"Livraison"> | bigint | number
+  employeOperateur?: Prisma.XOR<Prisma.EmployeNullableScalarRelationFilter, Prisma.EmployeWhereInput> | null
+  personnel?: Prisma.XOR<Prisma.PersonnelScalarRelationFilter, Prisma.PersonnelWhereInput>
+  personnelAncien?: Prisma.XOR<Prisma.PersonnelNullableScalarRelationFilter, Prisma.PersonnelWhereInput> | null
+  fournisseur?: Prisma.XOR<Prisma.FournisseurScalarRelationFilter, Prisma.FournisseurWhereInput>
   detLivraisons?: Prisma.DetLivraisonListRelationFilter
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonListRelationFilter
 }
@@ -562,14 +562,14 @@ export type LivraisonOrderByWithRelationInput = {
   mntReglement4?: Prisma.SortOrder
   facturer100?: Prisma.SortOrder
   codeTransport?: Prisma.SortOrder
-  employeOperateurId?: Prisma.SortOrder
-  repertoireByCommercialId?: Prisma.SortOrder
-  repertoireByCommercialAncienId?: Prisma.SortOrder
-  repertoireByClientId?: Prisma.SortOrder
+  employeOperateurId?: Prisma.SortOrderInput | Prisma.SortOrder
+  personnelId?: Prisma.SortOrder
+  personnelAncienId?: Prisma.SortOrderInput | Prisma.SortOrder
+  fournisseurId?: Prisma.SortOrder
   employeOperateur?: Prisma.EmployeOrderByWithRelationInput
-  repertoireByCommercial?: Prisma.RepertoireOrderByWithRelationInput
-  repertoireByCommercialAncien?: Prisma.RepertoireOrderByWithRelationInput
-  repertoireByClient?: Prisma.RepertoireOrderByWithRelationInput
+  personnel?: Prisma.PersonnelOrderByWithRelationInput
+  personnelAncien?: Prisma.PersonnelOrderByWithRelationInput
+  fournisseur?: Prisma.FournisseurOrderByWithRelationInput
   detLivraisons?: Prisma.DetLivraisonOrderByRelationAggregateInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonOrderByRelationAggregateInput
   _relevance?: Prisma.LivraisonOrderByRelevanceInput
@@ -608,14 +608,14 @@ export type LivraisonWhereUniqueInput = Prisma.AtLeast<{
   mntReglement4?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFilter<"Livraison"> | boolean
   codeTransport?: Prisma.StringFilter<"Livraison"> | string
-  employeOperateurId?: Prisma.BigIntFilter<"Livraison"> | bigint | number
-  repertoireByCommercialId?: Prisma.BigIntFilter<"Livraison"> | bigint | number
-  repertoireByCommercialAncienId?: Prisma.BigIntFilter<"Livraison"> | bigint | number
-  repertoireByClientId?: Prisma.BigIntFilter<"Livraison"> | bigint | number
-  employeOperateur?: Prisma.XOR<Prisma.EmployeScalarRelationFilter, Prisma.EmployeWhereInput>
-  repertoireByCommercial?: Prisma.XOR<Prisma.RepertoireScalarRelationFilter, Prisma.RepertoireWhereInput>
-  repertoireByCommercialAncien?: Prisma.XOR<Prisma.RepertoireNullableScalarRelationFilter, Prisma.RepertoireWhereInput> | null
-  repertoireByClient?: Prisma.XOR<Prisma.RepertoireScalarRelationFilter, Prisma.RepertoireWhereInput>
+  employeOperateurId?: Prisma.BigIntNullableFilter<"Livraison"> | bigint | number | null
+  personnelId?: Prisma.BigIntFilter<"Livraison"> | bigint | number
+  personnelAncienId?: Prisma.BigIntNullableFilter<"Livraison"> | bigint | number | null
+  fournisseurId?: Prisma.BigIntFilter<"Livraison"> | bigint | number
+  employeOperateur?: Prisma.XOR<Prisma.EmployeNullableScalarRelationFilter, Prisma.EmployeWhereInput> | null
+  personnel?: Prisma.XOR<Prisma.PersonnelScalarRelationFilter, Prisma.PersonnelWhereInput>
+  personnelAncien?: Prisma.XOR<Prisma.PersonnelNullableScalarRelationFilter, Prisma.PersonnelWhereInput> | null
+  fournisseur?: Prisma.XOR<Prisma.FournisseurScalarRelationFilter, Prisma.FournisseurWhereInput>
   detLivraisons?: Prisma.DetLivraisonListRelationFilter
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonListRelationFilter
 }, "id">
@@ -650,10 +650,10 @@ export type LivraisonOrderByWithAggregationInput = {
   mntReglement4?: Prisma.SortOrder
   facturer100?: Prisma.SortOrder
   codeTransport?: Prisma.SortOrder
-  employeOperateurId?: Prisma.SortOrder
-  repertoireByCommercialId?: Prisma.SortOrder
-  repertoireByCommercialAncienId?: Prisma.SortOrder
-  repertoireByClientId?: Prisma.SortOrder
+  employeOperateurId?: Prisma.SortOrderInput | Prisma.SortOrder
+  personnelId?: Prisma.SortOrder
+  personnelAncienId?: Prisma.SortOrderInput | Prisma.SortOrder
+  fournisseurId?: Prisma.SortOrder
   _count?: Prisma.LivraisonCountOrderByAggregateInput
   _avg?: Prisma.LivraisonAvgOrderByAggregateInput
   _max?: Prisma.LivraisonMaxOrderByAggregateInput
@@ -694,10 +694,10 @@ export type LivraisonScalarWhereWithAggregatesInput = {
   mntReglement4?: Prisma.DecimalWithAggregatesFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolWithAggregatesFilter<"Livraison"> | boolean
   codeTransport?: Prisma.StringWithAggregatesFilter<"Livraison"> | string
-  employeOperateurId?: Prisma.BigIntWithAggregatesFilter<"Livraison"> | bigint | number
-  repertoireByCommercialId?: Prisma.BigIntWithAggregatesFilter<"Livraison"> | bigint | number
-  repertoireByCommercialAncienId?: Prisma.BigIntWithAggregatesFilter<"Livraison"> | bigint | number
-  repertoireByClientId?: Prisma.BigIntWithAggregatesFilter<"Livraison"> | bigint | number
+  employeOperateurId?: Prisma.BigIntNullableWithAggregatesFilter<"Livraison"> | bigint | number | null
+  personnelId?: Prisma.BigIntWithAggregatesFilter<"Livraison"> | bigint | number
+  personnelAncienId?: Prisma.BigIntNullableWithAggregatesFilter<"Livraison"> | bigint | number | null
+  fournisseurId?: Prisma.BigIntWithAggregatesFilter<"Livraison"> | bigint | number
 }
 
 export type LivraisonCreateInput = {
@@ -730,10 +730,10 @@ export type LivraisonCreateInput = {
   mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
-  employeOperateur: Prisma.EmployeCreateNestedOneWithoutLivraisonsInput
-  repertoireByCommercial: Prisma.RepertoireCreateNestedOneWithoutLivraisonCommercialsInput
-  repertoireByCommercialAncien?: Prisma.RepertoireCreateNestedOneWithoutLivraisonCommercialAnciensInput
-  repertoireByClient: Prisma.RepertoireCreateNestedOneWithoutLivraisonClientsInput
+  employeOperateur?: Prisma.EmployeCreateNestedOneWithoutLivraisonsInput
+  personnel: Prisma.PersonnelCreateNestedOneWithoutLivraisonsInput
+  personnelAncien?: Prisma.PersonnelCreateNestedOneWithoutLivraisonsAncienInput
+  fournisseur: Prisma.FournisseurCreateNestedOneWithoutLivraisonsInput
   detLivraisons?: Prisma.DetLivraisonCreateNestedManyWithoutLivraisonInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonCreateNestedManyWithoutLivraisonInput
 }
@@ -768,10 +768,10 @@ export type LivraisonUncheckedCreateInput = {
   mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
-  employeOperateurId: bigint | number
-  repertoireByCommercialId: bigint | number
-  repertoireByCommercialAncienId: bigint | number
-  repertoireByClientId: bigint | number
+  employeOperateurId?: bigint | number | null
+  personnelId: bigint | number
+  personnelAncienId?: bigint | number | null
+  fournisseurId: bigint | number
   detLivraisons?: Prisma.DetLivraisonUncheckedCreateNestedManyWithoutLivraisonInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUncheckedCreateNestedManyWithoutLivraisonInput
 }
@@ -806,10 +806,10 @@ export type LivraisonUpdateInput = {
   mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
-  employeOperateur?: Prisma.EmployeUpdateOneRequiredWithoutLivraisonsNestedInput
-  repertoireByCommercial?: Prisma.RepertoireUpdateOneRequiredWithoutLivraisonCommercialsNestedInput
-  repertoireByCommercialAncien?: Prisma.RepertoireUpdateOneWithoutLivraisonCommercialAnciensNestedInput
-  repertoireByClient?: Prisma.RepertoireUpdateOneRequiredWithoutLivraisonClientsNestedInput
+  employeOperateur?: Prisma.EmployeUpdateOneWithoutLivraisonsNestedInput
+  personnel?: Prisma.PersonnelUpdateOneRequiredWithoutLivraisonsNestedInput
+  personnelAncien?: Prisma.PersonnelUpdateOneWithoutLivraisonsAncienNestedInput
+  fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutLivraisonsNestedInput
   detLivraisons?: Prisma.DetLivraisonUpdateManyWithoutLivraisonNestedInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUpdateManyWithoutLivraisonNestedInput
 }
@@ -844,10 +844,10 @@ export type LivraisonUncheckedUpdateInput = {
   mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
-  employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByCommercialId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByCommercialAncienId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByClientId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  employeOperateurId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+  personnelId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  personnelAncienId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+  fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detLivraisons?: Prisma.DetLivraisonUncheckedUpdateManyWithoutLivraisonNestedInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUncheckedUpdateManyWithoutLivraisonNestedInput
 }
@@ -882,10 +882,10 @@ export type LivraisonCreateManyInput = {
   mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
-  employeOperateurId: bigint | number
-  repertoireByCommercialId: bigint | number
-  repertoireByCommercialAncienId: bigint | number
-  repertoireByClientId: bigint | number
+  employeOperateurId?: bigint | number | null
+  personnelId: bigint | number
+  personnelAncienId?: bigint | number | null
+  fournisseurId: bigint | number
 }
 
 export type LivraisonUpdateManyMutationInput = {
@@ -950,10 +950,10 @@ export type LivraisonUncheckedUpdateManyInput = {
   mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
-  employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByCommercialId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByCommercialAncienId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByClientId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  employeOperateurId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+  personnelId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  personnelAncienId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+  fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
 export type LivraisonListRelationFilter = {
@@ -1008,9 +1008,9 @@ export type LivraisonCountOrderByAggregateInput = {
   facturer100?: Prisma.SortOrder
   codeTransport?: Prisma.SortOrder
   employeOperateurId?: Prisma.SortOrder
-  repertoireByCommercialId?: Prisma.SortOrder
-  repertoireByCommercialAncienId?: Prisma.SortOrder
-  repertoireByClientId?: Prisma.SortOrder
+  personnelId?: Prisma.SortOrder
+  personnelAncienId?: Prisma.SortOrder
+  fournisseurId?: Prisma.SortOrder
 }
 
 export type LivraisonAvgOrderByAggregateInput = {
@@ -1033,9 +1033,9 @@ export type LivraisonAvgOrderByAggregateInput = {
   mntReglement3?: Prisma.SortOrder
   mntReglement4?: Prisma.SortOrder
   employeOperateurId?: Prisma.SortOrder
-  repertoireByCommercialId?: Prisma.SortOrder
-  repertoireByCommercialAncienId?: Prisma.SortOrder
-  repertoireByClientId?: Prisma.SortOrder
+  personnelId?: Prisma.SortOrder
+  personnelAncienId?: Prisma.SortOrder
+  fournisseurId?: Prisma.SortOrder
 }
 
 export type LivraisonMaxOrderByAggregateInput = {
@@ -1069,9 +1069,9 @@ export type LivraisonMaxOrderByAggregateInput = {
   facturer100?: Prisma.SortOrder
   codeTransport?: Prisma.SortOrder
   employeOperateurId?: Prisma.SortOrder
-  repertoireByCommercialId?: Prisma.SortOrder
-  repertoireByCommercialAncienId?: Prisma.SortOrder
-  repertoireByClientId?: Prisma.SortOrder
+  personnelId?: Prisma.SortOrder
+  personnelAncienId?: Prisma.SortOrder
+  fournisseurId?: Prisma.SortOrder
 }
 
 export type LivraisonMinOrderByAggregateInput = {
@@ -1105,9 +1105,9 @@ export type LivraisonMinOrderByAggregateInput = {
   facturer100?: Prisma.SortOrder
   codeTransport?: Prisma.SortOrder
   employeOperateurId?: Prisma.SortOrder
-  repertoireByCommercialId?: Prisma.SortOrder
-  repertoireByCommercialAncienId?: Prisma.SortOrder
-  repertoireByClientId?: Prisma.SortOrder
+  personnelId?: Prisma.SortOrder
+  personnelAncienId?: Prisma.SortOrder
+  fournisseurId?: Prisma.SortOrder
 }
 
 export type LivraisonSumOrderByAggregateInput = {
@@ -1130,134 +1130,134 @@ export type LivraisonSumOrderByAggregateInput = {
   mntReglement3?: Prisma.SortOrder
   mntReglement4?: Prisma.SortOrder
   employeOperateurId?: Prisma.SortOrder
-  repertoireByCommercialId?: Prisma.SortOrder
-  repertoireByCommercialAncienId?: Prisma.SortOrder
-  repertoireByClientId?: Prisma.SortOrder
+  personnelId?: Prisma.SortOrder
+  personnelAncienId?: Prisma.SortOrder
+  fournisseurId?: Prisma.SortOrder
 }
 
-export type LivraisonCreateNestedManyWithoutRepertoireByCommercialInput = {
-  create?: Prisma.XOR<Prisma.LivraisonCreateWithoutRepertoireByCommercialInput, Prisma.LivraisonUncheckedCreateWithoutRepertoireByCommercialInput> | Prisma.LivraisonCreateWithoutRepertoireByCommercialInput[] | Prisma.LivraisonUncheckedCreateWithoutRepertoireByCommercialInput[]
-  connectOrCreate?: Prisma.LivraisonCreateOrConnectWithoutRepertoireByCommercialInput | Prisma.LivraisonCreateOrConnectWithoutRepertoireByCommercialInput[]
-  createMany?: Prisma.LivraisonCreateManyRepertoireByCommercialInputEnvelope
+export type LivraisonCreateNestedManyWithoutFournisseurInput = {
+  create?: Prisma.XOR<Prisma.LivraisonCreateWithoutFournisseurInput, Prisma.LivraisonUncheckedCreateWithoutFournisseurInput> | Prisma.LivraisonCreateWithoutFournisseurInput[] | Prisma.LivraisonUncheckedCreateWithoutFournisseurInput[]
+  connectOrCreate?: Prisma.LivraisonCreateOrConnectWithoutFournisseurInput | Prisma.LivraisonCreateOrConnectWithoutFournisseurInput[]
+  createMany?: Prisma.LivraisonCreateManyFournisseurInputEnvelope
   connect?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
 }
 
-export type LivraisonCreateNestedManyWithoutRepertoireByCommercialAncienInput = {
-  create?: Prisma.XOR<Prisma.LivraisonCreateWithoutRepertoireByCommercialAncienInput, Prisma.LivraisonUncheckedCreateWithoutRepertoireByCommercialAncienInput> | Prisma.LivraisonCreateWithoutRepertoireByCommercialAncienInput[] | Prisma.LivraisonUncheckedCreateWithoutRepertoireByCommercialAncienInput[]
-  connectOrCreate?: Prisma.LivraisonCreateOrConnectWithoutRepertoireByCommercialAncienInput | Prisma.LivraisonCreateOrConnectWithoutRepertoireByCommercialAncienInput[]
-  createMany?: Prisma.LivraisonCreateManyRepertoireByCommercialAncienInputEnvelope
+export type LivraisonUncheckedCreateNestedManyWithoutFournisseurInput = {
+  create?: Prisma.XOR<Prisma.LivraisonCreateWithoutFournisseurInput, Prisma.LivraisonUncheckedCreateWithoutFournisseurInput> | Prisma.LivraisonCreateWithoutFournisseurInput[] | Prisma.LivraisonUncheckedCreateWithoutFournisseurInput[]
+  connectOrCreate?: Prisma.LivraisonCreateOrConnectWithoutFournisseurInput | Prisma.LivraisonCreateOrConnectWithoutFournisseurInput[]
+  createMany?: Prisma.LivraisonCreateManyFournisseurInputEnvelope
   connect?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
 }
 
-export type LivraisonCreateNestedManyWithoutRepertoireByClientInput = {
-  create?: Prisma.XOR<Prisma.LivraisonCreateWithoutRepertoireByClientInput, Prisma.LivraisonUncheckedCreateWithoutRepertoireByClientInput> | Prisma.LivraisonCreateWithoutRepertoireByClientInput[] | Prisma.LivraisonUncheckedCreateWithoutRepertoireByClientInput[]
-  connectOrCreate?: Prisma.LivraisonCreateOrConnectWithoutRepertoireByClientInput | Prisma.LivraisonCreateOrConnectWithoutRepertoireByClientInput[]
-  createMany?: Prisma.LivraisonCreateManyRepertoireByClientInputEnvelope
-  connect?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
-}
-
-export type LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialInput = {
-  create?: Prisma.XOR<Prisma.LivraisonCreateWithoutRepertoireByCommercialInput, Prisma.LivraisonUncheckedCreateWithoutRepertoireByCommercialInput> | Prisma.LivraisonCreateWithoutRepertoireByCommercialInput[] | Prisma.LivraisonUncheckedCreateWithoutRepertoireByCommercialInput[]
-  connectOrCreate?: Prisma.LivraisonCreateOrConnectWithoutRepertoireByCommercialInput | Prisma.LivraisonCreateOrConnectWithoutRepertoireByCommercialInput[]
-  createMany?: Prisma.LivraisonCreateManyRepertoireByCommercialInputEnvelope
-  connect?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
-}
-
-export type LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialAncienInput = {
-  create?: Prisma.XOR<Prisma.LivraisonCreateWithoutRepertoireByCommercialAncienInput, Prisma.LivraisonUncheckedCreateWithoutRepertoireByCommercialAncienInput> | Prisma.LivraisonCreateWithoutRepertoireByCommercialAncienInput[] | Prisma.LivraisonUncheckedCreateWithoutRepertoireByCommercialAncienInput[]
-  connectOrCreate?: Prisma.LivraisonCreateOrConnectWithoutRepertoireByCommercialAncienInput | Prisma.LivraisonCreateOrConnectWithoutRepertoireByCommercialAncienInput[]
-  createMany?: Prisma.LivraisonCreateManyRepertoireByCommercialAncienInputEnvelope
-  connect?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
-}
-
-export type LivraisonUncheckedCreateNestedManyWithoutRepertoireByClientInput = {
-  create?: Prisma.XOR<Prisma.LivraisonCreateWithoutRepertoireByClientInput, Prisma.LivraisonUncheckedCreateWithoutRepertoireByClientInput> | Prisma.LivraisonCreateWithoutRepertoireByClientInput[] | Prisma.LivraisonUncheckedCreateWithoutRepertoireByClientInput[]
-  connectOrCreate?: Prisma.LivraisonCreateOrConnectWithoutRepertoireByClientInput | Prisma.LivraisonCreateOrConnectWithoutRepertoireByClientInput[]
-  createMany?: Prisma.LivraisonCreateManyRepertoireByClientInputEnvelope
-  connect?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
-}
-
-export type LivraisonUpdateManyWithoutRepertoireByCommercialNestedInput = {
-  create?: Prisma.XOR<Prisma.LivraisonCreateWithoutRepertoireByCommercialInput, Prisma.LivraisonUncheckedCreateWithoutRepertoireByCommercialInput> | Prisma.LivraisonCreateWithoutRepertoireByCommercialInput[] | Prisma.LivraisonUncheckedCreateWithoutRepertoireByCommercialInput[]
-  connectOrCreate?: Prisma.LivraisonCreateOrConnectWithoutRepertoireByCommercialInput | Prisma.LivraisonCreateOrConnectWithoutRepertoireByCommercialInput[]
-  upsert?: Prisma.LivraisonUpsertWithWhereUniqueWithoutRepertoireByCommercialInput | Prisma.LivraisonUpsertWithWhereUniqueWithoutRepertoireByCommercialInput[]
-  createMany?: Prisma.LivraisonCreateManyRepertoireByCommercialInputEnvelope
+export type LivraisonUpdateManyWithoutFournisseurNestedInput = {
+  create?: Prisma.XOR<Prisma.LivraisonCreateWithoutFournisseurInput, Prisma.LivraisonUncheckedCreateWithoutFournisseurInput> | Prisma.LivraisonCreateWithoutFournisseurInput[] | Prisma.LivraisonUncheckedCreateWithoutFournisseurInput[]
+  connectOrCreate?: Prisma.LivraisonCreateOrConnectWithoutFournisseurInput | Prisma.LivraisonCreateOrConnectWithoutFournisseurInput[]
+  upsert?: Prisma.LivraisonUpsertWithWhereUniqueWithoutFournisseurInput | Prisma.LivraisonUpsertWithWhereUniqueWithoutFournisseurInput[]
+  createMany?: Prisma.LivraisonCreateManyFournisseurInputEnvelope
   set?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
   disconnect?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
   delete?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
   connect?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
-  update?: Prisma.LivraisonUpdateWithWhereUniqueWithoutRepertoireByCommercialInput | Prisma.LivraisonUpdateWithWhereUniqueWithoutRepertoireByCommercialInput[]
-  updateMany?: Prisma.LivraisonUpdateManyWithWhereWithoutRepertoireByCommercialInput | Prisma.LivraisonUpdateManyWithWhereWithoutRepertoireByCommercialInput[]
+  update?: Prisma.LivraisonUpdateWithWhereUniqueWithoutFournisseurInput | Prisma.LivraisonUpdateWithWhereUniqueWithoutFournisseurInput[]
+  updateMany?: Prisma.LivraisonUpdateManyWithWhereWithoutFournisseurInput | Prisma.LivraisonUpdateManyWithWhereWithoutFournisseurInput[]
   deleteMany?: Prisma.LivraisonScalarWhereInput | Prisma.LivraisonScalarWhereInput[]
 }
 
-export type LivraisonUpdateManyWithoutRepertoireByCommercialAncienNestedInput = {
-  create?: Prisma.XOR<Prisma.LivraisonCreateWithoutRepertoireByCommercialAncienInput, Prisma.LivraisonUncheckedCreateWithoutRepertoireByCommercialAncienInput> | Prisma.LivraisonCreateWithoutRepertoireByCommercialAncienInput[] | Prisma.LivraisonUncheckedCreateWithoutRepertoireByCommercialAncienInput[]
-  connectOrCreate?: Prisma.LivraisonCreateOrConnectWithoutRepertoireByCommercialAncienInput | Prisma.LivraisonCreateOrConnectWithoutRepertoireByCommercialAncienInput[]
-  upsert?: Prisma.LivraisonUpsertWithWhereUniqueWithoutRepertoireByCommercialAncienInput | Prisma.LivraisonUpsertWithWhereUniqueWithoutRepertoireByCommercialAncienInput[]
-  createMany?: Prisma.LivraisonCreateManyRepertoireByCommercialAncienInputEnvelope
+export type LivraisonUncheckedUpdateManyWithoutFournisseurNestedInput = {
+  create?: Prisma.XOR<Prisma.LivraisonCreateWithoutFournisseurInput, Prisma.LivraisonUncheckedCreateWithoutFournisseurInput> | Prisma.LivraisonCreateWithoutFournisseurInput[] | Prisma.LivraisonUncheckedCreateWithoutFournisseurInput[]
+  connectOrCreate?: Prisma.LivraisonCreateOrConnectWithoutFournisseurInput | Prisma.LivraisonCreateOrConnectWithoutFournisseurInput[]
+  upsert?: Prisma.LivraisonUpsertWithWhereUniqueWithoutFournisseurInput | Prisma.LivraisonUpsertWithWhereUniqueWithoutFournisseurInput[]
+  createMany?: Prisma.LivraisonCreateManyFournisseurInputEnvelope
   set?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
   disconnect?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
   delete?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
   connect?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
-  update?: Prisma.LivraisonUpdateWithWhereUniqueWithoutRepertoireByCommercialAncienInput | Prisma.LivraisonUpdateWithWhereUniqueWithoutRepertoireByCommercialAncienInput[]
-  updateMany?: Prisma.LivraisonUpdateManyWithWhereWithoutRepertoireByCommercialAncienInput | Prisma.LivraisonUpdateManyWithWhereWithoutRepertoireByCommercialAncienInput[]
+  update?: Prisma.LivraisonUpdateWithWhereUniqueWithoutFournisseurInput | Prisma.LivraisonUpdateWithWhereUniqueWithoutFournisseurInput[]
+  updateMany?: Prisma.LivraisonUpdateManyWithWhereWithoutFournisseurInput | Prisma.LivraisonUpdateManyWithWhereWithoutFournisseurInput[]
   deleteMany?: Prisma.LivraisonScalarWhereInput | Prisma.LivraisonScalarWhereInput[]
 }
 
-export type LivraisonUpdateManyWithoutRepertoireByClientNestedInput = {
-  create?: Prisma.XOR<Prisma.LivraisonCreateWithoutRepertoireByClientInput, Prisma.LivraisonUncheckedCreateWithoutRepertoireByClientInput> | Prisma.LivraisonCreateWithoutRepertoireByClientInput[] | Prisma.LivraisonUncheckedCreateWithoutRepertoireByClientInput[]
-  connectOrCreate?: Prisma.LivraisonCreateOrConnectWithoutRepertoireByClientInput | Prisma.LivraisonCreateOrConnectWithoutRepertoireByClientInput[]
-  upsert?: Prisma.LivraisonUpsertWithWhereUniqueWithoutRepertoireByClientInput | Prisma.LivraisonUpsertWithWhereUniqueWithoutRepertoireByClientInput[]
-  createMany?: Prisma.LivraisonCreateManyRepertoireByClientInputEnvelope
+export type LivraisonCreateNestedManyWithoutPersonnelInput = {
+  create?: Prisma.XOR<Prisma.LivraisonCreateWithoutPersonnelInput, Prisma.LivraisonUncheckedCreateWithoutPersonnelInput> | Prisma.LivraisonCreateWithoutPersonnelInput[] | Prisma.LivraisonUncheckedCreateWithoutPersonnelInput[]
+  connectOrCreate?: Prisma.LivraisonCreateOrConnectWithoutPersonnelInput | Prisma.LivraisonCreateOrConnectWithoutPersonnelInput[]
+  createMany?: Prisma.LivraisonCreateManyPersonnelInputEnvelope
+  connect?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
+}
+
+export type LivraisonCreateNestedManyWithoutPersonnelAncienInput = {
+  create?: Prisma.XOR<Prisma.LivraisonCreateWithoutPersonnelAncienInput, Prisma.LivraisonUncheckedCreateWithoutPersonnelAncienInput> | Prisma.LivraisonCreateWithoutPersonnelAncienInput[] | Prisma.LivraisonUncheckedCreateWithoutPersonnelAncienInput[]
+  connectOrCreate?: Prisma.LivraisonCreateOrConnectWithoutPersonnelAncienInput | Prisma.LivraisonCreateOrConnectWithoutPersonnelAncienInput[]
+  createMany?: Prisma.LivraisonCreateManyPersonnelAncienInputEnvelope
+  connect?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
+}
+
+export type LivraisonUncheckedCreateNestedManyWithoutPersonnelInput = {
+  create?: Prisma.XOR<Prisma.LivraisonCreateWithoutPersonnelInput, Prisma.LivraisonUncheckedCreateWithoutPersonnelInput> | Prisma.LivraisonCreateWithoutPersonnelInput[] | Prisma.LivraisonUncheckedCreateWithoutPersonnelInput[]
+  connectOrCreate?: Prisma.LivraisonCreateOrConnectWithoutPersonnelInput | Prisma.LivraisonCreateOrConnectWithoutPersonnelInput[]
+  createMany?: Prisma.LivraisonCreateManyPersonnelInputEnvelope
+  connect?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
+}
+
+export type LivraisonUncheckedCreateNestedManyWithoutPersonnelAncienInput = {
+  create?: Prisma.XOR<Prisma.LivraisonCreateWithoutPersonnelAncienInput, Prisma.LivraisonUncheckedCreateWithoutPersonnelAncienInput> | Prisma.LivraisonCreateWithoutPersonnelAncienInput[] | Prisma.LivraisonUncheckedCreateWithoutPersonnelAncienInput[]
+  connectOrCreate?: Prisma.LivraisonCreateOrConnectWithoutPersonnelAncienInput | Prisma.LivraisonCreateOrConnectWithoutPersonnelAncienInput[]
+  createMany?: Prisma.LivraisonCreateManyPersonnelAncienInputEnvelope
+  connect?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
+}
+
+export type LivraisonUpdateManyWithoutPersonnelNestedInput = {
+  create?: Prisma.XOR<Prisma.LivraisonCreateWithoutPersonnelInput, Prisma.LivraisonUncheckedCreateWithoutPersonnelInput> | Prisma.LivraisonCreateWithoutPersonnelInput[] | Prisma.LivraisonUncheckedCreateWithoutPersonnelInput[]
+  connectOrCreate?: Prisma.LivraisonCreateOrConnectWithoutPersonnelInput | Prisma.LivraisonCreateOrConnectWithoutPersonnelInput[]
+  upsert?: Prisma.LivraisonUpsertWithWhereUniqueWithoutPersonnelInput | Prisma.LivraisonUpsertWithWhereUniqueWithoutPersonnelInput[]
+  createMany?: Prisma.LivraisonCreateManyPersonnelInputEnvelope
   set?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
   disconnect?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
   delete?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
   connect?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
-  update?: Prisma.LivraisonUpdateWithWhereUniqueWithoutRepertoireByClientInput | Prisma.LivraisonUpdateWithWhereUniqueWithoutRepertoireByClientInput[]
-  updateMany?: Prisma.LivraisonUpdateManyWithWhereWithoutRepertoireByClientInput | Prisma.LivraisonUpdateManyWithWhereWithoutRepertoireByClientInput[]
+  update?: Prisma.LivraisonUpdateWithWhereUniqueWithoutPersonnelInput | Prisma.LivraisonUpdateWithWhereUniqueWithoutPersonnelInput[]
+  updateMany?: Prisma.LivraisonUpdateManyWithWhereWithoutPersonnelInput | Prisma.LivraisonUpdateManyWithWhereWithoutPersonnelInput[]
   deleteMany?: Prisma.LivraisonScalarWhereInput | Prisma.LivraisonScalarWhereInput[]
 }
 
-export type LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialNestedInput = {
-  create?: Prisma.XOR<Prisma.LivraisonCreateWithoutRepertoireByCommercialInput, Prisma.LivraisonUncheckedCreateWithoutRepertoireByCommercialInput> | Prisma.LivraisonCreateWithoutRepertoireByCommercialInput[] | Prisma.LivraisonUncheckedCreateWithoutRepertoireByCommercialInput[]
-  connectOrCreate?: Prisma.LivraisonCreateOrConnectWithoutRepertoireByCommercialInput | Prisma.LivraisonCreateOrConnectWithoutRepertoireByCommercialInput[]
-  upsert?: Prisma.LivraisonUpsertWithWhereUniqueWithoutRepertoireByCommercialInput | Prisma.LivraisonUpsertWithWhereUniqueWithoutRepertoireByCommercialInput[]
-  createMany?: Prisma.LivraisonCreateManyRepertoireByCommercialInputEnvelope
+export type LivraisonUpdateManyWithoutPersonnelAncienNestedInput = {
+  create?: Prisma.XOR<Prisma.LivraisonCreateWithoutPersonnelAncienInput, Prisma.LivraisonUncheckedCreateWithoutPersonnelAncienInput> | Prisma.LivraisonCreateWithoutPersonnelAncienInput[] | Prisma.LivraisonUncheckedCreateWithoutPersonnelAncienInput[]
+  connectOrCreate?: Prisma.LivraisonCreateOrConnectWithoutPersonnelAncienInput | Prisma.LivraisonCreateOrConnectWithoutPersonnelAncienInput[]
+  upsert?: Prisma.LivraisonUpsertWithWhereUniqueWithoutPersonnelAncienInput | Prisma.LivraisonUpsertWithWhereUniqueWithoutPersonnelAncienInput[]
+  createMany?: Prisma.LivraisonCreateManyPersonnelAncienInputEnvelope
   set?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
   disconnect?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
   delete?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
   connect?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
-  update?: Prisma.LivraisonUpdateWithWhereUniqueWithoutRepertoireByCommercialInput | Prisma.LivraisonUpdateWithWhereUniqueWithoutRepertoireByCommercialInput[]
-  updateMany?: Prisma.LivraisonUpdateManyWithWhereWithoutRepertoireByCommercialInput | Prisma.LivraisonUpdateManyWithWhereWithoutRepertoireByCommercialInput[]
+  update?: Prisma.LivraisonUpdateWithWhereUniqueWithoutPersonnelAncienInput | Prisma.LivraisonUpdateWithWhereUniqueWithoutPersonnelAncienInput[]
+  updateMany?: Prisma.LivraisonUpdateManyWithWhereWithoutPersonnelAncienInput | Prisma.LivraisonUpdateManyWithWhereWithoutPersonnelAncienInput[]
   deleteMany?: Prisma.LivraisonScalarWhereInput | Prisma.LivraisonScalarWhereInput[]
 }
 
-export type LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialAncienNestedInput = {
-  create?: Prisma.XOR<Prisma.LivraisonCreateWithoutRepertoireByCommercialAncienInput, Prisma.LivraisonUncheckedCreateWithoutRepertoireByCommercialAncienInput> | Prisma.LivraisonCreateWithoutRepertoireByCommercialAncienInput[] | Prisma.LivraisonUncheckedCreateWithoutRepertoireByCommercialAncienInput[]
-  connectOrCreate?: Prisma.LivraisonCreateOrConnectWithoutRepertoireByCommercialAncienInput | Prisma.LivraisonCreateOrConnectWithoutRepertoireByCommercialAncienInput[]
-  upsert?: Prisma.LivraisonUpsertWithWhereUniqueWithoutRepertoireByCommercialAncienInput | Prisma.LivraisonUpsertWithWhereUniqueWithoutRepertoireByCommercialAncienInput[]
-  createMany?: Prisma.LivraisonCreateManyRepertoireByCommercialAncienInputEnvelope
+export type LivraisonUncheckedUpdateManyWithoutPersonnelNestedInput = {
+  create?: Prisma.XOR<Prisma.LivraisonCreateWithoutPersonnelInput, Prisma.LivraisonUncheckedCreateWithoutPersonnelInput> | Prisma.LivraisonCreateWithoutPersonnelInput[] | Prisma.LivraisonUncheckedCreateWithoutPersonnelInput[]
+  connectOrCreate?: Prisma.LivraisonCreateOrConnectWithoutPersonnelInput | Prisma.LivraisonCreateOrConnectWithoutPersonnelInput[]
+  upsert?: Prisma.LivraisonUpsertWithWhereUniqueWithoutPersonnelInput | Prisma.LivraisonUpsertWithWhereUniqueWithoutPersonnelInput[]
+  createMany?: Prisma.LivraisonCreateManyPersonnelInputEnvelope
   set?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
   disconnect?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
   delete?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
   connect?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
-  update?: Prisma.LivraisonUpdateWithWhereUniqueWithoutRepertoireByCommercialAncienInput | Prisma.LivraisonUpdateWithWhereUniqueWithoutRepertoireByCommercialAncienInput[]
-  updateMany?: Prisma.LivraisonUpdateManyWithWhereWithoutRepertoireByCommercialAncienInput | Prisma.LivraisonUpdateManyWithWhereWithoutRepertoireByCommercialAncienInput[]
+  update?: Prisma.LivraisonUpdateWithWhereUniqueWithoutPersonnelInput | Prisma.LivraisonUpdateWithWhereUniqueWithoutPersonnelInput[]
+  updateMany?: Prisma.LivraisonUpdateManyWithWhereWithoutPersonnelInput | Prisma.LivraisonUpdateManyWithWhereWithoutPersonnelInput[]
   deleteMany?: Prisma.LivraisonScalarWhereInput | Prisma.LivraisonScalarWhereInput[]
 }
 
-export type LivraisonUncheckedUpdateManyWithoutRepertoireByClientNestedInput = {
-  create?: Prisma.XOR<Prisma.LivraisonCreateWithoutRepertoireByClientInput, Prisma.LivraisonUncheckedCreateWithoutRepertoireByClientInput> | Prisma.LivraisonCreateWithoutRepertoireByClientInput[] | Prisma.LivraisonUncheckedCreateWithoutRepertoireByClientInput[]
-  connectOrCreate?: Prisma.LivraisonCreateOrConnectWithoutRepertoireByClientInput | Prisma.LivraisonCreateOrConnectWithoutRepertoireByClientInput[]
-  upsert?: Prisma.LivraisonUpsertWithWhereUniqueWithoutRepertoireByClientInput | Prisma.LivraisonUpsertWithWhereUniqueWithoutRepertoireByClientInput[]
-  createMany?: Prisma.LivraisonCreateManyRepertoireByClientInputEnvelope
+export type LivraisonUncheckedUpdateManyWithoutPersonnelAncienNestedInput = {
+  create?: Prisma.XOR<Prisma.LivraisonCreateWithoutPersonnelAncienInput, Prisma.LivraisonUncheckedCreateWithoutPersonnelAncienInput> | Prisma.LivraisonCreateWithoutPersonnelAncienInput[] | Prisma.LivraisonUncheckedCreateWithoutPersonnelAncienInput[]
+  connectOrCreate?: Prisma.LivraisonCreateOrConnectWithoutPersonnelAncienInput | Prisma.LivraisonCreateOrConnectWithoutPersonnelAncienInput[]
+  upsert?: Prisma.LivraisonUpsertWithWhereUniqueWithoutPersonnelAncienInput | Prisma.LivraisonUpsertWithWhereUniqueWithoutPersonnelAncienInput[]
+  createMany?: Prisma.LivraisonCreateManyPersonnelAncienInputEnvelope
   set?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
   disconnect?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
   delete?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
   connect?: Prisma.LivraisonWhereUniqueInput | Prisma.LivraisonWhereUniqueInput[]
-  update?: Prisma.LivraisonUpdateWithWhereUniqueWithoutRepertoireByClientInput | Prisma.LivraisonUpdateWithWhereUniqueWithoutRepertoireByClientInput[]
-  updateMany?: Prisma.LivraisonUpdateManyWithWhereWithoutRepertoireByClientInput | Prisma.LivraisonUpdateManyWithWhereWithoutRepertoireByClientInput[]
+  update?: Prisma.LivraisonUpdateWithWhereUniqueWithoutPersonnelAncienInput | Prisma.LivraisonUpdateWithWhereUniqueWithoutPersonnelAncienInput[]
+  updateMany?: Prisma.LivraisonUpdateManyWithWhereWithoutPersonnelAncienInput | Prisma.LivraisonUpdateManyWithWhereWithoutPersonnelAncienInput[]
   deleteMany?: Prisma.LivraisonScalarWhereInput | Prisma.LivraisonScalarWhereInput[]
 }
 
@@ -1331,7 +1331,7 @@ export type LivraisonUpdateOneRequiredWithoutDetLivraisonsNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.LivraisonUpdateToOneWithWhereWithoutDetLivraisonsInput, Prisma.LivraisonUpdateWithoutDetLivraisonsInput>, Prisma.LivraisonUncheckedUpdateWithoutDetLivraisonsInput>
 }
 
-export type LivraisonCreateWithoutRepertoireByCommercialInput = {
+export type LivraisonCreateWithoutFournisseurInput = {
   id?: bigint | number
   numLivraison: number
   codeBl: string
@@ -1361,14 +1361,14 @@ export type LivraisonCreateWithoutRepertoireByCommercialInput = {
   mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
-  employeOperateur: Prisma.EmployeCreateNestedOneWithoutLivraisonsInput
-  repertoireByCommercialAncien?: Prisma.RepertoireCreateNestedOneWithoutLivraisonCommercialAnciensInput
-  repertoireByClient: Prisma.RepertoireCreateNestedOneWithoutLivraisonClientsInput
+  employeOperateur?: Prisma.EmployeCreateNestedOneWithoutLivraisonsInput
+  personnel: Prisma.PersonnelCreateNestedOneWithoutLivraisonsInput
+  personnelAncien?: Prisma.PersonnelCreateNestedOneWithoutLivraisonsAncienInput
   detLivraisons?: Prisma.DetLivraisonCreateNestedManyWithoutLivraisonInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonCreateNestedManyWithoutLivraisonInput
 }
 
-export type LivraisonUncheckedCreateWithoutRepertoireByCommercialInput = {
+export type LivraisonUncheckedCreateWithoutFournisseurInput = {
   id?: bigint | number
   numLivraison: number
   codeBl: string
@@ -1398,205 +1398,37 @@ export type LivraisonUncheckedCreateWithoutRepertoireByCommercialInput = {
   mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
-  employeOperateurId: bigint | number
-  repertoireByCommercialAncienId: bigint | number
-  repertoireByClientId: bigint | number
+  employeOperateurId?: bigint | number | null
+  personnelId: bigint | number
+  personnelAncienId?: bigint | number | null
   detLivraisons?: Prisma.DetLivraisonUncheckedCreateNestedManyWithoutLivraisonInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUncheckedCreateNestedManyWithoutLivraisonInput
 }
 
-export type LivraisonCreateOrConnectWithoutRepertoireByCommercialInput = {
+export type LivraisonCreateOrConnectWithoutFournisseurInput = {
   where: Prisma.LivraisonWhereUniqueInput
-  create: Prisma.XOR<Prisma.LivraisonCreateWithoutRepertoireByCommercialInput, Prisma.LivraisonUncheckedCreateWithoutRepertoireByCommercialInput>
+  create: Prisma.XOR<Prisma.LivraisonCreateWithoutFournisseurInput, Prisma.LivraisonUncheckedCreateWithoutFournisseurInput>
 }
 
-export type LivraisonCreateManyRepertoireByCommercialInputEnvelope = {
-  data: Prisma.LivraisonCreateManyRepertoireByCommercialInput | Prisma.LivraisonCreateManyRepertoireByCommercialInput[]
+export type LivraisonCreateManyFournisseurInputEnvelope = {
+  data: Prisma.LivraisonCreateManyFournisseurInput | Prisma.LivraisonCreateManyFournisseurInput[]
   skipDuplicates?: boolean
 }
 
-export type LivraisonCreateWithoutRepertoireByCommercialAncienInput = {
-  id?: bigint | number
-  numLivraison: number
-  codeBl: string
-  dateBl: Date | string
-  dateReglement: Date | string
-  dateReglement2: Date | string
-  dateReglement3: Date | string
-  dateReglement4: Date | string
-  typeReglment: number
-  typeReglment2: number
-  typeReglment3: number
-  typeReglment4: number
-  mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
-  mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
-  mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
-  typePaiement: string
-  mantantBLPourcent: runtime.Decimal | runtime.DecimalJsLike | number | string
-  reglerNonRegler: number
-  sysDate: Date | string
-  infinity: number
-  etatBultinPaie: number
-  livrernonlivrer: number
-  avecRemise: boolean
-  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
-  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
-  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
-  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
-  facturer100?: boolean
-  codeTransport: string
-  employeOperateur: Prisma.EmployeCreateNestedOneWithoutLivraisonsInput
-  repertoireByCommercial: Prisma.RepertoireCreateNestedOneWithoutLivraisonCommercialsInput
-  repertoireByClient: Prisma.RepertoireCreateNestedOneWithoutLivraisonClientsInput
-  detLivraisons?: Prisma.DetLivraisonCreateNestedManyWithoutLivraisonInput
-  detBulttinLivraisons?: Prisma.DetBulttinLivraisonCreateNestedManyWithoutLivraisonInput
-}
-
-export type LivraisonUncheckedCreateWithoutRepertoireByCommercialAncienInput = {
-  id?: bigint | number
-  numLivraison: number
-  codeBl: string
-  dateBl: Date | string
-  dateReglement: Date | string
-  dateReglement2: Date | string
-  dateReglement3: Date | string
-  dateReglement4: Date | string
-  typeReglment: number
-  typeReglment2: number
-  typeReglment3: number
-  typeReglment4: number
-  mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
-  mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
-  mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
-  typePaiement: string
-  mantantBLPourcent: runtime.Decimal | runtime.DecimalJsLike | number | string
-  reglerNonRegler: number
-  sysDate: Date | string
-  infinity: number
-  etatBultinPaie: number
-  livrernonlivrer: number
-  avecRemise: boolean
-  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
-  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
-  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
-  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
-  facturer100?: boolean
-  codeTransport: string
-  employeOperateurId: bigint | number
-  repertoireByCommercialId: bigint | number
-  repertoireByClientId: bigint | number
-  detLivraisons?: Prisma.DetLivraisonUncheckedCreateNestedManyWithoutLivraisonInput
-  detBulttinLivraisons?: Prisma.DetBulttinLivraisonUncheckedCreateNestedManyWithoutLivraisonInput
-}
-
-export type LivraisonCreateOrConnectWithoutRepertoireByCommercialAncienInput = {
+export type LivraisonUpsertWithWhereUniqueWithoutFournisseurInput = {
   where: Prisma.LivraisonWhereUniqueInput
-  create: Prisma.XOR<Prisma.LivraisonCreateWithoutRepertoireByCommercialAncienInput, Prisma.LivraisonUncheckedCreateWithoutRepertoireByCommercialAncienInput>
+  update: Prisma.XOR<Prisma.LivraisonUpdateWithoutFournisseurInput, Prisma.LivraisonUncheckedUpdateWithoutFournisseurInput>
+  create: Prisma.XOR<Prisma.LivraisonCreateWithoutFournisseurInput, Prisma.LivraisonUncheckedCreateWithoutFournisseurInput>
 }
 
-export type LivraisonCreateManyRepertoireByCommercialAncienInputEnvelope = {
-  data: Prisma.LivraisonCreateManyRepertoireByCommercialAncienInput | Prisma.LivraisonCreateManyRepertoireByCommercialAncienInput[]
-  skipDuplicates?: boolean
-}
-
-export type LivraisonCreateWithoutRepertoireByClientInput = {
-  id?: bigint | number
-  numLivraison: number
-  codeBl: string
-  dateBl: Date | string
-  dateReglement: Date | string
-  dateReglement2: Date | string
-  dateReglement3: Date | string
-  dateReglement4: Date | string
-  typeReglment: number
-  typeReglment2: number
-  typeReglment3: number
-  typeReglment4: number
-  mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
-  mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
-  mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
-  typePaiement: string
-  mantantBLPourcent: runtime.Decimal | runtime.DecimalJsLike | number | string
-  reglerNonRegler: number
-  sysDate: Date | string
-  infinity: number
-  etatBultinPaie: number
-  livrernonlivrer: number
-  avecRemise: boolean
-  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
-  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
-  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
-  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
-  facturer100?: boolean
-  codeTransport: string
-  employeOperateur: Prisma.EmployeCreateNestedOneWithoutLivraisonsInput
-  repertoireByCommercial: Prisma.RepertoireCreateNestedOneWithoutLivraisonCommercialsInput
-  repertoireByCommercialAncien?: Prisma.RepertoireCreateNestedOneWithoutLivraisonCommercialAnciensInput
-  detLivraisons?: Prisma.DetLivraisonCreateNestedManyWithoutLivraisonInput
-  detBulttinLivraisons?: Prisma.DetBulttinLivraisonCreateNestedManyWithoutLivraisonInput
-}
-
-export type LivraisonUncheckedCreateWithoutRepertoireByClientInput = {
-  id?: bigint | number
-  numLivraison: number
-  codeBl: string
-  dateBl: Date | string
-  dateReglement: Date | string
-  dateReglement2: Date | string
-  dateReglement3: Date | string
-  dateReglement4: Date | string
-  typeReglment: number
-  typeReglment2: number
-  typeReglment3: number
-  typeReglment4: number
-  mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
-  mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
-  mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
-  typePaiement: string
-  mantantBLPourcent: runtime.Decimal | runtime.DecimalJsLike | number | string
-  reglerNonRegler: number
-  sysDate: Date | string
-  infinity: number
-  etatBultinPaie: number
-  livrernonlivrer: number
-  avecRemise: boolean
-  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
-  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
-  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
-  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
-  facturer100?: boolean
-  codeTransport: string
-  employeOperateurId: bigint | number
-  repertoireByCommercialId: bigint | number
-  repertoireByCommercialAncienId: bigint | number
-  detLivraisons?: Prisma.DetLivraisonUncheckedCreateNestedManyWithoutLivraisonInput
-  detBulttinLivraisons?: Prisma.DetBulttinLivraisonUncheckedCreateNestedManyWithoutLivraisonInput
-}
-
-export type LivraisonCreateOrConnectWithoutRepertoireByClientInput = {
+export type LivraisonUpdateWithWhereUniqueWithoutFournisseurInput = {
   where: Prisma.LivraisonWhereUniqueInput
-  create: Prisma.XOR<Prisma.LivraisonCreateWithoutRepertoireByClientInput, Prisma.LivraisonUncheckedCreateWithoutRepertoireByClientInput>
+  data: Prisma.XOR<Prisma.LivraisonUpdateWithoutFournisseurInput, Prisma.LivraisonUncheckedUpdateWithoutFournisseurInput>
 }
 
-export type LivraisonCreateManyRepertoireByClientInputEnvelope = {
-  data: Prisma.LivraisonCreateManyRepertoireByClientInput | Prisma.LivraisonCreateManyRepertoireByClientInput[]
-  skipDuplicates?: boolean
-}
-
-export type LivraisonUpsertWithWhereUniqueWithoutRepertoireByCommercialInput = {
-  where: Prisma.LivraisonWhereUniqueInput
-  update: Prisma.XOR<Prisma.LivraisonUpdateWithoutRepertoireByCommercialInput, Prisma.LivraisonUncheckedUpdateWithoutRepertoireByCommercialInput>
-  create: Prisma.XOR<Prisma.LivraisonCreateWithoutRepertoireByCommercialInput, Prisma.LivraisonUncheckedCreateWithoutRepertoireByCommercialInput>
-}
-
-export type LivraisonUpdateWithWhereUniqueWithoutRepertoireByCommercialInput = {
-  where: Prisma.LivraisonWhereUniqueInput
-  data: Prisma.XOR<Prisma.LivraisonUpdateWithoutRepertoireByCommercialInput, Prisma.LivraisonUncheckedUpdateWithoutRepertoireByCommercialInput>
-}
-
-export type LivraisonUpdateManyWithWhereWithoutRepertoireByCommercialInput = {
+export type LivraisonUpdateManyWithWhereWithoutFournisseurInput = {
   where: Prisma.LivraisonScalarWhereInput
-  data: Prisma.XOR<Prisma.LivraisonUpdateManyMutationInput, Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialInput>
+  data: Prisma.XOR<Prisma.LivraisonUpdateManyMutationInput, Prisma.LivraisonUncheckedUpdateManyWithoutFournisseurInput>
 }
 
 export type LivraisonScalarWhereInput = {
@@ -1632,42 +1464,210 @@ export type LivraisonScalarWhereInput = {
   mntReglement4?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFilter<"Livraison"> | boolean
   codeTransport?: Prisma.StringFilter<"Livraison"> | string
-  employeOperateurId?: Prisma.BigIntFilter<"Livraison"> | bigint | number
-  repertoireByCommercialId?: Prisma.BigIntFilter<"Livraison"> | bigint | number
-  repertoireByCommercialAncienId?: Prisma.BigIntFilter<"Livraison"> | bigint | number
-  repertoireByClientId?: Prisma.BigIntFilter<"Livraison"> | bigint | number
+  employeOperateurId?: Prisma.BigIntNullableFilter<"Livraison"> | bigint | number | null
+  personnelId?: Prisma.BigIntFilter<"Livraison"> | bigint | number
+  personnelAncienId?: Prisma.BigIntNullableFilter<"Livraison"> | bigint | number | null
+  fournisseurId?: Prisma.BigIntFilter<"Livraison"> | bigint | number
 }
 
-export type LivraisonUpsertWithWhereUniqueWithoutRepertoireByCommercialAncienInput = {
+export type LivraisonCreateWithoutPersonnelInput = {
+  id?: bigint | number
+  numLivraison: number
+  codeBl: string
+  dateBl: Date | string
+  dateReglement: Date | string
+  dateReglement2: Date | string
+  dateReglement3: Date | string
+  dateReglement4: Date | string
+  typeReglment: number
+  typeReglment2: number
+  typeReglment3: number
+  typeReglment4: number
+  mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
+  typePaiement: string
+  mantantBLPourcent: runtime.Decimal | runtime.DecimalJsLike | number | string
+  reglerNonRegler: number
+  sysDate: Date | string
+  infinity: number
+  etatBultinPaie: number
+  livrernonlivrer: number
+  avecRemise: boolean
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  facturer100?: boolean
+  codeTransport: string
+  employeOperateur?: Prisma.EmployeCreateNestedOneWithoutLivraisonsInput
+  personnelAncien?: Prisma.PersonnelCreateNestedOneWithoutLivraisonsAncienInput
+  fournisseur: Prisma.FournisseurCreateNestedOneWithoutLivraisonsInput
+  detLivraisons?: Prisma.DetLivraisonCreateNestedManyWithoutLivraisonInput
+  detBulttinLivraisons?: Prisma.DetBulttinLivraisonCreateNestedManyWithoutLivraisonInput
+}
+
+export type LivraisonUncheckedCreateWithoutPersonnelInput = {
+  id?: bigint | number
+  numLivraison: number
+  codeBl: string
+  dateBl: Date | string
+  dateReglement: Date | string
+  dateReglement2: Date | string
+  dateReglement3: Date | string
+  dateReglement4: Date | string
+  typeReglment: number
+  typeReglment2: number
+  typeReglment3: number
+  typeReglment4: number
+  mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
+  typePaiement: string
+  mantantBLPourcent: runtime.Decimal | runtime.DecimalJsLike | number | string
+  reglerNonRegler: number
+  sysDate: Date | string
+  infinity: number
+  etatBultinPaie: number
+  livrernonlivrer: number
+  avecRemise: boolean
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  facturer100?: boolean
+  codeTransport: string
+  employeOperateurId?: bigint | number | null
+  personnelAncienId?: bigint | number | null
+  fournisseurId: bigint | number
+  detLivraisons?: Prisma.DetLivraisonUncheckedCreateNestedManyWithoutLivraisonInput
+  detBulttinLivraisons?: Prisma.DetBulttinLivraisonUncheckedCreateNestedManyWithoutLivraisonInput
+}
+
+export type LivraisonCreateOrConnectWithoutPersonnelInput = {
   where: Prisma.LivraisonWhereUniqueInput
-  update: Prisma.XOR<Prisma.LivraisonUpdateWithoutRepertoireByCommercialAncienInput, Prisma.LivraisonUncheckedUpdateWithoutRepertoireByCommercialAncienInput>
-  create: Prisma.XOR<Prisma.LivraisonCreateWithoutRepertoireByCommercialAncienInput, Prisma.LivraisonUncheckedCreateWithoutRepertoireByCommercialAncienInput>
+  create: Prisma.XOR<Prisma.LivraisonCreateWithoutPersonnelInput, Prisma.LivraisonUncheckedCreateWithoutPersonnelInput>
 }
 
-export type LivraisonUpdateWithWhereUniqueWithoutRepertoireByCommercialAncienInput = {
+export type LivraisonCreateManyPersonnelInputEnvelope = {
+  data: Prisma.LivraisonCreateManyPersonnelInput | Prisma.LivraisonCreateManyPersonnelInput[]
+  skipDuplicates?: boolean
+}
+
+export type LivraisonCreateWithoutPersonnelAncienInput = {
+  id?: bigint | number
+  numLivraison: number
+  codeBl: string
+  dateBl: Date | string
+  dateReglement: Date | string
+  dateReglement2: Date | string
+  dateReglement3: Date | string
+  dateReglement4: Date | string
+  typeReglment: number
+  typeReglment2: number
+  typeReglment3: number
+  typeReglment4: number
+  mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
+  typePaiement: string
+  mantantBLPourcent: runtime.Decimal | runtime.DecimalJsLike | number | string
+  reglerNonRegler: number
+  sysDate: Date | string
+  infinity: number
+  etatBultinPaie: number
+  livrernonlivrer: number
+  avecRemise: boolean
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  facturer100?: boolean
+  codeTransport: string
+  employeOperateur?: Prisma.EmployeCreateNestedOneWithoutLivraisonsInput
+  personnel: Prisma.PersonnelCreateNestedOneWithoutLivraisonsInput
+  fournisseur: Prisma.FournisseurCreateNestedOneWithoutLivraisonsInput
+  detLivraisons?: Prisma.DetLivraisonCreateNestedManyWithoutLivraisonInput
+  detBulttinLivraisons?: Prisma.DetBulttinLivraisonCreateNestedManyWithoutLivraisonInput
+}
+
+export type LivraisonUncheckedCreateWithoutPersonnelAncienInput = {
+  id?: bigint | number
+  numLivraison: number
+  codeBl: string
+  dateBl: Date | string
+  dateReglement: Date | string
+  dateReglement2: Date | string
+  dateReglement3: Date | string
+  dateReglement4: Date | string
+  typeReglment: number
+  typeReglment2: number
+  typeReglment3: number
+  typeReglment4: number
+  mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
+  typePaiement: string
+  mantantBLPourcent: runtime.Decimal | runtime.DecimalJsLike | number | string
+  reglerNonRegler: number
+  sysDate: Date | string
+  infinity: number
+  etatBultinPaie: number
+  livrernonlivrer: number
+  avecRemise: boolean
+  mntReglement: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
+  facturer100?: boolean
+  codeTransport: string
+  employeOperateurId?: bigint | number | null
+  personnelId: bigint | number
+  fournisseurId: bigint | number
+  detLivraisons?: Prisma.DetLivraisonUncheckedCreateNestedManyWithoutLivraisonInput
+  detBulttinLivraisons?: Prisma.DetBulttinLivraisonUncheckedCreateNestedManyWithoutLivraisonInput
+}
+
+export type LivraisonCreateOrConnectWithoutPersonnelAncienInput = {
   where: Prisma.LivraisonWhereUniqueInput
-  data: Prisma.XOR<Prisma.LivraisonUpdateWithoutRepertoireByCommercialAncienInput, Prisma.LivraisonUncheckedUpdateWithoutRepertoireByCommercialAncienInput>
+  create: Prisma.XOR<Prisma.LivraisonCreateWithoutPersonnelAncienInput, Prisma.LivraisonUncheckedCreateWithoutPersonnelAncienInput>
 }
 
-export type LivraisonUpdateManyWithWhereWithoutRepertoireByCommercialAncienInput = {
+export type LivraisonCreateManyPersonnelAncienInputEnvelope = {
+  data: Prisma.LivraisonCreateManyPersonnelAncienInput | Prisma.LivraisonCreateManyPersonnelAncienInput[]
+  skipDuplicates?: boolean
+}
+
+export type LivraisonUpsertWithWhereUniqueWithoutPersonnelInput = {
+  where: Prisma.LivraisonWhereUniqueInput
+  update: Prisma.XOR<Prisma.LivraisonUpdateWithoutPersonnelInput, Prisma.LivraisonUncheckedUpdateWithoutPersonnelInput>
+  create: Prisma.XOR<Prisma.LivraisonCreateWithoutPersonnelInput, Prisma.LivraisonUncheckedCreateWithoutPersonnelInput>
+}
+
+export type LivraisonUpdateWithWhereUniqueWithoutPersonnelInput = {
+  where: Prisma.LivraisonWhereUniqueInput
+  data: Prisma.XOR<Prisma.LivraisonUpdateWithoutPersonnelInput, Prisma.LivraisonUncheckedUpdateWithoutPersonnelInput>
+}
+
+export type LivraisonUpdateManyWithWhereWithoutPersonnelInput = {
   where: Prisma.LivraisonScalarWhereInput
-  data: Prisma.XOR<Prisma.LivraisonUpdateManyMutationInput, Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialAncienInput>
+  data: Prisma.XOR<Prisma.LivraisonUpdateManyMutationInput, Prisma.LivraisonUncheckedUpdateManyWithoutPersonnelInput>
 }
 
-export type LivraisonUpsertWithWhereUniqueWithoutRepertoireByClientInput = {
+export type LivraisonUpsertWithWhereUniqueWithoutPersonnelAncienInput = {
   where: Prisma.LivraisonWhereUniqueInput
-  update: Prisma.XOR<Prisma.LivraisonUpdateWithoutRepertoireByClientInput, Prisma.LivraisonUncheckedUpdateWithoutRepertoireByClientInput>
-  create: Prisma.XOR<Prisma.LivraisonCreateWithoutRepertoireByClientInput, Prisma.LivraisonUncheckedCreateWithoutRepertoireByClientInput>
+  update: Prisma.XOR<Prisma.LivraisonUpdateWithoutPersonnelAncienInput, Prisma.LivraisonUncheckedUpdateWithoutPersonnelAncienInput>
+  create: Prisma.XOR<Prisma.LivraisonCreateWithoutPersonnelAncienInput, Prisma.LivraisonUncheckedCreateWithoutPersonnelAncienInput>
 }
 
-export type LivraisonUpdateWithWhereUniqueWithoutRepertoireByClientInput = {
+export type LivraisonUpdateWithWhereUniqueWithoutPersonnelAncienInput = {
   where: Prisma.LivraisonWhereUniqueInput
-  data: Prisma.XOR<Prisma.LivraisonUpdateWithoutRepertoireByClientInput, Prisma.LivraisonUncheckedUpdateWithoutRepertoireByClientInput>
+  data: Prisma.XOR<Prisma.LivraisonUpdateWithoutPersonnelAncienInput, Prisma.LivraisonUncheckedUpdateWithoutPersonnelAncienInput>
 }
 
-export type LivraisonUpdateManyWithWhereWithoutRepertoireByClientInput = {
+export type LivraisonUpdateManyWithWhereWithoutPersonnelAncienInput = {
   where: Prisma.LivraisonScalarWhereInput
-  data: Prisma.XOR<Prisma.LivraisonUpdateManyMutationInput, Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByClientInput>
+  data: Prisma.XOR<Prisma.LivraisonUpdateManyMutationInput, Prisma.LivraisonUncheckedUpdateManyWithoutPersonnelAncienInput>
 }
 
 export type LivraisonCreateWithoutEmployeOperateurInput = {
@@ -1700,9 +1700,9 @@ export type LivraisonCreateWithoutEmployeOperateurInput = {
   mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
-  repertoireByCommercial: Prisma.RepertoireCreateNestedOneWithoutLivraisonCommercialsInput
-  repertoireByCommercialAncien?: Prisma.RepertoireCreateNestedOneWithoutLivraisonCommercialAnciensInput
-  repertoireByClient: Prisma.RepertoireCreateNestedOneWithoutLivraisonClientsInput
+  personnel: Prisma.PersonnelCreateNestedOneWithoutLivraisonsInput
+  personnelAncien?: Prisma.PersonnelCreateNestedOneWithoutLivraisonsAncienInput
+  fournisseur: Prisma.FournisseurCreateNestedOneWithoutLivraisonsInput
   detLivraisons?: Prisma.DetLivraisonCreateNestedManyWithoutLivraisonInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonCreateNestedManyWithoutLivraisonInput
 }
@@ -1737,9 +1737,9 @@ export type LivraisonUncheckedCreateWithoutEmployeOperateurInput = {
   mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
-  repertoireByCommercialId: bigint | number
-  repertoireByCommercialAncienId: bigint | number
-  repertoireByClientId: bigint | number
+  personnelId: bigint | number
+  personnelAncienId?: bigint | number | null
+  fournisseurId: bigint | number
   detLivraisons?: Prisma.DetLivraisonUncheckedCreateNestedManyWithoutLivraisonInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUncheckedCreateNestedManyWithoutLivraisonInput
 }
@@ -1800,10 +1800,10 @@ export type LivraisonCreateWithoutDetBulttinLivraisonsInput = {
   mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
-  employeOperateur: Prisma.EmployeCreateNestedOneWithoutLivraisonsInput
-  repertoireByCommercial: Prisma.RepertoireCreateNestedOneWithoutLivraisonCommercialsInput
-  repertoireByCommercialAncien?: Prisma.RepertoireCreateNestedOneWithoutLivraisonCommercialAnciensInput
-  repertoireByClient: Prisma.RepertoireCreateNestedOneWithoutLivraisonClientsInput
+  employeOperateur?: Prisma.EmployeCreateNestedOneWithoutLivraisonsInput
+  personnel: Prisma.PersonnelCreateNestedOneWithoutLivraisonsInput
+  personnelAncien?: Prisma.PersonnelCreateNestedOneWithoutLivraisonsAncienInput
+  fournisseur: Prisma.FournisseurCreateNestedOneWithoutLivraisonsInput
   detLivraisons?: Prisma.DetLivraisonCreateNestedManyWithoutLivraisonInput
 }
 
@@ -1837,10 +1837,10 @@ export type LivraisonUncheckedCreateWithoutDetBulttinLivraisonsInput = {
   mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
-  employeOperateurId: bigint | number
-  repertoireByCommercialId: bigint | number
-  repertoireByCommercialAncienId: bigint | number
-  repertoireByClientId: bigint | number
+  employeOperateurId?: bigint | number | null
+  personnelId: bigint | number
+  personnelAncienId?: bigint | number | null
+  fournisseurId: bigint | number
   detLivraisons?: Prisma.DetLivraisonUncheckedCreateNestedManyWithoutLivraisonInput
 }
 
@@ -1890,10 +1890,10 @@ export type LivraisonUpdateWithoutDetBulttinLivraisonsInput = {
   mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
-  employeOperateur?: Prisma.EmployeUpdateOneRequiredWithoutLivraisonsNestedInput
-  repertoireByCommercial?: Prisma.RepertoireUpdateOneRequiredWithoutLivraisonCommercialsNestedInput
-  repertoireByCommercialAncien?: Prisma.RepertoireUpdateOneWithoutLivraisonCommercialAnciensNestedInput
-  repertoireByClient?: Prisma.RepertoireUpdateOneRequiredWithoutLivraisonClientsNestedInput
+  employeOperateur?: Prisma.EmployeUpdateOneWithoutLivraisonsNestedInput
+  personnel?: Prisma.PersonnelUpdateOneRequiredWithoutLivraisonsNestedInput
+  personnelAncien?: Prisma.PersonnelUpdateOneWithoutLivraisonsAncienNestedInput
+  fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutLivraisonsNestedInput
   detLivraisons?: Prisma.DetLivraisonUpdateManyWithoutLivraisonNestedInput
 }
 
@@ -1927,10 +1927,10 @@ export type LivraisonUncheckedUpdateWithoutDetBulttinLivraisonsInput = {
   mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
-  employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByCommercialId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByCommercialAncienId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByClientId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  employeOperateurId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+  personnelId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  personnelAncienId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+  fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detLivraisons?: Prisma.DetLivraisonUncheckedUpdateManyWithoutLivraisonNestedInput
 }
 
@@ -1964,10 +1964,10 @@ export type LivraisonCreateWithoutDetLivraisonsInput = {
   mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
-  employeOperateur: Prisma.EmployeCreateNestedOneWithoutLivraisonsInput
-  repertoireByCommercial: Prisma.RepertoireCreateNestedOneWithoutLivraisonCommercialsInput
-  repertoireByCommercialAncien?: Prisma.RepertoireCreateNestedOneWithoutLivraisonCommercialAnciensInput
-  repertoireByClient: Prisma.RepertoireCreateNestedOneWithoutLivraisonClientsInput
+  employeOperateur?: Prisma.EmployeCreateNestedOneWithoutLivraisonsInput
+  personnel: Prisma.PersonnelCreateNestedOneWithoutLivraisonsInput
+  personnelAncien?: Prisma.PersonnelCreateNestedOneWithoutLivraisonsAncienInput
+  fournisseur: Prisma.FournisseurCreateNestedOneWithoutLivraisonsInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonCreateNestedManyWithoutLivraisonInput
 }
 
@@ -2001,10 +2001,10 @@ export type LivraisonUncheckedCreateWithoutDetLivraisonsInput = {
   mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
-  employeOperateurId: bigint | number
-  repertoireByCommercialId: bigint | number
-  repertoireByCommercialAncienId: bigint | number
-  repertoireByClientId: bigint | number
+  employeOperateurId?: bigint | number | null
+  personnelId: bigint | number
+  personnelAncienId?: bigint | number | null
+  fournisseurId: bigint | number
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUncheckedCreateNestedManyWithoutLivraisonInput
 }
 
@@ -2054,10 +2054,10 @@ export type LivraisonUpdateWithoutDetLivraisonsInput = {
   mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
-  employeOperateur?: Prisma.EmployeUpdateOneRequiredWithoutLivraisonsNestedInput
-  repertoireByCommercial?: Prisma.RepertoireUpdateOneRequiredWithoutLivraisonCommercialsNestedInput
-  repertoireByCommercialAncien?: Prisma.RepertoireUpdateOneWithoutLivraisonCommercialAnciensNestedInput
-  repertoireByClient?: Prisma.RepertoireUpdateOneRequiredWithoutLivraisonClientsNestedInput
+  employeOperateur?: Prisma.EmployeUpdateOneWithoutLivraisonsNestedInput
+  personnel?: Prisma.PersonnelUpdateOneRequiredWithoutLivraisonsNestedInput
+  personnelAncien?: Prisma.PersonnelUpdateOneWithoutLivraisonsAncienNestedInput
+  fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutLivraisonsNestedInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUpdateManyWithoutLivraisonNestedInput
 }
 
@@ -2091,14 +2091,14 @@ export type LivraisonUncheckedUpdateWithoutDetLivraisonsInput = {
   mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
-  employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByCommercialId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByCommercialAncienId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByClientId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  employeOperateurId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+  personnelId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  personnelAncienId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+  fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUncheckedUpdateManyWithoutLivraisonNestedInput
 }
 
-export type LivraisonCreateManyRepertoireByCommercialInput = {
+export type LivraisonCreateManyFournisseurInput = {
   id?: bigint | number
   numLivraison: number
   codeBl: string
@@ -2128,12 +2128,121 @@ export type LivraisonCreateManyRepertoireByCommercialInput = {
   mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
-  employeOperateurId: bigint | number
-  repertoireByCommercialAncienId: bigint | number
-  repertoireByClientId: bigint | number
+  employeOperateurId?: bigint | number | null
+  personnelId: bigint | number
+  personnelAncienId?: bigint | number | null
 }
 
-export type LivraisonCreateManyRepertoireByCommercialAncienInput = {
+export type LivraisonUpdateWithoutFournisseurInput = {
+  id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  numLivraison?: Prisma.IntFieldUpdateOperationsInput | number
+  codeBl?: Prisma.StringFieldUpdateOperationsInput | string
+  dateBl?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement3?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement4?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
+  typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
+  typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
+  typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
+  mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
+  mantantBLPourcent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  reglerNonRegler?: Prisma.IntFieldUpdateOperationsInput | number
+  sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  infinity?: Prisma.IntFieldUpdateOperationsInput | number
+  etatBultinPaie?: Prisma.IntFieldUpdateOperationsInput | number
+  livrernonlivrer?: Prisma.IntFieldUpdateOperationsInput | number
+  avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
+  employeOperateur?: Prisma.EmployeUpdateOneWithoutLivraisonsNestedInput
+  personnel?: Prisma.PersonnelUpdateOneRequiredWithoutLivraisonsNestedInput
+  personnelAncien?: Prisma.PersonnelUpdateOneWithoutLivraisonsAncienNestedInput
+  detLivraisons?: Prisma.DetLivraisonUpdateManyWithoutLivraisonNestedInput
+  detBulttinLivraisons?: Prisma.DetBulttinLivraisonUpdateManyWithoutLivraisonNestedInput
+}
+
+export type LivraisonUncheckedUpdateWithoutFournisseurInput = {
+  id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  numLivraison?: Prisma.IntFieldUpdateOperationsInput | number
+  codeBl?: Prisma.StringFieldUpdateOperationsInput | string
+  dateBl?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement3?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement4?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
+  typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
+  typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
+  typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
+  mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
+  mantantBLPourcent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  reglerNonRegler?: Prisma.IntFieldUpdateOperationsInput | number
+  sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  infinity?: Prisma.IntFieldUpdateOperationsInput | number
+  etatBultinPaie?: Prisma.IntFieldUpdateOperationsInput | number
+  livrernonlivrer?: Prisma.IntFieldUpdateOperationsInput | number
+  avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
+  employeOperateurId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+  personnelId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  personnelAncienId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+  detLivraisons?: Prisma.DetLivraisonUncheckedUpdateManyWithoutLivraisonNestedInput
+  detBulttinLivraisons?: Prisma.DetBulttinLivraisonUncheckedUpdateManyWithoutLivraisonNestedInput
+}
+
+export type LivraisonUncheckedUpdateManyWithoutFournisseurInput = {
+  id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  numLivraison?: Prisma.IntFieldUpdateOperationsInput | number
+  codeBl?: Prisma.StringFieldUpdateOperationsInput | string
+  dateBl?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement3?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement4?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
+  typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
+  typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
+  typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
+  mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
+  mantantBLPourcent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  reglerNonRegler?: Prisma.IntFieldUpdateOperationsInput | number
+  sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  infinity?: Prisma.IntFieldUpdateOperationsInput | number
+  etatBultinPaie?: Prisma.IntFieldUpdateOperationsInput | number
+  livrernonlivrer?: Prisma.IntFieldUpdateOperationsInput | number
+  avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
+  employeOperateurId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+  personnelId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  personnelAncienId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+}
+
+export type LivraisonCreateManyPersonnelInput = {
   id?: bigint | number
   numLivraison: number
   codeBl: string
@@ -2163,12 +2272,12 @@ export type LivraisonCreateManyRepertoireByCommercialAncienInput = {
   mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
-  employeOperateurId: bigint | number
-  repertoireByCommercialId: bigint | number
-  repertoireByClientId: bigint | number
+  employeOperateurId?: bigint | number | null
+  personnelAncienId?: bigint | number | null
+  fournisseurId: bigint | number
 }
 
-export type LivraisonCreateManyRepertoireByClientInput = {
+export type LivraisonCreateManyPersonnelAncienInput = {
   id?: bigint | number
   numLivraison: number
   codeBl: string
@@ -2198,12 +2307,12 @@ export type LivraisonCreateManyRepertoireByClientInput = {
   mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
-  employeOperateurId: bigint | number
-  repertoireByCommercialId: bigint | number
-  repertoireByCommercialAncienId: bigint | number
+  employeOperateurId?: bigint | number | null
+  personnelId: bigint | number
+  fournisseurId: bigint | number
 }
 
-export type LivraisonUpdateWithoutRepertoireByCommercialInput = {
+export type LivraisonUpdateWithoutPersonnelInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   numLivraison?: Prisma.IntFieldUpdateOperationsInput | number
   codeBl?: Prisma.StringFieldUpdateOperationsInput | string
@@ -2233,14 +2342,14 @@ export type LivraisonUpdateWithoutRepertoireByCommercialInput = {
   mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
-  employeOperateur?: Prisma.EmployeUpdateOneRequiredWithoutLivraisonsNestedInput
-  repertoireByCommercialAncien?: Prisma.RepertoireUpdateOneWithoutLivraisonCommercialAnciensNestedInput
-  repertoireByClient?: Prisma.RepertoireUpdateOneRequiredWithoutLivraisonClientsNestedInput
+  employeOperateur?: Prisma.EmployeUpdateOneWithoutLivraisonsNestedInput
+  personnelAncien?: Prisma.PersonnelUpdateOneWithoutLivraisonsAncienNestedInput
+  fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutLivraisonsNestedInput
   detLivraisons?: Prisma.DetLivraisonUpdateManyWithoutLivraisonNestedInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUpdateManyWithoutLivraisonNestedInput
 }
 
-export type LivraisonUncheckedUpdateWithoutRepertoireByCommercialInput = {
+export type LivraisonUncheckedUpdateWithoutPersonnelInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   numLivraison?: Prisma.IntFieldUpdateOperationsInput | number
   codeBl?: Prisma.StringFieldUpdateOperationsInput | string
@@ -2270,14 +2379,14 @@ export type LivraisonUncheckedUpdateWithoutRepertoireByCommercialInput = {
   mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
-  employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByCommercialAncienId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByClientId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  employeOperateurId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+  personnelAncienId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+  fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detLivraisons?: Prisma.DetLivraisonUncheckedUpdateManyWithoutLivraisonNestedInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUncheckedUpdateManyWithoutLivraisonNestedInput
 }
 
-export type LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialInput = {
+export type LivraisonUncheckedUpdateManyWithoutPersonnelInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   numLivraison?: Prisma.IntFieldUpdateOperationsInput | number
   codeBl?: Prisma.StringFieldUpdateOperationsInput | string
@@ -2307,12 +2416,12 @@ export type LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialInput = {
   mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
-  employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByCommercialAncienId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByClientId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  employeOperateurId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+  personnelAncienId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+  fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
-export type LivraisonUpdateWithoutRepertoireByCommercialAncienInput = {
+export type LivraisonUpdateWithoutPersonnelAncienInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   numLivraison?: Prisma.IntFieldUpdateOperationsInput | number
   codeBl?: Prisma.StringFieldUpdateOperationsInput | string
@@ -2342,14 +2451,14 @@ export type LivraisonUpdateWithoutRepertoireByCommercialAncienInput = {
   mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
-  employeOperateur?: Prisma.EmployeUpdateOneRequiredWithoutLivraisonsNestedInput
-  repertoireByCommercial?: Prisma.RepertoireUpdateOneRequiredWithoutLivraisonCommercialsNestedInput
-  repertoireByClient?: Prisma.RepertoireUpdateOneRequiredWithoutLivraisonClientsNestedInput
+  employeOperateur?: Prisma.EmployeUpdateOneWithoutLivraisonsNestedInput
+  personnel?: Prisma.PersonnelUpdateOneRequiredWithoutLivraisonsNestedInput
+  fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutLivraisonsNestedInput
   detLivraisons?: Prisma.DetLivraisonUpdateManyWithoutLivraisonNestedInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUpdateManyWithoutLivraisonNestedInput
 }
 
-export type LivraisonUncheckedUpdateWithoutRepertoireByCommercialAncienInput = {
+export type LivraisonUncheckedUpdateWithoutPersonnelAncienInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   numLivraison?: Prisma.IntFieldUpdateOperationsInput | number
   codeBl?: Prisma.StringFieldUpdateOperationsInput | string
@@ -2379,14 +2488,14 @@ export type LivraisonUncheckedUpdateWithoutRepertoireByCommercialAncienInput = {
   mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
-  employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByCommercialId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByClientId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  employeOperateurId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+  personnelId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detLivraisons?: Prisma.DetLivraisonUncheckedUpdateManyWithoutLivraisonNestedInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUncheckedUpdateManyWithoutLivraisonNestedInput
 }
 
-export type LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialAncienInput = {
+export type LivraisonUncheckedUpdateManyWithoutPersonnelAncienInput = {
   id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   numLivraison?: Prisma.IntFieldUpdateOperationsInput | number
   codeBl?: Prisma.StringFieldUpdateOperationsInput | string
@@ -2416,118 +2525,9 @@ export type LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialAncienInput
   mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
-  employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByCommercialId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByClientId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-}
-
-export type LivraisonUpdateWithoutRepertoireByClientInput = {
-  id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  numLivraison?: Prisma.IntFieldUpdateOperationsInput | number
-  codeBl?: Prisma.StringFieldUpdateOperationsInput | string
-  dateBl?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement3?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement4?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
-  typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
-  typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
-  typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
-  mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBLPourcent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  reglerNonRegler?: Prisma.IntFieldUpdateOperationsInput | number
-  sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  infinity?: Prisma.IntFieldUpdateOperationsInput | number
-  etatBultinPaie?: Prisma.IntFieldUpdateOperationsInput | number
-  livrernonlivrer?: Prisma.IntFieldUpdateOperationsInput | number
-  avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
-  employeOperateur?: Prisma.EmployeUpdateOneRequiredWithoutLivraisonsNestedInput
-  repertoireByCommercial?: Prisma.RepertoireUpdateOneRequiredWithoutLivraisonCommercialsNestedInput
-  repertoireByCommercialAncien?: Prisma.RepertoireUpdateOneWithoutLivraisonCommercialAnciensNestedInput
-  detLivraisons?: Prisma.DetLivraisonUpdateManyWithoutLivraisonNestedInput
-  detBulttinLivraisons?: Prisma.DetBulttinLivraisonUpdateManyWithoutLivraisonNestedInput
-}
-
-export type LivraisonUncheckedUpdateWithoutRepertoireByClientInput = {
-  id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  numLivraison?: Prisma.IntFieldUpdateOperationsInput | number
-  codeBl?: Prisma.StringFieldUpdateOperationsInput | string
-  dateBl?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement3?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement4?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
-  typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
-  typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
-  typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
-  mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBLPourcent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  reglerNonRegler?: Prisma.IntFieldUpdateOperationsInput | number
-  sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  infinity?: Prisma.IntFieldUpdateOperationsInput | number
-  etatBultinPaie?: Prisma.IntFieldUpdateOperationsInput | number
-  livrernonlivrer?: Prisma.IntFieldUpdateOperationsInput | number
-  avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
-  employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByCommercialId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByCommercialAncienId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  detLivraisons?: Prisma.DetLivraisonUncheckedUpdateManyWithoutLivraisonNestedInput
-  detBulttinLivraisons?: Prisma.DetBulttinLivraisonUncheckedUpdateManyWithoutLivraisonNestedInput
-}
-
-export type LivraisonUncheckedUpdateManyWithoutRepertoireByClientInput = {
-  id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  numLivraison?: Prisma.IntFieldUpdateOperationsInput | number
-  codeBl?: Prisma.StringFieldUpdateOperationsInput | string
-  dateBl?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement3?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement4?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
-  typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
-  typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
-  typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
-  mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  typePaiement?: Prisma.StringFieldUpdateOperationsInput | string
-  mantantBLPourcent?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  reglerNonRegler?: Prisma.IntFieldUpdateOperationsInput | number
-  sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  infinity?: Prisma.IntFieldUpdateOperationsInput | number
-  etatBultinPaie?: Prisma.IntFieldUpdateOperationsInput | number
-  livrernonlivrer?: Prisma.IntFieldUpdateOperationsInput | number
-  avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  mntReglement?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  mntReglement2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  mntReglement3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
-  employeOperateurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByCommercialId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByCommercialAncienId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  employeOperateurId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+  personnelId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
 export type LivraisonCreateManyEmployeOperateurInput = {
@@ -2560,9 +2560,9 @@ export type LivraisonCreateManyEmployeOperateurInput = {
   mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
-  repertoireByCommercialId: bigint | number
-  repertoireByCommercialAncienId: bigint | number
-  repertoireByClientId: bigint | number
+  personnelId: bigint | number
+  personnelAncienId?: bigint | number | null
+  fournisseurId: bigint | number
 }
 
 export type LivraisonUpdateWithoutEmployeOperateurInput = {
@@ -2595,9 +2595,9 @@ export type LivraisonUpdateWithoutEmployeOperateurInput = {
   mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
-  repertoireByCommercial?: Prisma.RepertoireUpdateOneRequiredWithoutLivraisonCommercialsNestedInput
-  repertoireByCommercialAncien?: Prisma.RepertoireUpdateOneWithoutLivraisonCommercialAnciensNestedInput
-  repertoireByClient?: Prisma.RepertoireUpdateOneRequiredWithoutLivraisonClientsNestedInput
+  personnel?: Prisma.PersonnelUpdateOneRequiredWithoutLivraisonsNestedInput
+  personnelAncien?: Prisma.PersonnelUpdateOneWithoutLivraisonsAncienNestedInput
+  fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutLivraisonsNestedInput
   detLivraisons?: Prisma.DetLivraisonUpdateManyWithoutLivraisonNestedInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUpdateManyWithoutLivraisonNestedInput
 }
@@ -2632,9 +2632,9 @@ export type LivraisonUncheckedUpdateWithoutEmployeOperateurInput = {
   mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
-  repertoireByCommercialId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByCommercialAncienId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByClientId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  personnelId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  personnelAncienId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+  fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detLivraisons?: Prisma.DetLivraisonUncheckedUpdateManyWithoutLivraisonNestedInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUncheckedUpdateManyWithoutLivraisonNestedInput
 }
@@ -2669,9 +2669,9 @@ export type LivraisonUncheckedUpdateManyWithoutEmployeOperateurInput = {
   mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
-  repertoireByCommercialId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByCommercialAncienId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  repertoireByClientId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  personnelId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  personnelAncienId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+  fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
 
@@ -2745,13 +2745,13 @@ export type LivraisonSelect<ExtArgs extends runtime.Types.Extensions.InternalArg
   facturer100?: boolean
   codeTransport?: boolean
   employeOperateurId?: boolean
-  repertoireByCommercialId?: boolean
-  repertoireByCommercialAncienId?: boolean
-  repertoireByClientId?: boolean
-  employeOperateur?: boolean | Prisma.EmployeDefaultArgs<ExtArgs>
-  repertoireByCommercial?: boolean | Prisma.RepertoireDefaultArgs<ExtArgs>
-  repertoireByCommercialAncien?: boolean | Prisma.Livraison$repertoireByCommercialAncienArgs<ExtArgs>
-  repertoireByClient?: boolean | Prisma.RepertoireDefaultArgs<ExtArgs>
+  personnelId?: boolean
+  personnelAncienId?: boolean
+  fournisseurId?: boolean
+  employeOperateur?: boolean | Prisma.Livraison$employeOperateurArgs<ExtArgs>
+  personnel?: boolean | Prisma.PersonnelDefaultArgs<ExtArgs>
+  personnelAncien?: boolean | Prisma.Livraison$personnelAncienArgs<ExtArgs>
+  fournisseur?: boolean | Prisma.FournisseurDefaultArgs<ExtArgs>
   detLivraisons?: boolean | Prisma.Livraison$detLivraisonsArgs<ExtArgs>
   detBulttinLivraisons?: boolean | Prisma.Livraison$detBulttinLivraisonsArgs<ExtArgs>
   _count?: boolean | Prisma.LivraisonCountOutputTypeDefaultArgs<ExtArgs>
@@ -2790,17 +2790,17 @@ export type LivraisonSelectScalar = {
   facturer100?: boolean
   codeTransport?: boolean
   employeOperateurId?: boolean
-  repertoireByCommercialId?: boolean
-  repertoireByCommercialAncienId?: boolean
-  repertoireByClientId?: boolean
+  personnelId?: boolean
+  personnelAncienId?: boolean
+  fournisseurId?: boolean
 }
 
-export type LivraisonOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "numLivraison" | "codeBl" | "dateBl" | "dateReglement" | "dateReglement2" | "dateReglement3" | "dateReglement4" | "typeReglment" | "typeReglment2" | "typeReglment3" | "typeReglment4" | "mantantBL" | "mantantBLReel" | "mantantBLBenefice" | "typePaiement" | "mantantBLPourcent" | "reglerNonRegler" | "sysDate" | "infinity" | "etatBultinPaie" | "livrernonlivrer" | "avecRemise" | "mntReglement" | "mntReglement2" | "mntReglement3" | "mntReglement4" | "facturer100" | "codeTransport" | "employeOperateurId" | "repertoireByCommercialId" | "repertoireByCommercialAncienId" | "repertoireByClientId", ExtArgs["result"]["livraison"]>
+export type LivraisonOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "numLivraison" | "codeBl" | "dateBl" | "dateReglement" | "dateReglement2" | "dateReglement3" | "dateReglement4" | "typeReglment" | "typeReglment2" | "typeReglment3" | "typeReglment4" | "mantantBL" | "mantantBLReel" | "mantantBLBenefice" | "typePaiement" | "mantantBLPourcent" | "reglerNonRegler" | "sysDate" | "infinity" | "etatBultinPaie" | "livrernonlivrer" | "avecRemise" | "mntReglement" | "mntReglement2" | "mntReglement3" | "mntReglement4" | "facturer100" | "codeTransport" | "employeOperateurId" | "personnelId" | "personnelAncienId" | "fournisseurId", ExtArgs["result"]["livraison"]>
 export type LivraisonInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  employeOperateur?: boolean | Prisma.EmployeDefaultArgs<ExtArgs>
-  repertoireByCommercial?: boolean | Prisma.RepertoireDefaultArgs<ExtArgs>
-  repertoireByCommercialAncien?: boolean | Prisma.Livraison$repertoireByCommercialAncienArgs<ExtArgs>
-  repertoireByClient?: boolean | Prisma.RepertoireDefaultArgs<ExtArgs>
+  employeOperateur?: boolean | Prisma.Livraison$employeOperateurArgs<ExtArgs>
+  personnel?: boolean | Prisma.PersonnelDefaultArgs<ExtArgs>
+  personnelAncien?: boolean | Prisma.Livraison$personnelAncienArgs<ExtArgs>
+  fournisseur?: boolean | Prisma.FournisseurDefaultArgs<ExtArgs>
   detLivraisons?: boolean | Prisma.Livraison$detLivraisonsArgs<ExtArgs>
   detBulttinLivraisons?: boolean | Prisma.Livraison$detBulttinLivraisonsArgs<ExtArgs>
   _count?: boolean | Prisma.LivraisonCountOutputTypeDefaultArgs<ExtArgs>
@@ -2809,10 +2809,10 @@ export type LivraisonInclude<ExtArgs extends runtime.Types.Extensions.InternalAr
 export type $LivraisonPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "Livraison"
   objects: {
-    employeOperateur: Prisma.$EmployePayload<ExtArgs>
-    repertoireByCommercial: Prisma.$RepertoirePayload<ExtArgs>
-    repertoireByCommercialAncien: Prisma.$RepertoirePayload<ExtArgs> | null
-    repertoireByClient: Prisma.$RepertoirePayload<ExtArgs>
+    employeOperateur: Prisma.$EmployePayload<ExtArgs> | null
+    personnel: Prisma.$PersonnelPayload<ExtArgs>
+    personnelAncien: Prisma.$PersonnelPayload<ExtArgs> | null
+    fournisseur: Prisma.$FournisseurPayload<ExtArgs>
     detLivraisons: Prisma.$DetLivraisonPayload<ExtArgs>[]
     detBulttinLivraisons: Prisma.$DetBulttinLivraisonPayload<ExtArgs>[]
   }
@@ -2846,10 +2846,10 @@ export type $LivraisonPayload<ExtArgs extends runtime.Types.Extensions.InternalA
     mntReglement4: runtime.Decimal
     facturer100: boolean
     codeTransport: string
-    employeOperateurId: bigint
-    repertoireByCommercialId: bigint
-    repertoireByCommercialAncienId: bigint
-    repertoireByClientId: bigint
+    employeOperateurId: bigint | null
+    personnelId: bigint
+    personnelAncienId: bigint | null
+    fournisseurId: bigint
   }, ExtArgs["result"]["livraison"]>
   composites: {}
 }
@@ -3190,10 +3190,10 @@ readonly fields: LivraisonFieldRefs;
  */
 export interface Prisma__LivraisonClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  employeOperateur<T extends Prisma.EmployeDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.EmployeDefaultArgs<ExtArgs>>): Prisma.Prisma__EmployeClient<runtime.Types.Result.GetResult<Prisma.$EmployePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-  repertoireByCommercial<T extends Prisma.RepertoireDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.RepertoireDefaultArgs<ExtArgs>>): Prisma.Prisma__RepertoireClient<runtime.Types.Result.GetResult<Prisma.$RepertoirePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-  repertoireByCommercialAncien<T extends Prisma.Livraison$repertoireByCommercialAncienArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Livraison$repertoireByCommercialAncienArgs<ExtArgs>>): Prisma.Prisma__RepertoireClient<runtime.Types.Result.GetResult<Prisma.$RepertoirePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-  repertoireByClient<T extends Prisma.RepertoireDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.RepertoireDefaultArgs<ExtArgs>>): Prisma.Prisma__RepertoireClient<runtime.Types.Result.GetResult<Prisma.$RepertoirePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  employeOperateur<T extends Prisma.Livraison$employeOperateurArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Livraison$employeOperateurArgs<ExtArgs>>): Prisma.Prisma__EmployeClient<runtime.Types.Result.GetResult<Prisma.$EmployePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  personnel<T extends Prisma.PersonnelDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.PersonnelDefaultArgs<ExtArgs>>): Prisma.Prisma__PersonnelClient<runtime.Types.Result.GetResult<Prisma.$PersonnelPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  personnelAncien<T extends Prisma.Livraison$personnelAncienArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Livraison$personnelAncienArgs<ExtArgs>>): Prisma.Prisma__PersonnelClient<runtime.Types.Result.GetResult<Prisma.$PersonnelPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  fournisseur<T extends Prisma.FournisseurDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.FournisseurDefaultArgs<ExtArgs>>): Prisma.Prisma__FournisseurClient<runtime.Types.Result.GetResult<Prisma.$FournisseurPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   detLivraisons<T extends Prisma.Livraison$detLivraisonsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Livraison$detLivraisonsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$DetLivraisonPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   detBulttinLivraisons<T extends Prisma.Livraison$detBulttinLivraisonsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Livraison$detBulttinLivraisonsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$DetBulttinLivraisonPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
@@ -3255,9 +3255,9 @@ export interface LivraisonFieldRefs {
   readonly facturer100: Prisma.FieldRef<"Livraison", 'Boolean'>
   readonly codeTransport: Prisma.FieldRef<"Livraison", 'String'>
   readonly employeOperateurId: Prisma.FieldRef<"Livraison", 'BigInt'>
-  readonly repertoireByCommercialId: Prisma.FieldRef<"Livraison", 'BigInt'>
-  readonly repertoireByCommercialAncienId: Prisma.FieldRef<"Livraison", 'BigInt'>
-  readonly repertoireByClientId: Prisma.FieldRef<"Livraison", 'BigInt'>
+  readonly personnelId: Prisma.FieldRef<"Livraison", 'BigInt'>
+  readonly personnelAncienId: Prisma.FieldRef<"Livraison", 'BigInt'>
+  readonly fournisseurId: Prisma.FieldRef<"Livraison", 'BigInt'>
 }
     
 
@@ -3601,22 +3601,41 @@ export type LivraisonDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.Int
 }
 
 /**
- * Livraison.repertoireByCommercialAncien
+ * Livraison.employeOperateur
  */
-export type Livraison$repertoireByCommercialAncienArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Livraison$employeOperateurArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Repertoire
+   * Select specific fields to fetch from the Employe
    */
-  select?: Prisma.RepertoireSelect<ExtArgs> | null
+  select?: Prisma.EmployeSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Repertoire
+   * Omit specific fields from the Employe
    */
-  omit?: Prisma.RepertoireOmit<ExtArgs> | null
+  omit?: Prisma.EmployeOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.RepertoireInclude<ExtArgs> | null
-  where?: Prisma.RepertoireWhereInput
+  include?: Prisma.EmployeInclude<ExtArgs> | null
+  where?: Prisma.EmployeWhereInput
+}
+
+/**
+ * Livraison.personnelAncien
+ */
+export type Livraison$personnelAncienArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Personnel
+   */
+  select?: Prisma.PersonnelSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Personnel
+   */
+  omit?: Prisma.PersonnelOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.PersonnelInclude<ExtArgs> | null
+  where?: Prisma.PersonnelWhereInput
 }
 
 /**

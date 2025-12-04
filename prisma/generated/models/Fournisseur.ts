@@ -266,6 +266,7 @@ export type FournisseurWhereInput = {
   villeId?: Prisma.BigIntNullableFilter<"Fournisseur"> | bigint | number | null
   ville?: Prisma.XOR<Prisma.VilleNullableScalarRelationFilter, Prisma.VilleWhereInput> | null
   stocks?: Prisma.StockListRelationFilter
+  livraisons?: Prisma.LivraisonListRelationFilter
 }
 
 export type FournisseurOrderByWithRelationInput = {
@@ -281,6 +282,7 @@ export type FournisseurOrderByWithRelationInput = {
   villeId?: Prisma.SortOrderInput | Prisma.SortOrder
   ville?: Prisma.VilleOrderByWithRelationInput
   stocks?: Prisma.StockOrderByRelationAggregateInput
+  livraisons?: Prisma.LivraisonOrderByRelationAggregateInput
   _relevance?: Prisma.FournisseurOrderByRelevanceInput
 }
 
@@ -300,6 +302,7 @@ export type FournisseurWhereUniqueInput = Prisma.AtLeast<{
   villeId?: Prisma.BigIntNullableFilter<"Fournisseur"> | bigint | number | null
   ville?: Prisma.XOR<Prisma.VilleNullableScalarRelationFilter, Prisma.VilleWhereInput> | null
   stocks?: Prisma.StockListRelationFilter
+  livraisons?: Prisma.LivraisonListRelationFilter
 }, "id">
 
 export type FournisseurOrderByWithAggregationInput = {
@@ -348,6 +351,7 @@ export type FournisseurCreateInput = {
   supprimer?: boolean
   ville?: Prisma.VilleCreateNestedOneWithoutFournisseursInput
   stocks?: Prisma.StockCreateNestedManyWithoutFournisseurInput
+  livraisons?: Prisma.LivraisonCreateNestedManyWithoutFournisseurInput
 }
 
 export type FournisseurUncheckedCreateInput = {
@@ -362,6 +366,7 @@ export type FournisseurUncheckedCreateInput = {
   supprimer?: boolean
   villeId?: bigint | number | null
   stocks?: Prisma.StockUncheckedCreateNestedManyWithoutFournisseurInput
+  livraisons?: Prisma.LivraisonUncheckedCreateNestedManyWithoutFournisseurInput
 }
 
 export type FournisseurUpdateInput = {
@@ -376,6 +381,7 @@ export type FournisseurUpdateInput = {
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   ville?: Prisma.VilleUpdateOneWithoutFournisseursNestedInput
   stocks?: Prisma.StockUpdateManyWithoutFournisseurNestedInput
+  livraisons?: Prisma.LivraisonUpdateManyWithoutFournisseurNestedInput
 }
 
 export type FournisseurUncheckedUpdateInput = {
@@ -390,6 +396,7 @@ export type FournisseurUncheckedUpdateInput = {
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   stocks?: Prisma.StockUncheckedUpdateManyWithoutFournisseurNestedInput
+  livraisons?: Prisma.LivraisonUncheckedUpdateManyWithoutFournisseurNestedInput
 }
 
 export type FournisseurCreateManyInput = {
@@ -578,6 +585,20 @@ export type FournisseurUpdateOneRequiredWithoutStocksNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.FournisseurUpdateToOneWithWhereWithoutStocksInput, Prisma.FournisseurUpdateWithoutStocksInput>, Prisma.FournisseurUncheckedUpdateWithoutStocksInput>
 }
 
+export type FournisseurCreateNestedOneWithoutLivraisonsInput = {
+  create?: Prisma.XOR<Prisma.FournisseurCreateWithoutLivraisonsInput, Prisma.FournisseurUncheckedCreateWithoutLivraisonsInput>
+  connectOrCreate?: Prisma.FournisseurCreateOrConnectWithoutLivraisonsInput
+  connect?: Prisma.FournisseurWhereUniqueInput
+}
+
+export type FournisseurUpdateOneRequiredWithoutLivraisonsNestedInput = {
+  create?: Prisma.XOR<Prisma.FournisseurCreateWithoutLivraisonsInput, Prisma.FournisseurUncheckedCreateWithoutLivraisonsInput>
+  connectOrCreate?: Prisma.FournisseurCreateOrConnectWithoutLivraisonsInput
+  upsert?: Prisma.FournisseurUpsertWithoutLivraisonsInput
+  connect?: Prisma.FournisseurWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.FournisseurUpdateToOneWithWhereWithoutLivraisonsInput, Prisma.FournisseurUpdateWithoutLivraisonsInput>, Prisma.FournisseurUncheckedUpdateWithoutLivraisonsInput>
+}
+
 export type FournisseurCreateWithoutVilleInput = {
   id?: bigint | number
   designation: string
@@ -589,6 +610,7 @@ export type FournisseurCreateWithoutVilleInput = {
   archiver?: boolean
   supprimer?: boolean
   stocks?: Prisma.StockCreateNestedManyWithoutFournisseurInput
+  livraisons?: Prisma.LivraisonCreateNestedManyWithoutFournisseurInput
 }
 
 export type FournisseurUncheckedCreateWithoutVilleInput = {
@@ -602,6 +624,7 @@ export type FournisseurUncheckedCreateWithoutVilleInput = {
   archiver?: boolean
   supprimer?: boolean
   stocks?: Prisma.StockUncheckedCreateNestedManyWithoutFournisseurInput
+  livraisons?: Prisma.LivraisonUncheckedCreateNestedManyWithoutFournisseurInput
 }
 
 export type FournisseurCreateOrConnectWithoutVilleInput = {
@@ -657,6 +680,7 @@ export type FournisseurCreateWithoutStocksInput = {
   archiver?: boolean
   supprimer?: boolean
   ville?: Prisma.VilleCreateNestedOneWithoutFournisseursInput
+  livraisons?: Prisma.LivraisonCreateNestedManyWithoutFournisseurInput
 }
 
 export type FournisseurUncheckedCreateWithoutStocksInput = {
@@ -670,6 +694,7 @@ export type FournisseurUncheckedCreateWithoutStocksInput = {
   archiver?: boolean
   supprimer?: boolean
   villeId?: bigint | number | null
+  livraisons?: Prisma.LivraisonUncheckedCreateNestedManyWithoutFournisseurInput
 }
 
 export type FournisseurCreateOrConnectWithoutStocksInput = {
@@ -699,6 +724,7 @@ export type FournisseurUpdateWithoutStocksInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   ville?: Prisma.VilleUpdateOneWithoutFournisseursNestedInput
+  livraisons?: Prisma.LivraisonUpdateManyWithoutFournisseurNestedInput
 }
 
 export type FournisseurUncheckedUpdateWithoutStocksInput = {
@@ -712,6 +738,79 @@ export type FournisseurUncheckedUpdateWithoutStocksInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+  livraisons?: Prisma.LivraisonUncheckedUpdateManyWithoutFournisseurNestedInput
+}
+
+export type FournisseurCreateWithoutLivraisonsInput = {
+  id?: bigint | number
+  designation: string
+  type: number
+  tel1: string
+  tel2: string
+  ice: string
+  adresse: string
+  archiver?: boolean
+  supprimer?: boolean
+  ville?: Prisma.VilleCreateNestedOneWithoutFournisseursInput
+  stocks?: Prisma.StockCreateNestedManyWithoutFournisseurInput
+}
+
+export type FournisseurUncheckedCreateWithoutLivraisonsInput = {
+  id?: bigint | number
+  designation: string
+  type: number
+  tel1: string
+  tel2: string
+  ice: string
+  adresse: string
+  archiver?: boolean
+  supprimer?: boolean
+  villeId?: bigint | number | null
+  stocks?: Prisma.StockUncheckedCreateNestedManyWithoutFournisseurInput
+}
+
+export type FournisseurCreateOrConnectWithoutLivraisonsInput = {
+  where: Prisma.FournisseurWhereUniqueInput
+  create: Prisma.XOR<Prisma.FournisseurCreateWithoutLivraisonsInput, Prisma.FournisseurUncheckedCreateWithoutLivraisonsInput>
+}
+
+export type FournisseurUpsertWithoutLivraisonsInput = {
+  update: Prisma.XOR<Prisma.FournisseurUpdateWithoutLivraisonsInput, Prisma.FournisseurUncheckedUpdateWithoutLivraisonsInput>
+  create: Prisma.XOR<Prisma.FournisseurCreateWithoutLivraisonsInput, Prisma.FournisseurUncheckedCreateWithoutLivraisonsInput>
+  where?: Prisma.FournisseurWhereInput
+}
+
+export type FournisseurUpdateToOneWithWhereWithoutLivraisonsInput = {
+  where?: Prisma.FournisseurWhereInput
+  data: Prisma.XOR<Prisma.FournisseurUpdateWithoutLivraisonsInput, Prisma.FournisseurUncheckedUpdateWithoutLivraisonsInput>
+}
+
+export type FournisseurUpdateWithoutLivraisonsInput = {
+  id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  designation?: Prisma.StringFieldUpdateOperationsInput | string
+  type?: Prisma.IntFieldUpdateOperationsInput | number
+  tel1?: Prisma.StringFieldUpdateOperationsInput | string
+  tel2?: Prisma.StringFieldUpdateOperationsInput | string
+  ice?: Prisma.StringFieldUpdateOperationsInput | string
+  adresse?: Prisma.StringFieldUpdateOperationsInput | string
+  archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ville?: Prisma.VilleUpdateOneWithoutFournisseursNestedInput
+  stocks?: Prisma.StockUpdateManyWithoutFournisseurNestedInput
+}
+
+export type FournisseurUncheckedUpdateWithoutLivraisonsInput = {
+  id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  designation?: Prisma.StringFieldUpdateOperationsInput | string
+  type?: Prisma.IntFieldUpdateOperationsInput | number
+  tel1?: Prisma.StringFieldUpdateOperationsInput | string
+  tel2?: Prisma.StringFieldUpdateOperationsInput | string
+  ice?: Prisma.StringFieldUpdateOperationsInput | string
+  adresse?: Prisma.StringFieldUpdateOperationsInput | string
+  archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+  stocks?: Prisma.StockUncheckedUpdateManyWithoutFournisseurNestedInput
 }
 
 export type FournisseurCreateManyVilleInput = {
@@ -737,6 +836,7 @@ export type FournisseurUpdateWithoutVilleInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   stocks?: Prisma.StockUpdateManyWithoutFournisseurNestedInput
+  livraisons?: Prisma.LivraisonUpdateManyWithoutFournisseurNestedInput
 }
 
 export type FournisseurUncheckedUpdateWithoutVilleInput = {
@@ -750,6 +850,7 @@ export type FournisseurUncheckedUpdateWithoutVilleInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   stocks?: Prisma.StockUncheckedUpdateManyWithoutFournisseurNestedInput
+  livraisons?: Prisma.LivraisonUncheckedUpdateManyWithoutFournisseurNestedInput
 }
 
 export type FournisseurUncheckedUpdateManyWithoutVilleInput = {
@@ -771,10 +872,12 @@ export type FournisseurUncheckedUpdateManyWithoutVilleInput = {
 
 export type FournisseurCountOutputType = {
   stocks: number
+  livraisons: number
 }
 
 export type FournisseurCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   stocks?: boolean | FournisseurCountOutputTypeCountStocksArgs
+  livraisons?: boolean | FournisseurCountOutputTypeCountLivraisonsArgs
 }
 
 /**
@@ -794,6 +897,13 @@ export type FournisseurCountOutputTypeCountStocksArgs<ExtArgs extends runtime.Ty
   where?: Prisma.StockWhereInput
 }
 
+/**
+ * FournisseurCountOutputType without action
+ */
+export type FournisseurCountOutputTypeCountLivraisonsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.LivraisonWhereInput
+}
+
 
 export type FournisseurSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
@@ -808,6 +918,7 @@ export type FournisseurSelect<ExtArgs extends runtime.Types.Extensions.InternalA
   villeId?: boolean
   ville?: boolean | Prisma.Fournisseur$villeArgs<ExtArgs>
   stocks?: boolean | Prisma.Fournisseur$stocksArgs<ExtArgs>
+  livraisons?: boolean | Prisma.Fournisseur$livraisonsArgs<ExtArgs>
   _count?: boolean | Prisma.FournisseurCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["fournisseur"]>
 
@@ -830,6 +941,7 @@ export type FournisseurOmit<ExtArgs extends runtime.Types.Extensions.InternalArg
 export type FournisseurInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   ville?: boolean | Prisma.Fournisseur$villeArgs<ExtArgs>
   stocks?: boolean | Prisma.Fournisseur$stocksArgs<ExtArgs>
+  livraisons?: boolean | Prisma.Fournisseur$livraisonsArgs<ExtArgs>
   _count?: boolean | Prisma.FournisseurCountOutputTypeDefaultArgs<ExtArgs>
 }
 
@@ -838,6 +950,7 @@ export type $FournisseurPayload<ExtArgs extends runtime.Types.Extensions.Interna
   objects: {
     ville: Prisma.$VillePayload<ExtArgs> | null
     stocks: Prisma.$StockPayload<ExtArgs>[]
+    livraisons: Prisma.$LivraisonPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: bigint
@@ -1192,6 +1305,7 @@ export interface Prisma__FournisseurClient<T, Null = never, ExtArgs extends runt
   readonly [Symbol.toStringTag]: "PrismaPromise"
   ville<T extends Prisma.Fournisseur$villeArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Fournisseur$villeArgs<ExtArgs>>): Prisma.Prisma__VilleClient<runtime.Types.Result.GetResult<Prisma.$VillePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   stocks<T extends Prisma.Fournisseur$stocksArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Fournisseur$stocksArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$StockPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  livraisons<T extends Prisma.Fournisseur$livraisonsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Fournisseur$livraisonsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$LivraisonPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1614,6 +1728,30 @@ export type Fournisseur$stocksArgs<ExtArgs extends runtime.Types.Extensions.Inte
   take?: number
   skip?: number
   distinct?: Prisma.StockScalarFieldEnum | Prisma.StockScalarFieldEnum[]
+}
+
+/**
+ * Fournisseur.livraisons
+ */
+export type Fournisseur$livraisonsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Livraison
+   */
+  select?: Prisma.LivraisonSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Livraison
+   */
+  omit?: Prisma.LivraisonOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.LivraisonInclude<ExtArgs> | null
+  where?: Prisma.LivraisonWhereInput
+  orderBy?: Prisma.LivraisonOrderByWithRelationInput | Prisma.LivraisonOrderByWithRelationInput[]
+  cursor?: Prisma.LivraisonWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.LivraisonScalarFieldEnum | Prisma.LivraisonScalarFieldEnum[]
 }
 
 /**

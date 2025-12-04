@@ -797,6 +797,11 @@ export type EmployeScalarRelationFilter = {
   isNot?: Prisma.EmployeWhereInput
 }
 
+export type EmployeNullableScalarRelationFilter = {
+  is?: Prisma.EmployeWhereInput | null
+  isNot?: Prisma.EmployeWhereInput | null
+}
+
 export type EmployeCreateNestedManyWithoutRepertoireInput = {
   create?: Prisma.XOR<Prisma.EmployeCreateWithoutRepertoireInput, Prisma.EmployeUncheckedCreateWithoutRepertoireInput> | Prisma.EmployeCreateWithoutRepertoireInput[] | Prisma.EmployeUncheckedCreateWithoutRepertoireInput[]
   connectOrCreate?: Prisma.EmployeCreateOrConnectWithoutRepertoireInput | Prisma.EmployeCreateOrConnectWithoutRepertoireInput[]
@@ -915,10 +920,12 @@ export type EmployeCreateNestedOneWithoutLivraisonsInput = {
   connect?: Prisma.EmployeWhereUniqueInput
 }
 
-export type EmployeUpdateOneRequiredWithoutLivraisonsNestedInput = {
+export type EmployeUpdateOneWithoutLivraisonsNestedInput = {
   create?: Prisma.XOR<Prisma.EmployeCreateWithoutLivraisonsInput, Prisma.EmployeUncheckedCreateWithoutLivraisonsInput>
   connectOrCreate?: Prisma.EmployeCreateOrConnectWithoutLivraisonsInput
   upsert?: Prisma.EmployeUpsertWithoutLivraisonsInput
+  disconnect?: Prisma.EmployeWhereInput | boolean
+  delete?: Prisma.EmployeWhereInput | boolean
   connect?: Prisma.EmployeWhereUniqueInput
   update?: Prisma.XOR<Prisma.XOR<Prisma.EmployeUpdateToOneWithWhereWithoutLivraisonsInput, Prisma.EmployeUpdateWithoutLivraisonsInput>, Prisma.EmployeUncheckedUpdateWithoutLivraisonsInput>
 }

@@ -371,6 +371,8 @@ export type PersonnelWhereInput = {
   absencesOperation?: Prisma.AbsenceListRelationFilter
   absences?: Prisma.AbsenceListRelationFilter
   repertoires?: Prisma.RepertoireListRelationFilter
+  livraisons?: Prisma.LivraisonListRelationFilter
+  livraisonsAncien?: Prisma.LivraisonListRelationFilter
 }
 
 export type PersonnelOrderByWithRelationInput = {
@@ -400,6 +402,8 @@ export type PersonnelOrderByWithRelationInput = {
   absencesOperation?: Prisma.AbsenceOrderByRelationAggregateInput
   absences?: Prisma.AbsenceOrderByRelationAggregateInput
   repertoires?: Prisma.RepertoireOrderByRelationAggregateInput
+  livraisons?: Prisma.LivraisonOrderByRelationAggregateInput
+  livraisonsAncien?: Prisma.LivraisonOrderByRelationAggregateInput
   _relevance?: Prisma.PersonnelOrderByRelevanceInput
 }
 
@@ -433,6 +437,8 @@ export type PersonnelWhereUniqueInput = Prisma.AtLeast<{
   absencesOperation?: Prisma.AbsenceListRelationFilter
   absences?: Prisma.AbsenceListRelationFilter
   repertoires?: Prisma.RepertoireListRelationFilter
+  livraisons?: Prisma.LivraisonListRelationFilter
+  livraisonsAncien?: Prisma.LivraisonListRelationFilter
 }, "id">
 
 export type PersonnelOrderByWithAggregationInput = {
@@ -522,6 +528,8 @@ export type PersonnelCreateInput = {
   absencesOperation?: Prisma.AbsenceCreateNestedManyWithoutPersonnelOperationInput
   absences?: Prisma.AbsenceCreateNestedManyWithoutPersonnelInput
   repertoires?: Prisma.RepertoireCreateNestedManyWithoutPersonnelInput
+  livraisons?: Prisma.LivraisonCreateNestedManyWithoutPersonnelInput
+  livraisonsAncien?: Prisma.LivraisonCreateNestedManyWithoutPersonnelAncienInput
 }
 
 export type PersonnelUncheckedCreateInput = {
@@ -551,6 +559,8 @@ export type PersonnelUncheckedCreateInput = {
   absencesOperation?: Prisma.AbsenceUncheckedCreateNestedManyWithoutPersonnelOperationInput
   absences?: Prisma.AbsenceUncheckedCreateNestedManyWithoutPersonnelInput
   repertoires?: Prisma.RepertoireUncheckedCreateNestedManyWithoutPersonnelInput
+  livraisons?: Prisma.LivraisonUncheckedCreateNestedManyWithoutPersonnelInput
+  livraisonsAncien?: Prisma.LivraisonUncheckedCreateNestedManyWithoutPersonnelAncienInput
 }
 
 export type PersonnelUpdateInput = {
@@ -580,6 +590,8 @@ export type PersonnelUpdateInput = {
   absencesOperation?: Prisma.AbsenceUpdateManyWithoutPersonnelOperationNestedInput
   absences?: Prisma.AbsenceUpdateManyWithoutPersonnelNestedInput
   repertoires?: Prisma.RepertoireUpdateManyWithoutPersonnelNestedInput
+  livraisons?: Prisma.LivraisonUpdateManyWithoutPersonnelNestedInput
+  livraisonsAncien?: Prisma.LivraisonUpdateManyWithoutPersonnelAncienNestedInput
 }
 
 export type PersonnelUncheckedUpdateInput = {
@@ -609,6 +621,8 @@ export type PersonnelUncheckedUpdateInput = {
   absencesOperation?: Prisma.AbsenceUncheckedUpdateManyWithoutPersonnelOperationNestedInput
   absences?: Prisma.AbsenceUncheckedUpdateManyWithoutPersonnelNestedInput
   repertoires?: Prisma.RepertoireUncheckedUpdateManyWithoutPersonnelNestedInput
+  livraisons?: Prisma.LivraisonUncheckedUpdateManyWithoutPersonnelNestedInput
+  livraisonsAncien?: Prisma.LivraisonUncheckedUpdateManyWithoutPersonnelAncienNestedInput
 }
 
 export type PersonnelCreateManyInput = {
@@ -853,6 +867,36 @@ export type PersonnelUpdateOneRequiredWithoutAbsencesNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.PersonnelUpdateToOneWithWhereWithoutAbsencesInput, Prisma.PersonnelUpdateWithoutAbsencesInput>, Prisma.PersonnelUncheckedUpdateWithoutAbsencesInput>
 }
 
+export type PersonnelCreateNestedOneWithoutLivraisonsInput = {
+  create?: Prisma.XOR<Prisma.PersonnelCreateWithoutLivraisonsInput, Prisma.PersonnelUncheckedCreateWithoutLivraisonsInput>
+  connectOrCreate?: Prisma.PersonnelCreateOrConnectWithoutLivraisonsInput
+  connect?: Prisma.PersonnelWhereUniqueInput
+}
+
+export type PersonnelCreateNestedOneWithoutLivraisonsAncienInput = {
+  create?: Prisma.XOR<Prisma.PersonnelCreateWithoutLivraisonsAncienInput, Prisma.PersonnelUncheckedCreateWithoutLivraisonsAncienInput>
+  connectOrCreate?: Prisma.PersonnelCreateOrConnectWithoutLivraisonsAncienInput
+  connect?: Prisma.PersonnelWhereUniqueInput
+}
+
+export type PersonnelUpdateOneRequiredWithoutLivraisonsNestedInput = {
+  create?: Prisma.XOR<Prisma.PersonnelCreateWithoutLivraisonsInput, Prisma.PersonnelUncheckedCreateWithoutLivraisonsInput>
+  connectOrCreate?: Prisma.PersonnelCreateOrConnectWithoutLivraisonsInput
+  upsert?: Prisma.PersonnelUpsertWithoutLivraisonsInput
+  connect?: Prisma.PersonnelWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.PersonnelUpdateToOneWithWhereWithoutLivraisonsInput, Prisma.PersonnelUpdateWithoutLivraisonsInput>, Prisma.PersonnelUncheckedUpdateWithoutLivraisonsInput>
+}
+
+export type PersonnelUpdateOneWithoutLivraisonsAncienNestedInput = {
+  create?: Prisma.XOR<Prisma.PersonnelCreateWithoutLivraisonsAncienInput, Prisma.PersonnelUncheckedCreateWithoutLivraisonsAncienInput>
+  connectOrCreate?: Prisma.PersonnelCreateOrConnectWithoutLivraisonsAncienInput
+  upsert?: Prisma.PersonnelUpsertWithoutLivraisonsAncienInput
+  disconnect?: Prisma.PersonnelWhereInput | boolean
+  delete?: Prisma.PersonnelWhereInput | boolean
+  connect?: Prisma.PersonnelWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.PersonnelUpdateToOneWithWhereWithoutLivraisonsAncienInput, Prisma.PersonnelUpdateWithoutLivraisonsAncienInput>, Prisma.PersonnelUncheckedUpdateWithoutLivraisonsAncienInput>
+}
+
 export type PersonnelCreateWithoutRepertoiresInput = {
   id?: bigint | number
   designation: string
@@ -879,6 +923,8 @@ export type PersonnelCreateWithoutRepertoiresInput = {
   supprimerRepertoire?: boolean
   absencesOperation?: Prisma.AbsenceCreateNestedManyWithoutPersonnelOperationInput
   absences?: Prisma.AbsenceCreateNestedManyWithoutPersonnelInput
+  livraisons?: Prisma.LivraisonCreateNestedManyWithoutPersonnelInput
+  livraisonsAncien?: Prisma.LivraisonCreateNestedManyWithoutPersonnelAncienInput
 }
 
 export type PersonnelUncheckedCreateWithoutRepertoiresInput = {
@@ -907,6 +953,8 @@ export type PersonnelUncheckedCreateWithoutRepertoiresInput = {
   supprimerRepertoire?: boolean
   absencesOperation?: Prisma.AbsenceUncheckedCreateNestedManyWithoutPersonnelOperationInput
   absences?: Prisma.AbsenceUncheckedCreateNestedManyWithoutPersonnelInput
+  livraisons?: Prisma.LivraisonUncheckedCreateNestedManyWithoutPersonnelInput
+  livraisonsAncien?: Prisma.LivraisonUncheckedCreateNestedManyWithoutPersonnelAncienInput
 }
 
 export type PersonnelCreateOrConnectWithoutRepertoiresInput = {
@@ -951,6 +999,8 @@ export type PersonnelUpdateWithoutRepertoiresInput = {
   supprimerRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
   absencesOperation?: Prisma.AbsenceUpdateManyWithoutPersonnelOperationNestedInput
   absences?: Prisma.AbsenceUpdateManyWithoutPersonnelNestedInput
+  livraisons?: Prisma.LivraisonUpdateManyWithoutPersonnelNestedInput
+  livraisonsAncien?: Prisma.LivraisonUpdateManyWithoutPersonnelAncienNestedInput
 }
 
 export type PersonnelUncheckedUpdateWithoutRepertoiresInput = {
@@ -979,6 +1029,8 @@ export type PersonnelUncheckedUpdateWithoutRepertoiresInput = {
   supprimerRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
   absencesOperation?: Prisma.AbsenceUncheckedUpdateManyWithoutPersonnelOperationNestedInput
   absences?: Prisma.AbsenceUncheckedUpdateManyWithoutPersonnelNestedInput
+  livraisons?: Prisma.LivraisonUncheckedUpdateManyWithoutPersonnelNestedInput
+  livraisonsAncien?: Prisma.LivraisonUncheckedUpdateManyWithoutPersonnelAncienNestedInput
 }
 
 export type PersonnelCreateWithoutAbsencesOperationInput = {
@@ -1007,6 +1059,8 @@ export type PersonnelCreateWithoutAbsencesOperationInput = {
   supprimerRepertoire?: boolean
   absences?: Prisma.AbsenceCreateNestedManyWithoutPersonnelInput
   repertoires?: Prisma.RepertoireCreateNestedManyWithoutPersonnelInput
+  livraisons?: Prisma.LivraisonCreateNestedManyWithoutPersonnelInput
+  livraisonsAncien?: Prisma.LivraisonCreateNestedManyWithoutPersonnelAncienInput
 }
 
 export type PersonnelUncheckedCreateWithoutAbsencesOperationInput = {
@@ -1035,6 +1089,8 @@ export type PersonnelUncheckedCreateWithoutAbsencesOperationInput = {
   supprimerRepertoire?: boolean
   absences?: Prisma.AbsenceUncheckedCreateNestedManyWithoutPersonnelInput
   repertoires?: Prisma.RepertoireUncheckedCreateNestedManyWithoutPersonnelInput
+  livraisons?: Prisma.LivraisonUncheckedCreateNestedManyWithoutPersonnelInput
+  livraisonsAncien?: Prisma.LivraisonUncheckedCreateNestedManyWithoutPersonnelAncienInput
 }
 
 export type PersonnelCreateOrConnectWithoutAbsencesOperationInput = {
@@ -1068,6 +1124,8 @@ export type PersonnelCreateWithoutAbsencesInput = {
   supprimerRepertoire?: boolean
   absencesOperation?: Prisma.AbsenceCreateNestedManyWithoutPersonnelOperationInput
   repertoires?: Prisma.RepertoireCreateNestedManyWithoutPersonnelInput
+  livraisons?: Prisma.LivraisonCreateNestedManyWithoutPersonnelInput
+  livraisonsAncien?: Prisma.LivraisonCreateNestedManyWithoutPersonnelAncienInput
 }
 
 export type PersonnelUncheckedCreateWithoutAbsencesInput = {
@@ -1096,6 +1154,8 @@ export type PersonnelUncheckedCreateWithoutAbsencesInput = {
   supprimerRepertoire?: boolean
   absencesOperation?: Prisma.AbsenceUncheckedCreateNestedManyWithoutPersonnelOperationInput
   repertoires?: Prisma.RepertoireUncheckedCreateNestedManyWithoutPersonnelInput
+  livraisons?: Prisma.LivraisonUncheckedCreateNestedManyWithoutPersonnelInput
+  livraisonsAncien?: Prisma.LivraisonUncheckedCreateNestedManyWithoutPersonnelAncienInput
 }
 
 export type PersonnelCreateOrConnectWithoutAbsencesInput = {
@@ -1140,6 +1200,8 @@ export type PersonnelUpdateWithoutAbsencesOperationInput = {
   supprimerRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
   absences?: Prisma.AbsenceUpdateManyWithoutPersonnelNestedInput
   repertoires?: Prisma.RepertoireUpdateManyWithoutPersonnelNestedInput
+  livraisons?: Prisma.LivraisonUpdateManyWithoutPersonnelNestedInput
+  livraisonsAncien?: Prisma.LivraisonUpdateManyWithoutPersonnelAncienNestedInput
 }
 
 export type PersonnelUncheckedUpdateWithoutAbsencesOperationInput = {
@@ -1168,6 +1230,8 @@ export type PersonnelUncheckedUpdateWithoutAbsencesOperationInput = {
   supprimerRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
   absences?: Prisma.AbsenceUncheckedUpdateManyWithoutPersonnelNestedInput
   repertoires?: Prisma.RepertoireUncheckedUpdateManyWithoutPersonnelNestedInput
+  livraisons?: Prisma.LivraisonUncheckedUpdateManyWithoutPersonnelNestedInput
+  livraisonsAncien?: Prisma.LivraisonUncheckedUpdateManyWithoutPersonnelAncienNestedInput
 }
 
 export type PersonnelUpsertWithoutAbsencesInput = {
@@ -1207,6 +1271,8 @@ export type PersonnelUpdateWithoutAbsencesInput = {
   supprimerRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
   absencesOperation?: Prisma.AbsenceUpdateManyWithoutPersonnelOperationNestedInput
   repertoires?: Prisma.RepertoireUpdateManyWithoutPersonnelNestedInput
+  livraisons?: Prisma.LivraisonUpdateManyWithoutPersonnelNestedInput
+  livraisonsAncien?: Prisma.LivraisonUpdateManyWithoutPersonnelAncienNestedInput
 }
 
 export type PersonnelUncheckedUpdateWithoutAbsencesInput = {
@@ -1235,6 +1301,280 @@ export type PersonnelUncheckedUpdateWithoutAbsencesInput = {
   supprimerRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
   absencesOperation?: Prisma.AbsenceUncheckedUpdateManyWithoutPersonnelOperationNestedInput
   repertoires?: Prisma.RepertoireUncheckedUpdateManyWithoutPersonnelNestedInput
+  livraisons?: Prisma.LivraisonUncheckedUpdateManyWithoutPersonnelNestedInput
+  livraisonsAncien?: Prisma.LivraisonUncheckedUpdateManyWithoutPersonnelAncienNestedInput
+}
+
+export type PersonnelCreateWithoutLivraisonsInput = {
+  id?: bigint | number
+  designation: string
+  cin: string
+  login: string
+  password: string
+  typePersonnel: number
+  etatComptePersonnel?: boolean
+  tel1: string
+  tel2: string
+  adresse: string
+  email: string
+  dateEntrer: Date | string
+  salaire: runtime.Decimal | runtime.DecimalJsLike | number | string
+  archiver?: boolean
+  supprimer?: boolean
+  consulterStock?: boolean
+  ajouterStock?: boolean
+  modifierStock?: boolean
+  supprimerStock?: boolean
+  consulterRepertoire?: boolean
+  ajouterRepertoire?: boolean
+  modifierRepertoire?: boolean
+  supprimerRepertoire?: boolean
+  absencesOperation?: Prisma.AbsenceCreateNestedManyWithoutPersonnelOperationInput
+  absences?: Prisma.AbsenceCreateNestedManyWithoutPersonnelInput
+  repertoires?: Prisma.RepertoireCreateNestedManyWithoutPersonnelInput
+  livraisonsAncien?: Prisma.LivraisonCreateNestedManyWithoutPersonnelAncienInput
+}
+
+export type PersonnelUncheckedCreateWithoutLivraisonsInput = {
+  id?: bigint | number
+  designation: string
+  cin: string
+  login: string
+  password: string
+  typePersonnel: number
+  etatComptePersonnel?: boolean
+  tel1: string
+  tel2: string
+  adresse: string
+  email: string
+  dateEntrer: Date | string
+  salaire: runtime.Decimal | runtime.DecimalJsLike | number | string
+  archiver?: boolean
+  supprimer?: boolean
+  consulterStock?: boolean
+  ajouterStock?: boolean
+  modifierStock?: boolean
+  supprimerStock?: boolean
+  consulterRepertoire?: boolean
+  ajouterRepertoire?: boolean
+  modifierRepertoire?: boolean
+  supprimerRepertoire?: boolean
+  absencesOperation?: Prisma.AbsenceUncheckedCreateNestedManyWithoutPersonnelOperationInput
+  absences?: Prisma.AbsenceUncheckedCreateNestedManyWithoutPersonnelInput
+  repertoires?: Prisma.RepertoireUncheckedCreateNestedManyWithoutPersonnelInput
+  livraisonsAncien?: Prisma.LivraisonUncheckedCreateNestedManyWithoutPersonnelAncienInput
+}
+
+export type PersonnelCreateOrConnectWithoutLivraisonsInput = {
+  where: Prisma.PersonnelWhereUniqueInput
+  create: Prisma.XOR<Prisma.PersonnelCreateWithoutLivraisonsInput, Prisma.PersonnelUncheckedCreateWithoutLivraisonsInput>
+}
+
+export type PersonnelCreateWithoutLivraisonsAncienInput = {
+  id?: bigint | number
+  designation: string
+  cin: string
+  login: string
+  password: string
+  typePersonnel: number
+  etatComptePersonnel?: boolean
+  tel1: string
+  tel2: string
+  adresse: string
+  email: string
+  dateEntrer: Date | string
+  salaire: runtime.Decimal | runtime.DecimalJsLike | number | string
+  archiver?: boolean
+  supprimer?: boolean
+  consulterStock?: boolean
+  ajouterStock?: boolean
+  modifierStock?: boolean
+  supprimerStock?: boolean
+  consulterRepertoire?: boolean
+  ajouterRepertoire?: boolean
+  modifierRepertoire?: boolean
+  supprimerRepertoire?: boolean
+  absencesOperation?: Prisma.AbsenceCreateNestedManyWithoutPersonnelOperationInput
+  absences?: Prisma.AbsenceCreateNestedManyWithoutPersonnelInput
+  repertoires?: Prisma.RepertoireCreateNestedManyWithoutPersonnelInput
+  livraisons?: Prisma.LivraisonCreateNestedManyWithoutPersonnelInput
+}
+
+export type PersonnelUncheckedCreateWithoutLivraisonsAncienInput = {
+  id?: bigint | number
+  designation: string
+  cin: string
+  login: string
+  password: string
+  typePersonnel: number
+  etatComptePersonnel?: boolean
+  tel1: string
+  tel2: string
+  adresse: string
+  email: string
+  dateEntrer: Date | string
+  salaire: runtime.Decimal | runtime.DecimalJsLike | number | string
+  archiver?: boolean
+  supprimer?: boolean
+  consulterStock?: boolean
+  ajouterStock?: boolean
+  modifierStock?: boolean
+  supprimerStock?: boolean
+  consulterRepertoire?: boolean
+  ajouterRepertoire?: boolean
+  modifierRepertoire?: boolean
+  supprimerRepertoire?: boolean
+  absencesOperation?: Prisma.AbsenceUncheckedCreateNestedManyWithoutPersonnelOperationInput
+  absences?: Prisma.AbsenceUncheckedCreateNestedManyWithoutPersonnelInput
+  repertoires?: Prisma.RepertoireUncheckedCreateNestedManyWithoutPersonnelInput
+  livraisons?: Prisma.LivraisonUncheckedCreateNestedManyWithoutPersonnelInput
+}
+
+export type PersonnelCreateOrConnectWithoutLivraisonsAncienInput = {
+  where: Prisma.PersonnelWhereUniqueInput
+  create: Prisma.XOR<Prisma.PersonnelCreateWithoutLivraisonsAncienInput, Prisma.PersonnelUncheckedCreateWithoutLivraisonsAncienInput>
+}
+
+export type PersonnelUpsertWithoutLivraisonsInput = {
+  update: Prisma.XOR<Prisma.PersonnelUpdateWithoutLivraisonsInput, Prisma.PersonnelUncheckedUpdateWithoutLivraisonsInput>
+  create: Prisma.XOR<Prisma.PersonnelCreateWithoutLivraisonsInput, Prisma.PersonnelUncheckedCreateWithoutLivraisonsInput>
+  where?: Prisma.PersonnelWhereInput
+}
+
+export type PersonnelUpdateToOneWithWhereWithoutLivraisonsInput = {
+  where?: Prisma.PersonnelWhereInput
+  data: Prisma.XOR<Prisma.PersonnelUpdateWithoutLivraisonsInput, Prisma.PersonnelUncheckedUpdateWithoutLivraisonsInput>
+}
+
+export type PersonnelUpdateWithoutLivraisonsInput = {
+  id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  designation?: Prisma.StringFieldUpdateOperationsInput | string
+  cin?: Prisma.StringFieldUpdateOperationsInput | string
+  login?: Prisma.StringFieldUpdateOperationsInput | string
+  password?: Prisma.StringFieldUpdateOperationsInput | string
+  typePersonnel?: Prisma.IntFieldUpdateOperationsInput | number
+  etatComptePersonnel?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  tel1?: Prisma.StringFieldUpdateOperationsInput | string
+  tel2?: Prisma.StringFieldUpdateOperationsInput | string
+  adresse?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  dateEntrer?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  absencesOperation?: Prisma.AbsenceUpdateManyWithoutPersonnelOperationNestedInput
+  absences?: Prisma.AbsenceUpdateManyWithoutPersonnelNestedInput
+  repertoires?: Prisma.RepertoireUpdateManyWithoutPersonnelNestedInput
+  livraisonsAncien?: Prisma.LivraisonUpdateManyWithoutPersonnelAncienNestedInput
+}
+
+export type PersonnelUncheckedUpdateWithoutLivraisonsInput = {
+  id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  designation?: Prisma.StringFieldUpdateOperationsInput | string
+  cin?: Prisma.StringFieldUpdateOperationsInput | string
+  login?: Prisma.StringFieldUpdateOperationsInput | string
+  password?: Prisma.StringFieldUpdateOperationsInput | string
+  typePersonnel?: Prisma.IntFieldUpdateOperationsInput | number
+  etatComptePersonnel?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  tel1?: Prisma.StringFieldUpdateOperationsInput | string
+  tel2?: Prisma.StringFieldUpdateOperationsInput | string
+  adresse?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  dateEntrer?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  absencesOperation?: Prisma.AbsenceUncheckedUpdateManyWithoutPersonnelOperationNestedInput
+  absences?: Prisma.AbsenceUncheckedUpdateManyWithoutPersonnelNestedInput
+  repertoires?: Prisma.RepertoireUncheckedUpdateManyWithoutPersonnelNestedInput
+  livraisonsAncien?: Prisma.LivraisonUncheckedUpdateManyWithoutPersonnelAncienNestedInput
+}
+
+export type PersonnelUpsertWithoutLivraisonsAncienInput = {
+  update: Prisma.XOR<Prisma.PersonnelUpdateWithoutLivraisonsAncienInput, Prisma.PersonnelUncheckedUpdateWithoutLivraisonsAncienInput>
+  create: Prisma.XOR<Prisma.PersonnelCreateWithoutLivraisonsAncienInput, Prisma.PersonnelUncheckedCreateWithoutLivraisonsAncienInput>
+  where?: Prisma.PersonnelWhereInput
+}
+
+export type PersonnelUpdateToOneWithWhereWithoutLivraisonsAncienInput = {
+  where?: Prisma.PersonnelWhereInput
+  data: Prisma.XOR<Prisma.PersonnelUpdateWithoutLivraisonsAncienInput, Prisma.PersonnelUncheckedUpdateWithoutLivraisonsAncienInput>
+}
+
+export type PersonnelUpdateWithoutLivraisonsAncienInput = {
+  id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  designation?: Prisma.StringFieldUpdateOperationsInput | string
+  cin?: Prisma.StringFieldUpdateOperationsInput | string
+  login?: Prisma.StringFieldUpdateOperationsInput | string
+  password?: Prisma.StringFieldUpdateOperationsInput | string
+  typePersonnel?: Prisma.IntFieldUpdateOperationsInput | number
+  etatComptePersonnel?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  tel1?: Prisma.StringFieldUpdateOperationsInput | string
+  tel2?: Prisma.StringFieldUpdateOperationsInput | string
+  adresse?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  dateEntrer?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  absencesOperation?: Prisma.AbsenceUpdateManyWithoutPersonnelOperationNestedInput
+  absences?: Prisma.AbsenceUpdateManyWithoutPersonnelNestedInput
+  repertoires?: Prisma.RepertoireUpdateManyWithoutPersonnelNestedInput
+  livraisons?: Prisma.LivraisonUpdateManyWithoutPersonnelNestedInput
+}
+
+export type PersonnelUncheckedUpdateWithoutLivraisonsAncienInput = {
+  id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  designation?: Prisma.StringFieldUpdateOperationsInput | string
+  cin?: Prisma.StringFieldUpdateOperationsInput | string
+  login?: Prisma.StringFieldUpdateOperationsInput | string
+  password?: Prisma.StringFieldUpdateOperationsInput | string
+  typePersonnel?: Prisma.IntFieldUpdateOperationsInput | number
+  etatComptePersonnel?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  tel1?: Prisma.StringFieldUpdateOperationsInput | string
+  tel2?: Prisma.StringFieldUpdateOperationsInput | string
+  adresse?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  dateEntrer?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  salaire?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerStock?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  consulterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  ajouterRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  modifierRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  supprimerRepertoire?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  absencesOperation?: Prisma.AbsenceUncheckedUpdateManyWithoutPersonnelOperationNestedInput
+  absences?: Prisma.AbsenceUncheckedUpdateManyWithoutPersonnelNestedInput
+  repertoires?: Prisma.RepertoireUncheckedUpdateManyWithoutPersonnelNestedInput
+  livraisons?: Prisma.LivraisonUncheckedUpdateManyWithoutPersonnelNestedInput
 }
 
 
@@ -1246,12 +1586,16 @@ export type PersonnelCountOutputType = {
   absencesOperation: number
   absences: number
   repertoires: number
+  livraisons: number
+  livraisonsAncien: number
 }
 
 export type PersonnelCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   absencesOperation?: boolean | PersonnelCountOutputTypeCountAbsencesOperationArgs
   absences?: boolean | PersonnelCountOutputTypeCountAbsencesArgs
   repertoires?: boolean | PersonnelCountOutputTypeCountRepertoiresArgs
+  livraisons?: boolean | PersonnelCountOutputTypeCountLivraisonsArgs
+  livraisonsAncien?: boolean | PersonnelCountOutputTypeCountLivraisonsAncienArgs
 }
 
 /**
@@ -1285,6 +1629,20 @@ export type PersonnelCountOutputTypeCountRepertoiresArgs<ExtArgs extends runtime
   where?: Prisma.RepertoireWhereInput
 }
 
+/**
+ * PersonnelCountOutputType without action
+ */
+export type PersonnelCountOutputTypeCountLivraisonsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.LivraisonWhereInput
+}
+
+/**
+ * PersonnelCountOutputType without action
+ */
+export type PersonnelCountOutputTypeCountLivraisonsAncienArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.LivraisonWhereInput
+}
+
 
 export type PersonnelSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
@@ -1313,6 +1671,8 @@ export type PersonnelSelect<ExtArgs extends runtime.Types.Extensions.InternalArg
   absencesOperation?: boolean | Prisma.Personnel$absencesOperationArgs<ExtArgs>
   absences?: boolean | Prisma.Personnel$absencesArgs<ExtArgs>
   repertoires?: boolean | Prisma.Personnel$repertoiresArgs<ExtArgs>
+  livraisons?: boolean | Prisma.Personnel$livraisonsArgs<ExtArgs>
+  livraisonsAncien?: boolean | Prisma.Personnel$livraisonsAncienArgs<ExtArgs>
   _count?: boolean | Prisma.PersonnelCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["personnel"]>
 
@@ -1349,6 +1709,8 @@ export type PersonnelInclude<ExtArgs extends runtime.Types.Extensions.InternalAr
   absencesOperation?: boolean | Prisma.Personnel$absencesOperationArgs<ExtArgs>
   absences?: boolean | Prisma.Personnel$absencesArgs<ExtArgs>
   repertoires?: boolean | Prisma.Personnel$repertoiresArgs<ExtArgs>
+  livraisons?: boolean | Prisma.Personnel$livraisonsArgs<ExtArgs>
+  livraisonsAncien?: boolean | Prisma.Personnel$livraisonsAncienArgs<ExtArgs>
   _count?: boolean | Prisma.PersonnelCountOutputTypeDefaultArgs<ExtArgs>
 }
 
@@ -1358,6 +1720,8 @@ export type $PersonnelPayload<ExtArgs extends runtime.Types.Extensions.InternalA
     absencesOperation: Prisma.$AbsencePayload<ExtArgs>[]
     absences: Prisma.$AbsencePayload<ExtArgs>[]
     repertoires: Prisma.$RepertoirePayload<ExtArgs>[]
+    livraisons: Prisma.$LivraisonPayload<ExtArgs>[]
+    livraisonsAncien: Prisma.$LivraisonPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: bigint
@@ -1726,6 +2090,8 @@ export interface Prisma__PersonnelClient<T, Null = never, ExtArgs extends runtim
   absencesOperation<T extends Prisma.Personnel$absencesOperationArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Personnel$absencesOperationArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$AbsencePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   absences<T extends Prisma.Personnel$absencesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Personnel$absencesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$AbsencePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   repertoires<T extends Prisma.Personnel$repertoiresArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Personnel$repertoiresArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$RepertoirePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  livraisons<T extends Prisma.Personnel$livraisonsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Personnel$livraisonsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$LivraisonPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  livraisonsAncien<T extends Prisma.Personnel$livraisonsAncienArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Personnel$livraisonsAncienArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$LivraisonPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2190,6 +2556,54 @@ export type Personnel$repertoiresArgs<ExtArgs extends runtime.Types.Extensions.I
   take?: number
   skip?: number
   distinct?: Prisma.RepertoireScalarFieldEnum | Prisma.RepertoireScalarFieldEnum[]
+}
+
+/**
+ * Personnel.livraisons
+ */
+export type Personnel$livraisonsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Livraison
+   */
+  select?: Prisma.LivraisonSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Livraison
+   */
+  omit?: Prisma.LivraisonOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.LivraisonInclude<ExtArgs> | null
+  where?: Prisma.LivraisonWhereInput
+  orderBy?: Prisma.LivraisonOrderByWithRelationInput | Prisma.LivraisonOrderByWithRelationInput[]
+  cursor?: Prisma.LivraisonWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.LivraisonScalarFieldEnum | Prisma.LivraisonScalarFieldEnum[]
+}
+
+/**
+ * Personnel.livraisonsAncien
+ */
+export type Personnel$livraisonsAncienArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Livraison
+   */
+  select?: Prisma.LivraisonSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Livraison
+   */
+  omit?: Prisma.LivraisonOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.LivraisonInclude<ExtArgs> | null
+  where?: Prisma.LivraisonWhereInput
+  orderBy?: Prisma.LivraisonOrderByWithRelationInput | Prisma.LivraisonOrderByWithRelationInput[]
+  cursor?: Prisma.LivraisonWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.LivraisonScalarFieldEnum | Prisma.LivraisonScalarFieldEnum[]
 }
 
 /**

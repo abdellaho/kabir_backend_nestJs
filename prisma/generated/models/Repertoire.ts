@@ -361,9 +361,6 @@ export type RepertoireWhereInput = {
   comptas?: Prisma.ComptaListRelationFilter
   comptabilites?: Prisma.ComptabiliteListRelationFilter
   importations?: Prisma.ImportationsListRelationFilter
-  livraisonCommercials?: Prisma.LivraisonListRelationFilter
-  livraisonCommercialAnciens?: Prisma.LivraisonListRelationFilter
-  livraisonClients?: Prisma.LivraisonListRelationFilter
 }
 
 export type RepertoireOrderByWithRelationInput = {
@@ -395,9 +392,6 @@ export type RepertoireOrderByWithRelationInput = {
   comptas?: Prisma.ComptaOrderByRelationAggregateInput
   comptabilites?: Prisma.ComptabiliteOrderByRelationAggregateInput
   importations?: Prisma.ImportationsOrderByRelationAggregateInput
-  livraisonCommercials?: Prisma.LivraisonOrderByRelationAggregateInput
-  livraisonCommercialAnciens?: Prisma.LivraisonOrderByRelationAggregateInput
-  livraisonClients?: Prisma.LivraisonOrderByRelationAggregateInput
   _relevance?: Prisma.RepertoireOrderByRelevanceInput
 }
 
@@ -433,9 +427,6 @@ export type RepertoireWhereUniqueInput = Prisma.AtLeast<{
   comptas?: Prisma.ComptaListRelationFilter
   comptabilites?: Prisma.ComptabiliteListRelationFilter
   importations?: Prisma.ImportationsListRelationFilter
-  livraisonCommercials?: Prisma.LivraisonListRelationFilter
-  livraisonCommercialAnciens?: Prisma.LivraisonListRelationFilter
-  livraisonClients?: Prisma.LivraisonListRelationFilter
 }, "id">
 
 export type RepertoireOrderByWithAggregationInput = {
@@ -517,9 +508,6 @@ export type RepertoireCreateInput = {
   comptas?: Prisma.ComptaCreateNestedManyWithoutRepertoireInput
   comptabilites?: Prisma.ComptabiliteCreateNestedManyWithoutRepertoireInput
   importations?: Prisma.ImportationsCreateNestedManyWithoutRepertoireFourInput
-  livraisonCommercials?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialInput
-  livraisonCommercialAnciens?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialAncienInput
-  livraisonClients?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByClientInput
 }
 
 export type RepertoireUncheckedCreateInput = {
@@ -549,9 +537,6 @@ export type RepertoireUncheckedCreateInput = {
   comptas?: Prisma.ComptaUncheckedCreateNestedManyWithoutRepertoireInput
   comptabilites?: Prisma.ComptabiliteUncheckedCreateNestedManyWithoutRepertoireInput
   importations?: Prisma.ImportationsUncheckedCreateNestedManyWithoutRepertoireFourInput
-  livraisonCommercials?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialAncienInput
-  livraisonClients?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByClientInput
 }
 
 export type RepertoireUpdateInput = {
@@ -581,9 +566,6 @@ export type RepertoireUpdateInput = {
   comptas?: Prisma.ComptaUpdateManyWithoutRepertoireNestedInput
   comptabilites?: Prisma.ComptabiliteUpdateManyWithoutRepertoireNestedInput
   importations?: Prisma.ImportationsUpdateManyWithoutRepertoireFourNestedInput
-  livraisonCommercials?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialNestedInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialAncienNestedInput
-  livraisonClients?: Prisma.LivraisonUpdateManyWithoutRepertoireByClientNestedInput
 }
 
 export type RepertoireUncheckedUpdateInput = {
@@ -613,9 +595,6 @@ export type RepertoireUncheckedUpdateInput = {
   comptas?: Prisma.ComptaUncheckedUpdateManyWithoutRepertoireNestedInput
   comptabilites?: Prisma.ComptabiliteUncheckedUpdateManyWithoutRepertoireNestedInput
   importations?: Prisma.ImportationsUncheckedUpdateManyWithoutRepertoireFourNestedInput
-  livraisonCommercials?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialNestedInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialAncienNestedInput
-  livraisonClients?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByClientNestedInput
 }
 
 export type RepertoireCreateManyInput = {
@@ -787,11 +766,6 @@ export type RepertoireSumOrderByAggregateInput = {
 export type RepertoireScalarRelationFilter = {
   is?: Prisma.RepertoireWhereInput
   isNot?: Prisma.RepertoireWhereInput
-}
-
-export type RepertoireNullableScalarRelationFilter = {
-  is?: Prisma.RepertoireWhereInput | null
-  isNot?: Prisma.RepertoireWhereInput | null
 }
 
 export type RepertoireCreateNestedManyWithoutVilleInput = {
@@ -976,50 +950,6 @@ export type RepertoireUpdateOneRequiredWithoutImportationsNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.RepertoireUpdateToOneWithWhereWithoutImportationsInput, Prisma.RepertoireUpdateWithoutImportationsInput>, Prisma.RepertoireUncheckedUpdateWithoutImportationsInput>
 }
 
-export type RepertoireCreateNestedOneWithoutLivraisonCommercialsInput = {
-  create?: Prisma.XOR<Prisma.RepertoireCreateWithoutLivraisonCommercialsInput, Prisma.RepertoireUncheckedCreateWithoutLivraisonCommercialsInput>
-  connectOrCreate?: Prisma.RepertoireCreateOrConnectWithoutLivraisonCommercialsInput
-  connect?: Prisma.RepertoireWhereUniqueInput
-}
-
-export type RepertoireCreateNestedOneWithoutLivraisonCommercialAnciensInput = {
-  create?: Prisma.XOR<Prisma.RepertoireCreateWithoutLivraisonCommercialAnciensInput, Prisma.RepertoireUncheckedCreateWithoutLivraisonCommercialAnciensInput>
-  connectOrCreate?: Prisma.RepertoireCreateOrConnectWithoutLivraisonCommercialAnciensInput
-  connect?: Prisma.RepertoireWhereUniqueInput
-}
-
-export type RepertoireCreateNestedOneWithoutLivraisonClientsInput = {
-  create?: Prisma.XOR<Prisma.RepertoireCreateWithoutLivraisonClientsInput, Prisma.RepertoireUncheckedCreateWithoutLivraisonClientsInput>
-  connectOrCreate?: Prisma.RepertoireCreateOrConnectWithoutLivraisonClientsInput
-  connect?: Prisma.RepertoireWhereUniqueInput
-}
-
-export type RepertoireUpdateOneRequiredWithoutLivraisonCommercialsNestedInput = {
-  create?: Prisma.XOR<Prisma.RepertoireCreateWithoutLivraisonCommercialsInput, Prisma.RepertoireUncheckedCreateWithoutLivraisonCommercialsInput>
-  connectOrCreate?: Prisma.RepertoireCreateOrConnectWithoutLivraisonCommercialsInput
-  upsert?: Prisma.RepertoireUpsertWithoutLivraisonCommercialsInput
-  connect?: Prisma.RepertoireWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.RepertoireUpdateToOneWithWhereWithoutLivraisonCommercialsInput, Prisma.RepertoireUpdateWithoutLivraisonCommercialsInput>, Prisma.RepertoireUncheckedUpdateWithoutLivraisonCommercialsInput>
-}
-
-export type RepertoireUpdateOneWithoutLivraisonCommercialAnciensNestedInput = {
-  create?: Prisma.XOR<Prisma.RepertoireCreateWithoutLivraisonCommercialAnciensInput, Prisma.RepertoireUncheckedCreateWithoutLivraisonCommercialAnciensInput>
-  connectOrCreate?: Prisma.RepertoireCreateOrConnectWithoutLivraisonCommercialAnciensInput
-  upsert?: Prisma.RepertoireUpsertWithoutLivraisonCommercialAnciensInput
-  disconnect?: Prisma.RepertoireWhereInput | boolean
-  delete?: Prisma.RepertoireWhereInput | boolean
-  connect?: Prisma.RepertoireWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.RepertoireUpdateToOneWithWhereWithoutLivraisonCommercialAnciensInput, Prisma.RepertoireUpdateWithoutLivraisonCommercialAnciensInput>, Prisma.RepertoireUncheckedUpdateWithoutLivraisonCommercialAnciensInput>
-}
-
-export type RepertoireUpdateOneRequiredWithoutLivraisonClientsNestedInput = {
-  create?: Prisma.XOR<Prisma.RepertoireCreateWithoutLivraisonClientsInput, Prisma.RepertoireUncheckedCreateWithoutLivraisonClientsInput>
-  connectOrCreate?: Prisma.RepertoireCreateOrConnectWithoutLivraisonClientsInput
-  upsert?: Prisma.RepertoireUpsertWithoutLivraisonClientsInput
-  connect?: Prisma.RepertoireWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.RepertoireUpdateToOneWithWhereWithoutLivraisonClientsInput, Prisma.RepertoireUpdateWithoutLivraisonClientsInput>, Prisma.RepertoireUncheckedUpdateWithoutLivraisonClientsInput>
-}
-
 export type RepertoireCreateWithoutVilleInput = {
   id?: bigint | number
   designation: string
@@ -1046,9 +976,6 @@ export type RepertoireCreateWithoutVilleInput = {
   comptas?: Prisma.ComptaCreateNestedManyWithoutRepertoireInput
   comptabilites?: Prisma.ComptabiliteCreateNestedManyWithoutRepertoireInput
   importations?: Prisma.ImportationsCreateNestedManyWithoutRepertoireFourInput
-  livraisonCommercials?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialInput
-  livraisonCommercialAnciens?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialAncienInput
-  livraisonClients?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByClientInput
 }
 
 export type RepertoireUncheckedCreateWithoutVilleInput = {
@@ -1077,9 +1004,6 @@ export type RepertoireUncheckedCreateWithoutVilleInput = {
   comptas?: Prisma.ComptaUncheckedCreateNestedManyWithoutRepertoireInput
   comptabilites?: Prisma.ComptabiliteUncheckedCreateNestedManyWithoutRepertoireInput
   importations?: Prisma.ImportationsUncheckedCreateNestedManyWithoutRepertoireFourInput
-  livraisonCommercials?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialAncienInput
-  livraisonClients?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByClientInput
 }
 
 export type RepertoireCreateOrConnectWithoutVilleInput = {
@@ -1159,9 +1083,6 @@ export type RepertoireCreateWithoutPersonnelInput = {
   comptas?: Prisma.ComptaCreateNestedManyWithoutRepertoireInput
   comptabilites?: Prisma.ComptabiliteCreateNestedManyWithoutRepertoireInput
   importations?: Prisma.ImportationsCreateNestedManyWithoutRepertoireFourInput
-  livraisonCommercials?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialInput
-  livraisonCommercialAnciens?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialAncienInput
-  livraisonClients?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByClientInput
 }
 
 export type RepertoireUncheckedCreateWithoutPersonnelInput = {
@@ -1190,9 +1111,6 @@ export type RepertoireUncheckedCreateWithoutPersonnelInput = {
   comptas?: Prisma.ComptaUncheckedCreateNestedManyWithoutRepertoireInput
   comptabilites?: Prisma.ComptabiliteUncheckedCreateNestedManyWithoutRepertoireInput
   importations?: Prisma.ImportationsUncheckedCreateNestedManyWithoutRepertoireFourInput
-  livraisonCommercials?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialAncienInput
-  livraisonClients?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByClientInput
 }
 
 export type RepertoireCreateOrConnectWithoutPersonnelInput = {
@@ -1247,9 +1165,6 @@ export type RepertoireCreateWithoutEmployesInput = {
   comptas?: Prisma.ComptaCreateNestedManyWithoutRepertoireInput
   comptabilites?: Prisma.ComptabiliteCreateNestedManyWithoutRepertoireInput
   importations?: Prisma.ImportationsCreateNestedManyWithoutRepertoireFourInput
-  livraisonCommercials?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialInput
-  livraisonCommercialAnciens?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialAncienInput
-  livraisonClients?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByClientInput
 }
 
 export type RepertoireUncheckedCreateWithoutEmployesInput = {
@@ -1278,9 +1193,6 @@ export type RepertoireUncheckedCreateWithoutEmployesInput = {
   comptas?: Prisma.ComptaUncheckedCreateNestedManyWithoutRepertoireInput
   comptabilites?: Prisma.ComptabiliteUncheckedCreateNestedManyWithoutRepertoireInput
   importations?: Prisma.ImportationsUncheckedCreateNestedManyWithoutRepertoireFourInput
-  livraisonCommercials?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialAncienInput
-  livraisonClients?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByClientInput
 }
 
 export type RepertoireCreateOrConnectWithoutEmployesInput = {
@@ -1325,9 +1237,6 @@ export type RepertoireUpdateWithoutEmployesInput = {
   comptas?: Prisma.ComptaUpdateManyWithoutRepertoireNestedInput
   comptabilites?: Prisma.ComptabiliteUpdateManyWithoutRepertoireNestedInput
   importations?: Prisma.ImportationsUpdateManyWithoutRepertoireFourNestedInput
-  livraisonCommercials?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialNestedInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialAncienNestedInput
-  livraisonClients?: Prisma.LivraisonUpdateManyWithoutRepertoireByClientNestedInput
 }
 
 export type RepertoireUncheckedUpdateWithoutEmployesInput = {
@@ -1356,9 +1265,6 @@ export type RepertoireUncheckedUpdateWithoutEmployesInput = {
   comptas?: Prisma.ComptaUncheckedUpdateManyWithoutRepertoireNestedInput
   comptabilites?: Prisma.ComptabiliteUncheckedUpdateManyWithoutRepertoireNestedInput
   importations?: Prisma.ImportationsUncheckedUpdateManyWithoutRepertoireFourNestedInput
-  livraisonCommercials?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialNestedInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialAncienNestedInput
-  livraisonClients?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByClientNestedInput
 }
 
 export type RepertoireCreateWithoutBonSortiesInput = {
@@ -1387,9 +1293,6 @@ export type RepertoireCreateWithoutBonSortiesInput = {
   comptas?: Prisma.ComptaCreateNestedManyWithoutRepertoireInput
   comptabilites?: Prisma.ComptabiliteCreateNestedManyWithoutRepertoireInput
   importations?: Prisma.ImportationsCreateNestedManyWithoutRepertoireFourInput
-  livraisonCommercials?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialInput
-  livraisonCommercialAnciens?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialAncienInput
-  livraisonClients?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByClientInput
 }
 
 export type RepertoireUncheckedCreateWithoutBonSortiesInput = {
@@ -1418,9 +1321,6 @@ export type RepertoireUncheckedCreateWithoutBonSortiesInput = {
   comptas?: Prisma.ComptaUncheckedCreateNestedManyWithoutRepertoireInput
   comptabilites?: Prisma.ComptabiliteUncheckedCreateNestedManyWithoutRepertoireInput
   importations?: Prisma.ImportationsUncheckedCreateNestedManyWithoutRepertoireFourInput
-  livraisonCommercials?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialAncienInput
-  livraisonClients?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByClientInput
 }
 
 export type RepertoireCreateOrConnectWithoutBonSortiesInput = {
@@ -1465,9 +1365,6 @@ export type RepertoireUpdateWithoutBonSortiesInput = {
   comptas?: Prisma.ComptaUpdateManyWithoutRepertoireNestedInput
   comptabilites?: Prisma.ComptabiliteUpdateManyWithoutRepertoireNestedInput
   importations?: Prisma.ImportationsUpdateManyWithoutRepertoireFourNestedInput
-  livraisonCommercials?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialNestedInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialAncienNestedInput
-  livraisonClients?: Prisma.LivraisonUpdateManyWithoutRepertoireByClientNestedInput
 }
 
 export type RepertoireUncheckedUpdateWithoutBonSortiesInput = {
@@ -1496,9 +1393,6 @@ export type RepertoireUncheckedUpdateWithoutBonSortiesInput = {
   comptas?: Prisma.ComptaUncheckedUpdateManyWithoutRepertoireNestedInput
   comptabilites?: Prisma.ComptabiliteUncheckedUpdateManyWithoutRepertoireNestedInput
   importations?: Prisma.ImportationsUncheckedUpdateManyWithoutRepertoireFourNestedInput
-  livraisonCommercials?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialNestedInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialAncienNestedInput
-  livraisonClients?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByClientNestedInput
 }
 
 export type RepertoireCreateWithoutBulttinPaisInput = {
@@ -1527,9 +1421,6 @@ export type RepertoireCreateWithoutBulttinPaisInput = {
   comptas?: Prisma.ComptaCreateNestedManyWithoutRepertoireInput
   comptabilites?: Prisma.ComptabiliteCreateNestedManyWithoutRepertoireInput
   importations?: Prisma.ImportationsCreateNestedManyWithoutRepertoireFourInput
-  livraisonCommercials?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialInput
-  livraisonCommercialAnciens?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialAncienInput
-  livraisonClients?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByClientInput
 }
 
 export type RepertoireUncheckedCreateWithoutBulttinPaisInput = {
@@ -1558,9 +1449,6 @@ export type RepertoireUncheckedCreateWithoutBulttinPaisInput = {
   comptas?: Prisma.ComptaUncheckedCreateNestedManyWithoutRepertoireInput
   comptabilites?: Prisma.ComptabiliteUncheckedCreateNestedManyWithoutRepertoireInput
   importations?: Prisma.ImportationsUncheckedCreateNestedManyWithoutRepertoireFourInput
-  livraisonCommercials?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialAncienInput
-  livraisonClients?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByClientInput
 }
 
 export type RepertoireCreateOrConnectWithoutBulttinPaisInput = {
@@ -1605,9 +1493,6 @@ export type RepertoireUpdateWithoutBulttinPaisInput = {
   comptas?: Prisma.ComptaUpdateManyWithoutRepertoireNestedInput
   comptabilites?: Prisma.ComptabiliteUpdateManyWithoutRepertoireNestedInput
   importations?: Prisma.ImportationsUpdateManyWithoutRepertoireFourNestedInput
-  livraisonCommercials?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialNestedInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialAncienNestedInput
-  livraisonClients?: Prisma.LivraisonUpdateManyWithoutRepertoireByClientNestedInput
 }
 
 export type RepertoireUncheckedUpdateWithoutBulttinPaisInput = {
@@ -1636,9 +1521,6 @@ export type RepertoireUncheckedUpdateWithoutBulttinPaisInput = {
   comptas?: Prisma.ComptaUncheckedUpdateManyWithoutRepertoireNestedInput
   comptabilites?: Prisma.ComptabiliteUncheckedUpdateManyWithoutRepertoireNestedInput
   importations?: Prisma.ImportationsUncheckedUpdateManyWithoutRepertoireFourNestedInput
-  livraisonCommercials?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialNestedInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialAncienNestedInput
-  livraisonClients?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByClientNestedInput
 }
 
 export type RepertoireCreateWithoutChequesInput = {
@@ -1667,9 +1549,6 @@ export type RepertoireCreateWithoutChequesInput = {
   comptas?: Prisma.ComptaCreateNestedManyWithoutRepertoireInput
   comptabilites?: Prisma.ComptabiliteCreateNestedManyWithoutRepertoireInput
   importations?: Prisma.ImportationsCreateNestedManyWithoutRepertoireFourInput
-  livraisonCommercials?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialInput
-  livraisonCommercialAnciens?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialAncienInput
-  livraisonClients?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByClientInput
 }
 
 export type RepertoireUncheckedCreateWithoutChequesInput = {
@@ -1698,9 +1577,6 @@ export type RepertoireUncheckedCreateWithoutChequesInput = {
   comptas?: Prisma.ComptaUncheckedCreateNestedManyWithoutRepertoireInput
   comptabilites?: Prisma.ComptabiliteUncheckedCreateNestedManyWithoutRepertoireInput
   importations?: Prisma.ImportationsUncheckedCreateNestedManyWithoutRepertoireFourInput
-  livraisonCommercials?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialAncienInput
-  livraisonClients?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByClientInput
 }
 
 export type RepertoireCreateOrConnectWithoutChequesInput = {
@@ -1745,9 +1621,6 @@ export type RepertoireUpdateWithoutChequesInput = {
   comptas?: Prisma.ComptaUpdateManyWithoutRepertoireNestedInput
   comptabilites?: Prisma.ComptabiliteUpdateManyWithoutRepertoireNestedInput
   importations?: Prisma.ImportationsUpdateManyWithoutRepertoireFourNestedInput
-  livraisonCommercials?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialNestedInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialAncienNestedInput
-  livraisonClients?: Prisma.LivraisonUpdateManyWithoutRepertoireByClientNestedInput
 }
 
 export type RepertoireUncheckedUpdateWithoutChequesInput = {
@@ -1776,9 +1649,6 @@ export type RepertoireUncheckedUpdateWithoutChequesInput = {
   comptas?: Prisma.ComptaUncheckedUpdateManyWithoutRepertoireNestedInput
   comptabilites?: Prisma.ComptabiliteUncheckedUpdateManyWithoutRepertoireNestedInput
   importations?: Prisma.ImportationsUncheckedUpdateManyWithoutRepertoireFourNestedInput
-  livraisonCommercials?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialNestedInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialAncienNestedInput
-  livraisonClients?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByClientNestedInput
 }
 
 export type RepertoireCreateWithoutComptasInput = {
@@ -1807,9 +1677,6 @@ export type RepertoireCreateWithoutComptasInput = {
   cheques?: Prisma.ChequeCreateNestedManyWithoutRepertoireInput
   comptabilites?: Prisma.ComptabiliteCreateNestedManyWithoutRepertoireInput
   importations?: Prisma.ImportationsCreateNestedManyWithoutRepertoireFourInput
-  livraisonCommercials?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialInput
-  livraisonCommercialAnciens?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialAncienInput
-  livraisonClients?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByClientInput
 }
 
 export type RepertoireUncheckedCreateWithoutComptasInput = {
@@ -1838,9 +1705,6 @@ export type RepertoireUncheckedCreateWithoutComptasInput = {
   cheques?: Prisma.ChequeUncheckedCreateNestedManyWithoutRepertoireInput
   comptabilites?: Prisma.ComptabiliteUncheckedCreateNestedManyWithoutRepertoireInput
   importations?: Prisma.ImportationsUncheckedCreateNestedManyWithoutRepertoireFourInput
-  livraisonCommercials?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialAncienInput
-  livraisonClients?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByClientInput
 }
 
 export type RepertoireCreateOrConnectWithoutComptasInput = {
@@ -1885,9 +1749,6 @@ export type RepertoireUpdateWithoutComptasInput = {
   cheques?: Prisma.ChequeUpdateManyWithoutRepertoireNestedInput
   comptabilites?: Prisma.ComptabiliteUpdateManyWithoutRepertoireNestedInput
   importations?: Prisma.ImportationsUpdateManyWithoutRepertoireFourNestedInput
-  livraisonCommercials?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialNestedInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialAncienNestedInput
-  livraisonClients?: Prisma.LivraisonUpdateManyWithoutRepertoireByClientNestedInput
 }
 
 export type RepertoireUncheckedUpdateWithoutComptasInput = {
@@ -1916,9 +1777,6 @@ export type RepertoireUncheckedUpdateWithoutComptasInput = {
   cheques?: Prisma.ChequeUncheckedUpdateManyWithoutRepertoireNestedInput
   comptabilites?: Prisma.ComptabiliteUncheckedUpdateManyWithoutRepertoireNestedInput
   importations?: Prisma.ImportationsUncheckedUpdateManyWithoutRepertoireFourNestedInput
-  livraisonCommercials?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialNestedInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialAncienNestedInput
-  livraisonClients?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByClientNestedInput
 }
 
 export type RepertoireCreateWithoutComptabilitesInput = {
@@ -1947,9 +1805,6 @@ export type RepertoireCreateWithoutComptabilitesInput = {
   cheques?: Prisma.ChequeCreateNestedManyWithoutRepertoireInput
   comptas?: Prisma.ComptaCreateNestedManyWithoutRepertoireInput
   importations?: Prisma.ImportationsCreateNestedManyWithoutRepertoireFourInput
-  livraisonCommercials?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialInput
-  livraisonCommercialAnciens?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialAncienInput
-  livraisonClients?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByClientInput
 }
 
 export type RepertoireUncheckedCreateWithoutComptabilitesInput = {
@@ -1978,9 +1833,6 @@ export type RepertoireUncheckedCreateWithoutComptabilitesInput = {
   cheques?: Prisma.ChequeUncheckedCreateNestedManyWithoutRepertoireInput
   comptas?: Prisma.ComptaUncheckedCreateNestedManyWithoutRepertoireInput
   importations?: Prisma.ImportationsUncheckedCreateNestedManyWithoutRepertoireFourInput
-  livraisonCommercials?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialAncienInput
-  livraisonClients?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByClientInput
 }
 
 export type RepertoireCreateOrConnectWithoutComptabilitesInput = {
@@ -2025,9 +1877,6 @@ export type RepertoireUpdateWithoutComptabilitesInput = {
   cheques?: Prisma.ChequeUpdateManyWithoutRepertoireNestedInput
   comptas?: Prisma.ComptaUpdateManyWithoutRepertoireNestedInput
   importations?: Prisma.ImportationsUpdateManyWithoutRepertoireFourNestedInput
-  livraisonCommercials?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialNestedInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialAncienNestedInput
-  livraisonClients?: Prisma.LivraisonUpdateManyWithoutRepertoireByClientNestedInput
 }
 
 export type RepertoireUncheckedUpdateWithoutComptabilitesInput = {
@@ -2056,9 +1905,6 @@ export type RepertoireUncheckedUpdateWithoutComptabilitesInput = {
   cheques?: Prisma.ChequeUncheckedUpdateManyWithoutRepertoireNestedInput
   comptas?: Prisma.ComptaUncheckedUpdateManyWithoutRepertoireNestedInput
   importations?: Prisma.ImportationsUncheckedUpdateManyWithoutRepertoireFourNestedInput
-  livraisonCommercials?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialNestedInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialAncienNestedInput
-  livraisonClients?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByClientNestedInput
 }
 
 export type RepertoireCreateWithoutImportationsInput = {
@@ -2087,9 +1933,6 @@ export type RepertoireCreateWithoutImportationsInput = {
   cheques?: Prisma.ChequeCreateNestedManyWithoutRepertoireInput
   comptas?: Prisma.ComptaCreateNestedManyWithoutRepertoireInput
   comptabilites?: Prisma.ComptabiliteCreateNestedManyWithoutRepertoireInput
-  livraisonCommercials?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialInput
-  livraisonCommercialAnciens?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialAncienInput
-  livraisonClients?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByClientInput
 }
 
 export type RepertoireUncheckedCreateWithoutImportationsInput = {
@@ -2118,9 +1961,6 @@ export type RepertoireUncheckedCreateWithoutImportationsInput = {
   cheques?: Prisma.ChequeUncheckedCreateNestedManyWithoutRepertoireInput
   comptas?: Prisma.ComptaUncheckedCreateNestedManyWithoutRepertoireInput
   comptabilites?: Prisma.ComptabiliteUncheckedCreateNestedManyWithoutRepertoireInput
-  livraisonCommercials?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialAncienInput
-  livraisonClients?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByClientInput
 }
 
 export type RepertoireCreateOrConnectWithoutImportationsInput = {
@@ -2165,9 +2005,6 @@ export type RepertoireUpdateWithoutImportationsInput = {
   cheques?: Prisma.ChequeUpdateManyWithoutRepertoireNestedInput
   comptas?: Prisma.ComptaUpdateManyWithoutRepertoireNestedInput
   comptabilites?: Prisma.ComptabiliteUpdateManyWithoutRepertoireNestedInput
-  livraisonCommercials?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialNestedInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialAncienNestedInput
-  livraisonClients?: Prisma.LivraisonUpdateManyWithoutRepertoireByClientNestedInput
 }
 
 export type RepertoireUncheckedUpdateWithoutImportationsInput = {
@@ -2196,429 +2033,6 @@ export type RepertoireUncheckedUpdateWithoutImportationsInput = {
   cheques?: Prisma.ChequeUncheckedUpdateManyWithoutRepertoireNestedInput
   comptas?: Prisma.ComptaUncheckedUpdateManyWithoutRepertoireNestedInput
   comptabilites?: Prisma.ComptabiliteUncheckedUpdateManyWithoutRepertoireNestedInput
-  livraisonCommercials?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialNestedInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialAncienNestedInput
-  livraisonClients?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByClientNestedInput
-}
-
-export type RepertoireCreateWithoutLivraisonCommercialsInput = {
-  id?: bigint | number
-  designation: string
-  tel1: string
-  tel2: string
-  tel3: string
-  adresse: string
-  email: string
-  typeRepertoire: number
-  typeReglment: number
-  ife: string
-  ice: string
-  archiver?: boolean
-  bloquer?: boolean
-  sysDate: Date | string
-  observation: string
-  nbrOperationClient: number
-  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
-  personnel?: Prisma.PersonnelCreateNestedOneWithoutRepertoiresInput
-  ville?: Prisma.VilleCreateNestedOneWithoutRepertoiresInput
-  employes?: Prisma.EmployeCreateNestedManyWithoutRepertoireInput
-  bonSorties?: Prisma.BonSortieCreateNestedManyWithoutRepertoireInput
-  bulttinPais?: Prisma.BulttinPaiCreateNestedManyWithoutCommercailInput
-  cheques?: Prisma.ChequeCreateNestedManyWithoutRepertoireInput
-  comptas?: Prisma.ComptaCreateNestedManyWithoutRepertoireInput
-  comptabilites?: Prisma.ComptabiliteCreateNestedManyWithoutRepertoireInput
-  importations?: Prisma.ImportationsCreateNestedManyWithoutRepertoireFourInput
-  livraisonCommercialAnciens?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialAncienInput
-  livraisonClients?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByClientInput
-}
-
-export type RepertoireUncheckedCreateWithoutLivraisonCommercialsInput = {
-  id?: bigint | number
-  designation: string
-  tel1: string
-  tel2: string
-  tel3: string
-  adresse: string
-  email: string
-  typeRepertoire: number
-  typeReglment: number
-  ife: string
-  ice: string
-  archiver?: boolean
-  bloquer?: boolean
-  sysDate: Date | string
-  observation: string
-  nbrOperationClient: number
-  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
-  personnelId?: bigint | number | null
-  villeId?: bigint | number | null
-  employes?: Prisma.EmployeUncheckedCreateNestedManyWithoutRepertoireInput
-  bonSorties?: Prisma.BonSortieUncheckedCreateNestedManyWithoutRepertoireInput
-  bulttinPais?: Prisma.BulttinPaiUncheckedCreateNestedManyWithoutCommercailInput
-  cheques?: Prisma.ChequeUncheckedCreateNestedManyWithoutRepertoireInput
-  comptas?: Prisma.ComptaUncheckedCreateNestedManyWithoutRepertoireInput
-  comptabilites?: Prisma.ComptabiliteUncheckedCreateNestedManyWithoutRepertoireInput
-  importations?: Prisma.ImportationsUncheckedCreateNestedManyWithoutRepertoireFourInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialAncienInput
-  livraisonClients?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByClientInput
-}
-
-export type RepertoireCreateOrConnectWithoutLivraisonCommercialsInput = {
-  where: Prisma.RepertoireWhereUniqueInput
-  create: Prisma.XOR<Prisma.RepertoireCreateWithoutLivraisonCommercialsInput, Prisma.RepertoireUncheckedCreateWithoutLivraisonCommercialsInput>
-}
-
-export type RepertoireCreateWithoutLivraisonCommercialAnciensInput = {
-  id?: bigint | number
-  designation: string
-  tel1: string
-  tel2: string
-  tel3: string
-  adresse: string
-  email: string
-  typeRepertoire: number
-  typeReglment: number
-  ife: string
-  ice: string
-  archiver?: boolean
-  bloquer?: boolean
-  sysDate: Date | string
-  observation: string
-  nbrOperationClient: number
-  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
-  personnel?: Prisma.PersonnelCreateNestedOneWithoutRepertoiresInput
-  ville?: Prisma.VilleCreateNestedOneWithoutRepertoiresInput
-  employes?: Prisma.EmployeCreateNestedManyWithoutRepertoireInput
-  bonSorties?: Prisma.BonSortieCreateNestedManyWithoutRepertoireInput
-  bulttinPais?: Prisma.BulttinPaiCreateNestedManyWithoutCommercailInput
-  cheques?: Prisma.ChequeCreateNestedManyWithoutRepertoireInput
-  comptas?: Prisma.ComptaCreateNestedManyWithoutRepertoireInput
-  comptabilites?: Prisma.ComptabiliteCreateNestedManyWithoutRepertoireInput
-  importations?: Prisma.ImportationsCreateNestedManyWithoutRepertoireFourInput
-  livraisonCommercials?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialInput
-  livraisonClients?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByClientInput
-}
-
-export type RepertoireUncheckedCreateWithoutLivraisonCommercialAnciensInput = {
-  id?: bigint | number
-  designation: string
-  tel1: string
-  tel2: string
-  tel3: string
-  adresse: string
-  email: string
-  typeRepertoire: number
-  typeReglment: number
-  ife: string
-  ice: string
-  archiver?: boolean
-  bloquer?: boolean
-  sysDate: Date | string
-  observation: string
-  nbrOperationClient: number
-  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
-  personnelId?: bigint | number | null
-  villeId?: bigint | number | null
-  employes?: Prisma.EmployeUncheckedCreateNestedManyWithoutRepertoireInput
-  bonSorties?: Prisma.BonSortieUncheckedCreateNestedManyWithoutRepertoireInput
-  bulttinPais?: Prisma.BulttinPaiUncheckedCreateNestedManyWithoutCommercailInput
-  cheques?: Prisma.ChequeUncheckedCreateNestedManyWithoutRepertoireInput
-  comptas?: Prisma.ComptaUncheckedCreateNestedManyWithoutRepertoireInput
-  comptabilites?: Prisma.ComptabiliteUncheckedCreateNestedManyWithoutRepertoireInput
-  importations?: Prisma.ImportationsUncheckedCreateNestedManyWithoutRepertoireFourInput
-  livraisonCommercials?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialInput
-  livraisonClients?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByClientInput
-}
-
-export type RepertoireCreateOrConnectWithoutLivraisonCommercialAnciensInput = {
-  where: Prisma.RepertoireWhereUniqueInput
-  create: Prisma.XOR<Prisma.RepertoireCreateWithoutLivraisonCommercialAnciensInput, Prisma.RepertoireUncheckedCreateWithoutLivraisonCommercialAnciensInput>
-}
-
-export type RepertoireCreateWithoutLivraisonClientsInput = {
-  id?: bigint | number
-  designation: string
-  tel1: string
-  tel2: string
-  tel3: string
-  adresse: string
-  email: string
-  typeRepertoire: number
-  typeReglment: number
-  ife: string
-  ice: string
-  archiver?: boolean
-  bloquer?: boolean
-  sysDate: Date | string
-  observation: string
-  nbrOperationClient: number
-  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
-  personnel?: Prisma.PersonnelCreateNestedOneWithoutRepertoiresInput
-  ville?: Prisma.VilleCreateNestedOneWithoutRepertoiresInput
-  employes?: Prisma.EmployeCreateNestedManyWithoutRepertoireInput
-  bonSorties?: Prisma.BonSortieCreateNestedManyWithoutRepertoireInput
-  bulttinPais?: Prisma.BulttinPaiCreateNestedManyWithoutCommercailInput
-  cheques?: Prisma.ChequeCreateNestedManyWithoutRepertoireInput
-  comptas?: Prisma.ComptaCreateNestedManyWithoutRepertoireInput
-  comptabilites?: Prisma.ComptabiliteCreateNestedManyWithoutRepertoireInput
-  importations?: Prisma.ImportationsCreateNestedManyWithoutRepertoireFourInput
-  livraisonCommercials?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialInput
-  livraisonCommercialAnciens?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialAncienInput
-}
-
-export type RepertoireUncheckedCreateWithoutLivraisonClientsInput = {
-  id?: bigint | number
-  designation: string
-  tel1: string
-  tel2: string
-  tel3: string
-  adresse: string
-  email: string
-  typeRepertoire: number
-  typeReglment: number
-  ife: string
-  ice: string
-  archiver?: boolean
-  bloquer?: boolean
-  sysDate: Date | string
-  observation: string
-  nbrOperationClient: number
-  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
-  personnelId?: bigint | number | null
-  villeId?: bigint | number | null
-  employes?: Prisma.EmployeUncheckedCreateNestedManyWithoutRepertoireInput
-  bonSorties?: Prisma.BonSortieUncheckedCreateNestedManyWithoutRepertoireInput
-  bulttinPais?: Prisma.BulttinPaiUncheckedCreateNestedManyWithoutCommercailInput
-  cheques?: Prisma.ChequeUncheckedCreateNestedManyWithoutRepertoireInput
-  comptas?: Prisma.ComptaUncheckedCreateNestedManyWithoutRepertoireInput
-  comptabilites?: Prisma.ComptabiliteUncheckedCreateNestedManyWithoutRepertoireInput
-  importations?: Prisma.ImportationsUncheckedCreateNestedManyWithoutRepertoireFourInput
-  livraisonCommercials?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialAncienInput
-}
-
-export type RepertoireCreateOrConnectWithoutLivraisonClientsInput = {
-  where: Prisma.RepertoireWhereUniqueInput
-  create: Prisma.XOR<Prisma.RepertoireCreateWithoutLivraisonClientsInput, Prisma.RepertoireUncheckedCreateWithoutLivraisonClientsInput>
-}
-
-export type RepertoireUpsertWithoutLivraisonCommercialsInput = {
-  update: Prisma.XOR<Prisma.RepertoireUpdateWithoutLivraisonCommercialsInput, Prisma.RepertoireUncheckedUpdateWithoutLivraisonCommercialsInput>
-  create: Prisma.XOR<Prisma.RepertoireCreateWithoutLivraisonCommercialsInput, Prisma.RepertoireUncheckedCreateWithoutLivraisonCommercialsInput>
-  where?: Prisma.RepertoireWhereInput
-}
-
-export type RepertoireUpdateToOneWithWhereWithoutLivraisonCommercialsInput = {
-  where?: Prisma.RepertoireWhereInput
-  data: Prisma.XOR<Prisma.RepertoireUpdateWithoutLivraisonCommercialsInput, Prisma.RepertoireUncheckedUpdateWithoutLivraisonCommercialsInput>
-}
-
-export type RepertoireUpdateWithoutLivraisonCommercialsInput = {
-  id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  designation?: Prisma.StringFieldUpdateOperationsInput | string
-  tel1?: Prisma.StringFieldUpdateOperationsInput | string
-  tel2?: Prisma.StringFieldUpdateOperationsInput | string
-  tel3?: Prisma.StringFieldUpdateOperationsInput | string
-  adresse?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
-  typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
-  ife?: Prisma.StringFieldUpdateOperationsInput | string
-  ice?: Prisma.StringFieldUpdateOperationsInput | string
-  archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  observation?: Prisma.StringFieldUpdateOperationsInput | string
-  nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  personnel?: Prisma.PersonnelUpdateOneWithoutRepertoiresNestedInput
-  ville?: Prisma.VilleUpdateOneWithoutRepertoiresNestedInput
-  employes?: Prisma.EmployeUpdateManyWithoutRepertoireNestedInput
-  bonSorties?: Prisma.BonSortieUpdateManyWithoutRepertoireNestedInput
-  bulttinPais?: Prisma.BulttinPaiUpdateManyWithoutCommercailNestedInput
-  cheques?: Prisma.ChequeUpdateManyWithoutRepertoireNestedInput
-  comptas?: Prisma.ComptaUpdateManyWithoutRepertoireNestedInput
-  comptabilites?: Prisma.ComptabiliteUpdateManyWithoutRepertoireNestedInput
-  importations?: Prisma.ImportationsUpdateManyWithoutRepertoireFourNestedInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialAncienNestedInput
-  livraisonClients?: Prisma.LivraisonUpdateManyWithoutRepertoireByClientNestedInput
-}
-
-export type RepertoireUncheckedUpdateWithoutLivraisonCommercialsInput = {
-  id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  designation?: Prisma.StringFieldUpdateOperationsInput | string
-  tel1?: Prisma.StringFieldUpdateOperationsInput | string
-  tel2?: Prisma.StringFieldUpdateOperationsInput | string
-  tel3?: Prisma.StringFieldUpdateOperationsInput | string
-  adresse?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
-  typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
-  ife?: Prisma.StringFieldUpdateOperationsInput | string
-  ice?: Prisma.StringFieldUpdateOperationsInput | string
-  archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  observation?: Prisma.StringFieldUpdateOperationsInput | string
-  nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  personnelId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
-  villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
-  employes?: Prisma.EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
-  bonSorties?: Prisma.BonSortieUncheckedUpdateManyWithoutRepertoireNestedInput
-  bulttinPais?: Prisma.BulttinPaiUncheckedUpdateManyWithoutCommercailNestedInput
-  cheques?: Prisma.ChequeUncheckedUpdateManyWithoutRepertoireNestedInput
-  comptas?: Prisma.ComptaUncheckedUpdateManyWithoutRepertoireNestedInput
-  comptabilites?: Prisma.ComptabiliteUncheckedUpdateManyWithoutRepertoireNestedInput
-  importations?: Prisma.ImportationsUncheckedUpdateManyWithoutRepertoireFourNestedInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialAncienNestedInput
-  livraisonClients?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByClientNestedInput
-}
-
-export type RepertoireUpsertWithoutLivraisonCommercialAnciensInput = {
-  update: Prisma.XOR<Prisma.RepertoireUpdateWithoutLivraisonCommercialAnciensInput, Prisma.RepertoireUncheckedUpdateWithoutLivraisonCommercialAnciensInput>
-  create: Prisma.XOR<Prisma.RepertoireCreateWithoutLivraisonCommercialAnciensInput, Prisma.RepertoireUncheckedCreateWithoutLivraisonCommercialAnciensInput>
-  where?: Prisma.RepertoireWhereInput
-}
-
-export type RepertoireUpdateToOneWithWhereWithoutLivraisonCommercialAnciensInput = {
-  where?: Prisma.RepertoireWhereInput
-  data: Prisma.XOR<Prisma.RepertoireUpdateWithoutLivraisonCommercialAnciensInput, Prisma.RepertoireUncheckedUpdateWithoutLivraisonCommercialAnciensInput>
-}
-
-export type RepertoireUpdateWithoutLivraisonCommercialAnciensInput = {
-  id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  designation?: Prisma.StringFieldUpdateOperationsInput | string
-  tel1?: Prisma.StringFieldUpdateOperationsInput | string
-  tel2?: Prisma.StringFieldUpdateOperationsInput | string
-  tel3?: Prisma.StringFieldUpdateOperationsInput | string
-  adresse?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
-  typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
-  ife?: Prisma.StringFieldUpdateOperationsInput | string
-  ice?: Prisma.StringFieldUpdateOperationsInput | string
-  archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  observation?: Prisma.StringFieldUpdateOperationsInput | string
-  nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  personnel?: Prisma.PersonnelUpdateOneWithoutRepertoiresNestedInput
-  ville?: Prisma.VilleUpdateOneWithoutRepertoiresNestedInput
-  employes?: Prisma.EmployeUpdateManyWithoutRepertoireNestedInput
-  bonSorties?: Prisma.BonSortieUpdateManyWithoutRepertoireNestedInput
-  bulttinPais?: Prisma.BulttinPaiUpdateManyWithoutCommercailNestedInput
-  cheques?: Prisma.ChequeUpdateManyWithoutRepertoireNestedInput
-  comptas?: Prisma.ComptaUpdateManyWithoutRepertoireNestedInput
-  comptabilites?: Prisma.ComptabiliteUpdateManyWithoutRepertoireNestedInput
-  importations?: Prisma.ImportationsUpdateManyWithoutRepertoireFourNestedInput
-  livraisonCommercials?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialNestedInput
-  livraisonClients?: Prisma.LivraisonUpdateManyWithoutRepertoireByClientNestedInput
-}
-
-export type RepertoireUncheckedUpdateWithoutLivraisonCommercialAnciensInput = {
-  id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  designation?: Prisma.StringFieldUpdateOperationsInput | string
-  tel1?: Prisma.StringFieldUpdateOperationsInput | string
-  tel2?: Prisma.StringFieldUpdateOperationsInput | string
-  tel3?: Prisma.StringFieldUpdateOperationsInput | string
-  adresse?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
-  typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
-  ife?: Prisma.StringFieldUpdateOperationsInput | string
-  ice?: Prisma.StringFieldUpdateOperationsInput | string
-  archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  observation?: Prisma.StringFieldUpdateOperationsInput | string
-  nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  personnelId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
-  villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
-  employes?: Prisma.EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
-  bonSorties?: Prisma.BonSortieUncheckedUpdateManyWithoutRepertoireNestedInput
-  bulttinPais?: Prisma.BulttinPaiUncheckedUpdateManyWithoutCommercailNestedInput
-  cheques?: Prisma.ChequeUncheckedUpdateManyWithoutRepertoireNestedInput
-  comptas?: Prisma.ComptaUncheckedUpdateManyWithoutRepertoireNestedInput
-  comptabilites?: Prisma.ComptabiliteUncheckedUpdateManyWithoutRepertoireNestedInput
-  importations?: Prisma.ImportationsUncheckedUpdateManyWithoutRepertoireFourNestedInput
-  livraisonCommercials?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialNestedInput
-  livraisonClients?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByClientNestedInput
-}
-
-export type RepertoireUpsertWithoutLivraisonClientsInput = {
-  update: Prisma.XOR<Prisma.RepertoireUpdateWithoutLivraisonClientsInput, Prisma.RepertoireUncheckedUpdateWithoutLivraisonClientsInput>
-  create: Prisma.XOR<Prisma.RepertoireCreateWithoutLivraisonClientsInput, Prisma.RepertoireUncheckedCreateWithoutLivraisonClientsInput>
-  where?: Prisma.RepertoireWhereInput
-}
-
-export type RepertoireUpdateToOneWithWhereWithoutLivraisonClientsInput = {
-  where?: Prisma.RepertoireWhereInput
-  data: Prisma.XOR<Prisma.RepertoireUpdateWithoutLivraisonClientsInput, Prisma.RepertoireUncheckedUpdateWithoutLivraisonClientsInput>
-}
-
-export type RepertoireUpdateWithoutLivraisonClientsInput = {
-  id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  designation?: Prisma.StringFieldUpdateOperationsInput | string
-  tel1?: Prisma.StringFieldUpdateOperationsInput | string
-  tel2?: Prisma.StringFieldUpdateOperationsInput | string
-  tel3?: Prisma.StringFieldUpdateOperationsInput | string
-  adresse?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
-  typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
-  ife?: Prisma.StringFieldUpdateOperationsInput | string
-  ice?: Prisma.StringFieldUpdateOperationsInput | string
-  archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  observation?: Prisma.StringFieldUpdateOperationsInput | string
-  nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  personnel?: Prisma.PersonnelUpdateOneWithoutRepertoiresNestedInput
-  ville?: Prisma.VilleUpdateOneWithoutRepertoiresNestedInput
-  employes?: Prisma.EmployeUpdateManyWithoutRepertoireNestedInput
-  bonSorties?: Prisma.BonSortieUpdateManyWithoutRepertoireNestedInput
-  bulttinPais?: Prisma.BulttinPaiUpdateManyWithoutCommercailNestedInput
-  cheques?: Prisma.ChequeUpdateManyWithoutRepertoireNestedInput
-  comptas?: Prisma.ComptaUpdateManyWithoutRepertoireNestedInput
-  comptabilites?: Prisma.ComptabiliteUpdateManyWithoutRepertoireNestedInput
-  importations?: Prisma.ImportationsUpdateManyWithoutRepertoireFourNestedInput
-  livraisonCommercials?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialNestedInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialAncienNestedInput
-}
-
-export type RepertoireUncheckedUpdateWithoutLivraisonClientsInput = {
-  id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
-  designation?: Prisma.StringFieldUpdateOperationsInput | string
-  tel1?: Prisma.StringFieldUpdateOperationsInput | string
-  tel2?: Prisma.StringFieldUpdateOperationsInput | string
-  tel3?: Prisma.StringFieldUpdateOperationsInput | string
-  adresse?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
-  typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
-  ife?: Prisma.StringFieldUpdateOperationsInput | string
-  ice?: Prisma.StringFieldUpdateOperationsInput | string
-  archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  observation?: Prisma.StringFieldUpdateOperationsInput | string
-  nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
-  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  personnelId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
-  villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
-  employes?: Prisma.EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
-  bonSorties?: Prisma.BonSortieUncheckedUpdateManyWithoutRepertoireNestedInput
-  bulttinPais?: Prisma.BulttinPaiUncheckedUpdateManyWithoutCommercailNestedInput
-  cheques?: Prisma.ChequeUncheckedUpdateManyWithoutRepertoireNestedInput
-  comptas?: Prisma.ComptaUncheckedUpdateManyWithoutRepertoireNestedInput
-  comptabilites?: Prisma.ComptabiliteUncheckedUpdateManyWithoutRepertoireNestedInput
-  importations?: Prisma.ImportationsUncheckedUpdateManyWithoutRepertoireFourNestedInput
-  livraisonCommercials?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialNestedInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialAncienNestedInput
 }
 
 export type RepertoireCreateManyVilleInput = {
@@ -2668,9 +2082,6 @@ export type RepertoireUpdateWithoutVilleInput = {
   comptas?: Prisma.ComptaUpdateManyWithoutRepertoireNestedInput
   comptabilites?: Prisma.ComptabiliteUpdateManyWithoutRepertoireNestedInput
   importations?: Prisma.ImportationsUpdateManyWithoutRepertoireFourNestedInput
-  livraisonCommercials?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialNestedInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialAncienNestedInput
-  livraisonClients?: Prisma.LivraisonUpdateManyWithoutRepertoireByClientNestedInput
 }
 
 export type RepertoireUncheckedUpdateWithoutVilleInput = {
@@ -2699,9 +2110,6 @@ export type RepertoireUncheckedUpdateWithoutVilleInput = {
   comptas?: Prisma.ComptaUncheckedUpdateManyWithoutRepertoireNestedInput
   comptabilites?: Prisma.ComptabiliteUncheckedUpdateManyWithoutRepertoireNestedInput
   importations?: Prisma.ImportationsUncheckedUpdateManyWithoutRepertoireFourNestedInput
-  livraisonCommercials?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialNestedInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialAncienNestedInput
-  livraisonClients?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByClientNestedInput
 }
 
 export type RepertoireUncheckedUpdateManyWithoutVilleInput = {
@@ -2772,9 +2180,6 @@ export type RepertoireUpdateWithoutPersonnelInput = {
   comptas?: Prisma.ComptaUpdateManyWithoutRepertoireNestedInput
   comptabilites?: Prisma.ComptabiliteUpdateManyWithoutRepertoireNestedInput
   importations?: Prisma.ImportationsUpdateManyWithoutRepertoireFourNestedInput
-  livraisonCommercials?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialNestedInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialAncienNestedInput
-  livraisonClients?: Prisma.LivraisonUpdateManyWithoutRepertoireByClientNestedInput
 }
 
 export type RepertoireUncheckedUpdateWithoutPersonnelInput = {
@@ -2803,9 +2208,6 @@ export type RepertoireUncheckedUpdateWithoutPersonnelInput = {
   comptas?: Prisma.ComptaUncheckedUpdateManyWithoutRepertoireNestedInput
   comptabilites?: Prisma.ComptabiliteUncheckedUpdateManyWithoutRepertoireNestedInput
   importations?: Prisma.ImportationsUncheckedUpdateManyWithoutRepertoireFourNestedInput
-  livraisonCommercials?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialNestedInput
-  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialAncienNestedInput
-  livraisonClients?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByClientNestedInput
 }
 
 export type RepertoireUncheckedUpdateManyWithoutPersonnelInput = {
@@ -2842,9 +2244,6 @@ export type RepertoireCountOutputType = {
   comptas: number
   comptabilites: number
   importations: number
-  livraisonCommercials: number
-  livraisonCommercialAnciens: number
-  livraisonClients: number
 }
 
 export type RepertoireCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
@@ -2855,9 +2254,6 @@ export type RepertoireCountOutputTypeSelect<ExtArgs extends runtime.Types.Extens
   comptas?: boolean | RepertoireCountOutputTypeCountComptasArgs
   comptabilites?: boolean | RepertoireCountOutputTypeCountComptabilitesArgs
   importations?: boolean | RepertoireCountOutputTypeCountImportationsArgs
-  livraisonCommercials?: boolean | RepertoireCountOutputTypeCountLivraisonCommercialsArgs
-  livraisonCommercialAnciens?: boolean | RepertoireCountOutputTypeCountLivraisonCommercialAnciensArgs
-  livraisonClients?: boolean | RepertoireCountOutputTypeCountLivraisonClientsArgs
 }
 
 /**
@@ -2919,27 +2315,6 @@ export type RepertoireCountOutputTypeCountImportationsArgs<ExtArgs extends runti
   where?: Prisma.ImportationsWhereInput
 }
 
-/**
- * RepertoireCountOutputType without action
- */
-export type RepertoireCountOutputTypeCountLivraisonCommercialsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.LivraisonWhereInput
-}
-
-/**
- * RepertoireCountOutputType without action
- */
-export type RepertoireCountOutputTypeCountLivraisonCommercialAnciensArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.LivraisonWhereInput
-}
-
-/**
- * RepertoireCountOutputType without action
- */
-export type RepertoireCountOutputTypeCountLivraisonClientsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.LivraisonWhereInput
-}
-
 
 export type RepertoireSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
@@ -2970,9 +2345,6 @@ export type RepertoireSelect<ExtArgs extends runtime.Types.Extensions.InternalAr
   comptas?: boolean | Prisma.Repertoire$comptasArgs<ExtArgs>
   comptabilites?: boolean | Prisma.Repertoire$comptabilitesArgs<ExtArgs>
   importations?: boolean | Prisma.Repertoire$importationsArgs<ExtArgs>
-  livraisonCommercials?: boolean | Prisma.Repertoire$livraisonCommercialsArgs<ExtArgs>
-  livraisonCommercialAnciens?: boolean | Prisma.Repertoire$livraisonCommercialAnciensArgs<ExtArgs>
-  livraisonClients?: boolean | Prisma.Repertoire$livraisonClientsArgs<ExtArgs>
   _count?: boolean | Prisma.RepertoireCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["repertoire"]>
 
@@ -3011,9 +2383,6 @@ export type RepertoireInclude<ExtArgs extends runtime.Types.Extensions.InternalA
   comptas?: boolean | Prisma.Repertoire$comptasArgs<ExtArgs>
   comptabilites?: boolean | Prisma.Repertoire$comptabilitesArgs<ExtArgs>
   importations?: boolean | Prisma.Repertoire$importationsArgs<ExtArgs>
-  livraisonCommercials?: boolean | Prisma.Repertoire$livraisonCommercialsArgs<ExtArgs>
-  livraisonCommercialAnciens?: boolean | Prisma.Repertoire$livraisonCommercialAnciensArgs<ExtArgs>
-  livraisonClients?: boolean | Prisma.Repertoire$livraisonClientsArgs<ExtArgs>
   _count?: boolean | Prisma.RepertoireCountOutputTypeDefaultArgs<ExtArgs>
 }
 
@@ -3029,9 +2398,6 @@ export type $RepertoirePayload<ExtArgs extends runtime.Types.Extensions.Internal
     comptas: Prisma.$ComptaPayload<ExtArgs>[]
     comptabilites: Prisma.$ComptabilitePayload<ExtArgs>[]
     importations: Prisma.$ImportationsPayload<ExtArgs>[]
-    livraisonCommercials: Prisma.$LivraisonPayload<ExtArgs>[]
-    livraisonCommercialAnciens: Prisma.$LivraisonPayload<ExtArgs>[]
-    livraisonClients: Prisma.$LivraisonPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: bigint
@@ -3402,9 +2768,6 @@ export interface Prisma__RepertoireClient<T, Null = never, ExtArgs extends runti
   comptas<T extends Prisma.Repertoire$comptasArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Repertoire$comptasArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ComptaPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   comptabilites<T extends Prisma.Repertoire$comptabilitesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Repertoire$comptabilitesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ComptabilitePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   importations<T extends Prisma.Repertoire$importationsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Repertoire$importationsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ImportationsPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  livraisonCommercials<T extends Prisma.Repertoire$livraisonCommercialsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Repertoire$livraisonCommercialsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$LivraisonPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  livraisonCommercialAnciens<T extends Prisma.Repertoire$livraisonCommercialAnciensArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Repertoire$livraisonCommercialAnciensArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$LivraisonPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  livraisonClients<T extends Prisma.Repertoire$livraisonClientsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Repertoire$livraisonClientsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$LivraisonPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -3999,78 +3362,6 @@ export type Repertoire$importationsArgs<ExtArgs extends runtime.Types.Extensions
   take?: number
   skip?: number
   distinct?: Prisma.ImportationsScalarFieldEnum | Prisma.ImportationsScalarFieldEnum[]
-}
-
-/**
- * Repertoire.livraisonCommercials
- */
-export type Repertoire$livraisonCommercialsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  /**
-   * Select specific fields to fetch from the Livraison
-   */
-  select?: Prisma.LivraisonSelect<ExtArgs> | null
-  /**
-   * Omit specific fields from the Livraison
-   */
-  omit?: Prisma.LivraisonOmit<ExtArgs> | null
-  /**
-   * Choose, which related nodes to fetch as well
-   */
-  include?: Prisma.LivraisonInclude<ExtArgs> | null
-  where?: Prisma.LivraisonWhereInput
-  orderBy?: Prisma.LivraisonOrderByWithRelationInput | Prisma.LivraisonOrderByWithRelationInput[]
-  cursor?: Prisma.LivraisonWhereUniqueInput
-  take?: number
-  skip?: number
-  distinct?: Prisma.LivraisonScalarFieldEnum | Prisma.LivraisonScalarFieldEnum[]
-}
-
-/**
- * Repertoire.livraisonCommercialAnciens
- */
-export type Repertoire$livraisonCommercialAnciensArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  /**
-   * Select specific fields to fetch from the Livraison
-   */
-  select?: Prisma.LivraisonSelect<ExtArgs> | null
-  /**
-   * Omit specific fields from the Livraison
-   */
-  omit?: Prisma.LivraisonOmit<ExtArgs> | null
-  /**
-   * Choose, which related nodes to fetch as well
-   */
-  include?: Prisma.LivraisonInclude<ExtArgs> | null
-  where?: Prisma.LivraisonWhereInput
-  orderBy?: Prisma.LivraisonOrderByWithRelationInput | Prisma.LivraisonOrderByWithRelationInput[]
-  cursor?: Prisma.LivraisonWhereUniqueInput
-  take?: number
-  skip?: number
-  distinct?: Prisma.LivraisonScalarFieldEnum | Prisma.LivraisonScalarFieldEnum[]
-}
-
-/**
- * Repertoire.livraisonClients
- */
-export type Repertoire$livraisonClientsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  /**
-   * Select specific fields to fetch from the Livraison
-   */
-  select?: Prisma.LivraisonSelect<ExtArgs> | null
-  /**
-   * Omit specific fields from the Livraison
-   */
-  omit?: Prisma.LivraisonOmit<ExtArgs> | null
-  /**
-   * Choose, which related nodes to fetch as well
-   */
-  include?: Prisma.LivraisonInclude<ExtArgs> | null
-  where?: Prisma.LivraisonWhereInput
-  orderBy?: Prisma.LivraisonOrderByWithRelationInput | Prisma.LivraisonOrderByWithRelationInput[]
-  cursor?: Prisma.LivraisonWhereUniqueInput
-  take?: number
-  skip?: number
-  distinct?: Prisma.LivraisonScalarFieldEnum | Prisma.LivraisonScalarFieldEnum[]
 }
 
 /**

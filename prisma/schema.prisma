@@ -12,7 +12,7 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  //url      = env("DATABASE_URL")
+  url      = env("DATABASE_URL")
 }
 
 model Ville {
@@ -36,6 +36,7 @@ model Fournisseur {
   ville           				      Ville?     				                @relation(fields: [villeId], references: [id])
   villeId         				      BigInt?
   stocks           			        Stock[]
+  livraisons  				          Livraison[] @relation("fournisseurLivraison")
 }
 
 model Personnel {
@@ -65,6 +66,8 @@ model Personnel {
   absencesOperation         		Absence[] @relation("personnelOperationAbsence")
   absences         				      Absence[] @relation("personnelAbsence")
   repertoires      				      Repertoire[]  				          @relation
+  livraisons	  				        Livraison[] @relation("personnelLivraison")
+  livraisonsAncien  		        Livraison[] @relation("personnelAncienLivraison")
 }
 
 model Voiture {
@@ -157,9 +160,6 @@ model Repertoire {
    comptas         				      Compta[]
    comptabilites   				      Comptabilite[]
    importations					        Importations[]
-   livraisonCommercials 			  Livraison[] @relation("commercialLivraison")
-   livraisonCommercialAnciens   Livraison[] @relation("commercialAncienLivraison")
-   livraisonClients 				    Livraison[] @relation("clientLivraison")
 }
 
 model Stock {
@@ -767,43 +767,43 @@ mantantAvancs2  				    	    Decimal @db.Decimal(10, 2)
 
 model Livraison {
   id              				      	BigInt    					           @id @default(autoincrement())
-  numLivraison   				      	Int
-  codeBl        				      	String
-  dateBl        				      	DateTime @db.Date
-  dateReglement  				    	  DateTime @db.Date
-  dateReglement2  				    	DateTime @db.Date
-  dateReglement3  				    	DateTime @db.Date
-  dateReglement4  				    	DateTime @db.Date
-  typeReglment   				      	Int
-  typeReglment2  				    	  Int
-  typeReglment3  				    	  Int
-  typeReglment4  				    	  Int
-  mantantBL      				      	Decimal @db.Decimal(10, 2)
-  mantantBLReel  				    	  Decimal @db.Decimal(10, 2)
-  mantantBLBenefice  				    Decimal @db.Decimal(10, 2)
-  typePaiement   				      	String
-  mantantBLPourcent  				    Decimal @db.Decimal(10, 2)
-  reglerNonRegler  				    	Int
-  sysDate       				      	DateTime
-  infinity      				      	Int
-  etatBultinPaie  				    	Int
-  livrernonlivrer  				    	Int
-  avecRemise    				      	Boolean
-  mntReglement  				    	  Decimal @db.Decimal(10, 2)
-  mntReglement2  				    	  Decimal @db.Decimal(10, 2)
-  mntReglement3  				    	  Decimal @db.Decimal(10, 2)
-  mntReglement4  				    	  Decimal @db.Decimal(10, 2)
-  facturer100   				      	Boolean @default(false)
-  codeTransport  				    	  String
-  employeOperateur  				    Employe     				      	@relation(fields: [employeOperateurId], references: [id])
-  employeOperateurId  			    	BigInt
-  repertoireByCommercial  		    	Repertoire  			            @relation("commercialLivraison", fields: [repertoireByCommercialId], references: [id])
-  repertoireByCommercialId  		    BigInt
-  repertoireByCommercialAncien  		Repertoire?  			            @relation("commercialAncienLivraison", fields: [repertoireByCommercialAncienId], references: [id])
-  repertoireByCommercialAncienId  		BigInt
-  repertoireByClient  			        Repertoire  			            @relation("clientLivraison", fields: [repertoireByClientId], references: [id])
-  repertoireByClientId  				BigInt
-  detLivraisons  				    	DetLivraison[]
+  numLivraison   				      	  Int
+  codeBl        				      	  String
+  dateBl        				      	  DateTime @db.Date
+  dateReglement  				    	    DateTime @db.Date
+  dateReglement2  				    	  DateTime @db.Date
+  dateReglement3  				    	  DateTime @db.Date
+  dateReglement4  				    	  DateTime @db.Date
+  typeReglment   				      	  Int
+  typeReglment2  				    	    Int
+  typeReglment3  				    	    Int
+  typeReglment4  				    	    Int
+  mantantBL      				      	  Decimal @db.Decimal(10, 2)
+  mantantBLReel  				    	    Decimal @db.Decimal(10, 2)
+  mantantBLBenefice  				      Decimal @db.Decimal(10, 2)
+  typePaiement   				      	  String
+  mantantBLPourcent  				      Decimal @db.Decimal(10, 2)
+  reglerNonRegler  				    	  Int
+  sysDate       				      	  DateTime
+  infinity      				      	  Int
+  etatBultinPaie  				    	  Int
+  livrernonlivrer  				    	  Int
+  avecRemise    				      	  Boolean
+  mntReglement  				    	    Decimal @db.Decimal(10, 2)
+  mntReglement2  				    	    Decimal @db.Decimal(10, 2)
+  mntReglement3  				    	    Decimal @db.Decimal(10, 2)
+  mntReglement4  				    	    Decimal @db.Decimal(10, 2)
+  facturer100   				      	  Boolean @default(false)
+  codeTransport  				    	    String
+  employeOperateur  				      Employe?     				      	  @relation(fields: [employeOperateurId], references: [id])
+  employeOperateurId  			    	BigInt?
+  personnel  		    	            Personnel  			              @relation("personnelLivraison", fields: [personnelId], references: [id])
+  personnelId  		                BigInt
+  personnelAncien  	              Personnel?  			            @relation("personnelAncienLivraison", fields: [personnelAncienId], references: [id])
+  personnelAncienId               BigInt?
+  fournisseur  			              Fournisseur  			            @relation("fournisseurLivraison", fields: [fournisseurId], references: [id])
+  fournisseurId  				          BigInt
+  detLivraisons  				    	    DetLivraison[]
   detBulttinLivraisons  			    DetBulttinLivraison[]
 }
 
