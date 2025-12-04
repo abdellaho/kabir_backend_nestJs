@@ -801,11 +801,11 @@ model Livraison {
   codeTransport  				    	    String
   employeOperateur  				      Employe?     				      	  @relation(fields: [employeOperateurId], references: [id])
   employeOperateurId  			    	BigInt?
-  personnel  		    	            Personnel  			              @relation("personnelLivraison", fields: [personnelId], references: [id])
+  personnel  		    	            Personnel  			              @relation("personnelLivraison", fields: [personnelId], references: [id], onDelete: Restrict)
   personnelId  		                BigInt
-  personnelAncien  	              Personnel?  			            @relation("personnelAncienLivraison", fields: [personnelAncienId], references: [id])
+  personnelAncien  	              Personnel?  			            @relation("personnelAncienLivraison", fields: [personnelAncienId], references: [id], onDelete: Restrict)
   personnelAncienId               BigInt?
-  fournisseur  			              Fournisseur  			            @relation("fournisseurLivraison", fields: [fournisseurId], references: [id])
+  fournisseur  			              Fournisseur  			            @relation("fournisseurLivraison", fields: [fournisseurId], references: [id], onDelete: Restrict)
   fournisseurId  				          BigInt
   detLivraisons  				    	    DetLivraison[]
   detBulttinLivraisons  			    DetBulttinLivraison[]
