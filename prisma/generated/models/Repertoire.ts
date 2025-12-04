@@ -61,6 +61,7 @@ export type RepertoireMinAggregateOutputType = {
   archiver: boolean | null
   bloquer: boolean | null
   sysDate: Date | null
+  dateSuppression: Date | null
   observation: string | null
   nbrOperationClient: number | null
   plafond: runtime.Decimal | null
@@ -83,6 +84,7 @@ export type RepertoireMaxAggregateOutputType = {
   archiver: boolean | null
   bloquer: boolean | null
   sysDate: Date | null
+  dateSuppression: Date | null
   observation: string | null
   nbrOperationClient: number | null
   plafond: runtime.Decimal | null
@@ -105,6 +107,7 @@ export type RepertoireCountAggregateOutputType = {
   archiver: number
   bloquer: number
   sysDate: number
+  dateSuppression: number
   observation: number
   nbrOperationClient: number
   plafond: number
@@ -149,6 +152,7 @@ export type RepertoireMinAggregateInputType = {
   archiver?: true
   bloquer?: true
   sysDate?: true
+  dateSuppression?: true
   observation?: true
   nbrOperationClient?: true
   plafond?: true
@@ -171,6 +175,7 @@ export type RepertoireMaxAggregateInputType = {
   archiver?: true
   bloquer?: true
   sysDate?: true
+  dateSuppression?: true
   observation?: true
   nbrOperationClient?: true
   plafond?: true
@@ -193,6 +198,7 @@ export type RepertoireCountAggregateInputType = {
   archiver?: true
   bloquer?: true
   sysDate?: true
+  dateSuppression?: true
   observation?: true
   nbrOperationClient?: true
   plafond?: true
@@ -302,6 +308,7 @@ export type RepertoireGroupByOutputType = {
   archiver: boolean
   bloquer: boolean
   sysDate: Date
+  dateSuppression: Date | null
   observation: string
   nbrOperationClient: number
   plafond: runtime.Decimal
@@ -347,6 +354,7 @@ export type RepertoireWhereInput = {
   archiver?: Prisma.BoolFilter<"Repertoire"> | boolean
   bloquer?: Prisma.BoolFilter<"Repertoire"> | boolean
   sysDate?: Prisma.DateTimeFilter<"Repertoire"> | Date | string
+  dateSuppression?: Prisma.DateTimeNullableFilter<"Repertoire"> | Date | string | null
   observation?: Prisma.StringFilter<"Repertoire"> | string
   nbrOperationClient?: Prisma.IntFilter<"Repertoire"> | number
   plafond?: Prisma.DecimalFilter<"Repertoire"> | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -378,6 +386,7 @@ export type RepertoireOrderByWithRelationInput = {
   archiver?: Prisma.SortOrder
   bloquer?: Prisma.SortOrder
   sysDate?: Prisma.SortOrder
+  dateSuppression?: Prisma.SortOrderInput | Prisma.SortOrder
   observation?: Prisma.SortOrder
   nbrOperationClient?: Prisma.SortOrder
   plafond?: Prisma.SortOrder
@@ -413,6 +422,7 @@ export type RepertoireWhereUniqueInput = Prisma.AtLeast<{
   archiver?: Prisma.BoolFilter<"Repertoire"> | boolean
   bloquer?: Prisma.BoolFilter<"Repertoire"> | boolean
   sysDate?: Prisma.DateTimeFilter<"Repertoire"> | Date | string
+  dateSuppression?: Prisma.DateTimeNullableFilter<"Repertoire"> | Date | string | null
   observation?: Prisma.StringFilter<"Repertoire"> | string
   nbrOperationClient?: Prisma.IntFilter<"Repertoire"> | number
   plafond?: Prisma.DecimalFilter<"Repertoire"> | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -444,6 +454,7 @@ export type RepertoireOrderByWithAggregationInput = {
   archiver?: Prisma.SortOrder
   bloquer?: Prisma.SortOrder
   sysDate?: Prisma.SortOrder
+  dateSuppression?: Prisma.SortOrderInput | Prisma.SortOrder
   observation?: Prisma.SortOrder
   nbrOperationClient?: Prisma.SortOrder
   plafond?: Prisma.SortOrder
@@ -474,6 +485,7 @@ export type RepertoireScalarWhereWithAggregatesInput = {
   archiver?: Prisma.BoolWithAggregatesFilter<"Repertoire"> | boolean
   bloquer?: Prisma.BoolWithAggregatesFilter<"Repertoire"> | boolean
   sysDate?: Prisma.DateTimeWithAggregatesFilter<"Repertoire"> | Date | string
+  dateSuppression?: Prisma.DateTimeNullableWithAggregatesFilter<"Repertoire"> | Date | string | null
   observation?: Prisma.StringWithAggregatesFilter<"Repertoire"> | string
   nbrOperationClient?: Prisma.IntWithAggregatesFilter<"Repertoire"> | number
   plafond?: Prisma.DecimalWithAggregatesFilter<"Repertoire"> | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -496,6 +508,7 @@ export type RepertoireCreateInput = {
   archiver?: boolean
   bloquer?: boolean
   sysDate: Date | string
+  dateSuppression?: Date | string | null
   observation: string
   nbrOperationClient: number
   plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -525,6 +538,7 @@ export type RepertoireUncheckedCreateInput = {
   archiver?: boolean
   bloquer?: boolean
   sysDate: Date | string
+  dateSuppression?: Date | string | null
   observation: string
   nbrOperationClient: number
   plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -554,6 +568,7 @@ export type RepertoireUpdateInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
   plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -583,6 +598,7 @@ export type RepertoireUncheckedUpdateInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
   plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -612,6 +628,7 @@ export type RepertoireCreateManyInput = {
   archiver?: boolean
   bloquer?: boolean
   sysDate: Date | string
+  dateSuppression?: Date | string | null
   observation: string
   nbrOperationClient: number
   plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -634,6 +651,7 @@ export type RepertoireUpdateManyMutationInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
   plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -654,6 +672,7 @@ export type RepertoireUncheckedUpdateManyInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
   plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -692,6 +711,7 @@ export type RepertoireCountOrderByAggregateInput = {
   archiver?: Prisma.SortOrder
   bloquer?: Prisma.SortOrder
   sysDate?: Prisma.SortOrder
+  dateSuppression?: Prisma.SortOrder
   observation?: Prisma.SortOrder
   nbrOperationClient?: Prisma.SortOrder
   plafond?: Prisma.SortOrder
@@ -724,6 +744,7 @@ export type RepertoireMaxOrderByAggregateInput = {
   archiver?: Prisma.SortOrder
   bloquer?: Prisma.SortOrder
   sysDate?: Prisma.SortOrder
+  dateSuppression?: Prisma.SortOrder
   observation?: Prisma.SortOrder
   nbrOperationClient?: Prisma.SortOrder
   plafond?: Prisma.SortOrder
@@ -746,6 +767,7 @@ export type RepertoireMinOrderByAggregateInput = {
   archiver?: Prisma.SortOrder
   bloquer?: Prisma.SortOrder
   sysDate?: Prisma.SortOrder
+  dateSuppression?: Prisma.SortOrder
   observation?: Prisma.SortOrder
   nbrOperationClient?: Prisma.SortOrder
   plafond?: Prisma.SortOrder
@@ -965,6 +987,7 @@ export type RepertoireCreateWithoutVilleInput = {
   archiver?: boolean
   bloquer?: boolean
   sysDate: Date | string
+  dateSuppression?: Date | string | null
   observation: string
   nbrOperationClient: number
   plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -993,6 +1016,7 @@ export type RepertoireUncheckedCreateWithoutVilleInput = {
   archiver?: boolean
   bloquer?: boolean
   sysDate: Date | string
+  dateSuppression?: Date | string | null
   observation: string
   nbrOperationClient: number
   plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1050,6 +1074,7 @@ export type RepertoireScalarWhereInput = {
   archiver?: Prisma.BoolFilter<"Repertoire"> | boolean
   bloquer?: Prisma.BoolFilter<"Repertoire"> | boolean
   sysDate?: Prisma.DateTimeFilter<"Repertoire"> | Date | string
+  dateSuppression?: Prisma.DateTimeNullableFilter<"Repertoire"> | Date | string | null
   observation?: Prisma.StringFilter<"Repertoire"> | string
   nbrOperationClient?: Prisma.IntFilter<"Repertoire"> | number
   plafond?: Prisma.DecimalFilter<"Repertoire"> | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1072,6 +1097,7 @@ export type RepertoireCreateWithoutPersonnelInput = {
   archiver?: boolean
   bloquer?: boolean
   sysDate: Date | string
+  dateSuppression?: Date | string | null
   observation: string
   nbrOperationClient: number
   plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1100,6 +1126,7 @@ export type RepertoireUncheckedCreateWithoutPersonnelInput = {
   archiver?: boolean
   bloquer?: boolean
   sysDate: Date | string
+  dateSuppression?: Date | string | null
   observation: string
   nbrOperationClient: number
   plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1154,6 +1181,7 @@ export type RepertoireCreateWithoutEmployesInput = {
   archiver?: boolean
   bloquer?: boolean
   sysDate: Date | string
+  dateSuppression?: Date | string | null
   observation: string
   nbrOperationClient: number
   plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1182,6 +1210,7 @@ export type RepertoireUncheckedCreateWithoutEmployesInput = {
   archiver?: boolean
   bloquer?: boolean
   sysDate: Date | string
+  dateSuppression?: Date | string | null
   observation: string
   nbrOperationClient: number
   plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1226,6 +1255,7 @@ export type RepertoireUpdateWithoutEmployesInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
   plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1254,6 +1284,7 @@ export type RepertoireUncheckedUpdateWithoutEmployesInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
   plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1282,6 +1313,7 @@ export type RepertoireCreateWithoutBonSortiesInput = {
   archiver?: boolean
   bloquer?: boolean
   sysDate: Date | string
+  dateSuppression?: Date | string | null
   observation: string
   nbrOperationClient: number
   plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1310,6 +1342,7 @@ export type RepertoireUncheckedCreateWithoutBonSortiesInput = {
   archiver?: boolean
   bloquer?: boolean
   sysDate: Date | string
+  dateSuppression?: Date | string | null
   observation: string
   nbrOperationClient: number
   plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1354,6 +1387,7 @@ export type RepertoireUpdateWithoutBonSortiesInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
   plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1382,6 +1416,7 @@ export type RepertoireUncheckedUpdateWithoutBonSortiesInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
   plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1410,6 +1445,7 @@ export type RepertoireCreateWithoutBulttinPaisInput = {
   archiver?: boolean
   bloquer?: boolean
   sysDate: Date | string
+  dateSuppression?: Date | string | null
   observation: string
   nbrOperationClient: number
   plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1438,6 +1474,7 @@ export type RepertoireUncheckedCreateWithoutBulttinPaisInput = {
   archiver?: boolean
   bloquer?: boolean
   sysDate: Date | string
+  dateSuppression?: Date | string | null
   observation: string
   nbrOperationClient: number
   plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1482,6 +1519,7 @@ export type RepertoireUpdateWithoutBulttinPaisInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
   plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1510,6 +1548,7 @@ export type RepertoireUncheckedUpdateWithoutBulttinPaisInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
   plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1538,6 +1577,7 @@ export type RepertoireCreateWithoutChequesInput = {
   archiver?: boolean
   bloquer?: boolean
   sysDate: Date | string
+  dateSuppression?: Date | string | null
   observation: string
   nbrOperationClient: number
   plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1566,6 +1606,7 @@ export type RepertoireUncheckedCreateWithoutChequesInput = {
   archiver?: boolean
   bloquer?: boolean
   sysDate: Date | string
+  dateSuppression?: Date | string | null
   observation: string
   nbrOperationClient: number
   plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1610,6 +1651,7 @@ export type RepertoireUpdateWithoutChequesInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
   plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1638,6 +1680,7 @@ export type RepertoireUncheckedUpdateWithoutChequesInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
   plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1666,6 +1709,7 @@ export type RepertoireCreateWithoutComptasInput = {
   archiver?: boolean
   bloquer?: boolean
   sysDate: Date | string
+  dateSuppression?: Date | string | null
   observation: string
   nbrOperationClient: number
   plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1694,6 +1738,7 @@ export type RepertoireUncheckedCreateWithoutComptasInput = {
   archiver?: boolean
   bloquer?: boolean
   sysDate: Date | string
+  dateSuppression?: Date | string | null
   observation: string
   nbrOperationClient: number
   plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1738,6 +1783,7 @@ export type RepertoireUpdateWithoutComptasInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
   plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1766,6 +1812,7 @@ export type RepertoireUncheckedUpdateWithoutComptasInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
   plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1794,6 +1841,7 @@ export type RepertoireCreateWithoutComptabilitesInput = {
   archiver?: boolean
   bloquer?: boolean
   sysDate: Date | string
+  dateSuppression?: Date | string | null
   observation: string
   nbrOperationClient: number
   plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1822,6 +1870,7 @@ export type RepertoireUncheckedCreateWithoutComptabilitesInput = {
   archiver?: boolean
   bloquer?: boolean
   sysDate: Date | string
+  dateSuppression?: Date | string | null
   observation: string
   nbrOperationClient: number
   plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1866,6 +1915,7 @@ export type RepertoireUpdateWithoutComptabilitesInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
   plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1894,6 +1944,7 @@ export type RepertoireUncheckedUpdateWithoutComptabilitesInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
   plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1922,6 +1973,7 @@ export type RepertoireCreateWithoutImportationsInput = {
   archiver?: boolean
   bloquer?: boolean
   sysDate: Date | string
+  dateSuppression?: Date | string | null
   observation: string
   nbrOperationClient: number
   plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1950,6 +2002,7 @@ export type RepertoireUncheckedCreateWithoutImportationsInput = {
   archiver?: boolean
   bloquer?: boolean
   sysDate: Date | string
+  dateSuppression?: Date | string | null
   observation: string
   nbrOperationClient: number
   plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1994,6 +2047,7 @@ export type RepertoireUpdateWithoutImportationsInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
   plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2022,6 +2076,7 @@ export type RepertoireUncheckedUpdateWithoutImportationsInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
   plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2033,6 +2088,429 @@ export type RepertoireUncheckedUpdateWithoutImportationsInput = {
   cheques?: Prisma.ChequeUncheckedUpdateManyWithoutRepertoireNestedInput
   comptas?: Prisma.ComptaUncheckedUpdateManyWithoutRepertoireNestedInput
   comptabilites?: Prisma.ComptabiliteUncheckedUpdateManyWithoutRepertoireNestedInput
+  livraisonCommercials?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialNestedInput
+  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialAncienNestedInput
+  livraisonClients?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByClientNestedInput
+}
+
+export type RepertoireCreateWithoutLivraisonCommercialsInput = {
+  id?: bigint | number
+  designation: string
+  tel1: string
+  tel2: string
+  tel3: string
+  adresse: string
+  email: string
+  typeRepertoire: number
+  typeReglment: number
+  ife: string
+  ice: string
+  archiver?: boolean
+  bloquer?: boolean
+  sysDate: Date | string
+  observation: string
+  nbrOperationClient: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
+  personnel?: Prisma.PersonnelCreateNestedOneWithoutRepertoiresInput
+  ville?: Prisma.VilleCreateNestedOneWithoutRepertoiresInput
+  employes?: Prisma.EmployeCreateNestedManyWithoutRepertoireInput
+  bonSorties?: Prisma.BonSortieCreateNestedManyWithoutRepertoireInput
+  bulttinPais?: Prisma.BulttinPaiCreateNestedManyWithoutCommercailInput
+  cheques?: Prisma.ChequeCreateNestedManyWithoutRepertoireInput
+  comptas?: Prisma.ComptaCreateNestedManyWithoutRepertoireInput
+  comptabilites?: Prisma.ComptabiliteCreateNestedManyWithoutRepertoireInput
+  importations?: Prisma.ImportationsCreateNestedManyWithoutRepertoireFourInput
+  livraisonCommercialAnciens?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialAncienInput
+  livraisonClients?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByClientInput
+}
+
+export type RepertoireUncheckedCreateWithoutLivraisonCommercialsInput = {
+  id?: bigint | number
+  designation: string
+  tel1: string
+  tel2: string
+  tel3: string
+  adresse: string
+  email: string
+  typeRepertoire: number
+  typeReglment: number
+  ife: string
+  ice: string
+  archiver?: boolean
+  bloquer?: boolean
+  sysDate: Date | string
+  observation: string
+  nbrOperationClient: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
+  personnelId?: bigint | number | null
+  villeId?: bigint | number | null
+  employes?: Prisma.EmployeUncheckedCreateNestedManyWithoutRepertoireInput
+  bonSorties?: Prisma.BonSortieUncheckedCreateNestedManyWithoutRepertoireInput
+  bulttinPais?: Prisma.BulttinPaiUncheckedCreateNestedManyWithoutCommercailInput
+  cheques?: Prisma.ChequeUncheckedCreateNestedManyWithoutRepertoireInput
+  comptas?: Prisma.ComptaUncheckedCreateNestedManyWithoutRepertoireInput
+  comptabilites?: Prisma.ComptabiliteUncheckedCreateNestedManyWithoutRepertoireInput
+  importations?: Prisma.ImportationsUncheckedCreateNestedManyWithoutRepertoireFourInput
+  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialAncienInput
+  livraisonClients?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByClientInput
+}
+
+export type RepertoireCreateOrConnectWithoutLivraisonCommercialsInput = {
+  where: Prisma.RepertoireWhereUniqueInput
+  create: Prisma.XOR<Prisma.RepertoireCreateWithoutLivraisonCommercialsInput, Prisma.RepertoireUncheckedCreateWithoutLivraisonCommercialsInput>
+}
+
+export type RepertoireCreateWithoutLivraisonCommercialAnciensInput = {
+  id?: bigint | number
+  designation: string
+  tel1: string
+  tel2: string
+  tel3: string
+  adresse: string
+  email: string
+  typeRepertoire: number
+  typeReglment: number
+  ife: string
+  ice: string
+  archiver?: boolean
+  bloquer?: boolean
+  sysDate: Date | string
+  observation: string
+  nbrOperationClient: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
+  personnel?: Prisma.PersonnelCreateNestedOneWithoutRepertoiresInput
+  ville?: Prisma.VilleCreateNestedOneWithoutRepertoiresInput
+  employes?: Prisma.EmployeCreateNestedManyWithoutRepertoireInput
+  bonSorties?: Prisma.BonSortieCreateNestedManyWithoutRepertoireInput
+  bulttinPais?: Prisma.BulttinPaiCreateNestedManyWithoutCommercailInput
+  cheques?: Prisma.ChequeCreateNestedManyWithoutRepertoireInput
+  comptas?: Prisma.ComptaCreateNestedManyWithoutRepertoireInput
+  comptabilites?: Prisma.ComptabiliteCreateNestedManyWithoutRepertoireInput
+  importations?: Prisma.ImportationsCreateNestedManyWithoutRepertoireFourInput
+  livraisonCommercials?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialInput
+  livraisonClients?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByClientInput
+}
+
+export type RepertoireUncheckedCreateWithoutLivraisonCommercialAnciensInput = {
+  id?: bigint | number
+  designation: string
+  tel1: string
+  tel2: string
+  tel3: string
+  adresse: string
+  email: string
+  typeRepertoire: number
+  typeReglment: number
+  ife: string
+  ice: string
+  archiver?: boolean
+  bloquer?: boolean
+  sysDate: Date | string
+  observation: string
+  nbrOperationClient: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
+  personnelId?: bigint | number | null
+  villeId?: bigint | number | null
+  employes?: Prisma.EmployeUncheckedCreateNestedManyWithoutRepertoireInput
+  bonSorties?: Prisma.BonSortieUncheckedCreateNestedManyWithoutRepertoireInput
+  bulttinPais?: Prisma.BulttinPaiUncheckedCreateNestedManyWithoutCommercailInput
+  cheques?: Prisma.ChequeUncheckedCreateNestedManyWithoutRepertoireInput
+  comptas?: Prisma.ComptaUncheckedCreateNestedManyWithoutRepertoireInput
+  comptabilites?: Prisma.ComptabiliteUncheckedCreateNestedManyWithoutRepertoireInput
+  importations?: Prisma.ImportationsUncheckedCreateNestedManyWithoutRepertoireFourInput
+  livraisonCommercials?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialInput
+  livraisonClients?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByClientInput
+}
+
+export type RepertoireCreateOrConnectWithoutLivraisonCommercialAnciensInput = {
+  where: Prisma.RepertoireWhereUniqueInput
+  create: Prisma.XOR<Prisma.RepertoireCreateWithoutLivraisonCommercialAnciensInput, Prisma.RepertoireUncheckedCreateWithoutLivraisonCommercialAnciensInput>
+}
+
+export type RepertoireCreateWithoutLivraisonClientsInput = {
+  id?: bigint | number
+  designation: string
+  tel1: string
+  tel2: string
+  tel3: string
+  adresse: string
+  email: string
+  typeRepertoire: number
+  typeReglment: number
+  ife: string
+  ice: string
+  archiver?: boolean
+  bloquer?: boolean
+  sysDate: Date | string
+  observation: string
+  nbrOperationClient: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
+  personnel?: Prisma.PersonnelCreateNestedOneWithoutRepertoiresInput
+  ville?: Prisma.VilleCreateNestedOneWithoutRepertoiresInput
+  employes?: Prisma.EmployeCreateNestedManyWithoutRepertoireInput
+  bonSorties?: Prisma.BonSortieCreateNestedManyWithoutRepertoireInput
+  bulttinPais?: Prisma.BulttinPaiCreateNestedManyWithoutCommercailInput
+  cheques?: Prisma.ChequeCreateNestedManyWithoutRepertoireInput
+  comptas?: Prisma.ComptaCreateNestedManyWithoutRepertoireInput
+  comptabilites?: Prisma.ComptabiliteCreateNestedManyWithoutRepertoireInput
+  importations?: Prisma.ImportationsCreateNestedManyWithoutRepertoireFourInput
+  livraisonCommercials?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialInput
+  livraisonCommercialAnciens?: Prisma.LivraisonCreateNestedManyWithoutRepertoireByCommercialAncienInput
+}
+
+export type RepertoireUncheckedCreateWithoutLivraisonClientsInput = {
+  id?: bigint | number
+  designation: string
+  tel1: string
+  tel2: string
+  tel3: string
+  adresse: string
+  email: string
+  typeRepertoire: number
+  typeReglment: number
+  ife: string
+  ice: string
+  archiver?: boolean
+  bloquer?: boolean
+  sysDate: Date | string
+  observation: string
+  nbrOperationClient: number
+  plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
+  personnelId?: bigint | number | null
+  villeId?: bigint | number | null
+  employes?: Prisma.EmployeUncheckedCreateNestedManyWithoutRepertoireInput
+  bonSorties?: Prisma.BonSortieUncheckedCreateNestedManyWithoutRepertoireInput
+  bulttinPais?: Prisma.BulttinPaiUncheckedCreateNestedManyWithoutCommercailInput
+  cheques?: Prisma.ChequeUncheckedCreateNestedManyWithoutRepertoireInput
+  comptas?: Prisma.ComptaUncheckedCreateNestedManyWithoutRepertoireInput
+  comptabilites?: Prisma.ComptabiliteUncheckedCreateNestedManyWithoutRepertoireInput
+  importations?: Prisma.ImportationsUncheckedCreateNestedManyWithoutRepertoireFourInput
+  livraisonCommercials?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialInput
+  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedCreateNestedManyWithoutRepertoireByCommercialAncienInput
+}
+
+export type RepertoireCreateOrConnectWithoutLivraisonClientsInput = {
+  where: Prisma.RepertoireWhereUniqueInput
+  create: Prisma.XOR<Prisma.RepertoireCreateWithoutLivraisonClientsInput, Prisma.RepertoireUncheckedCreateWithoutLivraisonClientsInput>
+}
+
+export type RepertoireUpsertWithoutLivraisonCommercialsInput = {
+  update: Prisma.XOR<Prisma.RepertoireUpdateWithoutLivraisonCommercialsInput, Prisma.RepertoireUncheckedUpdateWithoutLivraisonCommercialsInput>
+  create: Prisma.XOR<Prisma.RepertoireCreateWithoutLivraisonCommercialsInput, Prisma.RepertoireUncheckedCreateWithoutLivraisonCommercialsInput>
+  where?: Prisma.RepertoireWhereInput
+}
+
+export type RepertoireUpdateToOneWithWhereWithoutLivraisonCommercialsInput = {
+  where?: Prisma.RepertoireWhereInput
+  data: Prisma.XOR<Prisma.RepertoireUpdateWithoutLivraisonCommercialsInput, Prisma.RepertoireUncheckedUpdateWithoutLivraisonCommercialsInput>
+}
+
+export type RepertoireUpdateWithoutLivraisonCommercialsInput = {
+  id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  designation?: Prisma.StringFieldUpdateOperationsInput | string
+  tel1?: Prisma.StringFieldUpdateOperationsInput | string
+  tel2?: Prisma.StringFieldUpdateOperationsInput | string
+  tel3?: Prisma.StringFieldUpdateOperationsInput | string
+  adresse?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
+  typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
+  ife?: Prisma.StringFieldUpdateOperationsInput | string
+  ice?: Prisma.StringFieldUpdateOperationsInput | string
+  archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  observation?: Prisma.StringFieldUpdateOperationsInput | string
+  nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  personnel?: Prisma.PersonnelUpdateOneWithoutRepertoiresNestedInput
+  ville?: Prisma.VilleUpdateOneWithoutRepertoiresNestedInput
+  employes?: Prisma.EmployeUpdateManyWithoutRepertoireNestedInput
+  bonSorties?: Prisma.BonSortieUpdateManyWithoutRepertoireNestedInput
+  bulttinPais?: Prisma.BulttinPaiUpdateManyWithoutCommercailNestedInput
+  cheques?: Prisma.ChequeUpdateManyWithoutRepertoireNestedInput
+  comptas?: Prisma.ComptaUpdateManyWithoutRepertoireNestedInput
+  comptabilites?: Prisma.ComptabiliteUpdateManyWithoutRepertoireNestedInput
+  importations?: Prisma.ImportationsUpdateManyWithoutRepertoireFourNestedInput
+  livraisonCommercialAnciens?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialAncienNestedInput
+  livraisonClients?: Prisma.LivraisonUpdateManyWithoutRepertoireByClientNestedInput
+}
+
+export type RepertoireUncheckedUpdateWithoutLivraisonCommercialsInput = {
+  id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  designation?: Prisma.StringFieldUpdateOperationsInput | string
+  tel1?: Prisma.StringFieldUpdateOperationsInput | string
+  tel2?: Prisma.StringFieldUpdateOperationsInput | string
+  tel3?: Prisma.StringFieldUpdateOperationsInput | string
+  adresse?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
+  typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
+  ife?: Prisma.StringFieldUpdateOperationsInput | string
+  ice?: Prisma.StringFieldUpdateOperationsInput | string
+  archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  observation?: Prisma.StringFieldUpdateOperationsInput | string
+  nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  personnelId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+  villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+  employes?: Prisma.EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
+  bonSorties?: Prisma.BonSortieUncheckedUpdateManyWithoutRepertoireNestedInput
+  bulttinPais?: Prisma.BulttinPaiUncheckedUpdateManyWithoutCommercailNestedInput
+  cheques?: Prisma.ChequeUncheckedUpdateManyWithoutRepertoireNestedInput
+  comptas?: Prisma.ComptaUncheckedUpdateManyWithoutRepertoireNestedInput
+  comptabilites?: Prisma.ComptabiliteUncheckedUpdateManyWithoutRepertoireNestedInput
+  importations?: Prisma.ImportationsUncheckedUpdateManyWithoutRepertoireFourNestedInput
+  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialAncienNestedInput
+  livraisonClients?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByClientNestedInput
+}
+
+export type RepertoireUpsertWithoutLivraisonCommercialAnciensInput = {
+  update: Prisma.XOR<Prisma.RepertoireUpdateWithoutLivraisonCommercialAnciensInput, Prisma.RepertoireUncheckedUpdateWithoutLivraisonCommercialAnciensInput>
+  create: Prisma.XOR<Prisma.RepertoireCreateWithoutLivraisonCommercialAnciensInput, Prisma.RepertoireUncheckedCreateWithoutLivraisonCommercialAnciensInput>
+  where?: Prisma.RepertoireWhereInput
+}
+
+export type RepertoireUpdateToOneWithWhereWithoutLivraisonCommercialAnciensInput = {
+  where?: Prisma.RepertoireWhereInput
+  data: Prisma.XOR<Prisma.RepertoireUpdateWithoutLivraisonCommercialAnciensInput, Prisma.RepertoireUncheckedUpdateWithoutLivraisonCommercialAnciensInput>
+}
+
+export type RepertoireUpdateWithoutLivraisonCommercialAnciensInput = {
+  id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  designation?: Prisma.StringFieldUpdateOperationsInput | string
+  tel1?: Prisma.StringFieldUpdateOperationsInput | string
+  tel2?: Prisma.StringFieldUpdateOperationsInput | string
+  tel3?: Prisma.StringFieldUpdateOperationsInput | string
+  adresse?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
+  typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
+  ife?: Prisma.StringFieldUpdateOperationsInput | string
+  ice?: Prisma.StringFieldUpdateOperationsInput | string
+  archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  observation?: Prisma.StringFieldUpdateOperationsInput | string
+  nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  personnel?: Prisma.PersonnelUpdateOneWithoutRepertoiresNestedInput
+  ville?: Prisma.VilleUpdateOneWithoutRepertoiresNestedInput
+  employes?: Prisma.EmployeUpdateManyWithoutRepertoireNestedInput
+  bonSorties?: Prisma.BonSortieUpdateManyWithoutRepertoireNestedInput
+  bulttinPais?: Prisma.BulttinPaiUpdateManyWithoutCommercailNestedInput
+  cheques?: Prisma.ChequeUpdateManyWithoutRepertoireNestedInput
+  comptas?: Prisma.ComptaUpdateManyWithoutRepertoireNestedInput
+  comptabilites?: Prisma.ComptabiliteUpdateManyWithoutRepertoireNestedInput
+  importations?: Prisma.ImportationsUpdateManyWithoutRepertoireFourNestedInput
+  livraisonCommercials?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialNestedInput
+  livraisonClients?: Prisma.LivraisonUpdateManyWithoutRepertoireByClientNestedInput
+}
+
+export type RepertoireUncheckedUpdateWithoutLivraisonCommercialAnciensInput = {
+  id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  designation?: Prisma.StringFieldUpdateOperationsInput | string
+  tel1?: Prisma.StringFieldUpdateOperationsInput | string
+  tel2?: Prisma.StringFieldUpdateOperationsInput | string
+  tel3?: Prisma.StringFieldUpdateOperationsInput | string
+  adresse?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
+  typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
+  ife?: Prisma.StringFieldUpdateOperationsInput | string
+  ice?: Prisma.StringFieldUpdateOperationsInput | string
+  archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  observation?: Prisma.StringFieldUpdateOperationsInput | string
+  nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  personnelId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+  villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+  employes?: Prisma.EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
+  bonSorties?: Prisma.BonSortieUncheckedUpdateManyWithoutRepertoireNestedInput
+  bulttinPais?: Prisma.BulttinPaiUncheckedUpdateManyWithoutCommercailNestedInput
+  cheques?: Prisma.ChequeUncheckedUpdateManyWithoutRepertoireNestedInput
+  comptas?: Prisma.ComptaUncheckedUpdateManyWithoutRepertoireNestedInput
+  comptabilites?: Prisma.ComptabiliteUncheckedUpdateManyWithoutRepertoireNestedInput
+  importations?: Prisma.ImportationsUncheckedUpdateManyWithoutRepertoireFourNestedInput
+  livraisonCommercials?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialNestedInput
+  livraisonClients?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByClientNestedInput
+}
+
+export type RepertoireUpsertWithoutLivraisonClientsInput = {
+  update: Prisma.XOR<Prisma.RepertoireUpdateWithoutLivraisonClientsInput, Prisma.RepertoireUncheckedUpdateWithoutLivraisonClientsInput>
+  create: Prisma.XOR<Prisma.RepertoireCreateWithoutLivraisonClientsInput, Prisma.RepertoireUncheckedCreateWithoutLivraisonClientsInput>
+  where?: Prisma.RepertoireWhereInput
+}
+
+export type RepertoireUpdateToOneWithWhereWithoutLivraisonClientsInput = {
+  where?: Prisma.RepertoireWhereInput
+  data: Prisma.XOR<Prisma.RepertoireUpdateWithoutLivraisonClientsInput, Prisma.RepertoireUncheckedUpdateWithoutLivraisonClientsInput>
+}
+
+export type RepertoireUpdateWithoutLivraisonClientsInput = {
+  id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  designation?: Prisma.StringFieldUpdateOperationsInput | string
+  tel1?: Prisma.StringFieldUpdateOperationsInput | string
+  tel2?: Prisma.StringFieldUpdateOperationsInput | string
+  tel3?: Prisma.StringFieldUpdateOperationsInput | string
+  adresse?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
+  typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
+  ife?: Prisma.StringFieldUpdateOperationsInput | string
+  ice?: Prisma.StringFieldUpdateOperationsInput | string
+  archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  observation?: Prisma.StringFieldUpdateOperationsInput | string
+  nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  personnel?: Prisma.PersonnelUpdateOneWithoutRepertoiresNestedInput
+  ville?: Prisma.VilleUpdateOneWithoutRepertoiresNestedInput
+  employes?: Prisma.EmployeUpdateManyWithoutRepertoireNestedInput
+  bonSorties?: Prisma.BonSortieUpdateManyWithoutRepertoireNestedInput
+  bulttinPais?: Prisma.BulttinPaiUpdateManyWithoutCommercailNestedInput
+  cheques?: Prisma.ChequeUpdateManyWithoutRepertoireNestedInput
+  comptas?: Prisma.ComptaUpdateManyWithoutRepertoireNestedInput
+  comptabilites?: Prisma.ComptabiliteUpdateManyWithoutRepertoireNestedInput
+  importations?: Prisma.ImportationsUpdateManyWithoutRepertoireFourNestedInput
+  livraisonCommercials?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialNestedInput
+  livraisonCommercialAnciens?: Prisma.LivraisonUpdateManyWithoutRepertoireByCommercialAncienNestedInput
+}
+
+export type RepertoireUncheckedUpdateWithoutLivraisonClientsInput = {
+  id?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
+  designation?: Prisma.StringFieldUpdateOperationsInput | string
+  tel1?: Prisma.StringFieldUpdateOperationsInput | string
+  tel2?: Prisma.StringFieldUpdateOperationsInput | string
+  tel3?: Prisma.StringFieldUpdateOperationsInput | string
+  adresse?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  typeRepertoire?: Prisma.IntFieldUpdateOperationsInput | number
+  typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
+  ife?: Prisma.StringFieldUpdateOperationsInput | string
+  ice?: Prisma.StringFieldUpdateOperationsInput | string
+  archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  observation?: Prisma.StringFieldUpdateOperationsInput | string
+  nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
+  plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  personnelId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+  villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
+  employes?: Prisma.EmployeUncheckedUpdateManyWithoutRepertoireNestedInput
+  bonSorties?: Prisma.BonSortieUncheckedUpdateManyWithoutRepertoireNestedInput
+  bulttinPais?: Prisma.BulttinPaiUncheckedUpdateManyWithoutCommercailNestedInput
+  cheques?: Prisma.ChequeUncheckedUpdateManyWithoutRepertoireNestedInput
+  comptas?: Prisma.ComptaUncheckedUpdateManyWithoutRepertoireNestedInput
+  comptabilites?: Prisma.ComptabiliteUncheckedUpdateManyWithoutRepertoireNestedInput
+  importations?: Prisma.ImportationsUncheckedUpdateManyWithoutRepertoireFourNestedInput
+  livraisonCommercials?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialNestedInput
+  livraisonCommercialAnciens?: Prisma.LivraisonUncheckedUpdateManyWithoutRepertoireByCommercialAncienNestedInput
 }
 
 export type RepertoireCreateManyVilleInput = {
@@ -2050,6 +2528,7 @@ export type RepertoireCreateManyVilleInput = {
   archiver?: boolean
   bloquer?: boolean
   sysDate: Date | string
+  dateSuppression?: Date | string | null
   observation: string
   nbrOperationClient: number
   plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2071,6 +2550,7 @@ export type RepertoireUpdateWithoutVilleInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
   plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2099,6 +2579,7 @@ export type RepertoireUncheckedUpdateWithoutVilleInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
   plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2127,6 +2608,7 @@ export type RepertoireUncheckedUpdateManyWithoutVilleInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
   plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2148,6 +2630,7 @@ export type RepertoireCreateManyPersonnelInput = {
   archiver?: boolean
   bloquer?: boolean
   sysDate: Date | string
+  dateSuppression?: Date | string | null
   observation: string
   nbrOperationClient: number
   plafond: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2169,6 +2652,7 @@ export type RepertoireUpdateWithoutPersonnelInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
   plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2197,6 +2681,7 @@ export type RepertoireUncheckedUpdateWithoutPersonnelInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
   plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2225,6 +2710,7 @@ export type RepertoireUncheckedUpdateManyWithoutPersonnelInput = {
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   bloquer?: Prisma.BoolFieldUpdateOperationsInput | boolean
   sysDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   observation?: Prisma.StringFieldUpdateOperationsInput | string
   nbrOperationClient?: Prisma.IntFieldUpdateOperationsInput | number
   plafond?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2331,6 +2817,7 @@ export type RepertoireSelect<ExtArgs extends runtime.Types.Extensions.InternalAr
   archiver?: boolean
   bloquer?: boolean
   sysDate?: boolean
+  dateSuppression?: boolean
   observation?: boolean
   nbrOperationClient?: boolean
   plafond?: boolean
@@ -2365,6 +2852,7 @@ export type RepertoireSelectScalar = {
   archiver?: boolean
   bloquer?: boolean
   sysDate?: boolean
+  dateSuppression?: boolean
   observation?: boolean
   nbrOperationClient?: boolean
   plafond?: boolean
@@ -2372,7 +2860,7 @@ export type RepertoireSelectScalar = {
   villeId?: boolean
 }
 
-export type RepertoireOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "designation" | "tel1" | "tel2" | "tel3" | "adresse" | "email" | "typeRepertoire" | "typeReglment" | "ife" | "ice" | "archiver" | "bloquer" | "sysDate" | "observation" | "nbrOperationClient" | "plafond" | "personnelId" | "villeId", ExtArgs["result"]["repertoire"]>
+export type RepertoireOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "designation" | "tel1" | "tel2" | "tel3" | "adresse" | "email" | "typeRepertoire" | "typeReglment" | "ife" | "ice" | "archiver" | "bloquer" | "sysDate" | "dateSuppression" | "observation" | "nbrOperationClient" | "plafond" | "personnelId" | "villeId", ExtArgs["result"]["repertoire"]>
 export type RepertoireInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   personnel?: boolean | Prisma.Repertoire$personnelArgs<ExtArgs>
   ville?: boolean | Prisma.Repertoire$villeArgs<ExtArgs>
@@ -2414,6 +2902,7 @@ export type $RepertoirePayload<ExtArgs extends runtime.Types.Extensions.Internal
     archiver: boolean
     bloquer: boolean
     sysDate: Date
+    dateSuppression: Date | null
     observation: string
     nbrOperationClient: number
     plafond: runtime.Decimal
@@ -2811,6 +3300,7 @@ export interface RepertoireFieldRefs {
   readonly archiver: Prisma.FieldRef<"Repertoire", 'Boolean'>
   readonly bloquer: Prisma.FieldRef<"Repertoire", 'Boolean'>
   readonly sysDate: Prisma.FieldRef<"Repertoire", 'DateTime'>
+  readonly dateSuppression: Prisma.FieldRef<"Repertoire", 'DateTime'>
   readonly observation: Prisma.FieldRef<"Repertoire", 'String'>
   readonly nbrOperationClient: Prisma.FieldRef<"Repertoire", 'Int'>
   readonly plafond: Prisma.FieldRef<"Repertoire", 'Decimal'>

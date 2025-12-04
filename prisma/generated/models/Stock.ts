@@ -132,6 +132,7 @@ export type StockMinAggregateOutputType = {
   prime1: runtime.Decimal | null
   prime2: runtime.Decimal | null
   prime3: runtime.Decimal | null
+  dateSuppression: Date | null
   fournisseurId: bigint | null
 }
 
@@ -171,6 +172,7 @@ export type StockMaxAggregateOutputType = {
   prime1: runtime.Decimal | null
   prime2: runtime.Decimal | null
   prime3: runtime.Decimal | null
+  dateSuppression: Date | null
   fournisseurId: bigint | null
 }
 
@@ -210,6 +212,7 @@ export type StockCountAggregateOutputType = {
   prime1: number
   prime2: number
   prime3: number
+  dateSuppression: number
   fournisseurId: number
   _all: number
 }
@@ -321,6 +324,7 @@ export type StockMinAggregateInputType = {
   prime1?: true
   prime2?: true
   prime3?: true
+  dateSuppression?: true
   fournisseurId?: true
 }
 
@@ -360,6 +364,7 @@ export type StockMaxAggregateInputType = {
   prime1?: true
   prime2?: true
   prime3?: true
+  dateSuppression?: true
   fournisseurId?: true
 }
 
@@ -399,6 +404,7 @@ export type StockCountAggregateInputType = {
   prime1?: true
   prime2?: true
   prime3?: true
+  dateSuppression?: true
   fournisseurId?: true
   _all?: true
 }
@@ -525,6 +531,7 @@ export type StockGroupByOutputType = {
   prime1: runtime.Decimal
   prime2: runtime.Decimal
   prime3: runtime.Decimal
+  dateSuppression: Date | null
   fournisseurId: bigint
   _count: StockCountAggregateOutputType | null
   _avg: StockAvgAggregateOutputType | null
@@ -587,6 +594,7 @@ export type StockWhereInput = {
   prime1?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Prisma.DateTimeNullableFilter<"Stock"> | Date | string | null
   fournisseurId?: Prisma.BigIntFilter<"Stock"> | bigint | number
   fournisseur?: Prisma.XOR<Prisma.FournisseurScalarRelationFilter, Prisma.FournisseurWhereInput>
   detAchatFactures?: Prisma.DetAchatFactureListRelationFilter
@@ -635,6 +643,7 @@ export type StockOrderByWithRelationInput = {
   prime1?: Prisma.SortOrder
   prime2?: Prisma.SortOrder
   prime3?: Prisma.SortOrder
+  dateSuppression?: Prisma.SortOrderInput | Prisma.SortOrder
   fournisseurId?: Prisma.SortOrder
   fournisseur?: Prisma.FournisseurOrderByWithRelationInput
   detAchatFactures?: Prisma.DetAchatFactureOrderByRelationAggregateInput
@@ -687,6 +696,7 @@ export type StockWhereUniqueInput = Prisma.AtLeast<{
   prime1?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Prisma.DateTimeNullableFilter<"Stock"> | Date | string | null
   fournisseurId?: Prisma.BigIntFilter<"Stock"> | bigint | number
   fournisseur?: Prisma.XOR<Prisma.FournisseurScalarRelationFilter, Prisma.FournisseurWhereInput>
   detAchatFactures?: Prisma.DetAchatFactureListRelationFilter
@@ -735,6 +745,7 @@ export type StockOrderByWithAggregationInput = {
   prime1?: Prisma.SortOrder
   prime2?: Prisma.SortOrder
   prime3?: Prisma.SortOrder
+  dateSuppression?: Prisma.SortOrderInput | Prisma.SortOrder
   fournisseurId?: Prisma.SortOrder
   _count?: Prisma.StockCountOrderByAggregateInput
   _avg?: Prisma.StockAvgOrderByAggregateInput
@@ -782,6 +793,7 @@ export type StockScalarWhereWithAggregatesInput = {
   prime1?: Prisma.DecimalWithAggregatesFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2?: Prisma.DecimalWithAggregatesFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3?: Prisma.DecimalWithAggregatesFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Prisma.DateTimeNullableWithAggregatesFilter<"Stock"> | Date | string | null
   fournisseurId?: Prisma.BigIntWithAggregatesFilter<"Stock"> | bigint | number
 }
 
@@ -821,6 +833,7 @@ export type StockCreateInput = {
   prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Date | string | null
   fournisseur: Prisma.FournisseurCreateNestedOneWithoutStocksInput
   detAchatFactures?: Prisma.DetAchatFactureCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonCreateNestedManyWithoutStockInput
@@ -868,6 +881,7 @@ export type StockUncheckedCreateInput = {
   prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Date | string | null
   fournisseurId: bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedCreateNestedManyWithoutStockInput
@@ -915,6 +929,7 @@ export type StockUpdateInput = {
   prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutStocksNestedInput
   detAchatFactures?: Prisma.DetAchatFactureUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUpdateManyWithoutStockNestedInput
@@ -962,6 +977,7 @@ export type StockUncheckedUpdateInput = {
   prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedUpdateManyWithoutStockNestedInput
@@ -1009,6 +1025,7 @@ export type StockCreateManyInput = {
   prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Date | string | null
   fournisseurId: bigint | number
 }
 
@@ -1048,6 +1065,7 @@ export type StockUpdateManyMutationInput = {
   prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
 }
 
 export type StockUncheckedUpdateManyInput = {
@@ -1086,6 +1104,7 @@ export type StockUncheckedUpdateManyInput = {
   prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
 }
 
@@ -1141,6 +1160,7 @@ export type StockCountOrderByAggregateInput = {
   prime1?: Prisma.SortOrder
   prime2?: Prisma.SortOrder
   prime3?: Prisma.SortOrder
+  dateSuppression?: Prisma.SortOrder
   fournisseurId?: Prisma.SortOrder
 }
 
@@ -1215,6 +1235,7 @@ export type StockMaxOrderByAggregateInput = {
   prime1?: Prisma.SortOrder
   prime2?: Prisma.SortOrder
   prime3?: Prisma.SortOrder
+  dateSuppression?: Prisma.SortOrder
   fournisseurId?: Prisma.SortOrder
 }
 
@@ -1254,6 +1275,7 @@ export type StockMinOrderByAggregateInput = {
   prime1?: Prisma.SortOrder
   prime2?: Prisma.SortOrder
   prime3?: Prisma.SortOrder
+  dateSuppression?: Prisma.SortOrder
   fournisseurId?: Prisma.SortOrder
 }
 
@@ -1487,6 +1509,7 @@ export type StockCreateWithoutFournisseurInput = {
   prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Date | string | null
   detAchatFactures?: Prisma.DetAchatFactureCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonCreateNestedManyWithoutStockInput
   detFactures?: Prisma.DetFactureCreateNestedManyWithoutStockInput
@@ -1533,6 +1556,7 @@ export type StockUncheckedCreateWithoutFournisseurInput = {
   prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Date | string | null
   detAchatFactures?: Prisma.DetAchatFactureUncheckedCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedCreateNestedManyWithoutStockInput
   detFactures?: Prisma.DetFactureUncheckedCreateNestedManyWithoutStockInput
@@ -1608,6 +1632,7 @@ export type StockScalarWhereInput = {
   prime1?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3?: Prisma.DecimalFilter<"Stock"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Prisma.DateTimeNullableFilter<"Stock"> | Date | string | null
   fournisseurId?: Prisma.BigIntFilter<"Stock"> | bigint | number
 }
 
@@ -1647,6 +1672,7 @@ export type StockCreateWithoutStockDepotsInput = {
   prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Date | string | null
   fournisseur: Prisma.FournisseurCreateNestedOneWithoutStocksInput
   detAchatFactures?: Prisma.DetAchatFactureCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonCreateNestedManyWithoutStockInput
@@ -1693,6 +1719,7 @@ export type StockUncheckedCreateWithoutStockDepotsInput = {
   prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Date | string | null
   fournisseurId: bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedCreateNestedManyWithoutStockInput
@@ -1755,6 +1782,7 @@ export type StockUpdateWithoutStockDepotsInput = {
   prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutStocksNestedInput
   detAchatFactures?: Prisma.DetAchatFactureUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUpdateManyWithoutStockNestedInput
@@ -1801,6 +1829,7 @@ export type StockUncheckedUpdateWithoutStockDepotsInput = {
   prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedUpdateManyWithoutStockNestedInput
@@ -1847,6 +1876,7 @@ export type StockCreateWithoutDetAchatFacturesInput = {
   prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Date | string | null
   fournisseur: Prisma.FournisseurCreateNestedOneWithoutStocksInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonCreateNestedManyWithoutStockInput
   detFactures?: Prisma.DetFactureCreateNestedManyWithoutStockInput
@@ -1893,6 +1923,7 @@ export type StockUncheckedCreateWithoutDetAchatFacturesInput = {
   prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Date | string | null
   fournisseurId: bigint | number
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedCreateNestedManyWithoutStockInput
   detFactures?: Prisma.DetFactureUncheckedCreateNestedManyWithoutStockInput
@@ -1955,6 +1986,7 @@ export type StockUpdateWithoutDetAchatFacturesInput = {
   prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutStocksNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUpdateManyWithoutStockNestedInput
   detFactures?: Prisma.DetFactureUpdateManyWithoutStockNestedInput
@@ -2001,6 +2033,7 @@ export type StockUncheckedUpdateWithoutDetAchatFacturesInput = {
   prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedUpdateManyWithoutStockNestedInput
   detFactures?: Prisma.DetFactureUncheckedUpdateManyWithoutStockNestedInput
@@ -2047,6 +2080,7 @@ export type StockCreateWithoutDetAchatLivraisonsInput = {
   prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Date | string | null
   fournisseur: Prisma.FournisseurCreateNestedOneWithoutStocksInput
   detAchatFactures?: Prisma.DetAchatFactureCreateNestedManyWithoutStockInput
   detFactures?: Prisma.DetFactureCreateNestedManyWithoutStockInput
@@ -2093,6 +2127,7 @@ export type StockUncheckedCreateWithoutDetAchatLivraisonsInput = {
   prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Date | string | null
   fournisseurId: bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedCreateNestedManyWithoutStockInput
   detFactures?: Prisma.DetFactureUncheckedCreateNestedManyWithoutStockInput
@@ -2155,6 +2190,7 @@ export type StockUpdateWithoutDetAchatLivraisonsInput = {
   prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutStocksNestedInput
   detAchatFactures?: Prisma.DetAchatFactureUpdateManyWithoutStockNestedInput
   detFactures?: Prisma.DetFactureUpdateManyWithoutStockNestedInput
@@ -2201,6 +2237,7 @@ export type StockUncheckedUpdateWithoutDetAchatLivraisonsInput = {
   prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedUpdateManyWithoutStockNestedInput
   detFactures?: Prisma.DetFactureUncheckedUpdateManyWithoutStockNestedInput
@@ -2247,6 +2284,7 @@ export type StockCreateWithoutDetailBonSortiesInput = {
   prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Date | string | null
   fournisseur: Prisma.FournisseurCreateNestedOneWithoutStocksInput
   detAchatFactures?: Prisma.DetAchatFactureCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonCreateNestedManyWithoutStockInput
@@ -2293,6 +2331,7 @@ export type StockUncheckedCreateWithoutDetailBonSortiesInput = {
   prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Date | string | null
   fournisseurId: bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedCreateNestedManyWithoutStockInput
@@ -2355,6 +2394,7 @@ export type StockUpdateWithoutDetailBonSortiesInput = {
   prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutStocksNestedInput
   detAchatFactures?: Prisma.DetAchatFactureUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUpdateManyWithoutStockNestedInput
@@ -2401,6 +2441,7 @@ export type StockUncheckedUpdateWithoutDetailBonSortiesInput = {
   prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedUpdateManyWithoutStockNestedInput
@@ -2447,6 +2488,7 @@ export type StockCreateWithoutDetBulttinPaisInput = {
   prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Date | string | null
   fournisseur: Prisma.FournisseurCreateNestedOneWithoutStocksInput
   detAchatFactures?: Prisma.DetAchatFactureCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonCreateNestedManyWithoutStockInput
@@ -2493,6 +2535,7 @@ export type StockUncheckedCreateWithoutDetBulttinPaisInput = {
   prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Date | string | null
   fournisseurId: bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedCreateNestedManyWithoutStockInput
@@ -2555,6 +2598,7 @@ export type StockUpdateWithoutDetBulttinPaisInput = {
   prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutStocksNestedInput
   detAchatFactures?: Prisma.DetAchatFactureUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUpdateManyWithoutStockNestedInput
@@ -2601,6 +2645,7 @@ export type StockUncheckedUpdateWithoutDetBulttinPaisInput = {
   prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedUpdateManyWithoutStockNestedInput
@@ -2647,6 +2692,7 @@ export type StockCreateWithoutDetFacturesInput = {
   prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Date | string | null
   fournisseur: Prisma.FournisseurCreateNestedOneWithoutStocksInput
   detAchatFactures?: Prisma.DetAchatFactureCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonCreateNestedManyWithoutStockInput
@@ -2693,6 +2739,7 @@ export type StockUncheckedCreateWithoutDetFacturesInput = {
   prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Date | string | null
   fournisseurId: bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedCreateNestedManyWithoutStockInput
@@ -2755,6 +2802,7 @@ export type StockUpdateWithoutDetFacturesInput = {
   prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutStocksNestedInput
   detAchatFactures?: Prisma.DetAchatFactureUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUpdateManyWithoutStockNestedInput
@@ -2801,6 +2849,7 @@ export type StockUncheckedUpdateWithoutDetFacturesInput = {
   prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedUpdateManyWithoutStockNestedInput
@@ -2847,6 +2896,7 @@ export type StockCreateWithoutDetImportationsInput = {
   prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Date | string | null
   fournisseur: Prisma.FournisseurCreateNestedOneWithoutStocksInput
   detAchatFactures?: Prisma.DetAchatFactureCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonCreateNestedManyWithoutStockInput
@@ -2893,6 +2943,7 @@ export type StockUncheckedCreateWithoutDetImportationsInput = {
   prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Date | string | null
   fournisseurId: bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedCreateNestedManyWithoutStockInput
@@ -2955,6 +3006,7 @@ export type StockUpdateWithoutDetImportationsInput = {
   prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutStocksNestedInput
   detAchatFactures?: Prisma.DetAchatFactureUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUpdateManyWithoutStockNestedInput
@@ -3001,6 +3053,7 @@ export type StockUncheckedUpdateWithoutDetImportationsInput = {
   prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedUpdateManyWithoutStockNestedInput
@@ -3047,6 +3100,7 @@ export type StockCreateWithoutDetLivraisonsInput = {
   prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Date | string | null
   fournisseur: Prisma.FournisseurCreateNestedOneWithoutStocksInput
   detAchatFactures?: Prisma.DetAchatFactureCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonCreateNestedManyWithoutStockInput
@@ -3093,6 +3147,7 @@ export type StockUncheckedCreateWithoutDetLivraisonsInput = {
   prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Date | string | null
   fournisseurId: bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedCreateNestedManyWithoutStockInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedCreateNestedManyWithoutStockInput
@@ -3155,6 +3210,7 @@ export type StockUpdateWithoutDetLivraisonsInput = {
   prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutStocksNestedInput
   detAchatFactures?: Prisma.DetAchatFactureUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUpdateManyWithoutStockNestedInput
@@ -3201,6 +3257,7 @@ export type StockUncheckedUpdateWithoutDetLivraisonsInput = {
   prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   fournisseurId?: Prisma.BigIntFieldUpdateOperationsInput | bigint | number
   detAchatFactures?: Prisma.DetAchatFactureUncheckedUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedUpdateManyWithoutStockNestedInput
@@ -3247,6 +3304,7 @@ export type StockCreateManyFournisseurInput = {
   prime1: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2: runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3: runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Date | string | null
 }
 
 export type StockUpdateWithoutFournisseurInput = {
@@ -3285,6 +3343,7 @@ export type StockUpdateWithoutFournisseurInput = {
   prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   detAchatFactures?: Prisma.DetAchatFactureUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUpdateManyWithoutStockNestedInput
   detFactures?: Prisma.DetFactureUpdateManyWithoutStockNestedInput
@@ -3331,6 +3390,7 @@ export type StockUncheckedUpdateWithoutFournisseurInput = {
   prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   detAchatFactures?: Prisma.DetAchatFactureUncheckedUpdateManyWithoutStockNestedInput
   detAchatLivraisons?: Prisma.DetAchatLivraisonUncheckedUpdateManyWithoutStockNestedInput
   detFactures?: Prisma.DetFactureUncheckedUpdateManyWithoutStockNestedInput
@@ -3377,6 +3437,7 @@ export type StockUncheckedUpdateManyWithoutFournisseurInput = {
   prime1?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime2?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   prime3?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
 }
 
 
@@ -3509,6 +3570,7 @@ export type StockSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = 
   prime1?: boolean
   prime2?: boolean
   prime3?: boolean
+  dateSuppression?: boolean
   fournisseurId?: boolean
   fournisseur?: boolean | Prisma.FournisseurDefaultArgs<ExtArgs>
   detAchatFactures?: boolean | Prisma.Stock$detAchatFacturesArgs<ExtArgs>
@@ -3560,10 +3622,11 @@ export type StockSelectScalar = {
   prime1?: boolean
   prime2?: boolean
   prime3?: boolean
+  dateSuppression?: boolean
   fournisseurId?: boolean
 }
 
-export type StockOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "designation" | "sysDate" | "pahtGrossiste" | "prixCommercial" | "tva" | "pattc" | "pvttc" | "pvaht" | "benifice" | "qteStock" | "qtePVMin1" | "qtePVMin2" | "qtePVMin3" | "qtePVMin4" | "qteFacturer" | "prixVentMin1" | "prixVentMin2" | "prixVentMin3" | "prixVentMin4" | "remiseMax1" | "remiseMax2" | "remiseMax3" | "remiseMax4" | "prixImport" | "commission" | "archiver" | "supprimer" | "qteStockImport" | "montant1" | "montant2" | "montant3" | "prime1" | "prime2" | "prime3" | "fournisseurId", ExtArgs["result"]["stock"]>
+export type StockOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "designation" | "sysDate" | "pahtGrossiste" | "prixCommercial" | "tva" | "pattc" | "pvttc" | "pvaht" | "benifice" | "qteStock" | "qtePVMin1" | "qtePVMin2" | "qtePVMin3" | "qtePVMin4" | "qteFacturer" | "prixVentMin1" | "prixVentMin2" | "prixVentMin3" | "prixVentMin4" | "remiseMax1" | "remiseMax2" | "remiseMax3" | "remiseMax4" | "prixImport" | "commission" | "archiver" | "supprimer" | "qteStockImport" | "montant1" | "montant2" | "montant3" | "prime1" | "prime2" | "prime3" | "dateSuppression" | "fournisseurId", ExtArgs["result"]["stock"]>
 export type StockInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   fournisseur?: boolean | Prisma.FournisseurDefaultArgs<ExtArgs>
   detAchatFactures?: boolean | Prisma.Stock$detAchatFacturesArgs<ExtArgs>
@@ -3626,6 +3689,7 @@ export type $StockPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs 
     prime1: runtime.Decimal
     prime2: runtime.Decimal
     prime3: runtime.Decimal
+    dateSuppression: Date | null
     fournisseurId: bigint
   }, ExtArgs["result"]["stock"]>
   composites: {}
@@ -4040,6 +4104,7 @@ export interface StockFieldRefs {
   readonly prime1: Prisma.FieldRef<"Stock", 'Decimal'>
   readonly prime2: Prisma.FieldRef<"Stock", 'Decimal'>
   readonly prime3: Prisma.FieldRef<"Stock", 'Decimal'>
+  readonly dateSuppression: Prisma.FieldRef<"Stock", 'DateTime'>
   readonly fournisseurId: Prisma.FieldRef<"Stock", 'BigInt'>
 }
     

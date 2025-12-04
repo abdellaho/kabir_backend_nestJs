@@ -31,6 +31,7 @@ model Fournisseur {
   tel2             				      String
   ice                           String
   adresse         				      String
+  dateSuppression   				    DateTime? @db.Date
   archiver              		    Boolean @default(false)
   supprimer              		    Boolean @default(false)
   ville           				      Ville?     				                @relation(fields: [villeId], references: [id])
@@ -52,6 +53,7 @@ model Personnel {
   adresse         				      String
   email           				      String
   dateEntrer      				      DateTime @db.Date
+  dateSuppression   				    DateTime? @db.Date
   salaire         				      Decimal @db.Decimal(10, 2)
   archiver              		    Boolean @default(false)
   supprimer              		    Boolean @default(false)
@@ -146,6 +148,7 @@ model Repertoire {
    archiver         				    Boolean @default(false)
    bloquer         				      Boolean @default(false)
    sysDate         				      DateTime
+   dateSuppression   				    DateTime? @db.Date
    observation     				      String
    nbrOperationClient 			    Int
    plafond   			              Decimal @db.Decimal(10, 2)
@@ -198,6 +201,7 @@ model Stock {
   prime1       			            Decimal @db.Decimal(10, 2)
   prime2       			            Decimal @db.Decimal(10, 2)
   prime3       			            Decimal @db.Decimal(10, 2)
+  dateSuppression   				    DateTime? @db.Date
   fournisseur        			      Fournisseur          	        @relation(fields: [fournisseurId], references: [id])
   fournisseurId      			      BigInt
   detAchatFactures   			      DetAchatFacture[]
@@ -304,7 +308,7 @@ model Absence {
   dateOperation  				      	  DateTime
   personnelOperation  				    Personnel?     				      	  @relation(name: "personnelOperationAbsence", fields: [personnelOperationId], references: [id])
   personnelOperationId  			    BigInt?
-  personnel     				      	  Personnel  			                @relation(name: "personnelAbsence", fields: [personnelId], references: [id])
+  personnel     				      	  Personnel  			                @relation(name: "personnelAbsence", fields: [personnelId], references: [id], onDelete: Restrict)
   personnelId   				      	  BigInt
 }
 
