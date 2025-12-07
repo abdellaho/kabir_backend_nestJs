@@ -1,14 +1,25 @@
-import { Injectable, OnModuleInit, Logger } from '@nestjs/common';
+import 'dotenv/config';
+import { Injectable, OnModuleInit, Logger, OnModuleDestroy } from '@nestjs/common';
 import { PrismaClient } from 'prisma/generated/client';
+import { PrismaMariaDb } from '@prisma/adapter-mariadb';
 
 @Injectable()
-export class DatabaseService extends PrismaClient implements OnModuleInit {
+export class DatabaseService extends PrismaClient implements OnModuleInit, OnModuleDestroy {
   private readonly logger = new Logger(DatabaseService.name);
 
   constructor() {
+    if (!process.env.DATABASE_URL) {
+      throw new Error(
+        'DATABASE_URL environment variable is required. Please ensure it is set in your .env file or environment variables.'
+      );
+    }
+
+    const adapter = new PrismaMariaDb(process.env.DATABASE_URL);
+
     super({
+      adapter,
       log: [
-        { emit: 'event', level: 'query', },
+        { emit: 'event', level: 'query' },
         { emit: 'stdout', level: 'warn' },
         { emit: 'stdout', level: 'info' },
         { emit: 'stdout', level: 'error' },
@@ -26,5 +37,9 @@ export class DatabaseService extends PrismaClient implements OnModuleInit {
 
   async onModuleInit() {
     await this.$connect();
+  }
+
+  async onModuleDestroy() {
+    await this.$disconnect();
   }
 }

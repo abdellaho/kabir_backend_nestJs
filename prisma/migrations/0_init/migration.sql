@@ -969,3 +969,4 @@ ALTER TABLE `Livraison` ADD CONSTRAINT `Livraison_fournisseurId_fkey` FOREIGN KE
 
 -- AddForeignKey
 ALTER TABLE `Solde` ADD CONSTRAINT `Solde_planComptableId_fkey` FOREIGN KEY (`planComptableId`) REFERENCES `PlanComptable`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+
