@@ -24,6 +24,96 @@ export class StockService {
     });
   }
 
+  async updateQteStock(id: number, quantity: number, typeOperation: number) {
+    const currentStock = await this.databaseService.stock.findUnique({
+      where: { id: BigInt(id) }
+    });
+
+    if (!currentStock) {
+      throw new Error(`Stock with id ${id} not found`);
+    }
+
+    let newQuantity: number;
+    
+    if (typeOperation === 1) { // Addition
+      newQuantity = currentStock.qteStock - quantity;
+    } else if (typeOperation === 2) { // Subtraction
+      newQuantity = currentStock.qteStock + quantity;
+      if (newQuantity < 0) {
+        throw new Error(`Insufficient stock: cannot subtract ${quantity} from ${currentStock.qteStock}`);
+      }
+    } else {
+      throw new Error(`Invalid operation type: ${typeOperation}`);
+    }
+
+    const updatedStock = await this.databaseService.stock.update({
+      where: { id: BigInt(id) },
+      data: { qteStock: newQuantity }
+    });
+
+    return updatedStock;
+  }
+
+  async updateQteStockFacturer(id: number, quantity: number, typeOperation: number) {
+    const currentStock = await this.databaseService.stock.findUnique({
+      where: { id: BigInt(id) }
+    });
+
+    if (!currentStock) {
+      throw new Error(`Stock with id ${id} not found`);
+    }
+
+    let newQuantity: number;
+    
+    if (typeOperation === 1) { // Addition
+      newQuantity = currentStock.qteFacturer - quantity;
+    } else if (typeOperation === 2) { // Subtraction
+      newQuantity = currentStock.qteFacturer + quantity;
+      if (newQuantity < 0) {
+        throw new Error(`Insufficient stock: cannot subtract ${quantity} from ${currentStock.qteFacturer}`);
+      }
+    } else {
+      throw new Error(`Invalid operation type: ${typeOperation}`);
+    }
+
+    const updatedStock = await this.databaseService.stock.update({
+      where: { id: BigInt(id) },
+      data: { qteFacturer: newQuantity }
+    });
+
+    return updatedStock;
+  }
+
+  async updateQteStockImport(id: number, quantity: number, typeOperation: number) {
+    const currentStock = await this.databaseService.stock.findUnique({
+      where: { id: BigInt(id) }
+    });
+
+    if (!currentStock) {
+      throw new Error(`Stock with id ${id} not found`);
+    }
+
+    let newQuantity: number;
+    
+    if (typeOperation === 1) { // Addition
+      newQuantity = currentStock.qteStockImport - quantity;
+    } else if (typeOperation === 2) { // Subtraction
+      newQuantity = currentStock.qteStockImport + quantity;
+      if (newQuantity < 0) {
+        throw new Error(`Insufficient stock: cannot subtract ${quantity} from ${currentStock.qteStockImport}`);
+      }
+    } else {
+      throw new Error(`Invalid operation type: ${typeOperation}`);
+    }
+
+    const updatedStock = await this.databaseService.stock.update({
+      where: { id: BigInt(id) },
+      data: { qteStockImport: newQuantity }
+    });
+
+    return updatedStock;
+  }
+
   update(id: number, updateStockDto: Prisma.StockUpdateInput) {
     return this.databaseService.stock.update({
       where: { id: BigInt(id) },

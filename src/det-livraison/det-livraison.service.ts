@@ -24,6 +24,12 @@ export class DetLivraisonService {
     return this.databaseService.detLivraison.findMany();
   }
 
+  findByLivraisonId(livraisonId: number) {
+    return this.databaseService.detLivraison.findMany({
+      where: { livraisonId: BigInt(livraisonId) },
+    });
+  }
+
   findOne(id: number) {
     return this.databaseService.detLivraison.findUnique({
       where: { id: BigInt(id) },

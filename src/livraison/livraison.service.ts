@@ -36,25 +36,28 @@ export class LivraisonService {
     });
   }
 
-  getLastNumeroLivraison(date: Date, id: number) {
+  async getLastNumeroLivraison(date: Date, id: number | null): Promise<number> {
     const year = date.getFullYear();
+    const startOfYear = new Date(`${year}-01-01T00:00:00.000Z`);
+    const endOfYear = new Date(`${year}-12-31T23:59:59.999Z`);
 
-    // Find the last `numLivraison` for the given year
-    let lastNumeroLivraison = this.databaseService.livraison.findFirst({
-      where: {
-        dateBl: {
-          gte: new Date(`${year}-01-01T00:00:00.000Z`),
-          lte: new Date(`${year}-12-31T23:59:59.999Z`),
-        },
-        id: BigInt(id),
+    // Build where clause conditionally
+    const whereClause: any = {
+      dateBl: {
+        gte: startOfYear,
+        lte: endOfYear,
       },
+    };
+
+    if (id && id !== null) {
+      whereClause.id = BigInt(id);
+    }
+
+    const lastLivraison = await this.databaseService.livraison.findFirst({
+      where: whereClause,
       orderBy: { numLivraison: 'desc' },
     });
 
-    if (lastNumeroLivraison && 'numLivraison' in lastNumeroLivraison) {
-      return lastNumeroLivraison.numLivraison;
-    } else {
-      return 1;
-    }
+    return lastLivraison?.numLivraison ?? 1;
   }
 }

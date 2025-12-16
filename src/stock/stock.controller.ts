@@ -36,6 +36,21 @@ export class StockController {
     return this.stockService.update(+id, updateStockDto);
   }
 
+  @Patch(':id/update-qte-stock')
+  updateQteStock(@Param('id') id: string, @Body() { qte, typeOperation }: { qte: number; typeOperation: number }) {
+    return this.stockService.updateQteStock(+id, qte, typeOperation);
+  }
+
+  @Patch(':id/update-qte-stock-import')
+  updateQteStockImport(@Param('id') id: string, @Body() { qte, typeOperation }: { qte: number; typeOperation: number }) {
+    return this.stockService.updateQteStockImport(+id, qte, typeOperation);
+  }
+
+  @Patch(':id/update-qte-stock-facturer')
+  updateQteStockFacturer(@Param('id') id: string, @Body() { qte, typeOperation }: { qte: number; typeOperation: number }) {
+    return this.stockService.updateQteStockFacturer(+id, qte, typeOperation);
+  }
+
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.stockService.remove(+id);
