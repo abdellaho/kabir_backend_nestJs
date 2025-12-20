@@ -10,24 +10,24 @@
 */
 
 export const TypePersonnel = {
-  NONE: '0',
-  ADMINISTRATEUR: '1',
-  GERANT: '2',
-  COMPATBLE: '3',
-  MAGASINIER: '4',
-  COMMERCIAL_INTERNE: '5',
-  COMMERCIAL_EXTERNE: '6'
+  NONE: 'NONE',
+  ADMINISTRATEUR: 'ADMINISTRATEUR',
+  GERANT: 'GERANT',
+  COMPATBLE: 'COMPATBLE',
+  MAGASINIER: 'MAGASINIER',
+  COMMERCIAL_INTERNE: 'COMMERCIAL_INTERNE',
+  COMMERCIAL_EXTERNE: 'COMMERCIAL_EXTERNE'
 } as const
 
 export type TypePersonnel = (typeof TypePersonnel)[keyof typeof TypePersonnel]
 
 
 export const TypeRepertoire = {
-  NONE: '0',
-  EMPLOYE: '1',
-  PHARMACIE: '2',
-  FOURNISSEUR: '3',
-  REVENDEUR: '4'
+  NONE: 'NONE',
+  EMPLOYE: 'EMPLOYE',
+  PHARMACIE: 'PHARMACIE',
+  FOURNISSEUR: 'FOURNISSEUR',
+  REVENDEUR: 'REVENDEUR'
 } as const
 
 export type TypeRepertoire = (typeof TypeRepertoire)[keyof typeof TypeRepertoire]

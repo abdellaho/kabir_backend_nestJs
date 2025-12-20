@@ -8,7 +8,7 @@
  *
  * 🟢 You can import this file directly.
  */
-import type * as runtime from "@prisma/client/runtime/client"
+import type * as runtime from "@prisma/client/runtime/library"
 import type * as $Enums from "../enums"
 import type * as Prisma from "../internal/prismaNamespace"
 
@@ -437,9 +437,9 @@ export type LivraisonGroupByOutputType = {
   codeBl: string
   dateBl: Date
   dateReglement: Date
-  dateReglement2: Date
-  dateReglement3: Date
-  dateReglement4: Date
+  dateReglement2: Date | null
+  dateReglement3: Date | null
+  dateReglement4: Date | null
   typeReglment: number
   typeReglment2: number
   typeReglment3: number
@@ -496,9 +496,9 @@ export type LivraisonWhereInput = {
   codeBl?: Prisma.StringFilter<"Livraison"> | string
   dateBl?: Prisma.DateTimeFilter<"Livraison"> | Date | string
   dateReglement?: Prisma.DateTimeFilter<"Livraison"> | Date | string
-  dateReglement2?: Prisma.DateTimeFilter<"Livraison"> | Date | string
-  dateReglement3?: Prisma.DateTimeFilter<"Livraison"> | Date | string
-  dateReglement4?: Prisma.DateTimeFilter<"Livraison"> | Date | string
+  dateReglement2?: Prisma.DateTimeNullableFilter<"Livraison"> | Date | string | null
+  dateReglement3?: Prisma.DateTimeNullableFilter<"Livraison"> | Date | string | null
+  dateReglement4?: Prisma.DateTimeNullableFilter<"Livraison"> | Date | string | null
   typeReglment?: Prisma.IntFilter<"Livraison"> | number
   typeReglment2?: Prisma.IntFilter<"Livraison"> | number
   typeReglment3?: Prisma.IntFilter<"Livraison"> | number
@@ -525,9 +525,9 @@ export type LivraisonWhereInput = {
   personnelAncienId?: Prisma.BigIntNullableFilter<"Livraison"> | bigint | number | null
   fournisseurId?: Prisma.BigIntFilter<"Livraison"> | bigint | number
   employeOperateur?: Prisma.XOR<Prisma.EmployeNullableScalarRelationFilter, Prisma.EmployeWhereInput> | null
-  personnel?: Prisma.XOR<Prisma.PersonnelScalarRelationFilter, Prisma.PersonnelWhereInput>
+  personnel?: Prisma.XOR<Prisma.PersonnelNullableScalarRelationFilter, Prisma.PersonnelWhereInput> | null
   personnelAncien?: Prisma.XOR<Prisma.PersonnelNullableScalarRelationFilter, Prisma.PersonnelWhereInput> | null
-  fournisseur?: Prisma.XOR<Prisma.FournisseurScalarRelationFilter, Prisma.FournisseurWhereInput>
+  fournisseur?: Prisma.XOR<Prisma.FournisseurNullableScalarRelationFilter, Prisma.FournisseurWhereInput> | null
   detLivraisons?: Prisma.DetLivraisonListRelationFilter
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonListRelationFilter
 }
@@ -538,9 +538,9 @@ export type LivraisonOrderByWithRelationInput = {
   codeBl?: Prisma.SortOrder
   dateBl?: Prisma.SortOrder
   dateReglement?: Prisma.SortOrder
-  dateReglement2?: Prisma.SortOrder
-  dateReglement3?: Prisma.SortOrder
-  dateReglement4?: Prisma.SortOrder
+  dateReglement2?: Prisma.SortOrderInput | Prisma.SortOrder
+  dateReglement3?: Prisma.SortOrderInput | Prisma.SortOrder
+  dateReglement4?: Prisma.SortOrderInput | Prisma.SortOrder
   typeReglment?: Prisma.SortOrder
   typeReglment2?: Prisma.SortOrder
   typeReglment3?: Prisma.SortOrder
@@ -584,9 +584,9 @@ export type LivraisonWhereUniqueInput = Prisma.AtLeast<{
   codeBl?: Prisma.StringFilter<"Livraison"> | string
   dateBl?: Prisma.DateTimeFilter<"Livraison"> | Date | string
   dateReglement?: Prisma.DateTimeFilter<"Livraison"> | Date | string
-  dateReglement2?: Prisma.DateTimeFilter<"Livraison"> | Date | string
-  dateReglement3?: Prisma.DateTimeFilter<"Livraison"> | Date | string
-  dateReglement4?: Prisma.DateTimeFilter<"Livraison"> | Date | string
+  dateReglement2?: Prisma.DateTimeNullableFilter<"Livraison"> | Date | string | null
+  dateReglement3?: Prisma.DateTimeNullableFilter<"Livraison"> | Date | string | null
+  dateReglement4?: Prisma.DateTimeNullableFilter<"Livraison"> | Date | string | null
   typeReglment?: Prisma.IntFilter<"Livraison"> | number
   typeReglment2?: Prisma.IntFilter<"Livraison"> | number
   typeReglment3?: Prisma.IntFilter<"Livraison"> | number
@@ -613,9 +613,9 @@ export type LivraisonWhereUniqueInput = Prisma.AtLeast<{
   personnelAncienId?: Prisma.BigIntNullableFilter<"Livraison"> | bigint | number | null
   fournisseurId?: Prisma.BigIntFilter<"Livraison"> | bigint | number
   employeOperateur?: Prisma.XOR<Prisma.EmployeNullableScalarRelationFilter, Prisma.EmployeWhereInput> | null
-  personnel?: Prisma.XOR<Prisma.PersonnelScalarRelationFilter, Prisma.PersonnelWhereInput>
+  personnel?: Prisma.XOR<Prisma.PersonnelNullableScalarRelationFilter, Prisma.PersonnelWhereInput> | null
   personnelAncien?: Prisma.XOR<Prisma.PersonnelNullableScalarRelationFilter, Prisma.PersonnelWhereInput> | null
-  fournisseur?: Prisma.XOR<Prisma.FournisseurScalarRelationFilter, Prisma.FournisseurWhereInput>
+  fournisseur?: Prisma.XOR<Prisma.FournisseurNullableScalarRelationFilter, Prisma.FournisseurWhereInput> | null
   detLivraisons?: Prisma.DetLivraisonListRelationFilter
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonListRelationFilter
 }, "id">
@@ -626,9 +626,9 @@ export type LivraisonOrderByWithAggregationInput = {
   codeBl?: Prisma.SortOrder
   dateBl?: Prisma.SortOrder
   dateReglement?: Prisma.SortOrder
-  dateReglement2?: Prisma.SortOrder
-  dateReglement3?: Prisma.SortOrder
-  dateReglement4?: Prisma.SortOrder
+  dateReglement2?: Prisma.SortOrderInput | Prisma.SortOrder
+  dateReglement3?: Prisma.SortOrderInput | Prisma.SortOrder
+  dateReglement4?: Prisma.SortOrderInput | Prisma.SortOrder
   typeReglment?: Prisma.SortOrder
   typeReglment2?: Prisma.SortOrder
   typeReglment3?: Prisma.SortOrder
@@ -670,9 +670,9 @@ export type LivraisonScalarWhereWithAggregatesInput = {
   codeBl?: Prisma.StringWithAggregatesFilter<"Livraison"> | string
   dateBl?: Prisma.DateTimeWithAggregatesFilter<"Livraison"> | Date | string
   dateReglement?: Prisma.DateTimeWithAggregatesFilter<"Livraison"> | Date | string
-  dateReglement2?: Prisma.DateTimeWithAggregatesFilter<"Livraison"> | Date | string
-  dateReglement3?: Prisma.DateTimeWithAggregatesFilter<"Livraison"> | Date | string
-  dateReglement4?: Prisma.DateTimeWithAggregatesFilter<"Livraison"> | Date | string
+  dateReglement2?: Prisma.DateTimeNullableWithAggregatesFilter<"Livraison"> | Date | string | null
+  dateReglement3?: Prisma.DateTimeNullableWithAggregatesFilter<"Livraison"> | Date | string | null
+  dateReglement4?: Prisma.DateTimeNullableWithAggregatesFilter<"Livraison"> | Date | string | null
   typeReglment?: Prisma.IntWithAggregatesFilter<"Livraison"> | number
   typeReglment2?: Prisma.IntWithAggregatesFilter<"Livraison"> | number
   typeReglment3?: Prisma.IntWithAggregatesFilter<"Livraison"> | number
@@ -706,9 +706,9 @@ export type LivraisonCreateInput = {
   codeBl: string
   dateBl: Date | string
   dateReglement: Date | string
-  dateReglement2: Date | string
-  dateReglement3: Date | string
-  dateReglement4: Date | string
+  dateReglement2?: Date | string | null
+  dateReglement3?: Date | string | null
+  dateReglement4?: Date | string | null
   typeReglment: number
   typeReglment2: number
   typeReglment3: number
@@ -731,9 +731,9 @@ export type LivraisonCreateInput = {
   facturer100?: boolean
   codeTransport: string
   employeOperateur?: Prisma.EmployeCreateNestedOneWithoutLivraisonsInput
-  personnel: Prisma.PersonnelCreateNestedOneWithoutLivraisonsInput
+  personnel?: Prisma.PersonnelCreateNestedOneWithoutLivraisonsInput
   personnelAncien?: Prisma.PersonnelCreateNestedOneWithoutLivraisonsAncienInput
-  fournisseur: Prisma.FournisseurCreateNestedOneWithoutLivraisonsInput
+  fournisseur?: Prisma.FournisseurCreateNestedOneWithoutLivraisonsInput
   detLivraisons?: Prisma.DetLivraisonCreateNestedManyWithoutLivraisonInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonCreateNestedManyWithoutLivraisonInput
 }
@@ -744,9 +744,9 @@ export type LivraisonUncheckedCreateInput = {
   codeBl: string
   dateBl: Date | string
   dateReglement: Date | string
-  dateReglement2: Date | string
-  dateReglement3: Date | string
-  dateReglement4: Date | string
+  dateReglement2?: Date | string | null
+  dateReglement3?: Date | string | null
+  dateReglement4?: Date | string | null
   typeReglment: number
   typeReglment2: number
   typeReglment3: number
@@ -782,9 +782,9 @@ export type LivraisonUpdateInput = {
   codeBl?: Prisma.StringFieldUpdateOperationsInput | string
   dateBl?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement3?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement4?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement4?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
@@ -807,9 +807,9 @@ export type LivraisonUpdateInput = {
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
   employeOperateur?: Prisma.EmployeUpdateOneWithoutLivraisonsNestedInput
-  personnel?: Prisma.PersonnelUpdateOneRequiredWithoutLivraisonsNestedInput
+  personnel?: Prisma.PersonnelUpdateOneWithoutLivraisonsNestedInput
   personnelAncien?: Prisma.PersonnelUpdateOneWithoutLivraisonsAncienNestedInput
-  fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutLivraisonsNestedInput
+  fournisseur?: Prisma.FournisseurUpdateOneWithoutLivraisonsNestedInput
   detLivraisons?: Prisma.DetLivraisonUpdateManyWithoutLivraisonNestedInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUpdateManyWithoutLivraisonNestedInput
 }
@@ -820,9 +820,9 @@ export type LivraisonUncheckedUpdateInput = {
   codeBl?: Prisma.StringFieldUpdateOperationsInput | string
   dateBl?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement3?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement4?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement4?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
@@ -858,9 +858,9 @@ export type LivraisonCreateManyInput = {
   codeBl: string
   dateBl: Date | string
   dateReglement: Date | string
-  dateReglement2: Date | string
-  dateReglement3: Date | string
-  dateReglement4: Date | string
+  dateReglement2?: Date | string | null
+  dateReglement3?: Date | string | null
+  dateReglement4?: Date | string | null
   typeReglment: number
   typeReglment2: number
   typeReglment3: number
@@ -894,9 +894,9 @@ export type LivraisonUpdateManyMutationInput = {
   codeBl?: Prisma.StringFieldUpdateOperationsInput | string
   dateBl?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement3?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement4?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement4?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
@@ -926,9 +926,9 @@ export type LivraisonUncheckedUpdateManyInput = {
   codeBl?: Prisma.StringFieldUpdateOperationsInput | string
   dateBl?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement3?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement4?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement4?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
@@ -969,6 +969,11 @@ export type LivraisonOrderByRelationAggregateInput = {
 export type LivraisonScalarRelationFilter = {
   is?: Prisma.LivraisonWhereInput
   isNot?: Prisma.LivraisonWhereInput
+}
+
+export type LivraisonNullableScalarRelationFilter = {
+  is?: Prisma.LivraisonWhereInput | null
+  isNot?: Prisma.LivraisonWhereInput | null
 }
 
 export type LivraisonOrderByRelevanceInput = {
@@ -1323,10 +1328,12 @@ export type LivraisonCreateNestedOneWithoutDetLivraisonsInput = {
   connect?: Prisma.LivraisonWhereUniqueInput
 }
 
-export type LivraisonUpdateOneRequiredWithoutDetLivraisonsNestedInput = {
+export type LivraisonUpdateOneWithoutDetLivraisonsNestedInput = {
   create?: Prisma.XOR<Prisma.LivraisonCreateWithoutDetLivraisonsInput, Prisma.LivraisonUncheckedCreateWithoutDetLivraisonsInput>
   connectOrCreate?: Prisma.LivraisonCreateOrConnectWithoutDetLivraisonsInput
   upsert?: Prisma.LivraisonUpsertWithoutDetLivraisonsInput
+  disconnect?: Prisma.LivraisonWhereInput | boolean
+  delete?: Prisma.LivraisonWhereInput | boolean
   connect?: Prisma.LivraisonWhereUniqueInput
   update?: Prisma.XOR<Prisma.XOR<Prisma.LivraisonUpdateToOneWithWhereWithoutDetLivraisonsInput, Prisma.LivraisonUpdateWithoutDetLivraisonsInput>, Prisma.LivraisonUncheckedUpdateWithoutDetLivraisonsInput>
 }
@@ -1337,9 +1344,9 @@ export type LivraisonCreateWithoutFournisseurInput = {
   codeBl: string
   dateBl: Date | string
   dateReglement: Date | string
-  dateReglement2: Date | string
-  dateReglement3: Date | string
-  dateReglement4: Date | string
+  dateReglement2?: Date | string | null
+  dateReglement3?: Date | string | null
+  dateReglement4?: Date | string | null
   typeReglment: number
   typeReglment2: number
   typeReglment3: number
@@ -1362,7 +1369,7 @@ export type LivraisonCreateWithoutFournisseurInput = {
   facturer100?: boolean
   codeTransport: string
   employeOperateur?: Prisma.EmployeCreateNestedOneWithoutLivraisonsInput
-  personnel: Prisma.PersonnelCreateNestedOneWithoutLivraisonsInput
+  personnel?: Prisma.PersonnelCreateNestedOneWithoutLivraisonsInput
   personnelAncien?: Prisma.PersonnelCreateNestedOneWithoutLivraisonsAncienInput
   detLivraisons?: Prisma.DetLivraisonCreateNestedManyWithoutLivraisonInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonCreateNestedManyWithoutLivraisonInput
@@ -1374,9 +1381,9 @@ export type LivraisonUncheckedCreateWithoutFournisseurInput = {
   codeBl: string
   dateBl: Date | string
   dateReglement: Date | string
-  dateReglement2: Date | string
-  dateReglement3: Date | string
-  dateReglement4: Date | string
+  dateReglement2?: Date | string | null
+  dateReglement3?: Date | string | null
+  dateReglement4?: Date | string | null
   typeReglment: number
   typeReglment2: number
   typeReglment3: number
@@ -1440,9 +1447,9 @@ export type LivraisonScalarWhereInput = {
   codeBl?: Prisma.StringFilter<"Livraison"> | string
   dateBl?: Prisma.DateTimeFilter<"Livraison"> | Date | string
   dateReglement?: Prisma.DateTimeFilter<"Livraison"> | Date | string
-  dateReglement2?: Prisma.DateTimeFilter<"Livraison"> | Date | string
-  dateReglement3?: Prisma.DateTimeFilter<"Livraison"> | Date | string
-  dateReglement4?: Prisma.DateTimeFilter<"Livraison"> | Date | string
+  dateReglement2?: Prisma.DateTimeNullableFilter<"Livraison"> | Date | string | null
+  dateReglement3?: Prisma.DateTimeNullableFilter<"Livraison"> | Date | string | null
+  dateReglement4?: Prisma.DateTimeNullableFilter<"Livraison"> | Date | string | null
   typeReglment?: Prisma.IntFilter<"Livraison"> | number
   typeReglment2?: Prisma.IntFilter<"Livraison"> | number
   typeReglment3?: Prisma.IntFilter<"Livraison"> | number
@@ -1476,9 +1483,9 @@ export type LivraisonCreateWithoutPersonnelInput = {
   codeBl: string
   dateBl: Date | string
   dateReglement: Date | string
-  dateReglement2: Date | string
-  dateReglement3: Date | string
-  dateReglement4: Date | string
+  dateReglement2?: Date | string | null
+  dateReglement3?: Date | string | null
+  dateReglement4?: Date | string | null
   typeReglment: number
   typeReglment2: number
   typeReglment3: number
@@ -1502,7 +1509,7 @@ export type LivraisonCreateWithoutPersonnelInput = {
   codeTransport: string
   employeOperateur?: Prisma.EmployeCreateNestedOneWithoutLivraisonsInput
   personnelAncien?: Prisma.PersonnelCreateNestedOneWithoutLivraisonsAncienInput
-  fournisseur: Prisma.FournisseurCreateNestedOneWithoutLivraisonsInput
+  fournisseur?: Prisma.FournisseurCreateNestedOneWithoutLivraisonsInput
   detLivraisons?: Prisma.DetLivraisonCreateNestedManyWithoutLivraisonInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonCreateNestedManyWithoutLivraisonInput
 }
@@ -1513,9 +1520,9 @@ export type LivraisonUncheckedCreateWithoutPersonnelInput = {
   codeBl: string
   dateBl: Date | string
   dateReglement: Date | string
-  dateReglement2: Date | string
-  dateReglement3: Date | string
-  dateReglement4: Date | string
+  dateReglement2?: Date | string | null
+  dateReglement3?: Date | string | null
+  dateReglement4?: Date | string | null
   typeReglment: number
   typeReglment2: number
   typeReglment3: number
@@ -1560,9 +1567,9 @@ export type LivraisonCreateWithoutPersonnelAncienInput = {
   codeBl: string
   dateBl: Date | string
   dateReglement: Date | string
-  dateReglement2: Date | string
-  dateReglement3: Date | string
-  dateReglement4: Date | string
+  dateReglement2?: Date | string | null
+  dateReglement3?: Date | string | null
+  dateReglement4?: Date | string | null
   typeReglment: number
   typeReglment2: number
   typeReglment3: number
@@ -1585,8 +1592,8 @@ export type LivraisonCreateWithoutPersonnelAncienInput = {
   facturer100?: boolean
   codeTransport: string
   employeOperateur?: Prisma.EmployeCreateNestedOneWithoutLivraisonsInput
-  personnel: Prisma.PersonnelCreateNestedOneWithoutLivraisonsInput
-  fournisseur: Prisma.FournisseurCreateNestedOneWithoutLivraisonsInput
+  personnel?: Prisma.PersonnelCreateNestedOneWithoutLivraisonsInput
+  fournisseur?: Prisma.FournisseurCreateNestedOneWithoutLivraisonsInput
   detLivraisons?: Prisma.DetLivraisonCreateNestedManyWithoutLivraisonInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonCreateNestedManyWithoutLivraisonInput
 }
@@ -1597,9 +1604,9 @@ export type LivraisonUncheckedCreateWithoutPersonnelAncienInput = {
   codeBl: string
   dateBl: Date | string
   dateReglement: Date | string
-  dateReglement2: Date | string
-  dateReglement3: Date | string
-  dateReglement4: Date | string
+  dateReglement2?: Date | string | null
+  dateReglement3?: Date | string | null
+  dateReglement4?: Date | string | null
   typeReglment: number
   typeReglment2: number
   typeReglment3: number
@@ -1676,9 +1683,9 @@ export type LivraisonCreateWithoutEmployeOperateurInput = {
   codeBl: string
   dateBl: Date | string
   dateReglement: Date | string
-  dateReglement2: Date | string
-  dateReglement3: Date | string
-  dateReglement4: Date | string
+  dateReglement2?: Date | string | null
+  dateReglement3?: Date | string | null
+  dateReglement4?: Date | string | null
   typeReglment: number
   typeReglment2: number
   typeReglment3: number
@@ -1700,9 +1707,9 @@ export type LivraisonCreateWithoutEmployeOperateurInput = {
   mntReglement4: runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: boolean
   codeTransport: string
-  personnel: Prisma.PersonnelCreateNestedOneWithoutLivraisonsInput
+  personnel?: Prisma.PersonnelCreateNestedOneWithoutLivraisonsInput
   personnelAncien?: Prisma.PersonnelCreateNestedOneWithoutLivraisonsAncienInput
-  fournisseur: Prisma.FournisseurCreateNestedOneWithoutLivraisonsInput
+  fournisseur?: Prisma.FournisseurCreateNestedOneWithoutLivraisonsInput
   detLivraisons?: Prisma.DetLivraisonCreateNestedManyWithoutLivraisonInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonCreateNestedManyWithoutLivraisonInput
 }
@@ -1713,9 +1720,9 @@ export type LivraisonUncheckedCreateWithoutEmployeOperateurInput = {
   codeBl: string
   dateBl: Date | string
   dateReglement: Date | string
-  dateReglement2: Date | string
-  dateReglement3: Date | string
-  dateReglement4: Date | string
+  dateReglement2?: Date | string | null
+  dateReglement3?: Date | string | null
+  dateReglement4?: Date | string | null
   typeReglment: number
   typeReglment2: number
   typeReglment3: number
@@ -1776,9 +1783,9 @@ export type LivraisonCreateWithoutDetBulttinLivraisonsInput = {
   codeBl: string
   dateBl: Date | string
   dateReglement: Date | string
-  dateReglement2: Date | string
-  dateReglement3: Date | string
-  dateReglement4: Date | string
+  dateReglement2?: Date | string | null
+  dateReglement3?: Date | string | null
+  dateReglement4?: Date | string | null
   typeReglment: number
   typeReglment2: number
   typeReglment3: number
@@ -1801,9 +1808,9 @@ export type LivraisonCreateWithoutDetBulttinLivraisonsInput = {
   facturer100?: boolean
   codeTransport: string
   employeOperateur?: Prisma.EmployeCreateNestedOneWithoutLivraisonsInput
-  personnel: Prisma.PersonnelCreateNestedOneWithoutLivraisonsInput
+  personnel?: Prisma.PersonnelCreateNestedOneWithoutLivraisonsInput
   personnelAncien?: Prisma.PersonnelCreateNestedOneWithoutLivraisonsAncienInput
-  fournisseur: Prisma.FournisseurCreateNestedOneWithoutLivraisonsInput
+  fournisseur?: Prisma.FournisseurCreateNestedOneWithoutLivraisonsInput
   detLivraisons?: Prisma.DetLivraisonCreateNestedManyWithoutLivraisonInput
 }
 
@@ -1813,9 +1820,9 @@ export type LivraisonUncheckedCreateWithoutDetBulttinLivraisonsInput = {
   codeBl: string
   dateBl: Date | string
   dateReglement: Date | string
-  dateReglement2: Date | string
-  dateReglement3: Date | string
-  dateReglement4: Date | string
+  dateReglement2?: Date | string | null
+  dateReglement3?: Date | string | null
+  dateReglement4?: Date | string | null
   typeReglment: number
   typeReglment2: number
   typeReglment3: number
@@ -1866,9 +1873,9 @@ export type LivraisonUpdateWithoutDetBulttinLivraisonsInput = {
   codeBl?: Prisma.StringFieldUpdateOperationsInput | string
   dateBl?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement3?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement4?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement4?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
@@ -1891,9 +1898,9 @@ export type LivraisonUpdateWithoutDetBulttinLivraisonsInput = {
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
   employeOperateur?: Prisma.EmployeUpdateOneWithoutLivraisonsNestedInput
-  personnel?: Prisma.PersonnelUpdateOneRequiredWithoutLivraisonsNestedInput
+  personnel?: Prisma.PersonnelUpdateOneWithoutLivraisonsNestedInput
   personnelAncien?: Prisma.PersonnelUpdateOneWithoutLivraisonsAncienNestedInput
-  fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutLivraisonsNestedInput
+  fournisseur?: Prisma.FournisseurUpdateOneWithoutLivraisonsNestedInput
   detLivraisons?: Prisma.DetLivraisonUpdateManyWithoutLivraisonNestedInput
 }
 
@@ -1903,9 +1910,9 @@ export type LivraisonUncheckedUpdateWithoutDetBulttinLivraisonsInput = {
   codeBl?: Prisma.StringFieldUpdateOperationsInput | string
   dateBl?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement3?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement4?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement4?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
@@ -1940,9 +1947,9 @@ export type LivraisonCreateWithoutDetLivraisonsInput = {
   codeBl: string
   dateBl: Date | string
   dateReglement: Date | string
-  dateReglement2: Date | string
-  dateReglement3: Date | string
-  dateReglement4: Date | string
+  dateReglement2?: Date | string | null
+  dateReglement3?: Date | string | null
+  dateReglement4?: Date | string | null
   typeReglment: number
   typeReglment2: number
   typeReglment3: number
@@ -1965,9 +1972,9 @@ export type LivraisonCreateWithoutDetLivraisonsInput = {
   facturer100?: boolean
   codeTransport: string
   employeOperateur?: Prisma.EmployeCreateNestedOneWithoutLivraisonsInput
-  personnel: Prisma.PersonnelCreateNestedOneWithoutLivraisonsInput
+  personnel?: Prisma.PersonnelCreateNestedOneWithoutLivraisonsInput
   personnelAncien?: Prisma.PersonnelCreateNestedOneWithoutLivraisonsAncienInput
-  fournisseur: Prisma.FournisseurCreateNestedOneWithoutLivraisonsInput
+  fournisseur?: Prisma.FournisseurCreateNestedOneWithoutLivraisonsInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonCreateNestedManyWithoutLivraisonInput
 }
 
@@ -1977,9 +1984,9 @@ export type LivraisonUncheckedCreateWithoutDetLivraisonsInput = {
   codeBl: string
   dateBl: Date | string
   dateReglement: Date | string
-  dateReglement2: Date | string
-  dateReglement3: Date | string
-  dateReglement4: Date | string
+  dateReglement2?: Date | string | null
+  dateReglement3?: Date | string | null
+  dateReglement4?: Date | string | null
   typeReglment: number
   typeReglment2: number
   typeReglment3: number
@@ -2030,9 +2037,9 @@ export type LivraisonUpdateWithoutDetLivraisonsInput = {
   codeBl?: Prisma.StringFieldUpdateOperationsInput | string
   dateBl?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement3?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement4?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement4?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
@@ -2055,9 +2062,9 @@ export type LivraisonUpdateWithoutDetLivraisonsInput = {
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
   employeOperateur?: Prisma.EmployeUpdateOneWithoutLivraisonsNestedInput
-  personnel?: Prisma.PersonnelUpdateOneRequiredWithoutLivraisonsNestedInput
+  personnel?: Prisma.PersonnelUpdateOneWithoutLivraisonsNestedInput
   personnelAncien?: Prisma.PersonnelUpdateOneWithoutLivraisonsAncienNestedInput
-  fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutLivraisonsNestedInput
+  fournisseur?: Prisma.FournisseurUpdateOneWithoutLivraisonsNestedInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUpdateManyWithoutLivraisonNestedInput
 }
 
@@ -2067,9 +2074,9 @@ export type LivraisonUncheckedUpdateWithoutDetLivraisonsInput = {
   codeBl?: Prisma.StringFieldUpdateOperationsInput | string
   dateBl?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement3?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement4?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement4?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
@@ -2104,9 +2111,9 @@ export type LivraisonCreateManyFournisseurInput = {
   codeBl: string
   dateBl: Date | string
   dateReglement: Date | string
-  dateReglement2: Date | string
-  dateReglement3: Date | string
-  dateReglement4: Date | string
+  dateReglement2?: Date | string | null
+  dateReglement3?: Date | string | null
+  dateReglement4?: Date | string | null
   typeReglment: number
   typeReglment2: number
   typeReglment3: number
@@ -2139,9 +2146,9 @@ export type LivraisonUpdateWithoutFournisseurInput = {
   codeBl?: Prisma.StringFieldUpdateOperationsInput | string
   dateBl?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement3?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement4?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement4?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
@@ -2164,7 +2171,7 @@ export type LivraisonUpdateWithoutFournisseurInput = {
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
   employeOperateur?: Prisma.EmployeUpdateOneWithoutLivraisonsNestedInput
-  personnel?: Prisma.PersonnelUpdateOneRequiredWithoutLivraisonsNestedInput
+  personnel?: Prisma.PersonnelUpdateOneWithoutLivraisonsNestedInput
   personnelAncien?: Prisma.PersonnelUpdateOneWithoutLivraisonsAncienNestedInput
   detLivraisons?: Prisma.DetLivraisonUpdateManyWithoutLivraisonNestedInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUpdateManyWithoutLivraisonNestedInput
@@ -2176,9 +2183,9 @@ export type LivraisonUncheckedUpdateWithoutFournisseurInput = {
   codeBl?: Prisma.StringFieldUpdateOperationsInput | string
   dateBl?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement3?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement4?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement4?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
@@ -2213,9 +2220,9 @@ export type LivraisonUncheckedUpdateManyWithoutFournisseurInput = {
   codeBl?: Prisma.StringFieldUpdateOperationsInput | string
   dateBl?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement3?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement4?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement4?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
@@ -2248,9 +2255,9 @@ export type LivraisonCreateManyPersonnelInput = {
   codeBl: string
   dateBl: Date | string
   dateReglement: Date | string
-  dateReglement2: Date | string
-  dateReglement3: Date | string
-  dateReglement4: Date | string
+  dateReglement2?: Date | string | null
+  dateReglement3?: Date | string | null
+  dateReglement4?: Date | string | null
   typeReglment: number
   typeReglment2: number
   typeReglment3: number
@@ -2283,9 +2290,9 @@ export type LivraisonCreateManyPersonnelAncienInput = {
   codeBl: string
   dateBl: Date | string
   dateReglement: Date | string
-  dateReglement2: Date | string
-  dateReglement3: Date | string
-  dateReglement4: Date | string
+  dateReglement2?: Date | string | null
+  dateReglement3?: Date | string | null
+  dateReglement4?: Date | string | null
   typeReglment: number
   typeReglment2: number
   typeReglment3: number
@@ -2318,9 +2325,9 @@ export type LivraisonUpdateWithoutPersonnelInput = {
   codeBl?: Prisma.StringFieldUpdateOperationsInput | string
   dateBl?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement3?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement4?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement4?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
@@ -2344,7 +2351,7 @@ export type LivraisonUpdateWithoutPersonnelInput = {
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
   employeOperateur?: Prisma.EmployeUpdateOneWithoutLivraisonsNestedInput
   personnelAncien?: Prisma.PersonnelUpdateOneWithoutLivraisonsAncienNestedInput
-  fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutLivraisonsNestedInput
+  fournisseur?: Prisma.FournisseurUpdateOneWithoutLivraisonsNestedInput
   detLivraisons?: Prisma.DetLivraisonUpdateManyWithoutLivraisonNestedInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUpdateManyWithoutLivraisonNestedInput
 }
@@ -2355,9 +2362,9 @@ export type LivraisonUncheckedUpdateWithoutPersonnelInput = {
   codeBl?: Prisma.StringFieldUpdateOperationsInput | string
   dateBl?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement3?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement4?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement4?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
@@ -2392,9 +2399,9 @@ export type LivraisonUncheckedUpdateManyWithoutPersonnelInput = {
   codeBl?: Prisma.StringFieldUpdateOperationsInput | string
   dateBl?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement3?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement4?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement4?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
@@ -2427,9 +2434,9 @@ export type LivraisonUpdateWithoutPersonnelAncienInput = {
   codeBl?: Prisma.StringFieldUpdateOperationsInput | string
   dateBl?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement3?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement4?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement4?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
@@ -2452,8 +2459,8 @@ export type LivraisonUpdateWithoutPersonnelAncienInput = {
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
   employeOperateur?: Prisma.EmployeUpdateOneWithoutLivraisonsNestedInput
-  personnel?: Prisma.PersonnelUpdateOneRequiredWithoutLivraisonsNestedInput
-  fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutLivraisonsNestedInput
+  personnel?: Prisma.PersonnelUpdateOneWithoutLivraisonsNestedInput
+  fournisseur?: Prisma.FournisseurUpdateOneWithoutLivraisonsNestedInput
   detLivraisons?: Prisma.DetLivraisonUpdateManyWithoutLivraisonNestedInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUpdateManyWithoutLivraisonNestedInput
 }
@@ -2464,9 +2471,9 @@ export type LivraisonUncheckedUpdateWithoutPersonnelAncienInput = {
   codeBl?: Prisma.StringFieldUpdateOperationsInput | string
   dateBl?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement3?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement4?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement4?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
@@ -2501,9 +2508,9 @@ export type LivraisonUncheckedUpdateManyWithoutPersonnelAncienInput = {
   codeBl?: Prisma.StringFieldUpdateOperationsInput | string
   dateBl?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement3?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement4?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement4?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
@@ -2536,9 +2543,9 @@ export type LivraisonCreateManyEmployeOperateurInput = {
   codeBl: string
   dateBl: Date | string
   dateReglement: Date | string
-  dateReglement2: Date | string
-  dateReglement3: Date | string
-  dateReglement4: Date | string
+  dateReglement2?: Date | string | null
+  dateReglement3?: Date | string | null
+  dateReglement4?: Date | string | null
   typeReglment: number
   typeReglment2: number
   typeReglment3: number
@@ -2571,9 +2578,9 @@ export type LivraisonUpdateWithoutEmployeOperateurInput = {
   codeBl?: Prisma.StringFieldUpdateOperationsInput | string
   dateBl?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement3?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement4?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement4?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
@@ -2595,9 +2602,9 @@ export type LivraisonUpdateWithoutEmployeOperateurInput = {
   mntReglement4?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   facturer100?: Prisma.BoolFieldUpdateOperationsInput | boolean
   codeTransport?: Prisma.StringFieldUpdateOperationsInput | string
-  personnel?: Prisma.PersonnelUpdateOneRequiredWithoutLivraisonsNestedInput
+  personnel?: Prisma.PersonnelUpdateOneWithoutLivraisonsNestedInput
   personnelAncien?: Prisma.PersonnelUpdateOneWithoutLivraisonsAncienNestedInput
-  fournisseur?: Prisma.FournisseurUpdateOneRequiredWithoutLivraisonsNestedInput
+  fournisseur?: Prisma.FournisseurUpdateOneWithoutLivraisonsNestedInput
   detLivraisons?: Prisma.DetLivraisonUpdateManyWithoutLivraisonNestedInput
   detBulttinLivraisons?: Prisma.DetBulttinLivraisonUpdateManyWithoutLivraisonNestedInput
 }
@@ -2608,9 +2615,9 @@ export type LivraisonUncheckedUpdateWithoutEmployeOperateurInput = {
   codeBl?: Prisma.StringFieldUpdateOperationsInput | string
   dateBl?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement3?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement4?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement4?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
@@ -2645,9 +2652,9 @@ export type LivraisonUncheckedUpdateManyWithoutEmployeOperateurInput = {
   codeBl?: Prisma.StringFieldUpdateOperationsInput | string
   dateBl?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   dateReglement?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement2?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement3?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  dateReglement4?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  dateReglement2?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement3?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  dateReglement4?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   typeReglment?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
@@ -2749,9 +2756,9 @@ export type LivraisonSelect<ExtArgs extends runtime.Types.Extensions.InternalArg
   personnelAncienId?: boolean
   fournisseurId?: boolean
   employeOperateur?: boolean | Prisma.Livraison$employeOperateurArgs<ExtArgs>
-  personnel?: boolean | Prisma.PersonnelDefaultArgs<ExtArgs>
+  personnel?: boolean | Prisma.Livraison$personnelArgs<ExtArgs>
   personnelAncien?: boolean | Prisma.Livraison$personnelAncienArgs<ExtArgs>
-  fournisseur?: boolean | Prisma.FournisseurDefaultArgs<ExtArgs>
+  fournisseur?: boolean | Prisma.Livraison$fournisseurArgs<ExtArgs>
   detLivraisons?: boolean | Prisma.Livraison$detLivraisonsArgs<ExtArgs>
   detBulttinLivraisons?: boolean | Prisma.Livraison$detBulttinLivraisonsArgs<ExtArgs>
   _count?: boolean | Prisma.LivraisonCountOutputTypeDefaultArgs<ExtArgs>
@@ -2798,9 +2805,9 @@ export type LivraisonSelectScalar = {
 export type LivraisonOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "numLivraison" | "codeBl" | "dateBl" | "dateReglement" | "dateReglement2" | "dateReglement3" | "dateReglement4" | "typeReglment" | "typeReglment2" | "typeReglment3" | "typeReglment4" | "mantantBL" | "mantantBLReel" | "mantantBLBenefice" | "typePaiement" | "mantantBLPourcent" | "reglerNonRegler" | "sysDate" | "infinity" | "etatBultinPaie" | "livrernonlivrer" | "avecRemise" | "mntReglement" | "mntReglement2" | "mntReglement3" | "mntReglement4" | "facturer100" | "codeTransport" | "employeOperateurId" | "personnelId" | "personnelAncienId" | "fournisseurId", ExtArgs["result"]["livraison"]>
 export type LivraisonInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   employeOperateur?: boolean | Prisma.Livraison$employeOperateurArgs<ExtArgs>
-  personnel?: boolean | Prisma.PersonnelDefaultArgs<ExtArgs>
+  personnel?: boolean | Prisma.Livraison$personnelArgs<ExtArgs>
   personnelAncien?: boolean | Prisma.Livraison$personnelAncienArgs<ExtArgs>
-  fournisseur?: boolean | Prisma.FournisseurDefaultArgs<ExtArgs>
+  fournisseur?: boolean | Prisma.Livraison$fournisseurArgs<ExtArgs>
   detLivraisons?: boolean | Prisma.Livraison$detLivraisonsArgs<ExtArgs>
   detBulttinLivraisons?: boolean | Prisma.Livraison$detBulttinLivraisonsArgs<ExtArgs>
   _count?: boolean | Prisma.LivraisonCountOutputTypeDefaultArgs<ExtArgs>
@@ -2810,9 +2817,9 @@ export type $LivraisonPayload<ExtArgs extends runtime.Types.Extensions.InternalA
   name: "Livraison"
   objects: {
     employeOperateur: Prisma.$EmployePayload<ExtArgs> | null
-    personnel: Prisma.$PersonnelPayload<ExtArgs>
+    personnel: Prisma.$PersonnelPayload<ExtArgs> | null
     personnelAncien: Prisma.$PersonnelPayload<ExtArgs> | null
-    fournisseur: Prisma.$FournisseurPayload<ExtArgs>
+    fournisseur: Prisma.$FournisseurPayload<ExtArgs> | null
     detLivraisons: Prisma.$DetLivraisonPayload<ExtArgs>[]
     detBulttinLivraisons: Prisma.$DetBulttinLivraisonPayload<ExtArgs>[]
   }
@@ -2822,9 +2829,9 @@ export type $LivraisonPayload<ExtArgs extends runtime.Types.Extensions.InternalA
     codeBl: string
     dateBl: Date
     dateReglement: Date
-    dateReglement2: Date
-    dateReglement3: Date
-    dateReglement4: Date
+    dateReglement2: Date | null
+    dateReglement3: Date | null
+    dateReglement4: Date | null
     typeReglment: number
     typeReglment2: number
     typeReglment3: number
@@ -3191,9 +3198,9 @@ readonly fields: LivraisonFieldRefs;
 export interface Prisma__LivraisonClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
   employeOperateur<T extends Prisma.Livraison$employeOperateurArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Livraison$employeOperateurArgs<ExtArgs>>): Prisma.Prisma__EmployeClient<runtime.Types.Result.GetResult<Prisma.$EmployePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-  personnel<T extends Prisma.PersonnelDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.PersonnelDefaultArgs<ExtArgs>>): Prisma.Prisma__PersonnelClient<runtime.Types.Result.GetResult<Prisma.$PersonnelPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  personnel<T extends Prisma.Livraison$personnelArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Livraison$personnelArgs<ExtArgs>>): Prisma.Prisma__PersonnelClient<runtime.Types.Result.GetResult<Prisma.$PersonnelPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   personnelAncien<T extends Prisma.Livraison$personnelAncienArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Livraison$personnelAncienArgs<ExtArgs>>): Prisma.Prisma__PersonnelClient<runtime.Types.Result.GetResult<Prisma.$PersonnelPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-  fournisseur<T extends Prisma.FournisseurDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.FournisseurDefaultArgs<ExtArgs>>): Prisma.Prisma__FournisseurClient<runtime.Types.Result.GetResult<Prisma.$FournisseurPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  fournisseur<T extends Prisma.Livraison$fournisseurArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Livraison$fournisseurArgs<ExtArgs>>): Prisma.Prisma__FournisseurClient<runtime.Types.Result.GetResult<Prisma.$FournisseurPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   detLivraisons<T extends Prisma.Livraison$detLivraisonsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Livraison$detLivraisonsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$DetLivraisonPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   detBulttinLivraisons<T extends Prisma.Livraison$detBulttinLivraisonsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Livraison$detBulttinLivraisonsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$DetBulttinLivraisonPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
@@ -3620,6 +3627,25 @@ export type Livraison$employeOperateurArgs<ExtArgs extends runtime.Types.Extensi
 }
 
 /**
+ * Livraison.personnel
+ */
+export type Livraison$personnelArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Personnel
+   */
+  select?: Prisma.PersonnelSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Personnel
+   */
+  omit?: Prisma.PersonnelOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.PersonnelInclude<ExtArgs> | null
+  where?: Prisma.PersonnelWhereInput
+}
+
+/**
  * Livraison.personnelAncien
  */
 export type Livraison$personnelAncienArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
@@ -3636,6 +3662,25 @@ export type Livraison$personnelAncienArgs<ExtArgs extends runtime.Types.Extensio
    */
   include?: Prisma.PersonnelInclude<ExtArgs> | null
   where?: Prisma.PersonnelWhereInput
+}
+
+/**
+ * Livraison.fournisseur
+ */
+export type Livraison$fournisseurArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Fournisseur
+   */
+  select?: Prisma.FournisseurSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Fournisseur
+   */
+  omit?: Prisma.FournisseurOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.FournisseurInclude<ExtArgs> | null
+  where?: Prisma.FournisseurWhereInput
 }
 
 /**

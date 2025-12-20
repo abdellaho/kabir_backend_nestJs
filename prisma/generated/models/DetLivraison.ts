@@ -8,7 +8,7 @@
  *
  * 🟢 You can import this file directly.
  */
-import type * as runtime from "@prisma/client/runtime/client"
+import type * as runtime from "@prisma/client/runtime/library"
 import type * as $Enums from "../enums"
 import type * as Prisma from "../internal/prismaNamespace"
 
@@ -312,8 +312,8 @@ export type DetLivraisonWhereInput = {
   avecRemise?: Prisma.BoolFilter<"DetLivraison"> | boolean
   livraisonId?: Prisma.BigIntFilter<"DetLivraison"> | bigint | number
   stockId?: Prisma.BigIntFilter<"DetLivraison"> | bigint | number
-  livraison?: Prisma.XOR<Prisma.LivraisonScalarRelationFilter, Prisma.LivraisonWhereInput>
-  stock?: Prisma.XOR<Prisma.StockScalarRelationFilter, Prisma.StockWhereInput>
+  livraison?: Prisma.XOR<Prisma.LivraisonNullableScalarRelationFilter, Prisma.LivraisonWhereInput> | null
+  stock?: Prisma.XOR<Prisma.StockNullableScalarRelationFilter, Prisma.StockWhereInput> | null
 }
 
 export type DetLivraisonOrderByWithRelationInput = {
@@ -349,8 +349,8 @@ export type DetLivraisonWhereUniqueInput = Prisma.AtLeast<{
   avecRemise?: Prisma.BoolFilter<"DetLivraison"> | boolean
   livraisonId?: Prisma.BigIntFilter<"DetLivraison"> | bigint | number
   stockId?: Prisma.BigIntFilter<"DetLivraison"> | bigint | number
-  livraison?: Prisma.XOR<Prisma.LivraisonScalarRelationFilter, Prisma.LivraisonWhereInput>
-  stock?: Prisma.XOR<Prisma.StockScalarRelationFilter, Prisma.StockWhereInput>
+  livraison?: Prisma.XOR<Prisma.LivraisonNullableScalarRelationFilter, Prisma.LivraisonWhereInput> | null
+  stock?: Prisma.XOR<Prisma.StockNullableScalarRelationFilter, Prisma.StockWhereInput> | null
 }, "id">
 
 export type DetLivraisonOrderByWithAggregationInput = {
@@ -402,8 +402,8 @@ export type DetLivraisonCreateInput = {
   benepourcentage: runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity: number
   avecRemise: boolean
-  livraison: Prisma.LivraisonCreateNestedOneWithoutDetLivraisonsInput
-  stock: Prisma.StockCreateNestedOneWithoutDetLivraisonsInput
+  livraison?: Prisma.LivraisonCreateNestedOneWithoutDetLivraisonsInput
+  stock?: Prisma.StockCreateNestedOneWithoutDetLivraisonsInput
 }
 
 export type DetLivraisonUncheckedCreateInput = {
@@ -432,8 +432,8 @@ export type DetLivraisonUpdateInput = {
   benepourcentage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  livraison?: Prisma.LivraisonUpdateOneRequiredWithoutDetLivraisonsNestedInput
-  stock?: Prisma.StockUpdateOneRequiredWithoutDetLivraisonsNestedInput
+  livraison?: Prisma.LivraisonUpdateOneWithoutDetLivraisonsNestedInput
+  stock?: Prisma.StockUpdateOneWithoutDetLivraisonsNestedInput
 }
 
 export type DetLivraisonUncheckedUpdateInput = {
@@ -672,7 +672,7 @@ export type DetLivraisonCreateWithoutStockInput = {
   benepourcentage: runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity: number
   avecRemise: boolean
-  livraison: Prisma.LivraisonCreateNestedOneWithoutDetLivraisonsInput
+  livraison?: Prisma.LivraisonCreateNestedOneWithoutDetLivraisonsInput
 }
 
 export type DetLivraisonUncheckedCreateWithoutStockInput = {
@@ -744,7 +744,7 @@ export type DetLivraisonCreateWithoutLivraisonInput = {
   benepourcentage: runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity: number
   avecRemise: boolean
-  stock: Prisma.StockCreateNestedOneWithoutDetLivraisonsInput
+  stock?: Prisma.StockCreateNestedOneWithoutDetLivraisonsInput
 }
 
 export type DetLivraisonUncheckedCreateWithoutLivraisonInput = {
@@ -812,7 +812,7 @@ export type DetLivraisonUpdateWithoutStockInput = {
   benepourcentage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  livraison?: Prisma.LivraisonUpdateOneRequiredWithoutDetLivraisonsNestedInput
+  livraison?: Prisma.LivraisonUpdateOneWithoutDetLivraisonsNestedInput
 }
 
 export type DetLivraisonUncheckedUpdateWithoutStockInput = {
@@ -868,7 +868,7 @@ export type DetLivraisonUpdateWithoutLivraisonInput = {
   benepourcentage?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   infinity?: Prisma.IntFieldUpdateOperationsInput | number
   avecRemise?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  stock?: Prisma.StockUpdateOneRequiredWithoutDetLivraisonsNestedInput
+  stock?: Prisma.StockUpdateOneWithoutDetLivraisonsNestedInput
 }
 
 export type DetLivraisonUncheckedUpdateWithoutLivraisonInput = {
@@ -914,8 +914,8 @@ export type DetLivraisonSelect<ExtArgs extends runtime.Types.Extensions.Internal
   avecRemise?: boolean
   livraisonId?: boolean
   stockId?: boolean
-  livraison?: boolean | Prisma.LivraisonDefaultArgs<ExtArgs>
-  stock?: boolean | Prisma.StockDefaultArgs<ExtArgs>
+  livraison?: boolean | Prisma.DetLivraison$livraisonArgs<ExtArgs>
+  stock?: boolean | Prisma.DetLivraison$stockArgs<ExtArgs>
 }, ExtArgs["result"]["detLivraison"]>
 
 
@@ -937,15 +937,15 @@ export type DetLivraisonSelectScalar = {
 
 export type DetLivraisonOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "qteLivrer" | "champsRouge" | "remiseLivraison" | "prixVente" | "montantProduit" | "beneficeDH" | "benepourcentage" | "infinity" | "avecRemise" | "livraisonId" | "stockId", ExtArgs["result"]["detLivraison"]>
 export type DetLivraisonInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  livraison?: boolean | Prisma.LivraisonDefaultArgs<ExtArgs>
-  stock?: boolean | Prisma.StockDefaultArgs<ExtArgs>
+  livraison?: boolean | Prisma.DetLivraison$livraisonArgs<ExtArgs>
+  stock?: boolean | Prisma.DetLivraison$stockArgs<ExtArgs>
 }
 
 export type $DetLivraisonPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "DetLivraison"
   objects: {
-    livraison: Prisma.$LivraisonPayload<ExtArgs>
-    stock: Prisma.$StockPayload<ExtArgs>
+    livraison: Prisma.$LivraisonPayload<ExtArgs> | null
+    stock: Prisma.$StockPayload<ExtArgs> | null
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: bigint
@@ -1300,8 +1300,8 @@ readonly fields: DetLivraisonFieldRefs;
  */
 export interface Prisma__DetLivraisonClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  livraison<T extends Prisma.LivraisonDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.LivraisonDefaultArgs<ExtArgs>>): Prisma.Prisma__LivraisonClient<runtime.Types.Result.GetResult<Prisma.$LivraisonPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-  stock<T extends Prisma.StockDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.StockDefaultArgs<ExtArgs>>): Prisma.Prisma__StockClient<runtime.Types.Result.GetResult<Prisma.$StockPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  livraison<T extends Prisma.DetLivraison$livraisonArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.DetLivraison$livraisonArgs<ExtArgs>>): Prisma.Prisma__LivraisonClient<runtime.Types.Result.GetResult<Prisma.$LivraisonPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  stock<T extends Prisma.DetLivraison$stockArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.DetLivraison$stockArgs<ExtArgs>>): Prisma.Prisma__StockClient<runtime.Types.Result.GetResult<Prisma.$StockPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1683,6 +1683,44 @@ export type DetLivraisonDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.
    * Limit how many DetLivraisons to delete.
    */
   limit?: number
+}
+
+/**
+ * DetLivraison.livraison
+ */
+export type DetLivraison$livraisonArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Livraison
+   */
+  select?: Prisma.LivraisonSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Livraison
+   */
+  omit?: Prisma.LivraisonOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.LivraisonInclude<ExtArgs> | null
+  where?: Prisma.LivraisonWhereInput
+}
+
+/**
+ * DetLivraison.stock
+ */
+export type DetLivraison$stockArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Stock
+   */
+  select?: Prisma.StockSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Stock
+   */
+  omit?: Prisma.StockOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.StockInclude<ExtArgs> | null
+  where?: Prisma.StockWhereInput
 }
 
 /**

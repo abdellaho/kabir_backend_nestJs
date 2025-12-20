@@ -8,7 +8,7 @@
  *
  * 🟢 You can import this file directly.
  */
-import type * as runtime from "@prisma/client/runtime/client"
+import type * as runtime from "@prisma/client/runtime/library"
 import type * as $Enums from "../enums"
 import type * as Prisma from "../internal/prismaNamespace"
 
@@ -1319,6 +1319,11 @@ export type StockScalarRelationFilter = {
   isNot?: Prisma.StockWhereInput
 }
 
+export type StockNullableScalarRelationFilter = {
+  is?: Prisma.StockWhereInput | null
+  isNot?: Prisma.StockWhereInput | null
+}
+
 export type StockCreateNestedManyWithoutFournisseurInput = {
   create?: Prisma.XOR<Prisma.StockCreateWithoutFournisseurInput, Prisma.StockUncheckedCreateWithoutFournisseurInput> | Prisma.StockCreateWithoutFournisseurInput[] | Prisma.StockUncheckedCreateWithoutFournisseurInput[]
   connectOrCreate?: Prisma.StockCreateOrConnectWithoutFournisseurInput | Prisma.StockCreateOrConnectWithoutFournisseurInput[]
@@ -1465,10 +1470,12 @@ export type StockCreateNestedOneWithoutDetLivraisonsInput = {
   connect?: Prisma.StockWhereUniqueInput
 }
 
-export type StockUpdateOneRequiredWithoutDetLivraisonsNestedInput = {
+export type StockUpdateOneWithoutDetLivraisonsNestedInput = {
   create?: Prisma.XOR<Prisma.StockCreateWithoutDetLivraisonsInput, Prisma.StockUncheckedCreateWithoutDetLivraisonsInput>
   connectOrCreate?: Prisma.StockCreateOrConnectWithoutDetLivraisonsInput
   upsert?: Prisma.StockUpsertWithoutDetLivraisonsInput
+  disconnect?: Prisma.StockWhereInput | boolean
+  delete?: Prisma.StockWhereInput | boolean
   connect?: Prisma.StockWhereUniqueInput
   update?: Prisma.XOR<Prisma.XOR<Prisma.StockUpdateToOneWithWhereWithoutDetLivraisonsInput, Prisma.StockUpdateWithoutDetLivraisonsInput>, Prisma.StockUncheckedUpdateWithoutDetLivraisonsInput>
 }

@@ -8,7 +8,7 @@
  *
  * 🟢 You can import this file directly.
  */
-import type * as runtime from "@prisma/client/runtime/client"
+import type * as runtime from "@prisma/client/runtime/library"
 import type * as $Enums from "../enums"
 import type * as Prisma from "../internal/prismaNamespace"
 
@@ -531,6 +531,11 @@ export type FournisseurScalarRelationFilter = {
   isNot?: Prisma.FournisseurWhereInput
 }
 
+export type FournisseurNullableScalarRelationFilter = {
+  is?: Prisma.FournisseurWhereInput | null
+  isNot?: Prisma.FournisseurWhereInput | null
+}
+
 export type FournisseurCreateNestedManyWithoutVilleInput = {
   create?: Prisma.XOR<Prisma.FournisseurCreateWithoutVilleInput, Prisma.FournisseurUncheckedCreateWithoutVilleInput> | Prisma.FournisseurCreateWithoutVilleInput[] | Prisma.FournisseurUncheckedCreateWithoutVilleInput[]
   connectOrCreate?: Prisma.FournisseurCreateOrConnectWithoutVilleInput | Prisma.FournisseurCreateOrConnectWithoutVilleInput[]
@@ -617,10 +622,12 @@ export type FournisseurCreateNestedOneWithoutLivraisonsInput = {
   connect?: Prisma.FournisseurWhereUniqueInput
 }
 
-export type FournisseurUpdateOneRequiredWithoutLivraisonsNestedInput = {
+export type FournisseurUpdateOneWithoutLivraisonsNestedInput = {
   create?: Prisma.XOR<Prisma.FournisseurCreateWithoutLivraisonsInput, Prisma.FournisseurUncheckedCreateWithoutLivraisonsInput>
   connectOrCreate?: Prisma.FournisseurCreateOrConnectWithoutLivraisonsInput
   upsert?: Prisma.FournisseurUpsertWithoutLivraisonsInput
+  disconnect?: Prisma.FournisseurWhereInput | boolean
+  delete?: Prisma.FournisseurWhereInput | boolean
   connect?: Prisma.FournisseurWhereUniqueInput
   update?: Prisma.XOR<Prisma.XOR<Prisma.FournisseurUpdateToOneWithWhereWithoutLivraisonsInput, Prisma.FournisseurUpdateWithoutLivraisonsInput>, Prisma.FournisseurUncheckedUpdateWithoutLivraisonsInput>
 }

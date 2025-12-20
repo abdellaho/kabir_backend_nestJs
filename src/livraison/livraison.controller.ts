@@ -38,38 +38,12 @@ export class LivraisonController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    let result = this.livraisonService.findOne(+id);
-    let detLivraisons = this.detLivraisonService.findByLivraisonId(+id);
-
-    return Promise.all([result, detLivraisons]).then(([livraison, dets]) => {
-      return {
-        livraison: livraison,
-        detLivraisons: dets,
-      };
-    });
+    return this.livraisonService.findOne(+id);
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() data: { livraison: Prisma.LivraisonUpdateInput, detLivraisons: Prisma.DetLivraisonCreateManyInput[] }) {
-    let result = this.livraisonService.update(+id, data.livraison);
-    if(data.detLivraisons && data.detLivraisons.length > 0) {
-      result.then(async (updatedLivraison) => {
-        const detLivraisonsToCreate: Prisma.DetLivraisonCreateManyInput[] = data.detLivraisons.filter((detLivraison) => detLivraison.livraisonId == null).map((detLivraison) => ({
-          ...detLivraison,
-          livraisonId: updatedLivraison.id,
-        }));
-        
-        const detLivraisonsToUpdate: DetLivraison[] = data.detLivraisons.filter((detLivraison) => detLivraison.livraisonId != null) as DetLivraison[];
-        if(detLivraisonsToUpdate.length > 0) {
-          detLivraisonsToUpdate.forEach((detLivraison) => {
-            this.detLivraisonService.update(Number(detLivraison.id), detLivraison);
-          });
-        }
-        
-        await this.detLivraisonService.createMany(detLivraisonsToCreate);
-        return updatedLivraison;
-      });
-    }
+  update(@Param('id') id: string, @Body() updateLivraisonDto: Prisma.LivraisonUpdateInput) {
+    return this.livraisonService.update(+id, updateLivraisonDto);
   }
 
   @Delete(':id')
