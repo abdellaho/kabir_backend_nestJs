@@ -13,8 +13,21 @@ export class DetLivraisonService {
     });
   }
 
+  createMany(createDetLivraisonDto: Prisma.DetLivraisonCreateManyInput[]) {
+    return this.databaseService.detLivraison.createMany({
+      data: createDetLivraisonDto,
+      skipDuplicates: true,
+    });
+  }
+
   findAll() {
     return this.databaseService.detLivraison.findMany();
+  }
+
+  findByLivraisonId(livraisonId: number) {
+    return this.databaseService.detLivraison.findMany({
+      where: { livraisonId: BigInt(livraisonId) },
+    });
   }
 
   findOne(id: number) {
