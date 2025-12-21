@@ -4,6 +4,7 @@ import { Prisma } from 'prisma/generated/client';
 import { mapToDateTimeBackEnd } from 'src/common/common-methods/common-methods';
 import { DetLivraison } from 'prisma/generated/browser';
 import { DetLivraisonService } from 'src/det-livraison/det-livraison.service';
+import { DetLivraisonUpdateInput } from 'prisma/generated/models';
 
 @Controller('livraison')
 export class LivraisonController {
@@ -38,12 +39,85 @@ export class LivraisonController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.livraisonService.findOne(+id);
+    let result = this.livraisonService.findOne(+id);
+    let detLivraisons = this.detLivraisonService.findByLivraisonId(+id);
+
+    return Promise.all([result, detLivraisons]).then(([livraison, dets]) => {
+      return {
+        livraison: livraison,
+        detLivraisons: dets,
+      };
+    });
+  }
+
+  @Get(':id/with-det-livraison')
+  findOneWithDetLivraison(@Param('id') id: string) {
+    let result = this.livraisonService.findOne(+id);
+    let detLivraisons = this.detLivraisonService.findByLivraisonId(+id);
+
+    return Promise.all([result, detLivraisons]).then(([livraison, dets]) => {
+      return {
+        livraison: livraison,
+        detLivraisons: dets,
+      };
+    });
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateLivraisonDto: Prisma.LivraisonUpdateInput) {
-    return this.livraisonService.update(+id, updateLivraisonDto);
+  async update(@Param('id') id: string, @Body() data: { livraison: Prisma.LivraisonUpdateInput, detLivraisons: Prisma.DetLivraisonCreateManyInput[] }) {
+    console.log('Updating livraison with data:', data);
+    
+    const updatedLivraison = await this.livraisonService.update(+id, data.livraison);
+    
+    if (data.detLivraisons && data.detLivraisons.length > 0) {
+      const detLivraisonsToCreate: Prisma.DetLivraisonCreateManyInput[] = data.detLivraisons
+        .filter((detLivraison) => (detLivraison.id == null || detLivraison.livraisonId == null))
+        .map((detLivraison) => ({
+          ...detLivraison,
+          livraisonId: updatedLivraison.id,
+        }));
+      
+      const detLivraisonsToUpdate: DetLivraisonUpdateInput[] = data.detLivraisons.filter((detLivraison) => (detLivraison.id != null )) as DetLivraisonUpdateInput[];
+      
+      console.log('DetLivraisons to create:', detLivraisonsToCreate);
+      console.log('DetLivraisons to update:', detLivraisonsToUpdate);
+      // Update existing detLivraisons
+      if (detLivraisonsToUpdate.length > 0) {
+        await Promise.all(
+          detLivraisonsToUpdate.map((detLivraison) => this.detLivraisonService.update(Number(detLivraison.id), detLivraison))
+        );
+      }
+      
+      // Create new detLivraisons
+      if (detLivraisonsToCreate.length > 0) {
+        await this.detLivraisonService.createMany(detLivraisonsToCreate);
+      }
+    }
+    
+    return updatedLivraison;
+  }
+  
+  update1(@Param('id') id: string, @Body() data: { livraison: Prisma.LivraisonUpdateInput, detLivraisons: Prisma.DetLivraisonCreateManyInput[] }) {
+    let result = this.livraisonService.update(+id, data.livraison);
+    if(data.detLivraisons && data.detLivraisons.length > 0) {
+      result.then(async (updatedLivraison) => {
+        const detLivraisonsToCreate: Prisma.DetLivraisonCreateManyInput[] = data.detLivraisons.filter((detLivraison) => detLivraison.livraisonId == null).map((detLivraison) => ({
+          ...detLivraison,
+          livraisonId: updatedLivraison.id,
+        }));
+        
+        const detLivraisonsToUpdate: DetLivraison[] = data.detLivraisons.filter((detLivraison) => detLivraison.livraisonId != null) as DetLivraison[];
+        console.log('DetLivraisons to update:', detLivraisonsToUpdate);
+        if(detLivraisonsToUpdate.length > 0) {
+          detLivraisonsToUpdate.forEach((detLivraison) => {
+            this.detLivraisonService.update(Number(detLivraison.id), detLivraison);
+          });
+        }
+        
+        await this.detLivraisonService.createMany(detLivraisonsToCreate);
+        return updatedLivraison;
+      });
+    }
   }
 
   @Delete(':id')

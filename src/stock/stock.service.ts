@@ -23,35 +23,40 @@ export class StockService {
       where: { id: BigInt(id) }
     });
   }
-
+  
   async updateQteStock(id: number, quantity: number, typeOperation: number) {
-    const currentStock = await this.databaseService.stock.findUnique({
-      where: { id: BigInt(id) }
-    });
-
-    if (!currentStock) {
-      throw new Error(`Stock with id ${id} not found`);
-    }
-
-    let newQuantity: number;
+    const stockId = BigInt(id);
     
-    if (typeOperation === 1) { // Addition
-      newQuantity = currentStock.qteStock - quantity;
-    } else if (typeOperation === 2) { // Subtraction
-      newQuantity = currentStock.qteStock + quantity;
-      if (newQuantity < 0) {
-        throw new Error(`Insufficient stock: cannot subtract ${quantity} from ${currentStock.qteStock}`);
-      }
-    } else {
+    if (![1, 2].includes(typeOperation)) {
       throw new Error(`Invalid operation type: ${typeOperation}`);
     }
 
-    const updatedStock = await this.databaseService.stock.update({
-      where: { id: BigInt(id) },
-      data: { qteStock: newQuantity }
-    });
+    const qteChange = typeOperation === 1 ? -quantity : quantity;
 
-    return updatedStock;
+    try {
+      const updatedStock = await this.databaseService.stock.update({
+        where: { id: stockId },
+        data: {
+          qteStock: {
+            increment: qteChange
+          }
+        }
+      });
+
+      console.log(
+        'Updated Stock:',
+        'New Quantity:', updatedStock.qteStock,
+        'Change:', qteChange,
+        'Operation Type:', typeOperation === 1 ? 'ADD' : 'DELETE'
+      );
+
+      return updatedStock;
+    } catch (error) {
+      if (error.code === 'P2025') {
+        throw new Error(`Stock with id ${id} not found`);
+      }
+      throw error;
+    }
   }
 
   async updateQteStockFacturer(id: number, quantity: number, typeOperation: number) {

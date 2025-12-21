@@ -8,7 +8,7 @@
  *
  * 🟢 You can import this file directly.
  */
-import type * as runtime from "@prisma/client/runtime/library"
+import type * as runtime from "@prisma/client/runtime/client"
 import type * as $Enums from "../enums"
 import type * as Prisma from "../internal/prismaNamespace"
 
@@ -29,12 +29,14 @@ export type AggregateFournisseur = {
 export type FournisseurAvgAggregateOutputType = {
   id: number | null
   type: number | null
+  nbrOperation: number | null
   villeId: number | null
 }
 
 export type FournisseurSumAggregateOutputType = {
   id: bigint | null
   type: number | null
+  nbrOperation: number | null
   villeId: bigint | null
 }
 
@@ -49,6 +51,7 @@ export type FournisseurMinAggregateOutputType = {
   dateSuppression: Date | null
   archiver: boolean | null
   supprimer: boolean | null
+  nbrOperation: number | null
   villeId: bigint | null
 }
 
@@ -63,6 +66,7 @@ export type FournisseurMaxAggregateOutputType = {
   dateSuppression: Date | null
   archiver: boolean | null
   supprimer: boolean | null
+  nbrOperation: number | null
   villeId: bigint | null
 }
 
@@ -77,6 +81,7 @@ export type FournisseurCountAggregateOutputType = {
   dateSuppression: number
   archiver: number
   supprimer: number
+  nbrOperation: number
   villeId: number
   _all: number
 }
@@ -85,12 +90,14 @@ export type FournisseurCountAggregateOutputType = {
 export type FournisseurAvgAggregateInputType = {
   id?: true
   type?: true
+  nbrOperation?: true
   villeId?: true
 }
 
 export type FournisseurSumAggregateInputType = {
   id?: true
   type?: true
+  nbrOperation?: true
   villeId?: true
 }
 
@@ -105,6 +112,7 @@ export type FournisseurMinAggregateInputType = {
   dateSuppression?: true
   archiver?: true
   supprimer?: true
+  nbrOperation?: true
   villeId?: true
 }
 
@@ -119,6 +127,7 @@ export type FournisseurMaxAggregateInputType = {
   dateSuppression?: true
   archiver?: true
   supprimer?: true
+  nbrOperation?: true
   villeId?: true
 }
 
@@ -133,6 +142,7 @@ export type FournisseurCountAggregateInputType = {
   dateSuppression?: true
   archiver?: true
   supprimer?: true
+  nbrOperation?: true
   villeId?: true
   _all?: true
 }
@@ -234,6 +244,7 @@ export type FournisseurGroupByOutputType = {
   dateSuppression: Date | null
   archiver: boolean
   supprimer: boolean
+  nbrOperation: number
   villeId: bigint | null
   _count: FournisseurCountAggregateOutputType | null
   _avg: FournisseurAvgAggregateOutputType | null
@@ -271,6 +282,7 @@ export type FournisseurWhereInput = {
   dateSuppression?: Prisma.DateTimeNullableFilter<"Fournisseur"> | Date | string | null
   archiver?: Prisma.BoolFilter<"Fournisseur"> | boolean
   supprimer?: Prisma.BoolFilter<"Fournisseur"> | boolean
+  nbrOperation?: Prisma.IntFilter<"Fournisseur"> | number
   villeId?: Prisma.BigIntNullableFilter<"Fournisseur"> | bigint | number | null
   ville?: Prisma.XOR<Prisma.VilleNullableScalarRelationFilter, Prisma.VilleWhereInput> | null
   stocks?: Prisma.StockListRelationFilter
@@ -288,6 +300,7 @@ export type FournisseurOrderByWithRelationInput = {
   dateSuppression?: Prisma.SortOrderInput | Prisma.SortOrder
   archiver?: Prisma.SortOrder
   supprimer?: Prisma.SortOrder
+  nbrOperation?: Prisma.SortOrder
   villeId?: Prisma.SortOrderInput | Prisma.SortOrder
   ville?: Prisma.VilleOrderByWithRelationInput
   stocks?: Prisma.StockOrderByRelationAggregateInput
@@ -309,6 +322,7 @@ export type FournisseurWhereUniqueInput = Prisma.AtLeast<{
   dateSuppression?: Prisma.DateTimeNullableFilter<"Fournisseur"> | Date | string | null
   archiver?: Prisma.BoolFilter<"Fournisseur"> | boolean
   supprimer?: Prisma.BoolFilter<"Fournisseur"> | boolean
+  nbrOperation?: Prisma.IntFilter<"Fournisseur"> | number
   villeId?: Prisma.BigIntNullableFilter<"Fournisseur"> | bigint | number | null
   ville?: Prisma.XOR<Prisma.VilleNullableScalarRelationFilter, Prisma.VilleWhereInput> | null
   stocks?: Prisma.StockListRelationFilter
@@ -326,6 +340,7 @@ export type FournisseurOrderByWithAggregationInput = {
   dateSuppression?: Prisma.SortOrderInput | Prisma.SortOrder
   archiver?: Prisma.SortOrder
   supprimer?: Prisma.SortOrder
+  nbrOperation?: Prisma.SortOrder
   villeId?: Prisma.SortOrderInput | Prisma.SortOrder
   _count?: Prisma.FournisseurCountOrderByAggregateInput
   _avg?: Prisma.FournisseurAvgOrderByAggregateInput
@@ -348,6 +363,7 @@ export type FournisseurScalarWhereWithAggregatesInput = {
   dateSuppression?: Prisma.DateTimeNullableWithAggregatesFilter<"Fournisseur"> | Date | string | null
   archiver?: Prisma.BoolWithAggregatesFilter<"Fournisseur"> | boolean
   supprimer?: Prisma.BoolWithAggregatesFilter<"Fournisseur"> | boolean
+  nbrOperation?: Prisma.IntWithAggregatesFilter<"Fournisseur"> | number
   villeId?: Prisma.BigIntNullableWithAggregatesFilter<"Fournisseur"> | bigint | number | null
 }
 
@@ -362,6 +378,7 @@ export type FournisseurCreateInput = {
   dateSuppression?: Date | string | null
   archiver?: boolean
   supprimer?: boolean
+  nbrOperation?: number
   ville?: Prisma.VilleCreateNestedOneWithoutFournisseursInput
   stocks?: Prisma.StockCreateNestedManyWithoutFournisseurInput
   livraisons?: Prisma.LivraisonCreateNestedManyWithoutFournisseurInput
@@ -378,6 +395,7 @@ export type FournisseurUncheckedCreateInput = {
   dateSuppression?: Date | string | null
   archiver?: boolean
   supprimer?: boolean
+  nbrOperation?: number
   villeId?: bigint | number | null
   stocks?: Prisma.StockUncheckedCreateNestedManyWithoutFournisseurInput
   livraisons?: Prisma.LivraisonUncheckedCreateNestedManyWithoutFournisseurInput
@@ -394,6 +412,7 @@ export type FournisseurUpdateInput = {
   dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  nbrOperation?: Prisma.IntFieldUpdateOperationsInput | number
   ville?: Prisma.VilleUpdateOneWithoutFournisseursNestedInput
   stocks?: Prisma.StockUpdateManyWithoutFournisseurNestedInput
   livraisons?: Prisma.LivraisonUpdateManyWithoutFournisseurNestedInput
@@ -410,6 +429,7 @@ export type FournisseurUncheckedUpdateInput = {
   dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  nbrOperation?: Prisma.IntFieldUpdateOperationsInput | number
   villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   stocks?: Prisma.StockUncheckedUpdateManyWithoutFournisseurNestedInput
   livraisons?: Prisma.LivraisonUncheckedUpdateManyWithoutFournisseurNestedInput
@@ -426,6 +446,7 @@ export type FournisseurCreateManyInput = {
   dateSuppression?: Date | string | null
   archiver?: boolean
   supprimer?: boolean
+  nbrOperation?: number
   villeId?: bigint | number | null
 }
 
@@ -440,6 +461,7 @@ export type FournisseurUpdateManyMutationInput = {
   dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  nbrOperation?: Prisma.IntFieldUpdateOperationsInput | number
 }
 
 export type FournisseurUncheckedUpdateManyInput = {
@@ -453,6 +475,7 @@ export type FournisseurUncheckedUpdateManyInput = {
   dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  nbrOperation?: Prisma.IntFieldUpdateOperationsInput | number
   villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
 }
 
@@ -483,12 +506,14 @@ export type FournisseurCountOrderByAggregateInput = {
   dateSuppression?: Prisma.SortOrder
   archiver?: Prisma.SortOrder
   supprimer?: Prisma.SortOrder
+  nbrOperation?: Prisma.SortOrder
   villeId?: Prisma.SortOrder
 }
 
 export type FournisseurAvgOrderByAggregateInput = {
   id?: Prisma.SortOrder
   type?: Prisma.SortOrder
+  nbrOperation?: Prisma.SortOrder
   villeId?: Prisma.SortOrder
 }
 
@@ -503,6 +528,7 @@ export type FournisseurMaxOrderByAggregateInput = {
   dateSuppression?: Prisma.SortOrder
   archiver?: Prisma.SortOrder
   supprimer?: Prisma.SortOrder
+  nbrOperation?: Prisma.SortOrder
   villeId?: Prisma.SortOrder
 }
 
@@ -517,12 +543,14 @@ export type FournisseurMinOrderByAggregateInput = {
   dateSuppression?: Prisma.SortOrder
   archiver?: Prisma.SortOrder
   supprimer?: Prisma.SortOrder
+  nbrOperation?: Prisma.SortOrder
   villeId?: Prisma.SortOrder
 }
 
 export type FournisseurSumOrderByAggregateInput = {
   id?: Prisma.SortOrder
   type?: Prisma.SortOrder
+  nbrOperation?: Prisma.SortOrder
   villeId?: Prisma.SortOrder
 }
 
@@ -643,6 +671,7 @@ export type FournisseurCreateWithoutVilleInput = {
   dateSuppression?: Date | string | null
   archiver?: boolean
   supprimer?: boolean
+  nbrOperation?: number
   stocks?: Prisma.StockCreateNestedManyWithoutFournisseurInput
   livraisons?: Prisma.LivraisonCreateNestedManyWithoutFournisseurInput
 }
@@ -658,6 +687,7 @@ export type FournisseurUncheckedCreateWithoutVilleInput = {
   dateSuppression?: Date | string | null
   archiver?: boolean
   supprimer?: boolean
+  nbrOperation?: number
   stocks?: Prisma.StockUncheckedCreateNestedManyWithoutFournisseurInput
   livraisons?: Prisma.LivraisonUncheckedCreateNestedManyWithoutFournisseurInput
 }
@@ -702,6 +732,7 @@ export type FournisseurScalarWhereInput = {
   dateSuppression?: Prisma.DateTimeNullableFilter<"Fournisseur"> | Date | string | null
   archiver?: Prisma.BoolFilter<"Fournisseur"> | boolean
   supprimer?: Prisma.BoolFilter<"Fournisseur"> | boolean
+  nbrOperation?: Prisma.IntFilter<"Fournisseur"> | number
   villeId?: Prisma.BigIntNullableFilter<"Fournisseur"> | bigint | number | null
 }
 
@@ -716,6 +747,7 @@ export type FournisseurCreateWithoutStocksInput = {
   dateSuppression?: Date | string | null
   archiver?: boolean
   supprimer?: boolean
+  nbrOperation?: number
   ville?: Prisma.VilleCreateNestedOneWithoutFournisseursInput
   livraisons?: Prisma.LivraisonCreateNestedManyWithoutFournisseurInput
 }
@@ -731,6 +763,7 @@ export type FournisseurUncheckedCreateWithoutStocksInput = {
   dateSuppression?: Date | string | null
   archiver?: boolean
   supprimer?: boolean
+  nbrOperation?: number
   villeId?: bigint | number | null
   livraisons?: Prisma.LivraisonUncheckedCreateNestedManyWithoutFournisseurInput
 }
@@ -762,6 +795,7 @@ export type FournisseurUpdateWithoutStocksInput = {
   dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  nbrOperation?: Prisma.IntFieldUpdateOperationsInput | number
   ville?: Prisma.VilleUpdateOneWithoutFournisseursNestedInput
   livraisons?: Prisma.LivraisonUpdateManyWithoutFournisseurNestedInput
 }
@@ -777,6 +811,7 @@ export type FournisseurUncheckedUpdateWithoutStocksInput = {
   dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  nbrOperation?: Prisma.IntFieldUpdateOperationsInput | number
   villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   livraisons?: Prisma.LivraisonUncheckedUpdateManyWithoutFournisseurNestedInput
 }
@@ -792,6 +827,7 @@ export type FournisseurCreateWithoutLivraisonsInput = {
   dateSuppression?: Date | string | null
   archiver?: boolean
   supprimer?: boolean
+  nbrOperation?: number
   ville?: Prisma.VilleCreateNestedOneWithoutFournisseursInput
   stocks?: Prisma.StockCreateNestedManyWithoutFournisseurInput
 }
@@ -807,6 +843,7 @@ export type FournisseurUncheckedCreateWithoutLivraisonsInput = {
   dateSuppression?: Date | string | null
   archiver?: boolean
   supprimer?: boolean
+  nbrOperation?: number
   villeId?: bigint | number | null
   stocks?: Prisma.StockUncheckedCreateNestedManyWithoutFournisseurInput
 }
@@ -838,6 +875,7 @@ export type FournisseurUpdateWithoutLivraisonsInput = {
   dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  nbrOperation?: Prisma.IntFieldUpdateOperationsInput | number
   ville?: Prisma.VilleUpdateOneWithoutFournisseursNestedInput
   stocks?: Prisma.StockUpdateManyWithoutFournisseurNestedInput
 }
@@ -853,6 +891,7 @@ export type FournisseurUncheckedUpdateWithoutLivraisonsInput = {
   dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  nbrOperation?: Prisma.IntFieldUpdateOperationsInput | number
   villeId?: Prisma.NullableBigIntFieldUpdateOperationsInput | bigint | number | null
   stocks?: Prisma.StockUncheckedUpdateManyWithoutFournisseurNestedInput
 }
@@ -868,6 +907,7 @@ export type FournisseurCreateManyVilleInput = {
   dateSuppression?: Date | string | null
   archiver?: boolean
   supprimer?: boolean
+  nbrOperation?: number
 }
 
 export type FournisseurUpdateWithoutVilleInput = {
@@ -881,6 +921,7 @@ export type FournisseurUpdateWithoutVilleInput = {
   dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  nbrOperation?: Prisma.IntFieldUpdateOperationsInput | number
   stocks?: Prisma.StockUpdateManyWithoutFournisseurNestedInput
   livraisons?: Prisma.LivraisonUpdateManyWithoutFournisseurNestedInput
 }
@@ -896,6 +937,7 @@ export type FournisseurUncheckedUpdateWithoutVilleInput = {
   dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  nbrOperation?: Prisma.IntFieldUpdateOperationsInput | number
   stocks?: Prisma.StockUncheckedUpdateManyWithoutFournisseurNestedInput
   livraisons?: Prisma.LivraisonUncheckedUpdateManyWithoutFournisseurNestedInput
 }
@@ -911,6 +953,7 @@ export type FournisseurUncheckedUpdateManyWithoutVilleInput = {
   dateSuppression?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   archiver?: Prisma.BoolFieldUpdateOperationsInput | boolean
   supprimer?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  nbrOperation?: Prisma.IntFieldUpdateOperationsInput | number
 }
 
 
@@ -964,6 +1007,7 @@ export type FournisseurSelect<ExtArgs extends runtime.Types.Extensions.InternalA
   dateSuppression?: boolean
   archiver?: boolean
   supprimer?: boolean
+  nbrOperation?: boolean
   villeId?: boolean
   ville?: boolean | Prisma.Fournisseur$villeArgs<ExtArgs>
   stocks?: boolean | Prisma.Fournisseur$stocksArgs<ExtArgs>
@@ -984,10 +1028,11 @@ export type FournisseurSelectScalar = {
   dateSuppression?: boolean
   archiver?: boolean
   supprimer?: boolean
+  nbrOperation?: boolean
   villeId?: boolean
 }
 
-export type FournisseurOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "designation" | "type" | "tel1" | "tel2" | "ice" | "adresse" | "dateSuppression" | "archiver" | "supprimer" | "villeId", ExtArgs["result"]["fournisseur"]>
+export type FournisseurOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "designation" | "type" | "tel1" | "tel2" | "ice" | "adresse" | "dateSuppression" | "archiver" | "supprimer" | "nbrOperation" | "villeId", ExtArgs["result"]["fournisseur"]>
 export type FournisseurInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   ville?: boolean | Prisma.Fournisseur$villeArgs<ExtArgs>
   stocks?: boolean | Prisma.Fournisseur$stocksArgs<ExtArgs>
@@ -1013,6 +1058,7 @@ export type $FournisseurPayload<ExtArgs extends runtime.Types.Extensions.Interna
     dateSuppression: Date | null
     archiver: boolean
     supprimer: boolean
+    nbrOperation: number
     villeId: bigint | null
   }, ExtArgs["result"]["fournisseur"]>
   composites: {}
@@ -1396,6 +1442,7 @@ export interface FournisseurFieldRefs {
   readonly dateSuppression: Prisma.FieldRef<"Fournisseur", 'DateTime'>
   readonly archiver: Prisma.FieldRef<"Fournisseur", 'Boolean'>
   readonly supprimer: Prisma.FieldRef<"Fournisseur", 'Boolean'>
+  readonly nbrOperation: Prisma.FieldRef<"Fournisseur", 'Int'>
   readonly villeId: Prisma.FieldRef<"Fournisseur", 'BigInt'>
 }
     

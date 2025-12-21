@@ -31,6 +31,11 @@ export class FournisseurController {
     return this.fournisseurService.findOne(+id);
   }
 
+  @Post(':id/update-nbr-operation')
+  updateNbrOperation(@Param('id') id: string, @Body() { typeOperation }: {typeOperation: number }) {
+    return this.fournisseurService.updateNbrOperation(+id, typeOperation);
+  }
+
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateFactureDto: Prisma.FournisseurUpdateInput) {
     return this.fournisseurService.update(+id, updateFactureDto);

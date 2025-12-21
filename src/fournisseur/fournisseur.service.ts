@@ -63,6 +63,42 @@ export class FournisseurService {
     });
   }
 
+  async updateNbrOperation(id: number, typeOperation: number) {
+    let nbr: number = 1;
+    const fournisseurId = BigInt(id);
+    
+    if (![1, 2].includes(typeOperation)) {
+      throw new Error(`Invalid operation type: ${typeOperation}`);
+    }
+
+    const nbrChange = typeOperation === 1 ? nbr : -nbr;
+
+    try {
+      const updatedFournisseur = await this.databaseService.fournisseur.update({
+        where: { id: fournisseurId },
+        data: {
+          nbrOperation: {
+            increment: nbrChange
+          }
+        }
+      });
+
+      console.log(
+        'Updated Personnel:',
+        'New nbrOperation:', updatedFournisseur.nbrOperation,
+        'Change:', nbrChange,
+        'Operation Type:', typeOperation === 1 ? 'ADD' : 'DELETE'
+      );
+
+      return updatedFournisseur;
+    } catch (error) {
+      if (error.code === 'P2025') {
+        throw new Error(`Fournisseur with id ${id} not found`);
+      }
+      throw error;
+    }
+  }
+
   async checkIfExists(data: Prisma.FournisseurCreateInput) {
     const { designation, tel1, tel2, id } = data;
     

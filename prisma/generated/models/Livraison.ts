@@ -8,7 +8,7 @@
  *
  * 🟢 You can import this file directly.
  */
-import type * as runtime from "@prisma/client/runtime/library"
+import type * as runtime from "@prisma/client/runtime/client"
 import type * as $Enums from "../enums"
 import type * as Prisma from "../internal/prismaNamespace"
 
@@ -89,6 +89,10 @@ export type LivraisonMinAggregateOutputType = {
   typeReglment2: number | null
   typeReglment3: number | null
   typeReglment4: number | null
+  numCheque: string | null
+  numCheque2: string | null
+  numCheque3: string | null
+  numCheque4: string | null
   mantantBL: runtime.Decimal | null
   mantantBLReel: runtime.Decimal | null
   mantantBLBenefice: runtime.Decimal | null
@@ -125,6 +129,10 @@ export type LivraisonMaxAggregateOutputType = {
   typeReglment2: number | null
   typeReglment3: number | null
   typeReglment4: number | null
+  numCheque: string | null
+  numCheque2: string | null
+  numCheque3: string | null
+  numCheque4: string | null
   mantantBL: runtime.Decimal | null
   mantantBLReel: runtime.Decimal | null
   mantantBLBenefice: runtime.Decimal | null
@@ -161,6 +169,10 @@ export type LivraisonCountAggregateOutputType = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
+  numCheque: number
+  numCheque2: number
+  numCheque3: number
+  numCheque4: number
   mantantBL: number
   mantantBLReel: number
   mantantBLBenefice: number
@@ -249,6 +261,10 @@ export type LivraisonMinAggregateInputType = {
   typeReglment2?: true
   typeReglment3?: true
   typeReglment4?: true
+  numCheque?: true
+  numCheque2?: true
+  numCheque3?: true
+  numCheque4?: true
   mantantBL?: true
   mantantBLReel?: true
   mantantBLBenefice?: true
@@ -285,6 +301,10 @@ export type LivraisonMaxAggregateInputType = {
   typeReglment2?: true
   typeReglment3?: true
   typeReglment4?: true
+  numCheque?: true
+  numCheque2?: true
+  numCheque3?: true
+  numCheque4?: true
   mantantBL?: true
   mantantBLReel?: true
   mantantBLBenefice?: true
@@ -321,6 +341,10 @@ export type LivraisonCountAggregateInputType = {
   typeReglment2?: true
   typeReglment3?: true
   typeReglment4?: true
+  numCheque?: true
+  numCheque2?: true
+  numCheque3?: true
+  numCheque4?: true
   mantantBL?: true
   mantantBLReel?: true
   mantantBLBenefice?: true
@@ -444,6 +468,10 @@ export type LivraisonGroupByOutputType = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
+  numCheque: string
+  numCheque2: string
+  numCheque3: string
+  numCheque4: string
   mantantBL: runtime.Decimal
   mantantBLReel: runtime.Decimal
   mantantBLBenefice: runtime.Decimal
@@ -503,6 +531,10 @@ export type LivraisonWhereInput = {
   typeReglment2?: Prisma.IntFilter<"Livraison"> | number
   typeReglment3?: Prisma.IntFilter<"Livraison"> | number
   typeReglment4?: Prisma.IntFilter<"Livraison"> | number
+  numCheque?: Prisma.StringFilter<"Livraison"> | string
+  numCheque2?: Prisma.StringFilter<"Livraison"> | string
+  numCheque3?: Prisma.StringFilter<"Livraison"> | string
+  numCheque4?: Prisma.StringFilter<"Livraison"> | string
   mantantBL?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -545,6 +577,10 @@ export type LivraisonOrderByWithRelationInput = {
   typeReglment2?: Prisma.SortOrder
   typeReglment3?: Prisma.SortOrder
   typeReglment4?: Prisma.SortOrder
+  numCheque?: Prisma.SortOrder
+  numCheque2?: Prisma.SortOrder
+  numCheque3?: Prisma.SortOrder
+  numCheque4?: Prisma.SortOrder
   mantantBL?: Prisma.SortOrder
   mantantBLReel?: Prisma.SortOrder
   mantantBLBenefice?: Prisma.SortOrder
@@ -591,6 +627,10 @@ export type LivraisonWhereUniqueInput = Prisma.AtLeast<{
   typeReglment2?: Prisma.IntFilter<"Livraison"> | number
   typeReglment3?: Prisma.IntFilter<"Livraison"> | number
   typeReglment4?: Prisma.IntFilter<"Livraison"> | number
+  numCheque?: Prisma.StringFilter<"Livraison"> | string
+  numCheque2?: Prisma.StringFilter<"Livraison"> | string
+  numCheque3?: Prisma.StringFilter<"Livraison"> | string
+  numCheque4?: Prisma.StringFilter<"Livraison"> | string
   mantantBL?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -633,6 +673,10 @@ export type LivraisonOrderByWithAggregationInput = {
   typeReglment2?: Prisma.SortOrder
   typeReglment3?: Prisma.SortOrder
   typeReglment4?: Prisma.SortOrder
+  numCheque?: Prisma.SortOrder
+  numCheque2?: Prisma.SortOrder
+  numCheque3?: Prisma.SortOrder
+  numCheque4?: Prisma.SortOrder
   mantantBL?: Prisma.SortOrder
   mantantBLReel?: Prisma.SortOrder
   mantantBLBenefice?: Prisma.SortOrder
@@ -677,6 +721,10 @@ export type LivraisonScalarWhereWithAggregatesInput = {
   typeReglment2?: Prisma.IntWithAggregatesFilter<"Livraison"> | number
   typeReglment3?: Prisma.IntWithAggregatesFilter<"Livraison"> | number
   typeReglment4?: Prisma.IntWithAggregatesFilter<"Livraison"> | number
+  numCheque?: Prisma.StringWithAggregatesFilter<"Livraison"> | string
+  numCheque2?: Prisma.StringWithAggregatesFilter<"Livraison"> | string
+  numCheque3?: Prisma.StringWithAggregatesFilter<"Livraison"> | string
+  numCheque4?: Prisma.StringWithAggregatesFilter<"Livraison"> | string
   mantantBL?: Prisma.DecimalWithAggregatesFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel?: Prisma.DecimalWithAggregatesFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice?: Prisma.DecimalWithAggregatesFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -713,6 +761,10 @@ export type LivraisonCreateInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
+  numCheque?: string
+  numCheque2?: string
+  numCheque3?: string
+  numCheque4?: string
   mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -751,6 +803,10 @@ export type LivraisonUncheckedCreateInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
+  numCheque?: string
+  numCheque2?: string
+  numCheque3?: string
+  numCheque4?: string
   mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -789,6 +845,10 @@ export type LivraisonUpdateInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
+  numCheque?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque2?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque3?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque4?: Prisma.StringFieldUpdateOperationsInput | string
   mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -827,6 +887,10 @@ export type LivraisonUncheckedUpdateInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
+  numCheque?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque2?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque3?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque4?: Prisma.StringFieldUpdateOperationsInput | string
   mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -865,6 +929,10 @@ export type LivraisonCreateManyInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
+  numCheque?: string
+  numCheque2?: string
+  numCheque3?: string
+  numCheque4?: string
   mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -901,6 +969,10 @@ export type LivraisonUpdateManyMutationInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
+  numCheque?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque2?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque3?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque4?: Prisma.StringFieldUpdateOperationsInput | string
   mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -933,6 +1005,10 @@ export type LivraisonUncheckedUpdateManyInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
+  numCheque?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque2?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque3?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque4?: Prisma.StringFieldUpdateOperationsInput | string
   mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -995,6 +1071,10 @@ export type LivraisonCountOrderByAggregateInput = {
   typeReglment2?: Prisma.SortOrder
   typeReglment3?: Prisma.SortOrder
   typeReglment4?: Prisma.SortOrder
+  numCheque?: Prisma.SortOrder
+  numCheque2?: Prisma.SortOrder
+  numCheque3?: Prisma.SortOrder
+  numCheque4?: Prisma.SortOrder
   mantantBL?: Prisma.SortOrder
   mantantBLReel?: Prisma.SortOrder
   mantantBLBenefice?: Prisma.SortOrder
@@ -1056,6 +1136,10 @@ export type LivraisonMaxOrderByAggregateInput = {
   typeReglment2?: Prisma.SortOrder
   typeReglment3?: Prisma.SortOrder
   typeReglment4?: Prisma.SortOrder
+  numCheque?: Prisma.SortOrder
+  numCheque2?: Prisma.SortOrder
+  numCheque3?: Prisma.SortOrder
+  numCheque4?: Prisma.SortOrder
   mantantBL?: Prisma.SortOrder
   mantantBLReel?: Prisma.SortOrder
   mantantBLBenefice?: Prisma.SortOrder
@@ -1092,6 +1176,10 @@ export type LivraisonMinOrderByAggregateInput = {
   typeReglment2?: Prisma.SortOrder
   typeReglment3?: Prisma.SortOrder
   typeReglment4?: Prisma.SortOrder
+  numCheque?: Prisma.SortOrder
+  numCheque2?: Prisma.SortOrder
+  numCheque3?: Prisma.SortOrder
+  numCheque4?: Prisma.SortOrder
   mantantBL?: Prisma.SortOrder
   mantantBLReel?: Prisma.SortOrder
   mantantBLBenefice?: Prisma.SortOrder
@@ -1351,6 +1439,10 @@ export type LivraisonCreateWithoutFournisseurInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
+  numCheque?: string
+  numCheque2?: string
+  numCheque3?: string
+  numCheque4?: string
   mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1388,6 +1480,10 @@ export type LivraisonUncheckedCreateWithoutFournisseurInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
+  numCheque?: string
+  numCheque2?: string
+  numCheque3?: string
+  numCheque4?: string
   mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1454,6 +1550,10 @@ export type LivraisonScalarWhereInput = {
   typeReglment2?: Prisma.IntFilter<"Livraison"> | number
   typeReglment3?: Prisma.IntFilter<"Livraison"> | number
   typeReglment4?: Prisma.IntFilter<"Livraison"> | number
+  numCheque?: Prisma.StringFilter<"Livraison"> | string
+  numCheque2?: Prisma.StringFilter<"Livraison"> | string
+  numCheque3?: Prisma.StringFilter<"Livraison"> | string
+  numCheque4?: Prisma.StringFilter<"Livraison"> | string
   mantantBL?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice?: Prisma.DecimalFilter<"Livraison"> | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1490,6 +1590,10 @@ export type LivraisonCreateWithoutPersonnelInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
+  numCheque?: string
+  numCheque2?: string
+  numCheque3?: string
+  numCheque4?: string
   mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1527,6 +1631,10 @@ export type LivraisonUncheckedCreateWithoutPersonnelInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
+  numCheque?: string
+  numCheque2?: string
+  numCheque3?: string
+  numCheque4?: string
   mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1574,6 +1682,10 @@ export type LivraisonCreateWithoutPersonnelAncienInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
+  numCheque?: string
+  numCheque2?: string
+  numCheque3?: string
+  numCheque4?: string
   mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1611,6 +1723,10 @@ export type LivraisonUncheckedCreateWithoutPersonnelAncienInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
+  numCheque?: string
+  numCheque2?: string
+  numCheque3?: string
+  numCheque4?: string
   mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1690,6 +1806,10 @@ export type LivraisonCreateWithoutEmployeOperateurInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
+  numCheque?: string
+  numCheque2?: string
+  numCheque3?: string
+  numCheque4?: string
   mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1727,6 +1847,10 @@ export type LivraisonUncheckedCreateWithoutEmployeOperateurInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
+  numCheque?: string
+  numCheque2?: string
+  numCheque3?: string
+  numCheque4?: string
   mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1790,6 +1914,10 @@ export type LivraisonCreateWithoutDetBulttinLivraisonsInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
+  numCheque?: string
+  numCheque2?: string
+  numCheque3?: string
+  numCheque4?: string
   mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1827,6 +1955,10 @@ export type LivraisonUncheckedCreateWithoutDetBulttinLivraisonsInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
+  numCheque?: string
+  numCheque2?: string
+  numCheque3?: string
+  numCheque4?: string
   mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1880,6 +2012,10 @@ export type LivraisonUpdateWithoutDetBulttinLivraisonsInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
+  numCheque?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque2?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque3?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque4?: Prisma.StringFieldUpdateOperationsInput | string
   mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1917,6 +2053,10 @@ export type LivraisonUncheckedUpdateWithoutDetBulttinLivraisonsInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
+  numCheque?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque2?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque3?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque4?: Prisma.StringFieldUpdateOperationsInput | string
   mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1954,6 +2094,10 @@ export type LivraisonCreateWithoutDetLivraisonsInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
+  numCheque?: string
+  numCheque2?: string
+  numCheque3?: string
+  numCheque4?: string
   mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -1991,6 +2135,10 @@ export type LivraisonUncheckedCreateWithoutDetLivraisonsInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
+  numCheque?: string
+  numCheque2?: string
+  numCheque3?: string
+  numCheque4?: string
   mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2044,6 +2192,10 @@ export type LivraisonUpdateWithoutDetLivraisonsInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
+  numCheque?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque2?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque3?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque4?: Prisma.StringFieldUpdateOperationsInput | string
   mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2081,6 +2233,10 @@ export type LivraisonUncheckedUpdateWithoutDetLivraisonsInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
+  numCheque?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque2?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque3?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque4?: Prisma.StringFieldUpdateOperationsInput | string
   mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2118,6 +2274,10 @@ export type LivraisonCreateManyFournisseurInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
+  numCheque?: string
+  numCheque2?: string
+  numCheque3?: string
+  numCheque4?: string
   mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2153,6 +2313,10 @@ export type LivraisonUpdateWithoutFournisseurInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
+  numCheque?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque2?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque3?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque4?: Prisma.StringFieldUpdateOperationsInput | string
   mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2190,6 +2354,10 @@ export type LivraisonUncheckedUpdateWithoutFournisseurInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
+  numCheque?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque2?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque3?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque4?: Prisma.StringFieldUpdateOperationsInput | string
   mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2227,6 +2395,10 @@ export type LivraisonUncheckedUpdateManyWithoutFournisseurInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
+  numCheque?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque2?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque3?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque4?: Prisma.StringFieldUpdateOperationsInput | string
   mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2262,6 +2434,10 @@ export type LivraisonCreateManyPersonnelInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
+  numCheque?: string
+  numCheque2?: string
+  numCheque3?: string
+  numCheque4?: string
   mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2297,6 +2473,10 @@ export type LivraisonCreateManyPersonnelAncienInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
+  numCheque?: string
+  numCheque2?: string
+  numCheque3?: string
+  numCheque4?: string
   mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2332,6 +2512,10 @@ export type LivraisonUpdateWithoutPersonnelInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
+  numCheque?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque2?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque3?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque4?: Prisma.StringFieldUpdateOperationsInput | string
   mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2369,6 +2553,10 @@ export type LivraisonUncheckedUpdateWithoutPersonnelInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
+  numCheque?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque2?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque3?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque4?: Prisma.StringFieldUpdateOperationsInput | string
   mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2406,6 +2594,10 @@ export type LivraisonUncheckedUpdateManyWithoutPersonnelInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
+  numCheque?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque2?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque3?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque4?: Prisma.StringFieldUpdateOperationsInput | string
   mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2441,6 +2633,10 @@ export type LivraisonUpdateWithoutPersonnelAncienInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
+  numCheque?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque2?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque3?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque4?: Prisma.StringFieldUpdateOperationsInput | string
   mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2478,6 +2674,10 @@ export type LivraisonUncheckedUpdateWithoutPersonnelAncienInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
+  numCheque?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque2?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque3?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque4?: Prisma.StringFieldUpdateOperationsInput | string
   mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2515,6 +2715,10 @@ export type LivraisonUncheckedUpdateManyWithoutPersonnelAncienInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
+  numCheque?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque2?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque3?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque4?: Prisma.StringFieldUpdateOperationsInput | string
   mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2550,6 +2754,10 @@ export type LivraisonCreateManyEmployeOperateurInput = {
   typeReglment2: number
   typeReglment3: number
   typeReglment4: number
+  numCheque?: string
+  numCheque2?: string
+  numCheque3?: string
+  numCheque4?: string
   mantantBL: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel: runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2585,6 +2793,10 @@ export type LivraisonUpdateWithoutEmployeOperateurInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
+  numCheque?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque2?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque3?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque4?: Prisma.StringFieldUpdateOperationsInput | string
   mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2622,6 +2834,10 @@ export type LivraisonUncheckedUpdateWithoutEmployeOperateurInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
+  numCheque?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque2?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque3?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque4?: Prisma.StringFieldUpdateOperationsInput | string
   mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2659,6 +2875,10 @@ export type LivraisonUncheckedUpdateManyWithoutEmployeOperateurInput = {
   typeReglment2?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment3?: Prisma.IntFieldUpdateOperationsInput | number
   typeReglment4?: Prisma.IntFieldUpdateOperationsInput | number
+  numCheque?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque2?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque3?: Prisma.StringFieldUpdateOperationsInput | string
+  numCheque4?: Prisma.StringFieldUpdateOperationsInput | string
   mantantBL?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLReel?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   mantantBLBenefice?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -2734,6 +2954,10 @@ export type LivraisonSelect<ExtArgs extends runtime.Types.Extensions.InternalArg
   typeReglment2?: boolean
   typeReglment3?: boolean
   typeReglment4?: boolean
+  numCheque?: boolean
+  numCheque2?: boolean
+  numCheque3?: boolean
+  numCheque4?: boolean
   mantantBL?: boolean
   mantantBLReel?: boolean
   mantantBLBenefice?: boolean
@@ -2779,6 +3003,10 @@ export type LivraisonSelectScalar = {
   typeReglment2?: boolean
   typeReglment3?: boolean
   typeReglment4?: boolean
+  numCheque?: boolean
+  numCheque2?: boolean
+  numCheque3?: boolean
+  numCheque4?: boolean
   mantantBL?: boolean
   mantantBLReel?: boolean
   mantantBLBenefice?: boolean
@@ -2802,7 +3030,7 @@ export type LivraisonSelectScalar = {
   fournisseurId?: boolean
 }
 
-export type LivraisonOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "numLivraison" | "codeBl" | "dateBl" | "dateReglement" | "dateReglement2" | "dateReglement3" | "dateReglement4" | "typeReglment" | "typeReglment2" | "typeReglment3" | "typeReglment4" | "mantantBL" | "mantantBLReel" | "mantantBLBenefice" | "typePaiement" | "mantantBLPourcent" | "reglerNonRegler" | "sysDate" | "infinity" | "etatBultinPaie" | "livrernonlivrer" | "avecRemise" | "mntReglement" | "mntReglement2" | "mntReglement3" | "mntReglement4" | "facturer100" | "codeTransport" | "employeOperateurId" | "personnelId" | "personnelAncienId" | "fournisseurId", ExtArgs["result"]["livraison"]>
+export type LivraisonOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "numLivraison" | "codeBl" | "dateBl" | "dateReglement" | "dateReglement2" | "dateReglement3" | "dateReglement4" | "typeReglment" | "typeReglment2" | "typeReglment3" | "typeReglment4" | "numCheque" | "numCheque2" | "numCheque3" | "numCheque4" | "mantantBL" | "mantantBLReel" | "mantantBLBenefice" | "typePaiement" | "mantantBLPourcent" | "reglerNonRegler" | "sysDate" | "infinity" | "etatBultinPaie" | "livrernonlivrer" | "avecRemise" | "mntReglement" | "mntReglement2" | "mntReglement3" | "mntReglement4" | "facturer100" | "codeTransport" | "employeOperateurId" | "personnelId" | "personnelAncienId" | "fournisseurId", ExtArgs["result"]["livraison"]>
 export type LivraisonInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   employeOperateur?: boolean | Prisma.Livraison$employeOperateurArgs<ExtArgs>
   personnel?: boolean | Prisma.Livraison$personnelArgs<ExtArgs>
@@ -2836,6 +3064,10 @@ export type $LivraisonPayload<ExtArgs extends runtime.Types.Extensions.InternalA
     typeReglment2: number
     typeReglment3: number
     typeReglment4: number
+    numCheque: string
+    numCheque2: string
+    numCheque3: string
+    numCheque4: string
     mantantBL: runtime.Decimal
     mantantBLReel: runtime.Decimal
     mantantBLBenefice: runtime.Decimal
@@ -3244,6 +3476,10 @@ export interface LivraisonFieldRefs {
   readonly typeReglment2: Prisma.FieldRef<"Livraison", 'Int'>
   readonly typeReglment3: Prisma.FieldRef<"Livraison", 'Int'>
   readonly typeReglment4: Prisma.FieldRef<"Livraison", 'Int'>
+  readonly numCheque: Prisma.FieldRef<"Livraison", 'String'>
+  readonly numCheque2: Prisma.FieldRef<"Livraison", 'String'>
+  readonly numCheque3: Prisma.FieldRef<"Livraison", 'String'>
+  readonly numCheque4: Prisma.FieldRef<"Livraison", 'String'>
   readonly mantantBL: Prisma.FieldRef<"Livraison", 'Decimal'>
   readonly mantantBLReel: Prisma.FieldRef<"Livraison", 'Decimal'>
   readonly mantantBLBenefice: Prisma.FieldRef<"Livraison", 'Decimal'>

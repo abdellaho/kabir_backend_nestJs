@@ -12,7 +12,7 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url      = env("DATABASE_URL")
+  //url      = env("DATABASE_URL")
 }
 
 model Ville {
@@ -34,6 +34,7 @@ model Fournisseur {
   dateSuppression   				    DateTime? @db.Date
   archiver              		    Boolean @default(false)
   supprimer              		    Boolean @default(false)
+  nbrOperation                 	Int @default(0)
   ville           				      Ville?     				                @relation(fields: [villeId], references: [id])
   villeId         				      BigInt?
   stocks           			        Stock[]
@@ -782,6 +783,10 @@ model Livraison {
   typeReglment2  				    	    Int
   typeReglment3  				    	    Int
   typeReglment4  				    	    Int
+  numCheque     				      	  String @default("")
+  numCheque2    				    	    String @default("")
+  numCheque3    				    	    String @default("")
+  numCheque4    				    	    String @default("")
   mantantBL      				      	  Decimal @db.Decimal(10, 2)
   mantantBLReel  				    	    Decimal @db.Decimal(10, 2)
   mantantBLBenefice  				      Decimal @db.Decimal(10, 2)
